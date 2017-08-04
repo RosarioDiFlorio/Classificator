@@ -1,4 +1,4 @@
-package eu.innovation.engineering.PreProcessing;
+package eu.innovation.engineering.prepocessing;
 
 /**
  * Hello world!
