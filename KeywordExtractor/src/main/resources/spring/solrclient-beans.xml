@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+	<!--  Define the configuration provider bean, that is used by the adapters and by the SolrClient API endpoints -->
+	<bean id="configurationproviderbean" class="eu.innovationengineering.solrclient.auth.configuration.ConfigurationProvider" init-method="init">
+		<property name="configurationFileURL" value="${solrclient.configuration.url:classpath:config.xml}" />
+	</bean>
+    
+  <bean id="languageDetector" class="eu.innovationengineering.language.detector.impl.CybozuLanguageDetector" init-method="init" />
+    
+	<!--  Define the binary storage adapters available in the SolrClient API -->
+    <!-- ############### HdfsFileStorageAdapter ############### -->
+    <bean id="adapterbean" class="eu.innovationengineering.solrclient.auth.storage.noop.NoopFileStorageAdapter" init-method="init" destroy-method="destroy" depends-on="configurationproviderbean">
+        <property name="configurationProvider" ref="configurationproviderbean" />
+    </bean>
+
+    <!--  Define the storage factory bean, that is used by the by the SolrClient API endpoints -->
+	<bean id="storagefactorybean" class="eu.innovationengineering.solrclient.auth.storage.StorageFactory" depends-on="adapterbean">
+		<property name="adaptersSet">
+			<set>
+				<ref bean="adapterbean" />
+			</set>
+		</property>
+	</bean>
+
+    <!--  Define the event manager bean, that is used by the SolrClient API endpoints -->
+	<bean id="eventmanagerbean" class="eu.innovationengineering.solrclient.auth.event.impl.MultithreadedAsyncEventManager" init-method="init" destroy-method="destroy" />
+
+    <!--  Define the main endpoints of the SolrClient API -->
+	<bean id="filemanagerbean_int" class="eu.innovationengineering.solrclient.auth.api.impl.FileManagerImpl" depends-on="configurationproviderbean,storagefactorybean,eventmanagerbean">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+		<property name="eventManager" ref="eventmanagerbean" />
+		<property name="itemRelationManager" ref="itemrelationsmamanagerbean_int" />
+	</bean>
+	<bean id="filesearchtemplatebean_int" class="eu.innovationengineering.solrclient.auth.templates.impl.FileSearchTemplateImpl" depends-on="configurationproviderbean,storagefactorybean,filemanagerbean_int">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+		<property name="fileManager" ref="filemanagerbean_int" />
+		<property name="itemRelationManager" ref="itemrelationsmamanagerbean_int" />
+		<property name="lemmatizer" ref="lemmatizer" />
+        <property name="domainManager" ref="domainmanagerbean_int" />
+	</bean>
+	<bean id="foldermanagerbean_int" class="eu.innovationengineering.solrclient.auth.api.impl.FolderManagerImpl" depends-on="configurationproviderbean,storagefactorybean,eventmanagerbean">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+		<property name="eventManager" ref="eventmanagerbean" />
+		<property name="itemRelationManager" ref="itemrelationsmamanagerbean_int" />
+	</bean>
+	<bean id="domainmanagerbean_int" class="eu.innovationengineering.solrclient.auth.api.impl.DomainManagerImpl" depends-on="configurationproviderbean,storagefactorybean,eventmanagerbean">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+		<property name="eventManager" ref="eventmanagerbean" />
+	</bean>
+	<bean id="patentmanagerbean_int" class="eu.innovationengineering.solrclient.auth.api.impl.PatentManagerImpl" depends-on="configurationproviderbean,storagefactorybean,eventmanagerbean">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+		<property name="eventManager" ref="eventmanagerbean" />
+	</bean>
+	<bean id="patentsearchtemplatebean_int" class="eu.innovationengineering.solrclient.auth.templates.impl.PatentSearchTemplateImpl" depends-on="configurationproviderbean,storagefactorybean,patentmanagerbean_int">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+		<property name="patentManager" ref="patentmanagerbean_int" />
+		<property name="lemmatizer" ref="lemmatizer" />
+	</bean>
+	<bean id="technicalpapermanagerbean_int" class="eu.innovationengineering.solrclient.auth.api.impl.TechnicalPaperManagerImpl" depends-on="configurationproviderbean,storagefactorybean,eventmanagerbean">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+		<property name="eventManager" ref="eventmanagerbean" />
+	</bean>
+	<bean id="technicalpapersearchtemplatebean_int" class="eu.innovationengineering.solrclient.auth.templates.impl.TechnicalPaperSearchTemplateImpl" depends-on="configurationproviderbean,storagefactorybean,technicalpapermanagerbean_int">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+		<property name="technicalPaperManager" ref="technicalpapermanagerbean_int" />
+		<property name="lemmatizer" ref="lemmatizer" />
+	</bean>
+	<bean id="grantmanagerbean_int" class="eu.innovationengineering.solrclient.auth.api.impl.GrantManagerImpl" depends-on="configurationproviderbean,storagefactorybean">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+	</bean>
+	<bean id="grantsearchtemplatebean_int" class="eu.innovationengineering.solrclient.auth.templates.impl.GrantSearchTemplateImpl" depends-on="configurationproviderbean,storagefactorybean,grantmanagerbean_int">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+		<property name="grantManager" ref="grantmanagerbean_int" />
+	</bean>
+	<bean id="projectopportunitymanagerbean_int" class="eu.innovationengineering.solrclient.auth.api.impl.ProjectOpportunityManagerImpl" depends-on="configurationproviderbean,storagefactorybean">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+	</bean>
+	<bean id="projectopportunitysearchtemplatebean_int" class="eu.innovationengineering.solrclient.auth.templates.impl.ProjectOpportunitySearchTemplateImpl" depends-on="configurationproviderbean,storagefactorybean,projectopportunitymanagerbean_int">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+		<property name="projectOpportunityManager" ref="projectopportunitymanagerbean_int" />
+	</bean>
+    <bean id="projectopportunitysuggestionstemplatebean_int" class="eu.innovationengineering.solrclient.auth.templates.impl.ProjectOpportunitySuggestionsTemplateImpl" depends-on="configurationproviderbean,storagefactorybean">
+        <property name="configurationProvider" ref="configurationproviderbean"/>
+        <property name="storageFactory" ref="storagefactorybean"/>
+    </bean>
+	<bean id="fundedprojectmanagerbean_int" class="eu.innovationengineering.solrclient.auth.api.impl.FundedProjectManagerImpl" depends-on="configurationproviderbean,storagefactorybean">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+	</bean>
+	<bean id="fundedprojectsearchtemplatebean_int" class="eu.innovationengineering.solrclient.auth.templates.impl.FundedProjectSearchTemplateImpl" depends-on="configurationproviderbean,storagefactorybean,projectopportunitymanagerbean_int">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+		<property name="projectManager" ref="fundedprojectmanagerbean_int" />
+	</bean>
+	<bean id="fundedprojectsuggestionstemplatebean_int" class="eu.innovationengineering.solrclient.auth.templates.impl.FundedProjectSuggestionsTemplateImpl" depends-on="configurationproviderbean,storagefactorybean">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+	</bean>
+	<bean id="fundedorganizationmanagerbean_int" class="eu.innovationengineering.solrclient.auth.api.impl.FundedOrganizationManagerImpl" depends-on="configurationproviderbean,storagefactorybean">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+	</bean>
+	<bean id="fundedorganizationsearchtemplatebean_int" class="eu.innovationengineering.solrclient.auth.templates.impl.FundedOrganizationSearchTemplateImpl" depends-on="configurationproviderbean,storagefactorybean,projectopportunitymanagerbean_int">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+		<property name="orgManager" ref="fundedorganizationmanagerbean_int" />
+	</bean>
+	<bean id="fundedorganizationsuggestionstemplatebean_int" class="eu.innovationengineering.solrclient.auth.templates.impl.FundedOrganizationSuggestionsTemplateImpl" depends-on="configurationproviderbean,storagefactorybean">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+	</bean>
+	<bean id="knowledgebasemanagerbean_int" class="eu.innovationengineering.solrclient.auth.api.impl.KnowledgeBaseManagerImpl" depends-on="configurationproviderbean,storagefactorybean,eventmanagerbean">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+		<property name="eventManager" ref="eventmanagerbean" />
+		<property name="fileSearchTemplate" ref="filesearchtemplatebean_int" />
+		<property name="patentSearchTemplate" ref="patentsearchtemplatebean_int" />
+		<property name="techPaperSearchTemplate" ref="technicalpapersearchtemplatebean_int" />
+		<property name="webPageSearchTemplate" ref="webpagesearchtemplatebean_int" />
+		<property name="grantSearchTemplate" ref="grantsearchtemplatebean_int" />
+		<property name="projectOpportunitySearchTemplate" ref="projectopportunitysearchtemplatebean_int" />
+		<property name="fundedProjectSearchTemplate" ref="fundedprojectsearchtemplatebean_int" />
+	</bean>
+	<bean id="webpagesmanagerbean_int" class="eu.innovationengineering.solrclient.auth.api.impl.WebPagesManagerImpl" depends-on="configurationproviderbean,storagefactorybean">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+	</bean>
+	<bean id="tagschemamanagerbean_int" class="eu.innovationengineering.solrclient.auth.api.impl.TagSchemaManagerImpl" depends-on="configurationproviderbean,storagefactorybean">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+	</bean>
+	<bean id="tagmamanagerbean_int" class="eu.innovationengineering.solrclient.auth.api.impl.TagManagerImpl" depends-on="configurationproviderbean,storagefactorybean">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+	</bean>
+	<bean id="itemrelationsmamanagerbean_int" class="eu.innovationengineering.solrclient.auth.api.impl.ItemRelationsManagerImpl" depends-on="configurationproviderbean,storagefactorybean">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+	</bean>
+	<bean id="analysisresultmanagerbean_int" class="eu.innovationengineering.solrclient.auth.api.impl.AnalysisResultManagerImpl" depends-on="configurationproviderbean,storagefactorybean">
+        <property name="configurationProvider" ref="configurationproviderbean"/>
+        <property name="storageFactory" ref="storagefactorybean"/>
+    </bean>
+	<bean id="webpagesearchtemplatebean_int" class="eu.innovationengineering.solrclient.auth.templates.impl.WebPageSearchTemplateImpl" depends-on="configurationproviderbean,storagefactorybean,webpagesmanagerbean_int">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+		<property name="webPageManager" ref="webpagesmanagerbean_int" />
+	</bean>
+	<bean id="filesuggestionstemplatebean_int" class="eu.innovationengineering.solrclient.auth.templates.impl.FileSuggestionsTemplateImpl" depends-on="configurationproviderbean,storagefactorybean,filemanagerbean_int,domainmanagerbean_int,knowledgebasemanagerbean_int">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+		<property name="fileManager" ref="filemanagerbean_int" />
+		<property name="domainManager" ref="domainmanagerbean_int" />
+		<property name="knowledgeBaseManager" ref="knowledgebasemanagerbean_int" />
+		<property name="lemmatizer" ref="lemmatizer" />
+	</bean>
+	<bean id="patentsuggestionstemplatebean_int" class="eu.innovationengineering.solrclient.auth.templates.impl.PatentSuggestionsTemplateImpl" depends-on="configurationproviderbean,storagefactorybean,patentmanagerbean_int,knowledgebasemanagerbean_int">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+		<property name="patentManager" ref="patentmanagerbean_int" />
+		<property name="knowledgeBaseManager" ref="knowledgebasemanagerbean_int" />
+		<property name="lemmatizer" ref="lemmatizer" />
+	</bean>
+	<bean id="technicalpapersuggestionstemplatebean_int" class="eu.innovationengineering.solrclient.auth.templates.impl.TechnicalPaperSuggestionsTemplateImpl" depends-on="configurationproviderbean,storagefactorybean,technicalpapermanagerbean_int,knowledgebasemanagerbean_int">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+		<property name="technicalPaperManager" ref="technicalpapermanagerbean_int" />
+		<property name="knowledgeBaseManager" ref="knowledgebasemanagerbean_int" />
+		<property name="lemmatizer" ref="lemmatizer" />
+	</bean>
+	<bean id="grantsuggestionstemplatebean_int" class="eu.innovationengineering.solrclient.auth.templates.impl.GrantSuggestionsTemplateImpl" depends-on="configurationproviderbean,storagefactorybean,grantmanagerbean_int,knowledgebasemanagerbean_int">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+	</bean>
+	<bean id="webpagesuggestionstemplatebean_int" class="eu.innovationengineering.solrclient.auth.templates.impl.WebPageSuggestionsTemplateImpl" depends-on="configurationproviderbean,storagefactorybean,webpagesmanagerbean_int,knowledgebasemanagerbean_int">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+		<property name="webPageManager" ref="webpagesmanagerbean_int" />
+		<property name="knowledgeBaseManager" ref="knowledgebasemanagerbean_int" />
+	</bean>
+	<bean id="jobManager_int" class="eu.innovationengineering.solrclient.auth.api.impl.CrawlingJobManagerImpl" depends-on="configurationproviderbean,storagefactorybean">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+	</bean>
+	<bean id="tagmanagerbean_int" class="eu.innovationengineering.solrclient.auth.api.impl.TagManagerImpl" depends-on="configurationproviderbean,storagefactorybean">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+	</bean>
+	<bean id="itemrelationsbean_int" class="eu.innovationengineering.solrclient.auth.api.impl.ItemRelationsManagerImpl" depends-on="configurationproviderbean,storagefactorybean">
+		<property name="configurationProvider" ref="configurationproviderbean" />
+		<property name="storageFactory" ref="storagefactorybean" />
+	</bean>
+    <!-- Define proxies to handle SOLr client connection errors -->
+	<bean id="solrConnectionErrorInterceptor" class="eu.innovationengineering.solrclient.auth.interceptor.SolrClientConnectionErrorInterceptor">
+		<property name="maxRetries" value="3" />
+		<property name="connectionErrorWait" value="200" />
+	</bean>
+	<bean id="filemanagerbean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.api.FileManager" />
+		<property name="target" ref="filemanagerbean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="filesearchtemplatebean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.templates.FileSearchTemplate" />
+		<property name="target" ref="filesearchtemplatebean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="filesuggestionstemplatebean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.templates.FileSuggestionsTemplate" />
+		<property name="target" ref="filesuggestionstemplatebean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="foldermanagerbean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.api.FolderManager" />
+		<property name="target" ref="foldermanagerbean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="domainmanagerbean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.api.DomainManager" />
+		<property name="target" ref="domainmanagerbean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="patentmanagerbean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.api.PatentManager" />
+		<property name="target" ref="patentmanagerbean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="patentsearchtemplatebean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.templates.PatentSearchTemplate" />
+		<property name="target" ref="patentsearchtemplatebean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="patentsuggestionstemplatebean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.templates.PatentSuggestionsTemplate" />
+		<property name="target" ref="patentsuggestionstemplatebean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="technicalpapermanagerbean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.api.TechnicalPaperManager" />
+		<property name="target" ref="technicalpapermanagerbean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="technicalpapersearchtemplatebean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.templates.TechnicalPaperSearchTemplate" />
+		<property name="target" ref="technicalpapersearchtemplatebean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="technicalpapersuggestionstemplatebean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.templates.TechnicalPaperSuggestionsTemplate" />
+		<property name="target" ref="technicalpapersuggestionstemplatebean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="grantmanagerbean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.api.GrantManager" />
+		<property name="target" ref="grantmanagerbean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="grantsearchtemplatebean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.templates.GrantSearchTemplate" />
+		<property name="target" ref="grantsearchtemplatebean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="projectopportunitymanagerbean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.api.ProjectOpportunityManager" />
+		<property name="target" ref="projectopportunitymanagerbean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+    <bean id="projectopportunitysuggestionstemplatebean" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.templates.ProjectOpportunitySuggestionsTemplate" />
+        <property name="target" ref="projectopportunitysuggestionstemplatebean_int" />
+        <property name="interceptorNames">
+            <list>
+                <value>solrConnectionErrorInterceptor</value>
+            </list>
+        </property>
+    </bean>
+	<bean id="projectopportunitysearchtemplatebean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.templates.ProjectOpportunitySearchTemplate" />
+		<property name="target" ref="projectopportunitysearchtemplatebean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="fundedprojectmanagerbean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.api.FundedProjectManager" />
+		<property name="target" ref="fundedprojectmanagerbean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="fundedprojectsearchtemplatebean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.templates.FundedProjectSearchTemplate" />
+		<property name="target" ref="fundedprojectsearchtemplatebean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="fundedprojectsuggestionstemplatebean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.templates.FundedProjectSuggestionsTemplate" />
+		<property name="target" ref="fundedprojectsuggestionstemplatebean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="fundedorganizationmanagerbean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.api.FundedOrganizationManager" />
+		<property name="target" ref="fundedorganizationmanagerbean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="fundedorganizationsearchtemplatebean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.templates.FundedOrganizationSearchTemplate" />
+		<property name="target" ref="fundedorganizationsearchtemplatebean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="fundedorganizationsuggestionstemplatebean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.templates.FundedOrganizationSuggestionsTemplate" />
+		<property name="target" ref="fundedorganizationsuggestionstemplatebean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="webpagesmanagerbean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.api.WebPageManager" />
+		<property name="target" ref="webpagesmanagerbean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="tagschemamanagerbean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.api.TagSchemaManager" />
+		<property name="target" ref="tagschemamanagerbean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="tagmamanagerbean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.api.TagManager" />
+		<property name="target" ref="tagmamanagerbean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="itemrelationsmamanagerbean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.api.ItemRelationsManager" />
+		<property name="target" ref="itemrelationsmamanagerbean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="analysisresultmanagerbean" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.api.AnalysisResultManager" />
+        <property name="target" ref="analysisresultmanagerbean_int" />
+        <property name="interceptorNames"><list><value>solrConnectionErrorInterceptor</value></list></property>
+    </bean>
+	<bean id="webpagesearchtemplatebean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.templates.WebPageSearchTemplate" />
+		<property name="target" ref="webpagesearchtemplatebean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="webpagesuggestionstemplatebean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.templates.WebPageSuggestionsTemplate" />
+		<property name="target" ref="webpagesuggestionstemplatebean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="grantsuggestionstemplatebean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.templates.GrantSuggestionsTemplate" />
+		<property name="target" ref="grantsuggestionstemplatebean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="knowledgebasemanagerbean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.api.KnowledgeBaseManager" />
+		<property name="target" ref="knowledgebasemanagerbean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="jobManager" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.api.CrawlingJobManager" />
+		<property name="target" ref="jobManager_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="tagmanagerbean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.api.TagManager" />
+		<property name="target" ref="tagmanagerbean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="itemrelationsbean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="eu.innovationengineering.solrclient.auth.api.ItemRelationsManager" />
+		<property name="target" ref="itemrelationsbean_int" />
+		<property name="interceptorNames">
+			<list>
+				<value>solrConnectionErrorInterceptor</value>
+			</list>
+		</property>
+	</bean>
+</beans>

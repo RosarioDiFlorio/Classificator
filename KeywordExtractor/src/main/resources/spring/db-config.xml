@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+        <property name="driverClass" value="${mysql.driver}" />
+        <property name="jdbcUrl" value="${mysql.url}" />
+        <property name="user" value="${mysql.username}" />
+        <property name="password" value="${mysql.password}" />
+        
+        <!-- these are C3P0 properties -->
+        <property name="acquireIncrement" value="${c3p0.acquireIncrement:1}" />
+        <property name="initialPoolSize" value="${c3p0.initialPoolSize:1}" />
+        <property name="minPoolSize" value="${c3p0.minPoolSize:1}" />
+        <property name="maxPoolSize" value="${c3p0.maxPoolSize:10}" />
+        <property name="maxIdleTime" value="${c3p0.maxIdleTime:1800}" />
+    </bean>
+
+    <bean id="entityManagerFactory"
+        class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <property name="packagesToScan" value="eu.innovationengineering.similarity.persistence.model" />
+        <property name="jpaVendorAdapter">
+            <bean
+                class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+                <property name="generateDdl" value="${mysql.generateDDL:true}" />
+                <property name="showSql" value="${mysql.showSQL:false}" />
+                <property name="databasePlatform" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+                <property name="database" value="MYSQL" />
+            </bean>
+        </property>
+    </bean>
+
+    <bean class="org.springframework.orm.jpa.JpaTransactionManager"
+        id="transactionManager">
+        <property name="entityManagerFactory" ref="entityManagerFactory" />
+        <property name="jpaDialect">
+            <bean
+                class="org.springframework.orm.jpa.vendor.HibernateJpaDialect" />
+        </property>
+        <property name="nestedTransactionAllowed" value="true" />
+    </bean>
+
+    <tx:annotation-driven />
+</beans>

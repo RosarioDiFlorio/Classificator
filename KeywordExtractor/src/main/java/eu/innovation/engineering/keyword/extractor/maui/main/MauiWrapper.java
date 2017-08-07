@@ -6,16 +6,19 @@ import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
+import eu.innovation.engineering.keyword.extractor.KeywordExtractor;
 import eu.innovation.engineering.keyword.extractor.maui.filters.MauiFilter;
 import eu.innovation.engineering.keyword.extractor.stemmers.PorterStemmer;
 import eu.innovation.engineering.keyword.extractor.stemmers.Stemmer;
 import eu.innovation.engineering.keyword.extractor.stopwords.Stopwords;
 import eu.innovation.engineering.keyword.extractor.stopwords.StopwordsEnglish;
+import eu.innovation.engineering.keyword.extractor.util.LanguageDetector;
 import eu.innovation.engineering.keyword.extractor.vocab.Vocabulary;
 import weka.core.Attribute;
 import weka.core.FastVector;
@@ -30,17 +33,17 @@ import weka.core.Instances;
  * @author alyona
  *
  */
-public class MauiWrapper {
+public class MauiWrapper implements KeywordExtractor{
 
   /** Maui filter object */
   private MauiFilter extractionModel = null;
-
+  private static final int topicsPerDocument = 10;
   private Vocabulary vocabulary = null;
   private Stemmer stemmer;
   private Stopwords stopwords;
   private String language = "en";
   private static final String dir = "Maui1.2/";
-  
+  private LanguageDetector languageDetector;
 
   
   
@@ -52,6 +55,7 @@ public class MauiWrapper {
    */
   public MauiWrapper(String dataDirectory, String vocabularyName, String modelName) {
 
+    languageDetector = new LanguageDetector();
     stemmer = new PorterStemmer();
     String englishStopwords = dataDirectory + "data/stopwords/stopwords_en.txt";
     stopwords = new StopwordsEnglish(englishStopwords);
@@ -318,6 +322,74 @@ public class MauiWrapper {
     }
 
   }
+
+  @Override
+  public List<Keyword> extractKeywordsFromText(List<String> toAnalyze) throws Exception {
+    // TODO Auto-generated method stub
+    String text = languageDetector.filterForLanguage(toAnalyze, "en");
+    
+
+    if (text.length() < 5) {
+      throw new Exception("Text is too short!");
+    }
+
+    extractionModel.setWikipedia(null);
+    extractionModel.setFrequencyFeatures(true);
+    FastVector atts = new FastVector(3);
+    atts.addElement(new Attribute("filename", (FastVector) null));
+    atts.addElement(new Attribute("doc", (FastVector) null));
+    atts.addElement(new Attribute("keyphrases", (FastVector) null));
+    Instances data = new Instances("keyphrase_training_data", atts, 0);
+
+    double[] newInst = new double[3];
+
+    newInst[0] = data.attribute(0).addStringValue("inputFile");
+    newInst[1] = data.attribute(1).addStringValue(text);
+    newInst[2] = Instance.missingValue();
+    data.add(new Instance(1.0, newInst));
+
+    extractionModel.input(data.instance(0));
+
+    data = data.stringFreeStructure();
+    Instance[] topRankedInstances = new Instance[topicsPerDocument];
+    Instance inst;
+    // Iterating over all extracted keyphrases (inst)
+    while ((inst = extractionModel.output()) != null) {
+
+      int index = (int) inst.value(extractionModel.getRankIndex()) - 1;
+
+      if (index < topicsPerDocument) {
+        topRankedInstances[index] = inst;
+      }
+    }
+
+    ArrayList<Keyword> toReturn = new ArrayList<Keyword>();
+    for (int i = 0; i < topicsPerDocument; i++) {
+      
+      if (topRankedInstances[i] != null) {
+        String topic = topRankedInstances[i].stringValue(extractionModel
+            .getOutputFormIndex());
+
+        double invfreq = topRankedInstances[i].value(extractionModel.getOutputFormat().attribute("IDF"));
+        double freq = topRankedInstances[i].value(extractionModel.getOutputFormat().attribute("Term_frequency"));
+        double tdidf = topRankedInstances[i].value(extractionModel.getOutputFormat().attribute("TFxIDF"));
+        Keyword k = new Keyword();
+        k.setText(topic);
+        k.setRelevance(tdidf);
+        //k.setInverseFrequency(invfreq);
+        //k.setFrequency(freq);
+        toReturn.add(k);
+      }
+    }
+
+    extractionModel.batchFinished();
+
+    return toReturn;
+    
+    
+  }
+
+
 
 
 
