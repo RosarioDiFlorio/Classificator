@@ -1,0 +1,75 @@
+Routing algorithms in networks with the topology of circulant graphs
+The thesis "Routing algorithms in networks with the topology of 
+circulant graphs" investigates topological properties of circulant 
+graphs and their application to computer data exchange.
+
+Circulant graphs are undirected vertex transitive graphs with n vertices 
+and edges of length hi, (i=1, 2, ..., k). When selecting an appropriate 
+topology for a computer network, circulant graphs represent an 
+intermediate choice between simple but unreliable ring topology and 
+reliable but expensive (and sometimes technologically unfeasible) fully 
+connected topology. Due to their favorable properties--among which are 
+symmetry, scalability, reliability, small diameter, and small average 
+node distance,--circulant graphs are widely studied as suitable 
+topologies for local area networks and parallel computer architectures. 
+They have been efficiently used in ILLIAC IV, FDDI-token, SILK and SONET 
+rings, Intel Paragon, Cray T3D, MPP, and MICROS.
+
+Routing algorithms are used to solve data exchange problems in computer 
+networks. Data (i.e. a message) is split into several packages. The task 
+of a routing algorithm is to transfer the packages along the network 
+edges to their final destination and then to combine them into original 
+message. There are two types of routing algorithms. Static routing 
+algorithms determine the path for each packet in the preprocessing phase 
+(i.e. before the actual start of routing); dynamic routing algorithms 
+perform all the necccessary routing calculations on-the-fly. After the 
+preprocessing phase the routing algorithm makes several successive 
+routing steps. In each routing step the algorithm can move a packet from 
+its current node to one of the neighboring nodes. Routing algorithms can 
+be used to solve various routing problems. A two-terminal routing is a 
+problem where only one package has to be routed from its source to its 
+final destination. Routing algorithms for this problem aim to route a 
+package along one of its shortest paths. Much more complicated situation 
+occurs when more than one package is present in the network. In this 
+case, which is also known as the general routing problem, a routing 
+algorithm tries to route all the packages to their final destination in 
+as few as possible routing steps.
+
+In this thesis we first introduce the wide area of our work. We 
+extensively explain the meaning of the following terms: network, routing 
+model, routing problem, routing algorithm. We also present the criteria 
+for measuring the quality of a given routing algorithm. In the following 
+there are two main chapters. The first one is dedicated to the selected 
+topology (i.e. circulant graphs) and the second one to the routing 
+algorithms designed and tested for this topology.
+
+In the chapter dedicated to circulant graphs we first summarize the 
+known results and the most important topological properties. Then we 
+present a method for solving certain problems (such as calculating the 
+diameter and calculating the shortest paths) by reduction to integer 
+lattice in which a point represents a walk in a graph. We introduce the 
+notion of minimal projection and give the corresponding algorithm to 
+construct it. We present the integer lattice as a module, define the 
+notion of packed basis, and present two algorithms for calculating it. 
+Then we introduce and prove several important features concerning 
+vectors of packed basis. We also introduce a new topology, the so called 
+semi-directed circulant graphs, and present an O(log n) algorithm for 
+calculating the shortest paths between nodes in these graphs. The proof 
+of correctness for this algorithm, which calculates the shortest paths 
+by using the minimal projection along the vectors of packed basis, is 
+based on the properties of packed basis proved in earlier sections. We 
+also present some k-generalizations of the algorithms presented for 
+2-circulant graphs.
+
+In the chapter on the routing in circulant graphs we first present two 
+routing algorithms for the two-terminal routing problem (static and 
+dynamic version). Then we present a parameterized model used to describe 
+routing algorithms and give five parameter-sets of five static routing 
+algorithms for the general routing problem. We also describe a dynamic 
+algorithm for the general routing problem and compare the efficiency of 
+this algorithm with the best static one. At the end of the chapter we 
+present a generalization of a routing algorithm for general k-circulant 
+graphs.
+
+In the last chapter of the thesis we give some open questions and ideas 
+for future work.

@@ -1,0 +1,114 @@
+Description Of Procedures In Automotive Engine Plants
+1. Human resources
+- For automakers, the total cost of paying average workers is around $40000 per year (mean
+value); the numbers range from $30000 to $60000 (except for a Central European facility where it
+is much lower). On average, direct pay is three times the amount of benefits. In general, worker
+qualification does not affect the benefits policy within an automobile engine plant.
+- Overall, the average age of workers in engine plants is slightly above 40 years old. There is no
+difference by geographic region. In older engine plants, workers do tend to be older. Annual
+turnover rates are around 5%. Mean values for unionization levels are 7990 for hourly workers,
+45% for salaried workers. It is common for production workers to be assigned different tasks; the
+engine plants where the union contract restricts the kind of activities are located in North America.
+- A majority of engine plants surveyed have work teams, and they are deployed in all departments.
+In most cases, work teams were introduced about five years ago. Sometimes, work team leaders
+are not elected. The average training received is 41 hours per employee per year. Fluctuations in
+the values are large. European facilities tend to have more training. Respondents felt that inspecting
+one?s work, being well trained, designing one?s workplace and having suggestions accepted are
+factors which can help workers make high quality engines. Workers and management interact via
+meetings and surveys. There are usually fewer than 2 suggestions per worker per year. The more
+training people get, the more likely they are to make suggestions.
+2. Logistics
+- Delivery of parts to the assembly department of engine plants: the Japanese-owned facilities get a
+much higher fraction of these components delivered more than once per shift, compared to other
+plants. There are more instances of ?just-in-time? practice for castings and parts delivered to the
+machining departments.
+- Engine and vehicle assembly plants: for half of our sample, the average delivery pace of finished
+engines to the car assembly plant is once per shift or more frequently. Engine plants which deliver
+engines very frequently no matter how far their customer vehicle assembly plants are located. The
+average value of the average delivery size of finished engines is 273 units (the results are very
+variable, but in general, the more engines are produced per unit time, the larger the batch size). For
+one out of two engine plants, the average transit time to the customer vehicle assembly plant is less
+than half a day; however, there are many cases where finished engines are delivered to vehicle
+assembly plants located very far away.
+3. Maintenance policies
+- Total Productive Maintenance (TPM) is in place in all of the plants surveyed, but this is quite
+recent (implementation started between 1990 and 1994). In two out of three cases, it is based on a
+centralized planning and information system. All of the key maintenance items mentioned in the
+questionnaire are taken care of by all engine plants; however, the frequency at which maintenance
+is done varies a lot from plant to plant (average: one and a half times per week).
+ProceduresinEnginePlants(ABSTRACT) MIT /IMVP --Oct.1997 Page2
+- Throughout all departments of engine plants, breakdowns are caused on average mostly by
+mechanical problems and then by electrical problems although there is a lot of variation between
+plants. For those types of failures, there is no link with any downtime statistics. Hydraulic failures
+occur more frequently in those plants which are older.
+4. Production technologies
+- Several of the engine plants surveyed are currently undergoing major changes. For a new engine
+variant, most engine plants can deal with the adaptation by using much more than half of the
+existing machines. In engine plants, a ?minor upgrade? can stop lines anywhere between less than
+24 hours to more than a week. Currently, assembly lines in engine plants can handle more
+flexibility than machining lines. When different engines are built in sequence, the pattern used most
+often is 1-1- 1-2-2-2 (batch sizes range from 6 to 100?s of engines).
+- Current and future design and acquisition processes for equipment do not differ. There is one
+policy for the whole plant. For a majority of engine plants, the methodology is as follows: the
+automobile company takes care of defining the requirements, it has a large influence (along with an
+affiliate or sister company sometimes) for the planning process, but the design and building of
+equipment is done by an outside equipment or system supplier. Two areas where answers differ a
+lot concern the system integration and the actual installation of equipment in engine plants: in some
+cases, the automobile company is in charge, while in other cases, an outside firm does the job.
+5. Quality
+- Engines made in European plants have more complaints per 1000 than the North American or
+Japanese ones (caution: we have rather few of these data points from non-European plants).
+Engine quality as measured by complaints per 1000 units after engines are delivered: 3-month
+quality data are quite good predictors of 12-month data.
+- In almost all engine plants, Statistical Process Control (SPC) data are collected and displayed at
+the line or work station. Engine plants also get back some engine performance and warranty data.
+- In most instances, communication of engine design information is done via fax or hardcopy.
+Sometimes, CAD systems (mostly 2-D) are used to exchange design dat~ however, whether CAD
+systems are used or not, is not a function of the age of the engine plant or of the lines. In a majority
+of cases, the exchange of information between the plant and the engine design department take
+place weekly, with actual design changes happening monthly. On average, half of the design
+changes are due to the engine engineering department, in order to improve the engine and to fix
+design or performance problems. Other causes for design changes are the meeting market needs,
+fixing production problems, and responding to the evolution of regulations.
+- All plants conduct hot testing of engines; in two facilities, only some of the engines are hottested.
+The test can last from 45 seconds to 18 minutes. The (few) all-aluminum engines of our
+survey are among those which undergo longer periods of hot testing. Less than 7% of the engines
+fail the hot test the first time. By looking simultaneously at the engine quality data and at the hot
+testing results, we did not find any correlation: hot test duration does not uncover problems which
+cause quality complaints 3 or 12 months after the engines are delivered to customers.
+Proceduresin EnginePlants(ABSTRACT) MIT /IMVP --Oct.1997 Page 3
+- According toourrespondents, production technologies thatcan becritical formanufacturing high
+quality automotive engines concern machining operations more than the sub-assembly and final
+dressing ofengines; interestingly, these technologies are most often supplied by outside vendors.
+In addition, organizational factors are seen as much more effective than automatization, in order to
+produce high-quality engines.
+6. Information systems
+- Information systems are in place in engine plants, and they are used quite extensively.
+- While centralized systems tend to be used mainly for planning purposes, non-centralized
+computer systems can help compile some statistical data and tell about equipment problems. Rarely
+are information systems actually used to give work assignments to employees.
+7. Accounting procedures and investment decisions
+- For a series of recent major installations of equipment in engine plants, it took around two years
+between the approval of the plan and the moment when the first part was produced, and from there
+on, an extra three to six months for full production levels to be reached.
+- The top financial indicator used by car firms for measuring the ?performance? of engine plants is
+clearly variance from budget. Some financial ratios like return on equity or return on assets are not
+used at all. For non-financial indicators, the quality of engines is most important, followed by
+safety and environment concerns, logistical issues, and labor productivity.
+- Product quality and internal rate of return are the two most important factors involved in engine
+plant investment decisions.
+- Most common practice is that indirect cost allocation uses standard or actual labor hours.
+- Activity-based costing systems were in place in 30% of the engine plants surveyed ( 1995 data).
+8. Plant improvement efforts
+- The persons surveyed do not think that more automation will be the key for progress in engine
+manufacturing. For the future, a strong desire is the ability to improve the flexibility of the factory,
+of the machines, and of the material flow. Interestingly, the respondents most interested by
+flexibility improvements are based in engine plants which currently deal with rather low levels of
+engine variety.
+- On the list of factors which can help improve operations in engine plants, is the need to establish
+better contacts with people in the engine design department and with the suppliers of machinery.
+Also, being able to build more engines in less space is an important goal for several respondents;
+actually, those most interested by this issue are from engine plants where the utilization of space is
+already more efficient than on average.
+This study was sponsored by the International Motor Vehicie Program. The authors gratejidly
+acknowledge its support.

@@ -1,0 +1,30 @@
+The Economy Wide Impact of Investment on Infrastructure for Electricity in Ethiopia: A Recursive Dynamic Computable General Equilibrium Approach
+The Economy-Wide Impact of Investment on Infrastructure for Electricity in Ethiopia:
+A Recursive Dynamic CGE Approach
+Dinkneh Gebre Borojo
+Addis Ababa University, 2012
+In current periods Ethiopia has been implementing huge investment on electricity.
+The studies on the economic impact of this investment conducted so far, however, are
+not sufficient and no study is conducted by using a recursive dynamic CGE model. To
+this effect, the study used a recursive dynamic CGE model. The model used an
+updated version of 2005/06 SAM. The simulations examined to explore the impact of
+this investment on Ethiopian economy are investment on electricity fully financed by
+foreign saving (loan), investment on electricity fully financed by domestic households
+and enterprise saving, and investment on electricity partly financed by domestic
+household and enterprise saving and partly by foreign saving. We run these
+simulations in combination with increase in TFP of industrial and service sectors.
+The findings of the study have shown the improvement of the real GDP, output of
+industrial and service sectors, average factor income and household income.
+However, the high growth of real GDP is registered when the investment on
+electricity is fully financed by domestic household and enterprise saving and when
+this investment is partly financed by domestic non government institutions and partly
+by foreign saving. Household consumption and consumption expenditure have raised
+more when investment on electricity is financed by increased foreign savings.
+However, they have grown at negative rate when the investment is fully financed with
+increased domestic household and enterprise saving. In general, investment on
+electricity fully financed by foreign saving is resulted in lower growth rate of real
+GDP due to worsening of the net export and it is also expected to be repaid that
+would increase indebtedness of the country. On the other hand, meeting this
+investment with domestic household and enterprise saving will be difficult. So,
+financing investment on electricity partly by domestic household and enterprise
+saving and partly by foreign saving would be worthwhile.

@@ -1,0 +1,66 @@
+Environmental assessment of imported organic products - focusing on orange juice from Brazil and soybeans from China
+The import of organic products to Denmark has seen a four to five fold increase during the last seven years,
+due to a growing demand for organic products. Globally, the market for organic food and drinks has also
+more than doubled during the same period. The global organic agricultural land has concurrently expanded
+from 26 to 35 million hectares, mostly due to major conversions in Argentina, China, India, Australia, USA
+and Brazil. While Europe and North America still makes up the major markets for organic food and drink,
+the extraordinary growth in the organic markets offers export opportunities for both developed and
+developing countries. The production and export of organic products in developing countries might offer
+both economic and environmental benefits, though this has mainly been investigated in Europe and North
+America. However, long-distance trade with organic products has also given rise to a debate on the
+sustainability of this development especially with regard to global warming. Consumers of organic products
+might ask themselves what are the environmental benefits of buying organic products from e.g. South
+America or Asia as compared to conventional production and is this outweighed by the long-distance trade?
+
+The overall aim of the present PhD study was to assess the environmental impacts of selected imported
+organic products from developing countries based on impacts during both production (as compared to
+conventional) and during processing and transport to Denmark. Firstly, the global trade, development and
+overall environmental impacts of organic agriculture and food systems were investigated to form the
+foundation for the further analysis. Organic soybeans from China and orange juice from Brazil were selected
+as relevant case studies. Secondly, environmental life cycle assessments (LCA) were conducted for the case
+studies in China and Brazil focusing on comparing organic with conventional cultivation and on identifying
+environmental hotspots of the imported organic product during production, processing and transport to
+Denmark. Thirdly, LCA was evaluated as a tool for evaluating the environmental soundness of organic
+agricultural products and a new methodology on including of soil carbon sequestration in LCA was
+suggested.
+
+The PhD study shows that the increasing globalization affects both conventional and organic agriculture and
+food systems. Major environmental problems with regard to agriculture and food systems are identified as
+global warming, nutrient enrichment and pollution of water resources, reductions in biodiversity and soil
+degradation. The growing global trade and development within organic food and farming systems holds a
+potential to offer economic and environmental benefits for developing countries, but at the same time holds a
+risk of increasing the environmental load from long-distance transport and of pushing organic food and
+agricultural systems toward the conventional farming model and thereby diminishing the environmental
+benefits of organic farming.
+
+The case studies in China and Brazil show that the total greenhouse gas emissions associated with imported
+organic soybeans from China is 429 kg CO2 eq. per tonne soybean, whereas imported organic orange juice
+from small-scale farmers in São Paulo, Brazil is 424 g CO2 eq. per litre orange juice. Transport accounts for
+50-60% of the total greenhouse gas emissions from the imported organic plant products. As a comparison,
+transport only account for 1-15% for imported meat products, since the greenhouse gas emissions per kg
+meat is a lot higher than for plant products. However, the actual contribution from transport is the same. The
+mode of transport is a determining factor in that truck transport has a much higher greenhouse gas emission
+per km than sea transport. Thus, sea transport from South America (reloaded to trucks in Rotterdam) is
+comparable to truck transport from Italy and France and lower than truck transport from Spain and sea
+transport from South Africa and China (also reloaded in Rotterdam) in terms of greenhouse gas emissions
+per kg imported product. It should be noted that greenhouse gas emissions from the agricultural production
+can vary (due to inputs, yields etc.) among countries and in some cases outweigh the emissions from
+transport.
+
+Comparing organic and conventional small-scale production until farm gate in the case studies, greenhouse
+gas emissions per kg organic product is found to be 60-75% of a comparable conventional production in the
+case study area. The nutrient enrichment (eutrophication) per kg organic product is 38-82% of a comparable
+conventional production whereas land use per kg organic product is 10-13% higher. Higher crop diversity is
+found on small organic compared to small conventional orange farms in Brazil, which may have a positive
+effect on biodiversity along with the absence of pesticides and the interrow vegetation. No differences are
+found in biodiversity potential in the Chinese case study except the absence of pesticides. Comparing large
+and small organic orange farms in Brazil, greenhouse gas emissions, eutrophication potential and copper use
+per hectare is found to be significantly lower on organic small-scale than on large-scale organic orange
+plantations.
+
+The shortcomings of LCA as a tool for evaluating environmental soundness of agricultural products,
+especially with regards to including biodiversity and soil carbon changes, are discussed. The studies in Brazil
+and China find that including estimated soil carbon changes widens the difference in greenhouse gas
+emissions per kg product between organic and conventional, but there is a need for methodological
+development on how to estimate and include this. A methodological approach to include soil carbon changes
+in LCA is suggested.

@@ -1,0 +1,80 @@
+Emergence, evolution and outcomes of marine protected areas in Vanuatu : implications for social-ecological governance
+General scope.
+
+For much of human history the oceans have been considered incomprehensibly vast; an inexhaustible source of goods and services. Over the last century however, that paradigm
+has proved largely inaccurate. The ocean is in a state of crisis, caused primarily by human overexploitation. A rational reaction to the crisis is to limit fishing, often by designating swaths of the ocean as marine protected areas (MPAs). To be effective, it has been suggested that marine protected areas must cover between ten and thirty percent of the world’s oceans, ideally linked into MPA networks. Protection targets on this scale, however, present critical implementation and governance challenges. While some nations can effectively implement and enforce MPA rules, many are impoverished, and lack the capacity to centrally govern marine protected areas. Experience shows that centrally mandating MPAs and marine use regulations in these contexts is not realistic, and will often lead to management failure.
+
+A weak central government does not always imply that a nation's marine resources are unmanaged. To the contrary, thousands of community-based organizations in developing
+countries, ranging from fishermen’s cooperatives to entire villages, have implemented localized marine management institutions. The vast majority of vulnerable coastal
+marine habitats (e.g. coral reefs, sea grass, mangroves) are found in tropical developing countries with local governance contexts, and so investigating how collectively
+implemented institutions, including MPAs, function there is vital for improving global outcomes. Broadly, this dissertation addresses questions about how locally managed
+MPAs influence and are influenced by the complex interactions between marine ecosystems and human governance systems.
+
+Specific Objectives.
+
+This dissertation sets out to accomplish the following objectives:
+1. Place the study of marine protected areas within a theoretical framework that enables a comprehensive and simultaneous analysis of social and ecological factors
+2. Utilize a linked social-ecological theoretical framework to better understand the emergence, evolution and outcomes of marine protected areas in Vanuatu; specifically to understand:
+a. Historical factors and trends that preceded and shaped the current marine resource governance regimes found in Vanuatu
+b. Motivations and expectations of ni-Vanuatu people regarding spatial marine closures
+c. Situational factors that may enable the selection and implementation of diverse marine closure regimes
+d. Ecological outcomes of diverse marine closure regimes
+e. Ways and means by which positive outcomes of marine closures may be fostered and enhanced into the future
+
+Refining MPA social-ecological theory.
+
+Understanding why and how user groups manage natural resources instead of overexploiting them has underpinned the development of theories on Commons and Collective Action. But because these kinds of questions typically focus on people, resulting theories tend to be firmly embedded in the social sciences. Marine protected
+area concepts, on the other hand, are generally encapsulated within the natural sciences. New paradigms are emerging that link social and ecological systems, and MPA
+investigators now routinely consider both social and ecological variables in their research. However, the social variables they investigate are often selected in an ad hoc fashion; they are rarely rooted in robust social-ecological theoretical frameworks. Elinor Ostrom has recently forwarded a framework to theoretically link social and ecological components of resource management systems; but, it has not yet been utilized to guide the empirical investigation of marine protected areas.
+
+This dissertation adapts Ostrom's theoretical framework, and operationalizes it to suit marine protected area social-ecological investigations. The framework theoretically
+situates MPAs within complex social-ecological systems and highlights links among systemic components including the users (e.g. fishermen), resource system (e.g. coral
+reefs), resource units (e.g. fish), governance systems (e.g. community decision making), outcomes (e.g. increased abundance), interactions (e.g. fisher conflicts), related
+ecosystems (e.g. climate), social settings (e.g. demographics) and historical trajectories (e.g. resource declines). If MPA case studies are designed and interpreted in the context of the framework, findings will be cumulative and more easily comparable with results
+from other case studies, and even from unrelated social-ecological systems.
+
+Using the framework to fill specific gaps in MPA knowledge and understanding.
+
+Much of the marine protected area literature focuses on permanently protected marine reserves that prohibit all forms of extraction. In contrast, only a handful of empirical studies have investigated the social and ecological outcomes of closures that are periodically harvested. Situating each type of MPA in the framework as a guide to empirical research facilitates a theoretically-based comparison of permanent and periodically harvested MPA types. Empirical data collected at the finest resolution can be 'scaled up' via the framework and compared to patterns emerging from other MPA
+case studies.
+
+The empirical foundation of this thesis derives from the Indo-Pacific region, specifically the Republic of Vanuatu, where marine protected areas are commonly implemented,
+managed and enforced by island communities. In Vanuatu it is now common to find some villages implementing permanent no-take reserves, and others non-permanent  closures (locally called taboos). On the islands of Nguna and Pele, different MPA rules are selected even among villages that are geographically adjacent, ecologically similarand share a cultural and linguistic heritage. The variability in MPA rules here has created a unique ‘natural experiment’ by which it is possible to tease out the theoretically based
+social and ecological factors that have influenced the differential emergence, evolution and outcomes of marine protected areas. Accordingly, much of this dissertation is based on carefully constructed case study comparisons among communities on Nguna and Pele Islands with different MPA rules.
+
+Of foremost concern to fisheries managers, conservationists and community stakeholders are the direct fisheries outcomes of different MPA rule types. Utilizing the comparative case study approach, the ecological conditions of periodically harvested taboos, permanent reserves and openly fished (control) sites were contrasted. Periodically
+harvested taboos were found to be suboptimal conservation strategies for some targeted organisms, for example giant clams and trochus snails because they are particularly
+vulnerable to harvest. Targeted fish species were found to have significantly higher biomass inside periodically harvested taboos than in adjacent openly fished areas,
+suggesting that in some contexts, periodic harvest may hold conservation and ecological value. This finding is directly relevant for the thousands of communities in the Pacific
+and beyond that implement periodically harvested taboos in order to boost stocks.
+
+It is widely assumed that MPA establishment in the Pacific islands will be constrained by food security concerns. Many quite rightly ask why an island community would choose
+to permanently lock up its limited coral reefs under a no-take marine reserve regime. This research on Nguna and Pele suggests that the primary motivation for establishing
+MPAs (of both types) is, in fact, to improve food security by stemming the rapid decline in health and quantity of target marine resources. Additionally, non-ecological
+motivations for community-based MPA establishment were widely held, including the potential to gain indirect benefits from tourism and foreign aid. Further, perceived MPA outcomes did not always coincide with ecological findings, suggesting that communities may be selecting MPA rules based on a combination of contextual, political and
+ideological factors.
+
+To date, no studies have empirically investigated how contextual factors enable the selection of MPA operational rules. Fuzzy-set qualitative comparative analysis enabled a
+qualitative-quantitative investigation into the combination of factors that potentially enable the differential selection of MPA rules on Nguna and Pele. Communities with notake marine reserve rules were found to possess high levels of some conditions (for example the capacity to enforce closures). In contrast, communities that select
+periodically harvested MPA rules are characterized by low levels of these and other conditions. This finding suggests that there may be non-linear thresholds above and below which certain MPAs rules become inappropriate. Additionally, periodic harvest rules may represent an ‘easier’ management regime for some communities to implement. To avoid MPA failure, donors and conservation organizations seeking to implement specific MPA rules (e.g. no-take reserves) will need to consider 1) adapting the rules to suit specific community contexts, or 2) building capacity and capital in order to create the conditions necessary for obtaining desirable rules. Marine protected area panaceas or blue-print approaches to MPA rules are inappropriate here as they are not effectively linked to community conditions.
+
+Today however, an unlikely MPA panacea is being actively promoted throughout Vanuatu: customary taboos. Cultural elites argue that Pacific Island MPAs should imitate
+taboos that they claim were developed in the ancient past, assumedly over millennia. But the communities on Nguna and Pele have no collective memory of coral reef taboos
+being employed on their islands before present times. To investigate the historical longevity of taboos and marine management in Vanuatu, archaeological findings, existing
+custom stories, oral histories and the first-hand accounts of early explorers, missionaries and anthropologists were comprehensively reviewed. In sharp contrast to the prevailing ancient management paradigms, little evidence was found to support claims that ancient marine management existed on Nguna and Pele. Rather, the evidence indicates that marine resources have been systematically overexploited throughout the recent and ancient past. In essence, customary taboo panaceas are likely being promoted because they maintain the political authority (and often economic livelihoods) of urban-located cultural elites or kastom gatekeepers. In reality however, it is dynamism and diversity that have defined ni-Vanuatu custom over the millennia; an historical legacy of adaptive capacity.
+
+Diverse MPA rhetoric and conflicting historical accounts have led to confusion within Vanuatu's small marine resource management community. Island communities often
+don't know whether to call their closures MPAs, protected areas, conservation areas, or taboos. Likewise, government agencies are unable to give accurate MPA status reports in
+fulfillment of international convention and treaty obligations. To overcome this challenge, a series of specific policy measures is proposed which would alleviate the discursive confusion surrounding MPAs in Vanuatu, while at the same time embracing and enabling the rich diversity of local management strategies. Building consensus on
+MPAs in Vanuatu is critical if island communities are to deal with the environmental, social and climactic changes that are predicted for the future.
+
+Moving Forward.
+
+Because the world is changing faster now that ever before, communities on Nguna and Pele are constantly facing new and unique marine resource governance challenges. Accordingly, important questions remain: Can institutional adaptation match the speed and scope of the global changes? What social-ecological factors influence the speed of
+adaptation/institutional change across different contexts? Why have some ni-Vanuatu communities been able to collectively organize and adapt their management institutions (to varying degrees of success) while others have not?
+
+This dissertation provides strong evidence that communities in Vanuatu have long been using and making decisions about marine resources. Institutions developed in the past
+and more recently guide the actions and strategies adopted by ni-Vanuatu people. These in turn are adaptive and responsive to local and supra local contextual factors. Having identified these patterns on Nguna and Pele and coded them into a decomposable theoretical framework, it becomes possible to formulate and test hypotheses about MPAs, both in the marine science discipline and across natural resource fields.
+
+Answering broader questions will require a more comprehensive research agenda; specifically a large-N theory-building empirical focus that crosses national boundaries, disciplinary confines and levels of organization and analysis. As this type of expansive
+research is beyond the capacity of most individual researchers, scientists will need to develop and make better use of theoretical ontologies that enable the standardization and translatability of existing case study research. Ostrom's proposed social-ecological conceptual framework will need to be expanded if it is to serve its purpose as a foundation for building cross disciplinary systemic models, testing hypotheses and translating case study data. In time this type of framework may provide a common language to scholars working across disciplines, at multiple scales and in geographically disparate locations.

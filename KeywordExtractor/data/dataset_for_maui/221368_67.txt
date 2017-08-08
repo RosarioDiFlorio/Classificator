@@ -1,0 +1,38 @@
+Near field communications: privacy, regulation & business models
+The implications of extended and intensive use of near field communications (NFC) are far reaching
+for new business applications, for the delivery of public services such as transport, and for public
+policy. This technology is transformative for a large number of applications and has stimulated
+innumerable innovative forms, but so far there has been insufficient insight expressed in discussions
+about its impact and risks. The purpose of these studies is to assess the character and use of contactless
+payment technologies and the future of NFC with a focus on what are by far its most extensive
+applications in public transport. We use our evidence to structure a new understanding of the economic,
+business, legal and policy aspects of its anticipated widespread growth, especially as embodied in
+mobile devices.
+NFC wireless technology allows information to be exchanged, via radio signals, between two NFCenabled
+devices over short distances. To date the most extensively used form of payment is contactless
+travel card tickets. However, NFC is increasingly being used on mobile phones with an 'electronic
+wallet' function, which allows people to make payments and manage other forms of exchange.
+The lack of insightful discussion of these far reaching effects brings significant risks. They include a
+new level of intensity of the pressure to undermine (or alter) principles and practices of safeguarding
+privacy. They raise concerns about the special status of children and other unwary users whose privacy
+might be compromised. They also intensify the concern we might have about breaches of data security
+or data loss, given the ability of NFC data to include location as well as payment information.
+We review the regulations and policies governing NFC in Europe and Asia and the incentives and
+barriers to the commercial development of NFC. The use of contactless payment technologies in public
+transport ticketing schemes – such as the Oyster card in London and the Octopus card in Hong Kong
+provide case studies for the research. Our investigation is based on legal and business analyses, case
+studies and considerations of the changing functionalities of NFC. We have also interviewed numerous
+experts in regulation, policy and business about trends in investment and policy.An overriding concern is that NFC will fail to achieve its potential. Until problems such as those associated with privacy and regulations are
+overcome there will be insufficient progress on extending
+the business models in ways stakeholders such as public authorities, consumers and investors expect.
+Given the large scale of activities, any such delay would be extremely costly both in terms of
+investments and in terms of the expectations of this element of the ubiquitous digital infrastructure.
+This report has eight sections. The first section covers the introduction to the research. Section two is a
+summary of the aspects to be taken into account for NFC and its application for public transport.
+Section 3 describes the theoretical foundations of the analysis. Section 4 focuses on the contentious
+issues emerging from NFC, privacy and business models. Section 5 discusses the implications of
+extending the NFC public transport experiences to other business cases. Section 6 presents our view on
+the future of NFC and its competitive environment. Section 7 addresses the key relationships that will
+determine NFC’s future, and section 8 presents our conclusions and our views on policy implications.
+We also present our case about the implications for business models development. The document
+concludes with an appendix of cases studied.

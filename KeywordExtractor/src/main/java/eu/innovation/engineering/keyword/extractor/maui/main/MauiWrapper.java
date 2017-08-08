@@ -36,7 +36,7 @@ import weka.core.Instances;
 public class MauiWrapper implements KeywordExtractor{
 
   /** Maui filter object */
-  private MauiFilter extractionModel = null;
+  private MauiFilter extractionModel;
   private static final int topicsPerDocument = 10;
   private Vocabulary vocabulary = null;
   private Stemmer stemmer;

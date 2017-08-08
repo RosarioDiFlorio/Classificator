@@ -1,0 +1,18 @@
+Efficient Memory-Protected Integration of Add-On Software Subsystems in Small Embedded Automotive Applications
+Current innovations in the automotive industry
+evolve mainly in the electronics and software domain. This leads
+to an increasing integration of additional software subsystems
+into already existing electronic control units (ECUs) to cope with
+the raised amount and complexity of present ECUs in modern
+high-end vehicles. This paper discusses different approaches
+which are required to integrate such add-on software subsystems
+in an isolated memory domain, and considers particularly the
+special needs of small embedded systems—including the limited
+hardware support. Special focus is brought to the efficient detection
+of malicious memory accesses, as well as the benefits of
+a thereupon possible and adaptable failure-handling strategy.
+All investigations are based on a developed memory-protection
+framework which has been tailored to the special needs of a sample
+vehicle dynamics control system. Its usage allows the combination
+of. integrating additional subsystems without reducing the main
+application’s availability
