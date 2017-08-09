@@ -1,4 +1,4 @@
-package eu.innovation.engineering.keyword.extractor;
+package eu.innovation.engineering.keyword.extractor.interfaces;
 
 import java.util.List;
 

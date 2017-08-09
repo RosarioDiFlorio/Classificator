@@ -16,6 +16,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>eu.innovation.engineering</groupId>
+            <artifactId>KeywordExtractor</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
             <groupId>eu.innovationengineering</groupId>
             <artifactId>language-detector-cybozu</artifactId>
             <version>0.0.2-SNAPSHOT</version>

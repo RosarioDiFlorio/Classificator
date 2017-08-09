@@ -12,7 +12,7 @@ import org.apache.commons.io.FileUtils;
 
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
-import eu.innovation.engineering.keyword.extractor.KeywordExtractor;
+import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 import eu.innovation.engineering.keyword.extractor.maui.filters.MauiFilter;
 import eu.innovation.engineering.keyword.extractor.stemmers.PorterStemmer;
 import eu.innovation.engineering.keyword.extractor.stemmers.Stemmer;

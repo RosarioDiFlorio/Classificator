@@ -17,7 +17,7 @@ import org.springframework.context.support.GenericApplicationContext;
 
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
-import eu.innovation.engineering.keyword.extractor.KeywordExtractor;
+import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 import eu.innovation.engineering.keyword.extractor.util.LanguageDetector;
 import eu.innovationengineering.lang.exceptions.LanguageException;
 import eu.innovationengineering.similarity.bean.WordFrequency;
