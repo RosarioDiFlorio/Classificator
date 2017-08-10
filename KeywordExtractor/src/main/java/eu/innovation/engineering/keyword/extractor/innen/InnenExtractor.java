@@ -38,7 +38,9 @@ public class InnenExtractor implements KeywordExtractor {
   private LanguageDetector languageDetector;
   
   
-  public InnenExtractor(){
+  public InnenExtractor(String mainDirectory){
+    this.mainDirectory = mainDirectory;
+    this.stopWordPath = this.mainDirectory + stopWordPath;
     languageDetector = new LanguageDetector();
 
   }
@@ -117,6 +119,8 @@ public class InnenExtractor implements KeywordExtractor {
   public void setStopWordPath(String stopWordPath) {
     this.stopWordPath = stopWordPath;
   }
+
+
 
   
 

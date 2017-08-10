@@ -12,14 +12,14 @@ import eu.innovation.engineering.prepocessing.interfaces.DataReader;
 
 public class RawDataReader implements DataReader {
   
-  private String fileToRead = "data/rawtrain_test/test";
+  private static String dataPath = "data/rawtrain_test/";
+  private static String fileToRead = "test";
   
   
- 
   public RawDataReader(String filename) {
-    setFileToRead(filename);
+   this.fileToRead = filename;  
+   this.fileToRead = dataPath + fileToRead;
   }
-
   
   @Override
   public Set<String> getIdPaper() throws IOException {

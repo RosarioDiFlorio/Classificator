@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
-import eu.innovation.engineering.keyword.extractor.maui.main.MauiWrapper;
+import eu.innovation.engineering.keyword.extractor.maui.main.MauiExtractor;
 
 public class App {
   
   
   public static void main(String[] args) throws Exception{
-    MauiWrapper mauiwrapper = new MauiWrapper("", "none", "newInnenModel");
+    MauiExtractor mauiwrapper = new MauiExtractor("", "none", "newInnenModel");
     
     
     String test = "Spiritual but not religious: a phenomenological study of spirituality in the everyday lives of younger women in contemporary Australia"+
@@ -24,7 +24,7 @@ public class App {
     System.out.println(mauiwrapper.extractKeywordsFromText(toTest));
     
     
-    InnenExtractor innwrapper = new InnenExtractor();
+    InnenExtractor innwrapper = new InnenExtractor("./");
     System.out.println(innwrapper.extractKeywordsFromText(toTest));
     
     

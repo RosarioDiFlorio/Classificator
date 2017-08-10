@@ -10,10 +10,10 @@ import java.util.ArrayList;
  */
 public class MauiWrapperFactory {
 
-	MauiWrapper agriculture;
-	MauiWrapper physics;
-	MauiWrapper medicine;
-	MauiWrapper general;
+	MauiExtractor agriculture;
+	MauiExtractor physics;
+	MauiExtractor medicine;
+	MauiExtractor general;
 	
 	/**
 	 * Constructor - directory, where data is stored (should be similar structure as
@@ -22,10 +22,10 @@ public class MauiWrapperFactory {
 	 * @param dataDirectory
 	 */
 	public MauiWrapperFactory(String dataDirectory) {
-		agriculture = new MauiWrapper(dataDirectory, "agrovoc_en", "fao30");
-		physics = new MauiWrapper(dataDirectory, "hep", "cern290");
-		medicine = new MauiWrapper(dataDirectory, "mesh", "nlm500");
-		general = new MauiWrapper(dataDirectory, "lcsh", "theses80");
+		agriculture = new MauiExtractor(dataDirectory, "agrovoc_en", "fao30");
+		physics = new MauiExtractor(dataDirectory, "hep", "cern290");
+		medicine = new MauiExtractor(dataDirectory, "mesh", "nlm500");
+		general = new MauiExtractor(dataDirectory, "lcsh", "theses80");
 	}
 	
 	
