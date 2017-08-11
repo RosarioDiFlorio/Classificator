@@ -18,10 +18,10 @@ import com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider;
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
 import eu.innovation.engineering.prepocessing.DatasetBuilder;
-import eu.innovation.engineering.prepocessing.util.Configurator;
 import eu.innovation.engineering.prepocessing.util.Item;
 import eu.innovation.engineering.prepocessing.util.ItemWrapper;
 import eu.innovation.engineering.prepocessing.util.Paper;
+import eu.innovation.engineering.prepocessing.util.configurator.Configurator;
 import eu.innovationengineering.word2vec.common.Constants;
 import eu.innovationengineering.word2vec.common.request.bean.VectorListRequestBean;
 import eu.innovationengineering.word2vec.service.rest.impl.Word2vecServiceImpl;
@@ -109,7 +109,7 @@ public class ClusteringKMeans {
     
     
     DatasetBuilder pb = new DatasetBuilder();
-    pb.parseDatasetFromJson("datasetDictionaries/datasetForDictionaries.json");
+    pb.parseDatasetFromJson("data/datasets/datasetDictionaries/datasetForDictionaries.json");
     // PRENDO LA LISTA DI PAPER DAL FILE USANDO IL METODO DELL OGGETTO pb
     ArrayList<Paper> paperList = pb.getListPapers();
    

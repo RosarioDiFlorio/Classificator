@@ -14,6 +14,7 @@ import eu.innovation.engineering.prepocessing.dictionaries.ClusteringKMeans;
 import eu.innovation.engineering.prepocessing.dictionaries.Dictionary;
 import eu.innovation.engineering.prepocessing.util.Features;
 import eu.innovation.engineering.prepocessing.util.Paper;
+import eu.innovation.engineering.prepocessing.util.configurator.PathConfigurator;
 
 
 
@@ -144,7 +145,7 @@ public class FeatureExtractor {
   public static Set<String> getCategories() throws IOException{
 
     Set<String> categories = new HashSet<String>();
-    FileReader fr = new FileReader("categories.txt");
+    FileReader fr = new FileReader(PathConfigurator.applicationFileFolder+"categories.txt");
     BufferedReader bufferedReader = new BufferedReader(fr);
 
     String line = bufferedReader.readLine();

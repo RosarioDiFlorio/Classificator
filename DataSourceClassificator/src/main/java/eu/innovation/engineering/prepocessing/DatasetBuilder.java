@@ -21,12 +21,13 @@ import eu.innovation.engineering.prepocessing.datareader.RawDataReader;
 import eu.innovation.engineering.prepocessing.interfaces.DataReader;
 import eu.innovation.engineering.prepocessing.util.Paper;
 import eu.innovation.engineering.prepocessing.util.SolrClient;
+import eu.innovation.engineering.prepocessing.util.configurator.PathConfigurator;
 
 
 
 public  class DatasetBuilder {
 
-  private String datasetFolder = "data/datasets/";
+
 
   private ArrayList<Paper> listPapers;
   private HashMap<String,ArrayList<Paper>> categoryMap;
@@ -52,9 +53,9 @@ public  class DatasetBuilder {
     listPapers = (ArrayList<Paper>) addCategories(listPapers);
     listPapers = (ArrayList<Paper>) addKeywords(listPapers);
 
-    this.mapper.writerWithDefaultPrettyPrinter().writeValue(new File(this.datasetFolder+"json/backup/"+fileName+"_complete.json"), this.listPapers);;    
+    this.mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.datasetFolder+"backup/"+fileName+"_complete.json"), this.listPapers);;    
     listPapers.stream().forEach(p->p.setDescription(null));
-    this.mapper.writerWithDefaultPrettyPrinter().writeValue(new File(this.datasetFolder+"json/"+fileName+".json"), this.listPapers);
+    this.mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.datasetFolder+"TrainingAndTest/"+fileName+".json"), this.listPapers);
   }
 
 
@@ -85,7 +86,6 @@ public  class DatasetBuilder {
    * @throws JsonParseException 
    *
    */
-
   public void parseDatasetFromJson(String filename) throws JsonParseException, JsonMappingException, IOException{
     System.out.println("Read dataset: "+filename);
     ObjectMapper mapper = new ObjectMapper();
@@ -174,14 +174,6 @@ public  class DatasetBuilder {
     this.keywordExtractor = keywordExtractor;
   }
 
-  public String getDatasetFolder() {
-    return datasetFolder;
-  }
-
-  public void setDatasetFolder(String datasetFolder) {
-    this.datasetFolder = datasetFolder;
-  }
-
   public String getFileName() {
     return fileName;
   }
@@ -196,7 +188,6 @@ public  class DatasetBuilder {
   public static void main(String[] args) throws IOException{
     DatasetBuilder db = new DatasetBuilder();
     db.setFileName("tmp");
-    //KeywordExtractor keywordExtractor = new InnenExtractor("../KeywordExtractor/");
     KeywordExtractor keywordExtractor = new MauiExtractor("../KeywordExtractor/", "none", "newInnenModel");
 
     db.setKeywordExtractor(keywordExtractor);

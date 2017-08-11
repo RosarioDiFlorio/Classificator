@@ -1,22 +1,34 @@
 package eu.innovation.engineering.prepocessing;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import eu.innovation.engineering.prepocessing.dictionaries.ClusteringKMeans;
 import eu.innovation.engineering.prepocessing.dictionaries.Dictionary;
 import eu.innovation.engineering.prepocessing.featurextractor.FeatureExtractor;
 import eu.innovation.engineering.prepocessing.util.Features;
+import eu.innovation.engineering.prepocessing.util.IdAndTarget;
 import eu.innovation.engineering.prepocessing.util.Paper;
+import eu.innovation.engineering.prepocessing.util.configurator.PathConfigurator;
 
 public class DictionaryBuilder {
 
+   private ObjectMapper mapper;
+   private String trainingAndTestFolder = "data/datasets/TrainingAndTest/";
+
+public DictionaryBuilder() {
+ mapper = new ObjectMapper();
+}
   
   
-  public void build() throws IOException{
+  public void buildDictionaries() throws IOException{
     ClusteringKMeans clusteringDictionaries = new ClusteringKMeans();
     HashMap<String, Dictionary> dictionaries = clusteringDictionaries.clusterWithDatasourceAsItems();
 
@@ -41,7 +53,7 @@ public class DictionaryBuilder {
 
     //PARTE DI CODICE SENZA BALANCER E DUE DATASET DIVERSI
     DatasetBuilder pbTraining = new DatasetBuilder();
-    pbTraining.parseDatasetFromJson("datasetTrainingAndTest/train.json");
+    pbTraining.parseDatasetFromJson(PathConfigurator.trainingAndTestFolder+"train.json");
     ArrayList<Paper> trainingSet = pbTraining.getListPapers();
 
     //STAMPO IL DATASET DI TRAINING CON I PAPER DIVISI PER CLASSI, PER VEDERE COME E' BILANCIATO
@@ -64,7 +76,7 @@ public class DictionaryBuilder {
     fileWriterpaperForCategory.close();
 
     DatasetBuilder pbTesting= new DatasetBuilder();
-    pbTesting.parseDatasetFromJson("datasetTrainingAndTest/test.json");
+    pbTesting.parseDatasetFromJson(PathConfigurator.trainingAndTestFolder+"test.json");
     ArrayList<Paper> testSet = pbTesting.getListPapers();
     ///////////////////////////////////////////////
 
@@ -75,6 +87,11 @@ public class DictionaryBuilder {
     HashMap<String, ArrayList<Features>> featuresPapersTest = featureExtractor.createFeaturesNormalizedInputDB(testSet,dictionaries);
     HashMap<String, ArrayList<Features>> targetsPapersTest = featureExtractor.createTargetsInputDB(testSet, categories, dictionaries);
 
+    HashMap<IdAndTarget,ArrayList<Features>> featuresPapersTrainingWithTarget = loadTargetForDosuments(featuresPapersTraining,targetsPapersTraining,categories);
+    HashMap<IdAndTarget,ArrayList<Features>> featuresPapersTestWithTarget = loadTargetForDosuments(featuresPapersTest,targetsPapersTest,categories);
+    
+    mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.dictionariesFolder+"dictionaryForTraining.json"), featuresPapersTrainingWithTarget );
+    mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.dictionariesFolder+"dictionaryForTraining.json"), featuresPapersTestWithTarget );
   }
   
 //METODO CHE RESITUISCE UN HASHMAP DI CATEGORIA, PER OGNI CATEGORIA LA LISTA DI PAPER CHE APPARTENGONO
@@ -94,6 +111,39 @@ public class DictionaryBuilder {
     }
     return categoryWithPapers;
   }
+  
+  //METODO CHE ASSOCIA OGNI DOCUMENTO ALLA CLASSE D?APPARTENENZA, SALVANDO ID E TARGET IN UN OGGETTO DI TIPO IdAndTarget
+  private HashMap<IdAndTarget, ArrayList<Features>> loadTargetForDosuments(HashMap<String, ArrayList<Features>> featuresPapersTraining,
+      HashMap<String, ArrayList<Features>> targetsPapersTraining, HashSet<String> categories) {
+    HashMap<IdAndTarget, ArrayList<Features>> toReturn = new HashMap<>();
+    for(String key : featuresPapersTraining.keySet()){
+      ArrayList<Features> targetsCurrentPaper = targetsPapersTraining.get(key);
+      double currentValue=0;
+      String currentTarget="";
+      Iterator<String> iterator = categories.iterator();
+      for(Features target : targetsCurrentPaper){
+        String targetIter = iterator.next();
+        if(target.getScore()>currentValue){          
+          currentValue=target.getScore();
+          currentTarget = targetIter;
+        }
+
+      }
+      IdAndTarget  idAndTarget = new IdAndTarget(key,currentTarget);
+      toReturn.put(idAndTarget, featuresPapersTraining.get(key));
+      System.out.println(currentTarget);
+    }
+
+
+    return toReturn;
+  }
+  
+  
+  public static void main(String[] args) throws IOException{
+    DictionaryBuilder db = new DictionaryBuilder();
+    db.buildDictionaries();
+  }
+
   
   
 }
