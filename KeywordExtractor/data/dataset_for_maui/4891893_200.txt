@@ -1,0 +1,9 @@
+OMake: Designing a Scalable Build Process
+Modern software codebases are frequently large, heterogeneous, and constantly evolving.  The languages and tools for software construction, including code builds and configuration management, have not been well-studied.  Developers are often faced with using 1) older tools (like make) that do not scale well, 2) custom build scripts that tend to be fragile, or 3) proprietary tools that are not portable.
+
+In this paper, we study the build issue as a domain-specific programming problem.  There are a number of challenges that are unique to the domain of build systems.  We argue that a central goal is compositionality---that is, it should be possible to specify a software component in isolation and add it to a project with an assurance that the global specification will not be compromised.  The next important goal is to cover the full range of complexity---from allowing very concise specifications for the most common cases to providing the flexibility to encompass projects with unusual needs. Dependency analysis, which is a prerequisite for incremental builds, must be automated in order to achieve compositionality an reliability; it also spans the full range of complexity.
+
+We develop a language for describing software builds and
+configuration.  We also develop an implementation (called OMake), that addresses all the above challenges efficiently and portably. It also provides a number of features that help streamline the edit/compile development cycle.
+
+OMake is freely available under the GNU General Public License, and is actively being used in several large projects.

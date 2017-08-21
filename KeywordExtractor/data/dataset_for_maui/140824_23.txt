@@ -1,0 +1,285 @@
+Food, land and greenhouse gases The effect of changes in UK food consumption on
+land requirements and greenhouse gas emissions. Report for the Committee on
+Climate Change.
+EXECUTIVE SUMMARY •1. Key findingsThis study examines the land use and
+greenhouse gas implications of UK food consumption change away from carbon
+intensive products. It shows that the UK agricultural land base can support
+increased consumption of plant-based products arising from the reduced
+consumption of livestock products. A 50% reduction in livestock product
+consumption reduces the area of arable and grassland required to supply UK food,
+both in the UK and overseas. It also reduces emissions of greenhouse gases from
+primary production by 19%. A switch from beef or sheepmeat (red meat) to pork or
+poultry (white meat) reduces food consumption related greenhouse gas emissions
+and the land area required but increases overseas arable land use. With this
+exception, the release of arable land now used to grow animal feed exceeds the
+additional arable land required for increased plant based foods in both the UK
+and overseas. Reducing livestock product consumption also has the potential to
+enable delivery of other significant environmental benefits, for example,
+reductions in ammonia and nitrate emissions. A 50% reduction in livestock
+product consumption reduces UK grassland needs for UK food production by several
+million hectares. This land could be used to supply livestock products for
+export markets although our scenarios assume that the proportions of imports,
+domestic production and exports remain constant. In these circumstances, some of
+the grassland released could be used to produce arable crops, including crops
+for biofuel production. Almost all of it could be converted to woodland or
+managed in other ways for biodiversity and/or amenity purposes. Conversion of
+this land resource to woodland has significant potential to increase soil carbon
+storage while supplying biomass for energy. Scenario Cropped area required, kha
+Grassland area required, kha Total area, kha Greenhouse gas emissions, kt CO2e/
+year * UK OS Total UK OS Total UK OS Total Baseline 3,388 4,458 7,846 11,228
+1,944 13,172 21,018 51,693 29,001 80,694 50% reduction in livestock with land
+release priority: Uniform 3,123 4,131 7,254 4,161 700 4,861 12,115 36,282 29,456
+65,738 Maximise non-tillable land release 3,123 4,131 7,254 2,905 700 3,605
+10,859 36,246 29,451 65,697 Maximise release of tillable land 3,123 4,131 7,254
+7,102 700 7,802 15,056 36,282 29,457 65,739 Red to white meat with land release
+priority: Uniform 3,443 4,908 8,351 3,879 486 4,365 12,716 45,812 27,575 73,387
+Maximise release of non-tillable land 3,443 4,909 8,352 2,909 486 3,395 11,747
+45,867 27,572 73,439 Maximise release of tillable land 3,443 4,908 8,351 6,947
+486 7,433 15,784 45,878 27,575 73,453 50% reduction in white meat consumption:
+Uniform 3,201 3,735 6,936 11,228 1,944 13,172 20,108 49,525 28,500 78,025 * The
+greenhouse gas emissions do not include possible effects of land use
+changeSummary table. The area of land needed to supply UK food and the
+greenhouse gas emissions from food production under current circumstances and
+under the seven scenarios studied. In a reduction scenario, concentrating
+remaining livestock production on different land types (e.g. concentrating on
+intensive production on lowland farms versus extensive production on lower
+quality land) has little effect on greenhouse gas emissions from primary
+production. This indicates that there is relatively little scope to reduce
+emissions by restructuring production (at least restructuring in relation to
+land use). It is further noted that concentrating livestock production on higher
+quality land would cause an almost complete closure of production for UK markets
+on land not suited to intensive grass or arable production, with biodiversity
+and economic impacts (discussed further below). The risks of unintended
+consequences with respect to greenhouse gas emissions are relatively low given
+the assumptions in the scenarios, but the actuality of such change will depend
+on future economic, social and political drivers. The report includes detailed
+analyses of land use and emissions data together with extensive discussion of a
+wide range of effects based on literature analysis. •2. Study objectivesThis
+study was conducted for the UK Government's Committee on Climate Change (CCC) to
+examine if UK agriculture can support consumption change away from carbon-
+intensive food products. For the purposes of the consumption scenarios, it is
+assumed the relationships between imports, exports and domestic consumption
+remain constant for each of the commodities used by the UK food system. The
+following questions were addressed: 1. Land needs: Given land quality
+considerations (e.g. land capability and constraints), to what extent is it
+possible to support a change in the UK consumption of meat and dairy products
+with a corresponding increase in substitute goods from UK agricultural land? Can
+a reduction in meat and dairy product consumption release land for other
+purposes? To what use would this freed-up land be suitable (e.g. food
+production, biomass production, carbon sequestration, other ecosystem service
+provision, forestry, etc.)? 2. Greenhouse gas emissions: What are the
+implications of the transition in production for GHGs both in the UK and abroad
+(including soil carbon releases, sequestration, reduced production of feed, etc,
+as well as reductions in direct N2O and CH4 emissions? 3. Other effects: What
+are the other implications, including for water, other pollutants, farm incomes,
+availability of manure as a fertiliser input, public health, ecosystem services,
+biodiversity, and animal welfare? 4. International implications: If UK
+agricultural land cannot support consumption changes, what are the international
+implications in terms of agricultural production and land-use displacement (e.g.
+deforestation, land for biofuels, land for food), and GHGs?•3. MethodsWe
+developed and used a combination of consumption and production scenarios to
+examine potential consequences of change. Life-cycle assessment (mainly life
+cycle inventory analysis) was applied to these scenarios to examine the overall
+effects of the consumption change on GHG and other emissions from primary
+production, in the UK and overseas. The production under the various scenarios
+was allocated to agricultural land resources by a combination of survey-based
+data analysis and model-derived calculations. Land use change (LUC) emissions
+(from changing soil C and biomass stocks) were calculated from data in the UK
+national inventory as well as from the UK Renewable Fuel Agency for overseas
+land types. Commodity flows as affected by consumption were calculated from
+FAOSTAT and Defra data. The resulting emissions were allocated to the various
+inventories in which they are registered, e.g. the UK's GHG inventories for
+agriculture, LUC, energy use and industry, together with those from overseas
+that are made up by components from our UK consumption of food and drink.
+Scientific literature relevant to the wider assessment of these scenarios was
+analysed (and an ecosystems services method was applied) to enable a qualitative
+assessment to complement the quantitative analysis. ScenariosWe designed a range
+of consumption and production scenarios to examine options on both the demand
+and supply sides. These comprise three consumption and three production
+scenarios. The consumption scenarios are as follows: Consumption Scenario 1. A
+50% reduction in livestock product consumption balanced by increases in plant
+commodities. Consumption Scenario 2. A shift from red meat (beef and lamb) to
+white meat (pork and poultry). Red meat consumption is reduced by 75%.
+Consumption Scenario 3. A 50% reduction in white meat consumption balanced by
+increases in plant commodities. It must be stressed that the nature of scenarios
+is such that they contain a variety of assumptions about possible future demands
+and supplies of agricultural commodities. The scenarios are not forecasts. The
+focus has been on the technical capacity of land and agricultural production,
+not on the market changes needed to enable change. It should be noted that the
+balance of supply from the UK and overseas is assumed to remain as it is now.
+The 50% reduction in livestock products was not applied uniformly across these
+commodities. Under the reduction scenario (Consumption scenario 1), consumption
+of milk and eggs is 60% of current consumption, and meat consumption is 36% of
+current consumption. Sugar consumption is also reduced to align with healthy
+eating guidelines. Reduction in consumption of livestock products is balanced by
+increasing plant consumption on the basis of constant food energy supplied.
+Fruit and vegetable consumption was increased by 50% and basic carbohydrate
+(e.g. cereals, potatoes) and oil rich commodities (except palm oil) by 33%.
+Substitution was estimated on the basis of food energy use at the commodity
+level using FAOSTAT data. Expert opinion was obtained in relation to the
+viability of consumption change under Scenario 1. This indicated that diets at
+the consumer level under this scenario are viable from a nutritional viewpoint.
+It was also noted that Consumption Scenario 1 aligns with healthy eating
+guidelines in other countries. The production scenarios are focused on the
+intensity of use of different types of land. The result is a difference in the
+quantity and type of land ‘released' from production from change that reduces
+land needs. The production scenarios are: Production Scenario 1. Uniform land
+release - ‘pro-rata' changes in land requirements across land types. Production
+Scenario 2. Maximise release of tillable land - ruminant meat production
+concentrated on lower quality land. Production Scenario 3. Maximise release of
+low quality land - ruminant meat production concentrated on high quality land.
+The combination of consumption scenarios 1 and 2 and three production scenarios
+gives a total of 6 system scenarios. These are complemented by Consumption
+Scenario 3 giving a total of 7. •4. ResultsLand needsAll consumption change
+scenarios reduce the total amount of land estimated as required to support the
+UK food system. A switch from red to white meat increases the need for overseas
+arable land, although a larger area of UK land that can be tilled is released.
+Under a reduction scenario, the amount of extra land required for the direct
+consumption of plant products is less than the amount of arable land released
+from livestock feed production. The net effect on total overseas arable land
+needs is a reduction of about 311,000 ha and a net release of about 265,000 ha
+arable land in the UK. The need for grassland is greatly reduced. The release of
+grassland with some arable potential ranges between 1.6 to 3.7 million ha
+depending on where remaining production is concentrated. The release of
+grassland with no arable potential ranges from 0.7 to 6.9 million ha. Under a
+reduction scenario, concentrating remaining production on better quality land
+would almost entirely eliminate sheep and beef production for the UK from the
+hills, most uplands and less productive lowland areas. Under Consumption
+Scenario 2 (a shift from beef and sheepmeat to white meat from pigs and
+poultry), the diet needs of pigs and poultry result in a net increase in demand
+for overseas grown crops, although considerably more potentially arable land is
+released in the UK. More arable cropping is needed both in the UK (an additional
+55,000 ha) and to a much greater extent overseas (about an additional 466,000
+ha), driven largely by soy. However, the release of arable quality grassland in
+the UK exceeds the increase in overseas arable landed needed for producing this
+feed. The result is a net release of between 1.6 and 2.9million ha potentially
+arable land in the UK plus the release of 1.3 to 6.6 millionha of land suitable
+only for grassland. Under Consumption Scenario 3 (a 50% reduction in white meat
+consumption balanced by an increase in plant products) the changes are much less
+complex with no changes in grassland needs. Increases in demand for arable land
+for direct human consumption amounted to about 154,000 and 172,000 ha (domestic
+and overseas respectively), but these are more than compensated for by the
+release of arable land from feed production (341,000 and 668,000ha domestic and
+overseas respectively). Focusing a reduced cattle and sheep industry on non-
+arable land would result in the release of substantially more tillable land
+(currently grassland). In a 50% livestock production consumption reduction
+scenario, maximising the use of lower grade land (semi-natural grassland, hill
+land etc.) releases 3.7 million of tillable grassland (including 1.3million ha
+of good arable land). The opposite approach of withdrawing production from less
+capable land releases just 1.7 millionha of potentially arable land, with almost
+no release of the grassland well suited for to arable production. The land-use
+trade-off is therefore clear. Under a 50% livestock consumption reduction
+scenario, 2 million ha of tillable grassland is required to compensate for the
+withdrawal of cattle and sheep production from 6.9 million ha of non-tillable
+grassland. A 50% reduction in livestock product consumption opens up the
+opportunity to release about half of UK land currently used for UK food supplies
+if remaining production is concentrated on the more capable land. If land is
+released uniformly, almost two-thirds of this release takes place on grassland
+not suited to arable production and the remaining third is grassland with some
+arable potential. There would be with higher levels of land release in Scotland,
+Wales and Northern Ireland than in England. Depending on where the remaining
+production takes place, a large proportion of land released may be very
+unproductive, but it can be assumed that about 5 million ha with potential for
+other agricultural uses would be available, for example for the production of
+livestock for export (if they did not reduce their livestock consumption), for
+producing arable biofuel crops, planted woodland and re-wilding (to natural
+woodland in many cases). Greenhouse gas emissionsAll consumption scenarios
+reduce greenhouse gas emissions from primary production. The largest reduction
+is from a livestock reduction scenario (Consumption Scenario 1): from 81 to
+66MtCO2e (19% reduction). The switch from red to white meat reduces emissions by
+9% and a 50% reduction in white meat consumption by only 3%. The net effect on
+emissions depends greatly on the alternative use of the grassland released from
+food production. The study indicates the range of possible consequences on soil
+and biomass fluxes. If all tillable grassland released from food production was
+converted to arable use, 8 to 17MtCO2e per year would be released over 20 years
+through the effects of land use change. Converting all released land with the
+potential to support good tree growth to woodland would cause a net carbon
+uptake equivalent to about 7.5 to 9.5MtCO2e per year in soil and wood per year
+over 20 years. Land use preference (e.g. focusing remaining production on high
+quality land) has little effect on emissions. This is an important result
+indicating that supply chain emissions are unresponsive to changes in industry
+structure with respect to the land used. The location of emissions reductions
+(UK or overseas) was identified. Currently, we estimate that 36% of primary
+production emissions are overseas. All scenarios reduce UK emissions while
+Consumption Scenario 1 has little effect on overseas emissions and Consumption
+Scenario 2 reduces overseas emissions by 5%. None of the scenarios involve a net
+export of emissions and the GHG reduction benefits in the UK are proportionally
+greater than those overseas because of the tight link between UK livestock
+consumption and production. OTHER EFFECTS Other emissions All consumption
+scenarios are expected to reduce other emissions. Consumption Scenario 1 halves
+ammonia emissions. Reductions in nitrate emissions, eutrophication emissions
+generally, and acidification are almost as large (ca 45%). Biodiversity and
+carbon sequestration It is widely asserted that grassland, especially semi-
+natural grassland, has a higher biodiversity value compared with other types of
+vegetation, natural climax vegetation for example. It is often claimed that the
+retention of these grasslands is important for the continued delivery of some
+ecosystem services, for example, carbon sequestration. In many other European
+countries, the uplands and hills are usually wooded. For example, 32% and 29% of
+the land area in Germany and France respectively are wooded compared with 12% in
+the UK. Thus conversion to climax woodland or other forms of forestry is one
+obvious alternative use for released grassland. Our study has identified
+benefits for carbon sequestration in soil when grassland is converted to
+woodland (there should also be potential benefits in the use of harvested wood).
+Our analysis of land use statistics reveals the large proportion of UK land
+currently occupied by cattle and sheep. Without these livestock, this grassland
+(much of which is semi-natural grassland) would revert to the natural vegetation
+- deciduous woodland in many cases. Our results show that the use of livestock
+to retain semi-natural grasslands is not dependent on the current high level of
+livestock product consumption. A 50% reduction in demand still leaves a market
+which is large enough to support this activity. However, given how a declining
+market affects all suppliers, a livestock reduction scenario presents special
+challenges to the maintenance of semi-natural grasslands. Livestock systems
+provide a wide range of services that are currently used by society. In a
+reduction scenario, rural areas lose skills and employment in the livestock
+sector and there would be ramifications for linked industries such as the meat
+processing or veterinary sectors. Culturally important features, for example,
+hedgerows and stone walls, and much of the fauna and flora associated with
+grassland would be no longer needed. In the UK as a whole, land that is most
+likely to be taken out of production is associated with difficult production
+conditions. In England, upland moorland and common land now in a semi-natural
+state could change to fully natural vegetation cover. In upland areas, where the
+majority of re-wilding under Consumption Scenario 1 and 2 would be located,
+evidence suggests that various natural communities including scrub, bracken,
+bramble, and woodland with their own assemblage of flora and fauna are likely to
+develop, with potential increases in wild herbivores such as deer, hares, and
+rabbits. The majority of SSSIs currently under-grazed occur in lowland areas,
+for example in southern and eastern parts of England, and a lack of livestock
+results in difficulty in applying the grazing pressure required to maintain the
+semi-natural faunal and floral diversity. Recreational access to the uplands,
+which is now facilitated by open grassland landscapes, may be impaired and
+evidence suggests that visitors view the loss of traditional semi-natural
+landscapes, with associated meadows, hedges, and stone walls, negatively. Whilst
+a reduction in the current ecosystem service provision associated with livestock
+production from cattle and sheep can be expected under Consumption Scenarios 1
+and 2, the net change is also dependent on the alternative use to which land is
+put. In upland SSSIs, overgrazing is often problematic and reducing grazing
+pressure may allow semi-natural habitats to recover, in particular dwarf shrub
+heaths, bogs, acid grassland and upland habitats. The release of large areas of
+land could also be used to diversify upland areas. For example, semi-natural
+upland woodlands have declined by 30-40% since the 1950s and the UK Habitat
+Action Plan has therefore included a target to increase the area of upland oak
+woodland through planting or natural regeneration of current open ground. In the
+lowlands, approximately 10% of the current arable land could be released for
+other activities, such as bioenergy crops, woodlands, recreational land, wetland
+creation, nature reserves, flood protection, carbon sequestration, and urban
+development. Each of these land uses will have its own specific range and flow
+of ecosystem services associated with it. While in general, the release of
+agricultural land with high environmental value from food production is not
+viewed as positive, Defra has concluded that there are likely to be situations
+where positive outcomes can occur. Economic considerations The reduction in the
+amount of land needed to supply the UK goes hand-in-hand with a reduction in the
+value added by agriculture supplying UK consumed food. A 50% reduction in
+livestock product consumption (Consumption Scenario 1) reduces the UK farm-gate
+value of livestock products from £7.6 to 3.5 billion. The farm-level economic
+impact of a change along these lines will depend crucially on what replacement
+output is found for the land released and on market effects that are beyond the
+scope of this study. One economic response scenario is that the land resource
+released remains in agriculture serving export markets. Another strategy is to
+use the land for non-food purposes. Using biomass energy cropping as a benchmark
+and assuming a price of £40/tonne dry matter biomass wood, we estimate that
+replacing the value of the food output of higher quality land released will be
+challenging, although it is reported that biomass energy is an economically
+viable alternative to sheep production on uplands.1 Potential unexpected or
+unintended consequences Changes to UK crop production The general conclusion
+that a reduction in livestock production consumption will have little effect in
+to

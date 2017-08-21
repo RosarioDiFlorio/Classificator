@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd">
+
+    <!-- Define the analyzer bean, that is used by the SolrClient API endpoints -->
+    <bean id="analyzerbean" class="eu.innovationengineering.solrclient.auth.api.impl.TextAnalyzerImpl" depends-on="configurationproviderbean,storagefactorybean">
+        <property name="configurationProvider" ref="configurationproviderbean"/>
+        <property name="storageFactory" ref="storagefactorybean"/>
+        <property name="analyzer">
+            <bean class="eu.innovationengineering.nlp.analyzer.stanfordnlp.StanfordnlpAnalyzer">
+                <property name="sentenceFilters">
+                    <util:list>
+                        <bean class="eu.innovationengineering.nlp.filter.impl.EmptySentenceFilter"/>
+                        <bean class="eu.innovationengineering.nlp.filter.impl.ListPointSentenceFilter"/>
+                    </util:list>
+                </property>
+                <property name="oatTripleFilters">
+                    <util:list>
+                        <bean class="eu.innovationengineering.nlp.filter.impl.NumberOatTripleFilter"/>
+                    </util:list>
+                </property>
+            </bean>
+        </property>
+    </bean>
+    <bean id="lemmatizer" class="eu.innovationengineering.nlp.analyzer.stanfordnlp.StanfordLemmatizer"/>
+</beans>

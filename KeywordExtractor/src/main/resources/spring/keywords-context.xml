@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.1.xsd">
+
+    <bean id="blacklist" class="eu.innovationengineering.similarity.util.CsvBlackListLoader">
+        <property name="source" value="${blacklist.path:classpath:full_black_list.csv}" />
+    </bean>
+    
+    <bean id="grantKeywordAnalyzer" class="eu.innovationengineering.similarity.keyword.extractor.solrclient.impl.GrantKeywordAnalyzer" scope="prototype">
+        <property name="blackList" ref="blacklist" />
+    </bean>
+    <bean id="projectOpportunitiesKeywordAnalyzer" class="eu.innovationengineering.similarity.keyword.extractor.solrclient.impl.ProjectOpportunitiesKeywordAnalyzer" scope="prototype">
+        <property name="blackList" ref="blacklist" />
+    </bean>
+    <bean id="webpageKeywordAnalyzer" class="eu.innovationengineering.similarity.keyword.extractor.solrclient.impl.WebpageKeywordAnalyzer" scope="prototype">
+        <property name="blackList" ref="blacklist" />
+    </bean>
+    
+    <bean id="keywordFrequencyAnalyzerRunnable" class="eu.innovationengineering.similarity.keyword.runnable.KeywordFrequencyCollectorRunnable" scope="prototype" />
+
+    <bean id="keywordExtractionRunnable" class="eu.innovationengineering.similarity.keyword.runnable.KeywordExtractionRunnable" scope="prototype" />
+
+    <bean id="keywordSaverRunnable" class="eu.innovationengineering.similarity.keyword.runnable.KeywordSaverRunnable" scope="prototype" />
+
+</beans>
