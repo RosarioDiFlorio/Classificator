@@ -138,7 +138,11 @@ public DictionaryBuilder() {
     return toReturn;
   }
   
-  
+  /**
+   * Example Main
+   * @param args
+   * @throws IOException
+   */
   public static void main(String[] args) throws IOException{
     DictionaryBuilder db = new DictionaryBuilder();
     db.buildDictionaries();

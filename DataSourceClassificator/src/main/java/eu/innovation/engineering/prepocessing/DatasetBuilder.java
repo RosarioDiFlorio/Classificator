@@ -185,6 +185,11 @@ public  class DatasetBuilder {
 
 
 
+  /**
+   * Example Main
+   * @param args
+   * @throws IOException
+   */
   public static void main(String[] args) throws IOException{
     DatasetBuilder db = new DatasetBuilder();
     db.setFileName("tmp");
