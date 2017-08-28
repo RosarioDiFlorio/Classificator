@@ -9,26 +9,28 @@ import java.util.Map;
 import java.util.Set;
 
 import eu.innovation.engineering.prepocessing.interfaces.DataReader;
+import eu.innovation.engineering.prepocessing.util.configurator.PathConfigurator;
 
-public class RawDataReader implements DataReader {
-  
-  private static String dataPath = "data/rawtrain_test/";
+public class TxtDataReader implements DataReader {
+
   private static String fileToRead = "test";
-  
-  
-  public RawDataReader(String filename) {
-   this.fileToRead = filename;  
-   this.fileToRead = dataPath + fileToRead;
+
+
+  public TxtDataReader(String filename) {
+    this.fileToRead = filename;  
+    this.fileToRead = PathConfigurator.applicationFileFolder + fileToRead;
   }
-  
+
+  /**
+   * This method read the simple txt file and return the ids under every category
+   */
   @Override
-  public Set<String> getIdPaper() throws IOException {
+  public Set<String> getIds() throws IOException {
     FileReader reader = new FileReader(fileToRead+".txt");
     BufferedReader bufferedReader = new BufferedReader(reader);
     String line = bufferedReader.readLine();
     Set<String> idPapers = new HashSet<>();
 
-    //LEGGO I PAPER DAL FILE
     while(line!=null){
       if(line.contains("_")){
         String splitLine[] = line.split(" ");
@@ -39,8 +41,12 @@ public class RawDataReader implements DataReader {
     return idPapers;
   }
 
+  /**
+   * This method create an HashMap contained as key the category 
+   * and as value an HashMap with key ids of the document and as value the relevance
+   */
   @Override
-  public Map<String, HashMap<String, String>> categoriesWithPaper() throws IOException {
+  public Map<String, HashMap<String, String>> categoriesWithIds() throws IOException {
     FileReader reader = new FileReader(fileToRead+".txt");
     BufferedReader bufferedReader = new BufferedReader(reader);
     String line = bufferedReader.readLine();

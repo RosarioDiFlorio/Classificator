@@ -9,8 +9,8 @@ import java.util.HashSet;
 import java.util.Iterator;
 
 import eu.innovation.engineering.prepocessing.DatasetBuilder;
-import eu.innovation.engineering.prepocessing.dictionaries.ClusteringKMeans;
-import eu.innovation.engineering.prepocessing.dictionaries.Dictionary;
+import eu.innovation.engineering.prepocessing.clustering.ClusteringKMeans;
+import eu.innovation.engineering.prepocessing.clustering.Dictionary;
 import eu.innovation.engineering.prepocessing.util.Configurator;
 import eu.innovation.engineering.prepocessing.util.Features;
 import eu.innovation.engineering.prepocessing.util.IdAndTarget;

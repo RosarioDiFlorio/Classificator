@@ -17,7 +17,7 @@ import com.ibm.watson.developer_cloud.natural_language_understanding.v1.model.Ca
 
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 import eu.innovation.engineering.keyword.extractor.maui.main.MauiExtractor;
-import eu.innovation.engineering.prepocessing.datareader.RawDataReader;
+import eu.innovation.engineering.prepocessing.datareader.TxtDataReader;
 import eu.innovation.engineering.prepocessing.interfaces.DataReader;
 import eu.innovation.engineering.prepocessing.util.Paper;
 import eu.innovation.engineering.prepocessing.util.SolrClient;
@@ -47,8 +47,8 @@ public  class DatasetBuilder {
 
 
   public void buildDataset() throws IOException{
-    dataReader = new RawDataReader(this.fileName);
-    List<String> listIdPaper = new ArrayList<>(dataReader.getIdPaper());
+    dataReader = new TxtDataReader(this.fileName);
+    List<String> listIdPaper = new ArrayList<>(dataReader.getIds());
     listPapers.addAll(solrClient.getPapersFromSolr(listIdPaper));
     listPapers = (ArrayList<Paper>) addCategories(listPapers);
     listPapers = (ArrayList<Paper>) addKeywords(listPapers);
@@ -132,7 +132,7 @@ public  class DatasetBuilder {
   }
 
   public List<Paper> addCategories(List<Paper> list) throws IOException{
-    Map<String, HashMap<String, String>> categoryPapers = dataReader.categoriesWithPaper();
+    Map<String, HashMap<String, String>> categoryPapers = dataReader.categoriesWithIds();
 
     for(Paper paper :list){
       ArrayList<CategoriesResult> categoriesForCurrentPaper = new ArrayList<>();

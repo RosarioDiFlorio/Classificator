@@ -7,6 +7,6 @@ import java.util.Set;
 
 public interface DataReader {
   
-  public Set<String> getIdPaper() throws IOException;
-  public Map<String,HashMap<String,String>> categoriesWithPaper() throws IOException;
+  public Set<String> getIds() throws IOException;
+  public Map<String,HashMap<String,String>> categoriesWithIds() throws IOException;
 }

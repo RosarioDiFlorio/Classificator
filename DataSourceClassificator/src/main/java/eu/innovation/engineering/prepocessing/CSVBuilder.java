@@ -11,8 +11,8 @@ import java.util.Iterator;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import eu.innovation.engineering.prepocessing.dictionaries.ClusteringKMeans;
-import eu.innovation.engineering.prepocessing.dictionaries.Dictionary;
+import eu.innovation.engineering.prepocessing.clustering.ClusteringKMeans;
+import eu.innovation.engineering.prepocessing.clustering.Dictionary;
 import eu.innovation.engineering.prepocessing.featurextractor.FeatureExtractor;
 import eu.innovation.engineering.prepocessing.util.Configurator;
 import eu.innovation.engineering.prepocessing.util.Features;

@@ -1,4 +1,4 @@
-package eu.innovation.engineering.prepocessing.dictionaries;
+package eu.innovation.engineering.prepocessing.clustering;
 
 
 import java.io.FileWriter;
