@@ -31,7 +31,7 @@ public class ClusteringKMeans {
 
   public static void main (String args[]) throws IOException{
 
-    clusterWithDatasourceAsItems();
+    //clusterWithDatasourceAsItems();
   }
 
 
@@ -104,7 +104,7 @@ public class ClusteringKMeans {
 
 
 
-  public static HashMap<String, Dictionary> clusterWithDatasourceAsItems() throws IOException {
+  public HashMap<String, Dictionary> clusterWithDatasourceAsItems() throws IOException {
     CreateMatrix matrixCreator = new CreateMatrix();
     
     
