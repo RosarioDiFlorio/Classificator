@@ -131,7 +131,13 @@ public class CSVBuilder {
   }
 
 
-  //METODO CHE SCRIVE I FILE CSV
+  /**
+   * 
+   * @param featuresPapersTrainingWithTarget
+   * @param categories
+   * @param fileName
+   * @throws IOException
+   */
   private static void createDatasetPython(HashMap<IdAndTarget, ArrayList<Features>> featuresPapersTrainingWithTarget, HashSet<String> categories, String fileName) throws IOException {
     //Per ogni categoria creo una folder
     String firstLine="labels,id";
