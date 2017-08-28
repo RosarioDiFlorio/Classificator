@@ -10,7 +10,7 @@ import java.util.Set;
 
 import com.ibm.watson.developer_cloud.natural_language_understanding.v1.model.CategoriesResult;
 
-import eu.innovation.engineering.configuration.PathConfigurator;
+import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.util.featurextractor.Features;
 import eu.innovation.engineering.util.preprocessing.Paper;
 

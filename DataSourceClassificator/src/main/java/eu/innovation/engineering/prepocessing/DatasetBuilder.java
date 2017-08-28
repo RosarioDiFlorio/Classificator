@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 import com.ibm.watson.developer_cloud.natural_language_understanding.v1.model.CategoriesResult;
 
-import eu.innovation.engineering.configuration.PathConfigurator;
+import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 import eu.innovation.engineering.keyword.extractor.maui.main.MauiExtractor;
 import eu.innovation.engineering.prepocessing.datareader.TxtDataReader;

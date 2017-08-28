@@ -17,7 +17,7 @@ import org.apache.cxf.jaxrs.client.WebClient;
 import com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider;
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
-import eu.innovation.engineering.configuration.Configurator;
+import eu.innovation.engineering.config.Configurator;
 import eu.innovation.engineering.prepocessing.DatasetBuilder;
 import eu.innovation.engineering.util.featurextractor.Item;
 import eu.innovation.engineering.util.featurextractor.ItemWrapper;

@@ -1,4 +1,4 @@
-package eu.innovation.engineering.configuration;
+package eu.innovation.engineering.config;
 
 
 public class Configurator {
