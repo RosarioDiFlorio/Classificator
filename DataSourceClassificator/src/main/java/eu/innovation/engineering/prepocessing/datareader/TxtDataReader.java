@@ -8,6 +8,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import eu.innovation.engineering.config.Configurator;
 import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.prepocessing.interfaces.DataReader;
 
@@ -17,7 +18,6 @@ public class TxtDataReader implements DataReader {
 
 
   public TxtDataReader(String filename) {
-    this.fileToRead = filename;  
     this.fileToRead = PathConfigurator.applicationFileFolder + fileToRead;
   }
 
@@ -41,34 +41,30 @@ public class TxtDataReader implements DataReader {
     return idPapers;
   }
 
+  
   /**
    * This method create an HashMap contained as key the category 
    * and as value an HashMap with key ids of the document and as value the relevance
    */
   @Override
   public Map<String, HashMap<String, String>> categoriesWithIds() throws IOException {
+
     FileReader reader = new FileReader(fileToRead+".txt");
     BufferedReader bufferedReader = new BufferedReader(reader);
     String line = bufferedReader.readLine();
+    
+    Set<String> categories = Configurator.getCategories();
     HashMap<String,HashMap<String,String>> categoryPapers = new HashMap<>();
     HashMap<String,String> paperIntoCurrentCategory = null;
-    boolean firstcategory = true;
+
     String currentCategory="";
     while(line!=null){
-      //STO LEGGENDO LA PRIMA CATEGORIA
-      if(line.contains("/") && firstcategory){
-        currentCategory = line;
-        firstcategory = false;
-        paperIntoCurrentCategory = new HashMap<>();
-      }
-      //STO LEGGENDO UNA CATEGORIA CHE NON E' LA PRIMA
-      else if(line.contains("/") && !firstcategory){
-        categoryPapers.put(currentCategory, paperIntoCurrentCategory);
+
+      if(categories.contains(line)){
         currentCategory = line;
         paperIntoCurrentCategory = new HashMap<>();
       }
-      //STO LEGGENDO UN PAPER
-      else if(line.contains("_")){
+      else{
         String split[] = line.split(" ");
         paperIntoCurrentCategory.put(split[0], split[1]);
       }
@@ -76,6 +72,7 @@ public class TxtDataReader implements DataReader {
     }
     //SALVO ANCHE L?ULTIMA CATEGORIA
     categoryPapers.put(currentCategory, paperIntoCurrentCategory);
+    
     for(String category : categoryPapers.keySet()){
       System.out.println(category+" "+categoryPapers.get(category).size());
     }
@@ -87,7 +84,7 @@ public class TxtDataReader implements DataReader {
   }
 
   public void setFileToRead(String fileToRead) {
-    this.fileToRead = fileToRead;
+    this.fileToRead = PathConfigurator.applicationFileFolder + fileToRead + ".txt";
   }
 
 }
