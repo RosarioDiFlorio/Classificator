@@ -1,7 +1,7 @@
-package eu.innovation.engineering.prepocessing.util;
+package eu.innovation.engineering.prepocessing.util.configurator;
 
 
-public class Configurator {
+public class ClusterConfigurator {
   
   
   
