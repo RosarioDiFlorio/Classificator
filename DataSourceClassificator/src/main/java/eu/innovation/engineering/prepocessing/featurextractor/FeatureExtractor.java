@@ -10,11 +10,9 @@ import java.util.Set;
 
 import com.ibm.watson.developer_cloud.natural_language_understanding.v1.model.CategoriesResult;
 
-import eu.innovation.engineering.prepocessing.clustering.ClusteringKMeans;
-import eu.innovation.engineering.prepocessing.clustering.Dictionary;
-import eu.innovation.engineering.prepocessing.util.Features;
-import eu.innovation.engineering.prepocessing.util.Paper;
-import eu.innovation.engineering.prepocessing.util.configurator.PathConfigurator;
+import eu.innovation.engineering.configuration.PathConfigurator;
+import eu.innovation.engineering.util.featurextractor.Features;
+import eu.innovation.engineering.util.preprocessing.Paper;
 
 
 

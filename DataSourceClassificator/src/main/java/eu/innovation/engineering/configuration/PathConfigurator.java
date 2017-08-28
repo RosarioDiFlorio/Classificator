@@ -1,4 +1,4 @@
-package eu.innovation.engineering.prepocessing.util.configurator;
+package eu.innovation.engineering.configuration;
 
 
 public class PathConfigurator {

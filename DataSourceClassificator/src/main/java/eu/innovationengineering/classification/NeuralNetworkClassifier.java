@@ -18,15 +18,15 @@ import org.neuroph.util.TransferFunctionType;
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 import com.ibm.watson.developer_cloud.natural_language_understanding.v1.model.CategoriesResult;
 
+import eu.innovation.engineering.configuration.Configurator;
 import eu.innovation.engineering.prepocessing.DatasetBuilder;
-import eu.innovation.engineering.prepocessing.clustering.ClusteringKMeans;
-import eu.innovation.engineering.prepocessing.clustering.Dictionary;
+import eu.innovation.engineering.prepocessing.featurextractor.ClusteringKMeans;
+import eu.innovation.engineering.prepocessing.featurextractor.Dictionary;
 import eu.innovation.engineering.prepocessing.featurextractor.FeatureExtractor;
-import eu.innovation.engineering.prepocessing.util.BestSetting;
-import eu.innovation.engineering.prepocessing.util.Features;
-import eu.innovation.engineering.prepocessing.util.IdAndTarget;
-import eu.innovation.engineering.prepocessing.util.Paper;
-import eu.innovation.engineering.prepocessing.util.configurator.Configurator;
+import eu.innovation.engineering.util.featurextractor.BestSetting;
+import eu.innovation.engineering.util.featurextractor.Features;
+import eu.innovation.engineering.util.featurextractor.IdAndTarget;
+import eu.innovation.engineering.util.preprocessing.Paper;
 
 
 

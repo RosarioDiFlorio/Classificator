@@ -1,4 +1,4 @@
-package eu.innovation.engineering.prepocessing.util;
+package eu.innovation.engineering.util.featurextractor;
 
 import org.apache.commons.math3.ml.clustering.Clusterable;
 

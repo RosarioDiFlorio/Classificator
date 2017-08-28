@@ -11,14 +11,14 @@ import java.util.Iterator;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import eu.innovation.engineering.prepocessing.clustering.ClusteringKMeans;
-import eu.innovation.engineering.prepocessing.clustering.Dictionary;
+import eu.innovation.engineering.configuration.Configurator;
+import eu.innovation.engineering.configuration.PathConfigurator;
+import eu.innovation.engineering.prepocessing.featurextractor.ClusteringKMeans;
+import eu.innovation.engineering.prepocessing.featurextractor.Dictionary;
 import eu.innovation.engineering.prepocessing.featurextractor.FeatureExtractor;
-import eu.innovation.engineering.prepocessing.util.Features;
-import eu.innovation.engineering.prepocessing.util.IdAndTarget;
-import eu.innovation.engineering.prepocessing.util.Paper;
-import eu.innovation.engineering.prepocessing.util.configurator.ClusterConfigurator;
-import eu.innovation.engineering.prepocessing.util.configurator.PathConfigurator;
+import eu.innovation.engineering.util.featurextractor.Features;
+import eu.innovation.engineering.util.featurextractor.IdAndTarget;
+import eu.innovation.engineering.util.preprocessing.Paper;
 
 public class CSVBuilder {
 
@@ -140,7 +140,7 @@ public class CSVBuilder {
     csvFile.createNewFile();
     PrintWriter pWriterCSV = new PrintWriter(csvFile);
     
-    for(int i=0;i<ClusterConfigurator.numFeatures;i++)
+    for(int i=0;i<Configurator.numFeatures;i++)
       firstLine+=",F"+i;
     
     pWriterCSV.println(firstLine);

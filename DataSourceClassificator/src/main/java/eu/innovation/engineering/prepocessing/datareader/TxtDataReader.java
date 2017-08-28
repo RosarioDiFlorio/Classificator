@@ -8,8 +8,8 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import eu.innovation.engineering.configuration.PathConfigurator;
 import eu.innovation.engineering.prepocessing.interfaces.DataReader;
-import eu.innovation.engineering.prepocessing.util.configurator.PathConfigurator;
 
 public class TxtDataReader implements DataReader {
 

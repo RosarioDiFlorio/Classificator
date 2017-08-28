@@ -1,4 +1,4 @@
-package eu.innovation.engineering.prepocessing.clustering;
+package eu.innovation.engineering.prepocessing.featurextractor;
 
 import java.util.HashSet;
 

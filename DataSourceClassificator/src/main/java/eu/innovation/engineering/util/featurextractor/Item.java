@@ -1,4 +1,4 @@
-package eu.innovation.engineering.prepocessing.util;
+package eu.innovation.engineering.util.featurextractor;
 
 
 public class Item {

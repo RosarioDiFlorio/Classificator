@@ -15,13 +15,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 import com.ibm.watson.developer_cloud.natural_language_understanding.v1.model.CategoriesResult;
 
+import eu.innovation.engineering.configuration.PathConfigurator;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 import eu.innovation.engineering.keyword.extractor.maui.main.MauiExtractor;
 import eu.innovation.engineering.prepocessing.datareader.TxtDataReader;
 import eu.innovation.engineering.prepocessing.interfaces.DataReader;
-import eu.innovation.engineering.prepocessing.util.Paper;
-import eu.innovation.engineering.prepocessing.util.SolrClient;
-import eu.innovation.engineering.prepocessing.util.configurator.PathConfigurator;
+import eu.innovation.engineering.util.preprocessing.Paper;
+import eu.innovation.engineering.util.preprocessing.SolrClient;
 
 
 

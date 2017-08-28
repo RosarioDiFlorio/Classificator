@@ -1,4 +1,4 @@
-package eu.innovation.engineering.prepocessing.util;
+package eu.innovation.engineering.util.featurextractor;
 
 import org.neuroph.util.TransferFunctionType;
 

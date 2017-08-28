@@ -1,4 +1,4 @@
-package eu.innovation.engineering.prepocessing.clustering;
+package eu.innovation.engineering.prepocessing.featurextractor;
 
 
 import java.io.FileWriter;
@@ -12,7 +12,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
 import eu.innovation.engineering.prepocessing.DatasetBuilder;
-import eu.innovation.engineering.prepocessing.util.Paper;
+import eu.innovation.engineering.util.preprocessing.Paper;
 
 
 
