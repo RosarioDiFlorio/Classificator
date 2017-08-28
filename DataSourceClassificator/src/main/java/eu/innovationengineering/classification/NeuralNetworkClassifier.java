@@ -46,7 +46,7 @@ public class NeuralNetworkClassifier {
     HashMap<String, Dictionary> dictionaries = clusteringDictionaries.clusterWithDatasourceAsItems();
 
     FeatureExtractor featureExtractor = new FeatureExtractor();
-    HashSet<String> categories = (HashSet<String>) featureExtractor.getCategories();
+    HashSet<String> categories = (HashSet<String>) Configurator.getCategories();
 
     System.out.println("CATEGORIE");
     System.out.println(categories.toString());

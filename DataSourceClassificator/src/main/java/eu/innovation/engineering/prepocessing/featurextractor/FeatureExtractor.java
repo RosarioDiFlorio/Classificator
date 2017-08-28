@@ -1,16 +1,12 @@
 package eu.innovation.engineering.prepocessing.featurextractor;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Set;
 
 import com.ibm.watson.developer_cloud.natural_language_understanding.v1.model.CategoriesResult;
 
-import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.util.featurextractor.Features;
 import eu.innovation.engineering.util.preprocessing.Paper;
 
@@ -140,25 +136,6 @@ public class FeatureExtractor {
     return toReturn;
   }
   
-  public static Set<String> getCategories() throws IOException{
-
-    Set<String> categories = new HashSet<String>();
-    FileReader fr = new FileReader(PathConfigurator.applicationFileFolder+"categories.txt");
-    BufferedReader bufferedReader = new BufferedReader(fr);
-
-    String line = bufferedReader.readLine();
-    while(line!=null){
-      String cat[] = line.split("/");
-      if(cat.length==1)
-        categories.add("/"+line);
-      line=bufferedReader.readLine();
-    }
-    return categories;
-  }
-  
-  
-  
-
 
   public static double cosineSimilarity(float[] vectorA, float[] vectorB) {
     double dotProduct = 0.0;
