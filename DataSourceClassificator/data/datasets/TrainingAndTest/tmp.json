@@ -5,89 +5,65 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.09289918159964028,
+    "relevance" : 6.0,
     "sentiment" : null,
-    "text" : "user study"
+    "text" : "wikus"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.060902404016457364,
+    "relevance" : 5.0,
     "sentiment" : null,
-    "text" : "large scale"
+    "text" : "link"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.09289918159964028,
+    "relevance" : 4.0,
     "sentiment" : null,
-    "text" : "semantic wiki"
+    "text" : "semantic"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.13934877239946045,
-    "sentiment" : null,
-    "text" : "wiki systems"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.09289918159964028,
-    "sentiment" : null,
-    "text" : "linked data"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.09289918159964028,
-    "sentiment" : null,
-    "text" : "open semantic"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.09289918159964028,
-    "sentiment" : null,
-    "text" : "semantic hyperwiki"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.09289918159964028,
-    "sentiment" : null,
-    "text" : "class links"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.09289918159964028,
-    "sentiment" : null,
-    "text" : "open semantic hyperwiki"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10311679096548987,
+    "relevance" : 4.0,
     "sentiment" : null,
     "text" : "user"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "hypertext"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "editing"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "implementation"
   } ],
   "categoryList" : [ {
     "label" : "/education",
     "score" : 1.0
   } ],
   "conceptList" : null,
-  "description" : null,
-  "title" : "Open Semantic Hyperwikis"
+  "title" : "Open Semantic Hyperwikis",
+  "description" : null
 }, {
   "id" : "85726_21",
   "keywordList" : [ {
@@ -95,71 +71,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.08621455414136359,
+    "relevance" : 10.0,
     "sentiment" : null,
-    "text" : "who defend"
+    "text" : "completeness"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.08621455414136359,
-    "sentiment" : null,
-    "text" : "causally closed"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.11013879115964836,
-    "sentiment" : null,
-    "text" : "who argue"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.08621455414136359,
-    "sentiment" : null,
-    "text" : "Completeness of Physics"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.08621455414136359,
-    "sentiment" : null,
-    "text" : "argue that completeness"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10062430573456062,
-    "sentiment" : null,
-    "text" : "fundamental"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.15093645860184093,
-    "sentiment" : null,
-    "text" : "laws"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.15009383799606257,
-    "sentiment" : null,
-    "text" : "argue"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.1435010027459335,
+    "relevance" : 7.0,
     "sentiment" : null,
     "text" : "physical"
   }, {
@@ -167,17 +87,41 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1644333096462861,
+    "relevance" : 6.0,
     "sentiment" : null,
-    "text" : "Completeness"
+    "text" : "law"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "account"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "truth"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "opposition"
   } ],
   "categoryList" : [ {
     "label" : "/food and drink",
     "score" : 1.0
   } ],
   "conceptList" : null,
-  "description" : null,
-  "title" : "The Completeness of Physics"
+  "title" : "The Completeness of Physics",
+  "description" : null
 }, {
   "id" : "2812079_82",
   "keywordList" : [ {
@@ -185,89 +129,49 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.31716032813089867,
+    "relevance" : 6.0,
     "sentiment" : null,
-    "text" : "minimal stopping"
+    "text" : "measure"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.31716032813089867,
+    "relevance" : 3.0,
     "sentiment" : null,
-    "text" : "stopping time"
+    "text" : "integrable"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.4228804375078649,
+    "relevance" : 3.0,
     "sentiment" : null,
-    "text" : "uniformly integrable"
+    "text" : "set"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.21144021875393246,
+    "relevance" : 3.0,
     "sentiment" : null,
-    "text" : "Symmetric Random"
+    "text" : "time"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.21144021875393246,
+    "relevance" : 3.0,
     "sentiment" : null,
-    "text" : "simple symmetric"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.21144021875393246,
-    "sentiment" : null,
-    "text" : "random walk"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.21144021875393246,
-    "sentiment" : null,
-    "text" : "probability measures"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.21144021875393246,
-    "sentiment" : null,
-    "text" : "simple symmetric random"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.21144021875393246,
-    "sentiment" : null,
-    "text" : "symmetric random walk"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.21144021875393246,
-    "sentiment" : null,
-    "text" : "stopping time τ"
+    "text" : "embedding"
   } ],
   "categoryList" : [ {
     "label" : "/education",
     "score" : 1.0
   } ],
   "conceptList" : null,
-  "description" : null,
-  "title" : "Classes of measures which can be embedded in the Simple Symmetric Random Walk"
+  "title" : "Classes of measures which can be embedded in the Simple Symmetric Random Walk",
+  "description" : null
 }, {
   "id" : "4187727_170",
   "keywordList" : [ {
@@ -275,55 +179,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.08285157507911181,
-    "sentiment" : null,
-    "text" : "job insecure"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.08285157507911181,
-    "sentiment" : null,
-    "text" : "market reform"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.08285157507911181,
-    "sentiment" : null,
-    "text" : "linguistic styles"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.08285157507911181,
-    "sentiment" : null,
-    "text" : "transnational markets"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.14708959388541687,
-    "sentiment" : null,
-    "text" : "language"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.08285157507911181,
-    "sentiment" : null,
-    "text" : "markets and mutuality"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10311723472295782,
+    "relevance" : 7.0,
     "sentiment" : null,
     "text" : "market"
   }, {
@@ -331,31 +187,95 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1787897655730227,
+    "relevance" : 7.0,
     "sentiment" : null,
-    "text" : "workers"
+    "text" : "worker"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.10506399563244062,
+    "relevance" : 7.0,
     "sentiment" : null,
-    "text" : "corporate"
+    "text" : "language"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.17481566347563912,
+    "relevance" : 6.0,
+    "sentiment" : null,
+    "text" : "factory"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "moldova"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "reform"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "job"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "response"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
     "sentiment" : null,
     "text" : "linguistic"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "plant"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "stratum"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "modernisation"
   } ],
   "categoryList" : [ {
     "label" : "/food and drink",
     "score" : 1.0
   } ],
   "conceptList" : null,
-  "description" : null,
-  "title" : "Cementing modernisation: transnational markets, language and labour tension in a Post-Soviet factory in Moldova"
+  "title" : "Cementing modernisation: transnational markets, language and labour tension in a Post-Soviet factory in Moldova",
+  "description" : null
 } ]

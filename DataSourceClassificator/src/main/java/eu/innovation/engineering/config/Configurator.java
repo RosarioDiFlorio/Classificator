@@ -16,11 +16,9 @@ public class Configurator {
 
   
   public final static Set<String> getCategories() throws IOException{
-
     Set<String> categories = new HashSet<String>();
     FileReader fr = new FileReader(PathConfigurator.applicationFileFolder+"categories.txt");
     BufferedReader bufferedReader = new BufferedReader(fr);
-
     String line = bufferedReader.readLine();
     while(line!=null){
       String cat[] = line.split("/");
@@ -29,7 +27,6 @@ public class Configurator {
       line=bufferedReader.readLine();
     }
     return categories;
-  }
-  
+  } 
 
 }

@@ -18,7 +18,7 @@ public class TxtDataReader implements DataReader {
 
 
   public TxtDataReader(String filename) {
-    this.fileToRead = PathConfigurator.applicationFileFolder + fileToRead;
+    this.fileToRead = PathConfigurator.applicationFileFolder + filename;
   }
 
   /**
@@ -41,7 +41,7 @@ public class TxtDataReader implements DataReader {
     return idPapers;
   }
 
-  
+
   /**
    * This method create an HashMap contained as key the category 
    * and as value an HashMap with key ids of the document and as value the relevance
@@ -50,9 +50,10 @@ public class TxtDataReader implements DataReader {
   public Map<String, HashMap<String, String>> categoriesWithIds() throws IOException {
 
     FileReader reader = new FileReader(fileToRead+".txt");
+
     BufferedReader bufferedReader = new BufferedReader(reader);
     String line = bufferedReader.readLine();
-    
+
     Set<String> categories = Configurator.getCategories();
     HashMap<String,HashMap<String,String>> categoryPapers = new HashMap<>();
     HashMap<String,String> paperIntoCurrentCategory = null;
@@ -66,12 +67,17 @@ public class TxtDataReader implements DataReader {
       }
       else{
         String split[] = line.split(" ");
-        paperIntoCurrentCategory.put(split[0], split[1]);
+        if(split.length>1){
+          paperIntoCurrentCategory.put(split[0], split[1]);
+        }
       }
       line = bufferedReader.readLine();
+      categoryPapers.put(currentCategory, paperIntoCurrentCategory);
     }
     //SALVO ANCHE L?ULTIMA CATEGORIA
     categoryPapers.put(currentCategory, paperIntoCurrentCategory);
+    
+   
     
     for(String category : categoryPapers.keySet()){
       System.out.println(category+" "+categoryPapers.get(category).size());

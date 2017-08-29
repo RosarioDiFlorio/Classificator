@@ -16,8 +16,8 @@ import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 import com.ibm.watson.developer_cloud.natural_language_understanding.v1.model.CategoriesResult;
 
 import eu.innovation.engineering.config.PathConfigurator;
+import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
-import eu.innovation.engineering.keyword.extractor.maui.main.MauiExtractor;
 import eu.innovation.engineering.prepocessing.datareader.TxtDataReader;
 import eu.innovation.engineering.prepocessing.interfaces.DataReader;
 import eu.innovation.engineering.util.preprocessing.Paper;
@@ -49,7 +49,7 @@ public  class DatasetBuilder {
   public void buildDataset() throws IOException{
     dataReader = new TxtDataReader(this.fileName);
     List<String> listIdPaper = new ArrayList<>(dataReader.getIds());
-    listPapers.addAll(solrClient.getPapersFromSolr(listIdPaper));
+    listPapers.addAll(solrClient.getSourcesFromSolr(listIdPaper,Paper.class));
     listPapers = (ArrayList<Paper>) addCategories(listPapers);
     listPapers = (ArrayList<Paper>) addKeywords(listPapers);
 
@@ -79,7 +79,6 @@ public  class DatasetBuilder {
 
   /**
    *Read the dataset in json format and creare the data stuctures for the papers 
-   *Substitutes the deprecated function parse file
    * @param toParse
    * @throws IOException 
    * @throws JsonMappingException 
@@ -193,8 +192,8 @@ public  class DatasetBuilder {
   public static void main(String[] args) throws IOException{
     DatasetBuilder db = new DatasetBuilder();
     db.setFileName("tmp");
-    KeywordExtractor keywordExtractor = new MauiExtractor("../KeywordExtractor/", "none", "newInnenModel");
-
+    //KeywordExtractor keywordExtractor = new MauiExtractor("../KeywordExtractor/", "none", "newInnenModel");
+    KeywordExtractor keywordExtractor = new InnenExtractor("../KeywordExtractor/");
     db.setKeywordExtractor(keywordExtractor);
     db.buildDataset();
   }
