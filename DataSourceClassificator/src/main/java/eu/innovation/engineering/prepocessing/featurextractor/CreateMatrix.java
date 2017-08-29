@@ -12,7 +12,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
 import eu.innovation.engineering.prepocessing.DatasetBuilder;
-import eu.innovation.engineering.util.preprocessing.Paper;
+import eu.innovation.engineering.util.preprocessing.Source;
 
 
 
@@ -30,10 +30,10 @@ public class CreateMatrix
       DatasetBuilder pb = new DatasetBuilder();
       pb.parseDatasetFromJson("dataset/datasetWithKeywords.json");
       
-      ArrayList<Paper> paperList = pb.getListPapers();
+      ArrayList<Source> paperList = pb.getListPapers();
       HashSet<String> keywordList = new HashSet<String>();
       
-      for(Paper p : paperList){
+      for(Source p : paperList){
         for(Keyword k : p.getKeywordList()){
           keywordList.add(k.getText());
         }
@@ -74,12 +74,12 @@ public class CreateMatrix
      * @return matrix 
      * @throws IOException 
      */
-    public static HashMap<String, ArrayList<Double>> getMatrixDocumentsKeywords (ArrayList<Paper> paperList, HashSet<String> featureList) throws IOException{
+    public static HashMap<String, ArrayList<Double>> getMatrixDocumentsKeywords (ArrayList<Source> paperList, HashSet<String> featureList) throws IOException{
       HashMap<String, ArrayList<Double>> matrixDocumentsKeywords = new HashMap<String, ArrayList<Double>>();
       ObjectMapper mapper = new ObjectMapper();
       FileWriter writer = new FileWriter("matrixDocumentsKeywords.json");
       JsonGenerator g = mapper.getFactory().createGenerator(writer);
-      for(Paper p: paperList){
+      for(Source p: paperList){
         ArrayList<Double> features = new ArrayList<Double>();
         for(String f : featureList){
           boolean contains = false;
@@ -111,14 +111,14 @@ public class CreateMatrix
      * @return
      * @throws IOException 
      */
-    public static HashMap<String, ArrayList<Double>> getMatrixKeywordsDocuments (ArrayList<Paper> paperList, HashSet<String> itemList) throws IOException{
+    public static HashMap<String, ArrayList<Double>> getMatrixKeywordsDocuments (ArrayList<Source> paperList, HashSet<String> itemList) throws IOException{
       HashMap<String, ArrayList<Double>> matrixKeywordsDocuments = new HashMap<String, ArrayList<Double>>();
       ObjectMapper mapper = new ObjectMapper();
       FileWriter writer = new FileWriter("matrixKeywordsDocuments.json");
       JsonGenerator g = mapper.getFactory().createGenerator(writer);
       for(String item : itemList){
         ArrayList<Double> features = new ArrayList<Double>();
-        for(Paper p: paperList){
+        for(Source p: paperList){
           boolean contains = false;
           for(Keyword k : p.getKeywordList()){
             if(k.getText().equals(item)){

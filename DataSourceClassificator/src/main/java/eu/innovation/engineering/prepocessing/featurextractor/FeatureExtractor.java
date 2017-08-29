@@ -8,13 +8,13 @@ import java.util.HashSet;
 import com.ibm.watson.developer_cloud.natural_language_understanding.v1.model.CategoriesResult;
 
 import eu.innovation.engineering.util.featurextractor.Features;
-import eu.innovation.engineering.util.preprocessing.Paper;
+import eu.innovation.engineering.util.preprocessing.Source;
 
 
 
 public class FeatureExtractor {
   
-  public static HashMap<String,ArrayList<Features>> createFeaturesNormalizedInputDB(ArrayList<Paper> listaPaper, HashMap<String, Dictionary> dictionaries) throws IOException{
+  public static HashMap<String,ArrayList<Features>> createFeaturesNormalizedInputDB(ArrayList<Source> listaPaper, HashMap<String, Dictionary> dictionaries) throws IOException{
 
     
     
@@ -50,7 +50,7 @@ public class FeatureExtractor {
   }
   
   
-  public static HashMap<String, ArrayList<Features>> createFeaturesInputDB(ArrayList<Paper> listaPaper, HashMap<String, Dictionary> dictionaries, ClusteringKMeans clusteringDictionaries) throws IOException {
+  public static HashMap<String, ArrayList<Features>> createFeaturesInputDB(ArrayList<Source> listaPaper, HashMap<String, Dictionary> dictionaries, ClusteringKMeans clusteringDictionaries) throws IOException {
     
     //Costruisco i vettori dei set dei peper, ogni paper ha un vettore che rappresenta l'insieme delle fetures.
     float[][] vectorResults = clusteringDictionaries.returnVectorFromFeatures(listaPaper);
@@ -80,7 +80,7 @@ public class FeatureExtractor {
   
   
   //METODO CHE COSTRUISCE LA MATRICE DI TARGET
-  public static HashMap<String,ArrayList<Features>> createTargetsInputDB (ArrayList<Paper> listaPaper, HashSet<String> classUsed, HashMap<String, Dictionary> dictionaries) throws IOException{
+  public static HashMap<String,ArrayList<Features>> createTargetsInputDB (ArrayList<Source> listaPaper, HashSet<String> classUsed, HashMap<String, Dictionary> dictionaries) throws IOException{
 
     
     HashMap<String,ArrayList<Features>> toReturn = new HashMap<String,ArrayList<Features>>();
@@ -88,7 +88,7 @@ public class FeatureExtractor {
     int count = 0;
     
     //PER OGNI PAPER COSTRUISCO UNA RIGA, LE COLONNE SONO LE CATEGORIE, LE CELLE CONTENGONO LA RELEVANCE SE APPARTENGONO; 0 ALTRIMENTI
-    for(Paper p : listaPaper){
+    for(Source p : listaPaper){
       
       
         //CREO L'ARRAYLIST DI TARGET PER IL PAPER CORRENTE (QUESTA E' LA LISTA CHE SICURAMENTE VIENE USATA)

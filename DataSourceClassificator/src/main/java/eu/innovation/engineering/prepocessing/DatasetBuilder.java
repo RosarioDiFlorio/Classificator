@@ -22,6 +22,7 @@ import eu.innovation.engineering.prepocessing.datareader.TxtDataReader;
 import eu.innovation.engineering.prepocessing.interfaces.DataReader;
 import eu.innovation.engineering.util.preprocessing.Paper;
 import eu.innovation.engineering.util.preprocessing.SolrClient;
+import eu.innovation.engineering.util.preprocessing.Source;
 
 
 
@@ -29,8 +30,8 @@ public  class DatasetBuilder {
 
 
 
-  private ArrayList<Paper> listPapers;
-  private HashMap<String,ArrayList<Paper>> categoryMap;
+  private ArrayList<Source> listSources;
+  private HashMap<String,ArrayList<Source>> categoryMap;
 
   private KeywordExtractor keywordExtractor;
   private SolrClient solrClient;
@@ -39,7 +40,7 @@ public  class DatasetBuilder {
   private String fileName;
 
   public DatasetBuilder(){
-    listPapers = new ArrayList<Paper>();
+    listSources = new ArrayList<Source>();
     categoryMap = new HashMap<>();
     mapper = new ObjectMapper();
     solrClient = new SolrClient();
@@ -49,25 +50,23 @@ public  class DatasetBuilder {
   public void buildDataset() throws IOException{
     dataReader = new TxtDataReader(this.fileName);
     List<String> listIdPaper = new ArrayList<>(dataReader.getIds());
-    listPapers.addAll(solrClient.getSourcesFromSolr(listIdPaper,Paper.class));
-    listPapers = (ArrayList<Paper>) addCategories(listPapers);
-    listPapers = (ArrayList<Paper>) addKeywords(listPapers);
+    
+    listSources.addAll(solrClient.getSourcesFromSolr(listIdPaper,Paper.class));
+    
+    listSources = (ArrayList<Source>) addCategories(listSources);
+    listSources = (ArrayList<Source>) addKeywords(listSources);
 
-    this.mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.datasetFolder+"backup/"+fileName+"_complete.json"), this.listPapers);;    
-    listPapers.stream().forEach(p->p.setDescription(null));
-    this.mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.datasetFolder+"TrainingAndTest/"+fileName+".json"), this.listPapers);
+    this.mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.datasetFolder+"backup/"+fileName+"_complete.json"), this.listSources);;    
+    listSources.stream().forEach(p->p.setDescription(null));
+    this.mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.datasetFolder+"TrainingAndTest/"+fileName+".json"), this.listSources);
   }
 
 
 
-  public List<Paper> addKeywords(ArrayList<Paper> list) {
-    for(Paper p: list){
-      List<String> toAnalyze = new ArrayList<String>();
-
-      toAnalyze.add(p.getTitle());
-      toAnalyze.add(p.getDescription());
+  public List<Source> addKeywords(ArrayList<Source> list) {
+    for(Source p: list){
       try {
-        p.setKeywordList((ArrayList<Keyword>) keywordExtractor.extractKeywordsFromText(toAnalyze));
+        p.setKeywordList((ArrayList<Keyword>) keywordExtractor.extractKeywordsFromText(p.getTexts()));
       }
       catch (Exception e) {
         // TODO Auto-generated catch block
@@ -89,28 +88,28 @@ public  class DatasetBuilder {
     System.out.println("Read dataset: "+filename);
     ObjectMapper mapper = new ObjectMapper();
 
-    this.listPapers = mapper.readValue(new File(filename), new TypeReference<ArrayList<Paper>>(){});
+    this.listSources = mapper.readValue(new File(filename), new TypeReference<ArrayList<Source>>(){});
 
 
-    ArrayList<Paper> tmpListpaper = new ArrayList<>();
-    tmpListpaper.addAll(listPapers);
+    ArrayList<Source> tmpListpaper = new ArrayList<>();
+    tmpListpaper.addAll(listSources);
 
-    for(Paper p: tmpListpaper){
+    for(Source p: tmpListpaper){
       if(p.getKeywordList()==null || p.getKeywordList().isEmpty())
-        listPapers.remove(p);
+        listSources.remove(p);
     }
 
-    for(Paper paper: listPapers){
+    for(Source paper: listSources){
       if(paper.getCategoryList()!=null && !paper.getCategoryList().isEmpty()){
         //creo l'hashmap tra categorie e paper
         for(CategoriesResult c : paper.getCategoryList()){
           if(categoryMap.containsKey(c.getLabel())){
             //aggiungo il paper alla lista della mappa
-            ArrayList<Paper> local = categoryMap.get(c.getLabel());
+            ArrayList<Source> local = categoryMap.get(c.getLabel());
             local.add(paper);
             categoryMap.put(c.getLabel(), local);
           }else{
-            ArrayList<Paper> local = new ArrayList<>();
+            ArrayList<Source> local = new ArrayList<>();
             local.add(paper);
             categoryMap.put(c.getLabel(), local);
           }
@@ -120,9 +119,9 @@ public  class DatasetBuilder {
   }
   
   
-  public static HashSet<String> returnAllKeywords(ArrayList<Paper> paperList){
+  public static HashSet<String> returnAllKeywords(ArrayList<Source> paperList){
     HashSet<String> keywordList = new HashSet<String>();
-    for(Paper p : paperList){
+    for(Source p : paperList){
       for(Keyword k : p.getKeywordList()){
         keywordList.add(k.getText());
       }
@@ -130,10 +129,10 @@ public  class DatasetBuilder {
     return keywordList;
   }
 
-  public List<Paper> addCategories(List<Paper> list) throws IOException{
+  public List<Source> addCategories(List<Source> list) throws IOException{
     Map<String, HashMap<String, String>> categoryPapers = dataReader.categoriesWithIds();
 
-    for(Paper paper :list){
+    for(Source paper :list){
       ArrayList<CategoriesResult> categoriesForCurrentPaper = new ArrayList<>();
       //PER IL PAPER CORRENTE MI PRENDO LE CATEGORIE ALLE QUALI APPARTIENE, CICLO PER LE CATEGORIE
       for(String key : categoryPapers.keySet()){
@@ -157,12 +156,12 @@ public  class DatasetBuilder {
   }
 
 
-  public ArrayList<Paper> getListPapers() {
-    return listPapers;
+  public ArrayList<Source> getListPapers() {
+    return listSources;
   }
 
-  public void setListPapers(ArrayList<Paper> listPapers) {
-    this.listPapers = listPapers;
+  public void setListPapers(ArrayList<Source> listPapers) {
+    this.listSources = listPapers;
   }
 
   public KeywordExtractor getKeywordExtractor() {

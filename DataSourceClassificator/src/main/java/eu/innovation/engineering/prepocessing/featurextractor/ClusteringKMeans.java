@@ -21,7 +21,7 @@ import eu.innovation.engineering.config.Configurator;
 import eu.innovation.engineering.prepocessing.DatasetBuilder;
 import eu.innovation.engineering.util.featurextractor.Item;
 import eu.innovation.engineering.util.featurextractor.ItemWrapper;
-import eu.innovation.engineering.util.preprocessing.Paper;
+import eu.innovation.engineering.util.preprocessing.Source;
 import eu.innovationengineering.word2vec.common.Constants;
 import eu.innovationengineering.word2vec.common.request.bean.VectorListRequestBean;
 import eu.innovationengineering.word2vec.service.rest.impl.Word2vecServiceImpl;
@@ -43,7 +43,7 @@ public class ClusteringKMeans {
     DatasetBuilder pb = new DatasetBuilder();
     pb.parseDatasetFromJson("dataset/datasetWithKeywords.json");
 
-    ArrayList<Paper> paperList = pb.getListPapers();
+    ArrayList<Source> paperList = pb.getListPapers();
     HashSet<String> keywordList = pb.returnAllKeywords(paperList);
 
     HashMap<String, ArrayList<Double>> matrixKeywordsDocument = matrixCreator.getMatrixKeywordsDocuments(paperList,keywordList);
@@ -111,7 +111,7 @@ public class ClusteringKMeans {
     DatasetBuilder pb = new DatasetBuilder();
     pb.parseDatasetFromJson("data/datasets/datasetDictionaries/datasetForDictionaries.json");
     // PRENDO LA LISTA DI PAPER DAL FILE USANDO IL METODO DELL OGGETTO pb
-    ArrayList<Paper> paperList = pb.getListPapers();
+    ArrayList<Source> paperList = pb.getListPapers();
    
     //INIZIALIZZO UNA LISTA DI ITEMS, CHE SARANNO GLI OGGETTI CHE VERRANNO CLUSTERIZZATI
     ArrayList<Item> items = new ArrayList<Item>();
@@ -168,7 +168,7 @@ public class ClusteringKMeans {
       HashSet<String> keywords = new HashSet<>();
       for (ItemWrapper itemWrapper : clusterResults.get(i).getPoints()){
         String id = itemWrapper.getItem().getId();
-        for(Paper p : paperList){
+        for(Source p : paperList){
           if(p.getId().equals(id))
             for(Keyword k : p.getKeywordList()){
               keywords.add(k.getText());
@@ -254,13 +254,13 @@ public class ClusteringKMeans {
 
 
 
-  public static float[][] returnVectorFromFeatures(ArrayList<Paper> paperList) throws IOException {
+  public static float[][] returnVectorFromFeatures(ArrayList<Source> paperList) throws IOException {
 
     //ISTANZIAMO UNA MATRICE DI STRINGHE
     List<List<String>> docsK = new ArrayList<List<String>>();
     
     //PER OGNI PAPER COSTRUIAMO IL SET DI KEYWORDS DA CUI POI OTTENERE IL VETTORE
-    for(Paper p: paperList){
+    for(Source p: paperList){
       //calcolo la relevance minima
       double minRelevance = p.getKeywordList().stream().mapToDouble(Keyword::getRelevance).min().getAsDouble();
 

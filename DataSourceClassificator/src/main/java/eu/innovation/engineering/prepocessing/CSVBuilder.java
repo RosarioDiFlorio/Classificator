@@ -18,7 +18,7 @@ import eu.innovation.engineering.prepocessing.featurextractor.Dictionary;
 import eu.innovation.engineering.prepocessing.featurextractor.FeatureExtractor;
 import eu.innovation.engineering.util.featurextractor.Features;
 import eu.innovation.engineering.util.featurextractor.IdAndTarget;
-import eu.innovation.engineering.util.preprocessing.Paper;
+import eu.innovation.engineering.util.preprocessing.Source;
 
 public class CSVBuilder {
 
@@ -43,11 +43,11 @@ public class CSVBuilder {
     //PARTE DI CODICE SENZA BALANCER E DUE DATASET DIVERSI
     DatasetBuilder pbTraining = new DatasetBuilder();
     pbTraining.parseDatasetFromJson(PathConfigurator.trainingAndTestFolder+"train.json");
-    ArrayList<Paper> trainingSet = pbTraining.getListPapers();
+    ArrayList<Source> trainingSet = pbTraining.getListPapers();
 
     //STAMPO IL DATASET DI TRAINING CON I PAPER DIVISI PER CLASSI, PER VEDERE COME E' BILANCIATO
     System.out.println("\n DATASET DI TRAINING \n");
-    HashMap<String,ArrayList<Paper>>trainingPapersForCategory=categoryListWithAssociatePapers(trainingSet,categories);
+    HashMap<String,ArrayList<Source>>trainingPapersForCategory=categoryListWithAssociatePapers(trainingSet,categories);
     for(String key: trainingPapersForCategory.keySet()){
       System.out.println(key+": "+trainingPapersForCategory.get(key).size());
     }
@@ -56,7 +56,7 @@ public class CSVBuilder {
     FileWriter fileWriterpaperForCategory = new FileWriter("papersForCategory.txt"); 
     for(String key : trainingPapersForCategory.keySet()){
       fileWriterpaperForCategory.write("\n"+key.toUpperCase()+"\n");
-      for(Paper p : trainingPapersForCategory.get(key)){
+      for(Source p : trainingPapersForCategory.get(key)){
         fileWriterpaperForCategory.write(p.getId()+"\n");
       }
     }
@@ -66,7 +66,7 @@ public class CSVBuilder {
 
     DatasetBuilder pbTesting= new DatasetBuilder();
     pbTesting.parseDatasetFromJson(PathConfigurator.trainingAndTestFolder+"test.json");
-    ArrayList<Paper> testSet = pbTesting.getListPapers();
+    ArrayList<Source> testSet = pbTesting.getListPapers();
     ///////////////////////////////////////////////
 
 
@@ -87,12 +87,12 @@ public class CSVBuilder {
   }
 
   //METODO CHE RESITUISCE UN HASHMAP DI CATEGORIA, PER OGNI CATEGORIA LA LISTA DI PAPER CHE APPARTENGONO
-  private HashMap<String, ArrayList<Paper>> categoryListWithAssociatePapers(ArrayList<Paper> trainingSet, HashSet<String> categories) {
-    HashMap<String, ArrayList<Paper>> categoryWithPapers = new HashMap<String, ArrayList<Paper>>();
+  private HashMap<String, ArrayList<Source>> categoryListWithAssociatePapers(ArrayList<Source> trainingSet, HashSet<String> categories) {
+    HashMap<String, ArrayList<Source>> categoryWithPapers = new HashMap<String, ArrayList<Source>>();
 
     for(String category : categories){
-      ArrayList<Paper> toInsert = new ArrayList<Paper>();
-      for(Paper p: trainingSet){
+      ArrayList<Source> toInsert = new ArrayList<Source>();
+      for(Source p: trainingSet){
         if(p.getCategoryList()!=null && !p.getCategoryList().isEmpty()){
           if(p.getCategoryList().get(0).getLabel().contains(category.replace("/", ""))){
             toInsert.add(p);

@@ -26,7 +26,7 @@ import eu.innovation.engineering.prepocessing.featurextractor.FeatureExtractor;
 import eu.innovation.engineering.util.featurextractor.BestSetting;
 import eu.innovation.engineering.util.featurextractor.Features;
 import eu.innovation.engineering.util.featurextractor.IdAndTarget;
-import eu.innovation.engineering.util.preprocessing.Paper;
+import eu.innovation.engineering.util.preprocessing.Source;
 
 
 
@@ -68,13 +68,13 @@ public class NeuralNetworkClassifier {
     //PARTE DI CODICE SENZA BALANCER E DUE DATASET DIVERSI
     DatasetBuilder pbTraining = new DatasetBuilder();
     pbTraining.parseDatasetFromJson("datasetTrainingAndTest/train.json");
-    ArrayList<Paper> trainingSet = pbTraining.getListPapers();
+    ArrayList<Source> trainingSet = pbTraining.getListPapers();
 
 
 
     //STAMPO IL DATASET DI TRAINING CON I PAPER DIVISI PER CLASSI, PER VEDERE COME E' BILANCIATO
     System.out.println("\n DATASET DI TRAINING \n");
-    HashMap<String,ArrayList<Paper>>trainingPapersForCategory=categoryListWithAssociatePapers(trainingSet,categories);
+    HashMap<String,ArrayList<Source>>trainingPapersForCategory=categoryListWithAssociatePapers(trainingSet,categories);
     for(String key: trainingPapersForCategory.keySet()){
       System.out.println(key+": "+trainingPapersForCategory.get(key).size());
     }
@@ -83,7 +83,7 @@ public class NeuralNetworkClassifier {
     FileWriter fileWriterpaperForCategory = new FileWriter("papersForCategory.txt"); 
     for(String key : trainingPapersForCategory.keySet()){
       fileWriterpaperForCategory.write("\n"+key.toUpperCase()+"\n");
-      for(Paper p : trainingPapersForCategory.get(key)){
+      for(Source p : trainingPapersForCategory.get(key)){
         fileWriterpaperForCategory.write(p.getId()+"\n");
       }
     }
@@ -93,7 +93,7 @@ public class NeuralNetworkClassifier {
 
     DatasetBuilder pbTesting= new DatasetBuilder();
     pbTesting.parseDatasetFromJson("datasetTrainingAndTest/test.json");
-    ArrayList<Paper> testSet = pbTesting.getListPapers();
+    ArrayList<Source> testSet = pbTesting.getListPapers();
     ///////////////////////////////////////////////
 
 
@@ -239,12 +239,12 @@ public class NeuralNetworkClassifier {
 
 
   //METODO CHE RESITUISCE UN HASHMAP DI CATEGORIA, PER OGNI CATEGORIA LA LISTA DI PAPER CHE APPARTENGONO
-  private static HashMap<String, ArrayList<Paper>> categoryListWithAssociatePapers(ArrayList<Paper> trainingSet, HashSet<String> categories) {
-    HashMap<String, ArrayList<Paper>> categoryWithPapers = new HashMap<String, ArrayList<Paper>>();
+  private static HashMap<String, ArrayList<Source>> categoryListWithAssociatePapers(ArrayList<Source> trainingSet, HashSet<String> categories) {
+    HashMap<String, ArrayList<Source>> categoryWithPapers = new HashMap<String, ArrayList<Source>>();
 
     for(String category : categories){
-      ArrayList<Paper> toInsert = new ArrayList<Paper>();
-      for(Paper p: trainingSet){
+      ArrayList<Source> toInsert = new ArrayList<Source>();
+      for(Source p: trainingSet){
         if(p.getCategoryList()!=null && !p.getCategoryList().isEmpty()){
           if(p.getCategoryList().get(0).getLabel().contains(category.replace("/", ""))){
             toInsert.add(p);
@@ -421,18 +421,18 @@ public class NeuralNetworkClassifier {
   }
 
   // metodo che fa il test della rete neurale
-  public static void test(NeuralNetwork network,HashMap<String,ArrayList<Features>> featuresPapers,HashMap<String,ArrayList<Features>> targetsPapers, ArrayList<Paper> testSet, HashSet<String> classesUsed) throws IOException{
+  public static void test(NeuralNetwork network,HashMap<String,ArrayList<Features>> featuresPapers,HashMap<String,ArrayList<Features>> targetsPapers, ArrayList<Source> testSet, HashSet<String> classesUsed) throws IOException{
 
     double outputTest [] = new double [numClasses];
     FileWriter writerClassificationResults = new FileWriter("classificationResults.txt");
 
     //contains papers that haven't category in common with alchemy results.
-    ArrayList<Paper> paperWithoutAlchemyCategory = new ArrayList<Paper>();
+    ArrayList<Source> paperWithoutAlchemyCategory = new ArrayList<Source>();
 
     double totalAccuracy=0;
     // CICLO SU OGNI PAPER SU CUI FARE TEST
     HashMap<String,ArrayList<String>> paperforCategoryClassified = new HashMap<String,ArrayList<String>>();
-    for(Paper p : testSet){
+    for(Source p : testSet){
       //SE IL PAPER ESISTE MI COSTRUISCO L'INPUT DI FEATURES E TARGET DA DARE ALLA RETE NEURALE
       if(featuresPapers.get(p.getId())!=null){
         double input[] = new double[featuresPapers.get(p.getId()).size()];
@@ -521,7 +521,7 @@ public class NeuralNetworkClassifier {
     }
     //PRINT INTO FILE PAPER THAT HAVEN'T COMMONS CATEGORY WITH ALCHEMY
     writerClassificationResults.write("\n\n PAPER WITHOUT ALCHEMY CATEGORY \n");
-    for(Paper p: paperWithoutAlchemyCategory){
+    for(Source p: paperWithoutAlchemyCategory){
       writerClassificationResults.write(p.getId()+"\n");
     }
 
@@ -534,7 +534,7 @@ public class NeuralNetworkClassifier {
 
     FileWriter writerTestPaper = new FileWriter("keywordsPaperForTest.xml"); 
     writerTestPaper.write("<root>"+"\n");
-    for(Paper p: testSet){
+    for(Source p: testSet){
       writerTestPaper.write("<paper>"+"\n");
       writerTestPaper.write("<id>"+"\n");
       writerTestPaper.write(p.getId().replace("\n", "")+"\n");
