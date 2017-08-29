@@ -27,23 +27,24 @@ public class SolrClient {
     for(String id : idPapers){
       if(Paper.class.isAssignableFrom(c)){
 
+        /*
         String querylocale = "http://localhost:8983/solr/technical_papers/select?q=id%3A"+id+"&fl=id%2Cdc_title%2Cdc_description&wt=json&indent=true";
         StringBuffer responseLocale = requestSOLR(querylocale);;
         resultsLocal.add(parserJson.parse(responseLocale.toString()).getAsJsonObject().get("response").getAsJsonObject().get("docs").getAsJsonArray());
+         */
 
-        /*
         String queryProduzione = "http://192.168.200.81:8080/solr4/technical_papers/select?q=id%3A"+id+"&fl=id%2Cdc_title%2Cdc_description&wt=json&indent=true";
         StringBuffer responseProduzione = requestSOLR(queryProduzione);
         if(responseProduzione != null)
           resultsProduzione.add(parserJson.parse(responseProduzione.toString()).getAsJsonObject().get("response").getAsJsonObject().get("docs").getAsJsonArray());
-         */
+
 
       }else if(Patent.class.isAssignableFrom(c)){
         //nuova query per i patent
       }
     }
-    
-    for(JsonElement json: resultsLocal){
+
+    for(JsonElement json: resultsProduzione){
       String tmpJson = json.toString().replace("[", "").replaceAll("]", "");
       Paper paper = gson.fromJson(tmpJson, Paper.class); 
       if(paper!=null){

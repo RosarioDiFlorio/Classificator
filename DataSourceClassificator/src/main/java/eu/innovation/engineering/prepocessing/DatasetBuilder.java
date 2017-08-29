@@ -190,7 +190,7 @@ public  class DatasetBuilder {
    */
   public static void main(String[] args) throws IOException{
     DatasetBuilder db = new DatasetBuilder();
-    db.setFileName("tmp");
+    db.setFileName("test");
     //KeywordExtractor keywordExtractor = new MauiExtractor("../KeywordExtractor/", "none", "newInnenModel");
     KeywordExtractor keywordExtractor = new InnenExtractor("../KeywordExtractor/");
     db.setKeywordExtractor(keywordExtractor);

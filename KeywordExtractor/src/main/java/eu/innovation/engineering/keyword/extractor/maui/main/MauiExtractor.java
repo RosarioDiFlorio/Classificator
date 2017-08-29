@@ -37,7 +37,7 @@ public class MauiExtractor implements KeywordExtractor{
 
   /** Maui filter object */
   private MauiFilter extractionModel;
-  private static final int topicsPerDocument = 10;
+  private static final int topicsPerDocument = 5;
   private Vocabulary vocabulary = null;
   private Stemmer stemmer;
   private Stopwords stopwords;
