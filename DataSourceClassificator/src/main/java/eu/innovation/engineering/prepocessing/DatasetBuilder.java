@@ -192,7 +192,7 @@ public  class DatasetBuilder {
     DatasetBuilder db = new DatasetBuilder();
     db.setFileName("tmp");
     //KeywordExtractor keywordExtractor = new MauiExtractor("../KeywordExtractor/", "none", "newInnenModel");
-    KeywordExtractor keywordExtractor = new InnenExtractor("../KeywordExtractor/");
+    KeywordExtractor keywordExtractor = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
     db.setKeywordExtractor(keywordExtractor);
     db.buildDataset();
   }
