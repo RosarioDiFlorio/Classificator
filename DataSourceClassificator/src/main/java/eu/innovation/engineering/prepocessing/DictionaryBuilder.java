@@ -11,19 +11,27 @@ import eu.innovation.engineering.prepocessing.featurextractor.Dictionary;
 
 public class DictionaryBuilder {
 
-  
-  
-  
+
+
+
   public static void main(String[] args) throws IOException{
     DatasetBuilder db = new DatasetBuilder();
-    
+    String fileName = "train";
     KeywordExtractor ke = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
-    
+
     db.setKeywordExtractor(ke);
-    db.setFileName("test");
+    db.setFileName(fileName);
     db.buildDataset();
     ClusteringKMeans clusteringDictionaries = new ClusteringKMeans();
-    HashMap<String, Dictionary> dictionaries = clusteringDictionaries.clusterWithDatasourceAsItems();
+
+    for(int i = 10; i<=180 ;i+=10){
+      HashMap<String, Dictionary> dictionaries = clusteringDictionaries.clusterWithDatasourceAsItems(fileName,i);
+      int somma=0;
+      for(String key : dictionaries.keySet()){
+        somma+=dictionaries.get(key).getVariance();
+      }
+      System.out.println("Varianza con cut: "+i+" vale: "+somma/i);
+    }
   }
 
 }
