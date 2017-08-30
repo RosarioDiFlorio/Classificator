@@ -16,14 +16,14 @@ public class DictionaryBuilder {
   
   public static void main(String[] args) throws IOException{
     DatasetBuilder db = new DatasetBuilder();
-    
+    String fileName = "train";
     KeywordExtractor ke = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
     
     db.setKeywordExtractor(ke);
-    db.setFileName("test");
-    db.buildDataset();
+    db.setFileName(fileName);
+    //db.buildDataset();
     ClusteringKMeans clusteringDictionaries = new ClusteringKMeans();
-    HashMap<String, Dictionary> dictionaries = clusteringDictionaries.clusterWithDatasourceAsItems();
+    HashMap<String, Dictionary> dictionaries = clusteringDictionaries.clusterWithDatasourceAsItems(fileName);
   }
 
 }

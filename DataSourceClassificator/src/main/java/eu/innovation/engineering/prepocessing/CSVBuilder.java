@@ -32,7 +32,7 @@ public class CSVBuilder {
   
   public void buildCSV() throws IOException{
     ClusteringKMeans clusteringDictionaries = new ClusteringKMeans();
-    HashMap<String, Dictionary> dictionaries = clusteringDictionaries.clusterWithDatasourceAsItems();
+    HashMap<String, Dictionary> dictionaries = clusteringDictionaries.clusterWithDatasourceAsItems(Configurator.fileDictionaries);
 
     FeatureExtractor featureExtractor = new FeatureExtractor();
     HashSet<String> categories = (HashSet<String>) Configurator.getCategories();

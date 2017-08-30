@@ -12,8 +12,8 @@ public class Configurator {
   public static final int minNumPaperForTest = 1;
   public static final int numPaperForTraining = 30;
   public static final int numPaperForTest = 2;
-  public static final int numFeatures = 10;
-
+  public static final int numFeatures = 20;
+  public static final String fileDictionaries = "blablabla"; 
   
   public final static Set<String> getCategories() throws IOException{
     Set<String> categories = new HashSet<String>();
