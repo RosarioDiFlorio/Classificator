@@ -43,7 +43,7 @@ public class CSVBuilder {
     //PARTE DI CODICE SENZA BALANCER E DUE DATASET DIVERSI
     DatasetBuilder pbTraining = new DatasetBuilder();
     pbTraining.parseDatasetFromJson(PathConfigurator.trainingAndTestFolder+"train.json");
-    ArrayList<Source> trainingSet = pbTraining.getListPapers();
+    ArrayList<Source> trainingSet = pbTraining.getSourceList();
 
     //STAMPO IL DATASET DI TRAINING CON I PAPER DIVISI PER CLASSI, PER VEDERE COME E' BILANCIATO
     System.out.println("\n DATASET DI TRAINING \n");
@@ -66,7 +66,7 @@ public class CSVBuilder {
 
     DatasetBuilder pbTesting= new DatasetBuilder();
     pbTesting.parseDatasetFromJson(PathConfigurator.trainingAndTestFolder+"test.json");
-    ArrayList<Source> testSet = pbTesting.getListPapers();
+    ArrayList<Source> testSet = pbTesting.getSourceList();
     ///////////////////////////////////////////////
 
 

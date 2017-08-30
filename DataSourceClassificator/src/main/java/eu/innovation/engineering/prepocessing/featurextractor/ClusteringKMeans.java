@@ -44,7 +44,7 @@ public class ClusteringKMeans {
     DatasetBuilder pb = new DatasetBuilder();
     pb.parseDatasetFromJson("dataset/datasetWithKeywords.json");
 
-    ArrayList<Source> paperList = pb.getListPapers();
+    ArrayList<Source> paperList = pb.getSourceList();
     HashSet<String> keywordList = pb.returnAllKeywords(paperList);
 
     HashMap<String, ArrayList<Double>> matrixKeywordsDocument = matrixCreator.getMatrixKeywordsDocuments(paperList,keywordList);
@@ -112,7 +112,7 @@ public class ClusteringKMeans {
     DatasetBuilder pb = new DatasetBuilder();
     pb.parseDatasetFromJson(PathConfigurator.backUpDatasetFolder+"test_complete.json");
     // PRENDO LA LISTA DI PAPER DAL FILE USANDO IL METODO DELL OGGETTO pb
-    ArrayList<Source> paperList = pb.getListPapers();
+    ArrayList<Source> paperList = pb.getSourceList();
    
     //INIZIALIZZO UNA LISTA DI ITEMS, CHE SARANNO GLI OGGETTI CHE VERRANNO CLUSTERIZZATI
     ArrayList<Item> items = new ArrayList<Item>();

@@ -24,6 +24,6 @@ public class DictionaryBuilder {
     db.buildDataset();
     ClusteringKMeans clusteringDictionaries = new ClusteringKMeans();
     HashMap<String, Dictionary> dictionaries = clusteringDictionaries.clusterWithDatasourceAsItems();
- 
   }
+
 }

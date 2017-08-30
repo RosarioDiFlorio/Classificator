@@ -156,11 +156,11 @@ public  class DatasetBuilder {
   }
 
 
-  public ArrayList<Source> getListPapers() {
+  public ArrayList<Source> getSourceList() {
     return listSources;
   }
 
-  public void setListPapers(ArrayList<Source> listPapers) {
+  public void setSourceList(ArrayList<Source> listPapers) {
     this.listSources = listPapers;
   }
 

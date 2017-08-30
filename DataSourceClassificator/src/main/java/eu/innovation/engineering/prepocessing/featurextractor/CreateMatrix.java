@@ -30,7 +30,7 @@ public class CreateMatrix
       DatasetBuilder pb = new DatasetBuilder();
       pb.parseDatasetFromJson("dataset/datasetWithKeywords.json");
       
-      ArrayList<Source> paperList = pb.getListPapers();
+      ArrayList<Source> paperList = pb.getSourceList();
       HashSet<String> keywordList = new HashSet<String>();
       
       for(Source p : paperList){

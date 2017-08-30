@@ -24,10 +24,7 @@ import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 public class SolrClient {
   
   public static void main(String[] args) throws Exception{
-    
-    requestNPaper(200);
-    
-    
+    requestNPaper(200);    
   }
 
   public static void requestNPaper(int numSourceRequest) throws Exception{
@@ -35,14 +32,14 @@ public class SolrClient {
     String url = "http://192.168.200.81:8080/solr4/technical_papers/select?q=*%3A*&sort=id+asc&fl=id%2Cdc_title%2Cdc_description&wt=json&indent=true&cursorMark=";
     KeywordExtractor extractorInnen = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
 
-    int numPaperToSave = 0;
+    int numSourceToSave = 0;
     JsonParser parserJson = new JsonParser();
 
     //creo il file 
     int count = 0;
-    ArrayList<Source> paperList = new ArrayList<Source>();
-    while (numPaperToSave<numSourceRequest){
-      numPaperToSave+=10;
+    ArrayList<Source> sourceList = new ArrayList<Source>();
+    while (numSourceToSave<numSourceRequest){
+      numSourceToSave+=10;
       StringBuffer response = requestSOLR(url+cursorMark);
       JsonArray results = parserJson.parse(response.toString()).getAsJsonObject().get("response").getAsJsonObject().get("docs").getAsJsonArray();
       count+=10;
@@ -60,21 +57,21 @@ public class SolrClient {
           String title = sourceObject.get("dc_title").getAsString();
           String id = sourceObject.get("id").getAsString();
           System.out.println(id);
-          Source paper = new Source();
-          paper.setTitle(title);
-          paper.setId(id);
+          Source source = new Source();
+          source.setTitle(title);
+          source.setId(id);
           List<String> toAnalyze = new ArrayList<String>();
-          toAnalyze.add(paper.getTitle());
+          toAnalyze.add(source.getTitle());
           toAnalyze.add(description);
-          paper.setKeywordList((ArrayList<Keyword>)extractorInnen.extractKeywordsFromText(toAnalyze,4));
-          paperList.add(paper); 
+          source.setKeywordList((ArrayList<Keyword>)extractorInnen.extractKeywordsFromText(toAnalyze,4));
+          sourceList.add(source); 
         }
       }
       cursorMark = parserJson.parse(response.toString()).getAsJsonObject().get("nextCursorMark").getAsString();
 
     }
     ObjectMapper mapper = new ObjectMapper();
-    mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.dictionariesFolder+"dataset.json"), paperList);
+    mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.dictionariesFolder+"dataset.json"), sourceList);
 
     System.out.println(count);
   }

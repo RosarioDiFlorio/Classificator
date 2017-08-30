@@ -28,7 +28,7 @@ public class KeywordExtractorTester
     DatasetBuilder db = new DatasetBuilder();
 
     db.parseDatasetFromJson("source/test_complete.json");
-    ArrayList<Source> listaSource = db.getListPapers();
+    ArrayList<Source> listaSource = db.getSourceList();
 
     for(Source source : listaSource){
       writer.println(source.getId()+"\n");

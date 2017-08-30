@@ -68,7 +68,7 @@ public class NeuralNetworkClassifier {
     //PARTE DI CODICE SENZA BALANCER E DUE DATASET DIVERSI
     DatasetBuilder pbTraining = new DatasetBuilder();
     pbTraining.parseDatasetFromJson("datasetTrainingAndTest/train.json");
-    ArrayList<Source> trainingSet = pbTraining.getListPapers();
+    ArrayList<Source> trainingSet = pbTraining.getSourceList();
 
 
 
@@ -93,7 +93,7 @@ public class NeuralNetworkClassifier {
 
     DatasetBuilder pbTesting= new DatasetBuilder();
     pbTesting.parseDatasetFromJson("datasetTrainingAndTest/test.json");
-    ArrayList<Source> testSet = pbTesting.getListPapers();
+    ArrayList<Source> testSet = pbTesting.getSourceList();
     ///////////////////////////////////////////////
 
 
