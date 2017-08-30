@@ -18,6 +18,7 @@ import com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider;
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
 import eu.innovation.engineering.config.Configurator;
+import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.prepocessing.DatasetBuilder;
 import eu.innovation.engineering.util.featurextractor.Item;
 import eu.innovation.engineering.util.featurextractor.ItemWrapper;
@@ -109,7 +110,7 @@ public class ClusteringKMeans {
     
     
     DatasetBuilder pb = new DatasetBuilder();
-    pb.parseDatasetFromJson("data/datasets/datasetDictionaries/datasetForDictionaries.json");
+    pb.parseDatasetFromJson(PathConfigurator.backUpDatasetFolder+"test_complete.json");
     // PRENDO LA LISTA DI PAPER DAL FILE USANDO IL METODO DELL OGGETTO pb
     ArrayList<Source> paperList = pb.getListPapers();
    
@@ -181,7 +182,7 @@ public class ClusteringKMeans {
     }
 
     //STAMPO SU FILE I CLUSTER OTTENUTI
-    FileWriter writer = new FileWriter("Clusters.txt");
+    FileWriter writer = new FileWriter(PathConfigurator.dictionariesFolder+"dictionaries.txt");
 
     for(String cluster : dictionaries.keySet()){
       writer.write(cluster+"\n");

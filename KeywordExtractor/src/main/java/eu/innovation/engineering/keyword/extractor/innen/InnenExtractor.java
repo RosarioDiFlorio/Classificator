@@ -36,17 +36,17 @@ public class InnenExtractor implements KeywordExtractor {
   private String stopWordPath= "data/stopwords/stopwords_en.txt";
   private String mainDirectory = "";
   private LanguageDetector languageDetector;
-  
-  
+
+
   public InnenExtractor(String mainDirectory){
     this.mainDirectory = mainDirectory;
     this.stopWordPath = this.mainDirectory + stopWordPath;
     languageDetector = new LanguageDetector();
 
   }
-  
+
   @Override
-  public List<Keyword> extractKeywordsFromText(List<String> texts) throws LanguageException{
+  public List<Keyword> extractKeywordsFromText(List<String> texts, int numKeywordsToReturn) throws LanguageException{
     ArrayList<Keyword> toReturn  = new ArrayList<>();
     String[] configLocations = new String[] {"classpath:/spring/base-context.xml","classpath:/spring/solrclient-beans.xml", "classpath:/spring/oat-analysis.xml", "classpath:/spring/keywords-context.xml"};
     executeInSpringContext(configLocations, context -> {
@@ -54,7 +54,7 @@ public class InnenExtractor implements KeywordExtractor {
 
       String toAnalyze = languageDetector.filterForLanguage(texts, "en");
       TextAnalyzer textAnalyzer = context.getBean(TextAnalyzer.class);
-            
+
       KeywordExtractionRunnable analyzerRunnable = context.getBean("keywordExtractionRunnable", KeywordExtractionRunnable.class);
       analyzerRunnable.setBlackList(this.getBlackList());
       analyzerRunnable.setTexts(toAnalyze);
@@ -64,16 +64,23 @@ public class InnenExtractor implements KeywordExtractor {
       List<WordFrequency> keywords = new ArrayList<>();
       analyzerRunnable.setKeywordsConsumer(dwk -> dwk.getKeywords().forEach(keywords::add));
       analyzerRunnable.run();
-      
-      
+
+
+      int count=0;
       for(WordFrequency word: keywords){
-        Keyword k = new Keyword();
-        k.setText(word.getWord());
-        k.setRelevance((double) word.getFrequency());
-        toReturn.add(k);
+        if(count<numKeywordsToReturn){
+          count++;
+          Keyword k = new Keyword();
+          k.setText(word.getWord());
+          k.setRelevance((double) word.getFrequency());
+          toReturn.add(k);
+        }
+        else
+          break;
       }
     });
-    
+
+    System.out.println(toReturn.size());
     return toReturn;
   }
 
@@ -122,7 +129,7 @@ public class InnenExtractor implements KeywordExtractor {
 
 
 
-  
+
 
 
 

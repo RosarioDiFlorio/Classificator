@@ -66,7 +66,7 @@ public  class DatasetBuilder {
   public List<Source> addKeywords(ArrayList<Source> list) {
     for(Source p: list){
       try {
-        p.setKeywordList((ArrayList<Keyword>) keywordExtractor.extractKeywordsFromText(p.getTexts()));
+        p.setKeywordList((ArrayList<Keyword>) keywordExtractor.extractKeywordsFromText(p.getTexts(),4));
       }
       catch (Exception e) {
         // TODO Auto-generated catch block

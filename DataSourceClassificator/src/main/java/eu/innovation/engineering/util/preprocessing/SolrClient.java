@@ -1,6 +1,7 @@
 package eu.innovation.engineering.util.preprocessing;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -8,14 +9,77 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
+
+import eu.innovation.engineering.config.PathConfigurator;
+import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
+import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 
 public class SolrClient {
+  
+  public static void main(String[] args) throws Exception{
+    
+    requestNPaper(200);
+    
+    
+  }
 
+  public static void requestNPaper(int numSourceRequest) throws Exception{
+    String cursorMark="*";
+    String url = "http://192.168.200.81:8080/solr4/technical_papers/select?q=*%3A*&sort=id+asc&fl=id%2Cdc_title%2Cdc_description&wt=json&indent=true&cursorMark=";
+    KeywordExtractor extractorInnen = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
 
+    int numPaperToSave = 0;
+    JsonParser parserJson = new JsonParser();
+
+    //creo il file 
+    int count = 0;
+    ArrayList<Source> paperList = new ArrayList<Source>();
+    while (numPaperToSave<numSourceRequest){
+      numPaperToSave+=10;
+      StringBuffer response = requestSOLR(url+cursorMark);
+      JsonArray results = parserJson.parse(response.toString()).getAsJsonObject().get("response").getAsJsonObject().get("docs").getAsJsonArray();
+      count+=10;
+      if(cursorMark.equals("AoEpOTk5OTVfMTAy")){
+        System.out.println(results);
+        break;
+      }
+
+      for(int i=0; i<results.size();i++){
+        JsonElement sourceElement = results.get(i);
+        JsonObject sourceObject = sourceElement.getAsJsonObject();
+        String description;
+        if(sourceObject!=null && sourceObject.get("dc_description")!=null){
+          description = sourceObject.get("dc_description").getAsString();
+          String title = sourceObject.get("dc_title").getAsString();
+          String id = sourceObject.get("id").getAsString();
+          System.out.println(id);
+          Source paper = new Source();
+          paper.setTitle(title);
+          paper.setId(id);
+          List<String> toAnalyze = new ArrayList<String>();
+          toAnalyze.add(paper.getTitle());
+          toAnalyze.add(description);
+          paper.setKeywordList((ArrayList<Keyword>)extractorInnen.extractKeywordsFromText(toAnalyze,4));
+          paperList.add(paper); 
+        }
+      }
+      cursorMark = parserJson.parse(response.toString()).getAsJsonObject().get("nextCursorMark").getAsString();
+
+    }
+    ObjectMapper mapper = new ObjectMapper();
+    mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.dictionariesFolder+"dataset.json"), paperList);
+
+    System.out.println(count);
+  }
+  
+  
   public List<Source> getSourcesFromSolr(List<String> idPapers, Class c) throws IOException{
 
     List<Source> toReturn = new ArrayList<Source>();
@@ -57,7 +121,7 @@ public class SolrClient {
 
 
 
-  private StringBuffer requestSOLR(String url) throws IOException{
+  private static StringBuffer requestSOLR(String url) throws IOException{
     final String USER_AGENT = "Mozilla/5.0";
 
     URL obj = new URL(url);

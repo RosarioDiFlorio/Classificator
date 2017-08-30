@@ -35,38 +35,6 @@
     "relevance" : 7.0,
     "sentiment" : null,
     "text" : "meal"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 7.0,
-    "sentiment" : null,
-    "text" : "intake"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 6.0,
-    "sentiment" : null,
-    "text" : "mean"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 6.0,
-    "sentiment" : null,
-    "text" : "energy"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 6.0,
-    "sentiment" : null,
-    "text" : "dietary"
   } ],
   "categoryList" : [ {
     "label" : "/food and drink",
@@ -110,78 +78,6 @@
     "relevance" : 5.0,
     "sentiment" : null,
     "text" : "thailand"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "travel"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "cost"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "international"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "satisfaction"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "positive"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "management"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "demographic"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "level"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "significant"
   } ],
   "categoryList" : [ {
     "label" : "/travel",
@@ -225,62 +121,6 @@
     "relevance" : 19.0,
     "sentiment" : null,
     "text" : "education"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 13.0,
-    "sentiment" : null,
-    "text" : "practice"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 12.0,
-    "sentiment" : null,
-    "text" : "physical"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 11.0,
-    "sentiment" : null,
-    "text" : "pre-service"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 8.0,
-    "sentiment" : null,
-    "text" : "literacy"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 6.0,
-    "sentiment" : null,
-    "text" : "professional"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 6.0,
-    "sentiment" : null,
-    "text" : "school"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 6.0,
-    "sentiment" : null,
-    "text" : "curriculum"
   } ],
   "categoryList" : [ {
     "label" : "/education",
@@ -324,14 +164,6 @@
     "relevance" : 6.0,
     "sentiment" : null,
     "text" : "production"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "high"
   } ],
   "categoryList" : [ {
     "label" : "/business and industrial",
@@ -375,46 +207,6 @@
     "relevance" : 5.0,
     "sentiment" : null,
     "text" : "monkey"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "artist"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "work"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "object"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "castlefield"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "carter"
   } ],
   "categoryList" : [ {
     "label" : "/art and entertainment",
@@ -458,102 +250,6 @@
     "relevance" : 11.0,
     "sentiment" : null,
     "text" : "node"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 10.0,
-    "sentiment" : null,
-    "text" : "source"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 8.0,
-    "sentiment" : null,
-    "text" : "traffic"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 8.0,
-    "sentiment" : null,
-    "text" : "locality"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 6.0,
-    "sentiment" : null,
-    "text" : "request"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 6.0,
-    "sentiment" : null,
-    "text" : "region"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 6.0,
-    "sentiment" : null,
-    "text" : "ring"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 6.0,
-    "sentiment" : null,
-    "text" : "tlrda"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "new"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "manet"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "packet"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "approach"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "neighbourhood"
   } ],
   "categoryList" : [ {
     "label" : "/technology and computing",
@@ -597,54 +293,6 @@
     "relevance" : 8.0,
     "sentiment" : null,
     "text" : "peace"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 7.0,
-    "sentiment" : null,
-    "text" : "role"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 7.0,
-    "sentiment" : null,
-    "text" : "sector"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 6.0,
-    "sentiment" : null,
-    "text" : "violence"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 6.0,
-    "sentiment" : null,
-    "text" : "region"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "conflict"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "research"
   } ],
   "categoryList" : [ {
     "label" : "/society",
@@ -688,22 +336,6 @@
     "relevance" : 10.0,
     "sentiment" : null,
     "text" : "bond"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 8.0,
-    "sentiment" : null,
-    "text" : "interest"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 7.0,
-    "sentiment" : null,
-    "text" : "international"
   } ],
   "categoryList" : [ {
     "label" : "/finance",
@@ -747,62 +379,6 @@
     "relevance" : 5.0,
     "sentiment" : null,
     "text" : "beverage"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "ifba"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "market"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "multinational"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "major"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "soft"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "top"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "sale"
   } ],
   "categoryList" : [ {
     "label" : "/food and drink",
@@ -889,30 +465,6 @@
     "relevance" : 13.0,
     "sentiment" : null,
     "text" : "financial"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 12.0,
-    "sentiment" : null,
-    "text" : "money"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 11.0,
-    "sentiment" : null,
-    "text" : "transfer"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 7.0,
-    "sentiment" : null,
-    "text" : "informal"
   } ],
   "categoryList" : [ {
     "label" : "/finance",
@@ -956,38 +508,6 @@
     "relevance" : 7.0,
     "sentiment" : null,
     "text" : "information"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 7.0,
-    "sentiment" : null,
-    "text" : "place"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 6.0,
-    "sentiment" : null,
-    "text" : "tourism"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "mobility"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "german"
   } ],
   "categoryList" : [ {
     "label" : "/travel",
@@ -1031,70 +551,6 @@
     "relevance" : 13.0,
     "sentiment" : null,
     "text" : "knowledge"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 13.0,
-    "sentiment" : null,
-    "text" : "school"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 9.0,
-    "sentiment" : null,
-    "text" : "primary"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 8.0,
-    "sentiment" : null,
-    "text" : "chapter"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 8.0,
-    "sentiment" : null,
-    "text" : "stage"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 8.0,
-    "sentiment" : null,
-    "text" : "environment"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 7.0,
-    "sentiment" : null,
-    "text" : "datum"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 7.0,
-    "sentiment" : null,
-    "text" : "study"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 7.0,
-    "sentiment" : null,
-    "text" : "theoretical"
   } ],
   "categoryList" : [ {
     "label" : "/education",
@@ -1138,158 +594,6 @@
     "relevance" : 47.0,
     "sentiment" : null,
     "text" : "religion"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 41.0,
-    "sentiment" : null,
-    "text" : "knowledge"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 34.0,
-    "sentiment" : null,
-    "text" : "god"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 21.0,
-    "sentiment" : null,
-    "text" : "rational"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 20.0,
-    "sentiment" : null,
-    "text" : "question"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 17.0,
-    "sentiment" : null,
-    "text" : "human"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 17.0,
-    "sentiment" : null,
-    "text" : "truth"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 16.0,
-    "sentiment" : null,
-    "text" : "justification"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 14.0,
-    "sentiment" : null,
-    "text" : "reason"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 12.0,
-    "sentiment" : null,
-    "text" : "true"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 12.0,
-    "sentiment" : null,
-    "text" : "epistemology"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 12.0,
-    "sentiment" : null,
-    "text" : "reality"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 12.0,
-    "sentiment" : null,
-    "text" : "evidence"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 11.0,
-    "sentiment" : null,
-    "text" : "pluralism"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 11.0,
-    "sentiment" : null,
-    "text" : "philosopher"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 11.0,
-    "sentiment" : null,
-    "text" : "world"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 10.0,
-    "sentiment" : null,
-    "text" : "challenge"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 10.0,
-    "sentiment" : null,
-    "text" : "person"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 10.0,
-    "sentiment" : null,
-    "text" : "view"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 10.0,
-    "sentiment" : null,
-    "text" : "fact"
   } ],
   "categoryList" : [ {
     "label" : "/religion and spirituality",
@@ -1333,78 +637,6 @@
     "relevance" : 8.0,
     "sentiment" : null,
     "text" : "society"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 7.0,
-    "sentiment" : null,
-    "text" : "social"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 7.0,
-    "sentiment" : null,
-    "text" : "transition"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 7.0,
-    "sentiment" : null,
-    "text" : "kmt"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 7.0,
-    "sentiment" : null,
-    "text" : "association"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 7.0,
-    "sentiment" : null,
-    "text" : "city"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 7.0,
-    "sentiment" : null,
-    "text" : "kaohsiung"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 7.0,
-    "sentiment" : null,
-    "text" : "government"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "taiwan"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "context"
   } ],
   "categoryList" : [ {
     "label" : "/society",
@@ -1448,70 +680,6 @@
     "relevance" : 11.0,
     "sentiment" : null,
     "text" : "work"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 11.0,
-    "sentiment" : null,
-    "text" : "visual"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 7.0,
-    "sentiment" : null,
-    "text" : "study"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 7.0,
-    "sentiment" : null,
-    "text" : "research"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 6.0,
-    "sentiment" : null,
-    "text" : "employment"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "finding"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "life"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "people"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "artistic"
   } ],
   "categoryList" : [ {
     "label" : "/art and entertainment",
@@ -1555,94 +723,6 @@
     "relevance" : 17.0,
     "sentiment" : null,
     "text" : "factory"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 16.0,
-    "sentiment" : null,
-    "text" : "modelling"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 11.0,
-    "sentiment" : null,
-    "text" : "material"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 9.0,
-    "sentiment" : null,
-    "text" : "tool"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 7.0,
-    "sentiment" : null,
-    "text" : "industry"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 7.0,
-    "sentiment" : null,
-    "text" : "manufacturing"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 7.0,
-    "sentiment" : null,
-    "text" : "flow"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "research"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "environment"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "thermal"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "approach"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "simulation"
   } ],
   "categoryList" : [ {
     "label" : "/business and industrial",
@@ -1686,22 +766,6 @@
     "relevance" : 4.0,
     "sentiment" : null,
     "text" : "approach"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "physical"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "biological"
   } ],
   "categoryList" : [ {
     "label" : "/science",
@@ -1745,118 +809,6 @@
     "relevance" : 7.0,
     "sentiment" : null,
     "text" : "large-scale"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 6.0,
-    "sentiment" : null,
-    "text" : "failure"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 6.0,
-    "sentiment" : null,
-    "text" : "application"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "chapter"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "number"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "protocol"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "computing"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "topology"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "problem"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "property"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "dynamics"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "spatial"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "various"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "dynamic"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "method"
   } ],
   "categoryList" : [ {
     "label" : "/technology and computing",
@@ -1900,70 +852,6 @@
     "relevance" : 9.0,
     "sentiment" : null,
     "text" : "god"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 7.0,
-    "sentiment" : null,
-    "text" : "study"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "purpose"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "holistic"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "spirit"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "life"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "dimension"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "human"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "view"
   } ],
   "categoryList" : [ {
     "label" : "/religion and spirituality",
