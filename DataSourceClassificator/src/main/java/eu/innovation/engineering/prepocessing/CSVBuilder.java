@@ -29,7 +29,7 @@ public class CSVBuilder {
     mapper = new ObjectMapper();
   }
 
-
+  
   public void buildCSV() throws IOException{
     ClusteringKMeans clusteringDictionaries = new ClusteringKMeans();
     HashMap<String, Dictionary> dictionaries = clusteringDictionaries.clusterWithDatasourceAsItems();

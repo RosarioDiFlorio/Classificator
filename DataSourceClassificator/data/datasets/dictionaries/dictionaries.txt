@@ -1,0 +1,106 @@
+Cluster 6
+    teacher
+    education
+    environmental
+    teaching
+    sport
+    knowledge
+
+
+Cluster 7
+    biophysicist
+    biology
+    biophysic
+    physics
+
+
+Cluster 8
+    node
+    route
+    biology
+    discovery
+    quantitative
+    science
+    communication
+    large-scale
+    approach
+    device
+    algorithm
+
+
+Cluster 9
+    exhibition
+    tv
+    art
+    monkey
+    artist
+    disability
+    work
+    gallery
+
+
+Cluster 0
+    meal
+    nutrient
+    snack
+    subject
+    beverage
+    company
+    food
+    drink
+
+
+Cluster 1
+    steel
+    factory
+    development
+    society
+    process
+    production
+    civil
+    club
+    iron
+    industry
+    building
+    energy
+
+
+Cluster 2
+    market
+    bank
+    rate
+    financial
+    exchange
+    remittance
+    bond
+    banking
+
+
+Cluster 3
+    white
+    person
+    spirituality
+    god
+
+
+Cluster 4
+    religious
+    society
+    civil
+    peace
+    experience
+    belief
+    group
+    religion
+
+
+Cluster 5
+    tourist
+    product
+    thailand
+    guidebook
+    tourism
+    behaviour
+    information
+
+

@@ -34,7 +34,7 @@ public class KeywordExtractorTester
       writer.println(source.getId()+"\n");
       writer.println(source.getTitle()+"\n");
       writer.println("INNEN EXTRACTOR");
-      List<Keyword> keywordsResultInnen = innenExtractor.extractKeywordsFromText(source.getTexts());
+      List<Keyword> keywordsResultInnen = innenExtractor.extractKeywordsFromText(source.getTexts(),4);
       int count =0;
       for(Keyword k :keywordsResultInnen){
         if(count<5){
@@ -49,7 +49,7 @@ public class KeywordExtractorTester
       writer.println("\nMAUI EXTRACTOR");
       KeywordExtractor mauiExtractor = new MauiExtractor("../KeywordExtractor/", "none", "newInnenModel");
 
-      List<Keyword> keywordsResultInnenMaui =  mauiExtractor.extractKeywordsFromText(source.getTexts());
+      List<Keyword> keywordsResultInnenMaui =  mauiExtractor.extractKeywordsFromText(source.getTexts(),4);
 
       for(Keyword k :keywordsResultInnenMaui){
         writer.println(k.getText()+"("+k.getRelevance()+")");
