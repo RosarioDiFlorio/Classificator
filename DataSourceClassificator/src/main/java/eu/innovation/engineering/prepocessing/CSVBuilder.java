@@ -22,17 +22,28 @@ import eu.innovation.engineering.util.preprocessing.Source;
 
 public class CSVBuilder {
 
-  private ObjectMapper mapper;
+  private static ObjectMapper mapper = new ObjectMapper();
 
-
+ 
   public CSVBuilder() {
     mapper = new ObjectMapper();
   }
 
+  /**
+   * Example Main
+   * @param args
+   * @throws IOException
+   */
+  public static void main(String[] args) throws IOException{
+    buildCSV();
+  }
   
-  public void buildCSV() throws IOException{
+  
+  
+  
+  public static void buildCSV() throws IOException{
     ClusteringKMeans clusteringDictionaries = new ClusteringKMeans();
-    HashMap<String, Dictionary> dictionaries = clusteringDictionaries.clusterWithDatasourceAsItems(Configurator.fileDictionaries);
+    HashMap<String, Dictionary> dictionaries = clusteringDictionaries.clusterWithDatasourceAsItems(PathConfigurator.dictionariesFolder+"dataset2.json", Configurator.numFeatures);
 
     FeatureExtractor featureExtractor = new FeatureExtractor();
     HashSet<String> categories = (HashSet<String>) Configurator.getCategories();
@@ -83,11 +94,11 @@ public class CSVBuilder {
     mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.dictionariesFolder+"dictionaryForTraining.json"), featuresPapersTestWithTarget );
 
     createDatasetPython(featuresPapersTrainingWithTarget,categories,"train");
-    createDatasetPython(featuresPapersTestWithTarget,categories,"test");
+    createDatasetPython(featuresPapersTestWithTarget,categories,"test"); 
   }
 
   //METODO CHE RESITUISCE UN HASHMAP DI CATEGORIA, PER OGNI CATEGORIA LA LISTA DI PAPER CHE APPARTENGONO
-  private HashMap<String, ArrayList<Source>> categoryListWithAssociatePapers(ArrayList<Source> trainingSet, HashSet<String> categories) {
+  private static HashMap<String, ArrayList<Source>> categoryListWithAssociatePapers(ArrayList<Source> trainingSet, HashSet<String> categories) {
     HashMap<String, ArrayList<Source>> categoryWithPapers = new HashMap<String, ArrayList<Source>>();
 
     for(String category : categories){
@@ -105,7 +116,7 @@ public class CSVBuilder {
   }
 
   //METODO CHE ASSOCIA OGNI DOCUMENTO ALLA CLASSE D?APPARTENENZA, SALVANDO ID E TARGET IN UN OGGETTO DI TIPO IdAndTarget
-  private HashMap<IdAndTarget, ArrayList<Features>> loadTargetForDosuments(HashMap<String, ArrayList<Features>> featuresPapersTraining,
+  private static HashMap<IdAndTarget, ArrayList<Features>> loadTargetForDosuments(HashMap<String, ArrayList<Features>> featuresPapersTraining,
       HashMap<String, ArrayList<Features>> targetsPapersTraining, HashSet<String> categories) {
     HashMap<IdAndTarget, ArrayList<Features>> toReturn = new HashMap<>();
     for(String key : featuresPapersTraining.keySet()){
@@ -187,15 +198,7 @@ public class CSVBuilder {
   }
 
 
-  /**
-   * Example Main
-   * @param args
-   * @throws IOException
-   */
-  public static void main(String[] args) throws IOException{
-    CSVBuilder db = new CSVBuilder();
-    db.buildCSV();
-  }
+
 
 
 

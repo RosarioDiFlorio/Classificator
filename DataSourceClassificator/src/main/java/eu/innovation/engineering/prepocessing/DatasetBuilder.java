@@ -24,7 +24,11 @@ import eu.innovation.engineering.util.preprocessing.Paper;
 import eu.innovation.engineering.util.preprocessing.SolrClient;
 import eu.innovation.engineering.util.preprocessing.Source;
 
-
+/**
+ * Questa classe serve per creare il dataset da documenti Solr. Prende in input un file che contiene id di documenti, divisi per categorie.
+ * @author lomasto
+ *
+ */
 
 public  class DatasetBuilder {
 
@@ -56,7 +60,7 @@ public  class DatasetBuilder {
     listSources = (ArrayList<Source>) addCategories(listSources);
     listSources = (ArrayList<Source>) addKeywords(listSources);
 
-    this.mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.datasetFolder+"backup/"+fileName+"_complete.json"), this.listSources);;    
+    this.mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.datasetFolder+"backup/"+fileName+"_complete.json"), this.listSources);    
     listSources.stream().forEach(p->p.setDescription(null));
     this.mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.datasetFolder+"TrainingAndTest/"+fileName+".json"), this.listSources);
   }
@@ -194,6 +198,9 @@ public  class DatasetBuilder {
     //KeywordExtractor keywordExtractor = new MauiExtractor("../KeywordExtractor/", "none", "newInnenModel");
     KeywordExtractor keywordExtractor = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
     db.setKeywordExtractor(keywordExtractor);
+    db.buildDataset();
+    
+    db.setFileName("train");
     db.buildDataset();
   }
 

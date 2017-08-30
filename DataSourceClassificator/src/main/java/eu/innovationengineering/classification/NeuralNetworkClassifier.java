@@ -43,7 +43,7 @@ public class NeuralNetworkClassifier {
   public static void mainNN(String args[]) throws IOException, InterruptedException{
 
     ClusteringKMeans clusteringDictionaries = new ClusteringKMeans();
-    HashMap<String, Dictionary> dictionaries = clusteringDictionaries.clusterWithDatasourceAsItems(Configurator.fileDictionaries);
+    HashMap<String, Dictionary> dictionaries = clusteringDictionaries.clusterWithDatasourceAsItems(Configurator.fileDictionaries, Configurator.numFeatures);
 
     FeatureExtractor featureExtractor = new FeatureExtractor();
     HashSet<String> categories = (HashSet<String>) Configurator.getCategories();
