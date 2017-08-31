@@ -179,7 +179,6 @@ public class CSVBuilder {
           Features feature = (Features) iterator.next();
           keywordsToWrite+=feature.getScore();
           do{
-            //keywordsToWrite+="";
             Features feature2 = (Features) iterator.next();
             keywordsToWrite+=","+feature2.getScore();
           }
@@ -189,9 +188,9 @@ public class CSVBuilder {
           
           for(int i=0; i<Configurator.Categories.values().length;i++){
             if(currentCategory.contains(Configurator.Categories.values()[i].toString()))
-              keywordsToWrite+=","+currentCategory;
+              keywordsToWrite+=","+1;
             else
-              keywordsToWrite+=",";
+              keywordsToWrite+=","+0;
           }
           
           pWriterCSV.println(keywordsToWrite);
