@@ -45,7 +45,7 @@ public class CSVBuilder {
   
 
   public static void buildCSV() throws IOException{
-    boolean testWithoutLabel = true;
+    boolean testWithoutLabel = false;
     
     ClusteringKMeans clusteringDictionaries = new ClusteringKMeans();
     HashMap<String, Dictionary> dictionaries = clusteringDictionaries.clusterWithDatasourceAsItems(PathConfigurator.dictionariesFolder+"dictionariesSource.json", Configurator.numFeatures);
@@ -81,7 +81,7 @@ public class CSVBuilder {
     fileWriterpaperForCategory.close();
 
     DatasetBuilder pbTesting= new DatasetBuilder();
-    pbTesting.parseDatasetFromJson(PathConfigurator.trainingAndTestFolder+"datasetWithoutLabel.json");
+    pbTesting.parseDatasetFromJson(PathConfigurator.trainingAndTestFolder+"test.json");
     ArrayList<Source> testSet = pbTesting.getSourceList();
     ///////////////////////////////////////////////
     

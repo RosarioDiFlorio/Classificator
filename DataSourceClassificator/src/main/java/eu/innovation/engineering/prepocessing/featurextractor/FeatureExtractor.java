@@ -162,15 +162,34 @@ public class FeatureExtractor {
     if(vectorA!=null && vectorB!=null && vectorA.length==vectorB.length){
       for (int i = 0; i < vectorA.length; i++) {
         dotProduct += vectorA[i] * vectorB[i];
-        normA += Math.pow(vectorA[i], 2);
-        normB += Math.pow(vectorB[i], 2);
+        normA += vectorA[i] * vectorA[i];
+        normB += vectorB[i] * vectorB[i];
       }   
     }
 
-    if(dotProduct == 0 || ((Math.sqrt(normA) * Math.sqrt(normB))) == 0)
+    if(dotProduct == 0 || (normA * normB) == 0)
       return 0;
     else
-      return dotProduct / (Math.sqrt(normA) * Math.sqrt(normB));
+      return Math.sqrt((dotProduct * dotProduct) / (normA * normB));
+  }
+  
+  
+  public static double cosineSimilarity(double[] vectorA, double[] vectorB) {
+    double dotProduct = 0.0;
+    double normA = 0.0;
+    double normB = 0.0;
+    if(vectorA!=null && vectorB!=null && vectorA.length==vectorB.length){
+      for (int i = 0; i < vectorA.length; i++) {
+        dotProduct += vectorA[i] * vectorB[i];
+        normA += vectorA[i] * vectorA[i];
+        normB += vectorB[i] * vectorB[i];
+      }   
+    }
+
+    if(dotProduct == 0 || (normA * normB) == 0)
+      return 0;
+    else
+      return Math.sqrt((dotProduct * dotProduct) / (normA * normB));
   }
 
   

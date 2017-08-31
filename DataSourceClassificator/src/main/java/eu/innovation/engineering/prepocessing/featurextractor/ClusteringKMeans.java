@@ -6,13 +6,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.List;
 import java.util.function.ToDoubleFunction;
 import java.util.stream.Collectors;
 
 import org.apache.commons.math3.ml.clustering.CentroidCluster;
 import org.apache.commons.math3.ml.clustering.KMeansPlusPlusClusterer;
+import org.apache.commons.math3.ml.clustering.KMeansPlusPlusClusterer.EmptyClusterStrategy;
+import org.apache.commons.math3.random.JDKRandomGenerator;
 import org.apache.cxf.jaxrs.client.WebClient;
 
 import com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider;
@@ -22,10 +23,12 @@ import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.prepocessing.DatasetBuilder;
 import eu.innovation.engineering.util.featurextractor.Item;
 import eu.innovation.engineering.util.featurextractor.ItemWrapper;
+import eu.innovation.engineering.util.preprocessing.CosineDistance;
 import eu.innovation.engineering.util.preprocessing.Source;
 import eu.innovationengineering.word2vec.common.Constants;
 import eu.innovationengineering.word2vec.common.request.bean.VectorListRequestBean;
 import eu.innovationengineering.word2vec.service.rest.impl.Word2vecServiceImpl;
+
 
 
 public class ClusteringKMeans {
@@ -107,13 +110,13 @@ public class ClusteringKMeans {
 
   public HashMap<String, Dictionary> clusterWithDatasourceAsItems(String fileName, int cut) throws IOException {
     CreateMatrix matrixCreator = new CreateMatrix();
-    
-    
+
+
     DatasetBuilder pb = new DatasetBuilder();
     pb.parseDatasetFromJson(fileName);
     // PRENDO LA LISTA DI PAPER DAL FILE USANDO IL METODO DELL OGGETTO pb
     ArrayList<Source> paperList = pb.getSourceList();
-   
+
     //INIZIALIZZO UNA LISTA DI ITEMS, CHE SARANNO GLI OGGETTI CHE VERRANNO CLUSTERIZZATI
     ArrayList<Item> items = new ArrayList<Item>();
 
@@ -154,9 +157,9 @@ public class ClusteringKMeans {
     // initialize a new clustering algorithm. 
     // we use KMeans++ with 10 clusters and 10000 iterations maximum.
     // we did not specify a distance measure; the default (euclidean distance) is used.
-    KMeansPlusPlusClusterer<ItemWrapper> clusterer = new KMeansPlusPlusClusterer<ItemWrapper>(cut, clusterInput.size());
+    KMeansPlusPlusClusterer<ItemWrapper> clusterer = new KMeansPlusPlusClusterer<ItemWrapper>(cut, clusterInput.size(), new CosineDistance(), new JDKRandomGenerator(), EmptyClusterStrategy.LARGEST_POINTS_NUMBER);
 
-    System.out.println("Number datasource to create dictionaries: "+clusterInput.size());
+    System.out.println("Number datasource to create dictionaries: "+clusterInput.size()+" num Cluster:"+cut);
     System.out.println("Starting k-means");
     List<CentroidCluster<ItemWrapper>> clusterResults = clusterer.cluster(clusterInput);
     System.out.println("Ended k-means");
@@ -166,13 +169,16 @@ public class ClusteringKMeans {
 
     //ciclo sui cluster ottenuti, per ogni cluster creo un dizionario che contiene tutte le keywords dei paper che appartengono al cluster
     for (int i=0; i<clusterResults.size(); i++) {
-      HashSet<Keyword> keywords = new HashSet<>();
+      HashMap<String,Double> keywords = new HashMap<>();
       for (ItemWrapper itemWrapper : clusterResults.get(i).getPoints()){
         String id = itemWrapper.getItem().getId();
         for(Source p : paperList){
           if(p.getId().equals(id))
             for(Keyword k : p.getKeywordList()){
-              keywords.add(k);
+              if(keywords.keySet().contains(k.getText()))
+                keywords.put(k.getText(), keywords.get(k.getText())+k.getRelevance());
+              else
+                keywords.put(k.getText(), k.getRelevance());
             }
         }
       }
@@ -182,31 +188,37 @@ public class ClusteringKMeans {
     }
 
     // CALCOLO MEDIA E VARIANZA INTRACLUSTER (INTERNA AL DIZIONARIO) SCARTANDO QUELLI CON VALORE PIU' BASSO
-   
+
     for(String key : dictionaries.keySet()){
       Dictionary d = dictionaries.get(key);
       d.setAvg(avg(d));
       d.setVariance(variance(d,d.getAvg()));
-      List<Keyword> keywordToRemove = new ArrayList<Keyword>(); 
+      List<String> keywordToRemove = new ArrayList<String>(); 
       //CREO LA LISTA DI KEYWORD DA RIMUOVERE
-      
-      for(Iterator<Keyword> iter = d.getKeywords().iterator(); iter.hasNext();){
-        Keyword k = iter.next();
-        if(k.getRelevance()<(d.getAvg()-(d.getVariance()/2))){
-          iter.remove();
+
+
+      for(String keyMap: d.getKeywords().keySet()){
+        if(d.getKeywords().get(keyMap) < (d.getAvg() -(d.getVariance()/2))){
+          keywordToRemove.add(keyMap);
         }
       }
+
+
+      for(String keys: keywordToRemove){
+        d.getKeywords().remove(keys);
+      }
     }
-    
-   
+
+
     //STAMPO SU FILE I CLUSTER OTTENUTI
     FileWriter writer = new FileWriter(PathConfigurator.dictionariesFolder+cut+"_dictionaries.txt");
 
     for(String cluster : dictionaries.keySet()){
       writer.write(cluster+"\n");
       Dictionary currentDictionary = dictionaries.get(cluster);
-      for(Keyword keyword : currentDictionary.getKeywords()){
-        writer.write("    "+keyword.getText()+" -> "+keyword.getRelevance()+"\n");
+
+      for(String keymap : currentDictionary.getKeywords().keySet()){
+        writer.write("    "+keymap+" -> "+currentDictionary.getKeywords().get(keymap)+"\n");
       }
       writer.write("AVG: "+currentDictionary.getAvg()+"\n");
       writer.write("Variance: "+currentDictionary.getVariance()+"\n");
@@ -216,11 +228,11 @@ public class ClusteringKMeans {
     writer.flush();
     writer.close();
 
-    
+
     // per ogni dizionario calcolo anche i vettori che mi serviranno successivamente. 
     HashMap<String, Dictionary> finalDictionaries = returnVectorForDictionaries(dictionaries);
 
-    
+
     return finalDictionaries;
 
   }
@@ -230,10 +242,10 @@ public class ClusteringKMeans {
 
   private float variance(Dictionary d, float avg) {
     float sum = 0;
-    for(Keyword k : d.getKeywords()){
-      sum+=(k.getRelevance()-avg)*(k.getRelevance()-avg);
+
+    for(String keymap : d.getKeywords().keySet()){
+      sum+=(d.getKeywords().get(keymap) - avg)*(d.getKeywords().get(keymap) - avg);
     }
-    
     return (float) Math.sqrt(sum/(d.getKeywords().size()));
   }
 
@@ -241,10 +253,10 @@ public class ClusteringKMeans {
 
 
   private float avg(Dictionary d) {
-    
+
     float sum = 0;
-    for(Keyword k : d.getKeywords()){
-      sum+=k.getRelevance();
+    for(String keymap : d.getKeywords().keySet()){
+      sum+=d.getKeywords().get(keymap);
     }
     return sum/d.getKeywords().size();
   }
@@ -260,8 +272,9 @@ public class ClusteringKMeans {
     for(String cluster: dictionaries.keySet()){
       // creo l'arrayList di stringhe da passare a word2Vec
       ArrayList<String> stringToVec = new ArrayList<>();
-      for(Keyword k : dictionaries.get(cluster).getKeywords()){
-        String parts[] = k.getText().split(" ");
+
+      for(String keymap : dictionaries.get(cluster).getKeywords().keySet()){
+        String parts[] = keymap.split(" ");
         Arrays.stream(parts).forEach(stringToVec::add);
       }
       docsK.add(stringToVec);
@@ -290,11 +303,11 @@ public class ClusteringKMeans {
         dictionaries.get(dictionary).setVector(floatApp);
         iteratorDictionary++;
       }
-      
+
     }
-    
+
     return dictionaries;
-    
+
   }
 
 
@@ -304,7 +317,7 @@ public class ClusteringKMeans {
 
     //ISTANZIAMO UNA MATRICE DI STRINGHE
     List<List<String>> docsK = new ArrayList<List<String>>();
-    
+
     //PER OGNI PAPER COSTRUIAMO IL SET DI KEYWORDS DA CUI POI OTTENERE IL VETTORE
     for(Source p: paperList){
       //calcolo la relevance minima
