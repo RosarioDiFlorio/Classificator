@@ -27,6 +27,19 @@ public class Configurator {
       line=bufferedReader.readLine();
     }
     return categories;
-  } 
+  }
+  
+  public enum Categories{
+    travel,
+    technology_and_computing,
+    finance,
+    art_and_entertainment,
+    science,
+    business_and_industrial,
+    food_and_drink,
+    society,
+    education,
+    religion_and_spirituality
+  }
 
 }

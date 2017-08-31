@@ -153,7 +153,7 @@ public class CSVBuilder {
    */
   private static void createDatasetPython(HashMap<IdAndTarget, ArrayList<Features>> featuresPapersTrainingWithTarget, HashSet<String> categories, String fileName) throws IOException {
     //Per ogni categoria creo una folder
-    String firstLine="labels,id";
+    String firstLine="id";
 
     File csvFile = new File(fileName+".csv");
     csvFile.createNewFile();
@@ -162,13 +162,19 @@ public class CSVBuilder {
     for(int i=0;i<Configurator.numFeatures;i++)
       firstLine+=",F"+i;
 
+    for(int i=0;i<categories.size();i++)
+      firstLine+=",L"+i;
+
+
     pWriterCSV.println(firstLine);
+
+
 
 
     for(String category : categories){
       for(IdAndTarget idAndTarget : featuresPapersTrainingWithTarget.keySet()){
         if(idAndTarget.getTarget().equals(category)){
-          String keywordsToWrite=category+","+idAndTarget.getId()+",";
+          String keywordsToWrite= idAndTarget.getId()+",";
           Iterator iterator = featuresPapersTrainingWithTarget.get(idAndTarget).iterator();
           Features feature = (Features) iterator.next();
           keywordsToWrite+=feature.getScore();
@@ -178,6 +184,17 @@ public class CSVBuilder {
             keywordsToWrite+=","+feature2.getScore();
           }
           while(iterator.hasNext());
+
+          String currentCategory = idAndTarget.getTarget().replace(" ", "_");
+          
+          for(int i=0; i<Configurator.Categories.values().length;i++){
+            System.out.println(Configurator.Categories.values()[i].toString());
+            if(currentCategory.contains(Configurator.Categories.values()[i].toString()))
+              keywordsToWrite+=","+currentCategory;
+            else
+              keywordsToWrite+=",";
+          }
+          
           pWriterCSV.println(keywordsToWrite);
         }
       }
