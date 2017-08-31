@@ -13,13 +13,13 @@ import eu.innovation.engineering.prepocessing.featurextractor.Dictionary;
 public class DictionaryBuilder {
 
 
- public static String buildJson(String fileName) throws IOException{
+ public static void buildJson(String fileName, String path) throws IOException{
    DatasetBuilder db = new DatasetBuilder();
 
    KeywordExtractor ke = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
    db.setKeywordExtractor(ke);
 
-   return db.buildDataset(fileName);
+   db.buildDataset(fileName,path);
  }
 
   public static HashMap<String, Dictionary> build(String JsonPath,int kMeans) throws IOException{

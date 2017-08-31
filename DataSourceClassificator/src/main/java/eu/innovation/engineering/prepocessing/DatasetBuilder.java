@@ -51,9 +51,9 @@ public  class DatasetBuilder {
   }
 
 
-  public String  buildDataset(String fileName) throws IOException{
+  public void  buildDataset(String fileName, String path) throws IOException{
     
-    dataReader = new TxtDataReader(fileName);
+    dataReader = new TxtDataReader(fileName,path);
     List<String> listIdPaper = new ArrayList<>(dataReader.getIds());
     
     listSources.addAll(solrClient.getSourcesFromSolr(listIdPaper,Paper.class));
@@ -61,12 +61,11 @@ public  class DatasetBuilder {
     listSources = (ArrayList<Source>) addCategories(listSources);
     listSources = (ArrayList<Source>) addKeywords(listSources);
 
-    String simpleName = fileName.replace(".txt", "");
-    this.mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.datasetFolder+"backup/"+simpleName+"_complete.json"), this.listSources);    
+    String simpleName =  fileName.replaceAll("\\.[a-zA-Z]*", "");   
     listSources.stream().forEach(p->p.setDescription(null));
-    this.mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.datasetFolder+"TrainingAndTest/"+simpleName+".json"), this.listSources);
+    this.mapper.writerWithDefaultPrettyPrinter().writeValue(new File(path+"/"+simpleName+".json"), this.listSources);
   
-    return PathConfigurator.datasetFolder+"TrainingAndTest/"+simpleName+".json";
+   
   }
 
 
@@ -204,8 +203,8 @@ public  class DatasetBuilder {
     //KeywordExtractor keywordExtractor = new MauiExtractor("../KeywordExtractor/", "none", "newInnenModel");
     KeywordExtractor keywordExtractor = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
     db.setKeywordExtractor(keywordExtractor);
-    db.buildDataset("test.txt");    
-    db.buildDataset("train.txt");
+    db.buildDataset("test.txt",PathConfigurator.trainingAndTestFolder);    
+    db.buildDataset("train.txt",PathConfigurator.trainingAndTestFolder);
   }
 
 
