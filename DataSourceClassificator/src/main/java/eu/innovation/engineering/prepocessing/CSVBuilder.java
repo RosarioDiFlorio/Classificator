@@ -37,7 +37,7 @@ public class CSVBuilder {
   }
 
 
-  public static void buildCSV(String fileName,HashMap<String, Dictionary> dictionaries,boolean withLabel) throws IOException{
+  public static void buildCSV(String path,HashMap<String, Dictionary> dictionaries,boolean withLabel) throws IOException{
 
 
     FeatureExtractor featureExtractor = new FeatureExtractor();
@@ -47,7 +47,7 @@ public class CSVBuilder {
     //System.out.println(categories.toString());
 
     DatasetBuilder pbTraining = new DatasetBuilder();
-    pbTraining.parseDatasetFromJson(PathConfigurator.trainingAndTestFolder+fileName);
+    pbTraining.parseDatasetFromJson(path);
     ArrayList<Source> trainingSet = pbTraining.getSourceList();
 
     HashMap<String,ArrayList<Source>>trainingPapersForCategory=categoryListWithAssociatePapers(trainingSet,categories);
@@ -66,11 +66,11 @@ public class CSVBuilder {
 
     HashMap<IdAndTarget,ArrayList<Features>> featuresPapersTrainingWithTarget = loadTargetForDosuments(featuresPapersTraining,targetsPapersTraining,categories);
 
-    fileName = fileName.replaceAll("\\.[a-zA-Z]*", "");
+    path = path.replaceAll("\\.[a-zA-Z]*", "");
     if(withLabel)
-      createDatasetPython(featuresPapersTrainingWithTarget,categories,fileName);
+      createDatasetPython(featuresPapersTrainingWithTarget,categories,path);
     else     
-      createDatasetPythonWithoutCategories(featuresPapersTraining,fileName);
+      createDatasetPythonWithoutCategories(featuresPapersTraining,path);
 
   }
 
@@ -122,7 +122,7 @@ public class CSVBuilder {
     // TODO Auto-generated method stub
 
     String firstLine="id";
-    FileWriter writerCSV = new FileWriter(PathConfigurator.pyCSVFolder+fileName+".csv");
+    FileWriter writerCSV = new FileWriter(fileName+".csv");
     for(int i=0;i<Configurator.numFeatures;i++)
       firstLine+=",F"+i;
 
@@ -155,7 +155,7 @@ public class CSVBuilder {
     //Per ogni categoria creo una folder
     String firstLine="labels,id";
 
-    File csvFile = new File(PathConfigurator.pyCSVFolder+fileName+".csv");
+    File csvFile = new File(fileName+".csv");
     csvFile.createNewFile();
     PrintWriter pWriterCSV = new PrintWriter(csvFile);
 
