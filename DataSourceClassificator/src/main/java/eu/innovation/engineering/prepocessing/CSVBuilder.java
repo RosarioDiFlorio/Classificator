@@ -29,7 +29,7 @@ public class CSVBuilder {
 
   private static ObjectMapper mapper = new ObjectMapper();
 
- 
+
   public CSVBuilder() {
     mapper = new ObjectMapper();
   }
@@ -40,15 +40,14 @@ public class CSVBuilder {
    * @throws IOException
    */
   public static void main(String[] args) throws IOException{
-    buildCSV();
-  }
-  
-
-  public static void buildCSV() throws IOException{
-    boolean testWithoutLabel = false;
-    
     ClusteringKMeans clusteringDictionaries = new ClusteringKMeans();
     HashMap<String, Dictionary> dictionaries = clusteringDictionaries.clusterWithDatasourceAsItems(PathConfigurator.dictionariesFolder+"dictionariesSource.json", Configurator.numFeatures);
+    buildCSV("train.json",dictionaries,false);
+  }
+
+
+  public static void buildCSV(String fileName,HashMap<String, Dictionary> dictionaries,boolean withLabel) throws IOException{
+
 
     FeatureExtractor featureExtractor = new FeatureExtractor();
     HashSet<String> categories = (HashSet<String>) Configurator.getCategories();
@@ -56,17 +55,11 @@ public class CSVBuilder {
     System.out.println("CATEGORIE");
     System.out.println(categories.toString());
 
-    //PARTE DI CODICE SENZA BALANCER E DUE DATASET DIVERSI
     DatasetBuilder pbTraining = new DatasetBuilder();
-    pbTraining.parseDatasetFromJson(PathConfigurator.trainingAndTestFolder+"train.json");
+    pbTraining.parseDatasetFromJson(PathConfigurator.trainingAndTestFolder+fileName);
     ArrayList<Source> trainingSet = pbTraining.getSourceList();
 
-    //STAMPO IL DATASET DI TRAINING CON I PAPER DIVISI PER CLASSI, PER VEDERE COME E' BILANCIATO
-    System.out.println("\n DATASET DI TRAINING \n");
     HashMap<String,ArrayList<Source>>trainingPapersForCategory=categoryListWithAssociatePapers(trainingSet,categories);
-    for(String key: trainingPapersForCategory.keySet()){
-      System.out.println(key+": "+trainingPapersForCategory.get(key).size());
-    }
 
     //STAMPO SU FILE LE CLASSI CONTENENTI I PAPER DI TRAINING 
     FileWriter fileWriterpaperForCategory = new FileWriter("papersForCategory.txt"); 
@@ -77,32 +70,19 @@ public class CSVBuilder {
       }
     }
 
-    fileWriterpaperForCategory.flush();
-    fileWriterpaperForCategory.close();
-
-    DatasetBuilder pbTesting= new DatasetBuilder();
-    pbTesting.parseDatasetFromJson(PathConfigurator.trainingAndTestFolder+"test.json");
-    ArrayList<Source> testSet = pbTesting.getSourceList();
-    ///////////////////////////////////////////////
-    
-   
-    // CREO LE MATRICI DI FEATURES E DI TARGET PER I DATASET DI TRAINING E TEST
     HashMap<String, ArrayList<Features>> featuresPapersTraining = featureExtractor.createFeaturesNormalizedInputDB(trainingSet,dictionaries);
     HashMap<String, ArrayList<Features>> targetsPapersTraining = featureExtractor.createTargetsInputDB(trainingSet, categories, dictionaries);
-    HashMap<String, ArrayList<Features>> featuresPapersTest = featureExtractor.createFeaturesNormalizedInputDB(testSet,dictionaries);
-    HashMap<String, ArrayList<Features>> targetsPapersTest = featureExtractor.createTargetsInputDB(testSet, categories, dictionaries);
 
     HashMap<IdAndTarget,ArrayList<Features>> featuresPapersTrainingWithTarget = loadTargetForDosuments(featuresPapersTraining,targetsPapersTraining,categories);
-    HashMap<IdAndTarget,ArrayList<Features>> featuresPapersTestWithTarget = loadTargetForDosuments(featuresPapersTest,targetsPapersTest,categories);
 
     mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.dictionariesFolder+"dictionaryForTraining.json"), featuresPapersTrainingWithTarget );
-    mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.dictionariesFolder+"dictionaryForTraining.json"), featuresPapersTestWithTarget );
 
-    createDatasetPython(featuresPapersTrainingWithTarget,categories,"train");
-    if(testWithoutLabel)
-      createDatasetPythonWithoutCategories(featuresPapersTest,"test"); 
-    else
-      createDatasetPython(featuresPapersTestWithTarget,categories,"test");
+    fileName = fileName.replaceAll("\\.[a-zA-Z]*", "");
+    if(withLabel)
+      createDatasetPython(featuresPapersTrainingWithTarget,categories,fileName);
+    else     
+      createDatasetPythonWithoutCategories(featuresPapersTraining,fileName);
+
   }
 
   //METODO CHE RESITUISCE UN HASHMAP DI CATEGORIA, PER OGNI CATEGORIA LA LISTA DI PAPER CHE APPARTENGONO
@@ -151,7 +131,7 @@ public class CSVBuilder {
 
   private static void createDatasetPythonWithoutCategories(HashMap<String, ArrayList<Features>> featuresPapers, String fileName) throws IOException {
     // TODO Auto-generated method stub
-    //Per ogni categoria creo una folder
+
     String firstLine="id";
     FileWriter writerCSV = new FileWriter(PathConfigurator.pyCSVFolder+fileName+".csv");
     for(int i=0;i<Configurator.numFeatures;i++)
@@ -189,38 +169,27 @@ public class CSVBuilder {
     File csvFile = new File(PathConfigurator.pyCSVFolder+fileName+".csv");
     csvFile.createNewFile();
     PrintWriter pWriterCSV = new PrintWriter(csvFile);
-    
+
     for(int i=0;i<Configurator.numFeatures;i++)
       firstLine+=",F"+i;
-    
+
     pWriterCSV.println(firstLine);
 
 
     for(String category : categories){
-      File dir = new File(PathConfigurator.pyFolder+category);
-      dir.mkdir();
       for(IdAndTarget idAndTarget : featuresPapersTrainingWithTarget.keySet()){
         if(idAndTarget.getTarget().equals(category)){
-          FileWriter writer = new FileWriter(PathConfigurator.pyFolder+category+"/"+idAndTarget.getId()+".txt");
           String keywordsToWrite=category+","+idAndTarget.getId()+",";
           Iterator iterator = featuresPapersTrainingWithTarget.get(idAndTarget).iterator();
-
           Features feature = (Features) iterator.next();
-
           keywordsToWrite+=feature.getScore();
-
           do{
             //keywordsToWrite+="";
             Features feature2 = (Features) iterator.next();
             keywordsToWrite+=","+feature2.getScore();
           }
           while(iterator.hasNext());
-
-
           pWriterCSV.println(keywordsToWrite);
-          writer.write(keywordsToWrite);
-          writer.flush();
-          writer.close();
         }
       }
 
