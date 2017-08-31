@@ -9,8 +9,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import eu.innovation.engineering.config.Configurator;
 import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.prepocessing.featurextractor.ClusteringKMeans;
@@ -26,13 +24,6 @@ import eu.innovation.engineering.util.preprocessing.Source;
  *
  */
 public class CSVBuilder {
-
-  private static ObjectMapper mapper = new ObjectMapper();
-
-
-  public CSVBuilder() {
-    mapper = new ObjectMapper();
-  }
 
   /**
    * Example Main
@@ -53,7 +44,7 @@ public class CSVBuilder {
     HashSet<String> categories = (HashSet<String>) Configurator.getCategories();
 
     System.out.println("CATEGORIE");
-    System.out.println(categories.toString());
+    //System.out.println(categories.toString());
 
     DatasetBuilder pbTraining = new DatasetBuilder();
     pbTraining.parseDatasetFromJson(PathConfigurator.trainingAndTestFolder+fileName);
@@ -74,8 +65,6 @@ public class CSVBuilder {
     HashMap<String, ArrayList<Features>> targetsPapersTraining = featureExtractor.createTargetsInputDB(trainingSet, categories, dictionaries);
 
     HashMap<IdAndTarget,ArrayList<Features>> featuresPapersTrainingWithTarget = loadTargetForDosuments(featuresPapersTraining,targetsPapersTraining,categories);
-
-    mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.dictionariesFolder+"dictionaryForTraining.json"), featuresPapersTrainingWithTarget );
 
     fileName = fileName.replaceAll("\\.[a-zA-Z]*", "");
     if(withLabel)
@@ -122,7 +111,7 @@ public class CSVBuilder {
       }
       IdAndTarget  idAndTarget = new IdAndTarget(key,currentTarget);
       toReturn.put(idAndTarget, featuresPapersTraining.get(key));
-      System.out.println(currentTarget);
+      //System.out.println(currentTarget);
     }
 
 
