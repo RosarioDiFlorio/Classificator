@@ -188,7 +188,6 @@ public class CSVBuilder {
           String currentCategory = idAndTarget.getTarget().replace(" ", "_");
           
           for(int i=0; i<Configurator.Categories.values().length;i++){
-            System.out.println(Configurator.Categories.values()[i].toString());
             if(currentCategory.contains(Configurator.Categories.values()[i].toString()))
               keywordsToWrite+=","+currentCategory;
             else
