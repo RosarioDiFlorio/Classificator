@@ -71,7 +71,7 @@ public class SolrClient {
 
     }
     ObjectMapper mapper = new ObjectMapper();
-    mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.dictionariesFolder+"dataset.json"), sourceList);
+    mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.trainingAndTestFolder+"dataset.json"), sourceList);
 
     System.out.println(count);
   }

@@ -1,9 +1,12 @@
 package eu.innovation.engineering.prepocessing.featurextractor;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Set;
 
 import com.ibm.watson.developer_cloud.natural_language_understanding.v1.model.CategoriesResult;
 
@@ -16,11 +19,7 @@ public class FeatureExtractor {
   
   public static HashMap<String,ArrayList<Features>> createFeaturesNormalizedInputDB(ArrayList<Source> listaPaper, HashMap<String, Dictionary> dictionaries) throws IOException{
 
-    
-    
     ClusteringKMeans clusteringDictionaries = new ClusteringKMeans();
-    
-    
     HashMap<String, ArrayList<Features>> featuresPapers = createFeaturesInputDB(listaPaper, dictionaries, clusteringDictionaries);
 
     double min = Double.MAX_VALUE;
@@ -136,6 +135,25 @@ public class FeatureExtractor {
     return toReturn;
   }
   
+  public static Set<String> getCategories() throws IOException{
+
+    Set<String> categories = new HashSet<String>();
+    FileReader fr = new FileReader("categories.txt");
+    BufferedReader bufferedReader = new BufferedReader(fr);
+
+    String line = bufferedReader.readLine();
+    while(line!=null){
+      String cat[] = line.split("/");
+      if(cat.length==1)
+        categories.add("/"+line);
+      line=bufferedReader.readLine();
+    }
+    return categories;
+  }
+  
+  
+  
+
 
   public static double cosineSimilarity(float[] vectorA, float[] vectorB) {
     double dotProduct = 0.0;
@@ -144,15 +162,34 @@ public class FeatureExtractor {
     if(vectorA!=null && vectorB!=null && vectorA.length==vectorB.length){
       for (int i = 0; i < vectorA.length; i++) {
         dotProduct += vectorA[i] * vectorB[i];
-        normA += Math.pow(vectorA[i], 2);
-        normB += Math.pow(vectorB[i], 2);
+        normA += vectorA[i] * vectorA[i];
+        normB += vectorB[i] * vectorB[i];
       }   
     }
 
-    if(dotProduct == 0 || ((Math.sqrt(normA) * Math.sqrt(normB))) == 0)
+    if(dotProduct == 0 || (normA * normB) == 0)
       return 0;
     else
-      return dotProduct / (Math.sqrt(normA) * Math.sqrt(normB));
+      return Math.sqrt((dotProduct * dotProduct) / (normA * normB));
+  }
+  
+  
+  public static double cosineSimilarity(double[] vectorA, double[] vectorB) {
+    double dotProduct = 0.0;
+    double normA = 0.0;
+    double normB = 0.0;
+    if(vectorA!=null && vectorB!=null && vectorA.length==vectorB.length){
+      for (int i = 0; i < vectorA.length; i++) {
+        dotProduct += vectorA[i] * vectorB[i];
+        normA += vectorA[i] * vectorA[i];
+        normB += vectorB[i] * vectorB[i];
+      }   
+    }
+
+    if(dotProduct == 0 || (normA * normB) == 0)
+      return 0;
+    else
+      return Math.sqrt((dotProduct * dotProduct) / (normA * normB));
   }
 
   

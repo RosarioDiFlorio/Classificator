@@ -1,0 +1,1326 @@
+Cluster 6
+    domestic -> 7.0
+    saving -> 11.0
+    enterprise -> 6.0
+    investment -> 15.0
+    household -> 8.0
+    electricity -> 10.0
+    foreign -> 6.0
+AVG: 7.181818
+Variance: 3.4063623
+
+
+Cluster 52
+    pyrazine -> 4.0
+    resonance -> 4.0
+AVG: 3.3333333
+Variance: 0.4714045
+
+
+Cluster 7
+    principle -> 17.0
+    role -> 10.0
+    concept -> 10.0
+    fundamental -> 10.0
+    cell -> 26.0
+    approach -> 26.0
+    network -> 16.0
+    dynamics -> 12.0
+    tumour -> 22.0
+    complex -> 10.0
+    physics -> 10.0
+    model -> 22.0
+    biology -> 58.0
+    law -> 10.0
+    disease -> 10.0
+    gene -> 14.0
+    article -> 10.0
+    important -> 10.0
+    system -> 36.0
+    field -> 12.0
+    interaction -> 10.0
+    biological -> 26.0
+    pathway -> 10.0
+    cancer -> 46.0
+    growth -> 14.0
+    evolutionary -> 10.0
+    mathematical -> 12.0
+AVG: 15.0
+Variance: 11.632467
+
+
+Cluster 51
+    movie -> 3.0
+    production -> 3.0
+    city -> 3.0
+    location -> 3.0
+    industry -> 3.0
+    film -> 6.0
+    video -> 3.0
+AVG: 3.4285715
+Variance: 1.0497813
+
+
+Cluster 8
+    study -> 9.0
+    brazil -> 9.0
+    industry -> 9.0
+    bottle -> 50.0
+    emission -> 10.0
+    gas -> 9.0
+    limit -> 9.0
+    acetaldehyde -> 27.0
+    organic -> 66.0
+    pet -> 19.0
+    park -> 12.0
+    soft -> 19.0
+    factory -> 11.0
+    product -> 19.0
+    environmental -> 13.0
+    antimony -> 19.0
+    substance -> 19.0
+    greenhouse -> 9.0
+    concentration -> 18.0
+    volatile -> 14.0
+    transport -> 14.0
+    water -> 32.0
+    drink -> 19.0
+    plastic -> 9.0
+    conventional -> 10.0
+    material -> 25.0
+    contents -> 11.0
+    science -> 12.0
+    migration -> 11.0
+    solvent -> 11.0
+AVG: 14.181818
+Variance: 11.378355
+
+
+Cluster 50
+    theatre -> 6.0
+    national -> 7.0
+AVG: 5.6666665
+Variance: 1.2472191
+
+
+Cluster 9
+    wheel -> 17.0
+    torque -> 10.0
+    steering -> 7.0
+    control -> 14.0
+    vehicle -> 13.0
+    agv -> 7.0
+    system -> 12.0
+    position -> 10.0
+AVG: 6.4761906
+Variance: 4.260774
+
+
+Cluster 12
+    antenna -> 4.0
+    processor -> 4.0
+AVG: 3.4
+Variance: 0.48989797
+
+
+Cluster 56
+    identity -> 19.0
+    racial -> 30.0
+    socialization -> 13.0
+AVG: 14.666667
+Variance: 7.8457346
+
+
+Cluster 11
+    sti -> 10.0
+    travel -> 13.0
+    traveller -> 8.0
+AVG: 9.25
+Variance: 2.58602
+
+
+Cluster 55
+    computer -> 5.0
+    guidance -> 6.0
+    machine -> 7.0
+    accuracy -> 6.0
+AVG: 4.857143
+Variance: 1.4568626
+
+
+Cluster 10
+    stigma -> 14.0
+    individual -> 19.0
+    social -> 73.0
+    need -> 8.0
+    dependency -> 8.0
+    welfare -> 15.0
+    society -> 15.0
+    school -> 9.0
+    service -> 29.0
+    justice -> 21.0
+    time -> 9.0
+    account -> 9.0
+AVG: 15.9375
+Variance: 16.001831
+
+
+Cluster 54
+    commercial -> 8.0
+    nutrient -> 7.0
+    sound -> 5.0
+    beef -> 5.0
+    infant -> 13.0
+    complementary -> 6.0
+    dutch -> 6.0
+    acid -> 5.0
+    domestic -> 5.0
+    dietary -> 14.0
+    fat -> 7.0
+    group -> 6.0
+    element -> 5.0
+    swedish -> 14.0
+    area -> 6.0
+    environmental -> 19.0
+    method -> 6.0
+    preference -> 10.0
+    impact -> 14.0
+    moisture -> 7.0
+    analysis -> 8.0
+    vitamin -> 8.0
+    quality -> 10.0
+    ffq -> 5.0
+    month -> 5.0
+    cereal -> 5.0
+    nutritional -> 8.0
+    animal -> 5.0
+    proportion -> 19.0
+    production -> 7.0
+    fruit -> 13.0
+    advice -> 5.0
+    pre-drying -> 5.0
+    vegetable -> 8.0
+    content -> 12.0
+    result -> 5.0
+    oil -> 6.0
+    potato -> 6.0
+    beverage -> 6.0
+    national -> 7.0
+    cooking -> 7.0
+    intake -> 20.0
+    value -> 11.0
+    product -> 30.0
+    agency -> 5.0
+    alcoholic -> 6.0
+    advantage -> 6.0
+    consumption -> 27.0
+    increase -> 10.0
+    sample -> 10.0
+    food -> 40.0
+    legume -> 5.0
+    meat -> 25.0
+    report -> 8.0
+    lamb -> 5.0
+    fillet -> 8.0
+AVG: 7.477778
+Variance: 6.241844
+
+
+Cluster 53
+    firm -> 10.0
+    flexibility -> 17.0
+    financial -> 12.0
+    cash -> 9.0
+    debt -> 8.0
+    capacity -> 8.0
+AVG: 9.625
+Variance: 3.2763357
+
+
+Cluster 16
+    chapter -> 11.0
+    club -> 24.0
+    movement -> 15.0
+AVG: 13.75
+Variance: 6.9056134
+
+
+Cluster 15
+    fish -> 12.0
+    sauce -> 9.0
+AVG: 9.666667
+Variance: 1.699673
+
+
+Cluster 59
+    process -> 6.0
+    goal -> 5.0
+    business -> 8.0
+    bp -> 5.0
+AVG: 5.1666665
+Variance: 1.5723301
+
+
+Cluster 14
+    art -> 7.0
+    museum -> 14.0
+    identity -> 9.0
+    research -> 5.0
+AVG: 6.375
+Variance: 3.3517718
+
+
+Cluster 58
+    mode -> 3.0
+    industrial -> 3.0
+    question -> 3.0
+    production -> 3.0
+    renault -> 3.0
+    volkswagen -> 3.0
+    globalisation -> 6.0
+    relation -> 3.0
+AVG: 3.375
+Variance: 0.99215674
+
+
+Cluster 13
+    street -> 12.0
+    food -> 14.0
+AVG: 7.0
+Variance: 3.8544965
+
+
+Cluster 57
+    software -> 15.0
+    separate -> 8.0
+    heterogeneous -> 11.0
+    space -> 11.0
+    problem -> 10.0
+    model -> 28.0
+    programming -> 9.0
+    hardware -> 7.0
+    algorithm -> 26.0
+    accelerator -> 61.0
+    package -> 6.0
+    topology -> 9.0
+    cpu -> 9.0
+    processor -> 7.0
+    graph -> 15.0
+    system -> 44.0
+    transfer -> 10.0
+    hybrid -> 6.0
+    datum -> 30.0
+    virtual -> 9.0
+    memory -> 37.0
+    code -> 12.0
+    nuama -> 9.0
+    network -> 8.0
+    circulant -> 9.0
+    parallel -> 11.0
+    dissertation -> 19.0
+    satellite -> 9.0
+    execution -> 16.0
+    address -> 9.0
+    gp -> 8.0
+    phd -> 6.0
+    heterogeneity -> 7.0
+    performance -> 18.0
+    application -> 12.0
+AVG: 11.392157
+Variance: 11.144469
+
+
+Cluster 19
+    ethnocentric -> 7.0
+    identity -> 10.0
+    racial -> 21.0
+    socialization -> 12.0
+    attitude -> 17.0
+AVG: 8.833333
+Variance: 5.0470014
+
+
+Cluster 18
+    religious -> 16.0
+    faith -> 10.0
+    belief -> 15.0
+    kierkegaard -> 6.0
+AVG: 8.0
+Variance: 4.7169905
+
+
+Cluster 17
+    money -> 29.0
+    theory -> 31.0
+AVG: 14.857142
+Variance: 9.642592
+
+
+Cluster 0
+    area -> 16.0
+    study -> 10.0
+    ecological -> 10.0
+    resource -> 13.0
+    taboo -> 11.0
+    social -> 10.0
+    rule -> 16.0
+    community -> 19.0
+    marine -> 34.0
+    framework -> 13.0
+    protected -> 11.0
+    management -> 10.0
+    vanuatu -> 11.0
+    social-ecological -> 9.0
+    factor -> 9.0
+    outcome -> 10.0
+    mpa -> 37.0
+AVG: 12.583333
+Variance: 7.5383277
+
+
+Cluster 1
+    religious -> 21.0
+    abuse -> 9.0
+    mental -> 8.0
+    result -> 10.0
+    high -> 9.0
+    religiosity -> 24.0
+    relationship -> 8.0
+    childhood -> 8.0
+    social -> 33.0
+    health -> 38.0
+    positive -> 14.0
+    people -> 10.0
+    religion -> 17.0
+    lifestyle -> 9.0
+    healthy -> 9.0
+    effect -> 18.0
+    depression -> 13.0
+    support -> 11.0
+    theory -> 8.0
+AVG: 11.129032
+Variance: 8.015075
+
+
+Cluster 2
+    contextual -> 11.0
+    education -> 55.0
+    trend -> 10.0
+    rehabilitation -> 20.0
+    tehran -> 16.0
+    state -> 21.0
+    method -> 42.0
+    old -> 26.0
+    community -> 13.0
+    mission -> 12.0
+    driver -> 15.0
+    relative -> 10.0
+    participation -> 11.0
+    study -> 13.0
+    criterion -> 15.0
+    conference -> 10.0
+    activity -> 11.0
+    housing -> 45.0
+    government -> 10.0
+    world -> 10.0
+    financing -> 27.0
+    place -> 11.0
+    product -> 10.0
+    texture -> 27.0
+    change -> 14.0
+    marketing -> 50.0
+    corporate -> 11.0
+    organization -> 19.0
+    open -> 14.0
+    country -> 10.0
+    capital -> 10.0
+    municipality -> 10.0
+    project -> 16.0
+    organisation -> 35.0
+    research -> 30.0
+    second -> 12.0
+    institution -> 33.0
+    communication -> 21.0
+    sector -> 33.0
+    development -> 10.0
+    need -> 10.0
+    weight -> 13.0
+    nfc -> 14.0
+    tool -> 17.0
+    market -> 22.0
+    private -> 23.0
+    distance -> 45.0
+    student -> 17.0
+    financial -> 30.0
+    university -> 36.0
+    learning -> 10.0
+    public -> 17.0
+    rate -> 13.0
+    provider -> 10.0
+    proposition -> 10.0
+    company -> 17.0
+    value -> 14.0
+    process -> 11.0
+    cost -> 10.0
+    social -> 47.0
+    technology -> 16.0
+    urban -> 25.0
+    reconstruction -> 19.0
+AVG: 14.878788
+Variance: 11.031885
+
+
+Cluster 3
+    national -> 5.0
+    park -> 8.0
+    geological -> 5.0
+    landscape -> 4.0
+AVG: 4.25
+Variance: 1.6393596
+
+
+Cluster 4
+    firm -> 8.0
+    investment -> 17.0
+    spike -> 11.0
+AVG: 8.666667
+Variance: 4.2687497
+
+
+Cluster 5
+    country -> 10.0
+    traveler -> 20.0
+    pre-travel -> 15.0
+    advice -> 11.0
+    health -> 26.0
+    travel -> 8.0
+AVG: 10.454545
+Variance: 6.813938
+
+
+Cluster 41
+    schedule -> 15.0
+    delay -> 14.0
+    arrival -> 18.0
+    time -> 47.0
+    travel -> 25.0
+    minimum -> 16.0
+AVG: 18.11111
+Variance: 11.298422
+
+
+Cluster 40
+    vietnam -> 6.0
+    national -> 5.0
+    conflict -> 5.0
+AVG: 5.0
+Variance: 0.70710677
+
+
+Cluster 45
+    film -> 2.0
+    post-racial -> 2.0
+AVG: 2.0
+Variance: 0.0
+
+
+Cluster 44
+    size -> 26.0
+    body -> 23.0
+    brain -> 22.0
+AVG: 17.0
+Variance: 8.294577
+
+
+Cluster 43
+    capital -> 12.0
+    enterprise -> 15.0
+    cycle -> 7.0
+    total -> 6.0
+    government -> 8.0
+    public -> 8.0
+    financing -> 13.0
+    development -> 11.0
+    investment -> 44.0
+    innovative -> 7.0
+    external -> 6.0
+    fund -> 7.0
+    infrastructure -> 12.0
+    risk -> 8.0
+    fixed -> 8.0
+    accrual -> 19.0
+AVG: 8.892858
+Variance: 7.659444
+
+
+Cluster 42
+    country -> 28.0
+    usage -> 8.0
+    firm -> 65.0
+    bank -> 27.0
+    manufacturing -> 10.0
+    credit -> 18.0
+    export -> 15.0
+    intensive -> 17.0
+    crisis -> 12.0
+    contract -> 8.0
+    investment -> 37.0
+    demand -> 19.0
+    market -> 21.0
+    taiwan -> 10.0
+    external -> 18.0
+    measure -> 12.0
+    effect -> 28.0
+    chapter -> 14.0
+    patent -> 33.0
+    access -> 24.0
+    role -> 8.0
+    financial -> 57.0
+    patenting -> 8.0
+    industry -> 21.0
+    protection -> 18.0
+    sme -> 12.0
+    banking -> 12.0
+    foreign -> 13.0
+    rate -> 9.0
+    financing -> 24.0
+    product -> 21.0
+    cost -> 14.0
+    decision -> 14.0
+    r&d -> 12.0
+    taiwanese -> 15.0
+    performance -> 9.0
+    management -> 14.0
+    growth -> 12.0
+    asset -> 13.0
+    finance -> 30.0
+AVG: 12.945206
+Variance: 11.182044
+
+
+Cluster 49
+    parent -> 7.0
+    practice -> 12.0
+    education -> 166.0
+    achievement -> 14.0
+    japan -> 7.0
+    year -> 9.0
+    program -> 77.0
+    approach -> 10.0
+    variation -> 7.0
+    moral -> 15.0
+    pupil -> 14.0
+    professional -> 12.0
+    preparation -> 5.0
+    feedback -> 14.0
+    contribution -> 9.0
+    problem -> 8.0
+    trogir -> 27.0
+    model -> 7.0
+    state -> 7.0
+    case -> 22.0
+    knowledge -> 45.0
+    ac -> 11.0
+    environmental -> 57.0
+    issue -> 9.0
+    work -> 23.0
+    collaborative -> 12.0
+    analysis -> 6.0
+    vospitanie -> 4.0
+    quality -> 19.0
+    system -> 67.0
+    size -> 5.0
+    science -> 8.0
+    dropout -> 18.0
+    difference -> 7.0
+    consideration -> 7.0
+    style -> 8.0
+    theory -> 4.0
+    acscl -> 16.0
+    primary -> 9.0
+    participation -> 10.0
+    chapter -> 58.0
+    study -> 72.0
+    role -> 18.0
+    activity -> 26.0
+    gardening -> 23.0
+    global -> 7.0
+    pgf -> 9.0
+    e-learning -> 62.0
+    course -> 22.0
+    perspective -> 9.0
+    place -> 35.0
+    f2f -> 14.0
+    deficient -> 8.0
+    satisfaction -> 7.0
+    demographic -> 7.0
+    face -> 9.0
+    stage -> 8.0
+    culture -> 18.0
+    work-oriented -> 9.0
+    garden -> 48.0
+    information -> 7.0
+    indicator -> 40.0
+    aide -> 17.0
+    theoretical -> 7.0
+    tainan -> 8.0
+    use -> 14.0
+    administration -> 12.0
+    research -> 20.0
+    perception -> 10.0
+    view -> 6.0
+    school -> 335.0
+    function -> 10.0
+    group -> 24.0
+    development -> 20.0
+    educational -> 9.0
+    level -> 19.0
+    resource -> 8.0
+    author -> 11.0
+    weight -> 15.0
+    significant -> 8.0
+    tool -> 7.0
+    condition -> 15.0
+    task -> 25.0
+    success -> 8.0
+    effect -> 9.0
+    elementary -> 58.0
+    basic -> 8.0
+    job -> 9.0
+    child -> 58.0
+    higher -> 14.0
+    datum -> 7.0
+    distance -> 11.0
+    student -> 142.0
+    university -> 12.0
+    part -> 7.0
+    book -> 7.0
+    learning -> 167.0
+    training -> 11.0
+    percent -> 16.0
+    boy -> 9.0
+    content -> 12.0
+    principal -> 17.0
+    administrator -> 8.0
+    teacher -> 137.0
+    public -> 8.0
+    rate -> 10.0
+    asynchronous -> 20.0
+    leadership -> 15.0
+    skill -> 11.0
+    design -> 10.0
+    construction -> 11.0
+    value -> 10.0
+    process -> 40.0
+    orientation -> 4.0
+    nature -> 24.0
+    technology -> 8.0
+    computer-supported -> 12.0
+    special -> 47.0
+    outdoor -> 11.0
+    environment -> 75.0
+    management -> 8.0
+    cscl -> 25.0
+    learner -> 8.0
+    online -> 38.0
+    pedagogic -> 5.0
+    indiana -> 7.0
+AVG: 23.507692
+Variance: 39.518867
+
+
+Cluster 48
+    citizenship -> 2.0
+    gateway -> 2.0
+AVG: 2.0
+Variance: 0.0
+
+
+Cluster 47
+    datum -> 4.0
+    country -> 6.0
+    asian -> 4.0
+    fdi -> 7.0
+    industry -> 6.0
+    fdus -> 5.0
+    japanese -> 4.0
+    isic -> 5.0
+    determinant -> 6.0
+AVG: 4.25
+Variance: 1.3462912
+
+
+Cluster 46
+    context -> 8.0
+    thread -> 18.0
+    processor -> 13.0
+    prioritization -> 8.0
+AVG: 9.142858
+Variance: 4.356557
+
+
+Cluster 30
+    market -> 7.0
+    volume -> 7.0
+    chapter -> 9.0
+    tourism -> 10.0
+    vehicle -> 8.0
+AVG: 7.142857
+Variance: 1.9587585
+
+
+Cluster 74
+    appropriate -> 8.0
+    capital -> 13.0
+    practice -> 11.0
+    strategic -> 22.0
+    city -> 14.0
+    regional -> 8.0
+    year -> 11.0
+    concept -> 9.0
+    rural -> 16.0
+    nebraskan -> 11.0
+    scale -> 6.0
+    percent -> 24.0
+    approach -> 6.0
+    life -> 10.0
+    mashhad -> 11.0
+    weakness -> 8.0
+    journal -> 8.0
+    tehran -> 14.0
+    model -> 9.0
+    state -> 5.0
+    factor -> 13.0
+    tollab -> 14.0
+    traveller -> 18.0
+    resident -> 9.0
+    group -> 6.0
+    development -> 34.0
+    travellers -> 10.0
+    social -> 37.0
+    opportunity -> 8.0
+    positive -> 8.0
+    community -> 163.0
+    planning -> 37.0
+    urban -> 32.0
+    cootharaba -> 12.0
+    person -> 13.0
+    accommodation -> 5.0
+    neighborhood -> 10.0
+    threat -> 8.0
+    position -> 8.0
+    page -> 9.0
+    strategy -> 19.0
+    swot -> 8.0
+AVG: 16.785715
+Variance: 24.267885
+
+
+Cluster 73
+    datum -> 4.0
+    reaction -> 5.0
+    background -> 5.0
+    event -> 8.0
+AVG: 4.25
+Variance: 1.6393596
+
+
+Cluster 72
+    calcium -> 22.0
+    rat -> 10.0
+    level -> 19.0
+    concentration -> 12.0
+    tissue -> 10.0
+    brain -> 24.0
+    lead -> 36.0
+AVG: 14.166667
+Variance: 8.792357
+
+
+Cluster 71
+    qian-wu -> 5.0
+    chen -> 5.0
+    taiwan -> 10.0
+    taiwanese -> 6.0
+    imagery -> 9.0
+    poetry -> 7.0
+AVG: 6.0
+Variance: 2.108185
+
+
+Cluster 34
+    school -> 9.0
+    family -> 9.0
+AVG: 9.0
+Variance: 0.0
+
+
+Cluster 78
+    special -> 3.0
+    omake -> 3.0
+    software -> 8.0
+    build -> 4.0
+    subsystem -> 3.0
+    project -> 3.0
+    tool -> 3.0
+AVG: 3.857143
+Variance: 1.7261493
+
+
+Cluster 33
+    traveler -> 14.0
+    expedition -> 20.0
+    perception -> 19.0
+    patient -> 22.0
+    traveller -> 23.0
+    illness -> 16.0
+    group -> 16.0
+    disease -> 25.0
+    health -> 49.0
+    rabies -> 14.0
+    medicine -> 33.0
+    generic -> 20.0
+    risk -> 39.0
+    travel -> 48.0
+AVG: 17.64
+Variance: 12.45112
+
+
+Cluster 77
+    industry -> 8.0
+    competition -> 7.0
+    analysis -> 6.0
+    firm -> 8.0
+    acquisition -> 6.0
+    merger -> 8.0
+AVG: 5.1538463
+Variance: 1.9940741
+
+
+Cluster 32
+    biology -> 26.0
+    major -> 10.0
+    student -> 8.0
+AVG: 11.2
+Variance: 7.547185
+
+
+Cluster 76
+    agent -> 20.0
+    study -> 13.0
+    destination -> 10.0
+    tourism -> 16.0
+    training -> 12.0
+    research -> 13.0
+    elearning -> 21.0
+    course -> 14.0
+    travel -> 22.0
+AVG: 11.466666
+Variance: 6.0428104
+
+
+Cluster 31
+    cocteau -> 7.0
+    chapter -> 4.0
+    artist -> 11.0
+    cinematography -> 4.0
+    illegibility -> 5.0
+    poet -> 11.0
+    mallarme -> 6.0
+    twombly -> 4.0
+    poetry -> 6.0
+    art -> 16.0
+    expression -> 5.0
+    artistic -> 11.0
+    japonisme -> 4.0
+AVG: 4.774194
+Variance: 3.1593149
+
+
+Cluster 75
+    market -> 9.0
+    chinese -> 11.0
+    world -> 9.0
+    import -> 8.0
+    variety -> 8.0
+    meat -> 10.0
+    pork -> 19.0
+AVG: 8.636364
+Variance: 3.844068
+
+
+Cluster 38
+    society -> 9.0
+    access -> 10.0
+    civil -> 9.0
+    citizenship -> 8.0
+AVG: 6.857143
+Variance: 2.5314348
+
+
+Cluster 37
+    expert -> 5.0
+    craft -> 11.0
+    space -> 5.0
+    learner -> 8.0
+    skill -> 12.0
+    wood -> 5.0
+    knowledge -> 9.0
+AVG: 6.0
+Variance: 2.855494
+
+
+Cluster 36
+    therapy -> 5.0
+    patient -> 5.0
+    staff -> 10.0
+AVG: 6.0
+Variance: 2.345208
+
+
+Cluster 35
+    exhibition -> 25.0
+    college -> 24.0
+    sao -> 11.0
+    german -> 12.0
+    art -> 71.0
+    artist -> 18.0
+    young -> 10.0
+    life -> 17.0
+    market -> 12.0
+    fine -> 17.0
+    cube -> 12.0
+    recent -> 18.0
+    royal -> 10.0
+    gallery -> 29.0
+    paulo -> 11.0
+AVG: 16.333334
+Variance: 13.695092
+
+
+Cluster 79
+    task -> 7.0
+    automation -> 7.0
+    constructibility -> 7.0
+    construction -> 15.0
+AVG: 8.2
+Variance: 3.4871192
+
+
+Cluster 39
+    leader -> 24.0
+    political -> 16.0
+    research -> 29.0
+    state -> 29.0
+    different -> 28.0
+    case -> 45.0
+    area -> 29.0
+    individual -> 26.0
+    baluch -> 22.0
+    birth -> 31.0
+    community -> 85.0
+    analysis -> 22.0
+    concubinage -> 35.0
+    child -> 33.0
+    status -> 22.0
+    religious -> 13.0
+    death -> 28.0
+    church -> 31.0
+    mixed -> 21.0
+    phenomenon -> 26.0
+    life -> 35.0
+    society -> 45.0
+    personality -> 14.0
+    rate -> 25.0
+    marriage -> 84.0
+    factor -> 14.0
+    relationship -> 40.0
+    social -> 47.0
+    chief -> 25.0
+    marital -> 21.0
+    century -> 23.0
+    confession -> 29.0
+    partner -> 23.0
+    information -> 24.0
+    behaviour -> 23.0
+    time -> 46.0
+    family -> 139.0
+AVG: 22.67742
+Variance: 22.602295
+
+
+Cluster 63
+    insurance -> 9.0
+    firm -> 25.0
+    capital -> 38.0
+    health -> 31.0
+    investment -> 16.0
+    worker -> 10.0
+    human -> 15.0
+AVG: 13.833333
+Variance: 11.164179
+
+
+Cluster 62
+    traditional -> 4.0
+    turkish -> 6.0
+    aroma -> 4.0
+    cheese -> 6.0
+AVG: 4.3333335
+Variance: 1.2472191
+
+
+Cluster 61
+    religious -> 14.0
+    religion -> 18.0
+AVG: 8.0
+Variance: 5.8022985
+
+
+Cluster 60
+    chapter -> 7.0
+    performance -> 5.0
+    work -> 7.0
+    talawa -> 10.0
+    company -> 5.0
+AVG: 6.0
+Variance: 2.0
+
+
+Cluster 23
+    adoption -> 7.0
+    impact -> 5.0
+    e-business -> 8.0
+AVG: 5.4
+Variance: 1.8547237
+
+
+Cluster 67
+    religious -> 12.0
+    agama-agama -> 6.0
+    practice -> 5.0
+    woman -> 7.0
+    terjadus -> 4.0
+    experience -> 9.0
+    participant -> 9.0
+    life -> 13.0
+    dan -> 6.0
+    islam -> 5.0
+    qualitative -> 4.0
+    understanding -> 4.0
+    pada -> 5.0
+    term -> 5.0
+    belief -> 11.0
+    indonesian -> 4.0
+    istilah -> 7.0
+    spirituality -> 35.0
+    indonesia -> 8.0
+    sample -> 4.0
+    everyday -> 5.0
+    religion -> 8.0
+    inus -> 4.0
+    spiritualita -> 6.0
+    mean -> 4.0
+    spiritual -> 36.0
+    yang -> 6.0
+    depression -> 7.0
+    bulgarian -> 4.0
+AVG: 7.0
+Variance: 7.1036286
+
+
+Cluster 22
+    heat -> 8.0
+    blockage -> 5.0
+    number -> 5.0
+    transfer -> 8.0
+    coefficient -> 7.0
+    rib -> 10.0
+AVG: 5.5833335
+Variance: 2.019007
+
+
+Cluster 66
+    offensive -> 6.0
+    theoretical -> 4.0
+    concept -> 8.0
+    group -> 4.0
+AVG: 4.6666665
+Variance: 1.7950549
+
+
+Cluster 21
+    small -> 5.0
+    factory -> 12.0
+    process -> 8.0
+    set-up -> 9.0
+    business -> 11.0
+    production -> 5.0
+    industry -> 5.0
+    system -> 7.0
+AVG: 6.076923
+Variance: 2.9472682
+
+
+Cluster 65
+    study -> 10.0
+    realist -> 9.0
+    idea -> 12.0
+    literary -> 10.0
+    prophet -> 14.0
+    renaissance -> 12.0
+    source -> 13.0
+    realism -> 14.0
+    stylistic -> 9.0
+    view -> 15.0
+    critic -> 14.0
+    similarity -> 10.0
+    modem -> 12.0
+    poet -> 80.0
+    text -> 16.0
+    tradition -> 9.0
+    different -> 9.0
+    poetry -> 38.0
+    image -> 53.0
+    poetic -> 21.0
+    socialist -> 14.0
+    sudan -> 10.0
+    sudanese -> 16.0
+    heritage -> 17.0
+    imagination -> 17.0
+    hoelderlin -> 37.0
+    genius -> 9.0
+    african -> 11.0
+    culture -> 9.0
+    conception -> 18.0
+    god -> 12.0
+    object -> 14.0
+AVG: 15.414634
+Variance: 13.622032
+
+
+Cluster 20
+    waste -> 6.0
+    factory -> 12.0
+    process -> 5.0
+    productivity -> 8.0
+    research -> 5.0
+    manufacturer -> 5.0
+AVG: 6.125
+Variance: 2.52178
+
+
+Cluster 64
+    art -> 15.0
+    color -> 10.0
+    student -> 9.0
+    work -> 8.0
+    history -> 8.0
+    life -> 13.0
+    ishikawa -> 15.0
+    taiwan -> 15.0
+    painting -> 29.0
+    style -> 8.0
+AVG: 9.944445
+Variance: 5.6712947
+
+
+Cluster 27
+    owner -> 14.0
+    business -> 78.0
+    rural -> 9.0
+    community -> 18.0
+    percent -> 19.0
+    entrepreneur -> 12.0
+    ranch -> 11.0
+    person -> 9.0
+    farm -> 13.0
+    group -> 22.0
+AVG: 17.461538
+Variance: 18.066608
+
+
+Cluster 26
+    replication -> 5.0
+    gene -> 5.0
+AVG: 3.5
+Variance: 0.8660254
+
+
+Cluster 25
+    average -> 12.0
+    engine -> 59.0
+    plant -> 44.0
+AVG: 20.375
+Variance: 18.39115
+
+
+Cluster 69
+    solid -> 6.0
+AVG: 4.0
+Variance: 1.4142135
+
+
+Cluster 24
+    standard -> 6.0
+    school -> 6.0
+    nutritional -> 4.0
+AVG: 4.4
+Variance: 1.3564659
+
+
+Cluster 68
+    production -> 59.0
+    release -> 26.0
+    use -> 21.0
+    emission -> 32.0
+    scenario -> 54.0
+    livestock -> 30.0
+    land -> 92.0
+    product -> 19.0
+    change -> 22.0
+    consumption -> 65.0
+    grassland -> 32.0
+    food -> 23.0
+    arable -> 28.0
+    meat -> 19.0
+    reduction -> 35.0
+AVG: 26.5
+Variance: 19.859604
+
+
+Cluster 29
+    country -> 4.0
+    investment -> 5.0
+    bit -> 7.0
+    us-china -> 4.0
+AVG: 4.142857
+Variance: 1.3552618
+
+
+Cluster 28
+    development -> 3.0
+    rm-odp -> 6.0
+    mobile -> 3.0
+    communication -> 3.0
+    experience -> 3.0
+AVG: 3.6
+Variance: 1.1999999
+
+
+Cluster 70
+    study -> 6.0
+    effort -> 7.0
+    local -> 7.0
+    society -> 27.0
+    government -> 6.0
+    christian -> 8.0
+    civil -> 27.0
+    peace -> 24.0
+    conflict -> 11.0
+    group -> 8.0
+    mindanao -> 8.0
+AVG: 9.6470585
+Variance: 7.828614
+
+
