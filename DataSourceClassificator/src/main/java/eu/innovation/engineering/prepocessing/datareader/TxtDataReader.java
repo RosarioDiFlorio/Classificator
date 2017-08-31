@@ -26,7 +26,7 @@ public class TxtDataReader implements DataReader {
    */
   @Override
   public Set<String> getIds() throws IOException {
-    FileReader reader = new FileReader(fileToRead+".txt");
+    FileReader reader = new FileReader(fileToRead);
     BufferedReader bufferedReader = new BufferedReader(reader);
     String line = bufferedReader.readLine();
     Set<String> idPapers = new HashSet<>();
@@ -49,7 +49,7 @@ public class TxtDataReader implements DataReader {
   @Override
   public Map<String, HashMap<String, String>> categoriesWithIds() throws IOException {
 
-    FileReader reader = new FileReader(fileToRead+".txt");
+    FileReader reader = new FileReader(fileToRead);
 
     BufferedReader bufferedReader = new BufferedReader(reader);
     String line = bufferedReader.readLine();
@@ -90,7 +90,7 @@ public class TxtDataReader implements DataReader {
   }
 
   public void setFileToRead(String fileToRead) {
-    this.fileToRead = PathConfigurator.applicationFileFolder + fileToRead + ".txt";
+    this.fileToRead = PathConfigurator.applicationFileFolder + fileToRead;
   }
 
 }

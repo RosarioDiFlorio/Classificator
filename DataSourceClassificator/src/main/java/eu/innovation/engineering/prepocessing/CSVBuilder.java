@@ -20,6 +20,11 @@ import eu.innovation.engineering.util.featurextractor.Features;
 import eu.innovation.engineering.util.featurextractor.IdAndTarget;
 import eu.innovation.engineering.util.preprocessing.Source;
 
+/**
+ * crea i file cvs di train e test. Si deve specificare con la variabile testWithoutLabel del metodo buildCSV se il dataset di test ha labels o no
+ * @author lomasto
+ *
+ */
 public class CSVBuilder {
 
   private static ObjectMapper mapper = new ObjectMapper();
@@ -38,12 +43,12 @@ public class CSVBuilder {
     buildCSV();
   }
   
-  
-  
-  
+
   public static void buildCSV() throws IOException{
+    boolean testWithoutLabel = true;
+    
     ClusteringKMeans clusteringDictionaries = new ClusteringKMeans();
-    HashMap<String, Dictionary> dictionaries = clusteringDictionaries.clusterWithDatasourceAsItems(PathConfigurator.dictionariesFolder+"dataset2.json", Configurator.numFeatures);
+    HashMap<String, Dictionary> dictionaries = clusteringDictionaries.clusterWithDatasourceAsItems(PathConfigurator.dictionariesFolder+"dictionariesSource.json", Configurator.numFeatures);
 
     FeatureExtractor featureExtractor = new FeatureExtractor();
     HashSet<String> categories = (HashSet<String>) Configurator.getCategories();
@@ -76,11 +81,11 @@ public class CSVBuilder {
     fileWriterpaperForCategory.close();
 
     DatasetBuilder pbTesting= new DatasetBuilder();
-    pbTesting.parseDatasetFromJson(PathConfigurator.trainingAndTestFolder+"test.json");
+    pbTesting.parseDatasetFromJson(PathConfigurator.trainingAndTestFolder+"datasetWithoutLabel.json");
     ArrayList<Source> testSet = pbTesting.getSourceList();
     ///////////////////////////////////////////////
-
-
+    
+   
     // CREO LE MATRICI DI FEATURES E DI TARGET PER I DATASET DI TRAINING E TEST
     HashMap<String, ArrayList<Features>> featuresPapersTraining = featureExtractor.createFeaturesNormalizedInputDB(trainingSet,dictionaries);
     HashMap<String, ArrayList<Features>> targetsPapersTraining = featureExtractor.createTargetsInputDB(trainingSet, categories, dictionaries);
@@ -94,7 +99,10 @@ public class CSVBuilder {
     mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.dictionariesFolder+"dictionaryForTraining.json"), featuresPapersTestWithTarget );
 
     createDatasetPython(featuresPapersTrainingWithTarget,categories,"train");
-    createDatasetPython(featuresPapersTestWithTarget,categories,"test"); 
+    if(testWithoutLabel)
+      createDatasetPythonWithoutCategories(featuresPapersTest,"test"); 
+    else
+      createDatasetPython(featuresPapersTestWithTarget,categories,"test");
   }
 
   //METODO CHE RESITUISCE UN HASHMAP DI CATEGORIA, PER OGNI CATEGORIA LA LISTA DI PAPER CHE APPARTENGONO
@@ -141,7 +149,32 @@ public class CSVBuilder {
     return toReturn;
   }
 
+  private static void createDatasetPythonWithoutCategories(HashMap<String, ArrayList<Features>> featuresPapers, String fileName) throws IOException {
+    // TODO Auto-generated method stub
+    //Per ogni categoria creo una folder
+    String firstLine="id";
+    FileWriter writerCSV = new FileWriter(PathConfigurator.pyCSVFolder+fileName+".csv");
+    for(int i=0;i<Configurator.numFeatures;i++)
+      firstLine+=",F"+i;
 
+    firstLine+="\n";
+
+    writerCSV.write(firstLine);
+    String toWrite="";
+    for(String id : featuresPapers.keySet()){
+      toWrite+=id;
+      for(Features f : featuresPapers.get(id)){
+        toWrite+=","+f.getScore();
+      }
+      toWrite+="\n";
+      writerCSV.write(toWrite);
+      toWrite="";
+    }
+
+    writerCSV.flush();
+    writerCSV.close();
+
+  }
   /**
    * 
    * @param featuresPapersTrainingWithTarget

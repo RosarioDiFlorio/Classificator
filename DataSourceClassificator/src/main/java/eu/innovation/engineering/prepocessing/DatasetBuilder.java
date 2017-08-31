@@ -51,8 +51,9 @@ public  class DatasetBuilder {
   }
 
 
-  public void buildDataset() throws IOException{
-    dataReader = new TxtDataReader(this.fileName);
+  public String  buildDataset(String fileName) throws IOException{
+    
+    dataReader = new TxtDataReader(fileName);
     List<String> listIdPaper = new ArrayList<>(dataReader.getIds());
     
     listSources.addAll(solrClient.getSourcesFromSolr(listIdPaper,Paper.class));
@@ -60,9 +61,12 @@ public  class DatasetBuilder {
     listSources = (ArrayList<Source>) addCategories(listSources);
     listSources = (ArrayList<Source>) addKeywords(listSources);
 
-    this.mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.datasetFolder+"backup/"+fileName+"_complete.json"), this.listSources);    
+    String simpleName = fileName.replace(".txt", "");
+    this.mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.datasetFolder+"backup/"+simpleName+"_complete.json"), this.listSources);    
     listSources.stream().forEach(p->p.setDescription(null));
-    this.mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.datasetFolder+"TrainingAndTest/"+fileName+".json"), this.listSources);
+    this.mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.datasetFolder+"TrainingAndTest/"+simpleName+".json"), this.listSources);
+  
+    return PathConfigurator.datasetFolder+"TrainingAndTest/"+simpleName+".json";
   }
 
 
@@ -88,7 +92,7 @@ public  class DatasetBuilder {
    * @throws JsonParseException 
    *
    */
-  public void parseDatasetFromJson(String filename) throws JsonParseException, JsonMappingException, IOException{
+  public ArrayList<Source> parseDatasetFromJson(String filename) throws JsonParseException, JsonMappingException, IOException{
     System.out.println("Read dataset: "+filename);
     ObjectMapper mapper = new ObjectMapper();
 
@@ -120,6 +124,8 @@ public  class DatasetBuilder {
         }
       }
     }
+    
+    return listSources;
   }
   
   
@@ -194,14 +200,12 @@ public  class DatasetBuilder {
    */
   public static void main(String[] args) throws IOException{
     DatasetBuilder db = new DatasetBuilder();
-    db.setFileName("test");
+    
     //KeywordExtractor keywordExtractor = new MauiExtractor("../KeywordExtractor/", "none", "newInnenModel");
     KeywordExtractor keywordExtractor = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
     db.setKeywordExtractor(keywordExtractor);
-    db.buildDataset();
-    
-    db.setFileName("train");
-    db.buildDataset();
+    db.buildDataset("test.txt");    
+    db.buildDataset("train.txt");
   }
 
 

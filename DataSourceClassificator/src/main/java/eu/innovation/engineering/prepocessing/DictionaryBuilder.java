@@ -12,26 +12,20 @@ import eu.innovation.engineering.prepocessing.featurextractor.Dictionary;
 public class DictionaryBuilder {
 
 
+ public static String buildJson(String fileName) throws IOException{
+   DatasetBuilder db = new DatasetBuilder();
 
+   KeywordExtractor ke = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
+   db.setKeywordExtractor(ke);
 
-  public static void main(String[] args) throws IOException{
-    DatasetBuilder db = new DatasetBuilder();
-    String fileName = "train";
-    KeywordExtractor ke = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
+   return db.buildDataset(fileName);
+ }
 
-    db.setKeywordExtractor(ke);
-    db.setFileName(fileName);
-    db.buildDataset();
+  public static HashMap<String, Dictionary> build(String JsonPath,int kMeans) throws IOException{
+   
     ClusteringKMeans clusteringDictionaries = new ClusteringKMeans();
+    return clusteringDictionaries.clusterWithDatasourceAsItems(JsonPath,kMeans);
 
-    for(int i = 10; i<=180 ;i+=10){
-      HashMap<String, Dictionary> dictionaries = clusteringDictionaries.clusterWithDatasourceAsItems(fileName,i);
-      int somma=0;
-      for(String key : dictionaries.keySet()){
-        somma+=dictionaries.get(key).getVariance();
-      }
-      System.out.println("Varianza con cut: "+i+" vale: "+somma/i);
-    }
   }
 
 }
