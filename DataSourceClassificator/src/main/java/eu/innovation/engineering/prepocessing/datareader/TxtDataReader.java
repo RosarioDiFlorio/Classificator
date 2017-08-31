@@ -17,8 +17,8 @@ public class TxtDataReader implements DataReader {
   private static String fileToRead = "test";
 
 
-  public TxtDataReader(String filename) {
-    this.fileToRead = PathConfigurator.applicationFileFolder + filename;
+  public TxtDataReader(String filename, String path) {
+    this.fileToRead = path + filename;
   }
 
   /**
