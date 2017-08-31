@@ -41,7 +41,7 @@ public class Start {
     DictionaryBuilder dictionaryBuilder = new DictionaryBuilder();
     String jsonPath=PathConfigurator.dictionariesFolder;
     if(readDictionaryFileTXT) // crea il file json da usare per creare i dizionari con il clustering kmeans
-      dictionaryBuilder.buildJson("dictionariesSource.txt",jsonPath);
+      dictionaryBuilder.initJsonDataset("dictionariesSource.txt",jsonPath);
 
     jsonPath = jsonPath+"dictionariesSource.json";
     for(int i=10;i<=100;i+=10){
