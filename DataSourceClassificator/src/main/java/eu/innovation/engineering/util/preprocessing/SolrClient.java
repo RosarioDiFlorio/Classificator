@@ -22,10 +22,31 @@ import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 
 public class SolrClient {
-  
+
   public static void main(String[] args) throws Exception{
-    requestNPaper(200);    
+    //    requestNPaper(200);
+    SolrClient cl = new SolrClient();
+    System.out.println(cl.checkKeywords("7832616_150"));
+
   }
+
+  public List<String> checkKeywords(String id) throws Exception{
+    List<String> toReturn = new ArrayList<>();
+    toReturn.add(id);
+    List<Source> sources = getSourcesFromSolr(toReturn, Paper.class);
+
+    List<String> texts = new ArrayList<>();
+    for(Source s:sources)
+      texts.addAll(s.getTexts());
+
+
+    toReturn.remove(id);
+    KeywordExtractor innenK = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
+    innenK.extractKeywordsFromText(texts, 4).stream().map(Keyword::getText).forEach(toReturn::add);
+
+    return toReturn;
+  }
+
 
   public static void requestNPaper(int numSourceRequest) throws Exception{
     String cursorMark="*";
@@ -75,9 +96,9 @@ public class SolrClient {
 
     System.out.println(count);
   }
-  
-  
-  public List<Source> getSourcesFromSolr(List<String> idPapers, Class c) throws IOException{
+
+
+  public static List<Source> getSourcesFromSolr(List<String> idPapers, Class c) throws IOException{
 
     List<Source> toReturn = new ArrayList<Source>();
     Gson gson = new Gson();
