@@ -24,11 +24,16 @@ import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 public class SolrClient {
 
   public static void main(String[] args) throws Exception{
+
     //    requestNPaper(200);
     SolrClient cl = new SolrClient();
     System.out.println(cl.checkKeywords("7832616_150"));
 
+
+    requestNPaper(200,200);    
+
   }
+
 
   public List<String> checkKeywords(String id) throws Exception{
     List<String> toReturn = new ArrayList<>();
@@ -48,7 +53,9 @@ public class SolrClient {
   }
 
 
-  public static void requestNPaper(int numSourceRequest) throws Exception{
+
+  public static void requestNPaper(int firstPaperToJump,int numSourceRequest) throws Exception{
+
     String cursorMark="*";
     String url = "http://192.168.200.81:8080/solr4/technical_papers/select?q=*%3A*&sort=id+asc&fl=id%2Cdc_title%2Cdc_description&wt=json&indent=true&cursorMark=";
     KeywordExtractor extractorInnen = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
@@ -59,6 +66,16 @@ public class SolrClient {
     //creo il file 
     int count = 0;
     ArrayList<Source> sourceList = new ArrayList<Source>();
+    
+    //Salto i primi paper
+    int paperJumped =0;
+    while(paperJumped<firstPaperToJump){
+      StringBuffer response = requestSOLR(url+cursorMark);
+      paperJumped+=10;
+      cursorMark = parserJson.parse(response.toString()).getAsJsonObject().get("nextCursorMark").getAsString();
+    }
+    
+    //prendo i paper
     while (numSourceToSave<numSourceRequest){
       numSourceToSave+=10;
       StringBuffer response = requestSOLR(url+cursorMark);
@@ -92,7 +109,7 @@ public class SolrClient {
 
     }
     ObjectMapper mapper = new ObjectMapper();
-    mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.trainingAndTestFolder+"dataset.json"), sourceList);
+    mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.trainingAndTestFolder+"dataSourcesWithoutCategory.json"), sourceList);
 
     System.out.println(count);
   }

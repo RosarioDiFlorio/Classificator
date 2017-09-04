@@ -28,7 +28,7 @@ public class Start {
     CSVBuilder.buildCSV(PathConfigurator.trainingAndTestFolder+"trainAndTestTogether.json", dictionaries, true);
     
     //Test
-    CSVBuilder.buildCSV(PathConfigurator.trainingAndTestFolder+"datasetWithoutLabel.json", dictionaries, false);
+    CSVBuilder.buildCSV(PathConfigurator.trainingAndTestFolder+"dataSourcesWithoutCategory.json", dictionaries, false);
     
     
   }
