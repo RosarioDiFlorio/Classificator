@@ -80,7 +80,7 @@ public class InnenExtractor implements KeywordExtractor {
       }
     });
 
-    System.out.println(toReturn.size());
+    //System.out.println(toReturn.size());
     return toReturn;
   }
 
