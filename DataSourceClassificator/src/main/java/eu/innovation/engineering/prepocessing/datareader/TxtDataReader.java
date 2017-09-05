@@ -1,21 +1,37 @@
 package eu.innovation.engineering.prepocessing.datareader;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import eu.innovation.engineering.config.Configurator;
 import eu.innovation.engineering.config.PathConfigurator;
+import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
+import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 import eu.innovation.engineering.prepocessing.interfaces.DataReader;
+import eu.innovation.engineering.util.preprocessing.Paper;
+import eu.innovation.engineering.util.preprocessing.SolrClient;
+import eu.innovation.engineering.util.preprocessing.Source;
 
 public class TxtDataReader implements DataReader {
 
   private static String fileToRead = "test";
 
+  public static void main(String[] args) throws Exception{
+    TxtDataReader reader = new TxtDataReader("trainingAndTestTogether.txt", PathConfigurator.trainingAndTestFolder);
+    for(int i = 0; i< Configurator.Categories.values().length;i++){
+      reader.checkCategory(Configurator.Categories.values()[i].name(),false);
+    }
+  }
 
   public TxtDataReader(String filename, String path) {
     this.fileToRead = path + filename;
@@ -41,6 +57,31 @@ public class TxtDataReader implements DataReader {
     return idPapers;
   }
 
+  public void checkCategory(String category,boolean withTexts) throws Exception{
+    KeywordExtractor kex = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
+    SolrClient solr = new SolrClient();
+
+    List<String> ids = new ArrayList<>();
+    ids.addAll(categoriesWithIds().get("/"+category.replace("_", " ")).keySet());
+    List<Source> sources = solr.getSourcesFromSolr(ids, Paper.class);      
+
+    PrintWriter p = new PrintWriter(new File(PathConfigurator.applicationFileFolder+"log/"+category+"ToCheck.txt"));
+    for(Source src: sources){
+      p.println(src.getId()+" - "+category);
+      p.println(src.getTitle());
+      p.println(kex.extractKeywordsFromText(src.getTexts(), 10).stream().map(k->k.getText()).collect(Collectors.toList())+"\n");
+      
+      if(withTexts)
+        src.getTexts().stream().forEach(p::println);
+      p.println("--------------------------------------\n");
+      p.flush();
+    }
+    p.close();
+
+
+
+
+  }
 
   /**
    * This method create an HashMap contained as key the category 
@@ -76,9 +117,9 @@ public class TxtDataReader implements DataReader {
     }
     //SALVO ANCHE L?ULTIMA CATEGORIA
     categoryPapers.put(currentCategory, paperIntoCurrentCategory);
-    
-   
-    
+
+
+
     for(String category : categoryPapers.keySet()){
       System.out.println(category+" "+categoryPapers.get(category).size());
     }

@@ -15,6 +15,7 @@ import java.util.stream.Collectors;
 
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
+import eu.innovation.engineering.config.Configurator;
 import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
@@ -23,12 +24,17 @@ public class CSVReader {
   private static final int numKey = 10;
 
   public static void main(String[] args) throws Exception{
-    float uThreshold = (float) 0.5;
-    float lThreshold = 0;
-    readResultClassifier(PathConfigurator.applicationFileFolder+"results2.csv",lThreshold,uThreshold);
+    float uThreshold = (float) 0.8;
+    float lThreshold = (float) 0.7;
+    String category = Configurator.Categories.religion_and_spirituality.name();
+//    category = "none";
+    int count = readResultClassifier(PathConfigurator.applicationFileFolder+"results.csv",lThreshold,uThreshold,category,true);
+    System.out.println("numero di source "+count);
   }
 
-  public static void readResultClassifier(String csvFile, float lowThreshold,float upperThreshold) throws Exception{
+
+
+  public static int readResultClassifier(String csvFile, float lowThreshold,float upperThreshold,String category,boolean withKeys) throws Exception{
     KeywordExtractor kex = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
     Map<String, List<String>> dataMap = read(csvFile);
 
@@ -36,36 +42,55 @@ public class CSVReader {
     ids.addAll(dataMap.keySet());
 
     SolrClient solr = new SolrClient();
-    PrintWriter p = new PrintWriter(new File(PathConfigurator.applicationFileFolder+"filetocheck.txt"));
-
+    PrintWriter p = new PrintWriter(new File(PathConfigurator.applicationFileFolder+"filetocheck"+category+".txt"));
+    int count = 0;
+    String idToInsert= "";
     for(String id: dataMap.keySet()){
       float probs = 0;
       try{
-      probs = Float.parseFloat(dataMap.get(id).get(0));
+        probs = Float.parseFloat(dataMap.get(id).get(0));
       }catch (Exception e) {
         continue;
       }
-      
-      if(probs <= upperThreshold && probs >= lowThreshold){
-        System.out.println(probs);
+
+      if(probs <= upperThreshold && probs >= lowThreshold ){
+        //count++;
+        //System.out.println(probs);
         List<String> tmp  = new ArrayList<>();
         tmp.add(id);
 
-        List<Source> sources = solr.getSourcesFromSolr(tmp, Paper.class);
-        
-        
-        for(Source s: sources){
-          p.println(s.getId()+" - "+dataMap.get(s.getId()).get(0));
-          p.println(kex.extractKeywordsFromText(s.getTexts(), numKey).stream().map(Keyword::getText).collect(Collectors.toList())+"\n");
-          p.println(s.getTitle());
-          p.println(s.getTexts().get(1));
-          p.println("-------------------------------------\n");
-        }
-        p.flush();
-      }   
+        if(dataMap.get(id).get(1).contains(category) || category.equals("none")){
+          List<Source> sources = solr.getSourcesFromSolr(tmp, Paper.class);
+          
+
+          for(Source s: sources){
+            if(!dataMap.get(s.getId()).get(1).contains(category) && !category.equals("none"))
+              continue;
+            else{
+              count++;
+              System.out.println(count);
+
+              
+              idToInsert += s.getId()+" 1\n";
+              p.println(s.getId()+" - "+dataMap.get(s.getId()).get(0)+" - "+dataMap.get(s.getId()).get(1));
+              if(withKeys)
+                p.println(kex.extractKeywordsFromText(s.getTexts(), numKey).stream().map(Keyword::getText).collect(Collectors.toList())+"\n");
+              p.println(s.getTitle());
+              p.println(s.getTexts().get(1));
+              p.println("-------------------------------------\n");
+            }         
+          }
+          p.flush();
+        }   
+      }
     }
+    p.println("\n"+idToInsert);
+    p.flush();
     p.close();
+    return count;
   }
+
+
 
   public static Map<String,List<String>> read(String csvFile) {
 

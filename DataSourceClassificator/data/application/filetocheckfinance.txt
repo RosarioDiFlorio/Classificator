@@ -1,0 +1,42 @@
+10009166_234 - 0.875537441098 - finance
+[firm, financial, entry, exit, model, shock, rate, output]
+
+Firm Entry and Exit with Financial Frictions
+This paper considers a model of firm dynamics to study the quantitative importance of financial frictions for the entry and exit of firms over the business cycle.  Firms face a working capital constraint in that they must pay wages and choose labor in advance.  The firm finances wages with a defaultable one-period non-contingent bond.  Financial frictions then introduce an external finance premium into the firm's cost of borrowing, which constrains the firm's demand for labor and influences the firm's entry and exit decisions through its effect on future profits.  I then measure a financial shock, which contributes to the external finance premium, from corporate bond spreads and feed it back into the model.  Under reasonable parameters, the model predicts that entry and exit rates are almost twice as sensitive to financial shocks than output and employment.  Moreover, historical financial shocks account for a third of cyclical movements in output and hours in the United States between 1953 and 2010.  They are an even stronger explanation for the first year of the Great Recession, accounting for more than half of the initial decline in output and hours, a third of the decline in entry rates and a fifth of the increase in exit rates.
+-------------------------------------
+
+10003735_234 - 0.749773309398 - finance
+[market, corporate, control, stakeholder, civil, regulatory, pressure, interest]
+
+An Autopoietic Investigation of How the Market for Corporate Control Protects Stakeholder Interests
+Although people may accept that a market for corporate control is necessary, the further claim that it protects stakeholder interests is more controversial. Some of this controversy arises from the implication that the market for corporate control must incorporate civil society concerns, to the degree that it then acts as a civil regulatory pressure to protect stakeholder interests. The justification for why this may indeed be the case draws upon autopoietic theory and incorporates three main arguments. These are the market for corporate control, to a degree, already protects stakeholder interests, the market for corporate control is responsive to civil regulatory pressure, and civil regulatory pressure is an inevitable form of regulatory oversight for many market transactions in developed pluralistic societies.
+-------------------------------------
+
+10011846_234 - 0.839493256597 - finance
+[income, finance, ownership, innovation, social]
+
+Escaping the tyranny of earned income? The failure of finance as social innovation
+Before the crisis which started in 2007, the mass marketing of retail financial products in high income countries since the early 1980s was understood through rhetorics about individual emancipation as the ‘democratisation of finance’ and ‘ownership society’, where supporters and critics debated in a shared framework. From a post 2007 perspective, it is time to revalue these developments. This paper changes the frame around the debate and constructs theextension of credit and ownership as a major social innovation led by profit seeking retail banks. It then presents empirical evidence from the United States, which suggests that the extension of credit and asset ownership in an unequal society is self defeating because it does not abolish the tyranny of earned income and, indeed, it tightens the vice insofar as low income individuals and households accumulate debt but not assets. The implication is that finance as privately led social innovation has failed and it is time for fundamental rethinking of much that has been taken for granted.
+-------------------------------------
+
+10011849_234 - 0.792520651794 - finance
+[equity, private]
+
+Losing the battles but winning the war: the case of UK Private Equity Industry and mediated scandal of summer 2007
+Private equity was heavily criticised by the media and trade unions during the Spring/Summer 2007, when the Treasury summoned a Selected Committee to quiz its top executives about the business’ practices. Despite losing the public argument, the Private Equity industry did not suffer any consequences, escaping with no significant policy changes affecting its modus operandi. Its remarkable lack of sophistication in gathering allies and dealing with politiciansand journalists alike diverges from part of the literature on business representation and its assumption that results are directly proportional to lobbying/public relations efforts, be it collectively or individually organised. The argument put forward here is that Private Equity’s victory was a consequence of its successful mobilization of existing ideological and structural conditions, leaving to the government the task of justifying any regulatory or tax changes.
+-------------------------------------
+
+10011845_234 - 0.721249864631 - finance
+[wealth, subprime, lending, accumulation, single, woman, di, debt]
+
+Home is Where The Hardship is. Gender and Wealth (Dis)Accumulation in the Subprime Boom
+Subprime lending has become the penultimate case study for critics of the recent period of financialization, or neo-liberalism more broadly, because it exposes the most profligate tendencies of predatory lending and the pernicious social costs visited on society's most vulnerable groups. This article builds on the social stratification and wealth accumulation literature. We assess how mounting debt levels and crippling costs of servicing these debts compared to relatively flat income growth for female-headed households have resulted in wealth (dis)accumulation. We use the Survey of Consumer Finances (SCF) to analyze how single female-headed households, and in particular how African American single mothers were affected by the subprime boom in different, arguably more pernicious, ways. There is already considerable evidence showing that subprime lending was disproportionally sold to women, particularly minority women. Focusing on single mothers reveals important gender and racial dimensions of the lending techniques, but it also shows how marginalized families increasingly relied on housing wealth (equity) to adjust to shrinking purchasing power. Thus, contrary to the lofty expectations of the ownership society, the high mortgage debts of many low-income women suggest they own a lesser share of their homes – (dis)accumulation of wealth – than at any previous time.
+-------------------------------------
+
+
+10009166_234 1
+10003735_234 1
+10011846_234 1
+10011849_234 1
+10011845_234 1
+

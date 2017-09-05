@@ -1,0 +1,30 @@
+10005070_234 - 0.720951918012 - education
+[university, education, conceptualisation, quality, table, league, higher]
+
+Rank and File: managing individual performance in university research
+League tables are a common way for various competitive sports to judge team quality and identify winners and are also making increasingly frequent appearances in higher education globally. In this paper, we argue that this compilation of league tables is a product of the global hegemony of market-driven systems of higher education in which universities compete with each other for declining resources and students-as-customers. We explore why and how such exercises shape and define conceptualisations of the relative strength of organisations, and what the consequences of this are likely to be. Our analysis is grounded in a conceptualisation of universities, particularly in the UK, as marketised, neo-liberal institutions for which rankings are essential to organisational transformation. We provide empirical data to support our argument via an exploration of the UK Association of Business Schools' Academic Journal Quality Guide.
+-------------------------------------
+
+10001968_234 - 0.73312620413 - education
+[non-stationary, diversity, learning, concept, ensemble]
+
+Theoretical and Empirical Analysis of Diversity in Non-Stationary Learning
+In non-stationary learning, we require a predictive model to learn over time, adapting to changes in the concept if necessary. A major concern in any algorithm for non-stationary learning is its rate of adaptation to new concepts. When tackling such problems with ensembles, the concept of \emph{diversity} appears to be of significance. In this paper, we discuss how we expect diversity to impact the rate of adaptation in non-stationary ensemble learning. We then analyse the relation between voting margins and a popular measure of diversity, KW variance, and use the similarities between them to draw some useful conclusions regarding ensemble adaptivity.
+-------------------------------------
+
+100099_102 - 0.797579881119 - education
+[education, discipline, design, disciplinary]
+
+Controlling the Discipline: Education, Intention, Assumption, Prejudice
+<p>This paper explores, from a philosophical and speculative rather than empirical perspective, and within the design disciplines in general, the complex relationships, between practice and education, and their respective assumptions and prejudices. The paper begins by characterising design education from three perspectives: first, education 'about' the discipline, in the sense of providing information that explicates the general disciplinary ‘content’ and focus; second, education 'for' the discipline, which usually accords to notions of training; and third, education as the ‘instilling’ of discipline itself, the elucidation and establishment of rigour and control. It then explores the nature of disciplinary 'for practice' education and sets out the extensive range of presumptions which often underlies the relationship between education and practice. Examining the current relationship between disciplinary education and tertiary studies, the paper looks at critical inquiry and disciplinary research, before focusing on competing institutional values and their operational and material consequences.  The paper concludes with the example of architectural education's response to the demise of modernism, and at the lessons that might be learned from such educational change.
+</p>
+<p>
+<strong>Keywords:</strong> <br />
+design education; design philosophy; ideology; training; disciplinarity</p>
+-------------------------------------
+
+
+10005070_234 1
+10001968_234 1
+100099_102 1
+
