@@ -119,7 +119,7 @@ public class SolrClient {
   }
 
 
-  public static List<Source> getSourcesFromSolr(List<String> idPapers, Class c) throws IOException{
+  public List<Source> getSourcesFromSolr(List<String> idPapers, Class c) throws IOException{
 
     List<Source> toReturn = new ArrayList<Source>();
     Gson gson = new Gson();

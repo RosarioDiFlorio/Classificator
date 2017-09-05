@@ -1,0 +1,481 @@
+10003231_234 - 0.334918020429
+[action, selection, salience]
+
+The role of intra-thalamic and thalamocortical circuits in action selection.
+We previously proposed that the basal ganglia (BG) play a crucial role in action selection. Quantitative analysis and simulation of a computational model of the intrinsic BG demonstrated that its output was consistent with this proposition. Here we build on that model by embedding it into a wider circuit containing the motor thalamocortical loop and thalamic reticular nucleus (TRN). Simulation of this extended model showed that the additions gave five main results which are desirable in a selection/switching mechanism. First, low salience actions (i.e. those with low urgency) could be selected. Second, the range of salience values over which actions could be switched between was increased. Third, the contrast between the selected and non-selected actions was enhanced via improved differentiation of outputs from the BG. Fourth, transient increases in the salience of a non-selected action were prevented from interrupting the ongoing action, unless the transient was of sufficient magnitude. Finally, the selection of the ongoing action persisted when a new closely matched salience action became active. The first result was facilitated by the thalamocortical loop; the rest were dependent on the presence of the TRN. Thus, we conclude that the results are consistent with these structures having clearly defined functions in action selection.
+-------------------------------------
+
+100022_102 - 0.190366783224
+[material, selection, process, design, group, architect, consideration]
+
+Material Considerations in Architectural Design:  A Study of the Aspects Identified by Architects for Selecting Materials
+<p>Material selection in architecture is not only about choosing the strongest, cheapest, or most obvious materials available. Architects also choose warm, formal, functional, or local materials for buildings. And the material options are not limited by only these considerations. The material selection process is a complex process that is influenced and determined by numerous preconditions, decisions and considerations. The current material selection tools, however, focus mainly on the technical aspects of materials. In order to make well-considered and justifiable material choices, architects have a need for information on the whole spectrum of aspects considered during the design and selection process. </p>
+<p>
+Earlier work presented a framework, based on a literature study and the analysis of in-depth interviews, in which the different attributes of materials that contribute to a design project were identified and organized. To refine this framework and make it available for architects during the material selection process, a group of architects was selected and assembled into a focus group. </p>
+<p>
+This study presents how the focus group identified, classified and commented on the considerations that are made by architects while selecting materials for a project. The evaluation of the collected data, and the discussion within the group, permitted the formulation of comments and resulted in a revised framework of material considerations, useful during the design and selection process of a material. Material properties (1), Experience (2), Manufacturing process (3), and Context (4) were identified as the different elements that are related to the material selection process. The four groups are presented here in detail.
+</p>
+<p>
+<strong>Keywords:</strong> <br />
+Material Selection; Design Aspects; Architectural Experience; Material Attributes; Focus Group; Design Process</p>
+-------------------------------------
+
+10001947_234 - 0.373478364459
+[temporary, staffing]
+
+National Varieties of Temporary Staffing: an Introduction to Three Case Studies
+Europe accounted for 49 percent of total worldwide sales in temporary staffing in 2007 (€114 billion), making it one of the most significant markets for the temporary staffing industry (CIETT, 2009a: 6). This Working Brief outlines some of the key characteristics of three European countries which will be subject to detailed investigation in a current European crossnational research project exploring the role of temporary staffing agencies in political-economic systems which exhibit contrasting institutional environments.
+-------------------------------------
+
+10002302_234 - 0.0851256471097
+[soil, bhp, index, bay, organic, sediment, potential, sub-arctic, transect, arctic]
+
+Soil organic matter transport along an sub-Arctic river–sea transect
+Bacteriohopanepolyols (BHPs) and glycerol dialkyl glycerol tetraethers (GDGTs) have potential as soil-tracing biomarkers for the extensive shelves of the Arctic Ocean. In this work these biomarkers were analysed in surface sediments along a well characterised sub-Arctic transect in the northernmost Baltic Sea from the Kalix River to the central Bothnian Bay to assess their environmental behaviour and potential for tracing the contribution of soil in this type of system. There was a high BHP diversity and enhanced total BHP concentration in the estuarine sediments, whereas a much less diverse pattern could be observed in the open bay with lower total BHP concentration. In addition, both soil marker BHPs (adenosylhopanes) and branched GDGTs were substantially more abundant in the estuarine than the open bay sediments. The R soil ′ index, based on the Rsoil index minus the contribution from the methylated soil marker BHPs, is suggested as a new approach for tracing soil derived organic matter (OM) in the (sub)-Arctic region. The index decreased along the transect in an off-river direction, correlating strongly with both the branched and isoprenoid tetraether (BIT) index and the stable carbon isotopic composition of the sedimentary organic carbon. These field results indicate that both the R soil ′ and the BIT indices have potential for tracing soil derived OM in sub-Arctic to Arctic waters.
+-------------------------------------
+
+10003238_234 - 0.399634499287
+[guidance, dental, equipment]
+
+Guidance on the Safe Use of Dental Cone Beam CT (Computed Tomography) Equipment.
+The aim of this publication was to provide definitive guidance to enable all persons involved with dental CBCT equipment to work with it safely and in accordance with UK radiation protection legislation.
+-------------------------------------
+
+10003459_234 - 0.464456689798
+[workflow, motif, scientific, analysis]
+
+Common Motifs in Scientific Workflows: An Empirical Analysis
+While workflow technology has gained momentum in the last decade as a means for specifying and enacting compu- tational experiments in modern science, reusing and repurposing existing workflows to build new scientific experiments is still a daunting task. This is partly due to the difficulty that scientists experience when attempting to understand existing workflows, which contain several data preparation and adaptation steps in addition to the scientifically significant analysis steps. One way to tackle the understandability problem is through providing abstractions that give a high-level view of activities undertaken within workflows. As a first step towards abstractions, we report in this paper on the results of a manual analysis performed over a set of real-world scientific workflows from Taverna and Wings systems. Our analysis has resulted in a set of scientific workflow motifs that outline i) the kinds of data intensive activities that are observed in workflows (data oriented motifs), and ii) the different manners in which activities are implemented within workflows (workflow oriented motifs). These motifs can be useful to inform workflow designers on the good and bad practices for workflow development, to inform the design of automated tools for the generation of workflow abstractions, etc.
+-------------------------------------
+
+10001940_234 - 0.128653083441
+[empowerment, instrument, condition, patient, long-term, measure, care, development, primary]
+
+Patient empowerment in long-term conditions: development and validation of a new measure
+BackgroundPatient empowerment is viewed as a priority by policy makers, patients and practitioners worldwide. Although there are a number of measures available, none have been developed specifically for patients in the UK with long-term conditions. It is the aim of this study to report the development and preliminary validation of an empowerment instrument for patients with long-term conditions in primary care.MethodsThe study involved three methods. Firstly, a systematic review was conducted to identify existing empowerment instruments, and to describe, compare and appraise their content and quality. The results supported the need for a new instrument. Item content of existing instruments helped support development of the new instrument. Secondly, empowerment was explored in patients with long-term conditions and primary care practitioners using qualitative methods, to explore its meaning and the factors that support or hinder empowerment. This led to the development of a conceptual model to support instrument development. Thirdly, a new instrument for measuring empowerment in patients with long-term conditions in primary care was developed. A cross-sectional survey of patients was conducted to collect preliminary data on acceptability, reliability and validity, using pre-specified hypotheses based on existing theoretical and empirical work.ResultsNine instruments meeting review inclusion criteria were identified. Only one instrument was developed to measure empowerment in long-term conditions in the context of primary care, and that was judged to be insufficient in terms of content and purpose. Five dimensions (‘identity’, ‘knowledge and understanding’, ‘personal control’, ‘personal decision-making’, and ‘enabling other patients’) of empowerment were identified through published literature and the qualitative work and incorporated into a preliminary version of the new instrument. A postal survey achieved 197 responses (response rate 33%). Almost half of the sample reported circulatory, diabetic or musculoskeletal conditions. Exploratory factor analysis suggested a three factor solution (‘identity’, ‘knowledge and understanding’ and ‘enabling’). Two dimensions of empowerment (‘identity’ and ‘enabling’) and total empowerment showed acceptable levels of internal consistency. The measure showed relationships with external measures (including quality of chronic illness care, self-efficacy and educational qualifications) that were generally supportive of its construct validity.ConclusionInitial analyses suggest that the new measure meets basic psychometric criteria and has potential for the measurement of patient empowerment in long-term conditions in primary care. The scale may have a role in research on quality of care for long-term conditions, and could function as a patient-reported outcome measure. However, further validation is required before more extensive use of the measure.
+-------------------------------------
+
+10003297_234 - 0.0985421178082
+[suicide, scotland, england, rate, wales]
+
+Trends in national suicide rates for Scotland and for England & Wales, 1960-2008.
+BACKGROUND: Suicide rates in Scotland have increased markedly relative to those in England in recent decades. AIMS: To compare changing patterns of suicide risk in Scotland with those in England & Wales, 1960-2008. METHOD: For Scotland and for England & Wales separately, we obtained national data on suicide counts and population estimates. Gender-specific, directly age-standardised rates were calculated. RESULTS: We identified three distinct temporal phases: 1960-1967, when suicide rates in England & Wales were initially higher than in Scotland, but then converged; 1968-1991, when male suicide rates in Scotland rose slightly faster than in England & Wales; and 1992-2008, when there was a marked divergence in national trends. Much of the recent divergence in rates is attributable to the rise in suicide among young men and deaths by hanging in Scotland. Introduction of the 'undetermined intent' category in 1968 had a significant impact on suicide statistics across Great Britain, but especially so in Scotland. CONCLUSIONS: Differences in temporal patterns in suicide risk between the countries are complex. Reversal of the divergent trends may require a change in the perception of hanging as a 'painless' method of suicide.
+-------------------------------------
+
+10003254_234 - 0.0484454700422
+[student, weather, contest, meteorology, forecast, discussion, forecasting]
+
+Engaging Earth- and Environmental-Science Undergraduates Through Weather Discussions and an eLearning Weather Forecasting Contest
+For students who major in meteorology, 
+engaging in weather forecasting can motivate learning, 
+develop critical-thinking skills, improve their written com- 
+munication, and yield better forecasts. Whether such 
+advances apply to students who are not meteorology majors 
+has been less demonstrated. To test this idea, a weather 
+discussion and an eLearning weather forecasting contest 
+were devised for a meteorology course taken by third-year 
+undergraduate earth- and environmental-science students. 
+The discussion consisted of using the recent, present, and 
+future weather to amplify the topics of the week’s lectures. 
+Then, students forecasted the next day’s high temperature 
+and the probability of precipitation for Woodford, the closest 
+ofﬁcial observing site to Manchester, UK. The contest ran 
+for 10 weeks, and the students received credit for partici- 
+pation. The top students at the end of the contest received 
+bonus points on their ﬁnal grade. A Web-based forecast 
+contest application was developed to register the students, 
+receive their forecasts, and calculate weekly standings. 
+Students who were successful in the forecast contest were 
+not necessarily those who achieved the highest scores on the 
+tests, demonstrating that the contest was possibly testing 
+different skills than traditional learning. Student evaluations 
+indicate that the weather discussion and contest were rea- 
+sonably successful in engaging students to learn about the 
+weather outside of the classroom, synthesize their knowledge from the lectures, and improve their practical understanding of the weather. Therefore, students taking a 
+meteorology class, but not majoring in meteorology, can 
+derive academic beneﬁts from weather discussions and 
+forecast contests. Nevertheless, student evaluations also 
+indicate that better integration of the lectures, weather dis- 
+cussions, and the forecasting contests is necessary.
+-------------------------------------
+
+10001960_234 - 0.282228241832
+[cluster, survey]
+
+The XMM Cluster Survey: optical analysis methodology and the first data release
+The XMM Cluster Survey (XCS) is a serendipitous search for galaxyclusters using all publicly available data in the XMM-Newton ScienceArchive. Its main aims are to measure cosmological parameters and tracethe evolution of X-ray scaling relations. In this paper we present thefirst data release from the XMM Cluster Survey (XCS-DR1). This consistsof 503 optically confirmed, serendipitously detected, X-ray clusters.Of these clusters, 256 are new to the literature and 357 are new X-raydiscoveries. We present 463 clusters with a redshift estimate (0.06{\lt} z {\lt} 1.46), including 261 clusters with spectroscopic redshifts.The remainder have photometric redshifts. In addition, we have measuredX-ray temperatures (T$_{X}$) for 401 clusters (0.4 {\lt}T$_{X}$ {\lt} 14.7 keV). We highlight seven interesting subsamplesof XCS-DR1 clusters: (i) 10 clusters at high redshift (z {\gt} 1.0,including a new spectroscopically confirmed cluster at z= 1.01); (ii) 66 clusters with high T$_{X}$ ({\gt}5 keV) (iii) 130 clusters/groupswith low T$_{X}$ ({\lt}2 keV) (iv) 27 clusters with measuredT$_{X}$ values in the Sloan Digital Sky Survey (SDSS){\lsquo}Stripe 82{\rsquo} co-add region; (v) 77 clusters with measuredT$_{X}$ values in the Dark Energy Survey region; (vi) 40 clustersdetected with sufficient counts to permit mass measurements (under theassumption of hydrostatic equilibrium); (vii) 104 clusters that can beused for applications such as the derivation of cosmological parametersand the measurement of cluster scaling relations. The X-ray analysismethodology used to construct and analyse the XCS-DR1 cluster sample hasbeen presented in a companion paper, Lloyd-Davies et al.
+-------------------------------------
+
+10003092_234 - 0.111451785603
+[behavioural, patient, intervention, group, education, change, cvd, cognitive, control, behaviour, factor, ra, risk, study, measure]
+
+A randomized controlled trial of a cognitive behavioural patient education intervention vs a traditional information leaflet to address the cardiovascular aspects of rheumatoid disease.
+Objectives. Cardiovascular disease (CVD) is responsible for 50% of the excess mortality for patients with RA. This study aimed to evaluate a novel 8-week cognitive behavioural patient education intervention designed to effect behavioural change with regard to modifiable CVD risk factors in people with RA.Methods. This was a non-blinded randomized controlled trial with a delayed intervention arm. Participants were randomly assigned to receive the cognitive behavioural education intervention or a control information leaflet at a ratio of 1:1. The primary outcome measure was patient's knowledge of CVD in RA; secondary measures were psychological measures relating to effecting behaviour change, actual behaviour changes and clinical risk factors. Data were collected at baseline, 2 and 6 months.Results. A total of 110 participants consented (52 in the intervention group and 58 in the control group) to participate in the study. At 6 months, those in the intervention group had significantly higher knowledge scores (P < 0.001); improved behavioural intentions to increase exercise (P < 0.001), eat a low-fat diet (P = 0.01) and lose weight (P = 0.06); and lower mean diastolic blood pressure by 3.7 mmHg, whereas the control group's mean diastolic blood pressure increased by 0.8 mmHg. There was no difference between the groups on actual behaviours.Conclusions. Patient education has a significant role to play in CVD risk factor modification for patients with RA, and the detailed development of this programme probably contributed to its successful results. It is disappointing that behaviours, as we measured them, did not change. The challenge, as always, is how to translate behavioural intentions into action. Larger studies, powered specifically to look at behavioural changes, are required.Trial registration. National Institute for Health Research, UKCRN 4566.
+-------------------------------------
+
+10001951_234 - 0.0512894677181
+[italy, temporary, growth, work, market, agency, staffing]
+
+The Italian Temporary Staffing Market
+Temporary agency work in Italy experienced a ‘take off’ period with significant growth after restrictions to flexible work arrangements were reduced, beginning in 2000 (Nannicini, 2004). Despite Italy having more strict employment protection legislation than many countries in Europe, temporary agency work has continued to grow, and in recent months has experienced growth levels. This working brief provides an overview of the legislative changes that have occurred in the Italian labour market, before exploring some of the features of the temporary staffing industry in Italy. In addition, the top ten staffing agencies in Italy are identified before considering some of the changes in the market, and predictions for future growth.
+-------------------------------------
+
+100034_102 - 0.133415189928
+[design, research, reality, lifeclipper2, scenario, project, perception]
+
+Negotiating Reality
+<p>Our understanding of research through design is demonstrated by a close examination of the methods used in the project lifeClipper2. This design research project investigates the applicability of immersive outdoor Augmented Reality (AR). lifeClipper2 offers an audiovisual walking experience in a virtually extended public space and focuses on audiovisual perception as well as on the development of the appropriate technology. The project involves contributions of partners from different fields of research. Thus, lifeClipper2 is able to test the potential of AR for visualizing architecture and archaeological information and to challenge our understanding of perception and interaction. Using examples from our research, the paper reflects on how scenario design contributes to the production of design knowledge and explores the possibilities and variations of AR. Finally, the paper drafts our approach to design research. The three tenets of our work are: the use of scenarios as a tool of interdisciplinary research, the experimental exploration of media and the intention to make design knowledge explicit.
+</p>
+<p>
+<strong>Keywords:</strong> <br />
+augmented reality; locative media; hybrid environment; immersion; perception; experience design; research through design; scenario design</p>
+-------------------------------------
+
+10001958_234 - 0.106993244713
+[cluster, agn, mass, bcg, icm, t$, host, group]
+
+The XMM Cluster Survey: the interplay between the brightest cluster galaxy and the intracluster medium via AGN feedback
+Using a sample of 123 X-ray clusters and groups drawn from the XMMCluster Survey first data release, we investigate the interplay betweenthe brightest cluster galaxy (BCG), its black hole and theintracluster/group medium (ICM). It appears that for groups and clusterswith a BCG likely to host significant active galactic nuclei (AGN)feedback, gas cooling dominates in those with T$_{X}$ {\gt} 2 keVwhile AGN feedback dominates below. This may be understood through thesubunity exponent found in the scaling relation we derive between theBCG mass and cluster mass over the halo mass range 10$^{13}$ {\lt}M$_{500}$ {\lt} 10$^{15}$ M$_{&sun;}$ and the lack ofcorrelation between radio luminosity and cluster mass, such that BCG AGNin groups can have relatively more energetic influence on the ICM. TheL$_{X}$-T$_{X}$ relation for systems with the most massiveBCGs, or those with BCGs co-located with the peak of the ICM emission,is steeper than that for those with the least massive and most offset,which instead follows self-similarity. This is evidence that acombination of central gas cooling and powerful, well fuelled AGN causesthe departure of the ICM from pure gravitational heating, with thesteepened relation crossing self-similarity at T$_{X}$= 2 keV.Importantly, regardless of their black hole mass, BCGs are more likelyto host radio-loud AGN if they are in a massive cluster(T$_{X}${\gsim} 2 keV) and again co-located with an effective fuelsupply of dense, cooling gas. This demonstrates that the most massiveblack holes appear to know more about their host cluster than they doabout their host galaxy. The results lead us to propose a physicallymotivated, empirical definition of 'cluster' and 'group', delineated at2 keV.
+-------------------------------------
+
+10001948_234 - 0.217061742293
+[capitalism, national, system, variety, industry]
+
+Varieties of Capitalism
+The temporary staffing industry has experienced significant growth across the globe in recent years, making it one of the largest private employers in the world in 2007 (CIETT, 2009). Given this industry is experiencing such widespread growth and becoming increasingly global, questions remain about how best to understand national markets, and how this affects the operation of the industry within them. One area of literature which addresses the concept of different national systems is Varieties of Capitalism which introduces the ideas of ‘institutional complementarities’ to account for co-ordination of actors within an economic system. This Working Brief provides an overview of the varieties of capitalism perspective by outlining some of its key features, the main criticisms, and alternative approaches to considering national systems of economic organisation. Overall, this Working Brief argues that the Varieties of Capitalism approach provides some insight into the ideas surrounding the comparative study of capitalist systems, however, criticisms of being too static, failing to account to regional diversity, overreliance on the firm, a distinct focus on the national, and the absence of labour from its discussions indicate that it is inherently flawed.
+-------------------------------------
+
+100015_102 - 0.0322999703195
+[human, sustainability, timelessness, object, research, resource]
+
+Affective Sustainability. Is this what timelessness really means?
+<p>Sustainability is always about regard to the environment: an intelligent use of resources and not returning to nature what it cannot degrade without long-term damage. Politics, business and thus research have been predominantly concerned with the direct impact on the environment of the diverse human activities in our society. There is of course awareness about all the indirect effects caused by these activities but as these effects are more complicated to identify and calculate, it could reasonably be suggested that these have not got the same attention and hence have not been thoroughly explored. Important resources are required for the production of objects, which subsequently turn out neither to meet humans’ needs nor to fulfil their desires. This issue involves not just the misuse of resources but also the addition to waste problems. Needs and desires are not unrelated to material and function but reach mostly beyond the physicality of the object as argued by Krippendorf (2006), among others. Timelessness is unrelated to physicality and is most likely the ultimate example of sustaining. However, this phenomenon does not easily allow interpretation as it is basically philosophical, which also would complicate its transition into other domains.</p>
+<p>
+The deconstruction of timelessness in an earlier work (Borjesson, 2006) resulted in the phenomenon being conceptualised as affective sustainability. Four notions were identified as mainly informing timelessness: time, tradition, aesthetics and perception. When subsequently studied in several disciplines, these notions produced indicators on how to understand better what makes objects retain their significance in a changing human context. These indicators are not to be categorised as a set of tools or even less as a model to be applied in the design process: they are directional rather than normative. Moreover, they are best understood as support and inspiration to develop design thinking and have been the subject for further analysis as part of continued research. This has increased the clarity of the directions not only in relation to design thinking but also where to continue research. 
+</p>
+<p>
+<strong>Keywords:</strong> <br />
+Sustainability, Human ways of living, Human ways of being, Lived and Learned experience, Emotion, Affect, Feeling, Cognition.</p>
+-------------------------------------
+
+100005_102 - 0.0601498079886
+[design, physical, representation, knowledge, model, sketch, idea, student, uncertainty, experimentation, process, decision]
+
+Experimentation and Representation in Architecture: analyzing one’s own design activity
+<p>Architects materialize ideas on physical supports to register their thoughts and to discover new possibilities from hints and suggestions in their own drawings. Uncertainty is inherent to creative processes encouraging the production of different ideas through testing.</p>
+<p>
+This research brings to light that the re-examination of artefacts from new points of view allows for the review and generation of design ideas and decisions, capacitating students to make yet new discoveries from what they have done so far. Tacit knowledge aids specific decisions. Student reports become analytical records of their material registers (sketches, physical and virtual models) making it explicit that which is implicit in those artefacts. This apparently confirms previous studies that suggest that knowledge per se not always triggers or controls decisions in design. Many physical as well as perceptive actions actually lead the initial steps and play a crucial role in the whole course of production. Besides serving as external representations, sketches and models provide visual hints that will be checked later, favouring the upcoming of the unexpected, stimulating creativity. The intent here is to point out how these different means of representation and expression contribute in a peculiar manner to the whole process of discovery and solution to problems in architecture.</p>
+<p>
+The authors propose here a reflection on the process of design and its uncertainties in its initial phase, concentrating on sketches and real models as experimentations. They consider these means not from a graphic and physical register stand point, but in terms of conception and concepts they embody, as records of students thinking and knowledge. 
+</p>
+<p>
+<strong>Keywords:</strong> <br /> 
+Experimentation; Uncertainty; Representation; Design Process; Cognition; Education</p>
+-------------------------------------
+
+100009_102 - 0.132386119927
+[design, research, prefabrication, school, industry]
+
+Learning through prefabrication
+<p>The use of prefabrication in design exemplar houses has escalated in Australia in the past decade. The same level of design quality has not been applied to the design of prefabricated school buildings. As CADCAM technology becomes more prevalent within the construction industry and greener, smarter materials are developed, new opportunities arise in the design of learning spaces. What can be learnt from bespoke prefabrication techniques being developed in other industries and overseas in order to advance the design and delivery of learning spaces within Australia?</p>
+<p>
+This research investigates whether industrial design methodologies might be strategically adopted into architectural design in order to incorporate mass production techniques. Learning environments need to be designed to be environmentally efficient, place specific and better suited to user needs. By including both macro and micro oriented scenarios, the research aims to clarify the challenges for using prefabrication in the design of learning environments.   </p>
+<p>
+While this ambitious research is in its infancy, the complex framework and support from industry is relevant for other researchers who are seeking to have an impact on design practice using an action research methodology. The research is timely. Following in the footsteps of the United Kingdom, Australian state and federal governments have committed to reinvigorate our aging school stock. This research led by an interdisciplinary team is being developed in partnership with Departments of Education in three Australian states. The aim is to align designers with experts in prefabricated construction and delivery. </p>
+<p>
+The research proposal is positioned within current knowledge as demonstrated through a literature review. Its focus is in response to needs expressed by providers of school buildings in three Australian states. The key innovation is to undertake research concurrently as micro and macro scale in order to capture the potential for industry wide change.
+</p>
+<p>
+<strong>Keywords:</strong> <br /> 
+Learning spaces, school design, bespoke prefabrication, prefabrication in architecture, design research, CADCAM.</p>
+-------------------------------------
+
+10003298_234 - 0.130433173364
+[scotland, suicide, risk, england, rate, health, social, drug, alcohol, difference]
+
+Why does Scotland have a higher suicide rate than England? An area-level investigation of health and social factors.
+BACKGROUND: Up until the mid-late 2000s, the national suicide rate in Scotland was the highest among all the UK countries, but the reasons for this phenomenon are poorly understood. METHODS: In a multilevel study of suicide risk in Scotland and England during 2001-2006, the authors examined a range of social, cultural and health-related factors at small area level: postcode sector and Health Board in Scotland and ward and Primary Care Organisation in England. RESULTS: Scotland's national suicide rate was 79% higher than in England (rate ratio 1.79, 95% CI 1.62 to 1.98), with younger male and female Scots aged 15-44 years having double the risk compared with their English peers. Overall, 57% of the excess suicide risk in Scotland was explained by a range of area-level measures, including prescriptions for psychotropic drugs, alcohol and drug use, socioeconomic deprivation, social fragmentation, and other health-related indices. The use of psychotropic drugs, acting as a proxy measure for mental ill health, was the variable most strongly associated with the between-country differences in suicide risk. Alcohol misuse also made an important contribution to the differentials. Overall, the contribution of socioeconomic deprivation and social fragmentation was relatively small. CONCLUSIONS: Any attempt to reverse the divergent trend in suicide between Scotland and England will require initiatives to prevent and treat mental ill health and to tackle alcohol and drug misuse. Differences in prescribing rates, however, may also be explained by differences in illness behaviour or the availability of psychosocial interventions, and addressing these may also reduce Scotland's excess risk.
+-------------------------------------
+
+100000_102 - 0.22274632198
+[assessment, design, rubric, form, student, tool]
+
+Educational Assessment in Emerging Areas of Design: Toward the Development of a Systematic Framework  Based on a Study of Rubrics
+<p>This paper presents a formative study that investigates the perceived effectiveness of rubrics as assessment tools by communication and industrial design educators and first year design students in the context of a design studio. The project is motivated by the increasing challenge of assessing subjective and intangible attributes that are associated with the teaching of emerging areas in design, and society’s growing need for measurable results. The goal of this project is to shed light on the perceived successes and failures of a specific assessment tool, known as a rubric, and use this information to improve students’ and educators’ understanding, value, and use of assessment tools. </p>
+<p>
+Based on the characteristics of the emerging design landscape, this paper argues the importance of assessments and the need for their improvement. It explains the construction of three assessment forms that are based on successful models used in other disciplines. This paper describes how the forms were used throughout the semester to provide an overview of course objectives and assess individual projects. It explains the contents of a questionnaire and describes how it was used at the end of the semester to evaluate students’ perceptions of the assessments forms. Feedback gained from the instructors indicated that rubrics were not more efficient than other forms of assessment but did aid the assessment of intangibles and did not reduce students’ creativity. The results of the questionnaire showed that students perceived the attributes of rubrics more positively than other forms of assessment but still favoured handwritten comments. These findings informed the proposal of a set of considerations that should be taken into account when creating assessment forms for use in classrooms that focus on emerging areas of design. They describe the importance of personal comments, clear terminology, a planned introduction of the tool, and an open-mind.
+</p>
+<p>
+<strong>Keywords:</strong> <br />
+Rubrics; Assessment; Evaluation; Pedagogy; Education; Learning; Feedback.</p>
+-------------------------------------
+
+10003267_234 - 0.091066371464
+[gh, nf-b, stat5b, insensitivity, signaling]
+
+A mosaic de novo duplication of 17q21-25 is associated with GH insensitivity, disturbed in vitro CD28-mediated signaling, and decreased STAT5B, PI3K, and NF-κB activation.
+OBJECTIVE: The established causes of GH insensitivity include defects of the GH receptor and STAT5B. The latter condition is also characterized by severe immunodeficiency. A recent case with short stature, GH resistance, and immunodeficiency due to an IκB mutation suggests that the NF-κB pathway may interact with STAT5B signaling. DESIGN: Here, we present a case of a short child with several congenital anomalies as well as GH insensitivity and mild immunodeficiency associated with a mosaic de novo duplication of chromosome 17q21-25, suggesting that overexpression of one of the duplicated genes may be implicated in GH resistance. METHODS AND RESULTS: In vitro studies on blood lymphocytes showed disturbed signaling of the CD28 pathway, involving NF-κB and related proteins. Functional studies on cultured skin fibroblasts revealed that NF-κB activation, PI3K activity, and STAT5 phosphorylation in response to GH were suppressed, while the sensitivity to GH in terms of MAPK phosphorylation was increased. An in silico analysis of the duplicated genes showed that MAP3K3 and PRKCA are associated with the NF-κB pathway. Baseline MAP3K3 expression in T-cell blasts (TCBs) was normal, but PRKCA expression in TCBs and fibroblasts was significantly higher than that in control cells. CONCLUSIONS: We conclude that the 17q21-25 duplication is associated with GH insensitivity and disturbed STAT5B, PI3K, and NF-κB signaling, possibly due to PRKCA mRNA overexpression.
+-------------------------------------
+
+10002104_234 - 0.109783246766
+[crack, model, corrosion]
+
+Deformation-promoted nucleation of corrosion cracks: State, problems, and perspectives
+One model for corrosion crack initiation and propagation in metals is reviewed. The model incorporates three physical processes operating at the metal-environment interface – material dissolution, passive film formation and surface straining. The dissolution triggers surface advance; the passivation restrains the access of the environment to bare metal; the deformation causes for passivity breakdown. An essential advantage of the model is that it allows for formulating the crack development as a mechanical moving boundary problem, without the need for a specific crack growth criterion. The problem is solved using a finite elements and a moving boundary tracking procedure. The simulations demonstrate how cracks form and grow in a single continuous course. Key results for plane cracks nucleating from surface pits in an elastic-plastic material body under low-cycle fatigue load are presented. The developed cracks morphology is found independent of the initial pit size. Plasticity is found to influence the curvature at the tip of the nucleated corrosion cracks, but not its width. Mathematical and finite element analyses of stationary cracks with appropriate geometry are involved to explain the behaviour predicted by the model. The most important evolution length parameter, the width of the corrosion crack, is found to depend on the size constraints of the tracking procedure. This limits the validity of the model to the crack nucleation stage. It is concluded that the model is deficient for determining all length scales of a developed crack observed in reality. Physical processes to be considered in an advanced model are proposed and discussed.
+-------------------------------------
+
+100027_102 - 0.0574278737011
+[older, vehicle, user, research, need, travel, context, design, future, cultural, social]
+
+Understanding Older Vehicle Users:  An Interpretative Approach
+<p>Future adaptations in vehicle design should be linked in some parts to the age-related changes often faced by the older users. The aim of this research is to investigate the multiple age-related changes of Chinese older vehicle users in order to assist designers to better understand current and future older users’ needs. Although qualitative interpretative approaches have rarely been applied in the field of traffic gerontology research, they are widely used in current design research to explore persons’ lived experiences, behaviours and emotions. Therefore, this study employed qualitative research methods consisting of observation, interview, travel logbook and co-discovery to explore older vehicle users’ travel needs. The interpretative analysis confirmed that multiple methods such as interview, travel logbook, and co-discovery are useful to gain a holistic understanding of older drivers’ travel needs. However, the one journey driving observation cannot provide valuable categories to explore older users’ multiple travel needs due to daily living context absence in the one trip experiment. It is clear that the useful methods for determining research for older users will depend on the product. The findings demonstrate that Chinese future older generations are more concerned about their age-related differences from social and cultural perspective rather than physiological perspective. Social and cultural context play important role to shape older vehicle users’ future travel needs. From design a point of view, understanding the social activity and cultural context surrounds older vehicle users should make it possible to predict older drivers’ needs related to vehicle property.
+</p>
+<p>
+<strong>Keywords:</strong> <br />
+Older Vehicle Users; Cultural Context; Social Context; Vehicle Design; Qualitative Research</p>
+-------------------------------------
+
+10001959_234 - 0.45786838732
+[cluster, xc, planck]
+
+The XMM Cluster Survey: predicted overlap with the Planck Cluster Catalogue
+We present a list of 15 clusters of galaxies, serendipitously detectedby the XMM Cluster Survey (XCS), that have a high probability ofdetection by the Planck satellite. Three of them already appear in thePlanck Early Sunyaev-Zel'dovich (ESZ) catalogue. The estimation of thePlanck detection probability assumes the flat Lambda cold dark matter({$\Lambda$}CDM) cosmology most compatible with 7-year Wilkinson MicrowaveAnisotropy Probe (WMAP7) data. It takes into account the XCS selectionfunction and Planck sensitivity, as well as the covariance of thecluster X-ray luminosity, temperature and integrated Comptonizationparameter, as a function of cluster mass and redshift, determined by theMillennium gas simulations. We also characterize the properties of thegalaxy clusters in the final data release of the XCS that we expectPlanck will have detected by the end of its extended mission. Finally,we briefly discuss possible joint applications of the XCS and Planckdata.
+-------------------------------------
+
+100016_102 - 0.0755657897125
+[product, emotion, event, role, emotional, experience]
+
+The roles of products in product emotions an explorative study
+<p>Although several theoretical frameworks that aim to explain the emotional impact of product design have been introduced in design research literature, none of these frameworks clearly specifies the role of the product in these emotions. This paper reports a study that was designed to explore the variety of roles that products can play in emotional experiences. In a three staged experience sampling study, 29 participants produced 170 records of emotions experienced while interacting with products. Each case was examined in order to identify the antecedent event (the event triggering the emotion) and the mental object (what the emotion is about). The results indicated that several types of events involved in the user-product interaction can elicit an emotional experience: noticing a product; an event occurring during product usage; an entire usage episode; an external agent mentioning the product; and a change in the relationship between a user and a product . It was also found that the resulting emotional responses can be about (can be attributed to) several types of mental objects: a physical object, such as the particular product involved; the user or some other person; the actions of the user or the designer; the antecedent event itself. The results are used to identify and discuss eight distinct roles that products can play in the experience of emotions. In addition, examples are provided to illustrate how these roles can facilitate a structured approach to design for emotion. 
+</p>
+<p>
+<strong>Keywords:</strong> <br />
+
+Design and emotion, user-product interaction</p>
+-------------------------------------
+
+10002100_234 - 0.445773437475
+[model, part, grain, crack, material, boundary, intergranular]
+
+Modelling intergranular crack propagation to aid microstructure engineering. Part I: Models
+A comprehensive account of new 2D and 3D mechanical models for studying intergranular environment assisted crack propagation in polycrystalline materials is presented in this first part of the work. The models are developed to eliminate the limitations of the percolation models, used previously to assess resistance of materials to intergranular cracking. The percolation models do not account for the mechanical crack driving force, which limits their applicability. The new models are based on a regular discrete representation of the microstructure of the materials and a binary selection of grain boundaries’ properties, where the grain boundaries are assumed to be either resistant or susceptible to cracking depending on the grain boundary character. The problems solved and methods of analysis of the results presented in the second part of the work are also described.
+-------------------------------------
+
+10003228_234 - 0.299759860561
+[msn, immature, input, cortical, early, timely, epsc, pattern, locomotion, adult, network]
+
+Onset of Pup Locomotion Coincides with Loss of NR2C/D-Mediated Cortico-Striatal EPSCs and Dampening of Striatal Network Immature Activity.
+Adult motor coordination requires strong coincident cortical excitatory input to hyperpolarized medium spiny neurons (MSNs), the dominant neuronal population of the striatum. However, cortical and subcortical neurons generate during development large ongoing patterns required for activity-dependent construction of networks. This raises the question of whether immature MSNs have adult features from early stages or whether they generate immature patterns that are timely silenced to enable locomotion. Using a wide range of techniques including dynamic two-photon imaging, whole cell or single-channel patch clamp recording in slices from Nkx2.1-GFP mice, we now report a silencing of MSNs that timely coincides with locomotion. At embryonic stage (as early as E16) and during early postnatal days, genetically identified MSNs have a depolarized resting membrane potential, a high input resistance and lack both inward rectifying (IK(IR)) and early slowly inactivating (I(D)) potassium currents. They generate intrinsic voltage-gated clustered calcium activity without synaptic components. From postnatal days 5-7, the striatal network transiently generates synapse-driven giant depolarizing potentials when activation of cortical inputs evokes long lasting EPSCs in MSNs. Both are mediated by NR2C/D-receptors. These immature features are abruptly replaced by adult ones before P10: MSNs express IK(IR) and I(D) and generate short lasting, time-locked cortico-striatal AMPA/NMDA EPSCs with no NR2C/D component. This shift parallels the onset of quadruped motion by the pup. Therefore, MSNs generate immature patterns that are timely shut off to enable the coordination of motor programs.
+-------------------------------------
+
+10001949_234 - 0.291963449704
+[employment, temporary, europe, oecd]
+
+European Temporary Staffing: The Changing Regulatory Landscape
+In Europe, a policy priority is to maintain a balance between flexibility and employment security (OECD, 2004). The concept of achieving an appropriate balance in the labour market between ensuring the flexibility of employment options and providing sufficient levels of social security has been termed flexicurity (OECD, 2004). Temporary agency work, in turn, is seen as a facilitator of flexibilisation and hence a key component of the drive towards a labour market that operates on this flexicurity principle (ILO, 2009). Restrictive regulation is seen as a prime obstacle to the expansion of the temporary staffing industry and historically there have been many areas of Europe that have been dominated by strict employment protection legislation (EC, 2009). This Working Brief outlines patterns of the regulation of temporary agency work across Europe from 1990 to 2008 using one of the OECD Employment Protection Legislation Index measures.
+-------------------------------------
+
+10001965_234 - 0.0241705583282
+[media, file, fabric, temperature, disc]
+
+Development of Temperature Sensing Fabric
+This appendix E of the thesis contains the media files on a Compact Disc (CD). Media files include: the customized LabVIEW interfaces developed for testing purpose; the test rig Model built in SimScape/MATLAB environment; and the  machine program of the Temperature Sensing Fabric (TSF) created in a Shima Seiki Knit Paint. A brief summary of the usage of these media files is also included in the disc.
+-------------------------------------
+
+100012_102 - 0.0489017591985
+[design, stroke, hospital, system, unit, care, patient, outcome]
+
+Design for Improving Hospital Stroke Unit Processes:  Reducing Complex Systems Failures Leading to Adverse Patient Outcomes
+<p>This paper describes recent research involving a user-focused design analysis of in-hospital residential treatment for stroke patients. </p>
+<p>
+The focus of the research was to identify positive and negative design heuristics associated with addressing poor performance, errors and failures of patient care associated with current designs of hospital systems processes being inadequate to address actual levels of system complexity. </p>
+<p>
+The research findings are based on an in–depth case study following a single patient through a stroke unit in a medium scale hospital of (approximately 280 acute beds overall) with 26 stroke unit beds. The case study involved over 200 hours of observations over nine weeks and liaison with hospital and family over the four months of the patient’s stay in hospital.</p>
+<p>
+The findings suggest an explanation for the lack of effective advantage so far shown for integrated care as compared to conventional multidisciplinary care. In essence, they suggest that integrated stroke care and multidisciplinary care are both  subject to similar serious systemic organisational failures that in effect reduce outcomes of both to a similar compromised position.</p>
+<p>
+The paper concludes with three design heuristics for improving stroke unit outcomes via improving the design of stroke unit organisational systems. These proposed heuristics may be of benefit more widely in hospital system design for improved outcomes.
+</p>
+<p>
+<strong>Keywords:</strong> <br />
+Hospital System Design, Design Strategies, User-Based Assessment, Case Study, Viable System Model</p>
+-------------------------------------
+
+10003322_234 - 0.146564074939
+[color, mood, pupil, positive]
+
+The Manchester Color Wheel: validation in secondary school pupils.
+ABSTRACT: BACKGROUND: As part of our research programme into facilitating improved ways of communicating with patients, especially about more sensitive clinical issues, we have been investigating whether there are any non-verbal methods that might aid this process. One such approach is to ask patients to choose a color in response to a particular question, for instance about health or psychological status, and for this purpose we developed the Manchester Color Wheel (MCW). This instrument consists of positive, neutral and negative colors and its validation in normal adults and those with anxiety or depression showed that it is responsive to change and reproducible. It also has the capacity to identify a positive frame of mind. We concluded that it might be a particularly useful instrument in adolescents and therefore this study aimed to validate it in a secondary school. METHODS: 620 pupils (aged 11-17 years, mean age 14.0 years, 298 (48.1%) males, 322 (51.9%) females) at Sale Grammar School in Greater Manchester were asked to relate their mood to a MCW color and also complete the Hospital Anxiety Depression (HAD) questionnaire. To give these pupils an experience in science, 197 were divided into four subgroups for an experiment to ascertain whether, compared to controls, a change in mood color choice could be induced by participation in sport, music or art activities. RESULTS: Although mood color and HAD depression score are unlikely to be measuring exactly the same psychological state, a negative mood color was chosen by 62.5% of HAD depressed compared to only 14.5% of HAD normal pupils (p < 0.001). In contrast, a positive mood color was chosen by 48.9% of normal and only 18.8% of depressed pupils (p < 0.001). In the experiment, compared to controls, all activities resulted in an increased choice of positive mood colors which reached significance for sport and music. CONCLUSION: This study confirms the potential utility of the MCW to rapidly and easily assess a variety of health issues in large populations, including adolescents. Some of our results should also be of interest to educationalists.
+-------------------------------------
+
+100008_102 - 0.0946284266074
+[design, research, retail, part, behaviour, atmosphere, consumer, lighting, mood, experiment]
+
+Retail design:  lighting as an atmospheric tool, creating experiences which influence consumers’ mood and behaviour in commercial spaces
+<p>Retail design is no new discipline, but a scientific approach is of rather recent date. Since atmosphere has been proven to have an influence on consumer’s behaviour from a marketing point of view, this Ph.D. focuses on the designers’ perspective. This paper addresses one aspect of atmosphere: lighting and its influence on consumers’ mood and buying behaviour.  Following an introduction in the discipline of retail design, we discuss the notion of ‘atmosphere’ and its relationship to lighting. We also develop a theoretical framework as a first part of a three-part process: literature review, experiments and validation. This first part includes the development of hypotheses and research questions. We will summarise a long tradition of research into architectural physics and psychology in both retail and work environments.</p>
+<p>
+Additionally, we also attempt to describe the applied research category: research by design. The set-up of the first experiment, currently undertaken, is explained via its method (participants, instruments, procedure) with an analysis of the preliminary results. Furthermore, the second part - the experiments and a design - and the third part - the development of guidelines - are briefly described.
+</p>
+<p>
+<strong>Keywords:</strong> <br />
+Retail Design; Lighting; Consumer Behaviour; Research By Design; Mood; Atmosphere</p>
+-------------------------------------
+
+10003543_234 - 0.366149555906
+[material, electric, property, temperature, cell]
+
+Small scale temperature recorder for use with active radio frequency identification to monitor temperature of e.g. flowers has sensing cell comprising conductive electrodes connected to electric property measuring devicee
+The recorder has a reactant mixture comprising an initiator initiating cross-linking of a reactive monomer to form sensing material (20) that provides a record of temperature of a sensing cell (10) when cross-linking occurs. The sensing material comprises a cross-linked network dispersed within liquid crystalline material, where the network is formed from the monomer. The sensing cell comprises electrically conductive electrodes (14) connected to an electric property measuring device i.e. capacitance measuring device, arranged to measure electric property of the sensing material.
+-------------------------------------
+
+10002073_234 - 0.263465441366
+[source, responsibility, ontology-based, access, authorship, equal, datum, streaming, alphabetical]
+
+Enabling ontology-based access to streaming data sources
+(Alphabetical authorship, equal responsibility)
+-------------------------------------
+
+10003272_234 - 0.215991591347
+[trpv3, human, hair, growth]
+
+Activation of transient receptor potential vanilloid-3 inhibits human hair growth.
+In the current study, we aimed at identifying the functional role of transient receptor potential vanilloid-3 (TRPV3) ion channel in the regulation of human hair growth. Using human organ-cultured hair follicles (HFs) and cultures of human outer root sheath (ORS) keratinocytes, we provide the first evidence that activation of TRPV3 inhibits human hair growth. TRPV3 immunoreactivity was confined to epithelial compartments of the human HF, mainly to the ORS. In organ culture, TRPV3 activation by plant-derived (e.g., eugenol, 10-1,000 μM) or synthetic (e.g., 2-aminoethoxydiphenyl borate, 1-300 μM) agonists resulted in a dose-dependent inhibition of hair shaft elongation, suppression of proliferation, and induction of apoptosis and premature HF regression (catagen). Human ORS keratinocytes also expressed functional TRPV3, whose stimulation induced membrane currents, elevated intracellular calcium concentration, inhibited proliferation, and induced apoptosis. Of great importance, these effects on ORS keratinocytes were all mediated by TRPV3, as small interfering RNA-mediated silencing of TRPV3 effectively abrogated the cellular actions of the above agonists. These findings collectively support the concept that TRPV3 signaling is a significant player in human hair growth control. Therefore, TRPV3 and the related intracellular signaling mechanism might function as a promising target for pharmacological manipulations of clinically relevant hair growth disorders.
+-------------------------------------
+
+100028_102 - 0.0851413306263
+[argument, phd]
+
+Dialogical encounter argument as a source of rigour in the practice based PhD
+<p>This paper distinguishes between three views of argument: “argument as structure,” “argument as confrontation” and “argument as dialogical encounter.” Empirical studies of the criteria that examiners bring to the assessment of PhDs are cited. The studies provide evidence that qualities that align one or other of the three modes of argument figure significantly in the criteria that examiners bring to the assessment process. Embedded in the studies are respondents’ comments that suggest that the range of conceptions of argument held by PhD examiners is broad. Explicit use of the term “argument” is often made in reference to a minimal concept of argument ¬– “argument as structure.” However, the reported comments indicate a significant bias towards qualities associated with concepts of argument that lie somewhere along the spectrum between “argument as confrontation” and “argument as dialogical encounter” as a marker of quality in PhD research. Drawing on the work of Hans Georg Gadamer the paper will explore the possibilities opened up by adopting the view of “argument as dialogical encounter” in the context of the PhD. In particular I consider the issue of how PhD projects be structured so as to support the construction of arguments appropriate to practice based research in design?
+</p>
+<p>
+<strong>Keywords:</strong> <br />
+Argument; Gadamer; Hermeneutics; Rigour; Practice Based Research; Phd Examination</p>
+-------------------------------------
+
+100019_102 - 0.21381602854
+[digital, sign, discourse]
+
+Intermedia Remediated & the Question of Designing Discourse
+<p>New “engines of discourse” (neural networks, algorithms and other forms of artificial intelligence, combined with the devices that record and interpret viewer actions) bring to the fore rhetorical concerns that challenge discipline-based notions of process and form. We shall focus here on the tradition of intermedial art practices to better understand the ever more complex question of how to inter-relate three aspects of digital communication: authorial “intent”, the digital sign and its interactive exploration by a “spect-actor”. We shall argue that the digital sign is an extension of intermedial thinking rooted in a pre-digital, photographic practice and esthetic. The writings of several French theorists on the subject of interactive digital design will provide a context for understanding examples of “virtual art-realities”, whose specificity is staging relationships between objects and people.
+</p>
+<p>
+<strong>Keywords:</strong> <br />
+Rhetoric; Discourse; Intermedia; Interactivity; Digital Sign; Esthetics; Artificial Intelligence; Behavior-based Art.</p>
+-------------------------------------
+
+10003233_234 - 0.0487731305332
+[work, time, work-life, balance, worker, arrangement, life, hour, schedule]
+
+The influence of working time arrangements on work-life integration or ‘balance’: A review of the international evidence
+This paper provides a comprehensive synthesis of previous research examining the link between different aspects of working time and outcomes in terms of work-life “integration” or “balance”, which includes but is not limited to the reconciliation of work and family life. It also explicitly considers the extent to which various types of working time arrangements not only facilitate work-life balance, but also promote, or hinder, gender equality in both the labour market and in personal life. These are crucial issues, both because of the continuing prevalence of long hours of work, especially in developing countries, and also in terms of the diversification of working time arrangements away from the so-called “standard workweek” (i.e., a Monday to Friday or Saturday daytime schedule). The paper begins by conceptualizing and measuring work-life “integration” or “balance”, reviewing the different types of terminology used and the dimensions of working time arrangements pertaining to this topic. It then considers the effects of the volume (quantity) of working hours on work-life balance, and finds that long working hours have been identified as an important predictor of work–life conflict. In contrast, workers working part-time were the most likely to report compatibility between their job and family life, even when compared with women and men withoutdependent children. Finally, it considers the effects of work schedules on various measures of work-life balance. It concludes that “non-standard” work schedules—such as shift work, night work, and weekend work—substantially increase work–family incompatibility. In contrast, where workers have some autonomy and control over their work schedules, or the scope to choose particular hours of work,this has a positive effect not only on work-life balance, but on workers’ health and well-being as well. Overall, the growing diversification in the organisation of working time raises questions about its impact on workers’ work-life balance, as well as the need for an awareness of this dimension when considering workers’ and employers’ preferences regarding working time. At the same time, this trendis also promising in the sense that it might offer “win-win” solutions that could potentially benefit both workers and employers. It is hoped that this study will provide useful guidance regarding how to respond to new trends and developments in the area of working time and develop innovative, mutually beneficial working-time arrangements.
+-------------------------------------
+
+100021_102 - 0.0537464370513
+[material, product, shape, identity, specific]
+
+Designing identity of a new material: a new product design approach
+<p>The present research is a design practice-based research based on the industrial development of a new concrete. The research focuses on the development of the specific identity of a new material. The research is aimed at demonstrating that product design can be used as a new strategy to create the material identity and thus to differentiate from existing materials. In order to design material specific identity in new products, we need to understand the perception process of shaped materials. Therefore we conducted exploratory study of materials recognition in products. We identified two types of products: the “messenger” products are specific shapes characteristic from the material; the “wrong messenger” products are imitations of other well known materials. The results of questionnaire about material recognition show that it’s more or less easy to identify material according to each product (whether it’s familiar or new shapes; whether it’s imitation or specific shapes and whether it’s well known or new material). We conclude on two types of shapes: on the one hand some familiar and typical shapes make easier and more certain the material recognition; on the other hand some new shapes make people more uncertain of what it is made of but more amazed. Designing amazing new shapes can be used as a new differentiation strategy to create the specific sensory identity of each new material. It means that the product can be a really useful support to fully communicate about a new material, beyond the traditional material samples.
+</p>
+<p>
+<strong>Keywords:</strong> <br />
+New Material; Sensory Identity; Product Design</p>
+-------------------------------------
+
+10003229_234 - 0.378523571011
+[model]
+
+Solution methods for a new class of simple model neurons.
+Izhikevich (2003) proposed a new canonical neuron model of spike generation. The model was surprisingly simple yet able to accurately replicate the firing patterns of different types of cortical cell. Here, we derive a solution method that allows efficient simulation of the model.
+-------------------------------------
+
+10003276_234 - 0.0336061751407
+[basophil, -msh]
+
+Modulation of basophil activity: a novel function of the neuropeptide α-melanocyte-stimulating hormone.
+BACKGROUND: Little is known about the effect of neuropeptides on basophils, which are important effector cells in immune and allergic responses. OBJECTIVE: This study aimed at revealing the role of α-melanocyte-stimulating hormone (α-MSH) on basophil function. METHODS: Expression of melanocortin receptors and proopiomelanocortin (POMC) was analyzed by means of RT-PCR, Western immunoblotting, fluorescence-activated cell sorting, and double-immunofluorescence analysis. Signal transduction studies included cyclic AMP and Ca(2+) mobilization assays. Basophil activity was assessed based on CD63 surface expression and cytokine release. RESULTS: MC-1R expression was detectable in basophils isolated from human peripheral blood, as well as in basophils within nasal tissue. In isolated basophils from human blood, truncated POMC transcripts were present, but there was no POMC protein. Treatment of basophils with α-MSH increased intracellular Ca(2+) but not cyclic AMP levels. α-MSH at physiologic doses potently suppressed basophil activation induced by N-formyl-methionyl-leucyl-phenylalanine, phorbol 12-myristate 13-acetate, or grass pollen allergen in whole blood of healthy or allergic subjects, respectively. The effect of α-MSH on basophil activation was MC-1R mediated (as shown by blockade with a peptide analogue of agouti-signaling protein) and imitated by adrenocorticotropic hormone but not elicited by the tripeptides KPV and KdPT, both of which lack the central pharmacophore of α-MSH. Moreover, α-MSH at physiologic doses significantly suppressed secretion of 3 proallergic cytokines, IL-4, IL-6, and IL-13, in basophils stimulated with anti-IgE, N-formyl-methionyl-leucyl-phenylalanine, or phorbol 12-myristate 13-acetate. CONCLUSION: Our findings highlight a novel functional activity of α-MSH, which acts as a natural antiallergic basophil-response modifier. These findings might point to novel therapeutic strategies in treating allergic diseases.
+-------------------------------------
+
+10003522_234 - 0.457423754466
+[multiobjective, optimization, learning, seminar]
+
+Learning in Multiobjective Optimization (Dagstuhl Seminar 12041)
+This report documents the programme and outcomes of the Dagstuhl Seminar 12041 "Learning in Multiobjective Optimization". The purpose of the seminar was to bring together researchers from the two main communities studying multiobjective optimization, Multiple Criteria Decision Making and Evolutionary Multiobjective Optimization, to take part in a wide-ranging discussion of what constitutes learning in multiobjective optimization, how it can be facilitated, and how it can be measured. The outcome was a deeper, more integrated understanding of the whole problem-solving process in multiobjective optimization from the viewpoint of learning, and several concrete research projects directly addressing different aspects of learning.
+-------------------------------------
+
+10002938_234 - 0.243404590513
+[conceptual, urban, project, objective, framework, research]
+
+‘Understanding the tipping points of urban violence: Conceptual framework’
+This conceptual paper provides a background document for the research project on ‘Understanding the Tipping Points of Urban Conflict’ (UTP). Its objective is twofold: first, to briefly outline the objectives of the project; and second, to elaborate on the conceptual framework underpinning the research.
+-------------------------------------
+
+10003415_234 - 0.333594522628
+[substrate, sers, solid-state, detection, optimisation, work, solution, ser, performance]
+
+OPTIMISATION OF SOLID-STATE AND SOLUTION-BASED SERS SYSTEMS FOR USE IN THE DETECTION OF ANALYTES OF CHEMICAL AND BIOLOGICAL SIGNIFICANCE
+AbstractThe University of ManchesterSamuel Bernard MabbottDoctor of PhilosophyOptimisation of Solid-State and Solution-Based SERS Systems for use in the Detection of Analytes of Chemical and Biological Significance13th September 2012Surface enhanced Raman scattering (SERS) has achieved much attention since its conception in 1974. The analytical technique overcomes many difficulties associated with conventional Raman whilst also increasing sensitivity. However, the increased interest and work in the field has also identified flaws, many of which are centred on the irreproducibility of the SERS enhancement effect. The majority of the work described in this thesis focusses on the ‘optimisation’ of solid-state and solution based SERS systems. Optimisation plays a crucial role in maximising both enhancement effects and reproducibility. Here criteria are outlined for the synthesis of high performance solid-state SERS substrates and the synthesis of a range of substrates is assessed, each with associated pros and cons. The most successful substrate was synthesised by exploiting redox potentials which allow for the direct deposition of silver onto copper foil. The deposition times and temperatures were optimised sequentially to generate a high performance substrate capable of detecting Rhodamine 6G at trace levels. Reproducibility comparisons of the silver on copper (SoC) substrate were carried out against commercial substrates: Klarite and QSERS, multiple univariate and multivariate methods were used to assess the substrates performance. The results confirmed that the SoC substrate performed better than both the commercial substrates. The work also highlights the importance of using multiple data analysis methods in order to assess the performance of a solid-state SERS substrate. Deposition of the silver surface was also successful on British 2p coins allowing for the detection and discrimination of illegal and legal drugs when coupled with multivariate data analysis methods such as PCA and PLS. Solution based SERS analyses were also carried out successfully using different optimisation strategies. The initial investigation involved careful control of the individual components of a SERS system (nanoparticles, aggregating agents and analyte) in order to establish a low limit of detection for the increasingly abused ‘legal high’ MDAI. The use of a reduced factorial design was then used successfully employed to explore a greater number of SERS variables and define a low limit of detection for the class B drug mephedrone. The robust experimental design also allowed an insight into the importance of the individual components within a solution based SERS system. The final piece of work carried out was the SERS discrimination of antibiotics: ampicillin, ticarcillin and carbenicillin. Optimisation of the solution based experiment allowed the in-situ hydrolysis of the β-lactam moiety present in ampicillin rendering it pharmacologically inactive to be followed under acidic conditions at concentrations of 10 ppm.
+-------------------------------------
+
+100013_102 - 0.254202186438
+[design, case, intuition, study, care, team, premature, process, baby, author, project]
+
+A case study of intuition and design: Building a tool for parents of premature babies and the nursing staff who care for them
+<p>The paper presents a research-based study project conveyed by Media Lab Helsinki in 2007–2008. During the process, the design team constructed a unique audiovisual tool that provides emotional support in coping with the challenges of a premature birth. The purpose of the two-hour DVD, with its three separate parts, is to help family, intensive care staff, and other associated health care personnel to better connect with each other and the tiny babies. As the first audiovisual material, which aims to explain premature babies’ communication and interaction, the end product has proven to be of significant value to Finnish neonatal care and other associated fields. The project was realized in cooperation with the Neonatal Intensive Care Unit in Children’s Hospital, HUCH (Helsinki University Central Hospital), and the design team worked in a network of shared expertise. </p>
+<p>
+In the case study the authors used co-design and self-reflection methods to monitor graduate students working with a society-level challenge. The focus was upon the utilisation of intuition in innovations, problem solving, and project management. During the design process, the authors observed the working theory: intuition is the basis of successful decision-making, which leads to innovative solutions. Throughout the design process, the team collected systematically feedback, which was later utilised as a corner stone in the case study.</p>
+<p>
+The authors believe that relying on intuition, the design team ended up addressing many hidden issues of the clinic and parenthood of premature babies’. This paper tries to unfold the evolutionary working approach used during the design process, presents highlights of the case study research as well as illuminates the intuitive way of working from designers’ point of view.
+</p>
+<p>
+<strong>Keywords:</strong> <br /> 
+Design; Intuition; Case Study; Shared Expertise; Innovations; Digital Media; Evolutionary Process</p>
+-------------------------------------
+
+10003158_234 - 0.0336061751407
+[neuroimage]
+
+Quantitative evaluation of white matter tract DTI parameter changes in gliomas using nonlinear registration
+Miller, P Coope, D Thompson, G Jackson, A Herholz, K United States NeuroImage Neuroimage. 2012 May 1;60(4):2309-15. Epub 2012 Feb 25.
+-------------------------------------
+
+10001952_234 - 0.149077436613
+[temporary, staffing, brazil, industry, agency]
+
+Developments in Latin America: The Temporary Staffing Industry in Brazil
+While many countries are still struggling to escape the effects of the financial crisis, Brazil has experienced strong economic growth, providing a stimulus for further investment and temporary staffing agency expansion. This Working Brief aims to outline some of the developments that have occurred in the temporary staffing industry in Brazil. I briefly outline the regulatory context for temporary staffing in Brazil before highlighting the characteristics of the industry and detailing the emergence of some of the top transnational temporary staffing agencies present in the Brazilian market. In summary, this Working Brief will highlight the key features of the temporary staffing industry in Brazil, and how it is viewed as a potential market for substantial future growth by some transnational temporary staffing agencies.
+-------------------------------------
+
+100018_102 - 0.0865200728568
+[design, social, practice, conversation, analysis, psychology]
+
+What Can Talk Tell Us About Design? Considering Practice Through Symbolic Interactionism and Conversation Analysis
+<p>How can scholars conduct rigorous research into the social activities that help constitute design practice? This paper considers this question through exploring how the interactive aspects of design may be fruitfully examined from the perspective of social psychology, especially through the approaches and methods of Symbolic Interactionism (SI) and Conversation Analysis (CA). The social activities of design refer to those situations wherein design is conducted in relation to face-to-face talk, or conversation. Since many aspects of design involve discussion, this paper argues that an SI-informed CA can offer an effective approach that may help us to better understand how communication and negotiation are central aspects of design. The author first outlines why social psychology is a significant perspective from which to study design through associating this perspective with the work of previous design researchers (Rittel, Schön). This is followed by an exploration of SI’s concern with the relationship between social structure and personal agency. Through considering design-based talk through an SI- focused lens, we can see how participants in design negotiate both personal creativity and externally-imposed constraints. The concepts of creativity and constraint are discussed in more detail through analyses of excerpts of conversations from two design-education critiques. These analyses demonstrate how CA’s methods can help scholars delineate the micro processes that link design practice to both personal opinion and wider social conditions. In summary, social psychology, SI, and CA are presented as distinctive, rigorous, and inter-related approaches that can help scholars of design practice to better understand the precise manner in which design is enacted through contexts of social interaction.
+</p>
+<p>
+<strong>Keywords:</strong> <br />
+Conversation Analysis; Design Practice; Interaction; Social Psychology; Symbolic Interactionism.</p>
+-------------------------------------
+
+10002102_234 - 0.488914509596
+[region, material, case, stress, crack, property, finite, factor, variation, intensity, solution, strip]
+
+Perturbation model for composite materials applied to analysis of cracks
+The behaviour of the stress intensity factor is investigated for long plane cracks with one tip interacting with a region of graded material properties. The material outside the region is considered to be homogeneous elastic. The analysis is based on assumed small differences in stiffness in the entire body. The linear extent of the body is assumed to be large compared with that of the graded region. The crack tip, including the graded region, is assumed embedded in a square-root singular stress field. The stress intensity factor for an arbitrarily shaped region is given by a singular integral. Solutions are presented for rectangular regions with elastic gradient parallel to the crack plane. The limiting case of infinite strip is solved analytically, leading to a very simple expression. Further, a fundamental case of material properties variation is considered, allowing the solution for an arbitrary variation to be represented by Fourier’s series expansion. An interesting feature of the solution is that the stress intensity factor remains finite and does neither vanish nor become unbounded as for the cases where modulus of elasticity posses jumps. A numerical study of the fundamental strip case, with finite variations of material properties, performed using the finite element method is communicated in brief. The analytical solution is compared with the numerical results and is shown to have a surprisingly large range of validity. If an error of 5% is tolerated, modulus of elasticity in the strip may drop by around 40% or increase with around 60%.
+-------------------------------------
+
+100020_102 - 0.161514909818
+[material, project, library, design, methodology, guideline, conceptual, study]
+
+M+D: conceptual guidelines for compiling a materials library
+<p>This article proposes to present a study conducted by the Raw Materials research group, the results of which comprise the conceptual guidelines for compiling an M+D material library. The study includes the topic, materials and design taking the impact of the changes that came into being in the post industrial era on project methodologies and the search for information regarding materials.</p>
+<p>
+Taking into account the importance and complexity that these relationships have taken on currently, we have studied the issue of materials based on Manzini (1983) and Ashby and Johnson (2002). Afterward different databases and materials libraries located in the Brazil, the United States, France and Italy geared toward design professionals and students were analyzed to understand what information and means of access to them were available. The project methodologies were approached based on Löbach (1991), Bürdeck (1994), Schulmann (1994), Baxter (1998), Dantas (1998 and 2005) and Papanek (1995 and 2000). This study sought to identify the key elements of the role of materials in the project process today, to serve as a parameter for the analysis of the models studied.</p>
+<p>
+A comparative analysis of the models investigated enabled identification of positive and negative aspects to adapt to the needs previously mentioned and identify conceptual guidelines for compiling a collection of materials for use in design projects.  
+</p>
+<p>
+<strong>Keywords:</strong> <br />
+Design, Materials, Project Methodology, Library</p>
+-------------------------------------
+
