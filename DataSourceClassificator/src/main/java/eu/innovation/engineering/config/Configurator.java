@@ -13,6 +13,7 @@ public class Configurator {
   public static final int numPaperForTraining = 30;
   public static final int numPaperForTest = 2;
   public static final int numFeatures = 100;
+  public static final int numLabels = 11;
   public static final String fileDictionaries = "data/dataset2"; 
   
   public final static Set<String> getCategories() throws IOException{
@@ -39,7 +40,8 @@ public class Configurator {
     food_and_drink,
     society,
     education,
-    religion_and_spirituality
+    religion_and_spirituality,
+    medicine
   }
 
 }

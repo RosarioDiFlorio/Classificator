@@ -162,7 +162,7 @@ public class CSVBuilder {
     for(int i=0;i<Configurator.numFeatures;i++)
       firstLine+=",F"+i;
 
-    for(int i=0;i<categories.size();i++)
+    for(int i=0;i<Configurator.numLabels;i++)
       firstLine+=",L"+i;
 
 
@@ -187,8 +187,10 @@ public class CSVBuilder {
           String currentCategory = idAndTarget.getTarget().replace(" ", "_");
           
           for(int i=0; i<Configurator.Categories.values().length;i++){
-            if(currentCategory.contains(Configurator.Categories.values()[i].toString()))
+            
+            if(currentCategory.contains(Configurator.Categories.values()[i].toString())){
               keywordsToWrite+=","+1;
+            }
             else
               keywordsToWrite+=","+0;
           }

@@ -138,3 +138,7 @@ Caused by: java.lang.ClassNotFoundException: org.apache.solr.client.solrj.SolrSe
 	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
 	... 24 more
+17:48:08,838 [                     main] ERROR [JAXRSUtils] [] No message body writer has been found for class eu.innovationengineering.word2vec.common.request.bean.VectorListRequestBean, ContentType: application/json
+17:52:12,457 [                     main] ERROR [JAXRSUtils] [] No message body writer has been found for class eu.innovationengineering.word2vec.common.request.bean.VectorListRequestBean, ContentType: application/json
+18:01:46,209 [                     main] ERROR [JAXRSUtils] [] No message body writer has been found for class eu.innovationengineering.word2vec.common.request.bean.VectorListRequestBean, ContentType: application/json
+18:04:11,209 [                     main] ERROR [JAXRSUtils] [] No message body writer has been found for class eu.innovationengineering.word2vec.common.request.bean.VectorListRequestBean, ContentType: application/json
