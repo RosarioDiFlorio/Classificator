@@ -1,0 +1,91 @@
+4384110_178 - technology_and_computing
+Thread Scheduling Mechanisms for Multiple-Context Parallel Processors
+[thread, processor, prioritization, context, cache, critical, multiple]
+
+--------------------------------------
+
+333479_14 - technology_and_computing
+Efficient Memory-Protected Integration of Add-On Software Subsystems in Small Embedded Automotive Applications
+[software, special, subsystem]
+
+--------------------------------------
+
+4873997_200 - technology_and_computing
+Acousto-optic signal processors for transmission and reception
+of phased-array antenna signals
+[antenna, processor, phased-array, acousto-optic, signal]
+
+--------------------------------------
+
+25782303_645 - technology_and_computing
+Control and path prediction of an Automate Guided Vehicle
+[vehicle, control, agv, wheel, path, position, system, model, localization, section, orientation, motion, steering, rear]
+
+--------------------------------------
+
+70183_59 - technology_and_computing
+Experiences of Using RM-ODP to Build Advanced Mobile Applications
+[rm-odp, communication, mobile, experience, development]
+
+--------------------------------------
+
+11678241_382 - technology_and_computing
+Routing algorithms in networks with the topology of circulant graphs
+[algorithm, graph, problem, topology, circulant, network, package]
+
+--------------------------------------
+
+11425644_351 - technology_and_computing
+Progettazione di un sistema Steer by Wire e sperimentazione tramite banco Hardware in the Loop
+[wheel, torque, system, position, control, vehicle, actuator, angle, sbw, order, motor, steering, electric]
+
+--------------------------------------
+
+99190_81 - technology_and_computing
+The performance of hybrid GPS and GLONASS
+[system, satellite, gp, hybrid, vehicle, performance, glonass]
+
+--------------------------------------
+
+4829996_198 - technology_and_computing
+Designing for construction automation: Advanced automation technologies for computer integrated construction
+[construction, task, automation, constructibility, method]
+
+--------------------------------------
+
+19924699_484 - technology_and_computing
+On the programmability of heterogeneous massively-parallel computing systems
+[accelerator, memory, system, datum, model, execution, performance, dissertation, application, code, parallel, heterogeneous, space, transfer, cpu, programming, nuama, address, virtual, separate]
+
+--------------------------------------
+
+100078_102 - technology_and_computing
+Hands on - hands off on hitting your thumb with a virtual hammer
+[craft, skill, space, different, online, type, learning]
+
+--------------------------------------
+
+19924684_484 - technology_and_computing
+Heterogeneity-awareness in multithreaded multicore processors
+[software, heterogeneity, processor, hardware, phd, dissertation, main, design, multicore, multithreaded, behavior, state-of-the-art]
+
+--------------------------------------
+
+11046791_333 - technology_and_computing
+Testing the accuracy of machine guidance in road construction
+[machine, accuracy, guidance, computer, instrument, rts, construction]
+
+--------------------------------------
+
+13954547_531 - technology_and_computing
+Computing in Large-Scale Dynamic Systems:
+[system, algorithm, device, communication, large-scale, failure, application, chapter, number, protocol, computing, topology, problem, property]
+
+--------------------------------------
+
+4891893_200 - technology_and_computing
+OMake: Designing a Scalable Build Process
+[software, build, omake, tool, project]
+
+--------------------------------------
+

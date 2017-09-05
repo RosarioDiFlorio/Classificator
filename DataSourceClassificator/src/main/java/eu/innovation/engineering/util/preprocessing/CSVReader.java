@@ -24,10 +24,10 @@ public class CSVReader {
   private static final int numKey = 10;
 
   public static void main(String[] args) throws Exception{
-    float uThreshold = (float) 1.0;
+    float uThreshold = (float) 0.8;
     float lThreshold = (float) 0.7;
-    String category = Configurator.Categories.society.name();
-    //category = "none";
+    String category = Configurator.Categories.religion_and_spirituality.name();
+//    category = "none";
     int count = readResultClassifier(PathConfigurator.applicationFileFolder+"results.csv",lThreshold,uThreshold,category,true);
     System.out.println("numero di source "+count);
   }
@@ -44,6 +44,7 @@ public class CSVReader {
     SolrClient solr = new SolrClient();
     PrintWriter p = new PrintWriter(new File(PathConfigurator.applicationFileFolder+"filetocheck"+category+".txt"));
     int count = 0;
+    String idToInsert= "";
     for(String id: dataMap.keySet()){
       float probs = 0;
       try{
@@ -58,18 +59,19 @@ public class CSVReader {
         List<String> tmp  = new ArrayList<>();
         tmp.add(id);
 
-        if(dataMap.get(id).get(1).contains(category)){
+        if(dataMap.get(id).get(1).contains(category) || category.equals("none")){
           List<Source> sources = solr.getSourcesFromSolr(tmp, Paper.class);
-
+          
 
           for(Source s: sources){
             if(!dataMap.get(s.getId()).get(1).contains(category) && !category.equals("none"))
               continue;
             else{
               count++;
-              System.out.println(probs);
-              System.out.println(dataMap.get(s.getId()).get(1));
+              System.out.println(count);
 
+              
+              idToInsert += s.getId()+" 1\n";
               p.println(s.getId()+" - "+dataMap.get(s.getId()).get(0)+" - "+dataMap.get(s.getId()).get(1));
               if(withKeys)
                 p.println(kex.extractKeywordsFromText(s.getTexts(), numKey).stream().map(Keyword::getText).collect(Collectors.toList())+"\n");
@@ -82,6 +84,8 @@ public class CSVReader {
         }   
       }
     }
+    p.println("\n"+idToInsert);
+    p.flush();
     p.close();
     return count;
   }

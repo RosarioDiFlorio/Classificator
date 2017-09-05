@@ -1,0 +1,30 @@
+10012730_234 - 0.739150047363 - food_and_drink
+[intake, fat, feedback, personalised, group]
+
+Efficacy of a minimal intervention to reduce fat intake.
+Effective dietary interventions must be developed to reduce fat intake in whole populations, rather than clinical subgroups. This study tested the effects of personalised feedback on fat intake in a general population. Hospital workers (n = 801) were randomised to receive personalised feedback or no personalised feedback. Personalised feedback consisted of one sentence expressing current fat intake as a percentage of total calorific intake. Changes in fat intake from baseline to five months post-intervention were evaluated. The personalised intervention produced significant decreases in total and saturated fat intake, compared with the control group. Total-fat decreased by 8.6% (versus 0.2% in the control group); saturated fat decreased by 9.3% (versus 1.7% in the control group). Fat intake as a proportion of total calorific intake did not decrease significantly in either condition. Findings also revealed differential effects of feedback on high- versus low-fat consumer groups. Personalised feedback significantly reduced fat intake in high-fat consumers, and prevented low-fat consumers from increasing their fat intake. Personalised fat feedback therefore represents an efficacious and low-intensity approach to the reduction of fat intake in the general population.
+-------------------------------------
+
+10005524_234 - 0.710893494367 - food_and_drink
+[ad, transgenic, diet, htrp, intraneuronal, animal, disease, ca1, density, ntrp]
+
+High tryptophan diet reduces CA1 intraneuronal β-amyloid in the triple transgenic mouse model of Alzheimer’s disease
+Alzheimer's disease (AD) is a progressive neurodegenerative disease that impairs mnesic functions. The histopathology of the disease is manifested by the accumulation of intracellular β-amyloid (Aβ) and subsequent formation of neuritic plaques as well as the presence neurofibrillary tangles in specific brain regions associated with learning and memory including the hippocampus. Here, we analysed the effect of chronic (1 month) food diets containing low (LTrP), normal (NTrP) and high tryptophan (HTrP), 0.04, 0.20 and 0.40 g/100 g, respectively, on CA1 serotonin transporter (SERT) fibre density, intraneuronal Aβ deposition and total number of serotonergic (5-HT) neurons in an AD triple transgenic (3xTg-AD) mouse model. Nontransgenic (non-Tg) animals fed with HTrP displayed increased SERT fibre density in CA1 (35%) and in stratum lacunosum moleculare (S.Mol) (48%) compared to LTrP diet. Transgenic animals showed increased SERT fibre density in CA1 S.Mol compared to diet-matched non-Tg irrespective of dietary tryptophan content (104% for LTrP, 74% for NTrP and 35% for HTrP); no differences were observed in the total number of 5-HT neurons neither in the dorsal nor in the median raphe nuclei. However, and more relevant to AD, HTrP diet reduced intraneuronal Aβ density (by a 17%) in transgenic animals compared to transgenic animals fed with NTrP diet. Our results show that increased dietary TrP intake reduces intraneuronal Aβ load in the 3xTg-AD mouse model of AD, suggesting that enhanced TrP intake and in consequence a potential increase in 5-HT neurotransmission may be effective in reducing plaque pathology in AD.
+-------------------------------------
+
+100011_102 - 0.707744367455 - food_and_drink
+[colour, package, fruit, design, product]
+
+Colour Design for Carton-Packed Fruit Juice Packages
+<p>The present research studies the relationships between observers’ expectations for 7 fruit juice packages and the colour design of the package. To do this, a two-stage experiment was conducted. At the first stage, we studied perceived colours for the fruit images shown on each package. At the second stage, fruit juice packages with 20 package colours were rated using 5 bipolar scales: colour harmony, preference, freshness, naturalness and product quality. The experimental results show that the observers tended to perceive fruit image colours lighter and more saturated than those measured using colour measuring instruments. Using factor analyses, we classified the 5 bipolar scales into 2 factors: Product Preference and Freshness. Package colour design was found to have significant impacts on both factors: similarity in chroma and hue between package colour and perceived fruit colour would lead to high product expectations.
+</p>
+<p>
+<strong>Keywords:</strong> <br />
+colour design; colour harmony; product expectation; perceived image colour</p>
+-------------------------------------
+
+
+10012730_234 1
+10005524_234 1
+100011_102 1
+

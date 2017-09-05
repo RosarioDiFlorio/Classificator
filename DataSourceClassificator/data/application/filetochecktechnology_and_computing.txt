@@ -1,0 +1,214 @@
+10003765_234 - 0.777097642672 - technology_and_computing
+[delay, asynchronous, sdram, circuit, datum, digital, conference, ddr]
+
+An Asynchronous Fully Digital Delay Locked Loop for DDR SDRAM Data Recovery
+Browse Conference Publications > Asynchronous Circuits and Sys ...HelpAn Asynchronous Fully Digital Delay Locked Loop for DDR SDRAM Data RecoveryThis paper appears in:Asynchronous Circuits and Systems (ASYNC), 2012 18th IEEE International Symposium onDate of Conference: 7-9 May 2012Author(s): Garside, J.D.Furber, S.B. ; Temple, S. ; Clark, D.M. ; Plana, L.A.Page(s): 49 - 56Product Type: Conference Publications * Access Full Text in PDF * 6243881 searchabstract Download Citations * Email * Print * Rights And Permissions * Save to Project *AbstractDelay Locked Loops (DLLs) have become a standard structure in IC design, providing programmable, calibrated on-chip delays. They can be used, for example, to deskew clocks by matching delay paths. One application is in data recovery from DDR SDRAMs whose data strobe edges need retarding to provide adequate setup times for latching read data. The DLL described here was developed as a solution to this problem. It is wholly amenable to implementation on a purely digital CMOS device using standard cells. The authors' background in self-timed circuits led to a novel, compact design - particularly in regard of the phase detector - which can have adjustable hysteresis to avoid jitter. The unit achieves lock rapidly and can subsequently track environmental variations without pausing operation for recalibration. It has been fabricated in 130 nm CMOS and is in use in a SoC SDRAM interface.
+-------------------------------------
+
+10004737_234 - 0.765728744876 - technology_and_computing
+[model, condor-copasi, computing, simulation, high-throughput, analysis, condor, environment, task, number]
+
+Condor-COPASI: high-throughput computing for biochemical networks.
+ABSTRACT: BACKGROUND: Mathematical modelling has become a standard technique to improve our understanding of complex biological systems. As models become larger and more complex, simulations and analyses require increasing amounts of computational power. Clusters of computers in a high-throughput computing environment can help to provide the resources required for computationally expensive model analysis. However, exploiting such a system can be difficult for users without the necessary expertise. RESULTS: We present Condor-COPASI, a server-based software tool that integrates COPASI, a biological pathway simulation tool, with Condor, a high-throughput computing environment. Condor-COPASI provides a web-based interface, which makes it extremely easy for a user to run a number of model simulation and analysis tasks in parallel. Tasks are transparently split into smaller parts, and and submitted for execution on a Condor pool. Result output is presented to the user in a number of formats, including tables and interactive graphical displays. CONCLUSIONS: Condor-COPASI can effectively use a Condor high-throughput computing environment to provide significant gains in performance for a number of model simulation and analysis tasks. Condor-COPASI is free, open source software, released under the Artistic License 2.0, and is suitable for use by any institution with access to a Condor pool. Source code is freely available for download at http://code.google.com/p/condor-copasi/, along with full instructions on deployment and usage.
+-------------------------------------
+
+10003758_234 - 0.775265714461 - technology_and_computing
+[simulation, cortical, spinnaker, computer]
+
+Power-efficient simulation of detailed cortical microcircuits on SpiNNaker
+Computer simulation of neural matter is a promising methodology for understanding the function of the brain. Recent anatomical studies have mapped the intricate structure of cortex, and these data have been exploited in numerous simulations attempting to explain its function. However, the largest of these models run inconveniently slowly and require vast amounts of electrical power, which hinders useful experimentation. SpiNNaker is a novel computer architecture designed to address these problems using low-power microprocessors and custom communication hardware. We use four SpiNNaker chips (of a planned fifty thousand) to simulate, in real-time, a cortical circuit of ten thousand spiking neurons and four million synapses. In this simulation, the hardware consumes 100 nJ per neuron per millisecond and 43 nJ per postsynaptic potential, which is the smallest quantity reported for any digital computer. We argue that this approaches fast, power-feasible and scientifically useful simulations of large cortical areas.
+-------------------------------------
+
+10007411_234 - 0.743384215894 - technology_and_computing
+[system, pulsar, distance, millisecond, parallax, mass]
+
+A PARALLAX DISTANCE AND MASS ESTIMATE FOR THE TRANSITIONAL MILLISECOND PULSAR SYSTEM J1023+0038
+The recently discovered transitional millisecond pulsar system J1023+0038 exposes a crucial evolutionary phase of recycled neutron stars for multiwavelength study. The system, comprising the neutron star itself, its stellar companion, and the surrounding medium, is visible across the electromagnetic spectrum from the radio to X-ray/gamma-ray regimes and offers insight into the recycling phase of millisecond pulsar evolution. Here, we report on multiple-epoch astrometric observations with the Very Long Baseline Array (VLBA) which give a system parallax of 0.731 ?? 0.022 milliarcseconds (mas) and a proper motion of 17.98 ?? 0.05 mas yr-1. By combining our results with previous optical observations, we are able to use the parallax distance of 1368+42 - 39 pc to estimate the mass of the pulsar to be 1.71 ?? 0.16 M sun, and we are also able to measure the three-dimensional space velocity of the system to be 126 ?? 5 km s-1. Despite the precise nature of the VLBA measurements, the remaining \ {}3\% distance uncertainty dominates the 0.16 M sun error on our mass estimate.
+-------------------------------------
+
+10009020_234 - 0.710449107309 - technology_and_computing
+[tool, document, type, design, user, visual]
+
+User-Centered Design of a Visual Data Mapping Tool
+Understanding the meaning and the type of a business document received by a company is important in order to determine an appropriate response. We have developed a visual tool allowing ordinary users to express mappings between arriving documents and their elements on one side and the different document types on the other. The tool is used to set up and continuously update an automatic semantic analysis mechanism which determines the document type from a set of information items contained in the document, thus allowing automatic processing associated with the types to be applied to the arriving document instances. The activities performed by end users within the visual data mapping tool are quite complex and require user-centric design to ensure tool is useful and usable. In this paper we describe the user-centric process informing the design of the tool. We conducted two workshops to discover the mental models of our users regarding the information content in their documents and their requirements towards the design of the tool. Subsequently, these findings were used to design and implement the visual data mapping tool. The resulting system was evaluated by target end users who proficiently demonstrated the usability of the developed concepts and features.
+-------------------------------------
+
+10003925_234 - 0.738715904253 - technology_and_computing
+[system, dynamical, automaton, inevitability]
+
+Dynamically-Driven Timed Automaton Abstractions for Proving Liveness of Continuous Systems
+We look at the problem of proving inevitability of continuousdynamical systems. An inevitability property says that a region of thestate space will eventually be reached: this is a type of liveness propertyfrom the computer science viewpoint, and is related to attractivity of setsin dynamical systems. We consider a method of Maler and Batt to makean abstraction of a continuous dynamical system to a timed automaton,and show that a potentially infinite number of splits will be made if thesplitting of the state space is made arbitrarily. To solve this problem, wedefine a method which creates a finite-sized timed automaton abstractionfor a class of linear dynamical systems, and show that this timedabstraction proves inevitability.
+-------------------------------------
+
+10009524_234 - 0.721442890445 - technology_and_computing
+[communication, architecture, processor, neural, spinnaker, scalable]
+
+Scalable communications for a million-core neural processing architecture
+The design of a new high-performance computing platform to model biological neural networks requires scalable, layered communications in both hardware and software. SpiNNaker???s hardware is based upon Multi-Processor System-on-Chips (MPSoCs) with flexible, power-efficient, custom communication between processors and chips. The architecture scales from a single 18-processor chip to over 1 million processors and to simulations of billion-neuron, trillion-synapse models, with tens of trillions of neural spike-event packets conveyed each second. The communication networks and overlying protocols are key to the successful operation of the SpiNNaker architecture, designed together to maximise performance and minimise the power demands of the platform. SpiNNaker is a work in progress, having recently reached a major milestone with the delivery of the first MPSoCs. This paper presents the architectural justification, which is now supported by preliminary measured results of silicon performance, indicating that it is indeed scalable to a million-plus processor system.
+-------------------------------------
+
+10011274_234 - 0.759602330448 - technology_and_computing
+[mode, beam, diagnostic, dipole, cavity, harmonic, hom, modal]
+
+A study of beam position diagnostics using beam-excited dipole modes in third harmonic superconducting accelerating cavities at a free-electron laser
+We investigate the feasibility of beam position diagnostics using higher order mode (HOM) signals excited by an electron beam in the third harmonic 3.9 GHz superconducting accelerating cavities at FLASH. After careful theoretical and experimental assessment of the HOM spectrum, three modal choices have been narrowed down to fulfill different diagnostics requirements. These are localized dipole beam-pipe modes, trapped cavity modes from the fifth dipole band, and propagating modes from the first two dipole bands. These modes are treated with various data analysis techniques: modal identification, direct linear regression (DLR), and singular value decomposition (SVD). Promising options for beam diagnostics are found from all three modal choices. This constitutes the first prediction, subsequently confirmed by experiments, of trapped HOMs in third harmonic cavities, and also the first direct comparison of DLR and SVD in the analysis of HOM-based beam diagnostics
+-------------------------------------
+
+10018222_234 - 0.759318200016 - technology_and_computing
+[diffraction, material, system]
+
+Multivariate analysis of pixelated diffraction data
+A novel pixelated ASIC detector using Cadmium Telluride is applied to a combined energy dispersive- and angular dispersive- X-ray diffraction system. This system is designed to obtain multiple diffraction signatures of powdered materials simultaneously. The diffraction data is analyzed using multivariate partial least squares regression utilizing the diffraction spectra at multiple scatter angles, and material concentration in a three-way regression analysis. The calibration models are used to predict unknown samples, and show that utilizing the angular information can help improve concentration prediction in samples of mixtures and has potential in material identification systems.
+-------------------------------------
+
+10003722_234 - 0.746476149055 - technology_and_computing
+[visualization, object, architecture, structure, capability, datum, dataset, need, database, pipeline]
+
+Enabling Visualization of Massive Datasets Through MPP Database Architecture
+We are developing a novel visualization architecture which is specifically designed to render very large (terabyte scale) datasets. Our method differs from the classic visualization pipeline of Harber and McNabb. In particular we eliminate the need to create geometric objects, for example surfaces composed of polygons, as a stage before rendering. Such objects require specialist HPC servers for their creation and manipulation; our solution eliminates the need for such servers. We replace the geometric objects by structures stored and tagged in a database next to the original dataset; we call these Spatially Registered Data Structures (SRDS). Such structures are linked to a single rendering pipeline through the on-the-fly creation of a Feature Embedded Spatial Volume (FESVo). This solution exploits recently developed capabilities of in-database Massive Parallel Processing (MPP) and parallel data streaming, together with the rapidly developing capabilities of GPUs. We describe an early prototype of an architecture applied to seismic data from the oil and gas industry.
+-------------------------------------
+
+10004224_234 - 0.804007828124 - technology_and_computing
+[prover, tableau, platform, generation, mettel2]
+
+MetTeL2: Towards a Tableau Prover Generation Platform
+To appear
+-------------------------------------
+
+10003679_234 - 0.771700271066 - technology_and_computing
+[machine, technique, motor, in-service, zone, cable, gas, monitoring]
+
+On-Line Partial Discharge Testing of In-Service Rotating Machines in Ex Hazardous Environments by Employment of Central Monitoring Solutions
+Carrying out the on-line partial discharge (OLPD)testing of in-service high voltage (HV) rotating machines canbe an effective technique to understand any insulationdegradation mechanisms that may be present within the statorwindings. Interpretation of OLPD measurements performedon rotating machines can be difficult due to the presence ofnoise and interference from variable speed drives (VSD’s)and/or motor exciter systems. The new PD measurement andmonitoring techniques outlined in this paper are carried out atthe switchgear-end of the machine’s feeder cable, at distancesof up to 2km from the machine under test. It has been shownthat this remote monitoring technique eliminates much of thishigh-frequency interference which can be seen at themachines’ terminal box. This is due to the effect of the highvoltage power cable between the switchgear and the machine,with the cable acting as a low-pass filter, stripping out higherfrequency signals whilst retaining lower frequencies. Also,most importantly for operators with motors located within‘Ex’ hazardous gas zones such as in the oil & gas industry, theremote monitoring technique allows these motors to bemonitored without the need to enter the ‘Ex’ zone to installsensors or monitors. The authors present case studies from twooil & gas companies showing how the technique has been usedfor monitoring PD of in-service motors located in Ex zones.
+-------------------------------------
+
+10004312_234 - 0.790843664833 - technology_and_computing
+[visualization, binning, grid, datum, system, technique, method, information]
+
+Interactive Grid Based Binning for Information Visualization
+Clutter within information visualization (infovis) systems is an area of continuing concern and is receiving increasing research interest. Solutions to the problem vary in their approach, ranging from novel visualizations designed specifically to cope with high data density, through to statistical methodologies such as binning. This paper presents a flexible method that allows interactive placement of a grid based binning system that aims to enhance traditional information visualization techniques. User evaluations employing two specific visualization methods are described using a prototype grid based binning system. The method is shown to be a quick and easy way to visually segment a data domain, while the two visualization techniques presented are shown to provide effective data overview. Due to the abstracted nature of the binning grid, its applicability goes beyond the examples provided in this paper, therefore it could be considered as a generic data reduction and/or overview technique within many systems.
+-------------------------------------
+
+10009783_234 - 0.701976416925 - technology_and_computing
+[simulation, behaviour, process, theory, outcome, variable, control, blood, manipulation]
+
+Use of mental simulations to change theory of planned behaviour variables.
+OBJECTIVES: The predictive validity of the theory of planned behaviour is well established, but much less is known about: (a) whether there are causal relationships between key components of the model and (b) how to go about changing the theory of planned behaviour variables. This study tested the ability of outcome and process simulations to change variables specified in the theory of planned behaviour in relation to blood donation. DESIGN: Participants (N=146) were randomized to one of four conditions: outcome simulation only, process simulation only, process-plus-outcome simulation and a distractor control condition. The dependent variables were state anxiety, and intention attitude, subjective norm and perceived control from the theory of planned behaviour. METHODS: Participants were asked to empty their mind and visualize themselves: (a) after donating blood (outcome manipulation), (b) preparing to donate blood (process manipulation), (c) both preparing to donate blood and after having donated blood (process-plus-outcome manipulation) or (d) both preparing to get a high mark and after having got a high mark on their course (control condition). Following mental rehearsal, participants completed the dependent variables. RESULTS: There were no main effects of outcome simulation, but process simulation successfully increased intention, subjective norm and perceived control. There was also a significant outcome simulation x process simulation interaction for attitude. The effect of the process manipulation on intention was mediated by subjective norm and perceived control. CONCLUSIONS: The findings show promise for the use of mental simulations in changing cognitions and further research is required to extend the present findings to other health behaviours.
+-------------------------------------
+
+10005791_234 - 0.782979119872 - technology_and_computing
+[system, nonlinear, constraint, portfolio, belief, optimisation]
+
+Belief rule-based system for portfolio optimisation with nonlinear cash-flows and constraints
+A belief rule-based (BRB) system is a generic nonlinear modelling and inference scheme. It is based on the concept of belief structures and evidential reasoning (ER), and has been shown to be capable of capturing complicated nonlinear causal relationships between antecedent attributes and consequents. The aim of this paper is to develop a BRB system that complements the RiskMetrics WealthBench system for portfolio optimisation with nonlinear cash-flows and constraints. Two optimisation methods are presented to locate efficient portfolios under different constraints specified by the investors. Numerical studies demonstrate the effectiveness and efficiency of the proposed methodology.
+-------------------------------------
+
+10002094_234 - 0.859056149081 - technology_and_computing
+[sensor, query, networks]
+
+SNEE: A Query Processor for Wireless Sensor Networks
+Special issue on Query Processing in Sensor Networks
+-------------------------------------
+
+10017143_234 - 0.785054070385 - technology_and_computing
+[itemset, cardinality, algorithm, dataset, closed, colossal, large]
+
+DisClose: Discovering Colossal Closed Itemsets from High Dimensional Datasets via a Compact Row-Tree
+Data mining is an essential part of knowledge discovery, and performs the extraction of useful information from a collection of data, so as to assist human beings in making necessary decisions. This thesis describes research in the field of itemset mining, which performs the extraction of a set of items that occur together in a dataset, based on a user specified threshold. Recent focus of itemset mining has been on the discovery of closed itemsets from high-dimensional datasets, characterised by relatively few rows and a relatively larger number of columns. A closed itemset is the maximal set of items common to a set of rows. By exponentially increasing running time as the average row length increases, mining closed itemsets from such datasets renders most column enumeration-based algorithm impractical. Existing row enumeration-based algorithms also show that they struggle to reach large cardinality closed itemsets. This is due to the implementation of the support constraint, which is based on the frequency of occurrence of the itemset. Frequent closed itemsets are usually smaller in size and larger in numbers, hence taking much of the memory space. Unfortunately, large cardinality closed itemsets are likely to be more informative than small cardinality closed itemsets in this type of dataset. 	The research investigates the area of large cardinality closed itemset discovery by examining and analysing the literature and identifying both strengths and weaknesses of existing approaches. Based on this synthesis, a new algorithm, termed DisClose, has been designed and developed to discover large cardinality (colossal) closed itemsets from high-dimensional datasets. The algorithm strategy begins by enumerating large cardinality itemsets and from these, builds smaller itemsets. This is done by applying a bottom-up search of the row-enumeration tree. A minimum cardinality threshold has been proposed to identify colossal closed itemsets and to further reduce the search space. A novel closedness-checking method has been proposed which uses a unique generator to immediately discover closed itemsets without the need to check if each new closed itemset has previously been found. These approaches have been combined using a Compact Row-Tree (CR-Tree) data structure designed to assist in the efficient discovery of the colossal closed itemsets. For evaluation purposes four state-of-the-art algorithms have been selected for comparison. Experimental results show that algorithm DisClose is scalable and can efficiently extract colossal closed itemsets in the considered dataset, even for low support thresholds that existing algorithms cannot find.
+-------------------------------------
+
+10003726_234 - 0.864086871451 - technology_and_computing
+[hardware, model, neural, performance, mlp, network]
+
+Event-driven MLP implementation on neuromimetic hardware
+While new neural hardware is increasingly emphasizing spiking neural models, there will still be a need to model “classical” neural networks like the multilayer perceptron (MLP) for the foreseeable future. Given that the trend in new chips is towards a “neuromimetic” design that specialises the hardware for neural networks but does not hardwire the model, it is worth examining whether it is possible to implement the MLP on such hardware and realise performance gains over conventional simulation on general-purpose computers. Using the SpiNNaker chip as a demonstration platform, we show that it is possible to find efficient mappings to improve both the performance and the scalability of the MLP network, allowing for much larger models than possible in software. These mappings, however require a careful consideration of how to transform the “timeless” MLP model into an event-driven implementation. Examination of the hardware performance also reveals the importance of distributing processing and traffic load so that local congestion does not end up crippling the simulation. These considerations being solved, not only does the hardware demonstrate the potential for significant performance improvement, it also illustrates important general techniques and methods for translating nonspiking models onto the emerging generation of spiking neural hardware. The results suggest both the form that models might take and the architectures that future neural hardware could adopt for optimum generality and performance.
+-------------------------------------
+
+100077_106 - 0.706181188722 - technology_and_computing
+[linac, beam]
+
+Review of beam dynamics and space charge resonances in high intensity linacs
+Recent systematic studies of resonant space charge effects and anisotropy have helped to narrow the gap between idealized beam physics models of halos and high-current linac design. We review the beam dynamics basis of nonequipartitioned beams, discuss the consequences of bunch anisotropy, and introduce  3D free energy equivalence  as a new concept to model halo growth in linac bunches. Results are applied to the CERN-SPL, the SNS and the ESS superconducting (sc) linac designs.
+-------------------------------------
+
+10003699_234 - 0.856511437895 - technology_and_computing
+[control, converter, bidirectional]
+
+A Control Technique for Bidirectional Dual Active Bridge DC-DC converter
+This paper presents a new bidirectional current control for the dual active bridge (DAB) DC-DC converter and some preliminary investigations are undertaken to show its operation. The SABER simulation model is described for bidirectional control under square-wave mode of operation of the converter. The performance of the converter and the proposed control was verified through extensive SABER simulations corresponding to steady-state and transient conditions.
+-------------------------------------
+
+10008646_234 - 0.719829864111 - technology_and_computing
+[lacti, system, lactococcus]
+
+Engineering of self-sustaining systems: Substituting the yeast glucose transporter plus hexokinase for the Lactococcus lactis phosphotransferase system in a Lactococcus lactis network in silico
+Times Cited: 0 Si
+-------------------------------------
+
+10003317_234 - 0.777097642672 - technology_and_computing
+[delay, asynchronous, sdram, circuit, datum, digital, conference, ddr]
+
+An Asynchronous Fully Digital Delay Locked Loop for DDR SDRAM Data Recovery
+Browse Conference Publications > Asynchronous Circuits and Sys ...HelpAn Asynchronous Fully Digital Delay Locked Loop for DDR SDRAM Data RecoveryThis paper appears in:Asynchronous Circuits and Systems (ASYNC), 2012 18th IEEE International Symposium onDate of Conference: 7-9 May 2012Author(s): Garside, J.D.Furber, S.B. ;  Temple, S. ;  Clark, D.M. ;  Plana, L.A.Page(s): 49 - 56Product Type: Conference Publications    * Access Full Text in PDF    * 6243881 searchabstract Download Citations    * Email    * Print    * Rights And Permissions    * Save to Project    *AbstractDelay Locked Loops (DLLs) have become a standard structure in IC design, providing programmable, calibrated on-chip delays. They can be used, for example, to deskew clocks by matching delay paths. One application is in data recovery from DDR SDRAMs whose data strobe edges need retarding to provide adequate setup times for latching read data. The DLL described here was developed as a solution to this problem. It is wholly amenable to implementation on a purely digital CMOS device using standard cells. The authors' background in self-timed circuits led to a novel, compact design - particularly in regard of the phase detector - which can have adjustable hysteresis to avoid jitter. The unit achieves lock rapidly and can subsequently track environmental variations without pausing operation for recalibration. It has been fabricated in 130 nm CMOS and is in use in a SoC SDRAM interface.
+-------------------------------------
+
+10005172_234 - 0.734849277825 - technology_and_computing
+[3-d, circuit, design, methodology, vertical]
+
+Interconnect-Based Design Methodologies for Three-Dimensional Integrated Circuits
+Browse Journals & Magazines > Proceedings of the IEEE ...> Volume:97 Issue:1Prev | Back to ResultsHelpInterconnect-Based Design Methodologies for Three-Dimensional Integrated CircuitsThis paper appears in:Proceedings of the IEEEDate of Publication: Jan. 2009Author(s): Pavlidis, V.F.Dept. of Electr. & Comput. Eng., Univ. of Rochester, Rochester, NYFriedman, E.G.Volume: 97 , Issue: 1Page(s): 123 - 140Product Type: Journals & Magazines * Access Full Text in PDF * 1 1 4796277 searchabstract Download Citations * Email * Print * Rights And Permissions * Save to Project *AbstractDesign techniques for three-dimensional (3-D) ICs considerably lag the significant strides achieved in 3-D manufacturing technologies. Advanced design methodologies for two-dimensional circuits are not sufficient to manage the added complexity caused by the third dimension. Consequently, design methodologies that efficiently handle the added complexity and inherent heterogeneity of 3-D circuits are necessary. These 3-D design methodologies should support robust and reliable 3-D circuits while considering different forms of vertical integration, such as system-in-package and 3-D ICs with fine grain vertical interconnections. Global signaling issues, such as clock and power distribution networks, are further exacerbated in vertical integration due to the limited number of package pins, the distance of these pins from other planes within the 3-D system, and the impedance characteristics of the through silicon vias (TSVs). In addition to these dedicated networks, global signaling techniques that incorporate the diverse traits of complex 3-D systems are required. One possible approach, potentially significantly reducing the complexity of interconnect issues in 3-D circuits, is 3-D networks-on-chip (NoC). Design methodologies that exploit the diversity of 3-D structures to further enhance the performance of multiplane integrated systems are necessary. The longest interconnects within a 3-D circuit are those interconnects comprising several TSVs and traversing multiple physical planes. Consequently, minimizing the delay of the interplane nets is of great importance. By considering the nonuniform impedance characteristics of the interplane interconnects while placing the TSVs, the delay of these nets is decreased. In addition, the difference in electrical behavior between the horizontal and vertical interconnects suggests that asymmetric structures can be useful candidates for distributing the clock signal within a 3-D circuit. A 3-D test circuit fabricated with a 180 nm si- - licon-on-insulator (SOI) technology, manufactured by MIT Lincoln Laboratories, exploring several clock distribution topologies is described. Correct operation at 1 GHz has been demonstrated. Several 3-D NoC topologies incorporating dissimilar 3-D interconnect structures are reviewed as a promising solution for communication limited systems-on-chip (SoC). Appropriate performance models are described to evaluate these topologies. Several forms of vertical integration, such as system-in-package and different candidate technologies for 3-D circuits, such as SOI, are considered. The techniques described in this paper address fundamental interconnect structures in the 3-D design process. Several interesting research problems in the design of 3-D circuits are also discussed.
+-------------------------------------
+
+10009750_234 - 0.873146934861 - technology_and_computing
+[behaviour, prototype, variable, tpb, intention, predictive, pwm, actor, validity, abstainer]
+
+Augmenting the theory of planned behaviour with the prototype/willingness model: predictive validity of actor versus abstainer prototypes for adolescents' health-protective and health-risk intentions.
+OBJECTIVES: The present research tested: (a) whether prototype perceptions and descriptive norms from the prototype/willingness model (PWM; Gibbons, Gerrard, Blanton, & Russell, 1998) enhance the prediction of adolescents' intentions to engage in health-protective and health-risk behaviours after variables from the theory of planned behaviour (TPB; Ajzen, 1991) and past behaviour have been taken into account and (b) whether images of the type of person who engages in a health behaviour (actor prototypes) and images of the type of person who does not engage in a health behaviour (abstainer prototypes) have equivalent predictive validity. DESIGN: An experimental design with a single between participants factor (actor versus abstainer prototype) was employed. METHOD: Participants in this study were 247 school pupils who completed measures of TPB variables, PWM variables and past behaviour in relation to three health-protective and three health-risk behaviours. RESULTS: Findings indicated that PWM variables accounted for a significant proportion of the variance in behavioural intentions after TPB variables and past behaviour had been taken into account (Mean deltaR2=.05). Perceived similarity to prototypes was the most consistent additional predictor of intention. Actor and abstainer prototypes exhibited equivalent predictive validity. CONCLUSIONS: The present research suggests that variables from the PWM, especially prototype similarity, enhance the predictive validity of the TPB. The findings also provide new evidence that acquiring the characteristics of both health and risk images may be goals among adolescents and suggest that both healthy and risky prototypes constitute useful cognitive targets for interventions.
+-------------------------------------
+
+10003313_234 - 0.915198632762 - technology_and_computing
+[hardware, model, system, simulation, network, pacman, configuration, spinnaker, parallel]
+
+A hierachical configuration system for a massively parallel neural hardware platform
+Simulation of large networks of neurons is a powerful and increasingly prominent methodology for investigate brain functions and structures. Dedicated parallel hardware is a natural candidate for simulating the dynamic activity of many non-linear units communicating asynchronously. It is only scientifically useful, however, if the simulation tools can be configured and run easily and quickly. We present a method to map network models to computational nodes on the SpiNNaker system, a programmable parallel neurally-inspired hardware architecture, by exploiting the hierarchies built in the model. This PArtitioning and Configuration MANager (PACMAN) system supports arbitrary network topologies and arbitrary membrane potential and synapse dynamics, and (most importantly) decouples the model from the device, allowing a variety of languages (PyNN, Nengo, etc.) to drive the simulation hardware. Model representation operates on a Population/Projection level rather than a single-neuron and connection level, exploiting hierarchical properties to lower the complexity of allocating resources and mapping the model onto the system. PACMAN can be thus be used to generate structures coming from different models and front-ends, either with a host-based process, or by parallelising it on the SpiNNaker machine itself to speed up the generation process greatly. We describe the approach with a first implementation of the framework used to configure the current generation of SpiNNaker machines and present results from a set of key benchmarks. The system allows researchers to exploit dedicated simulation hardware which may otherwise be difficult to program. In effect, PACMAN provides automated hardware acceleration for some commonly used network simulators while also pointing towards the advantages of hierarchical configuration for large, domain-specific hardware systems.
+-------------------------------------
+
+100075_102 - 0.76609312939 - technology_and_computing
+[collaboration, design, format, long-distance, teamwork, storytelling, presenter, student, virtual, project]
+
+Case Study: “Hair meets Design”: The Application of Storytelling in the Context of Long-Distance Collaboration and Virtual Teamwork
+<p>Virtual teamwork and long distance collaboration is an increasingly attractive option in design education especially when students and other participants, (for example, industry guests or sponsors) cannot meet in the same physical place or classroom.</p>
+<p>
+The constant improvement in technology allows this type of electronic communication to be increasingly accepted as an appropriate format for collaboration and evaluation of student projects. </p>
+<p>
+This paper discusses the collaboration between members of a company in Germany and a group of industrial design students in California. It will present the work flow, the evaluation tools and the formats introduced during the process.</p>
+<p>
+Since the participants of this project could not meet physically to discuss and evaluate ideas, it was imperative for the teams to develop standard visual formats that were easy to understand and re-utilize. These formats had to be flexible enough for the purpose of adding comments from the evaluators. </p>
+<p>
+Because the physical presence of the presenter is missing, it is necessary to adjust the content and layout of the messages in order to make them more relevant and self-explanatory. The message has to be easy to understand without the help of a presenter or lecturer. </p>
+<p>
+One of the most significant questions in this project was how to present multiple “layers of information” in one single image at the same time (for example, how to depict work flow, time sequence and object hierarchy in one single frame). </p>
+<p>
+In a normal situation (where the presenter is physically present in front of an audience) he/she can verbally add secondary information that would not be visually included but it is necessary in order to understand the relevance of the image being presented. This additional verbal information could be related to time, hierarchy, etc.</p>
+<p>
+This paper will discuss the development and evaluation of visual formats that present multiple layers of information in one single image. It describes the methods used and reports the solutions. Ultimately, this paper explains the relevance of using storytelling in the context of long-distance design collaboration.
+</p>
+<p>
+<strong>Keywords:</strong> <br />
+Virtual Teamwork; Long-Distance Collaboration; Storytelling; Infographics</p>
+-------------------------------------
+
+10003999_234 - 0.719090994392 - technology_and_computing
+[model, network, computational]
+
+Creating, documenting and sharing network models.
+As computational neuroscience matures, many simulation environments are available that are useful for neuronal network modeling. However, methods for successfully documenting models for publication and for exchanging models and model components among these projects are still under development. Here we briefly review existing software and applications for network model creation, documentation and exchange. Then we discuss a few of the larger issues facing the field of computational neuroscience regarding network modeling and suggest solutions to some of these problems, concentrating in particular on standardized network model terminology, notation, and descriptions and explicit documentation of model scaling. We hope this will enable and encourage computational neuroscientists to share their models more systematically in the future.
+-------------------------------------
+
+10005037_234 - 0.746629468365 - technology_and_computing
+[beam, method, crack]
+
+An approximate method for determining the static deflection and natural frequency of a cracked beam
+This paper provides an approximate method to determine the stiffness and the fundamental frequency of a cracked beam. The cracked beam is first represented as an un-cracked beam with equivalent reduced sections around the cracks. The effect of the cracks is explained, visualised and quantified using the equivalence concept developed for stepped beams with periodically variable cross-sections. Then an alternative expression of the improved Rayleigh method is provided to calculate the natural frequencies of a beam with a variable stiffness distribution along its length. As the method is insensitive to the assumed mode shapes, it avoids the difficulty in choosing appropriate mode shapes and yields accurate results. This is shown using several examples to compare the results determined using the proposed method and the Finite Element method (FEM). The method greatly simplifies the calculation of cracked beams with complicated configurations, such as a beam with several cracks, a cracked beam with concentrated masses, a beam with cracks close to each other, and a beam with periodically distributed cracks.
+-------------------------------------
+
