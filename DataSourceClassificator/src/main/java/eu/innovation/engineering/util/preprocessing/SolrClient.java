@@ -27,7 +27,7 @@ public class SolrClient {
 
     //useManualCheckKeywords("26783169_645");
        
-    requestNPaper(400,200);
+    requestNPaper(0,10000);
   }
   
   

@@ -21,7 +21,7 @@ public class Start {
     //CREA IL FILE JSON DEI DIZIONARI
     //mainOnlyForDictionaries();
     //CREA I FILE JSON DI TRAIN E TEST
-    mainToGenerateJsonToTrainAndTestTxt();
+    //mainToGenerateJsonToTrainAndTestTxt();
     //CREA I FILE CSV DI TRAIN E TEST
     mainForCSV();
 
