@@ -68,15 +68,15 @@ public class InnenExtractor implements KeywordExtractor {
 
       int count=0;
       for(WordFrequency word: keywords){
-        //if(count<numKeywordsToReturn){
+        if(count<numKeywordsToReturn){
           count++;
           Keyword k = new Keyword();
           k.setText(word.getWord());
           k.setRelevance((double) word.getFrequency());
           toReturn.add(k);
-        /*}
+        }
         else
-          break;*/
+          break;
       }
     });
 

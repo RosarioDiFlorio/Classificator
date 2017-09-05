@@ -8,3 +8,4 @@ food and drink
 society
 education
 religion and spirituality
+medicine

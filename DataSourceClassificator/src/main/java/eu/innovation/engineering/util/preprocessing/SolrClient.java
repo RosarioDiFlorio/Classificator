@@ -25,13 +25,15 @@ public class SolrClient {
 
   public static void main(String[] args) throws Exception{
 
-    //    requestNPaper(200);
+    //useManualCheckKeywords("26783169_645");
+       
+    requestNPaper(400,200);
+  }
+  
+  
+  public static void useManualCheckKeywords(String id) throws Exception{
     SolrClient cl = new SolrClient();
-    System.out.println(cl.checkKeywords("7832616_150"));
-
-
-    requestNPaper(200,200);    
-
+    System.out.println(cl.checkKeywords(id));
   }
 
 
@@ -41,8 +43,10 @@ public class SolrClient {
     List<Source> sources = getSourcesFromSolr(toReturn, Paper.class);
 
     List<String> texts = new ArrayList<>();
-    for(Source s:sources)
+    for(Source s:sources){
+      System.out.println(s.getTexts());
       texts.addAll(s.getTexts());
+    }
 
 
     toReturn.remove(id);

@@ -203,8 +203,8 @@ public  class DatasetBuilder {
     //KeywordExtractor keywordExtractor = new MauiExtractor("../KeywordExtractor/", "none", "newInnenModel");
     KeywordExtractor keywordExtractor = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
     db.setKeywordExtractor(keywordExtractor);
-    db.buildDataset("test.txt",PathConfigurator.trainingAndTestFolder);    
-    db.buildDataset("train.txt",PathConfigurator.trainingAndTestFolder);
+    db.buildDataset("trainAndTestTogether.txt",PathConfigurator.trainingAndTestFolder);    
+    
   }
 
 
