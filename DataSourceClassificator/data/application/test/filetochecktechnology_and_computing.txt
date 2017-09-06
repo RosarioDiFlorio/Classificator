@@ -1,0 +1,222 @@
+10007411_234 - 0.743384215894 - technology_and_computing
+[system, pulsar, distance, millisecond, parallax, mass]
+
+A PARALLAX DISTANCE AND MASS ESTIMATE FOR THE TRANSITIONAL MILLISECOND PULSAR SYSTEM J1023+0038
+The recently discovered transitional millisecond pulsar system J1023+0038 exposes a crucial evolutionary phase of recycled neutron stars for multiwavelength study. The system, comprising the neutron star itself, its stellar companion, and the surrounding medium, is visible across the electromagnetic spectrum from the radio to X-ray/gamma-ray regimes and offers insight into the recycling phase of millisecond pulsar evolution. Here, we report on multiple-epoch astrometric observations with the Very Long Baseline Array (VLBA) which give a system parallax of 0.731 ?? 0.022 milliarcseconds (mas) and a proper motion of 17.98 ?? 0.05 mas yr-1. By combining our results with previous optical observations, we are able to use the parallax distance of 1368+42 - 39 pc to estimate the mass of the pulsar to be 1.71 ?? 0.16 M sun, and we are also able to measure the three-dimensional space velocity of the system to be 126 ?? 5 km s-1. Despite the precise nature of the VLBA measurements, the remaining \ {}3\% distance uncertainty dominates the 0.16 M sun error on our mass estimate.
+-------------------------------------
+
+10009020_234 - 0.710449107309 - technology_and_computing
+[tool, document, type, design, user, visual]
+
+User-Centered Design of a Visual Data Mapping Tool
+Understanding the meaning and the type of a business document received by a company is important in order to determine an appropriate response. We have developed a visual tool allowing ordinary users to express mappings between arriving documents and their elements on one side and the different document types on the other. The tool is used to set up and continuously update an automatic semantic analysis mechanism which determines the document type from a set of information items contained in the document, thus allowing automatic processing associated with the types to be applied to the arriving document instances. The activities performed by end users within the visual data mapping tool are quite complex and require user-centric design to ensure tool is useful and usable. In this paper we describe the user-centric process informing the design of the tool. We conducted two workshops to discover the mental models of our users regarding the information content in their documents and their requirements towards the design of the tool. Subsequently, these findings were used to design and implement the visual data mapping tool. The resulting system was evaluated by target end users who proficiently demonstrated the usability of the developed concepts and features.
+-------------------------------------
+
+10003925_234 - 0.738715904253 - technology_and_computing
+[system, dynamical, automaton, inevitability]
+
+Dynamically-Driven Timed Automaton Abstractions for Proving Liveness of Continuous Systems
+We look at the problem of proving inevitability of continuousdynamical systems. An inevitability property says that a region of thestate space will eventually be reached: this is a type of liveness propertyfrom the computer science viewpoint, and is related to attractivity of setsin dynamical systems. We consider a method of Maler and Batt to makean abstraction of a continuous dynamical system to a timed automaton,and show that a potentially infinite number of splits will be made if thesplitting of the state space is made arbitrarily. To solve this problem, wedefine a method which creates a finite-sized timed automaton abstractionfor a class of linear dynamical systems, and show that this timedabstraction proves inevitability.
+-------------------------------------
+
+10009524_234 - 0.721442890445 - technology_and_computing
+[communication, architecture, processor, neural, spinnaker, scalable]
+
+Scalable communications for a million-core neural processing architecture
+The design of a new high-performance computing platform to model biological neural networks requires scalable, layered communications in both hardware and software. SpiNNaker???s hardware is based upon Multi-Processor System-on-Chips (MPSoCs) with flexible, power-efficient, custom communication between processors and chips. The architecture scales from a single 18-processor chip to over 1 million processors and to simulations of billion-neuron, trillion-synapse models, with tens of trillions of neural spike-event packets conveyed each second. The communication networks and overlying protocols are key to the successful operation of the SpiNNaker architecture, designed together to maximise performance and minimise the power demands of the platform. SpiNNaker is a work in progress, having recently reached a major milestone with the delivery of the first MPSoCs. This paper presents the architectural justification, which is now supported by preliminary measured results of silicon performance, indicating that it is indeed scalable to a million-plus processor system.
+-------------------------------------
+
+10003722_234 - 0.746476149055 - technology_and_computing
+[visualization, object, architecture, structure, capability, datum, dataset, need, database, pipeline]
+
+Enabling Visualization of Massive Datasets Through MPP Database Architecture
+We are developing a novel visualization architecture which is specifically designed to render very large (terabyte scale) datasets. Our method differs from the classic visualization pipeline of Harber and McNabb. In particular we eliminate the need to create geometric objects, for example surfaces composed of polygons, as a stage before rendering. Such objects require specialist HPC servers for their creation and manipulation; our solution eliminates the need for such servers. We replace the geometric objects by structures stored and tagged in a database next to the original dataset; we call these Spatially Registered Data Structures (SRDS). Such structures are linked to a single rendering pipeline through the on-the-fly creation of a Feature Embedded Spatial Volume (FESVo). This solution exploits recently developed capabilities of in-database Massive Parallel Processing (MPP) and parallel data streaming, together with the rapidly developing capabilities of GPUs. We describe an early prototype of an architecture applied to seismic data from the oil and gas industry.
+-------------------------------------
+
+10009783_234 - 0.701976416925 - technology_and_computing
+[simulation, behaviour, process, theory, outcome, variable, control, blood, manipulation]
+
+Use of mental simulations to change theory of planned behaviour variables.
+OBJECTIVES: The predictive validity of the theory of planned behaviour is well established, but much less is known about: (a) whether there are causal relationships between key components of the model and (b) how to go about changing the theory of planned behaviour variables. This study tested the ability of outcome and process simulations to change variables specified in the theory of planned behaviour in relation to blood donation. DESIGN: Participants (N=146) were randomized to one of four conditions: outcome simulation only, process simulation only, process-plus-outcome simulation and a distractor control condition. The dependent variables were state anxiety, and intention attitude, subjective norm and perceived control from the theory of planned behaviour. METHODS: Participants were asked to empty their mind and visualize themselves: (a) after donating blood (outcome manipulation), (b) preparing to donate blood (process manipulation), (c) both preparing to donate blood and after having donated blood (process-plus-outcome manipulation) or (d) both preparing to get a high mark and after having got a high mark on their course (control condition). Following mental rehearsal, participants completed the dependent variables. RESULTS: There were no main effects of outcome simulation, but process simulation successfully increased intention, subjective norm and perceived control. There was also a significant outcome simulation x process simulation interaction for attitude. The effect of the process manipulation on intention was mediated by subjective norm and perceived control. CONCLUSIONS: The findings show promise for the use of mental simulations in changing cognitions and further research is required to extend the present findings to other health behaviours.
+-------------------------------------
+
+100077_106 - 0.706181188722 - technology_and_computing
+[linac, beam]
+
+Review of beam dynamics and space charge resonances in high intensity linacs
+Recent systematic studies of resonant space charge effects and anisotropy have helped to narrow the gap between idealized beam physics models of halos and high-current linac design. We review the beam dynamics basis of nonequipartitioned beams, discuss the consequences of bunch anisotropy, and introduce  3D free energy equivalence  as a new concept to model halo growth in linac bunches. Results are applied to the CERN-SPL, the SNS and the ESS superconducting (sc) linac designs.
+-------------------------------------
+
+10008646_234 - 0.719829864111 - technology_and_computing
+[lacti, system, lactococcus]
+
+Engineering of self-sustaining systems: Substituting the yeast glucose transporter plus hexokinase for the Lactococcus lactis phosphotransferase system in a Lactococcus lactis network in silico
+Times Cited: 0 Si
+-------------------------------------
+
+10005172_234 - 0.734849277825 - technology_and_computing
+[3-d, circuit, design, methodology, vertical]
+
+Interconnect-Based Design Methodologies for Three-Dimensional Integrated Circuits
+Browse Journals & Magazines > Proceedings of the IEEE ...> Volume:97 Issue:1Prev | Back to ResultsHelpInterconnect-Based Design Methodologies for Three-Dimensional Integrated CircuitsThis paper appears in:Proceedings of the IEEEDate of Publication: Jan. 2009Author(s): Pavlidis, V.F.Dept. of Electr. & Comput. Eng., Univ. of Rochester, Rochester, NYFriedman, E.G.Volume: 97 , Issue: 1Page(s): 123 - 140Product Type: Journals & Magazines * Access Full Text in PDF * 1 1 4796277 searchabstract Download Citations * Email * Print * Rights And Permissions * Save to Project *AbstractDesign techniques for three-dimensional (3-D) ICs considerably lag the significant strides achieved in 3-D manufacturing technologies. Advanced design methodologies for two-dimensional circuits are not sufficient to manage the added complexity caused by the third dimension. Consequently, design methodologies that efficiently handle the added complexity and inherent heterogeneity of 3-D circuits are necessary. These 3-D design methodologies should support robust and reliable 3-D circuits while considering different forms of vertical integration, such as system-in-package and 3-D ICs with fine grain vertical interconnections. Global signaling issues, such as clock and power distribution networks, are further exacerbated in vertical integration due to the limited number of package pins, the distance of these pins from other planes within the 3-D system, and the impedance characteristics of the through silicon vias (TSVs). In addition to these dedicated networks, global signaling techniques that incorporate the diverse traits of complex 3-D systems are required. One possible approach, potentially significantly reducing the complexity of interconnect issues in 3-D circuits, is 3-D networks-on-chip (NoC). Design methodologies that exploit the diversity of 3-D structures to further enhance the performance of multiplane integrated systems are necessary. The longest interconnects within a 3-D circuit are those interconnects comprising several TSVs and traversing multiple physical planes. Consequently, minimizing the delay of the interplane nets is of great importance. By considering the nonuniform impedance characteristics of the interplane interconnects while placing the TSVs, the delay of these nets is decreased. In addition, the difference in electrical behavior between the horizontal and vertical interconnects suggests that asymmetric structures can be useful candidates for distributing the clock signal within a 3-D circuit. A 3-D test circuit fabricated with a 180 nm si- - licon-on-insulator (SOI) technology, manufactured by MIT Lincoln Laboratories, exploring several clock distribution topologies is described. Correct operation at 1 GHz has been demonstrated. Several 3-D NoC topologies incorporating dissimilar 3-D interconnect structures are reviewed as a promising solution for communication limited systems-on-chip (SoC). Appropriate performance models are described to evaluate these topologies. Several forms of vertical integration, such as system-in-package and different candidate technologies for 3-D circuits, such as SOI, are considered. The techniques described in this paper address fundamental interconnect structures in the 3-D design process. Several interesting research problems in the design of 3-D circuits are also discussed.
+-------------------------------------
+
+10003999_234 - 0.719090994392 - technology_and_computing
+[model, network, computational]
+
+Creating, documenting and sharing network models.
+As computational neuroscience matures, many simulation environments are available that are useful for neuronal network modeling. However, methods for successfully documenting models for publication and for exchanging models and model components among these projects are still under development. Here we briefly review existing software and applications for network model creation, documentation and exchange. Then we discuss a few of the larger issues facing the field of computational neuroscience regarding network modeling and suggest solutions to some of these problems, concentrating in particular on standardized network model terminology, notation, and descriptions and explicit documentation of model scaling. We hope this will enable and encourage computational neuroscientists to share their models more systematically in the future.
+-------------------------------------
+
+10005037_234 - 0.746629468365 - technology_and_computing
+[beam, method, crack]
+
+An approximate method for determining the static deflection and natural frequency of a cracked beam
+This paper provides an approximate method to determine the stiffness and the fundamental frequency of a cracked beam. The cracked beam is first represented as an un-cracked beam with equivalent reduced sections around the cracks. The effect of the cracks is explained, visualised and quantified using the equivalence concept developed for stepped beams with periodically variable cross-sections. Then an alternative expression of the improved Rayleigh method is provided to calculate the natural frequencies of a beam with a variable stiffness distribution along its length. As the method is insensitive to the assumed mode shapes, it avoids the difficulty in choosing appropriate mode shapes and yields accurate results. This is shown using several examples to compare the results determined using the proposed method and the Finite Element method (FEM). The method greatly simplifies the calculation of cracked beams with complicated configurations, such as a beam with several cracks, a cracked beam with concentrated masses, a beam with cracks close to each other, and a beam with periodically distributed cracks.
+-------------------------------------
+
+10008551_234 - 0.705414016664 - technology_and_computing
+[model, circuit, process, e-band, amplifier, gaa, performance, phemt]
+
+Transmit and Receive Amplifiers for E-band Communications Systems Using GaAs pHEMT Technology
+Measured performance is given for a transmit and a received amplifier MMIC fabricated using the WIN Semiconductor pp10 GaAs pHEMT process in the band 71 to 76 GHz. Small signal circuit measurements are compared with 'first cut' transistor and circuit models and demonstrate reasonable correlation. Model developments are currently underway to assess improvements to simulated data. Initial measured performance indicates that this process is suitable for applications to E-band offering the potential for highly integrated affordable chipsets.
+-------------------------------------
+
+10004317_234 - 0.733001865264 - technology_and_computing
+[visualization, datum, environment, technique, visual, brushing, interactive, clustering, binning, prototype]
+
+‘Multi View Graphing’: Linked Multi Visualization utilising Brushing, Binning and Clustering
+Visualization can provide a distinctly advantageous overview of data, enabling the rapid identification of anomalies, patterns or correlations that would not otherwise be obvious. Different visualization techniques each offer their own unique insight into the same data; however the similarities that exist between them are not always clear. High data density can also be a very evident issue when exploring data using visualization. The densest datasets can ensure that even well suited visualization methodologies succumb to usability issues. The most powerful data analysis environments are arguably those that provide interactive exploration, however visual feedback in such environments is sometimes undesirably limited. The concept of linking different visualization styles using interactive techniques, such as brushing, is currently evident in multiple publically available software environments. To explore the concept of linked visualization a prototype application was produced, allowing up to four unique visual styles to be generated using the same data, at the same time. Current brushing methodologies were extended and included, in order to provide the ability to affect each visualization from within every other. The issue of data density was tackled through the use of a novel approach to binning based around a uniform grid. Visual cues were used extensively throughout the prototype, ranging from representing a brushing area through to defining the basic starting parameters of a clustering algorithm. Three distinctly different test cases are presented to demonstrate the techniques showcased within the prototype, each in conjunction with external collaborators. Results suggest that using linked multi visualization is a more effective method of data analysis, offering greater insight than using a lone visualization technique. In tackling data density, the grid based binning has the ability to offer an easily disseminated overview of even extremely cluttered visualizations. The extensive use of visual cues in the prototype vindicated the theory that offering clear feedback within interactive environments is of the utmost importance. Also the interactive definition of clustering parameters via visual cues shows promise as a concept but one requiring further research. This study highlights that the current trend towards linking multiple visualization techniques within advanced data analysis environments is correct; it also introduces novel brushing, binning and clustering concepts worthy of further investigation.
+-------------------------------------
+
+10011279_234 - 0.702202191893 - technology_and_computing
+[system, fault, detection]
+
+A statistical-based approach for fault detection in a three tank system
+Fault detection in stochastic dynamical systems is usually carried out by the generation of residuals directly reflecting the magnitude of the faults. For this purpose, faults indicator is used to evaluate possible deviations from the normal operating conditions and the measurements of the system. This evaluation is often very difficult to implement in the multi-faults case. This article aims to demonstrate the efficiency of the coefficient of variation (CV) in detecting single and multi-faults in a multivariable laboratory three tank system DTS-200. The performance of the detection algorithm is based on the computation of the confidence intervals (CIs) which provide an estimate of the amount of error in the considered data and characterise the precision of the computed statistical estimates. The data variability may result from random measurement errors caused by the system parameters uncertainties, internal and external noises, and measuring instrument, which are not usually accurate. The CIs make the CV less sensitive to parameter uncertainties and to measure noises. The robustness and accuracy of the CV are shown in a healthy mode and various faulty situations in an entirely uncertain environment.
+-------------------------------------
+
+10008578_234 - 0.711916905995 - technology_and_computing
+[controller, signal, power]
+
+Damping of inter-area oscillations in mixed AC/DC networks using WAMS based supplementary controller
+The paper presents a supplementary VSC-HVDC Power Oscillation Damping (POD) controller based on wide area measurement signals (WAMS). The controller is designed as Multi Input Single Output (MISO) using a Modal Linear Quadratic Gaussian (MLQG) methodology in order to target critical inter-area electromechanical modes. The approach has been tested on a large (16 machine, 68 bus) test network incorporating parallel HVDC/AC transmission and has shown improved damping compared to a traditional Power System Stabilizer (PSS) based controller structure utilizing local signals. The design process has incorporated the effects of wide area signal transmission delays. Variation in these signal delays and the complete loss of signals has been also investigated to establish the robustness of the WAMS based controller and its sensitivity to loss of signals. Extension of the controller to incorporate reactive power modulation has been investigated, as has variation in available active power modulation capacity. The proposed controller performance has been assessed through small and large disturbance analysis.
+-------------------------------------
+
+10011536_234 - 0.71279448646 - technology_and_computing
+[component, contract, software, compliant, spark]
+
+A Case Study in Constructing Contract Compliant Software Components
+In the recent few years there has been in the Software Engineering   community, a strong interest towards Component Based Software Development   (CBSD). Currently, CBSD faces lots of problems that need to be solved   before it can be widely used. A critical question is how a client can trust   a component. The answer is to provide a contract for the component and also   prove that the component is compliant with it. In this project we use   SPARK, a critical systems’ programming language, to develop two components,   provide contracts for them and prove that the components comply with the   contracts. Our aim is to check whether SPARK can be used in the   construction of contract compliant software components, and how this is   accomplished. We conclude that apart from some disadvantages, SPARK can   indeed be used in the construction of contract compliant software   components.
+-------------------------------------
+
+10010042_234 - 0.735797015427 - technology_and_computing
+[cilk, programming, system, slam, core, cache, functional, cmp, parallel]
+
+Architectural Support for Exploiting Fine Grain Parallelism
+The advent of multi-core processors, particularly with projections that numbers of cores will continue to increase, has focused attention on parallel programming. It is widely recognized that current programming techniques, including those that are used for scientific parallel programming, will not allow the easy formulation of general purpose applications. An area which is receiving interest is the use of programming styles which are side-effect free. Previous work on parallel functional programming demonstrated the potential of this to permit the easy exploitation of parallelism. Recent systems like Cilk use conventional languages such as C but encourage the use of a largely functional style (side-effect free) when writing programs. An important part of the Cilk runtime is a system to balance the usage of cores. In this paper we present SLAM (Spreading Load with Active Messages), a dynamic load balancing system based on functional language evaluation techniques. We show that SLAM, provided with appropriate hardware support, significantly outperforms the Cilk system. We evaluated our system using tiled CMPs with private and shared L2 caches separately. Our results show that, for the benchmarks evaluated, SLAM outperforms Cilk by 28% on average when using 32-core CMPs with private L2 caches. For the case of the CMPs with shared L2 caches, SLAM was on average 21% faster than Cilk when using 32 cores and 62% faster when using 64 cores.
+-------------------------------------
+
+10015710_234 - 0.732639254511 - technology_and_computing
+[grid, technique, monitoring, integration, authorship, equal, responsibility, stream, alphabetical]
+
+Stream integration techniques for Grid monitoring
+(Alphabetical authorship, equal responsibility)
+-------------------------------------
+
+10004839_234 - 0.743732125959 - technology_and_computing
+[system, power, method, placement, test]
+
+Optimal placement of Phasor Measurement Units to Improve Parallel Power System Restoration
+This paper proposes a new method for optimal placement of Phasor Measurement Units (PMUs) across the weak areas of the power system to monitor the status of the boundary buses during Parallel Power System Restoration (PPSR). The proposed PMU placement method is based on an Integer Linear Programming (ILP) methodology. For validation purposes, the proposed method is implemented across the weak areas of the following two test systems: New England 39-bus test system and IEEE 118-bus test system.
+-------------------------------------
+
+10010589_234 - 0.701317241952 - technology_and_computing
+[datum, mass, format, peakml, software, file, analysis]
+
+PeakML/mzMatch: A File Format, Java Library, R Library, and Tool-Chain for Mass Spectrometry Data Analysis
+The recent proliferation of high-resolution mass spectrometers has generated a wealth of new data analysis methods. However, flexible integration of these methods into configurations best suited to the research question is hampered by heterogeneous file formats and monolithic software development. The mzXML, mzData, and mzML file formats have enabled uniform access to unprocessed raw data. In this paper we present our efforts to produce an equally simple and powerful format, PeakML, to uniformly exchange processed intermediary and result data. To demonstrate the versatility of PeakML, we have developed an open source Java toolkit for processing, filtering, and annotating mass spectra in a customizable pipeline (mzMatch), as well as a user-friendly data visualization environment (PeakML Viewer). The PeakML format in particular enables the flexible exchange of processed data between software created by different groups or companies, as we illustrate by providing a PeakML-based integration of the widely used XCMS package with mzMatch data processing tools. As an added advantage, downstream analysis can benefit from direct access to the full mass trace information underlying summarized mass spectrometry results, providing the user with the means to rapidly verify results. The PeakML/mzMatch software is freely available at http://mzmatch.sourceforge.net, with documentation, tutorials, and a community forum. ?? 2011 American Chemical Society.
+-------------------------------------
+
+10007987_234 - 0.705757818733 - technology_and_computing
+[binary, channel, high-magnification]
+
+Microlensing Binaries Discovered through High-magnification Channel
+DOI: 10.1088/0004-637X/746/2/127; eprintid: arXiv:1109.3295
+-------------------------------------
+
+10004031_234 - 0.743408425738 - technology_and_computing
+[datum, beam, generation]
+
+Imaging and analysis of 3-D structure using a dual beam FIB.
+The application of focused ion beam instrumentation in the generation of three-dimensional microstructural data is described. The methodologies used to acquire and manipulate this data are explained, and the technique is illustrated by a number of examples from the material sciences. The limitations of this method, and practical pointers to the generation of meaningful data, are also discussed.
+-------------------------------------
+
+10005171_234 - 0.706619609403 - technology_and_computing
+[3-d, clock, circuit, design, distribution, topology]
+
+Clock Distribution Networks in 3-D Integrated Systems
+3-D integration is an important technology that addresses fundamental limitations in on-chip interconnects. Several design issues related to 3-D circuits, such as multiplane synchronization, however, need to be addressed. A comparison of three 3-D clock distribution network topologies is presented in this paper. Good agreement is shown between the modeled and experimental results of a 3-D test circuit composed of three device planes. Successful operation of the 3-D test circuit at 1.4 GHz is demonstrated. Clock skew, clock delay, signal slew, and power dissipation measurements for the different clock topologies are also provided. The measurements suggest that each topology provides certain advantages and disadvantages in terms of different performance criteria. The proper choice, consequently, of a clock distribution network is not dictated by a single design objective but rather by the overall 3-D system design requirements including availability of resources and number of bonded planes.
+-------------------------------------
+
+10016872_234 - 0.740158930695 - technology_and_computing
+[calibration]
+
+Calibration of the cloud particle imager probes using calibration beads and ice crystal analogs: The depth of field
+Connolly, Paul J. Flynn, Michael J. Ulanowski, Z. Choularton, T. W. Gallagher, M. W. Bower, K. N.
+-------------------------------------
+
+10007187_234 - 0.721442890445 - technology_and_computing
+[communication, architecture, processor, neural, spinnaker, scalable]
+
+Scalable communications for a million-core neural processing architecture
+The design of a new high-performance computing platform to model biological neural networks requires scalable, layered communications in both hardware and software. SpiNNaker’s hardware is based upon Multi-Processor System-on-Chips (MPSoCs) with flexible, power-efficient, custom communication between processors and chips. The architecture scales from a single 18-processor chip to over 1 million processors and to simulations of billion-neuron, trillion-synapse models, with tens of trillions of neural spike-event packets conveyed each second. The communication networks and overlying protocols are key to the successful operation of the SpiNNaker architecture, designed together to maximise performance and minimise the power demands of the platform. SpiNNaker is a work in progress, having recently reached a major milestone with the delivery of the first MPSoCs. This paper presents the architectural justification, which is now supported by preliminary measured results of silicon performance, indicating that it is indeed scalable to a million-plus processor system.
+-------------------------------------
+
+10003296_234 - 0.708117481817 - technology_and_computing
+[design, implementation, methodology, asynchronous, spinnaker, tool, chip, system, complexity]
+
+SpiNNaker: Design and Implementation of a GALS Multicore System-on-Chip
+The design and implementation of globally asynchronous locally synchronous systems-on-chip is a challenging activity. The large size and complexity of the systems require the use of computer-aided design (CAD) tools but, unfortunately, most tools do not work adequately with asynchronous circuits. This article describes the successful design and implementation of SpiNNaker, a GALS multicore system-on-chip. The process was completed using commercial CAD tools from synthesis to layout. A hierarchical methodology was devised to deal with the asynchronous sections of the system, encapsulating and validating timing assumptions at each level. The crossbar topology combined with a pipelined asynchronous fabric implementation allows the on-chip network to meet the stringent requirements of the system. The implementation methodology constrains the design in a way that allows the tools to complete their tasks successfully. A first test chip, with reduced resources and complexity was taped-out using the proposed methodology. Test chips were received in December 2009 and were fully functional. The methodology had to be modified to cope with the increased complexity of the SpiNNaker SoC. SpiNNaker chips were delivered in May 2011 and were also fully operational, and the interconnect requirements were met.
+-------------------------------------
+
+100003_102 - 0.747343143625 - technology_and_computing
+[tool, design, designerly, interaction]
+
+Designerly Tools
+<p>An assumption behind this paper is that research aimed at improving interaction design practice is not as successful as it could be. We will argue that one reason for this is that the understanding of what constitutes designerly tools is not enough recognized among those who propose new tools for interaction design. We define designerly tools as methods, tools, techniques, and approaches that support design activity in way that is appreciated by practicing interaction designers. Based on a two empirical studies, we have developed a framework and a way of studying designers and their tools. We discuss some insights about what characterizes designerly tools and what kind of implications these insights might have for the further development of tools aimed at supporting design practice.
+</p>
+<p>
+<strong>Keywords:</strong> <br /> 
+Design, Tools, Interaction Design, Activities, Support For Design</p>
+-------------------------------------
+
+
+10007411_234 1
+10009020_234 1
+10003925_234 1
+10009524_234 1
+10003722_234 1
+10009783_234 1
+100077_106 1
+10008646_234 1
+10005172_234 1
+10003999_234 1
+10005037_234 1
+10008551_234 1
+10004317_234 1
+10011279_234 1
+10008578_234 1
+10011536_234 1
+10010042_234 1
+10015710_234 1
+10004839_234 1
+10010589_234 1
+10007987_234 1
+10004031_234 1
+10005171_234 1
+10016872_234 1
+10007187_234 1
+10003296_234 1
+100003_102 1
+

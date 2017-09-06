@@ -1,0 +1,778 @@
+10011019_234 - 0.712878698471 - science
+[behavior, bioreduction, sediment]
+
+Bioreduction behavior of U(VI) sorbed to sediments
+cited By (since 1996) 5
+-------------------------------------
+
+10018332_234 - 0.708009420495 - science
+[cell, lung, ox40, immune]
+
+A critical role for OX40 in T cell-mediated immunopathology during lung viral infection.
+Respiratory infections are the third leading cause of death worldwide. Illness is caused by pathogen replication and disruption of airway homeostasis by excessive expansion of cell numbers. One strategy to prevent lung immune-mediated damage involves reducing the cellular burden. To date, antiinflammatory strategies have affected both antigen-specific and naive immune repertoires. Here we report a novel form of immune intervention that specifically targets recently activated T cells alone. OX40 (CD134) is absent on naive T cells but up-regulated 1-2 d after antigen activation. OX40-immunoglobulin fusion proteins block the interaction of OX40 with its ligand on antigen-presenting cells and eliminate weight loss and cachexia without preventing virus clearance. Reduced proliferation and enhanced apoptosis of lung cells accompanied the improved clinical phenotype. Manipulation of this late costimulatory pathway has clear therapeutic potential for the treatment of dysregulated lung immune responses.
+-------------------------------------
+
+10018296_234 - 0.700267280107 - science
+[lung, immune, inflammatory]
+
+Manipulation of acute inflammatory lung disease.
+Inflammatory lung disease to innocuous antigens or infectious pathogens is a common occurrence and in some cases, life threatening. Often, the inflammatory infiltrate that accompanies these events contributes to pathology by deleterious effects on otherwise healthy tissue and by compromising lung function by consolidating (blocking) the airspaces. A fine balance, therefore, exists between a lung immune response and immune-mediated damage, and in some the "threshold of ignorance" may be set too low. In most cases, the contributing, potentially offending, cell population or immune pathway is known, as are factors that regulate them. Why then are targeted therapeutic strategies to manipulate them not more commonplace in clinical medicine? This review highlights immune homeostasis in the lung, how and why this is lost during acute lung infection, and strategies showing promise as future immune therapeutics.
+-------------------------------------
+
+10016401_234 - 0.741618323214 - science
+[potential, ??, oceanic, ikaite, evolution]
+
+Potential of ikaite to record the evolution of oceanic ??18O
+cited By (since 1996) 5
+-------------------------------------
+
+10003589_234 - 0.740166601122 - science
+[free-free, derivation, ``, galactic, plane, emission]
+
+A derivation of the free-free emission on the Galactic plane between â„“= 20Â° and 44Â°
+DOI: 10.1111/j.1365-2966.2012.20796.x; eprintid: arXiv:1108.6268
+-------------------------------------
+
+10008953_234 - 0.734098031949 - science
+[leptin, crp, level, adiposity, measure, resistance, subject]
+
+Epidemiological evidence against a role for C-reactive protein causing leptin resistance.
+OBJECTIVE: It has been suggested that elevated levels of C-reactive protein (CRP) might interfere with leptin signalling and contribute to leptin resistance. Our aim was to assess whether plasma levels of CRP influence leptin resistance in humans; and our hypothesis was that CRP levels would modify the cross-sectional relationships between leptin and measures of adiposity. DESIGN AND METHODS: We assessed 4 measures of adiposity: body mass index, waist circumference, fat mass, and % body fat in 2113 British Regional Heart Study (BRHS) men (mean (SD) age 69 (5) years), with replication in 760 (age 69 (6) years) European Male Aging Study (EMAS) subjects. RESULTS: In BRHS subjects leptin correlated with CRP (Spearman's r=0.22, p<0.0001). Leptin and CRP correlated with all 4 measures of adiposity (r-value range: 0.22 to 0.57, all p<0.0001). Age-adjusted mean levels for adiposity measures increased in relation to leptin levels; but CRP level did not consistently influence the β coefficients of the regression lines in a CRP-stratified analysis. In BRHS subjects, the BMI vs. leptin relationship demonstrated a weak statistical interaction with CRP (p=0.04). We observed no similar interaction in EMAS subjects, and no significant interactions with other measures of adiposity in BRHS or EMAS cohorts. CONCLUSION: We have shown that plasma CRP has little influence on the relationship between measures of adiposity and serum leptin levels in these middle-aged and elderly male European cohorts. This study provides epidemiological evidence against CRP having a significant role in causing leptin resistance.
+-------------------------------------
+
+10016813_234 - 0.739146664513 - science
+[microarray, ecological, gene]
+
+Microarray challenges in ecology
+Microarrays are used to measure simultaneously the amount of mRNAs transcribed from many genes. They were originally designed for gene expression profiling in relatively simple biological systems, such as cell lines and model systems under constant laboratory conditions. This poses a challenge to ecologists who increasingly want to use microarrays to unravel the genetic mechanisms underlying complex interactions among organisms and between organisms and their environment. Here, we discuss typical experimental and statistical problems that arise when analyzing genome-wide expression profiles in an ecological context. We show that experimental design and environmental confounders greatly influence the identification of candidate genes in ecological microarray studies, and that following several simple recommendations could facilitate the analysis of microarray data in ecological settings. ?? 2007 Elsevier Ltd. All rights reserved.
+-------------------------------------
+
+10009824_234 - 0.73832546684 - science
+[animal, clotrimazole, combination, examination, treatment, guinea, culture, pig, clinical, infection]
+
+Comparative in-vivo activity of clotrimazole and a clotrimazole/hydrocortisone combination in the treatment of experimental dermatophytosis in guinea pigs.
+To compare the activity of clotrimazole with a clotrimazole/hydrocortisone combination, guinea pigs were infected with Trichophyton mentagrophytes var. mentagrophytes. The animals were treated with once daily application of clotrimazole alone, hydrocortisone alone, base alone or a combination of clotrimazole and hydrocortisone. One group of animals was left untreated. Daily clinical observations were made. At intervals during the three week study animals were killed, skin scrapings were taken for microscopical examination and culture and skin was removed for histological examination. The responses of the guinea pigs treated with the base alone reflected those of the untreated controls. They were mycologically positive throughout the study and showed extensive inflammatory reactions on histology. Animals treated with hydrocortisone alone rapidly developed a severe clinical infection and mycological examination was positive throughout. Animals treated with clotrimazole alone did not show severe clinical reactions and were negative on culture after four treatments; histology showed inflammatory scabs after resolution of infection. Clinically, the animals receiving combination therapy improved most quickly and cultures were negative after two treatments. Histological examination showed resolution of the infection and little inflammation.
+-------------------------------------
+
+10018235_234 - 0.70433882442 - science
+[organic, liquid, crystal, crystalline, development, semiconductor, nature, chap, field]
+
+Columnar Liquid Crystalline Semiconductors
+This is an exciting stage in the development of organic electronics. No longer is it an area of purely ‘academic interest’ but increasingly real applications are being developed and some of these are beginning to come on-stream. There have been several drivers for the surge of interest shown by the electronics industry. Perhaps the greatest is the promise afforded by organic systems for low-cost processing, e.g., methods of fabrication such as roll-to-roll contact printing or ink-jet printing in which the components are ‘assembled’ on low-cost substrates at room temperature. The long-term vision is for the creation of integrated devices in which, for example, a photovoltaic cell, a sensor and a display, all made of organic materials, is printed onto a plastic film in a single operation. Another factor in the recent development of organic electronics is the huge advances made in organic synthesis over the last half century, which make it easy to fine-tune the properties of organics at a molecular level in a way that is simply not possible for their metallic and semi-metallic counterparts. Finally, organics are much easier to interface with biomaterials, which is perhaps the key problem in the development of new generation biosensors. Another consideration in the development of organic electronics has been ‘Green Issues’: not only the need to develop energy-efficient methods of manufacture but also the need to develop methods based on renewable (organic) rather than finite (inorganic and metallic) components.Although it seems improbable that organics will ever compete with silicon-based devices in terms of high-end computing applications, where device speed is of the essence, there are many low-end areas of application, where we can look to see traditional inorganic components increasingly replaced by organics. Areas that have already been commercially developed or which are under intensive development include organic light emitting diodes (for flat panel displays and solid state lighting), organic photovoltaic cells, organic thin film transistors (for smart tags and flat panel displays) and sensors. Potentially this is a field that will affect every aspect of our lives and have an impact in every home and in every business.Within the family of organic electronic materials, liquid crystals are relative newcomers. The first electronically conducting liquid crystals were only reported in 1988, but already a substantial literature has developed. The potential advantage of liquid crystalline semiconductors is that they have the easy processabilty of amorphous and polymeric semiconductors, but they usually have higher charge carrier mobilities. Their mobilities do not reach the levels seen in crystalline organics, but they circumvent all of the difficult issues of controlling crystal growth and morphology. Liquid crystals self-organise, they can be aligned by fields and surface forces and, because of their fluid nature, defects in liquid crystal structures readily self-heal.Because this is a relatively young field, there are still issues which need to be understood. In particular, the theory of electronic conduction in liquid crystals is much less well developed than that of electronic conduction in other organic mate- rials and, although the relationship between molecular structure and conductivity is mostly understood, some issues still remain to be resolved and understood.With these matters in mind, this is an opportune moment to bring together a monograph on the subject of ‘Liquid Crystalline Semiconductors’. The field is already too large to cover in a comprehensive manner, so our aim has been to bring together contributions from leading workers, which cover the main areas of the chemistry (synthesis and structure/function relationships), physics and potential applications. A general introduction to liquid crystals and the nature and kinds of their mesomorphic behaviour and structure (mesophases) is given in Chap. 1. A description of the nature and mechanisms of different kinds of charge transport in calamitic (nematic and smectic) liquid crystalline semiconductors is given in Chap. 2 followed by a similar treatment of columnar (discotic) liquid crystalline semiconductors in Chap. 3. The different approaches and methods of determining charge transport in liquid crystals are also described in detail. Chap. 4 provides a comprehensive description of the synthesis of a wide range of columnar liquid crystalline semiconductors. A series of reaction schemes are used to illustrate different synthetic strategies and approaches to the synthesis of this special type of liquid crystal. Chapter 5 gives an extensive discussion of the nature and magnitude of charge transport in reactive mesogens (monomers) and how they are determined. A similar treatment of the corresponding liquid crystal polymer networks is also given in this chapter. An insight into the nature and complexity of the optical properties of liquid crystals is provided in Chap. 6. Chapters 7, 8 and 9 describe the modes of operation, configuration and performance of a range of electrooptic devices, i.e., organic light-emitting diodes (OLEDs), especially with polarised emission, organic photovoltaics and organic field-effect transistors, incorporating the types of liquid crystalline semiconductors described in the preceding chapters. Our hope is that this book will provide a useful introduction to the field both for those in industry and for those in academia and that it will help to stimulate future developments.
+-------------------------------------
+
+10007557_234 - 0.749390940207 - science
+[melanoma, thin, tumor, patient, survival, 20-year, mm, invasive, queensland]
+
+Population-Based 20-Year Survival Among People Diagnosed With Thin Melanomas in Queensland, Australia
+PURPOSE: The 20-year survival rates are unknown for the majority of melanoma patients-those with thin melanomas. We determined 20-year survival rates of patients diagnosed with thin melanomas (≤ 1.00 mm) in the general population and also determined the main prognostic factors. PATIENTS AND METHODS: Available clinical and histologic data from the Queensland Cancer Registry were obtained for all patients diagnosed with a single thin invasive melanoma from 1982 to 2006 and matched against national death registration data. Melanoma-specific survival estimates to December 31, 2007, were assessed, and subgroup differences in prognosis were determined by fitting multivariate Cox proportional hazard models. RESULTS: Among 26,736 people in the state of Queensland diagnosed with thin melanomas, the 20-year survival was 96%. The most influential determinants of prognosis were tumor thickness ≥ 0.75 mm (adjusted hazard ratio HR, 4.33; 95% CI, 2.8 to 6.8 compared with tumors < 0.25 mm) and patient age at diagnosis older than 65 years (HR, 2.8; 95% CI, 1.8 to 4.5) compared with age younger than 25 years. Acral lentiginous and nodular tumors, male sex, tumor site on the scalp or neck, or tumor invasion of the entire papillary dermis each independently increased the risk of dying from thin invasive melanoma. CONCLUSION: The outlook for patients with thin invasive melanoma is positive, although continued clinical vigilance is warranted for patients with nodular melanoma and those with the thickest tumors.
+-------------------------------------
+
+10008865_234 - 0.736523273951 - science
+[chemical, respiratory, allergen, skin, peptide, reactivity, dpra]
+
+The direct Peptide reactivity assay: selectivity of chemical respiratory allergens.
+It is well known that some chemicals are capable of causing allergic diseases of the skin and respiratory tract. Commonly, though not exclusively, chemical allergens are associated with the selective development of skin or respiratory sensitization. The reason for this divergence is unclear, although it is hypothesized that the nature of interactions between the chemical hapten and proteins is influential. The direct peptide reactivity assay (DPRA) has been developed as a screen for the identification of skin-sensitizing chemicals, and here we describe the use of this method to explore whether differences exist between skin and respiratory allergens with respect to their peptide-binding properties. Known skin and respiratory sensitizers were reacted with synthetic peptides containing either lysine (Lys) or cysteine (Cys) for 24h. The samples were analyzed by HPLC/UV, and the loss of peptide from the reaction mixture was expressed as the percent depletion compared with the control. The potential for preferential reactivity was evaluated by comparing the ratio of Lys to Cys depletion (Lys:Cys ratio). The results demonstrate that the majority of respiratory allergens are reactive in the DPRA, and that in contrast to most skin-sensitizing chemicals, preferentially react with the Lys peptide. These data suggest that skin and respiratory chemical allergens can result in different protein conjugates, which may in turn influence the quality of induced immune responses. Overall, these investigations reveal that the DPRA has considerable potential to be incorporated into tiered testing approaches for the identification and characterization of chemical respiratory allergens.
+-------------------------------------
+
+10011024_234 - 0.74844291598 - science
+[impacted, behaviour, strontium, nitrate, precipitation, bioreduction, sorption, sediment]
+
+Strontium sorption and precipitation behaviour during bioreduction in nitrate impacted sediments
+cited By (since 1996) 1
+-------------------------------------
+
+10005626_234 - 0.722408628489 - science
+[hypnosis, motility, colonic, effect, rate, emotion, physiological, change]
+
+Physiological effects of emotion: assessment via hypnosis.
+Assessment of the physiological effects of physical and emotional stress has been hampered by a lack of suitable laboratory techniques. Since hypnosis can be used safely to induce specific emotional states of considerable intensity, we studied the effect on distal colonic motility of three hypnotically induced emotions (excitement, anger, and happiness) in 18 patients aged 20-48 years with irritable bowel syndrome. Colonic motility index was reduced by hypnosis on its own (mean change 19.1; 95% CI 0.8, 37.3; p less than 0.05) and this change was accompanied by decreases in both pulse (12; 8, 15) and respiration (6; 4, 8) rates (p less than 0.001 for both). Anger and excitement increased the colonic motility index (50.8; 29.4, 72.2; and 30.4; 8.9, 51.9, respectively; p less than 0.01 for both), pulse rate (26; 22, 30; and 28; 24, 32; p less than 0.001 for both), and respiration rate (14; 12, 16; and 12; 10, 14; p less than 0.001 for both). Happiness further reduced colonic motility although not significantly from that observed during hypnosis alone. Changes in motility were mainly due to alterations in rate than in amplitude of contractions. Our results indicate that hypnosis may help in the investigation of the effects of emotion on physiological functions; this approach could be useful outside the gastrointestinal system. Our observation that hypnosis strikingly reduces fasting colonic motility may partly explain the beneficial effects of this form of therapy in functional bowel disorders.
+-------------------------------------
+
+10008604_234 - 0.749298503456 - science
+[ige, assay, method, allergen-specific, allergen, detection]
+
+Detection of Allergen-Specific IgE Antibody Responses.
+Allergen-specific IgE production is the central event in the pathogenesis of atopic disorders and increases in specific IgE serum antibodies are an indicator of immediate hypersensitivity responses in humans and in animal models of allergy. Consequently, accurate and user-friendly methods are needed to measure serum levels of allergen-specific IgE. This review examines historical and recent developments in in vivo and in vitro methods for the detection of allergen-specific IgE in humans and in animal models. Routinely, in vitro methods such as enzyme-linked immunosorbant assays or radioallergosorbant tests and in vivo methods such as the skin prick test (SPT) for humans and the passive cutaneous anaphylaxis assay (PCA) used in animals are utilized to detect allergen-specific IgE. While in vivo assays are usually more accurate than in vitro assays since they provide a functional readout of IgE activity, they are relatively costly and require considerable expertise. On the other hand in vitro assays are limited by the fact that the amount of allergen-specific serum IgG exceeds IgE antibody by several orders of magnitude, resulting in competition for allergen binding. Consequently, methods that use allergen as a direct capture step are limited by the availability of free allergen binding sites for IgE. In order to circumvent this problem, in vitro methods usually require prior depletion of IgG or use high amounts of allergen in order to facilitate availability of free binding sites for IgE detection. Clearly, these approaches are limited for small sample volumes and allergens that are in short supply. New methods such as protein microarray could potentially overcome this problem by providing high allergen concentrations in a relatively small reaction volume. Currently, in vitro methods are rarely used in isolation for prognosis but are used primarily to complement the information obtained from in vivo assays. With the emergence of new technologies it is conceivable that in vitro assays may in the future replace in vivo assays, however until then in vivo assays remain the gold standard of allergen-specific IgE detection.
+-------------------------------------
+
+10009587_234 - 0.732366229304 - science
+[acetaldehyde, xylitol, candida, production, ethanol]
+
+Xylitol inhibits carcinogenic acetaldehyde production by Candida species.
+Acetaldehyde is a highly toxic and mutagenic product of alcohol fermentation and metabolism which has been classified as a Class I carcinogen for humans by the International Agency for Research on Cancer of the World Health Organisation (WHO). Many Candida species representing oral microbiota have been shown to be capable of marked acetaldehyde production. The aim of our study was to examine the effects of various sugar alcohols and sugars on microbial acetaldehyde production. The study hypothesis was that xylitol could reduce the amount of acetaldehyde produced by Candida. Laboratory and clinical isolates of seven Candida species were selected for the study. The isolates were incubated in 12 mM ethanol and 110 mM glucose, fructose or xylitol at 37°C for 30 min and the formed acetaldehyde was measured by gas chromatography. Xylitol significantly (p < 0.0001) reduced the amount of acetaldehyde produced from ethanol by 84%. In the absence of xylitol, the mean acetaldehyde production in ethanol incubation was 220.5 μM and in ethanol-xylitol incubation 32.8 μM. This was found to be mediated by inhibition of the alcohol dehydrogenase enzyme activity. Coincubation with glucose reduced the amount of produced acetaldehyde by 23% and coincubation with fructose by 29%. At concentrations that are representative of those found in the oral cavity during the intake of proprietary xylitol products, xylitol was found to reduce the production of carcinogenic acetaldehyde from ethanol by Candida below the mutagenic level of 40-100 μM.
+-------------------------------------
+
+10003278_234 - 0.716749646504 - science
+[kd, assay, keloid]
+
+Long-term organ culture of keloid disease tissue.
+Keloid disease (KD) is a common fibroproliferative disorder of unknown aetiopathogenesis, with highly unsatisfactory treatment. Therefore, it is crucial to have a robust and clinically relevant model for studying KD pathobiology as well as preclinical testing of potential KD therapeutics. However, the unique occurrence of KD in human skin and the corresponding lack of animal models pose a major challenge in KD research. Therefore, we developed a simplified assay for the serum-free, long-term organ culture of KD tissue that facilitates quantitative analyses of major KD read-out parameters. Four millimetre KD punches embedded in a collagen matrix and organ-cultured at the epidermis air-liquid interphase (ALI) in supplemented William's E medium showed optimal tissue, cell and RNA preservation for up to 6 weeks (as measured by H & E and Pyronin Y histochemistry as well as by MTT assay, lactate dehydrogenase release and quantitative Ki67/TUNEL immunohistomorphometry). The keloid phenotype persisted well during this period, as shown by collagen-I and -III synthesis (Herovici's histochemistry staining and ELISA), and analysis of the expression of significant KD markers (CD3, CD20, CD31, CD34, CD56, tryptase, Langerin, vimentin, neutrophil elastase, CTGF and Collagen). To functionally evaluate whether this assay can test the response to candidate therapeutics, dexamethasone, a glucocorticosteroid often used in KD therapy, was administered. Indeed, dexamethasone significantly reduced the keloid volume and cellularity plus induced epidermal shrinkage. Therefore, this novel assay provides a quantitative, clinically relevant model system for studying KD pathobiology and response to treatment.
+-------------------------------------
+
+10009153_234 - 0.746343182651 - science
+[chain, glycolipid, structure, lamellar, material, assembly, dodecyl, dynamics, headgroup, molecular]
+
+Molecular dynamics study of anhydrous lamellar structures of synthetic glycolipids: effects of chain branching and disaccharide headgroup.
+Glycolipids form materials of considerable potential for a wide range of surfactant and thin film applications. Understanding the effect of glycolipid covalent structure on the properties of their thermotropic and lyotropic assemblies is a key step toward rational design of new glycolipid-based materials. Here, we perform molecular dynamics simulations of anhydrous bilayers of dodecyl β-maltoside, dodecyl β-cellobioside, dodecyl β-isomaltoside, and a C(12)C(10) branched β-maltoside. Specifically, we examine the consequences of chain branching and headgroup identity on the structure and dynamics of the lamellar assemblies. Chain branching of the glycolipid leads to measurable differences in the dimensions and interactions of the lamellar assembly, as well as a more fluid-like hydrophobic chain region. Substitution of the maltosyl headgroup of βMal-C(12) by an isomaltosyl moiety leads to a significant decrease in bilayer spacing as well as a markedly altered pattern of inter-headgroup hydrogen bonding. The distinctive simulated structures of the two regioisomers provide insight into the difference of ∼90 °C in their observed clearing temperatures. For all four simulated glycolipid systems, with the exception of the sn-2 chain of the branched maltoside, the alkyl chains are ordered and exhibit a distinct tilt, consistent with recent crystallographic analysis of a branched chain Guerbet glycoside. These insights into structure-property relationships from simulation provide an important molecular basis for future design of synthetic glycolipid materials.
+-------------------------------------
+
+10008047_234 - 0.746860136329 - science
+[variant, locus, gene, trait, human, variation, genetic, study, polygenic]
+
+Hundreds of variants clustered in genomic loci and biological pathways affect human height.
+Most common human traits and diseases have a polygenic pattern of inheritance: DNA sequence variants at many genetic loci influence the phenotype. Genome-wide association (GWA) studies have identified more than 600 variants associated with human traits, but these typically explain small fractions of phenotypic variation, raising questions about the use of further studies. Here, using 183,727 individuals, we show that hundreds of genetic variants, in at least 180 loci, influence adult height, a highly heritable and classic polygenic trait. The large number of loci reveals patterns with important implications for genetic studies of common human diseases and traits. First, the 180 loci are not random, but instead are enriched for genes that are connected in biological pathways (P = 0.016) and that underlie skeletal growth defects (P < 0.001). Second, the likely causal gene is often located near the most strongly associated variant: in 13 of 21 loci containing a known skeletal growth gene, that gene was closest to the associated variant. Third, at least 19 loci have multiple independently associated variants, suggesting that allelic heterogeneity is a frequent feature of polygenic traits, that comprehensive explorations of already-discovered loci should discover additional variants and that an appreciable fraction of associated loci may have been identified. Fourth, associated variants are enriched for likely functional effects on genes, being over-represented among variants that alter amino-acid structure of proteins and expression levels of nearby genes. Our data explain approximately 10% of the phenotypic variation in height, and we estimate that unidentified common variants of similar effect sizes would increase this figure to approximately 16% of phenotypic variation (approximately 20% of heritable variation). Although additional approaches are needed to dissect the genetic architecture of polygenic human traits fully, our findings indicate that GWA studies can identify large numbers of loci that implicate biologically relevant genes and pathways.
+-------------------------------------
+
+10009686_234 - 0.729459163341 - science
+[mkk4, kinase, gene, jnk, mouse, defect, mkk7, protein, brain]
+
+Targeted deletion of the mitogen-activated protein kinase kinase 4 gene in the nervous system causes severe brain developmental defects and premature death.
+The c-Jun NH2-terminal protein kinase (JNK) is a mitogen-activated protein kinase (MAPK) involved in the regulation of various physiological processes. Its activity is increased upon phosphorylation by the MAPK kinases MKK4 and MKK7. The early embryonic death of mice lacking an mkk4 or mkk7 gene has provided genetic evidence that MKK4 and MKK7 have nonredundant functions in vivo. To elucidate the physiological role of MKK4, we generated a novel mouse model in which the mkk4 gene could be specifically deleted in the brain. At birth, the mutant mice were indistinguishable from their control littermates, but they stopped growing a few days later and died prematurely, displaying severe neurological defects. Decreased JNK activity in the absence of MKK4 correlated with impaired phosphorylation of a subset of physiologically relevant JNK substrates and with altered gene expression. These defects resulted in the misalignment of the Purkinje cells in the cerebellum and delayed radial migration in the cerebral cortex. Together, our data demonstrate for the first time that MKK4 is an essential activator of JNK required for the normal development of the brain.
+-------------------------------------
+
+10009581_234 - 0.720207888632 - science
+[osteoarthritis, study, chromosome, genome-wide, association, locus, close, patient, arcogen, control]
+
+Identification of new susceptibility loci for osteoarthritis (arcOGEN): a genome-wide association study.
+BACKGROUND: Osteoarthritis is the most common form of arthritis worldwide and is a major cause of pain and disability in elderly people. The health economic burden of osteoarthritis is increasing commensurate with obesity prevalence and longevity. Osteoarthritis has a strong genetic component but the success of previous genetic studies has been restricted due to insufficient sample sizes and phenotype heterogeneity. METHODS: We undertook a large genome-wide association study (GWAS) in 7410 unrelated and retrospectively and prospectively selected patients with severe osteoarthritis in the arcOGEN study, 80% of whom had undergone total joint replacement, and 11,009 unrelated controls from the UK. We replicated the most promising signals in an independent set of up to 7473 cases and 42,938 controls, from studies in Iceland, Estonia, the Netherlands, and the UK. All patients and controls were of European descent. FINDINGS: We identified five genome-wide significant loci (binomial test p≤5·0×10(-8)) for association with osteoarthritis and three loci just below this threshold. The strongest association was on chromosome 3 with rs6976 (odds ratio 1·12 95% CI 1·08-1·16; p=7·24×10(-11)), which is in perfect linkage disequilibrium with rs11177. This SNP encodes a missense polymorphism within the nucleostemin-encoding gene GNL3. Levels of nucleostemin were raised in chondrocytes from patients with osteoarthritis in functional studies. Other significant loci were on chromosome 9 close to ASTN2, chromosome 6 between FILIP1 and SENP6, chromosome 12 close to KLHDC5 and PTHLH, and in another region of chromosome 12 close to CHST11. One of the signals close to genome-wide significance was within the FTO gene, which is involved in regulation of bodyweight-a strong risk factor for osteoarthritis. All risk variants were common in frequency and exerted small effects. INTERPRETATION: Our findings provide insight into the genetics of arthritis and identify new pathways that might be amenable to future therapeutic intervention. FUNDING: arcOGEN was funded by a special purpose grant from Arthritis Research UK.
+-------------------------------------
+
+10007825_234 - 0.742819527984 - science
+[dioxide, carbon, gully, blanket, concentration, times, doc, flux, peat]
+
+Carbon dioxide fluxes and DOC concentrations of eroding blanket peat gullies
+Times Cited: 0
+-------------------------------------
+
+10008948_234 - 0.733187596391 - science
+[rod, cone, retinal, mouse, central, disease, human, mutation, degeneration, pattern]
+
+RPGR-associated retinal degeneration in human X-linked RP and a murine model.
+PURPOSE: We investigated the retinal disease due to mutations in the retinitispigmentosa GTPase regulator (RPGR) gene in human patients and in an Rpgrconditional knockout (cko) mouse model.METHODS: XLRP patients with RPGR-ORF15 mutations (n = 35, ages at first visit5-72 years) had clinical examinations, and rod and cone perimetry. Rpgr-cko mice,in which the proximal promoter and first exon were deleted ubiquitously, wereback-crossed onto a BALB/c background, and studied with optical coherencetomography and electroretinography (ERG). Retinal histopathology was performed on a subset.RESULTS: Different patterns of rod and cone dysfunction were present in patients.Frequently, there were midperipheral losses with residual rod and cone functionin central and peripheral retina. Longitudinal data indicated that central rodloss preceded peripheral rod losses. Central cone-only vision with no peripheral function was a late stage. Less commonly, patients had central rod and conedysfunction, but preserved, albeit abnormal, midperipheral rod and cone vision.Rpgr-cko mice had progressive retinal degeneration detectable in the first monthsof life. ERGs indicated relatively equal rod and cone disease. At late stages,there was greater inferior versus superior retinal degeneration.CONCLUSIONS: RPGR mutations lead to progressive loss of rod and cone vision, but show different patterns of residual photoreceptor disease expression. Knowledge of the patterns should guide treatment strategies. Rpgr-cko mice had onset of degeneration at relatively young ages and progressive photoreceptor disease. The natural history in this model will permit preclinical proof-of-concept studies to be designed and such studies should advance progress toward human therapy.
+-------------------------------------
+
+10003990_234 - 0.714395686326 - science
+[pain, cwp, variant, genetic, association]
+
+Genome-wide association study meta-analysis of chronic widespread pain: evidence for involvement of the 5p15.2 region.
+BACKGROUND AND OBJECTIVES: Chronic widespread pain (CWP) is a common disorder affecting ∼10% of the general population and has an estimated heritability of 48-52%. In the first large-scale genome-wide association study (GWAS) meta-analysis, we aimed to identify common genetic variants associated with CWP. METHODS: We conducted a GWAS meta-analysis in 1308 female CWP cases and 5791 controls of European descent, and replicated the effects of the genetic variants with suggestive evidence for association in 1480 CWP cases and 7989 controls. Subsequently, we studied gene expression levels of the nearest genes in two chronic inflammatory pain mouse models, and examined 92 genetic variants previously described associated with pain. RESULTS: The minor C-allele of rs13361160 on chromosome 5p15.2, located upstream of chaperonin-containing-TCP1-complex-5 gene (CCT5) and downstream of FAM173B, was found to be associated with a 30% higher risk of CWP (minor allele frequency=43%; OR=1.30, 95% CI 1.19 to 1.42, p=1.2×10(-8)). Combined with the replication, we observed a slightly attenuated OR of 1.17 (95% CI 1.10 to 1.24, p=4.7×10(-7)) with moderate heterogeneity (I2=28.4%). However, in a sensitivity analysis that only allowed studies with joint-specific pain, the combined association was genome-wide significant (OR=1.23, 95% CI 1.14 to 1.32, p=3.4×10(-8), I2=0%). Expression levels of Cct5 and Fam173b in mice with inflammatory pain were higher in the lumbar spinal cord, not in the lumbar dorsal root ganglions, compared to mice without pain. None of the 92 genetic variants previously described were significantly associated with pain (p>7.7×10(-4)). CONCLUSIONS: We identified a common genetic variant on chromosome 5p15.2 associated with joint-specific CWP in humans. This work suggests that CCT5 and FAM173B are promising targets in the regulation of pain.
+-------------------------------------
+
+10003461_234 - 0.74750667215 - science
+[neuronal]
+
+Artifact versus reality--how astrocytes contribute to synaptic events.
+The neuronal doctrine, developed a century ago regards neuronal networks as the sole substrate of higher brain function. Recent advances in glial physiology have promoted an alternative hypothesis, which places information processing in the brain into integrated neuronal-glial networks utilizing both binary (neuronal action potentials) and analogue (diffusional propagation of second messengers/metabolites through gap junctions or transmitters through the interstitial space) signal encoding. It has been proposed that the feed-forward and feed-back communication between these two types of neural cells, which underlies information transfer and processing, is accomplished by the release of neurotransmitters from neuronal terminals as well as from astroglial processes. Understanding of this subject, however, remains incomplete and important questions and controversies require resolution. Here we propose that the primary function of perisynaptic glial processes is to create an "astroglial cradle" that shields the synapse from a multitude of extrasynaptic signaling events and provides for multifaceted support and long-term plasticity of synaptic contacts through variety of mechanisms, which may not necessarily involve the release of "glio" transmitters.
+-------------------------------------
+
+10018352_234 - 0.708009420495 - science
+[cell, lung, ox40, immune]
+
+A critical role for OX40 in T cell-mediated immunopathology during lung viral infection.
+Respiratory infections are the third leading cause of death worldwide. Illness is caused by pathogen replication and disruption of airway homeostasis by excessive expansion of cell numbers. One strategy to prevent lung immune-mediated damage involves reducing the cellular burden. To date, antiinflammatory strategies have affected both antigen-specific and naive immune repertoires. Here we report a novel form of immune intervention that specifically targets recently activated T cells alone. OX40 (CD134) is absent on naive T cells but up-regulated 1-2 d after antigen activation. OX40-immunoglobulin fusion proteins block the interaction of OX40 with its ligand on antigen-presenting cells and eliminate weight loss and cachexia without preventing virus clearance. Reduced proliferation and enhanced apoptosis of lung cells accompanied the improved clinical phenotype. Manipulation of this late costimulatory pathway has clear therapeutic potential for the treatment of dysregulated lung immune responses.
+-------------------------------------
+
+10017410_234 - 0.740762597859 - science
+[switching, surface, metric, collision, form, point, normal, euclidean, function, condition]
+
+The border collision normal form with stochastic switching surface
+The deterministic border collision normal form describes the bifurcations of a discrete time dynamical system as a fixed point moves across the switching surface with changing parameter. If the position of the switching surface varies randomly, but within some bounded region, we give conditions which imply that the attractor close to the bifurcation point is the attractor of an Iterated Function System. The proof uses an equivalent metric to the Euclidean metric because the functions involved are never contractions in the Euclidean metric. If the conditions do not hold then a range of possibilities may be realized, including local instability, and some examples are investigated numerically.
+-------------------------------------
+
+10007541_234 - 0.735779501235 - science
+[criterion, nonlinearity, lur]
+
+Stability Criteria for Discrete-time Lur'e Systems with Monotonic, sector- and slope-restricted nonlinearities.
+This note presents new LMI-based stability criteria for the discrete-time multivariable Lur’e system with nonlinearities that are monotonic, sector- and slope-restricted. Corresponding Lur’e-Lyapunov functions are constructed for such a system. The new criteria are expressed in a reasonably general form that can be applied to both non-diagonal and diagonal nonlinearities. We explicitly compare the new approach to the existing LMI-based Popov-like criteria in the literature, and express the results in terms of an Integral Quadratic Constraint (IQC). The applications of the new criteria to some control problems and strategies are briefly discussed. Numerical examples are included to show their performance, and they are shown to be less conservative than the previous results.
+-------------------------------------
+
+10007782_234 - 0.737615900223 - science
+[uptake, tumor, reference, normal, region, ratio, method, methionine, map, pet]
+
+Evaluation of primary brain tumors using 11C-methionine PET with reference to a normal methionine uptake map.
+UNLABELLED: (11)C-Methionine PET is a well-established technique for evaluating tumor extent for diagnosis and treatment planning in neurooncology. Image interpretation is typically performed using the ratio of uptake within the tumor to a reference region. The precise location of this reference region is important as local variations in methionine uptake may significantly alter the result, particularly for lesions at the border of gray and white matter. Selection of a reference region can be highly user dependant, and identifying a representative normal region may be complicated by midline or multifocal tumors. We hypothesized that current coregistration methods would enable interpretation of methionine PET images with reference to an averaged normal uptake map, allowing better standardization of scan analysis and increasing the sensitivity to tumor infiltration, particularly of white matter regions. METHODS: A normal methionine uptake map was prepared from the normal hemispheres of 20 scans performed on patients with benign or low-grade lesions. Affine and nonlinear coregistration algorithms were evaluated for spatial normalization of the images to a previously developed PET template. A standardized method for applying the normal uptake map in brain tumors was developed and evaluated in a sample of 18 scans (6 grade II, 6 grade III, and 6 grade IV gliomas). Tumor extent was compared with that derived from a mirrored contralateral reference region method. Correlation coefficients were calculated between the uptake ratios for tumor to normal uptake map versus tumor to mirrored reference region. RESULTS: "RatioMap" images depicting voxel-by-voxel ratios of a patient scan to the normal uptake map revealed increased methionine uptake in white matter regions that could not be identified using the standard method. Uptake ratios within the tumor varied slightly with the normalization methods used but correlated closely with the ratio to a single reference value. Nonlinear coregistration with median ratio intensity normalization gave the strongest correlation (r = 0.97, P < 0.001, n = 17). CONCLUSION: Evaluation of methionine PET data with reference to normal uptake data may improve sensitivity to white matter infiltration. The tumor uptake ratios obtained correlated closely with a standard reference value technique, whereas the described method allowed for better standardization of the image analysis.
+-------------------------------------
+
+10004051_234 - 0.73127198157 - science
+[protein, study, tim9, system, precursor, import, ims, mitochondrium, mitochondrial, tim]
+
+Investigation into the molecular mechanisms of import of mitochondrial small Tim proteins
+Protein import is essential for the biogenesis of mitochondria, as the majority (99%) of mitochondrial proteins is synthesized in the cytosol and thus, have to be imported into mitochondria for their function. The biogenesis of many cysteine-containing proteins of the mitochondrial intermembrane space (IMS), such as members of the small TIM and Cox17 families, is regulated by their thiol-disulphide redox state. Only the Cys-reduced precursors can be imported into mitochondria, whereas oxidised forms cannot. Their import and oxidative folding in the IMS is driven by the IMS disulphide relay system, known as mitochondrial import and assembly (MIA) pathway, whose central components are the oxidoreductase Mia40 and the sulphydryl oxidase Erv1. Currently, little is known about how the MIA precursors are maintained in the cytosol in an import-competent form, and whether they interact with the translocase of the outer membrane (TOM complex) to enter the IMS. In addition, the MIA-mediated protein folding events occurring in the IMS that lead to the generation of fully oxidised substrates are still under investigation.  Using Tim9 and yeast as models, studies presented in this thesis showed that Tim9 binding to the mitochondrial outer membrane does not depend on the receptors of the TOM complex, and occurs without regarding to the redox state of the precursor proteins. In addition, it is shown that the oxidised and reduced precursors share the same binding site on the outer membrane, and that this binding site is not important for the translocation process across the OM (Chapter 3).   Studies in this thesis investigated the role of the cytosolic thioredoxin and glutaredoxin systems in the biogenesis of mitochondria. Firstly, in vivo studies provided the evidence that the cytosolic thioredoxin system but not the glutaredoxin system is required for growth of yeast cells under respiratory conditions. Secondly, in vivo studies provided the first proof that the Trx system is required for the biogenesis of small Tim proteins. In vitro studies confirmed that the Trx1 system facilitates import of small Tim proteins into isolated mitochondria by maintaining the precursors in a reduced and therefore competent form (Chapter 5). Finally, in vitro studies showed that Mia40 is able to promote the full oxidation of Tim9. Efficient release of Tim9 from Mia40 required the presence of all cysteine residues of Tim9, as effective oxidation and concomitant release from Mia40 failed upon mutation of single cysteine residues. Finally, the study showed that reduced glutathione resolved rapidly the Mia40-Tim9 mixed-disulphide complexes, probably accelerating and/or promoting the Tim9 oxidative (Chapter 4).
+-------------------------------------
+
+10003324_234 - 0.716977000379 - science
+[gene, part, polymorphism, ibs-d, pi-ib, hv, snp, tnfsf15, tnf, expression]
+
+Identifying and testing candidate genetic polymorphisms in the irritable bowel syndrome (IBS): association with TNFSF15 and TNFα
+OBJECTIVES: The postinfectious irritable bowel syndrome (PI-IBS) suggests that impaired resolution of inflammation could cause IBS symptoms. The authors hypothesised that polymorphisms in genes whose expression were altered by gastroenteritis might be linked to IBS with diarrhoea (IBS-D) which closely resembles PI-IBS. DESIGN: Part 1: 25 healthy volunteers (HVs), 21 patients 6 months after Campylobacter jejuni infection, 37 IBS-D and 19 IBS with constipation (IBS-C) underwent rectal biopsy for gene expression analysis and peripheral blood mononuclear cell cytokine production assessment. Part 2: Polymorphisms in genes whose expression was altered in Part 1 were assessed in 179 HV, 179 IBS-D, 122 IBS-C and 41 PI-IBS. RESULTS: Part 1: Mucosal expression of seven genes was altered in IBS: CCL11, CCL13, Calpain 8 and TNFSF15 increased while NR1D1, GPR161 and GABRE decreased with similar patterns after infection with C jejuni. Part 2: The authors assessed 21 known single nucleotide polymorphisms (SNPs) in these seven genes and one SNP in each of the TNFα and IL-10 genes. Three out of five TNFSF15 SNPs (rs6478108, rs6478109 and rs7848647) showed reduced minor allele frequency (MAF) (0.28, 0.27 and 0.27) in subjects with IBS-D compared with HV (0.38, 0.36 and 0.37; p=0.007, 0.015 and 0.007, respectively) confirming others recent findings. The authors also replicated the previously reported association of the TNFα SNP rs1800629 with PI-IBS which showed an increase in the MAF at 0.30 versus 0.19 for HV (p=0.04). CONCLUSION: IBS-D and PI-IBS patients are associated with TNFSF15 and TNFα genetic polymorphisms which also predispose to Crohn's disease suggesting possible common underlying pathogenesis.
+-------------------------------------
+
+10007008_234 - 0.713300033216 - science
+[aerosol, absorption, measurement, organic, scattering, carbon]
+
+Aerosol scattering and absorption during the EUCAARI-LONGREX flights of the Facility for Airborne Atmospheric Measurements (FAAM) BAe-146: can measurements and models agree?
+Scattering and absorption by aerosol in anthropogenically perturbed air masses over Europe has been measured using instrumentation flown on the UK's BAe-146-301 large Atmospheric Research Aircraft (ARA) operated by the Facility for Airborne Atmospheric Measurements (FAAM) on 14 flights during the EUCAARI-LONGREX campaign in May 2008. The geographical and temporal variations of the derived shortwave optical properties of aerosol are presented. Values of single scattering albedo of dry aerosol at 550 nm varied considerably from 0.86 to near unity, with a campaign average of 0.93 +/- 0.03. Dry aerosol optical depths ranged from 0.030 +/- 0.009 to 0.24 +/- 0.07. An optical properties closure study comparing calculations from composition data and Mie scattering code with the measured properties is presented. Agreement to within measurement uncertainties of 30\% can be achieved for both scattering and absorption, but the latter is shown to be sensitive to the refractive indices chosen for organic aerosols, and to a lesser extent black carbon, as well as being highly dependent on the accuracy of the absorption measurements. Agreement with the measured absorption can be achieved either if organic carbon is assumed to be weakly absorbing, or if the organic aerosol is purely scattering and the absorption measurement is an overestimate due to the presence of large amounts of organic carbon. Refractive indices could not be inferred conclusively due to this uncertainty, despite the enhancement in methodology compared to previous studies that derived from the use of the black carbon measurements. Hygroscopic growth curves derived from the wet nephelometer indicate moderate water uptake by the aerosol with a campaign mean f (RH) value (ratio in scattering) of 1.5 (range from 1.23 to 1.63) at 80\% relative humidity. This value is qualitatively consistent with the major chemical components of the aerosol measured by the aerosol mass spectrometer, which are primarily mixed organics and nitrate and some sulphate.
+-------------------------------------
+
+10004017_234 - 0.746306272469 - science
+[pv, anomaly, layer, precipitation, convective, convection, case, dry, deep, complex]
+
+Large scale potential vorticity anomalies and deep convection.
+The effect on deep convection of large-scale potential vorticity (PV) anomalies and their associated tropospheric stable layers is complex and not well understood. This article examines the meteorological events of 9 July 2007 (IOP7b of the Convective and Orographically-induced Precipitation Study (COPS)), which was dominated by an upper-level PV anomaly that stretched from the UK to southern France and as far northeast as Denmark. Three precipitation regions were identified from the case: lines of intense storms beneath the PV anomaly; less intense, more widespread convective precipitation to the east of the PV anomaly; and, in between, a region of no precipitation. The latter of these coincided with the high-resolution measurements andmodel analyses from COPS. The extensive and varied data analyzed in this investigation show that convective available potential energy (CAPE) was present in this region (the distribution of CAPE and convective inhibition (CIN) is presented via an innovative, pseudo-3D visualization that allows horizontal and vertical interactions to be considered). However, convection was capped by a complex arrangement of dry layers; the base of the key layer was at 750 hPa. These dry layers descended separately from the upper troposphere, moving around the PV anomaly as it developed from a breaking Rossby wave to the west during the seven days before the IOP. This case adds to other studies that show that descent of complex dry layers is an important mechanism for forming convection-inhibiting atmospheric lids in Western Europe. A simple conceptual model is developed that synthesizes the effect of large-scale PV anomalies on deep convection from a series of consistent case studies. This model has significant implications for storm forecasting and projections of storminess in future climates, as it highlights the importance of thin structures that can advect hundreds of km before having an impact.
+-------------------------------------
+
+10011653_234 - 0.734098031949 - science
+[leptin, crp, level, adiposity, measure, resistance, subject]
+
+Epidemiological evidence against a role for C-reactive protein causing leptin resistance.
+OBJECTIVE: It has been suggested that elevated levels of C-reactive protein (CRP) might interfere with leptin signalling and contribute to leptin resistance. Our aim was to assess whether plasma levels of CRP influence leptin resistance in humans; and our hypothesis was that CRP levels would modify the cross-sectional relationships between leptin and measures of adiposity. DESIGN AND METHODS: We assessed 4 measures of adiposity: body mass index, waist circumference, fat mass, and % body fat in 2113 British Regional Heart Study (BRHS) men (mean (SD) age 69 (5) years), with replication in 760 (age 69 (6) years) European Male Aging Study (EMAS) subjects. RESULTS: In BRHS subjects leptin correlated with CRP (Spearman's r=0.22, p<0.0001). Leptin and CRP correlated with all 4 measures of adiposity (r-value range: 0.22 to 0.57, all p<0.0001). Age-adjusted mean levels for adiposity measures increased in relation to leptin levels; but CRP level did not consistently influence the β coefficients of the regression lines in a CRP-stratified analysis. In BRHS subjects, the BMI vs. leptin relationship demonstrated a weak statistical interaction with CRP (p=0.04). We observed no similar interaction in EMAS subjects, and no significant interactions with other measures of adiposity in BRHS or EMAS cohorts. CONCLUSION: We have shown that plasma CRP has little influence on the relationship between measures of adiposity and serum leptin levels in these middle-aged and elderly male European cohorts. This study provides epidemiological evidence against CRP having a significant role in causing leptin resistance.
+-------------------------------------
+
+10008670_234 - 0.70262523316 - science
+[times, measurement, vivo-like, effector, assay, condition, activity, enzymatic]
+
+Why in vivo may not equal in vitro - new effectors revealed by measurement of enzymatic activities under the same in vivo-like assay conditions
+Times Cited: 0
+-------------------------------------
+
+10010345_234 - 0.749784021322 - science
+[mutagenesis, rational, random, engineering]
+
+The future of industrial antibiotic production: from random mutagenesis to synthetic biology.
+Natural products derived from the secondary metabolism of microbes constitute a cornerstone of modern medicine. Engineering bugs to produce these products in high quantities is a major challenge for biotechnology, which has usually been tackled by either one of two strategies: iterative random mutagenesis or rational design. Recently, we analyzed the transcriptome of a Streptomyces clavuligerus strain optimized for production of the ??-lactamase inhibitor clavulanic acid by multiple rounds of mutagenesis and selection, and discovered that the observed changes matched surprisingly well with simple changes that have been introduced into these strains by rational engineering. Here, we discuss how in the new field of synthetic biology, random mutagenesis and rational engineering can be implemented complementarily in ways which may enable one to go beyond the status quo that has now been reached by each method independently.
+-------------------------------------
+
+10008492_234 - 0.732624595518 - science
+[adenoma, igf-ii, colorectal, serum, individual, igfbp-2, factor]
+
+Circulating insulin-like growth factor II and colorectal adenomas
+Circulating insulin-like growth factor I (IGF-I) and IGF-binding protein-3 (IGFBP-3) may be risk factors for the development of colorectal cancer. On the other hand, IGF-II and IGFBP-2 are overexpressed in colorectal carcinomas. These contrasting backgrounds led us to investigate the relationship between serum IGF-I, IGF-II, IGFBP-2, and IGFBP-3 and the presence of colorectal adenomas, known precursors of colorectal carcinoma, in 345 volunteers attending a screening flexible sigmoidoscopy trial (entry criteria: healthy, aged 55-64 yr). The most striking finding was an elevated mean serum IGF-II in individuals with adenomas (n = 52) compared with controls (mean difference, 139 ng/mL; 95% confidence intervals, 82, 196; P &lt; 0.0001). Logistic regression adjusting for confounding factors confirmed the significant association between IGF-II and adenoma occurrence (P &lt; 0.0001) and revealed an additional positive association with serum IGFBP-2 (P &lt; 0.0001). However, there was no association found between either serum IGF-I and/or IGFBP-3 and the presence of adenomas. Additionally, in 31 individuals with adenomas in whom levels were determined pre- and postpolypectomy, there was a significant fall in mean IGF-II (P &lt; 0.001) and IGFBP-2 (P &lt; 0.001) after adenoma removal, but no difference in IGF-II and IGFBP-2 concentrations between repeated samples in 20 individuals without adenomas. Immunohistochemical studies demonstrated IGF-II expression in 83% of all adenomas, which contrasted with absent expression in normal colonic expression and hyperplastic polyps. This study has shown for the first time that serum IGF-II may be a tumor marker in individuals with colorectal adenomas. Further studies are needed to validate these relationships in larger populations, including individuals undergoing colonoscopy.
+-------------------------------------
+
+10010994_234 - 0.70252329156 - science
+[growth, oxide, oxygen]
+
+Anodic growth of titanium oxide: Electrochemical behaviour and morphological evolution
+The mechanism of growth of anodic titanium oxide in sulphuric acid has been investigated by potentiostatic and potentiodynamic anodizing, electrochemical impedance spectroscopy and transmission electron microscopy. It was found that most of the charge passed during growth is consumed in oxygen evolution at the oxide-solution interface and the measured current relates to the electronic conduction properties of the oxide. Further, it was confirmed that an amorphous to crystalline transition takes place during potentiodynamic growth, and the transition triggers the additional generation of oxygen bubbles that occurs within the oxide. Depending on the growth conditions, the oxygen bubbles can rupture with local re-growth of the film then occurring. ?? 2012 Elsevier Ltd. All rights reserved.
+-------------------------------------
+
+10004336_234 - 0.738040580872 - science
+[silicon, trivacancy, diffusion, defect, annealing]
+
+Reconfigurations and diffusion of trivacancy in silicon
+Disappearance of the divacancy (V2) and trivacancy (V3) complexes upon isochronal and isothermal annealing of electron irradiated Si:O crystals has been studied by means of deep level transient spectroscopy. The annealing studies have shown that the V2 and V3 defects are mobile in Si at T>200 °C and in oxygen-rich material are trapped by interstitial oxygen atoms so resulting in the appearance of V2O and V3O defects. The activation energies for diffusion of the V2 and V3 centers have been determined. Density functional modeling calculations have been carried out to investigate the migration and reorientation mechanisms of V3 in large silicon supercells. It is proposed that these comprise a sequence of transformations between V3(D3) and V3(C2v) configurations.
+-------------------------------------
+
+10009709_234 - 0.742902226584 - science
+[serum, invasive, use, recommendation, gm, ag, ifd, cryptococcus, disease, patient]
+
+ECIL recommendations for the use of biological markers for the diagnosis of invasive fungal diseases in leukemic patients and hematopoietic SCT recipients.
+As culture-based methods for the diagnosis of invasive fungal diseases (IFD) in leukemia and hematopoietic SCT patients have limited performance, non-culture methods are increasingly being used. The third European Conference on Infections in Leukemia (ECIL-3) meeting aimed at establishing evidence-based recommendations for the use of biological tests in adult patients, based on the grading system of the Infectious Diseases Society of America. The following biomarkers were investigated as screening tests: galactomannan (GM) for invasive aspergillosis (IA); β-glucan (BG) for invasive candidiasis (IC) and IA; Cryptococcus Ag for cryptococcosis; mannan (Mn) Ag/anti-mannan (A-Mn) Ab for IC, and PCR for IA. Testing for GM, Cryptococcus Ag and BG are included in the revised EORTC/MSG (European Organization for Research and Treatment of Cancer/Mycoses Study Group) consensus definitions for IFD. Strong evidence supports the use of GM in serum (A II), and Cryptococcus Ag in serum and cerebrospinal fluid (CSF) (A II). Evidence is moderate for BG detection in serum (B II), and the combined Mn/A-Mn testing in serum for hepatosplenic candidiasis (B III) and candidemia (C II). No recommendations were formulated for the use of PCR owing to a lack of standardization and clinical validation. Clinical utility of these markers for the early management of IFD should be further assessed in prospective randomized interventional studies.
+-------------------------------------
+
+10006969_234 - 0.729455458898 - science
+[model, tissue, electrical, action, atrium, atrial, remodelling, wave, normal, effect]
+
+Virtual tissue engineering of the human atrium: modelling pharmacological actions on atrial arrhythmogenesis.
+Computational models of human atrial cells, tissues and atria have been developed. Cell models, for atrial wall, crista terminalis, appendage, Bachmann's bundle and pectinate myocytes are characterised by action potentials, ionic currents and action potential duration (APD) restitution. The principal effect of the ion channel remodelling of persistent atrial fibrillation (AF), and a mutation producing familial AF, was APD shortening at all rates. Electrical alternans was abolished by the modelled action of Dronedarone. AF induced gap junctional remodelling slows propagation velocity at all rates. Re-entrant spiral waves in 2-D models are characterised by their frequency, wavelength, meander and stability. For homogenous models of normal tissue, spiral waves self-terminate, due to meander to inexcitable boundaries, and by dissipation of excitation. AF electrical remodelling in these homogenous models led to persistence of spiral waves, and AF fibrotic remodelling to their breakdown into fibrillatory activity. An anatomical model of the atria was partially validated by the activation times of normal sinus rhythm. The use of tissue geometry from clinical MRI, and tissue anisotropy from ex vivo diffusion tensor magnetic resonance imaging is outlined. In the homogenous model of normal atria, a single scroll breaks down onto spatio-temporal irregularity (electrical fibrillation) that is self-terminating; while in the AF remodelled atria the fibrillatory activity is persistent. The persistence of electrical AF can be dissected in the model in terms of ion channel and intercellular coupling processes, that can be modified pharmacologically; the effects of anatomy, that can be modified by ablation; and the permanent effects of fibrosis, that need to be prevented.
+-------------------------------------
+
+10008198_234 - 0.733360462925 - science
+[density, breast, cancer, risk, change, screen, mammogram]
+
+Longitudinal Change in Mammographic Density and Association with Breast Cancer Risk: a Case-Control Study
+High mammographic breast density is associated with increased risk of breast cancer, but how risk varies with longitudinal change in density is less clear. To investigate, a case-control study of 30 women with screen-detected cancer and 30 women with a normal mammogram, all with two previous nor-mal mammograms, was conducted. Percentage density for all mammograms was estimated with the thresholding software Cumulus. Mean density at first screen was not significantly different in cases and controls in contralateral (36.5 vs. 32.6, p = 0.23) or ipsilateral (36.0 vs. 32.9 p = 0.37) breasts, but mean re-duction in density from first to third screen was significantly different in both contralateral (10.7 vs. 5.1, p = 0.02) and ipsilateral (11.7 vs. 6.2, p = 0.04) breasts. Using logistic regression, and controlling for age and HRT use, breast cancer risk was found to be associated with change in density from first to third screen.
+-------------------------------------
+
+10005301_234 - 0.740885552587 - science
+[postsynaptic, receptor, psd, synaptic, structure, psd-95, mechanism, membrane]
+
+A Structural Investigation of the Postsynaptic Density Protein, PSD-95
+The mechanism known as Long-Term Potentiation (LTP), which is perhaps the most established mechanism associated with memory and learning, describes the Hebbian postulate that “neurons that fire together, wire together”.  LTP refers to the upregulation of synaptic strength in response to high activity and can be subdivided into distinct phases.  Early-LTP involves the phosphorylation of neurotransmitter receptors while Late-LTP involves the increase in expression of receptors at the postsynaptic membrane.  These are long-term, stable perturbations of synaptic activity, lasting from hours to weeks.  However, more subtle mechanisms controlling shorter-term plastic changes in synaptic function lie in the spatial distribution of postsynaptic receptors.  In glutamatergic synapses within the mammalian CNS the distribution of neurotransmitter receptors is controlled by a scaffold of proteins under the postsynaptic membrane known as the PostSynaptic Density (PSD). This complex has been observed to change shape on a rapid scale, however little is understood about its macromolecular structure.The PSD anchors glutamate receptors within the postsynaptic membrane along with metabotropic receptors and cytoplasmic enzymes that modulate synaptic function and PSD and dendritic spine morphology.  Much of what is understood on the macro-molecular structure of the PSD is based on knowledge of known binding partners.  A recent paper within the group presented the PSD-95-Kir2.1 sub-complex of the PSD using a multi-disciplinary structural approach, blending Transmission Electron Microscopy (TEM) and solution scattering models with high-resolution X-ray and NMR structures for individual folded domains.  In this thesis the solution state structure of PSD-95 is examined more closely.  Deletion constructs of PSD-95 have been obtained by expressing subcloned fragments of the gene from Homo sapiens in an E. coli expression system and purifying them through a combination of IMAC, ion exchange chromatography and gel filtration.  The PDZ region is rigorously described using Small Angle X-ray Scattering and is orthogonally validated by comparing the models against hydrodynamic data for the constructs.  The PDZ12 region was crystallized and subjected to extensive optimisation to improve the resulting diffraction, falling just short of a molecular replacement structure.  Attempts were made to crystallize the PDZ3 domain with the K¬ir¬2.1 C-terminus.  PSD-95 dynamics was also investigated using Deuterium Exchange Mass Spectrometry (DXMS) to test a hypothesis for an internal binding interaction but was found not to be present using the methods developed.
+-------------------------------------
+
+10009361_234 - 0.743803979998 - science
+[footprint, surface, tof-sim, cell, bacterial, eukaryotic]
+
+Spectroscopy in the analysis of bacterial and eukaryotic cell footprints on implant surfaces.
+We tested the suitability of two spectroscopic methods, x-ray photoelectron spectroscopy (XPS) and time of flight secondary ion mass spectrometry (ToF-SIMS), in the recognition of bacterial and eukaryotic cell footprints on implant surfaces. Human mesenchymal stem cells (MSCs) and Staphylococcus aureus were cultured on sample surfaces and detached using trypsin. Scanning electron microscopy confirmed that the processed surfaces did not contain any human or microbial cells. The footprints were then analysed using XPS and ToF-SIMS. XPS results showed no significant differences between the footprints, but principal component analysis of the ToF-SIMS data enabled clear separation of MSC-footprints from the S. aureus and co-culture footprints (p < 0.03). ToF-SIMS also demonstrated 'race for the surface' between proteins, which suggest surface charge (zeta-potential) dependent protein adsorption. ToF-SIMS differentiated eukaryotic and bacterial footprints and has potential for post-hoc detection of implant-related infections based on the typical ToF-SIMS spectra.
+-------------------------------------
+
+10004006_234 - 0.714395686326 - science
+[pain, cwp, variant, genetic, association]
+
+Genome-wide association study meta-analysis of chronic widespread pain: evidence for involvement of the 5p15.2 region.
+BACKGROUND AND OBJECTIVES: Chronic widespread pain (CWP) is a common disorder affecting ∼10% of the general population and has an estimated heritability of 48-52%. In the first large-scale genome-wide association study (GWAS) meta-analysis, we aimed to identify common genetic variants associated with CWP. METHODS: We conducted a GWAS meta-analysis in 1308 female CWP cases and 5791 controls of European descent, and replicated the effects of the genetic variants with suggestive evidence for association in 1480 CWP cases and 7989 controls. Subsequently, we studied gene expression levels of the nearest genes in two chronic inflammatory pain mouse models, and examined 92 genetic variants previously described associated with pain. RESULTS: The minor C-allele of rs13361160 on chromosome 5p15.2, located upstream of chaperonin-containing-TCP1-complex-5 gene (CCT5) and downstream of FAM173B, was found to be associated with a 30% higher risk of CWP (minor allele frequency=43%; OR=1.30, 95% CI 1.19 to 1.42, p=1.2×10(-8)). Combined with the replication, we observed a slightly attenuated OR of 1.17 (95% CI 1.10 to 1.24, p=4.7×10(-7)) with moderate heterogeneity (I2=28.4%). However, in a sensitivity analysis that only allowed studies with joint-specific pain, the combined association was genome-wide significant (OR=1.23, 95% CI 1.14 to 1.32, p=3.4×10(-8), I2=0%). Expression levels of Cct5 and Fam173b in mice with inflammatory pain were higher in the lumbar spinal cord, not in the lumbar dorsal root ganglions, compared to mice without pain. None of the 92 genetic variants previously described were significantly associated with pain (p>7.7×10(-4)). CONCLUSIONS: We identified a common genetic variant on chromosome 5p15.2 associated with joint-specific CWP in humans. This work suggests that CCT5 and FAM173B are promising targets in the regulation of pain.
+-------------------------------------
+
+10006824_234 - 0.706849767456 - science
+[pulsar, modulation, energy, state]
+
+The High Time Resolution Universe Pulsar Survey - V. Single-pulse energetics and modulation properties of 315 pulsars
+We report on the pulse-to-pulse energy distributions and phase-resolved modulation properties for catalogued pulsars in the southern High Time Resolution Universe intermediate-latitude survey. We selected the 315 pulsars detected in a single-pulse search of this survey, allowing a large sample unbiased regarding any rotational parameters of neutron stars. We found that the energy distribution of many pulsars is well described by a log-normal distribution, with few deviating from a small range in log-normal scale and location parameters. Some pulsars exhibited multiple energy states corresponding to mode changes, and implying that some observed ???nulling??? may actually be a mode-change effect. PSR J1900-2600 was found to emit weakly in its previously identified ???null??? state. We found evidence for another state-change effect in two pulsars, which show bimodality in their nulling time-scales; that is, they switch between a continuous-emission state and a single-pulse-emitting state. Large modulation occurs in many pulsars across the full integrated profile, with increased sporadic bursts at leading and trailing sub-beam edges. Some of these high-energy outbursts may indicate the presence of ???giant pulse??? phenomena. We found no correlation with modulation and pulsar period, age or other parameters. Finally, the deviation of integrated pulse energy from its average value was generally quite small, despite the significant phase-resolved modulation in some pulsars; we interpret this as tenuous evidence of energy regulation between distinct pulsar sub-beams.
+-------------------------------------
+
+10010349_234 - 0.749784021322 - science
+[mutagenesis, rational, random, engineering]
+
+The future of industrial antibiotic production: From random mutagenesis to synthetic biology
+atural products derived from the secondary metabolism of microbes constitute a cornerstone of modern medicine. Engineering bugs to produce these products in high quantities is a major challenge for biotechnology, which has usually been tackled by either one of two strategies: iterative random mutagenesis or rational design. Recently, we analyzed the transcriptome of a Streptomyces clavuligerus strain optimized for production of the ??-lactamase inhibitor clavulanic acid by multiple rounds of mutagenesis and selection, and discovered that the observed changes matched surprisingly well with simple changes that have been introduced into these strains by rational engineering. Here, we discuss how in the new field of synthetic biology, random mutagenesis and rational engineering can be implemented complementarily in ways which may enable one to go beyond the status quo that has now been reached by each method independently. ?? 2011 Landes Bioscience.
+-------------------------------------
+
+10008983_234 - 0.703775067777 - science
+[theory, stat, eft, compton, chiral, proton]
+
+Using EFT to analyze low-energy Compton scattering from protons and  light nuclei
+We discuss the application of an effective field theory (EFT) whichincorporates the chiral symmetry of QCD to Compton scattering from the protonand deuteron. We describe the chiral EFT analysis of the proton Comptonscattering database presented in our recent review (arXiv:1203.6834), whichgives: alpha^{(p)}=10.5 +/- 0.5(stat) +/- 0.8(theory); beta^{(p)}= 2.7 +/-0.5(stat) +/- 0.8(theory), for the electric and magnetic dipole polarizabilityof the proton. We also summarize the chiral EFT analysis of the world data oncoherent Compton scattering from deuterium presented in arXiv:1203.6834. Thatyields: alpha^{(s)}=10.5 +/- 2.0(stat) +/- 0.8(theory); beta^{(s)}=3.6 +/-1.0(stat) +/- 0.8(theory).
+-------------------------------------
+
+10018546_234 - 0.70177768601 - science
+[characterisation, superalloy, stress, machined, high, residual, preuss, surface, axinte, nickel-base]
+
+Characterisation of residual stresses in machined surfaces of a high strength nickel-base superalloy
+Li, W. Preuss, M. Withers, P. J. Axinte, D. Andrews, P.
+-------------------------------------
+
+10018315_234 - 0.749006828885 - science
+[proinflammatory, viral, il-17, virus, infection, expression, antiviral]
+
+IL-17 boosts proinflammatory outcome of antiviral response in human cells.
+Excessive inflammation during bacterial and viral infections is destructive to the host and involves elevated production of proinflammatory cytokines. It is especially deleterious in organs with space constraints such as lung and the CNS. Indeed, a number of viruses that infect lungs, such as avian influenza virus, SARS-associated coronavirus, and respiratory syncytial virus, elicit a very high level of proinflammatory cytokines; however, it is unclear what triggers their production. In this study, we show that IL-17 commonly produced during viral infection specifically augments a proinflammatory response by directly synergizing with antiviral signaling. Costimulation of primary human fibroblasts with IL-17 greatly enhanced respiratory syncytial virus-induced or synthetic dsRNA-based viral mimic polyinosinic:polycytidylic acid-induced expression of proinflammatory genes without affecting expression of IFN-β-stimulated or IFN-stimulated genes. Knockdown of expression of known mediators of the antiviral signaling pathway revealed that the IL-17-poly(I:C) synergy depends on the presence of the transcriptional factors RelA and IFN regulatory factor 3 and IκB kinases. Moreover, this synergy was blocked by an IκB kinase inhibitor, BAY 11-7082. These findings shed light on the molecular mechanisms behind IL-17-dependent immunopathology observed in viral infections.
+-------------------------------------
+
+10003266_234 - 0.711456841435 - science
+[hair, rac1, mouse, rescue]
+
+A function for Rac1 in the terminal differentiation and pigmentation of hair.
+The small GTPase Rac1 is ubiquitously expressed in proliferating and differentiating layers of the epidermis and hair follicles. Previously, Rac1 was shown to regulate stem cell behaviour in these compartments. We have asked whether Rac1 has, in addition, a specific, stem-cell-independent function in the regulation of terminal hair follicle differentiation. To address this, we have expressed a constitutively active mutant of Rac1, L61Rac1, only in the basal epidermal layer and outer root sheath of mice possessing an epidermis-specific deletion of endogenous Rac1, which experience severe hair loss. The resulting 'rescue' mice exhibited a hair coat throughout their lives. Therefore, expression of Rac1 activity in the keratin-14-positive compartment of the skin is sufficient for the formation of hair follicles and hair in normal quantities. The quality of hair formed in rescue mice was, however, not normal. Rescue mice showed a grey, dull hair coat, whereas that of wild-type and L61Rac1-transgenic mice was black and shiny. Hair analysis in rescue mice revealed altered structures of the hair shaft and the cuticle and disturbed organization of medulla cells and pigment distribution. Disorganization of medulla cells correlates with the absence of cortical, keratin-filled spikes that normally protrude from the cortex into the medulla. The desmosomal cadherin Dsc2, which normally decorates these protrusions, was found to be reduced or absent in the hair of rescue mice. Our study demonstrates regulatory functions for Rac1 in the formation of hair structure and pigmentation and thereby identifies, for the first time, a role for Rac1 in terminal differentiation.
+-------------------------------------
+
+10017007_234 - 0.70133442092 - science
+[algorithm, genetic, gas, solution, multiple, case]
+
+Applying Genetic Algorithms to Optimize the Cost of Multiple Sourcing Supply Chain Systems – An Industry Case Study
+This chapter is to present a successful industry case applying Genetic Algorithms (GAs). The case has applied GAs for the purpose of optimizing the total cost of a multiple sourcing supply chain system. The system is characterized by a multiple sourcing model with stochastic demand. A mathematical model is adopted to describe the stochastic inventory with the many-to-many demandsupplier network problem and it simultaneously constitutes the inventory control and transportation parameters as well as price uncertainty factors. Genetic Algorithms are applied to derive optimal solutions through the optimization process. A numerical example and its solution demonstrate the detail solution procedure based on Genetic Algorithms and shows that GAs are able to solve such a di.cult problem e.ciently and easily. Further research is also discussed.
+-------------------------------------
+
+10012761_234 - 0.734098031949 - science
+[leptin, crp, level, adiposity, measure, resistance, subject]
+
+Epidemiological evidence against a role for C-reactive protein causing leptin resistance.
+OBJECTIVE: It has been suggested that elevated levels of C-reactive protein (CRP) might interfere with leptin signalling and contribute to leptin resistance. Our aim was to assess whether plasma levels of CRP influence leptin resistance in humans; and our hypothesis was that CRP levels would modify the cross-sectional relationships between leptin and measures of adiposity. DESIGN AND METHODS: We assessed 4 measures of adiposity: body mass index, waist circumference, fat mass, and % body fat in 2113 British Regional Heart Study (BRHS) men (mean (SD) age 69 (5) years), with replication in 760 (age 69 (6) years) European Male Aging Study (EMAS) subjects. RESULTS: In BRHS subjects leptin correlated with CRP (Spearman's r=0.22, p<0.0001). Leptin and CRP correlated with all 4 measures of adiposity (r-value range: 0.22 to 0.57, all p<0.0001). Age-adjusted mean levels for adiposity measures increased in relation to leptin levels; but CRP level did not consistently influence the β coefficients of the regression lines in a CRP-stratified analysis. In BRHS subjects, the BMI vs. leptin relationship demonstrated a weak statistical interaction with CRP (p=0.04). We observed no similar interaction in EMAS subjects, and no significant interactions with other measures of adiposity in BRHS or EMAS cohorts. CONCLUSION: We have shown that plasma CRP has little influence on the relationship between measures of adiposity and serum leptin levels in these middle-aged and elderly male European cohorts. This study provides epidemiological evidence against CRP having a significant role in causing leptin resistance.
+-------------------------------------
+
+10007412_234 - 0.701712568003 - science
+[pulsar, gamma-ray, frequency, psr, time, j0106, method]
+
+Discovery of Nine Gamma-Ray Pulsars in Fermi Large Area Telescope Data Using a New Blind Search Method
+We report the discovery of nine previously unknown gamma-ray pulsars ina blind search of data from the Fermi Large Area Telescope (LAT). Thepulsars were found with a novel hierarchical search method originallydeveloped for detecting continuous gravitational waves from rapidlyrotating neutron stars. Designed to find isolated pulsars spinning at upto kHz frequencies, the new method is computationally efficient andincorporates several advances, including a metric-based gridding of thesearch parameter space (frequency, frequency derivative, and skylocation) and the use of photon probability weights. The nine pulsarshave spin frequencies between 3 and 12 Hz, and characteristic agesranging from 17 kyr to 3 Myr. Two of them, PSRs J1803-2149 and J2111+4606, are young and energetic Galactic-plane pulsars (spin-down powerabove 6 {\times} 10$^{35}$ erg s$^{-1}$ and ages below 100kyr). The seven remaining pulsars, PSRs J0106+4855, J0622+3749,J1620-4927, J1746-3239, J2028+3332, J2030+4415, and J2139+4716, areolder and less energetic; two of them are located at higher Galacticlatitudes (|b| {\gt} 10{\deg}). PSR J0106+4855 has the largestcharacteristic age (3 Myr) and the smallest surface magnetic field (2{\times} 10$^{11}$ G) of all LAT blind-search pulsars. PSRJ2139+4716 has the lowest spin-down power (3 {\times} 10$^{33}$ ergs$^{-1}$) among all non-recycled gamma-ray pulsars ever found.Despite extensive multi-frequency observations, only PSR J0106+4855 hasdetectable pulsations in the radio band. The other eight pulsars belongto the increasing population of radio-quiet gamma-ray pulsars.
+-------------------------------------
+
+10003613_234 - 0.703701226787 - science
+[injury, tubal, thermal, occult, detection, woman, rrso]
+
+Diathermy-induced injury may affect detection of occult tubal lesions at risk-reducing salpingo-oophorectomy.
+BACKGROUND: Electrosurgery-induced tubal thermal injury obscures cellular detail and hampers histomorphological assessment for occult pathology. OBJECTIVE: The objectives of this study were to report on diathermy-related thermal injuries to the fallopian tube observed at RRSO and explore its potential impact on the detection of occult tubal epithelial lesions. DESIGN: This study was composed of high-risk women from breast and/or ovarian cancer families attending a tertiary high-risk familial gynecologic cancer clinic. This was a retrospective case-control analysis of high-risk women who underwent RRSO. Cases were all women detected to have occult lesions (tubal atypia/carcinoma in situ/cancer) between January 2005 and December 2010. Control subjects were all women with normal tubal/ovarian histology between August 2006 and December 2007. METHODS: Two pathologists performed histopathologic assessment for grade of thermal injury. Tubal diathermy injury rates were compared between cases and controls. Statistical analysis was undertaken using SPSS version 18. The Mann-Whitney U test compared age distributions; χ/Fisher tests, the difference between proportions, and γ test, the difference in ordinal variables between the groups. RESULTS: A novel tubal thermal index to describe the severity of injury is reported. Lack of fimbrial thermal injury is twice as likely (odds ratio, 2.04; 95% confidence interval, 1.06-3.92) to be associated with detection of occult tubal pathology, whereas isthmic injury does not affect detection rate (P = 0.744). The groups were comparable with respect to age at RRSO (P = 0.531) and the presence of BRCA mutations (P = 0.192). CONCLUSIONS: This report highlights the potential impact of electrosurgical thermal injury on detection of occult tubal pathology following RRSO. It is important for surgeons to avoid thermal injury to the distal end of the tube.
+-------------------------------------
+
+10007824_234 - 0.738814091201 - science
+[soil]
+
+Does prescribed burning on peat soils influence DOC concentrations in soil and runoff waters? Results from a 10 year chronosequence
+Times Cited: 0
+-------------------------------------
+
+10008301_234 - 0.737386507897 - science
+[temporal, lobe, rostral, connectivity]
+
+Convergent Connectivity and Graded Specialization in the Rostral Human Temporal Lobe as Revealed by Diffusion-Weighted Imaging Probabilistic Tractography
+In recent years, multiple independent neuroscience investigations have implicated critical roles for the rostral temporal lobe in auditory and visual perception, language, and semantic memory. Although arising in the context of different cognitive functions, most of these suggest that there is a gradual convergence of sensory information in the temporal lobe that culminates in modality- and perceptually invariant representations at the most rostral aspect. Currently, however, too little is known regarding connectivity within the human temporal lobe to be sure of exactly how and where convergence occurs; existing hypotheses are primarily derived on the basis of cross-species generalizations from invasive nonhuman primate studies, the validity of which is unclear, especially where language function is concerned. In this study, we map the connectivity of the human rostral temporal lobe in vivo for the first time using diffusion-weighted imaging probabilistic tractography. The results indicate that convergence of sensory information in the temporal lobe is in fact a graded process that occurs along both its longitudinal and lateral axes and culminates in the most rostral limits. We highlight the consistency of our results with those of prior functional neuroimaging, computational modeling, and patient studies. By going beyond simple fasciculus reconstruction, we systematically explored the connectivity of specific temporal lobe areas to frontal and parietal language regions. In contrast to the graded within-temporal lobe connectivity, this intertemporal connectivity was found to dissociate across caudal, mid, and rostral subregions. Furthermore, we identified a basal rostral temporal region with very limited connectivity to areas outside the temporal lobe, which aligns with recent evidence that this subregion underpins the extraction of modality- and context-invariant semantic representations.
+-------------------------------------
+
+10017113_234 - 0.74357544535 - science
+[control, autofluorescence, iqr, patient, dcssc, morphea, ssc, lcssc, measurement, skin]
+
+Noninvasive measurement of skin autofluorescence is increased in patients with systemic sclerosis: an indicator of increased advanced glycation endproducts?
+OBJECTIVE: Skin autofluorescence noninvasively assesses expression of advanced glycation endproducts and therefore potentially the presence of oxidative stress that is implicated in the pathogenesis of systemic sclerosis (SSc). We investigated whether autofluorescence was increased in patients with SSc, primary Raynaud's phenomenon (RP), and morphea as compared to healthy controls. METHODS: Measurements of autofluorescence were made at 5 upper limb sites in 16 healthy controls, 16 patients with diffuse cutaneous SSc (dcSSc), 15 with limited cutaneous SSc (lcSSc), 15 with primary RP, and 13 with morphea. For patients with morphea, additional measurements were made at the affected and an adjacent unaffected site. RESULTS: Autofluorescence was significantly increased in patients with dcSSc but not lcSSc as compared to controls at the proximal phalanx dcSSc median 0.15, interquartile range (IQR) 0.10-0.24, vs control 0.10, IQR 0.07-0.13; p = 0.014, dorsum of the hand (dcSSc 0.17, IQR 0.11-0.36, vs control 0.12, IQR 0.09-0.17; p = 0.031), the wrist (dcSSc 0.22, IQR 0.13-0.33, vs control 0.13, IQR 0.09-0.18; p = 0.005), and forearm (dcSSc 0.19, IQR 0.12-0.47, vs control 0.14, IQR 0.10-0.16; p = 0.022). There was a trend for autofluorescence to be increased in patients with lcSSc and at morphea sites, compared to noninvolved skin. CONCLUSION: Autofluorescence is increased in patients with dcSSc compared to primary RP and to healthy controls. This suggests increased oxidative stress and the potential for autofluorescence as a biomarker.
+-------------------------------------
+
+10009167_234 - 0.746241303201 - science
+[theory, polarisability, compton, baldin, fit, datum, proton, stat, alpha, dipole]
+
+Using Effective Field Theory to analyse low-energy Compton scattering data from protons and light nuclei
+Compton scattering provides important insight into the structure of the nucleon. For photons up to about 300 MeV, it is parameterised by six dynamical dipole polarisabilities which characterise the response of the nucleon to a monochromatic photon of fixed frequency and multipolarity. Their zero-energy limit yields the well-known static electric and magnetic dipole polarisabilities \alpha and \beta, and the four dipole spin polarisabilities. Chiral Effective Field Theory (ChiEFT) describes nucleon, deuteron and 3-He Compton scattering, using consistent nuclear currents, rescattering and wave functions. It can thus also be used to extract useful information on the neutron amplitude from Compton scattering on light nuclei. We summarise past work in ChiEFT on all of these reactions and compare with other theoretical approaches. We also discuss all proton experiments up to about 400 MeV, as well as the three modern elastic deuteron data sets, paying particular attention to precision and accuracy of each set. Constraining the Delta(1232) parameters from the resonance region, we then perform new fits to the proton data up to omega(lab)=170 MeV, and a new fit to the deuteron data. After checking in each case that a two-parameter fit is compatible with the respective Baldin sum rules, we obtain, using the sum-rule constraints in a one-parameter fit, alpha=10.7+/-0.3(stat)+/-0.2(Baldin)+/-0.8(theory), beta=3.1-/+0.3(stat)+/-0.2(Baldin)+/-0.8(theory), for the proton polarisabilities, and alpha =10.9+/- 0.9(stat)+/-0.2(Baldin)+/-0.8(theory), beta =3.6-/+ 0.9(stat)+/-0.2(Baldin)+/-0.8(theory), for the isoscalar polarisabilities, each in units of 10^(-4) fm^3. We discuss plans for polarised Compton scattering, their promise as tools to access spin polarisabilities, and other future avenues for theoretical and experimental investigation.
+-------------------------------------
+
+10010325_234 - 0.719851612198 - science
+[disease, protein, model]
+
+Neurodegenerative diseases: Lessons from genome-wide screens in small model organisms
+Various age-related neurodegenerative diseases, including Parkinson's disease, polyglutamine expansion diseases and Alzheimer's disease, are associated with the accumulation of misfolded proteins in aggregates in the brain. How and why these proteins form aggregates and cause disease is still poorly understood. Small model organisms-the baker's yeast Saccharomyces cerevisiae, the nematode worm Caenorhabditis elegans and the fruit fly Drosophila melanogaster -have been used to model these diseases and high-throughput genetic screens using these models have led to the identification of a large number of genes that modify aggregation and toxicity of the disease proteins. In this review, we revisit these models and provide a comprehensive comparison of the genetic screens performed so far. Our integrative analysis highlights alterations of a wide variety of basic cellular processes. Not all disease proteins are influenced by alterations in the same cellular processes and despite the unifying theme of protein misfolding and aggregation, the pathology of each of the age-related misfolding disorders can be induced or influenced by a disease-protein-specific subset of molecular processes. ?? 2009 EMBO Molecular Medicine.
+-------------------------------------
+
+10007063_234 - 0.731353344179 - science
+[type, presence, skin, -pv, hpv, transplant, patient, cutaneous, otr, antibody]
+
+Factors associated with the seroprevalence of 26 cutaneous and two genital human papillomavirus types in organ transplant patients.
+Viral skin infections are commonly present in organ transplant recipients (OTR). In this study, we aimed to identify factors associated with human papillomavirus (HPV) infections in OTR. Patients with solid-organ transplants were recruited from the outpatient nephrology and dermatology clinics in five European countries. Only patients with no current or past skin cancer were included in this analysis. Serum samples were analysed for antibodies to the L1 proteins of 26 cutaneous and two genital HPV types from five phylogenetic genera (α, β, γ, μ and ν). The most consistent association was found between recreational sun exposure and the seroprevalence of all tested genera, except α. The antibody presence of any β type was higher among people who had been transplanted at least 23 years prior to participation than in those who had been transplanted for less than 7 years. The prevalence of two γ-HPV types (60 and 65) and three β-HPV types (15, 38 and 49) was associated with time since transplantation. The presence of a high number of warts was associated with the presence of any μ-PV or ν-PV types, and having greater than 50 keratotic skin lesions was almost significantly associated with the presence of antibodies to two or more γ-PV. Discrepancies in the results of the present study, as well as in previous reports, may depend on different methodologies and on geographical variations. Our results also indicate that further research with more standardized methods is needed to clarify the role of cutaneous HPV in OTR.
+-------------------------------------
+
+10007635_234 - 0.700204707141 - science
+[acoustic, cell, phase, method, tissue, soft, substrate]
+
+Multi-Layer Phase Analysis: Quantifying the Elastic Properties of Soft Tissues and Live Cells with Ultra-High-Frequency Scanning Acoustic Microscopy
+Scanning acoustic microscopy is potentially a powerful tool for characterizing the elastic properties of soft biological tissues and cells. In this paper, we present a method, multi-layer phase analysis (MLPA), which can be used to extract local speed of sound values, for both thin tissue sections mounted on glass slides and cultured cells grown on cell culture plastic, with a resolution close to 1 mu m. The method exploits the phase information that is preserved in the interference between the acoustic wave reflected from the substrate surface and internal reflections from the acoustic lens. In practice, a stack of acoustic images are captured beginning with the acoustic focal point 4 mu m above the substrate surface and moving down in 0.1-mu m increments. Scanning parameters, such as acoustic wave frequency and gate position, were adjusted to obtain optimal phase and lateral resolution. The data were processed offline to extract the phase information with the contribution of any inclination in the substrate removed before the calculation of sound speed. Here, we apply this approach to both skin sections and fibroblast cells, and compare our data with the V(f) (voltage versus frequency) method that has previously been used for characterization of soft tissues and cells. Compared with the V(f) method, the MPLA method not only reduces signal noise but can be implemented without making a priori assumptions with regards to tissue or cell parameters.
+-------------------------------------
+
+10011669_234 - 0.729859612705 - science
+[particle, rotorcraft, engine, intake]
+
+Operational Performance Parameters of Engine Barrier Filtration Systems for Rotorcraft
+This contribution addresses the subject of engine intake filtration systems for rotorcraft. The reader is introduced to their purpose, which is to eliminate the risk of particle ingestion by the engine, a situation which can cause irrevocable damage to key components. The risk is significantly elevated during a condition known as brownout, in which the rotor wake of a helicopter in ground effect interacts with loose sediment, causing the generation of a dust cloud. In such a condition, IBF successfully removes particles from the engine-bound air at the expense of a pressure drop which grows temporally. This decreases the overall intake efficiency, but at varying degrees dependent on certain factors. An increase in deterioration rate is caused by but not limited to: an increase in incident velocity; and a decrease of mean particle size. However the rate may be slowed by operating the filter at a tangential angle to the flow. The present work uses CFD to carry out a parametric study into the factors affecting particle deposition and uses the results to form a semi-analytical model of pressure drop and ultimately predict the transient intake efficiency for IBF-fitted rotorcraft.
+-------------------------------------
+
+10010318_234 - 0.749784021322 - science
+[mutagenesis, rational, random, engineering]
+
+The future of industrial antibiotic production: From random mutagenesis to synthetic biology
+atural products derived from the secondary metabolism of microbes constitute a cornerstone of modern medicine. Engineering bugs to produce these products in high quantities is a major challenge for biotechnology, which has usually been tackled by either one of two strategies: iterative random mutagenesis or rational design. Recently, we analyzed the transcriptome of a Streptomyces clavuligerus strain optimized for production of the ??-lactamase inhibitor clavulanic acid by multiple rounds of mutagenesis and selection, and discovered that the observed changes matched surprisingly well with simple changes that have been introduced into these strains by rational engineering. Here, we discuss how in the new field of synthetic biology, random mutagenesis and rational engineering can be implemented complementarily in ways which may enable one to go beyond the status quo that has now been reached by each method independently. ?? 2011 Landes Bioscience.
+-------------------------------------
+
+10003730_234 - 0.714395686326 - science
+[pain, cwp, variant, genetic, association]
+
+Genome-wide association study meta-analysis of chronic widespread pain: evidence for involvement of the 5p15.2 region.
+BACKGROUND AND OBJECTIVES: Chronic widespread pain (CWP) is a common disorder affecting ∼10% of the general population and has an estimated heritability of 48-52%. In the first large-scale genome-wide association study (GWAS) meta-analysis, we aimed to identify common genetic variants associated with CWP. METHODS: We conducted a GWAS meta-analysis in 1308 female CWP cases and 5791 controls of European descent, and replicated the effects of the genetic variants with suggestive evidence for association in 1480 CWP cases and 7989 controls. Subsequently, we studied gene expression levels of the nearest genes in two chronic inflammatory pain mouse models, and examined 92 genetic variants previously described associated with pain. RESULTS: The minor C-allele of rs13361160 on chromosome 5p15.2, located upstream of chaperonin-containing-TCP1-complex-5 gene (CCT5) and downstream of FAM173B, was found to be associated with a 30% higher risk of CWP (minor allele frequency=43%; OR=1.30, 95% CI 1.19 to 1.42, p=1.2×10(-8)). Combined with the replication, we observed a slightly attenuated OR of 1.17 (95% CI 1.10 to 1.24, p=4.7×10(-7)) with moderate heterogeneity (I2=28.4%). However, in a sensitivity analysis that only allowed studies with joint-specific pain, the combined association was genome-wide significant (OR=1.23, 95% CI 1.14 to 1.32, p=3.4×10(-8), I2=0%). Expression levels of Cct5 and Fam173b in mice with inflammatory pain were higher in the lumbar spinal cord, not in the lumbar dorsal root ganglions, compared to mice without pain. None of the 92 genetic variants previously described were significantly associated with pain (p>7.7×10(-4)). CONCLUSIONS: We identified a common genetic variant on chromosome 5p15.2 associated with joint-specific CWP in humans. This work suggests that CCT5 and FAM173B are promising targets in the regulation of pain.
+-------------------------------------
+
+10014521_234 - 0.731681992096 - science
+[level, composition, quantum, times, conduction, dot, influence, energy, piezoelectric, band]
+
+Influence of composition on the piezoelectric effect and on the conduction band energy levels of InxGa1-xAs/GaAs quantum dots
+Times Cited: 16
+-------------------------------------
+
+10007069_234 - 0.731860107631 - science
+[skin, year, surface, microtopography, elastosis, adult, grade, dermal, older, odds]
+
+Validation of skin surface microtopography as a measure of skin photoaging in a subtropical population aged 40 and over.
+BACKGROUND: Evidence suggests that skin surface microtopography is a valid measure of photoaging among young adults, but whether this applies to older adults is unknown. METHODS: We investigated the association between degree of photoaging as measured by histological dermal elastosis and skin microtopography grades by decade of age from 40 to 89 years in a community sample in Australia. Skin surface replicas and punch biopsies were taken from 664 participants of the Nambour Skin Cancer Study. The association was assessed using ordinal logistic regression with proportional odds assumption, using histological dermal elastosis grades as outcome. RESULTS: There was significant increase in odds of higher skin surface microtopography grades with higher dermal elastosis grades for age groups below 70 years 40 to 49 years: odds ratio (OR) 2.96, 95% confidence interval (CI) 1.68-5.22; 50 to 59 years: OR 3.78, 95% CI 2.28-6.26; 60 to 69 years: OR 2.47, 95% CI 1.41-4.35). The association was not significant for those 70 years or older. CONCLUSION: Skin surface microtopography grading system is a valid measure of degree of dermal elastosis for middle-aged and older adults up to 69 years but appears not to be valid for adults 70 years or more living in a high sun exposure setting.
+-------------------------------------
+
+10009710_234 - 0.714289228942 - science
+[gene, expression, cdr2, cdr1, chronic, apeced, candida, aps-i, albican, adh1]
+
+ADH1 expression inversely correlates with CDR1 and CDR2 in Candida albicans from chronic oral candidosis in APECED (APS-I) patients.
+Expression of the alcohol dehydrogenase gene ADH1, which converts ethanol into carcinogenic acetaldehyde, significantly inversely correlated with the expression of CDR1 and CDR2, genes linked to azole resistance in Candida albicans isolated from chronic oral candidosis in autoimmune polyendocrinopathy-candidosis-ectodermal dystrophy (APECED, APS-I) patients. This is a novel link between candidal two-carbon metabolism genes and azole resistance.
+-------------------------------------
+
+10011367_234 - 0.736270752286 - science
+[heat]
+
+Novel MILP-based iterative method for the retrofit of heat exchanger networks with intensified heat transfer
+<ce:title>European Symposium of Computer Aided Process Engineering - 21</ce:title>
+-------------------------------------
+
+10001961_234 - 0.702948052405 - science
+[movement, electrode, boundary, eit]
+
+Accounting for electrode movement in MRI-informed functional EIT lung imaging
+It is known to the thoracic EIT community that inaccurately known boundary shape and electrode positions can potentially cause major artefacts in reconstructions. These problems are addressed in this work by using an MR (Magnetic Resonance) image to approximate the boundary shape, and a forward problem perturbation technique to calculate an electrode movement Jacobian. Using real thorax EIT data from the fEITER system, two reconstruction algorithms, one accounting for movement and the other not, are compared. The corrections demonstrate that better spatial resolution and contrast of the lungs is obtained when accounting for electrode movement, as well as a reduction in boundary artefacts.
+-------------------------------------
+
+10009782_234 - 0.706937233891 - science
+[nail, terbinafine, fragment, fungus, dermatophyte, action]
+
+Inhibitory effect of terbinafine on the invasion of nails by Trichophyton mentagrophytes.
+BACKGROUND: Terbinafine has a broad spectrum of action in vitro and primary fungicidal action against many pathogenic fungi. Its mode of action against dermatophyte fungi in nail keratin is little understood. OBJECTIVE: Our purpose was to determine the bioavailability of terbinafine in a nail fragment model. METHODS: The effect of terbinafine on adherence and germination of arthroconidia of Trichophyton mentagrophytes on nail fragments was assessed by gross examination and light and electron microscopy. RESULTS: Preexposure of nail fragments to terbinafine concentrations (0.001 to 10 mg/L) inhibited fungal growth and acted as a barrier to dermatophyte invasion. Damaged arthroconidia and distorted hyphae on the surface of nail fragments were observed. CONCLUSION: This in vitro model provides an alternative system for studying the activity of antifungal agents in nail and demonstrates the morphologic changes in dermatophyte fungi after exposure to terbinafine.
+-------------------------------------
+
+10013598_234 - 0.706625377445 - science
+[aerosol, concn, flux, size, velocity, emission, activity]
+
+Direct measurements and parameterisation of aerosol flux, concentration and emission velocity above a city.
+Articles have recently been published on aerosol size distributions and no. concns. in cities, however there have been no studies on transport of these particles. Eddy covariance measurements of vertical transport of aerosol in the size range 11 nm < Dp < 3 mm are presented here. The anal. shows that typical av. aerosol no. fluxes in this size range vary between 9000 and 90,000/cm2-s. With concns. between 3000 and 20,000/cm3 this leads to ests. of particle emission velocity between 20 and 75 mm/s. The relationships between no. flux and traffic activity, along with emission velocity and boundary layer stability are demonstrated and parameterised. These are used to derive an empirical parameterisation for aerosol concn. in terms of traffic activity and stability. The main processes detg. urban aerosol fluxes and concns. are discussed and quantified where possible. The difficulties in parameterizing urban activity are discussed. on SciFinder (R)
+-------------------------------------
+
+10017775_234 - 0.743280667833 - science
+[protein, activation, upr]
+
+Inhibition of protein translocation at the endoplasmic reticulum promotes activation of the unfolded protein response
+Selective small-molecule inhibitors represent powerful tools for the dissection of complex biological processes. ESI (eeyarestatin I) is a novel modulator of ER (endoplasmic reticulum) function. In the present study, we show that in addition to acutely inhibiting ERAD (ER-associated degradation), ESI causes production of mislocalized polypeptides that are ubiquitinated and degraded. Unexpectedly, our results suggest that these non-translocated polypeptides promote activation of the UPR (unfolded protein response), and indeed we can recapitulate UPR activation with an alternative and quite distinct inhibitor of ER translocation. These results suggest that the accumulation of non-translocated proteins in the cytosol may represent a novel mechanism that contributes to UPR activation.
+-------------------------------------
+
+10009426_234 - 0.708523063877 - science
+[insect, fossil]
+
+X-ray micro-tomography of Carboniferous stem-Dictyoptera: new insights into early insects.
+Computer reconstructions of Archimylacris eggintoni, a Carboniferous stem-group dictyopteran ('roachoid'), are presented. A siderite-hosted specimen was scanned using high-resolution X-ray microtomography (microCT), and a 'virtual fossil' was created with a resolution of 17.7 microm. This has revealed the morphology in great detail, including adhesive limb structures indicative of climbing and specializations for rapid movement. The antennae are filiform, and the mandibles are comparable to those of certain extant cockroaches, suggesting a similar generalist, saprophagous diet. The reconstruction reveals a high degree of specialization, and provides insights into the mode of life of these common Palaeozoic insects. Further microCT study of insect fossils has the potential to supplement wing venation with new characters, and hence improve fossil insect phylogenies.
+-------------------------------------
+
+10007268_234 - 0.704285313995 - science
+[cell, receptor, chain, functional, cd34, hybrid, hematopoietic]
+
+Detection of a functional hybrid receptor gammac/GM-CSFRbeta in human hematopoietic CD34+ cells.
+A functional hybrid receptor associating the common gamma chain (gammac) with the granulocyte/macrophage colony-stimulating factor receptor beta (GM-CSFRbeta) chain is found in mobilized human peripheral blood (MPB) CD34+ hematopoietic progenitors, SCF/Flt3-L primed cord blood (CB) precursors (CBPr CD34+/CD56-), and CD34+ myeloid cell lines, but not in normal natural killer (NK) cells, the cytolytic NK-L cell line or nonhematopoietic cells. We demonstrated, using CD34+ TF1beta cells, which express an interleukin (IL)-15Ralpha/beta/gammac receptor, that within the hybrid receptor, the GM-CSFRbeta chain inhibits the IL-15-triggered gammac/JAK3-specific signaling controlling TF1beta cell proliferation. However, the gammac chain is part of a functional GM-CSFR, activating GM-CSF-dependent STAT5 nuclear translocation and the proliferation of TF1beta cells. The hybrid receptor is functional in normal hematopoietic progenitors in which both subunits control STAT5 activation. Finally, the parental TF1 cell line, which lacks the IL-15Rbeta chain, nevertheless expresses both a functional hybrid receptor that controls JAK3 phosphorylation and a novel IL-15alpha/gammac/TRAF2 complex that triggers nuclear factor kappaB activation. The lineage-dependent distribution and function of these receptors suggest that they are involved in hematopoiesis because they modify transduction pathways that play a major role in the differentiation of hematopoietic progenitors.
+-------------------------------------
+
+10007322_234 - 0.701347779482 - science
+[susceptibility, diabetes, genetic, locus, t2d, type, variant, analysis, association, architecture]
+
+Large-scale association analysis provides insights into the genetic architecture and pathophysiology of type 2 diabetes.
+To extend understanding of the genetic architecture and molecular basis of type 2 diabetes (T2D), we conducted a meta-analysis of genetic variants on the Metabochip, including 34,840 cases and 114,981 controls, overwhelmingly of European descent. We identified ten previously unreported T2D susceptibility loci, including two showing sex-differentiated association. Genome-wide analyses of these data are consistent with a long tail of additional common variant loci explaining much of the variation in susceptibility to T2D. Exploration of the enlarged set of susceptibility loci implicates several processes, including CREBBP-related transcription, adipocytokine signaling and cell cycle regulation, in diabetes pathogenesis.
+-------------------------------------
+
+10008188_234 - 0.734387397679 - science
+[chemical, respiratory, test, allergen, identification, potential, sensitization]
+
+Inter-relationships between different classes of chemical allergens.
+Although allergic sensitization of the respiratory tract induced by chemicals is not as common as skin sensitization, it is nevertheless an important occupational health issue. Respiratory allergy to chemicals, characterized typically by rhinitis and asthma, is associated with considerable morbidity and with related socioeconomic costs. Several experimental approaches have been proposed for the prospective identification of chemical respiratory allergens, but none of these has yet been validated formally. In the absence of a widely accepted method for respiratory allergen identification, it is appropriate and relevant to explore their relationship with skin-sensitizing chemicals. A series of chemicals known to cause immune-mediated respiratory allergy in humans has been examined. The majority of the respiratory allergens tested were found to elicit positive responses in one or more standard tests used for the identification of skin-sensitizing potential (guinea pig maximization test, the Buehler test and/or the local lymph node assay). We suggest that this observation might form the basis of a potentially useful paradigm for initial characterization of the respiratory-sensitizing potential of chemicals. Specifically, chemicals that fail to elicit positive responses in accepted skin-sensitization test methods might also be regarded as lacking the inherent potential to cause allergic sensitization of the respiratory tract. Copyright © 2012 John Wiley & Sons, Ltd.
+-------------------------------------
+
+10007480_234 - 0.711253369658 - science
+[ctc, patient, cell, epithelial, iset, tumour, cellsearch, pancreatic, biomarker]
+
+A pilot study to explore circulating tumour cells in pancreatic cancer as a novel biomarker.
+BACKGROUND: Obtaining tissue for pancreatic carcinoma diagnosis and biomarker assessment to aid drug development is challenging. Circulating tumour cells (CTCs) may represent a potential biomarker to address these unmet needs. We compared prospectively the utility of two platforms for CTC enumeration and characterisation in pancreatic cancer patients in a pilot exploratory study. PATIENTS AND METHODS: Blood samples were obtained prospectively from 54 consenting patients and analysed by CellSearch and isolation by size of epithelial tumour cells (ISET). CellSearch exploits immunomagnetic capture of CTCs-expressing epithelial markers, whereas ISET is a marker independent, blood filtration device. Circulating tumour cell expression of epithelial and mesenchymal markers was assessed to explore any discrepancy in CTC number between the two platforms. RESULTS: ISET detected CTCs in more patients than CellSearch (93% vs 40%) and in higher numbers (median CTCs/7.5 ml, 9 (range 0-240) vs 0 (range 0-144)). Heterogeneity observed for epithelial cell adhesion molecule, pan-cytokeratin (CK), E-Cadherin, Vimentin and CK 7 expression in CTCs may account for discrepancy in CTC number between platforms. CONCLUSION: ISET detects more CTCs than CellSearch and offers flexible CTC characterisation with potential to investigate CTC biology and develop biomarkers for pancreatic cancer patient management.
+-------------------------------------
+
+10003275_234 - 0.739160821085 - science
+[lhx2, cell, lgr5, hair, hf, sox9, tcf4, stem, mouse, wound]
+
+Lhx2 differentially regulates Sox9, Tcf4 and Lgr5 in hair follicle stem cells to promote epidermal regeneration after injury.
+The Lhx2 transcription factor plays essential roles in morphogenesis and patterning of ectodermal derivatives as well as in controlling stem cell activity. Here, we show that during murine skin morphogenesis, Lhx2 is expressed in the hair follicle (HF) buds, whereas in postnatal telogen HFs Lhx2(+) cells reside in the stem cell-enriched epithelial compartments (bulge, secondary hair germ) and co-express selected stem cell markers (Sox9, Tcf4 and Lgr5). Remarkably, Lhx2(+) cells represent the vast majority of cells in the bulge and secondary hair germ that proliferate in response to skin injury. This is functionally important, as wound re-epithelization is significantly retarded in heterozygous Lhx2 knockout (+/-) mice, whereas anagen onset in the HFs located closely to the wound is accelerated compared with wild-type mice. Cell proliferation in the bulge and the number of Sox9(+) and Tcf4(+) cells in the HFs closely adjacent to the wound in Lhx2(+/-) mice are decreased in comparison with wild-type controls, whereas expression of Lgr5 and cell proliferation in the secondary hair germ are increased. Furthermore, acceleration of wound-induced anagen development in Lhx2(+/-) mice is inhibited by administration of Lgr5 siRNA. Finally, Chip-on-chip/ChIP-qPCR and reporter assay analyses identified Sox9, Tcf4 and Lgr5 as direct Lhx2 targets in keratinocytes. These data strongly suggest that Lhx2 positively regulates Sox9 and Tcf4 in the bulge cells, and promotes wound re-epithelization, whereas it simultaneously negatively regulates Lgr5 in the secondary hair germ and inhibits HF cycling. Thus, Lhx2 operates as an important regulator of epithelial stem cell activity in the skin response to injury.
+-------------------------------------
+
+10009971_234 - 0.706251126961 - science
+[strain, blastospore, mouse, virulent, phagocyte, human]
+
+Resistance of virulent and attenuated strains of Candida albicans to intracellular killing by human and mouse phagocytes.
+Blastospores of two strains (no. 19321 and no. 19273) of Candida albicans that were obtained from patients with vaginal thrush and were virulent for mice showed no significant difference in degree of resistance to phagocytosis by human and mouse phagocytes (mostly polymorphonuclear) compared with blastospores of two strains (no. 22114 and no. 21462) that were isolated from patients with transient candidemia and were attenuated for mice. In contrast, more blastospores of the virulent strains survived intracellularly than did those of the attenuated strains over a 2-hr period, after which the surviving blastospores began to form germ tubes. Heterogeneity in the populations of blastospores was suggested, because progeny from surviving blastospores of attenuated strain no. 22114 behaved similarly to virulent strains in tests with human and mouse phagocytes and in virulence tests in mice.
+-------------------------------------
+
+10003572_234 - 0.727058355685 - science
+[hrdd, polymerase, actii-orf4, rna, holoenzyme, redd, antibiotic]
+
+redD} and {actII-ORF4}, pathway-specific regulatory genes for antibiotic production in Streptomyces coelicolor A3(2), are transcribed in vitro by an {RNA} polymerase holoenzyme containing {??(hrdD)
+{redD} and {actII-ORF4}, regulatory genes required for synthesis of the antibiotics undecylprodigiosin and actinorhodin by Streptomyces coelicolor A3(2), were transcribed in vitro by an {RNA} polymerase holoenzyme containing {??(hrdD).} Disruption of {hrdD} had no effect on antibiotic production, indicating that {redD} and {actII-ORF4} are transcribed in vivo by at least one other {RNA} polymerase holoenzyme. These data provide the first experimental evidence that {HrdD} can function as a ?? factor.
+-------------------------------------
+
+10007516_234 - 0.705028606722 - science
+[dna, tumour, cancer, methylation, biomarker, gene]
+
+DNA methylation in circulating tumour DNA as a biomarker for cancer.
+Free circulating DNA, which is thought to be derived from the primary tumour, can be detected in the blood of patients with cancer. Detection of genetic and epigenetic alteration in this tumour DNA offers a potential source of development of prognostic and predictive biomarkers for cancer. One such change is DNA methylation of the promotor region of tumour suppressor genes. This causes down regulation of tumour suppressor gene expression, a frequent event in carcinogenesis. Hypermethylation of the promotor region of a number of genes has been detected in many tumour types and more recently these changes have been detected in circulating tumour DNA. This review will summarise the literature detailing DNA methylation in circulating tumour DNA and discuss some of the current controversies and technical challenges facing its use as a potential biomarker for cancer.
+-------------------------------------
+
+10009973_234 - 0.749770850817 - science
+[strain, mouse, serum]
+
+Production of germ tubes by virulent and attenuated strains of Candida albicans.
+Two strains (no. 19321 and no. 19273) of Candida albicans that were obtained from patients with vaginal thrush and were virulent for mice formed germ tubes after incubation in fresh mouse serum and mouse kidney extract more rapidly and to a greater extent than did two strains (no. 22114 and no. 21462) that were isolated from patients with transient candidemia and were attenuated for mice. After incubation in fresh human serum, the strain differences in germination were not as marked although the pattern was similar. Synchronous cultures of strains no. 19321 and no. 22114 showed differences similar to those shown by asynchronous cultures in the mouse and human sera and in the mouse kidney extract. The viability of the strains was maintained in all three types of media; thus, nonspecific humoral defense mechanisms had little effect on the attenuated strain.
+-------------------------------------
+
+10015773_234 - 0.739888241655 - science
+[cloud, emerald-1, structure, microphysical, cirrus, overview]
+
+An overview of the microphysical structure of cirrus clouds observed during EMERALD-1
+Part A
+-------------------------------------
+
+10011726_234 - 0.705288497602 - science
+[sub-variant, tumour, carcinoma]
+
+FTIR microspectroscopy of selected rare diverse sub-variants of carcinoma of the  urinary bladder
+Urothelial carcinomas of the bladder are a heterogeneous group of tumours,although some histological sub-variants are rare and sparsely reported in theliterature. Diagnosis of sub-variants from conventional urothelial carcinoma can be challenging, as they may mimic the morphology of other malignancies or benign tumours and therefore their distinction is important. For the first time, thespectral pathology of some of these sub-variants has been documented by infrared microspectroscopy and an attempt made to profile their biochemistry. It isimportant not only to identify and separate the cancer-associated epithelialtissue spectra from common tissue features such as stroma or blood, but also todetect the signatures of tumour sub-variants. As shown, their spectroscopicsignals can change dramatically as a consequence of differentiation. Examplecases are discussed and compared with histological evaluations.
+-------------------------------------
+
+10011649_234 - 0.748708686186 - science
+[cell, p53-mutated, nutlin-3, subline, ukf-nb-3rnutlin, ukf-nb-3, mutation, ??, cancer]
+
+Adaptation of cancer cells from different entities to the MDM2 inhibitor nutlin-3 results in the emergence of p53-mutated multi-drug-resistant cancer cells
+Six p53 wild-type cancer cell lines from infrequently p53-mutated entities (neuroblastoma, rhabdomyosarcoma, and melanoma) were continuously exposed to increasing concentrations of the murine double minute 2 inhibitor nutlin-3, resulting in the emergence of nutlin-3-resistant, p53-mutated sublines displaying a multi-drug resistance phenotype. Only 2 out of 28 sublines adapted to various cytotoxic drugs harboured p53 mutations. Nutlin-3-adapted UKF-NB-3 cells (UKF-NB-3rNutlin 10 ??M, harbouring a G245C mutation) were also radiation resistant. Analysis of UKF-NB-3 and UKF-NB-3rNutlin 10 ??M cells by RNA interference experiments and lentiviral transduction of wild-type p53 into p53-mutated UKF-NB-3rNutlin 10 ??M cells revealed that the loss of p53 function contributes to the multi-drug resistance of UKF-NB-3rNutlin 10 ??M cells. Bioinformatics PANTHER pathway analysis based on microarray measurements of mRNA abundance indicated a substantial overlap in the signalling pathways differentially regulated between UKF-NB-3rNutlin 10 ??M and UKF-NB-3 and between UKF-NB-3 and its cisplatin-, doxorubicin-, or vincristineresistant sublines. Repeated nutlin-3 adaptation of neuroblastoma cells resulted in sublines harbouring various p53 mutations with high frequency. A p53 wild-type single cell-derived UKF-NB-3 clone was adapted to nutlin-3 in independent experiments. Eight out of ten resulting sublines were p53-mutated harbouring six different p53 mutations. This indicates that nutlin-3 induces de novo p53 mutations not initially present in the original cell population. Therefore, nutlin-3-treated cancer patients should be carefully monitored for the emergence of p53-mutated, multi-drug-resistant cells. ?? 2011 Macmillan Publishers Limited. All rights reserved.
+-------------------------------------
+
+10005095_234 - 0.745459486053 - science
+[subtype, electrical, islet, factor, transcription, property, lim-homeodomain]
+
+The LIM-Homeodomain Protein Islet Dictates Motor Neuron Electrical Properties by Regulating K(+) Channel Expression.
+Neuron electrical properties are critical to function and generally subtype specific, as are patterns of axonal and dendritic projections. Specification of motoneuron morphology and axon pathfinding has been studied extensively, implicating the combinatorial action of Lim-homeodomain transcription factors. However, the specification of electrical properties is not understood. Here, we address the key issues of whether the same transcription factors that specify morphology also determine subtype specific electrical properties. We show that Drosophila motoneuron subtypes express different K(+) currents and that these are regulated by the conserved Lim-homeodomain transcription factor Islet. Specifically, Islet is sufficient to repress a Shaker-mediated A-type K(+) current, most likely due to a direct transcriptional effect. A reduction in Shaker increases the frequency of action potential firing. Our results demonstrate the deterministic role of Islet on the excitability patterns characteristic of motoneuron subtypes.
+-------------------------------------
+
+10011797_234 - 0.728250227738 - science
+[system, venous, phylogeny, character, cited, times, primate, superficial]
+
+CHARACTER PHYLOGENY OF THE PRIMATE FORELIMB SUPERFICIAL VENOUS SYSTEM
+Times Cited: 3
+-------------------------------------
+
+10008056_234 - 0.713676350527 - science
+[cancer, gene, type, region, scna, alteration]
+
+The landscape of somatic copy-number alteration across human cancers.
+A powerful way to discover key genes with causal roles in oncogenesis is to identify genomic regions that undergo frequent alteration in human cancers. Here we present high-resolution analyses of somatic copy-number alterations (SCNAs) from 3,131 cancer specimens, belonging largely to 26 histological types. We identify 158 regions of focal SCNA that are altered at significant frequency across several cancer types, of which 122 cannot be explained by the presence of a known cancer target gene located within these regions. Several gene families are enriched among these regions of focal SCNA, including the BCL2 family of apoptosis regulators and the NF-kappaBeta pathway. We show that cancer cells containing amplifications surrounding the MCL1 and BCL2L1 anti-apoptotic genes depend on the expression of these genes for survival. Finally, we demonstrate that a large majority of SCNAs identified in individual cancer types are present in several cancer types.
+-------------------------------------
+
+10009177_234 - 0.736523273951 - science
+[chemical, respiratory, allergen, skin, peptide, reactivity, dpra]
+
+The direct Peptide reactivity assay: selectivity of chemical respiratory allergens.
+It is well known that some chemicals are capable of causing allergic diseases of the skin and respiratory tract. Commonly, though not exclusively, chemical allergens are associated with the selective development of skin or respiratory sensitization. The reason for this divergence is unclear, although it is hypothesized that the nature of interactions between the chemical hapten and proteins is influential. The direct peptide reactivity assay (DPRA) has been developed as a screen for the identification of skin-sensitizing chemicals, and here we describe the use of this method to explore whether differences exist between skin and respiratory allergens with respect to their peptide-binding properties. Known skin and respiratory sensitizers were reacted with synthetic peptides containing either lysine (Lys) or cysteine (Cys) for 24h. The samples were analyzed by HPLC/UV, and the loss of peptide from the reaction mixture was expressed as the percent depletion compared with the control. The potential for preferential reactivity was evaluated by comparing the ratio of Lys to Cys depletion (Lys:Cys ratio). The results demonstrate that the majority of respiratory allergens are reactive in the DPRA, and that in contrast to most skin-sensitizing chemicals, preferentially react with the Lys peptide. These data suggest that skin and respiratory chemical allergens can result in different protein conjugates, which may in turn influence the quality of induced immune responses. Overall, these investigations reveal that the DPRA has considerable potential to be incorporated into tiered testing approaches for the identification and characterization of chemical respiratory allergens.
+-------------------------------------
+
+10002302_234 - 0.706389149977 - science
+[soil, bhp, index, bay, organic, sediment, potential, sub-arctic, transect, arctic]
+
+Soil organic matter transport along an sub-Arctic river–sea transect
+Bacteriohopanepolyols (BHPs) and glycerol dialkyl glycerol tetraethers (GDGTs) have potential as soil-tracing biomarkers for the extensive shelves of the Arctic Ocean. In this work these biomarkers were analysed in surface sediments along a well characterised sub-Arctic transect in the northernmost Baltic Sea from the Kalix River to the central Bothnian Bay to assess their environmental behaviour and potential for tracing the contribution of soil in this type of system. There was a high BHP diversity and enhanced total BHP concentration in the estuarine sediments, whereas a much less diverse pattern could be observed in the open bay with lower total BHP concentration. In addition, both soil marker BHPs (adenosylhopanes) and branched GDGTs were substantially more abundant in the estuarine than the open bay sediments. The R soil ′ index, based on the Rsoil index minus the contribution from the methylated soil marker BHPs, is suggested as a new approach for tracing soil derived organic matter (OM) in the (sub)-Arctic region. The index decreased along the transect in an off-river direction, correlating strongly with both the branched and isoprenoid tetraether (BIT) index and the stable carbon isotopic composition of the sedimentary organic carbon. These field results indicate that both the R soil ′ and the BIT indices have potential for tracing soil derived OM in sub-Arctic to Arctic waters.
+-------------------------------------
+
+10011143_234 - 0.70720742318 - science
+[lens, liquid, refractive, power, diameter, optical, crystal, voltage, model, simulation]
+
+Optimization of refractive liquid crystal lenses using an efficient multigrid simulation.
+A multigrid computational model has been developed to assess the performance of refractive liquid crystal lenses, which is up to 40 times faster than previous techniques. Using this model, the optimum geometries producing an ideal parabolic voltage distribution were deduced for refractive liquid crystal lenses with diameters from 1 to 9 mm. The ratio of insulation thickness to lens diameter was determined to be 1:2 for small diameter lenses, tending to 1:3 for larger lenses. The model is used to propose a new method of lens operation with lower operating voltages needed to induce specific optical powers. The operating voltages are calculated for the induction of optical powers between + 1.00 D and + 3.00 D in a 3 mm diameter lens, with the speed of the simulation facilitating the optimization of the refractive index profile. We demonstrate that the relationship between additional applied voltage and optical power is approximately linear for optical powers under + 3.00 D. The versatility of the computational simulation has also been demonstrated by modeling of in-plane electrode liquid crystal devices.
+-------------------------------------
+
+10018415_234 - 0.701167057736 - science
+[kappa, phase]
+
+Spin-1/2 Heisenberg antiferromagnet on an anisotropic kagome lattice
+We use the coupled-cluster method to study the zero-temperature properties of an extended two-dimensional Heisenberg antiferromagnet formed from spin-1/2 moments on an infinite spatially anisotropic kagome lattice of corner-sharing isosceles triangles, with nearest-neighbor bonds only. The bonds have exchange constants $J_{1} > 0$ along two of the three lattice directions and $J_2 ≡ \kappa J_{1} > 0$ along the third. In the classical limit, the ground-state (GS) phase for $\kappa < 1/2$ has collinear ferrimagnetic (Neel*) order where the $J_2$-coupled chain spins are ferromagnetically ordered in one direction with the remaining spins aligned in the opposite direction, while for $\kappa > 1/2$ there exists an infinite GS family of canted ferrimagnetic spin states, which are energetically degenerate.  For the spin-1/2 case, we find that quantum analogs of both these classical states continue to exist as stable GS phases in some regions of the anisotropy parameter $\kappa$, namely, for $0 < \kappa < \kappa_{c_1}$ for the Neel* state and for (at least part of) the region $\kappa > \kappa_{c_2}$ for the canted phase. However, they are now separated by a paramagnetic phase without either sort of magnetic order in the region $\kappa_{c_1} < \kappa < \kappa_{c_2}$, which includes the isotropic kagome point  $\kappa = 1$ where the stable GS phase is nowbelieved to be a topological ($Z_2$) spin liquid. Our best numerical estimates are $\kappa_{c_1} = 0.515 \pm 0.015$ and $\kappa_{c_2} = 1.82 \pm 0.03$.
+-------------------------------------
+
+10017139_234 - 0.703393347008 - science
+[coating, hybrid, anti-corrosion]
+
+Surface Treatment for New Engineered Aerospace Systems
+During this EngD project, two pigmented, anti-corrosion polymer/sol-gel hybrid coatings were developed with the aim of producing an eco-friendly alternative to conventional, toxic hexavalent chromate conversion and anodized anti-corrosion alloy treatments for the aircraft manufacturer; Airbus S.A.S. The polymer/sol-gel hybrid coatings were then tested and validated as anti-corrosion coatings on the AA2024-T3 aluminium aerospace alloy and in certain cases, their performance was compared against that of the hexavalent chromate benchmark (Alocrom 1200). The mechanisms of corrosion inhibition exhibited by the coatings were also studied in depth. The polymer/sol-gel hybrid coatings that were developed in this project are silane based and the first, designated as B2, has polyester-methacrylic functionality and the second, designated as CA/MM, has polyester-amide functionality. Certain inhibitor compounds which were incorporated in the polymer/sol-gel hybrid coatings were chosen by the split-cell technique. The microstructure and elemental compositions of the polymer/sol-gel hybrid coatings and of the AA2024-T3 aluminium alloy were determined by Scanning Electron Microscopy - Energy Dispersive X-ray Spectroscopic (SEM-EDS) analysis of the specimens. The anti-corrosion performance and the corrosion protection mechanisms of the polymer/sol-gel hybrid coatings were determined by salt-water and electrochemical testing of the coated alloy specimens. The thermal resistance of the polymer/sol-gel hybrid coatings was ascertained by thermogravimetric analysis (TGA) of the coatings. The polymer/sol-gel hybrid coatings were also analysed by Fourier Transform Infrared (FTIR), Micro-Raman and X-ray Photoelectron (XPS) spectroscopic techniques to determine whether the desired polymer and silane coating networks formed during coating processing. Anti-corrosion performance test results revealed that both polymer/sol-gel hybrid coatings are self-healing due to their ability to implement a precipitation mechanism of corrosion inhibition. Analysis of the polymer/sol-gel hybrid coatings by X-ray Diffraction (XRD) and X-ray Fluorescence (XRF) after salt-water exposure suggested that the B2 coating precipitated the compound tungsten pyrophosphate, W(P2O7), within defects and that the CA/MM coating precipitated the compound iron carbide, Fe2C, within defects. However, anti-corrosion test results also shown that the anti-corrosion performance of the polymer/sol-gel hybrid coatings does not satisfy aerospace industry requirements. Therefore, it can be concluded that although the achievements of this project have not enabled Airbus to eliminate toxic chromium (VI) species from their operations, further optimisation of the polymer/sol-gel hybrid coatings developed during this project could potentially lead to a solution being found.
+-------------------------------------
+
+10005256_234 - 0.716121291586 - science
+[injury, muscle, outcome, necrosis, case, revascularisation, patient, functional, intermediate, poor]
+
+Arterial injuries at the elbow carry a high risk of muscle necrosis and warrant urgent revascularisation.
+INTRODUCTION: Revascularisation following axial arterial system injury is effective in upper limb salvage but necrosis of muscle, the tissue most sensitive to ischaemia, may still occur. We examined the frequency of necrosis, its related factors and its functional significance. METHODS: The clinical findings and operative management of 13 patients with injuries at the elbow referred to 2 plastic surgical hand surgery units over a 30-month period were reviewed. Good outcome was defined as minimal impairment with return to previous occupation, intermediate outcome as moderate impairment with change in occupation and poor outcome as major functional loss preventing work. RESULTS: Seven patients injured the brachial and six injured both the radial and ulnar arteries. Concomitant injuries were severe with nerve injuries in 11 and muscle damage in 12 patients. Functional outcome was good in four cases, intermediate in four and poor in five. Muscle necrosis developed in four brachial artery injuries. In all four cases, initial successful revascularisation failed post-operatively. Case review revealed delayed recognition in three cases where pain heralded ischaemia but distal skin circulation and pulses were adequate. Of patients with necrosis, three had a poor outcome and one had an intermediate outcome. CONCLUSIONS: The risk of muscle necrosis must be considered when managing these injuries, particularly if initial revascularisation is unsuccessful. Every effort should be made to optimise repair technique and post-operative monitoring. Limb salvage is no longer enough. Fully viable muscle is necessary to restore function and livelihoods.
+-------------------------------------
+
+10010305_234 - 0.737611432867 - science
+[eqtl, cell, gene, expression, genomic, type, genetical]
+
+Expression quantitative trait loci are highly sensitive to cellular differentiation state
+Genetical genomics is a strategy for mapping gene expression variation to expression quantitative trait loci (eQTLs). We performed a genetical genomics experiment in four functionally distinct but developmentally closely related hematopoietic cell populations isolated from the BXD panel of recombinant inbred mouse strains. This analysis allowed us to analyze eQTL robustness/sensitivity across different cellular differentiation states. Although we identified a large number (365) of "static" eQTLs that were consistently active in all four cell types, we found a much larger number (1,283) of "dynamic" eQTLs showing cell-type-dependence. Of these, 140, 45, 531, and 295 were preferentially active in stem, progenitor, erythroid, and myeloid cells, respectively. A detailed investigation of those dynamic eQTLs showed that in many cases the eQTL specificity was associated with expression changes in the target gene. We found no evidence for target genes that were regulated by distinct eQTLs in different cell types, suggesting that large-scale changes within functional regulatory networks are uncommon. Our results demonstrate that heritable differences in gene expression are highly sensitive to the developmental stage of the cell population under study. Therefore, future genetical genomics studies should aim at studying multiple welldefined and highly purified cell types in order to construct as comprehensive a picture of the changing functional regulatory relationships as possible. ?? 2009 Gerrits et al.
+-------------------------------------
+
+10009821_234 - 0.715735207561 - science
+[fungus, fungal, infection, host, tissue]
+
+Opportunistic and pathogenic fungi.
+The number of fungal species reported to cause disease in man is increasing rapidly. Very few of these fungi are capable of infecting a normal host. Important progress has been achieved in an understanding of fungal pathogenicity including the mechanisms of adherence to host tissues, penetration of tissues, multiplication within the host, and the interaction of fungal cells with host effector cells. In addition to the increase in infections by opportunistic and pathogenic fungi in compromised patients, caused by Candida spp., Aspergillus spp., Cryptococcus neoformans, Histoplasma capsulatum and Coccidioides immitis, many fungi that occur as saprophytes in the environment and which had previously been considered to be nonpathogenic are now being encountered as causes of human infection. The advent of these unusual infections has led to reappraisal of the diagnostic tests involved in the investigation of fungal infections and has had important implications for the choice of treatment. Many of these fungi have a similar tissue appearance and the organisms must be isolated and identified to ensure that the most appropriate treatment is given.
+-------------------------------------
+
+10011802_234 - 0.741261705123 - science
+[times, left-side, similarity, human, difference, ape, cradling]
+
+LEFT-SIDE CRADLING - SIMILARITIES AND DIFFERENCES BETWEEN APES AND HUMANS
+Times Cited: 16
+-------------------------------------
+
+
+10011019_234 1
+10018332_234 1
+10018296_234 1
+10016401_234 1
+10003589_234 1
+10008953_234 1
+10016813_234 1
+10009824_234 1
+10018235_234 1
+10007557_234 1
+10008865_234 1
+10011024_234 1
+10005626_234 1
+10008604_234 1
+10009587_234 1
+10003278_234 1
+10009153_234 1
+10008047_234 1
+10009686_234 1
+10009581_234 1
+10007825_234 1
+10008948_234 1
+10003990_234 1
+10003461_234 1
+10018352_234 1
+10017410_234 1
+10007541_234 1
+10007782_234 1
+10004051_234 1
+10003324_234 1
+10007008_234 1
+10004017_234 1
+10011653_234 1
+10008670_234 1
+10010345_234 1
+10008492_234 1
+10010994_234 1
+10004336_234 1
+10009709_234 1
+10006969_234 1
+10008198_234 1
+10005301_234 1
+10009361_234 1
+10004006_234 1
+10006824_234 1
+10010349_234 1
+10008983_234 1
+10018546_234 1
+10018315_234 1
+10003266_234 1
+10017007_234 1
+10012761_234 1
+10007412_234 1
+10003613_234 1
+10007824_234 1
+10008301_234 1
+10017113_234 1
+10009167_234 1
+10010325_234 1
+10007063_234 1
+10007635_234 1
+10011669_234 1
+10010318_234 1
+10003730_234 1
+10014521_234 1
+10007069_234 1
+10009710_234 1
+10011367_234 1
+10001961_234 1
+10009782_234 1
+10013598_234 1
+10017775_234 1
+10009426_234 1
+10007268_234 1
+10007322_234 1
+10008188_234 1
+10007480_234 1
+10003275_234 1
+10009971_234 1
+10003572_234 1
+10007516_234 1
+10009973_234 1
+10015773_234 1
+10011726_234 1
+10011649_234 1
+10005095_234 1
+10011797_234 1
+10008056_234 1
+10009177_234 1
+10002302_234 1
+10011143_234 1
+10018415_234 1
+10017139_234 1
+10005256_234 1
+10010305_234 1
+10009821_234 1
+10011802_234 1
+
