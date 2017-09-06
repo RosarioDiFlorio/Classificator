@@ -1,0 +1,65 @@
+10127448_178 - 0.790184191042 - business_and_industrial
+[product, firm, demand, success, manager]
+
+Why Are Bad Products So Hard to Kill?
+It is puzzling that firms often continue to invest in product development projects when they should know that demand will be low. We argue that bad products are hard to kill because firms face an inherent conflict when designing managers' incentives. Rewarding success encourages managers to forge ahead even when demand is low. To avoid investing in low-demand products, the firm must also reward decisions to kill products. However, rewarding managers for killing products effectively undermines the rewards for success. The inability to resolve this tension forces the firm to choose between paying an even larger bonus for success and accepting continued investment in low-demand products. We explore the boundaries of this argument by analyzing how the timing of demand information affects product investment decisions.
+-------------------------------------
+
+10127669_178 - 0.716265296575 - business_and_industrial
+[site, reference, development, business, joint, bibliographical, algorithm, location, firm, planning]
+
+Finding firms for joint development sites : an algorithm for integrated business location planning
+Includes bibliographical references.
+-------------------------------------
+
+10127932_178 - 0.71927941189 - business_and_industrial
+[company, cost, market]
+
+Hit or Miss: Regulating Derivative Markets to Reduce Hedging Costs at Non-Financial Companies
+Derivative markets are an important tool enabling non‐financial companies to reduce their risk and manage their financing. Effective regulation of these markets can lower companies hedging costs and help improve productivity. Ineffective regulation can raise costs and reduce productivity. In this testimony, I address what type of action is likely to be effective in reducing hedging costs at nonfinancial companies and what type of action is likely to be ineffective or counterproductive.
+-------------------------------------
+
+10003573_234 - 0.704712661435 - business_and_industrial
+[actii-orf4, actinorhodin, production, uua, gene, culture, codon, transcription, growth]
+
+Stationary-phase production of the antibiotic actinorhodin in Streptomyces coelicolor A3(2) is transcriptionally regulated
+Production of actinorhodin, a polyketide antibiotic made by Streptomyces coelicolor A3(2), normally occurs only in stationary-phase cultures. S1 nuclease protection experiments showed that transcription of actII-ORF4, the activator gene required for expression of the biosynthetic structural genes, increased dramatically during the transition from exponential to stationary phase. The increase in actII-ORF4 expression was followed by transcription of the biosynthetic structural genes actIII and actVI-ORF1, and by the production of actinorhodin. The presence of actII-RF4 on a multicopy plasmid resulted in enhanced levels of actII-ORF4 mRNA, and transcription of actIII and actinorhodin production during exponential growth, suggesting that actinorhodin synthesis in rapidly growing cultures is normally limited only by the availability of enough of the activator protein. bldA, which encodes a tRNA(UUA)(LEU) that is required for the efficient translation of a single UUA codon in the actII-ORF4 mRNA, was transcribed throughout growth. Moreover, translational fusions of the 5' end of actII-ORF4 that included the UUA codon to the ermE reporter gene demonstrated the presence of functional bldA tRNA in young, exponentially growing cultures and no increase in the efficiency of translation of UUA codons, relative to UUG codons, was observed during growth. The normal growth-phase-dependent production of actinorhodin in the liquid culture conditions used in these experiments appears to be mediated at the transcriptional level through activation of the actII-ORF4 promoter.
+-------------------------------------
+
+100041_102 - 0.738652617621 - business_and_industrial
+[business, design, micro-business, analysis, process, orientation, constituent]
+
+Improving Design of Micro-business Systems via VSM and Constituent Orientation Analysis
+<p>This paper describes recent design research into prototypical ‘classes’ of designs for operational business systems for micro-businesses of 1-10 employees typical of traditional craft and contemporary information economies. </p>
+<p>
+Business process design is an increasingly important and relatively new sub-field of design and design research. Its increasing importance is driven by three factors made more potent by information technology: increasing ability for very small business units to contribute to local and national economies; potential for increased efficiency of micro-businesses via reduction in Coasian transaction costs; increasingly competitive business environments leading to pressure on micro-businesses to deeply cut costs; and increased potential for improved design of micro-business processes to create significant benefits for the micro-businesses themselves and to local and national economies.</p>
+<p>
+The analyses used in this paper combine Tellefsen's perspective on constituent orientation with Beerian Viable System analysis and Cashflow Quadrant analysis (Beer, 1972, 1988, 1989, 1995; Kiyosaki & Lechter, 2007; Tellefsen, 1995, 1999, 2001; Tellefsen & Love, 2003). These analyses are used to identify promising foci of design effort particularly with the intention of automating and systematizing business activities.</p>
+<p>
+The paper first describes the importance of developing improved guidelines for design of organisational structures and business processes in the micro-business arena. It then outlines the structural, humanistic, financial, business management and computerized automation considerations that need to be addressed. Design issues are illustrated via mini case studies of three characteristic micro-businesses in the areas of publishing, plumbing, and rental investment. The paper shows how improvements to the design of business processes can be viewed through how four constituent orientations: <br />
+•	Self employed <br />
+•	Business managers <br />
+•	Business owners <br />
+•	Investors <br />
+The paper concludes by integrating the outcomes of the above analyses into a preliminary checklist for the design of effective and efficient automated and systematized business processes for micro-businesses and small business enterprises.
+</p>
+<p>
+<strong>Keywords:</strong> <br />
+Business Process Design, Micro-Business, Viable Systems, Constituent Orientation, Cashflow Quadrant Analysis.</p>
+-------------------------------------
+
+10007044_234 - 0.767325589907 - business_and_industrial
+[production, biofuel, future, technology]
+
+Biofuels Review
+This report introduces biofuels and explains the key available and emerging production technologies.  It reviews the issues and evidence base around the interface between biofuel production and food production, evaluating the role of future technologies in addressing potential future fuel-food conflict and the consequent research and development priorities. The reportwas commissioned by Government Office for Science as part of the Foresight Programme and is intended for a non-specialist audience.
+-------------------------------------
+
+
+10127448_178 1
+10127669_178 1
+10127932_178 1
+10003573_234 1
+100041_102 1
+10007044_234 1
+

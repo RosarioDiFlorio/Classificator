@@ -65,7 +65,7 @@ public class TxtDataReader implements DataReader {
     ids.addAll(categoriesWithIds().get("/"+category.replace("_", " ")).keySet());
     List<Source> sources = solr.getSourcesFromSolr(ids, Paper.class);      
 
-    PrintWriter p = new PrintWriter(new File(PathConfigurator.applicationFileFolder+"log/"+category+"ToCheck.txt"));
+    PrintWriter p = new PrintWriter(new File(PathConfigurator.applicationTestFolder+category+"ToCheck.txt"));
     for(Source src: sources){
       p.println(src.getId()+" - "+category);
       p.println(src.getTitle());
