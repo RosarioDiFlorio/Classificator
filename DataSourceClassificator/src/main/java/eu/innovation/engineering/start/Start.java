@@ -20,7 +20,7 @@ public class Start {
 
     //CREA IL FILE JSON DEI DIZIONARI
     //mainOnlyForDictionaries();
-    //CREA I FILE JSON DI TRAIN E TEST
+    //CREA I FILE JSON DI TRAIN E TEST (Il test in realtà lo genero con la classe SolrClient)
     //mainToGenerateJsonToTrainAndTestTxt();
     //CREA I FILE CSV DI TRAIN E TEST
     mainForCSV();
@@ -29,14 +29,16 @@ public class Start {
 
   public static void mainForCSV() throws IOException{
     DictionaryBuilder dictionaryBuilder = new DictionaryBuilder();
-    String jsonPath=PathConfigurator.dictionariesFolder+"dictionariesSource.json";
-    HashMap<String, Dictionary> dictionaries = dictionaryBuilder.build(jsonPath, Configurator.numFeatures);    
+    //String jsonPath=PathConfigurator.dictionariesFolder+"dictionariesSource.json";
+    String jsonPathDictionariesAndTrain=PathConfigurator.trainingAndTestFolder+"trainingBig.json";
+
+    HashMap<String, Dictionary> dictionaries = dictionaryBuilder.build(jsonPathDictionariesAndTrain, Configurator.numFeatures);    
 
     //Train
-    CSVBuilder.buildCSV(PathConfigurator.trainingAndTestFolder+"trainingAndTestTogether.json", dictionaries, true);
+    CSVBuilder.buildCSV(jsonPathDictionariesAndTrain, dictionaries, true);
 
     //Test
-    CSVBuilder.buildCSV(PathConfigurator.trainingAndTestFolder+"dataSourcesWithoutCategory.json", dictionaries, false);
+    CSVBuilder.buildCSV(PathConfigurator.trainingAndTestFolder+"dataSourcesWithoutCategory_10000_10000.json", dictionaries, false);
 
 
   }
@@ -49,9 +51,11 @@ public class Start {
     DictionaryBuilder dictionaryBuilder = new DictionaryBuilder();
     String jsonPath=PathConfigurator.dictionariesFolder;
     if(readDictionaryFileTXT) // crea il file json da usare per creare i dizionari con il clustering kmeans
-      dictionaryBuilder.initJsonDataset("dictionariesSource.txt",jsonPath);
+      //dictionaryBuilder.initJsonDataset("dictionariesSource.txt",jsonPath);
+      dictionaryBuilder.initJsonDataset("bigDataset.txt",jsonPath);
 
-    jsonPath = jsonPath+"dictionariesSource.json";
+    //jsonPath = jsonPath+"dictionariesSource.json";
+    jsonPath = jsonPath+"bigDataset.json";
     for(int i=10;i<=100;i+=10){
       HashMap<String, Dictionary> dictionaries = dictionaryBuilder.build(jsonPath, i);      
     }
@@ -64,7 +68,7 @@ public class Start {
     
     KeywordExtractor keywordExtractor = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
     db.setKeywordExtractor(keywordExtractor);
-    db.buildDataset("trainingAndTestTogether.txt",PathConfigurator.trainingAndTestFolder);    
+    db.buildDataset("trainingBig.txt",PathConfigurator.trainingAndTestFolder);    
     //db.buildDataset("dataSourceWithoutCategory.txt", PathConfigurator.trainingAndTestFolder);
   }
 

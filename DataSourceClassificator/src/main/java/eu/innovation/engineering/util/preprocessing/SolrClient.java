@@ -27,7 +27,7 @@ public class SolrClient {
 
     //useManualCheckKeywords("26783169_645");
        
-    requestNPaper(0,10000);
+    requestNPaper(10000,10000);
   }
   
   
@@ -113,7 +113,7 @@ public class SolrClient {
 
     }
     ObjectMapper mapper = new ObjectMapper();
-    mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.trainingAndTestFolder+"dataSourcesWithoutCategory.json"), sourceList);
+    mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.trainingAndTestFolder+"dataSourcesWithoutCategory_10000_10000.json"), sourceList);
 
     System.out.println(count);
   }
@@ -130,6 +130,7 @@ public class SolrClient {
     for(String id : idPapers){
       if(Paper.class.isAssignableFrom(c)){
 
+        System.out.println(id);
         /*
         String querylocale = "http://localhost:8983/solr/technical_papers/select?q=id%3A"+id+"&fl=id%2Cdc_title%2Cdc_description&wt=json&indent=true";
         StringBuffer responseLocale = requestSOLR(querylocale);;
