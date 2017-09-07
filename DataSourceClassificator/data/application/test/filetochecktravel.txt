@@ -1,2 +1,1073 @@
+101667_108 - 0.997209082506 - travel
+[tourism, curve, labour, supply]
 
+Tourism employment and poverty: revisiting the supply curve
+<p>The authors argue that the theory of the downward-sloping supply curve for labour is relevant to explanations of labour market behaviour in tourism. The paper is founded on the work of Sharif (1986, 1991, 2000), who questioned the definition of subsistence and argued that, in certain conditions, the initial slope of the curve would be downwards. The authors ask whether tourism development could provide these particular conditions. An important distinction is made between the perception of management of the market being in surplus or abundance. If the downward-sloping supply curve is the case, then the distress selling of labour that it implies would have implications for the quality of tourism products and for the capacity of tourism to alleviate poverty.</p>
+-------------------------------------
+
+10131693_183 - 0.803926072792 - travel
+[road, toll, private]
+
+Private Toll Roads: Learning from the 19th Century
+California has authorized four toll roads to be constructed and operated by private groups, and it is considering more. Construction on a similar 14-mile project in Virginia will begin in 1992. Florida, Texas, and Colorado are considering proposals for private toll roads, and there is talk of a 500-mile private connection between Chicago and Kansas City. Outside the United States, private groups are operating toll roads in France and Italy. Indeed, the idea of private toll roads is making a comeback.
+      We say "comeback" because many regions of the United States were once laced with private toll roads. In the early 1800s turnpiking was the leading form of transportation improvement. At mid-century an elaborate system of short turnpikes and plank roads served as feeders to the canals and railroads. In Colorado and California private toll roads served the early mining camps. By the year 1900 scores of rustic toll roads continued to traverse rural areas nation-wide. During the 19th century at least 2,000 private companies operated toll roads.
+-------------------------------------
+
+101676_108 - 0.999041667167 - travel
+[heritage, tourist, tourism]
+
+Tourist Perceptions of Heritage Exhibits: A Comparative Study from Israel
+<p>It is common in tourism and leisure literature to define and approach tourism subgroups in terms of the presence of the tourists in certain spaces. This approach is challenged in the present paper. It is argued that the understanding of heritage tourism should be based on the link between the individual and the space, namely tourist perceptions of a site relative to their own heritage. Based on a study dealing with visitation patterns to places where historic artefacts are presented, it is suggested that tourist perception is key to the understanding of visitation patterns. It is not so much the artefacts the tourists see or observe, but the meaning they ascribe to them. The theoretical implications of this argument are discussed in terms of tourism in general and heritage tourism in particular, as well as the practical applications to cultural heritage management.</p>
+-------------------------------------
+
+101658_108 - 0.922880518766 - travel
+[destination, marketing, strategic]
+
+Marketing the competitive destination of the future
+<p>Destination marketing is increasingly becoming extremely competitive worldwide. This paper explains the destination concept and attempts to synthesise several models for strategic marketing and management of destinations. It provides an overview of several techniques widely used and illustrates examples from around the world. The paper also explains that marketing of destinations should balance the strategic objectives of all stakeholders as well the sustainability of local resources. Destinations need to differentiate their products and develop partnerships between the public and private sector locally in order to co-ordinate delivery. Taking advantage of new technologies and the Internet also enables destinations to enhance their competitiveness by increasing their visibility, reducing costs and enhancing local co-operation. Destination marketing must lead to the optimisation of tourism impacts and the achievement of the strategic objectives for all stakeholders. </p>
+-------------------------------------
+
+10131675_183 - 0.999989435947 - travel
+[travel, demand]
+
+A Dynamic Microsimulator for Travel Demand Forecasting
+The use of cross-sectional models in travel demand forecasting involves some fundamental problems. First, it is based on the untested assumption that cross-sectionally observed variations in travel behavior can be used as valid indicators of behavioral changes over time. Second, future values of socioeconomic and demographic input variables are obtained using inaccurate allocation and post-processing methods to transform aggregate forecasts into "pseudo-dissaggregate" data. And third, it does not properly represent response lages involved in long-term mobility decisions (e.g., residence location and car ownership). The result is a questionable basis on which travel demand forecasts are made.
+-------------------------------------
+
+10132014_183 - 0.828028859491 - travel
+[road, toll, california, private]
+
+The Private Provision of Frontier Infrastructure: Toll Roads in California, 1850-1902
+With county and state government unable to effect road improvement, California lawmakers immediately opened the field to private initiative. At least 159 private companies successfully built and operated toll roads in California. Compared to earlier toll roads in the eastern U.S., the California roads were concentrated in ownership and more profit-oriented in operation. Even so, the quest for mere road improvement was often also an important impetus for taking toll road stock. Voluntary association assumed the corporate form to achieve its several goals.
+-------------------------------------
+
+10132557_183 - 0.999827841057 - travel
+[travel, behavior, trip, datum, different, household, day]
+
+A GPS-based Analysis of Household Travel Behavior
+While characteristics of daily travel behavior have been determined from analyses of the reconstructed household travel behavior recorded in travel diaries, such reconstructions are subject to criticisms that people lie or falsely recall information about destinations, times of travel, trip purposes, trip destination, and other critical characteristics, such as under-reporting of short trips and the number of stops in a trip chain. In 1997 the Department of Transportation carried out a one week study in Lexington, Kentucky in which the cars of 100 households were equipped with GPS and in-car computers. Every stop was logged by the GPS receiver and the purpose of the trip was recorded at that time on an in-car computer. The final report of the study gave descriptions of travel behavior but performed little analysis on the data so collected. Using a CD-ROM data record of all transactions provided by DOT, we propose to examine questions such as: To what extent were the travel behaviors recorded on each day highly correlated? Are there recurring cyclic patterns that show similar patterns of repetitive behavior on different days of the week? How well can a model calibrated for activity behavior on one day predict behavior on other dates? How well does this data support panel and/or diary studies? To what extent to discrete choice models of travel behavior fit the data for different days with approximately the same parameters? To what extent did travelers use optimal travel routes (e.g. shortest path?)? What proportion of different trip purposes were undertaken entirely on suburban streets and what proportion relied on different quantities of freeway travel?
+      Knowing the answers to these questions provides the final pieces to the puzzle of repetitiveness in household travel behavior. It is of considerable importance to the calibration of predictive models of behavior and to successfully implementing Advanced Transportation Management and Information Systems (ATMIS).
+-------------------------------------
+
+10131540_183 - 0.990919101471 - travel
+[land, travel, suburban, demand, use, activity, site, characteristic, land-use, analysis]
+
+Land Uses and Travel at Suburban Activity Centers
+Several recent studies have focused on how land-use characteristics of suburban activity centers affect travel demand. Research indicates that low densities, single uses, small scales, and plentiful parking tend to induce drive-alone automobile usage in the suburbs for employment, residential, commercial, and institutional land uses alike. Much of this past work, however, has been fairly aggregate in scope, relying on comparisons of travel behavior between different activity centers among different cities. Usually, transportation demand, such as average vehicle occupancy levels or trip-generation rates, is gauged in terms of "averages." Few, if any, analyses have been done at a property site level (i.e., relating travel demand of workers within a building to that site's density, degree of land-use mixture, tenancy characteristics, and so on).
+      This article aims to build upon past research by studying the relationship between land use and various indicators of travel demand for a number of office buildings at six different suburban activity centers across the United States. The data source used in this analysis was the report on "Travel Characteristics at Large-Scale Suburban Activity Centers," recently made available through the National Cooperative Highway Research Program (NCHRP). The NCHRP report is a rich source of information on a range of site and travel-demand characteristics of individual buildings -- housing such functions as offices, retail, hotels, and residences -- within six of the largest suburban activity centers in the country.
+      The analysis that follows examines the influence of project size, density, land-use mixing, and parking facilities on three measures of transportation demand: trip generation rates, work-trip mode splits, and automobile occupancy levels. The analyses are summarized by presenting a table of land-use elasticities -- indices of how sensitive various measures of travel demand are to various indicators of site land-use characteristics. The article concludes with discussions on how land use and transportation can be more closely integrated in U.S. suburbs.
+      The term "land use" is used rather loosely in this article, and is meant to convey more than how land is simply put to use. Here, land use refers to the overall built environment -- size and density of suburban work sites, degree to which uses are segregated or commingled, tenant mixes, and site design features, such as the amount and availability of parking. In that all of these attributes of the built environment influence travel behavior, this broader definition of land use is more compelling. Indeed, it is how land is used and organized that shapes how and along what corridors we travel.
+-------------------------------------
+
+10131382_183 - 0.999035136075 - travel
+[travel, transportation, demand, management]
+
+Transportation Demand Management: Policy Implications of Recent Behavioral Research
+Transportation planners are increasingly adopting policies aimed at changing travel choices made by citizens. Rather than trying to solve transportation problems by building highways and transit routes, "transportation demand management" relies on incentives and disincentives to promote carpooling, vanpooling, transit use and changed work hours. These approaches attempt to accommodate travel demand by more efficiently utilizing existing facilities. While many argue that transportation behavior cannot be changed, this review demonstrates that many years of behavioral science research on travel show otherwise. Commuters respond to differences in travel time and travel cost, to changes in work hours and other attributes of travel in systematic ways which are quite predictable. As a consequence, travel demand management is a promising approach to regional transportation planning.
+-------------------------------------
+
+10137973_183 - 0.997245353131 - travel
+[malaria, tourism, tourist, case, country, benefit, relationship, arrival, elimination, economic]
+
+The economic benefits of malaria elimination: do they include increases in tourism?
+Abstract
+				
+				
+					
+						Background
+					Policy makers have speculated that one of the economic benefits of malaria elimination includes increases in foreign direct investment, particularly tourism.
+				
+				
+					
+						Methods
+					This study examines the empirical relationship between the demand for travel and malaria cases in two countries with large tourism industries around the time in which they carried out malaria-elimination campaigns. In Mauritius, this analysis examines historical, yearly tourist arrivals and malaria cases from 1978&#8211;1999, accounting for the background secular trend of increasing international travel. In Dominican Republic, a country embarking upon malaria elimination, it employs a time-series analysis of the monthly, international tourist arrivals from 1998&#8211;2010 to determine whether the timing of significant deviations in tourist arrivals coincides with malaria outbreaks.
+				
+				
+					
+						Results
+					While na&#239;ve relationships exist in both cases, the results show that the relationships between tourist arrivals and malaria cases are relatively weak and statistically insignificant once secular confounders are accounted for.
+				
+				
+					
+						Conclusions
+					This suggests that any economic benefits from tourism that may be derived from actively pursuing elimination in countries that have high tourism potential are likely to be small when measured at a national level. Rather, tourism benefits are likely to be experienced with greater impact in more concentrated tourist areas within countries, and future studies should seek to assess these relationships at a regional or local level.
+-------------------------------------
+
+101707_108 - 0.727887477232 - travel
+[disaster, crisis]
+
+A Farming Crisis or a Tourism Disaster? An Analysis of the Foot and Mouth Disease in the UK
+<p>As the number of disasters and crises affecting the tourism industry increases, it is becoming necessary to understand the nature of these disasters and how to manage and limit the impacts of such incidents. This paper defines crises and disasters before discussing the area of crisis and disaster management. The paper then applies the foot and mouth outbreak which occurred in the United Kingdom to the tourism disaster framework proposed by Faulkner (2001). The paper notes that although the outbreak fits the basic principles of Faulkner’s (2001) model the size, scope, and subsequent management of the outbreak over an extended period suggests that although the model is useful, it has limited usefulness because not all disasters and crises are the same. Nevertheless, by examining how crises and disasters are managed, lessons for destinations and organisations may help turn such incidents into positive forces for change and help to reduce the severity of future disasters.</p>
+-------------------------------------
+
+10134765_183 - 0.996197565806 - travel
+[transportation, automobile, travel, problem, future, world]
+
+Sustainable Transportation: The Future of the Automobile in an Environmentally Constrained World
+“Sustainable Transportation: The Future of the Automobile in an Environmentally Constrained World” has analyzed the nature of the problems confronting the transportation systems of industrialized countries. We seek to understand how travel and energy use for travel (and freight) is changing, how these changes may affect the environment, and how the environmental problems may in turn affect future travel and freight activity. During its first three years, the study focused on the automobile. During the final two years, we aim to examine other modes of transportation more closely, in order to produce an integrated picture of the options facing the U.S. and other developed nations. Although we have focused on the U.S. and other major industrialized countries, we acknowledge that problems facing rapidly growing transportation demand are manifest in the Third World and in the economies in transition in Central and Eastern Europe.
+-------------------------------------
+
+10137811_183 - 0.875529086567 - travel
+[center, big, player, basketball, league, man, ray, team]
+
+The Fading of Giants: How the mysterious disappearance of basketball's big man has made him more vital than ever before
+Since its formation in 1946, the National Basketball Association (NBA) has been dominated by players at the center position who helped establish it as the world's premier professional league. Legendary "big men" like Bill Russell, Wilt Chamberlain and Kareem Abdul-Jabbar were nearly unstoppable: players with the height and reach to block shots, capture rebounds and score nearly at will. Since then, contemporary names like Tim Duncan, Shaquille O'Neal and Yao Ming have taken their place. Lately though, these impact centers have all but vanished. Duncan is at the tail end of a distinguished career, and Shaq and Yao retired last year. Today, only two players—the Orlando Magic's Dwight Howard and Los Angeles Lakers Andrew Bynum—are widely viewed as conventional bigs among the league's 30 teams. And the numbers are not improving.
+      Former Golden State Warriors center Clifford Ray should know. An NBA assistant coach several times over, the 62-year-old Ray is considered one of the foremost authorities on developing young these big men since his retirement as a player in 1981. He has worked with elite-level talents, from Howard to Kevin Garnett and Kendrick Perkins. In past years, he also ran a big man camp with Hall of Fame center Robert Parish. Since being let go by the Boston Celtics before the start of the 2010 season, Ray has had trouble finding another job. If there are no centers to coach, then why would anyone need a centers coach? 
+      Basketball has always been a game played from the inside-out, however, from the hoop outwards. A regulation NBA court is 94 feet long and 50 feet wide, but it is within an imaginary region on both sides of the narrow painted lane, known as the key, called the low post, where games are won or lost. It is the space where centers traditionally dominate, as scorers on one end of the court and protectors on the other. 
+      "A quality center is key for a championship team," says Abdul-Jabbar, a six-time champion and most valuable player, the league's all-time leading scorer, and arguably the best to ever play the position.Many, including Ray, agree wholeheartedly, saying a team cannot win it all without this pivotal piece to the puzzle.
+      "You've got to have a decent big to take it to the next level to win a championship," he says. "You've got to have bigs in that post that are doing the little things. Being a great basketball player, especially as a center, is being able to give your team what they need to get a win that night." 
+      With the emphasis on exciting perimeter, guard play as the current direction of the league, it makes even longtime basketball experts wonder how this disappearance of the customary 7-footer happened. In a game fundamentally built on height, it seems the tallest player is effectively being phased out. So where have all the centers gone?
+-------------------------------------
+
+10132470_183 - 0.929394067045 - travel
+[decision, activity, travel]
+
+The Timing of Activity and Travel Planning Decisions
+The major goal of travel behavior research is to understand and model the processes by which people make decisions regarding activities and travel. These decisions, including whether, when, where, and with whom to participate in particular activities, and the choice of mode and route, are collectively known as activity scheduling decisions. Traditionally the research focus has been on how these decisions are made, how they relate to demographic and environmental factors, and, to a lesser extent, how they interact with each other. A rich body of knowledge, increasingly useful for forecasting behavioral responses to a wide range of transportation and other policies, is already part of this tradition.
+-------------------------------------
+
+10138819_183 - 0.966366609315 - travel
+[transportation, client, health, trip, medical, care, reason, service, nemt]
+
+Missed or Delayed Medical Care Appointments by Older Users of Nonemergency Medical Transportation Services
+Non-emergency medical transportation (NEMT) can prevent emergency care as a result of delayed or missed medical appointments. Medicaid provides NEMT for low income individuals who have no other means of transportation and this is a critical component of the health care delivery system. This study examined cancelled trips in Medicaid adults age 65+ to explore whether barriers persist for a growing segment of the population who face particular challenges of age-related declines in health and function. Multivariate logistic regression analyses were conducted using transportation brokerage data for Delaware members who intended to travel during 2008-2010, modeling the odds of all cancellations and then these mutually exclusive types: (1) client cancelled; (2) client obtained alternative transportation; and (3) client cancelled due to health. Over half of the cancelled trips were attributed to client reasons. Black race was associated with client canceling (OR=1.4) and canceling due to alternative transportation (OR=1.9). Compared to dialysis, trips for other medical care were more likely to be cancelled for client and health reasons (ORs ranged 1.6-7.9). Higher levels of service increased cancelling for health reasons (OR=2.9 stretcher; OR=1.8 wheelchair). Finally, pre-scheduled or subscription trips were less likely to be cancelled and client factors differed for the cancellation of trips that were not regularly scheduled. The results of this initial study confirm that for this population additional transportation services are often not available and that more support for utilizing NEMT may be needed. Future research should evaluate persistent barriers, service delivery, and long-term outcomes. 
+-------------------------------------
+
+10132606_183 - 0.984756237037 - travel
+[health, benedetto, agency, center, scwhc]
+
+Ciel Benedetto: A History of the Santa Cruz Women's Health Center
+Santa Cruz Women's Health Center (SCWHC) director Benedetto traced the evolution of this unique community institution, celebrating its 25th anniversary at the time of this interview in the year 2000. Founded in 1974 as a pioneering, feminist health collective, SCWHC is now a thriving health organization operating in today's complex managed care environment. Benedetto guided the center through this transition, maintaining its feminist perspective while overseeing an annual budget of more than $1 million.
+      SCWHC is one of the country's few remaining women's health centers, providing more than 8,000 patient visits annually in general medicine, gynecology, prenatal care, family planning, and pediatrics. The agency also offered information and referral services, low-cost acupuncture, free mental health and nutritional counseling, and health and HIV education.
+      Benedetto began her commentary with a discussion of the agency's socialist-feminist political origins as a collective and its commitment to consensus decision making. This phase eventually gave way to a more traditional organizational structure as the agency matured.
+      Benedetto detailed the agency's myriad activities, including its highly developed volunteer training program, which produced a remarkable number of alumni over the years who became agents of change as physicians, health care providers, and women's rights advocates.
+      Among the other activities of the center were the production of its internationally distributed newsletter and health education materials; the provision of new contraceptive methods such as the cervical cap; and its participation in breast cancer research studies. SCWHC maintained its commitment to diversity in its staff and patient population over the years and a singular reputation among international health agencies for women and children.
+-------------------------------------
+
+10132457_183 - 0.967244673152 - travel
+[transportation, ucla, center, conference, welfare, university]
+
+Getting Welfare Recipients to Work: Transportation and Welfare Reform, Summary of Conference Proceedings
+This report is a summary of the proceedings of a conference on transportation and welfare reform held at the University of California, Los Angeles on March 26-27, 1998. The conference was sponsored and hosted by the UCLA Institute of Transportation Studies and cosponsored by the University of California Transportation Center, the New England University Transportation Center at MIT, the UCLA Institute of Industrial Relations, and UCLA’s Lewis Center for Regional Policy Studies.
+-------------------------------------
+
+10137858_183 - 0.710483322611 - travel
+[health, disease, public]
+
+Public Health in East and Southeast Asia: Challenges and Opportunities in the Twenty-First Century
+“This volume is unique in its comprehensive investigation of the changing face of public health in East and Southeast Asia. The region’s countries have experienced major challenges resulting from colonialism, conflicts, economic and technological development, varying levels of government stability, widening disparities between social classes, uneven distribution of wealth, emerging epidemics, chronic diseases, occupational hazards, and changing health services. All of these issues are ably addressed by the authors, firsthand experts in their respective countries and fields. With its useful summaries and wealth of international sources, it will be an excellent resource for scholars and practitioners seeking an introduction to the region’s complex context and development.” Chitr Sitthi-amorn, former president, International Epidemiological Association
+      
+         Public Health in East and Southeast Asia presents an overview of the state of public health across this vast region and considers the challenges and prospects for its future advancement. It pays particular attention to how rapid economic progress has brought accelerated change, both demographic and epidemiological, to an area already marked by great heterogeneity in health status and public health systems. In comparative and thematically oriented chapters, leading scholars consider such issues as changes in values and lifestyles, infectious diseases, nutrition, tobacco, chronic diseases, accidents and injury, environmental health, occupational health, the effect of globalization, and health services.
+      Roger Detels is Distinguished Professor of Epidemiology and Infectious Diseases and Chair of Epidemiology at the University of California, Los Angeles. He is the former president of the International Epidemiological Association. Sheena G. Sullivan is an epidemiologist at the WHO Collaborating Centre for Reference and Research on Influenza and was previously with the Chinese Center for Disease Control and Prevention. Chorh Chuan Tan is President of the National University of Singapore and was previously the Director of Medical Services in Singapore’s Ministry of Health, in which capacity he was responsible for the medical response to the SARS epidemic in 2003.
+      Contributors: Rajesh Bhatia, Chien-Jen Chen, Wen-Ta Chiu, Roger Detels, Binh Y. Goldstein, Anthony J. Hedley, Ling-I Hsu, Elizabeth A. Jahncke, Sunbaunat Ka, David Koh, Ee Heok Kua, Tai Hing Lam, William Lavely, Ting Heung Leung, Sarah M. McGhee, Jai P. Narain, Lu Pai, Donald Maxwell Parkin, Saumik Paul, Samlee Plianbangchang, Ramkishen S. Rajan, Adeline Seow, Judy Sng, Sheena G. Sullivan, Chorh Chuan Tan, U Than Sein, Kraisid Tontisirin, Shin-Han Tsai, Thomas Tsang, Kumnuan Ungchusak, Lilian W. C. Wan, Pattanee Winichagoon, Zuo-Feng Zhang
+-------------------------------------
+
+10132829_183 - 0.999696768818 - travel
+[highway, travel, urban]
+
+New Highways, Induced Travel, and Urban Growth Patterns: A "Before and After" Test
+Several recent studies have demonstrated an association between increases in highway capacity and increases in vehicle miles of travel (VMT). That phenomenon, called induced travel, has increasingly been cited as a basis for rethinking travel demand modeling, land-use/transportation interactions, and the environmental impacts of highway projects. Yet before the policy community can firmly conclude that induced travel is an important phenomenon, one lingering doubt must be addressed. Do new highways really induce additional travel, or are the associations between lane miles and VMT driven by a reverse causal link - namely that new highways are built in anticipation of expected increases in travel demand? The debate remains contentious, in part because the empirical evidence on induced travel is mostly from aggregate data that are aggregated over broad geographic areas, such as counties or states is difficult, and focusing on individual projects can help clarify matters. In this light, we examine three highways in a rapidly growing urban area to pose the following question: Do new highways influence urban development in ways that suggest that they induce new automobile traffic, or are urban growth patterns somewhat impervious to the completion of new highways?
+-------------------------------------
+
+10132651_183 - 0.937092755531 - travel
+[travel, technology, information, freight]
+
+Impacts of Information Technology on Personal Travel and Commercial Vehicle Operations: Research Challenges and Opportunities
+Travel, like many other aspects of daily life, is being transformed by the information technology revolution. Accessibility can no longer be measured only in terms of travel time, distance or generalized travel cost. Information technology gives people virtual accessibility to a rapidly growing range of activities. E-commerce has become a catalyst for structural changes in the freight transportation industry and is changing where freight moves, the size of typical shipments and the time within which goods must be delivered. In this paper we explore some of the potential effects of information technology on transportation, both personal and freight.
+-------------------------------------
+
+10131830_183 - 0.871416410217 - travel
+[road, toll, california, free, driving, highway]
+
+Investigating Toll Roads in California
+Californians are used to driving on highways for free, but today free driving also means slow driving. Highway congestion is increasing in urbanized areas, and there's not enough money to both maintain and expand existing roads. To raise funds, as well as discourage drive-alone travel, California legislators are now rediscovering the once-dreaded toll road.
+-------------------------------------
+
+10132194_183 - 0.968419093483 - travel
+[trip, car, percent, mode]
+
+Future Ride: Adapting New Technologies to Paratransit in the United States
+For the average American, the overwhelmingly popular first choice in trip mode is to get into the private car at point A and drive it directly to point B. In the San Francisco Bay Area, for example, 82 percent of all work trips and 76 percent of all non-work trips are solo car trips. The total share of transit trips is 10 percent and steadily declining, in spite of massive operating subsidies for these modes. Short of a drastic change in the cost of car travel (e.g., a long-term doubling of gasoline prices), current transit modes cannot hope to compete with the private automobile for passengers.
+-------------------------------------
+
+10131527_183 - 0.820464014542 - travel
+[road, fogel, plank]
+
+Market and Community in Antebellum America: The Plank Roads of New York
+The importance of canals and railroads has hardly grown "deeper and deeper," but at least they had their day. As for plank roads, most people have never heard of them.
+      The historical obscurity of plank roads reflects the general scholarly neglect of nineteenth-century roads. Excellent work has been done on canals, and studies of railroads have engendered some of the most vibrant debates in American economic history. Yet no substantial study of road transport has been done in decades. In 1964, Robert Fogel complained about the "neglected problem" of road transportation in the nineteenth-century. Fifteen years later, Fogel lamented that "the issue of antebellum wagon transportation should not be left in such a highly conjectural and unsatisfactory state." Although Winifred Rothenberg's work on Massachusetts's farmers has produced some suggestive insights on the cost of road transport, Fogel's call has gone more or less unheeded.
+-------------------------------------
+
+10132340_183 - 0.999746868451 - travel
+[shopping, travel, home, electronic, activity, study, today]
+
+Shopping Without Travel or Travel Without Shopping? An Investigation of Electronic Home Shopping
+This study explores the growth of electronic home shopping in terms of likely transportation and communication interactions. Although opportunities exist to shop from home today, most consumers initiate travel trips to stores or markets. Widespread use of automobiles has facilitated the retailing configurations we know today but the development of new electronic networks could changes this. This study establishes a baseline to explore shopping activities using two-day travel activity data from a large U.S. metropolitan area. It is found that people who telework from home today spend more time engaged in shopping activities than other workers. Potentially, their saved work travel is converted into new trips. IN the future, saved shopping travel might be converted into other types of travel, and modeling results show that for busy working women there is a latent demand for maintenance-related activities. The study results suggest that electronic home shopping will bring into play complex interactions between communications and transportation.
+-------------------------------------
+
+10133064_183 - 0.999071234165 - travel
+[travel, strategy, travel-related, management]
+
+Personal Travel Management: The Adoption and Consideration of Travel-Related Strategies
+Traveler behavior plays a role in the effectiveness of travel demand management (TDM) policies. Personal travel management is explored in this paper by analyzing individuals’ adoption and consideration of 17 travel-related alternatives in relation to socio-demographic, mobility, travel-related attitude, personality and lifestyle preference variables. The sample comprises 1282 commuters living in urban and suburban neighborhoods of the San Francisco Bay Area. Among the findings: females were more likely to have adopted/considered the more ‘costly’ strategies; those with higher mobility were more likely to have adopted/considered travel-maintaining as well as travel-reducing strategies; and those who like travel and want to do more are less likely to consider travel-reducing strategies. These findings, when combined with those of earlier work on this subject, present a compelling argument for the need to further understand traveler behavior -- particularly in response to congestion and TDM policies.
+-------------------------------------
+
+10140204_184 - 0.80056621572 - travel
+[evansville, aces, indiana, team, journey, destination, basketball, university]
+
+Aces Basketball Team 1977-78
+Destination Indiana - University of Evansville Journey
+-------------------------------------
+
+10133125_183 - 0.999209502815 - travel
+[shopping, home, activity, travel, time, accessibility, variable, trip, shop, teleshopping]
+
+The Effects of Teleshopping on Travel Behavior and Urban Form
+This dissertation employs structural equation modeling (SEM) techniques to explore the tradeoffs people make when engaging in teleshopping activities from home. Using the Bay Area Travel Survey (BATS) 2000 this dissertation performs an activities analysis to investigate these relationships. Time use variables are included that predict the amount of time each individual spends during the day on work, maintenance, discretionary, and shopping activities, both in and outside of the home. These activities are used to predict the amount of shopping travel each person undertook. Results suggest that people substitute home teleshopping time for shopping travel time, and teleshoppers take fewer shopping trips and travel shorter total distances for shopping purposes. However, these effects are mainly “indirect” and appear to be mediated through two time-use variables – In-Home Maintenance and In-Home Discretionary activities. Home teleshoppers tended to spend more time on In-Home Maintenance and less on In-Home Discretionary activities than non-home teleshoppers.
+      Variables constructed to represent the degree to which people are “time-starved” from the demands of their work and maintenance activities revealed that female heads of households tend to home teleshop more, make more shopping trips and shopping trip chains, shop out-of-home more, and shop travel for longer periods than the rest of the survey population. A variable constructed to measure each survey participant household’s accessibility to shopping opportunities suggests that people who live in high retail accessibility areas tend to home teleshop slightly (but statistically significantly) more, take more shop trips, make more shop trip chains, and travel shorter total distances for shopping purposes than those who live in lower accessibility neighborhoods.
+      These results suggest that home teleshopping is primarily used as a tool to restructure a person’s daily activities participation, which in turn, restructures a person’s shop travel behavior. The degree to which someone is time-starved – particularly, female head of households – appears to play a role in determining the propensity to home teleshop as does a person’s relative accessibility to retail opportunities. While confirmatory analysis is necessary, these results suggest that activity-based travel demand models would benefit from the inclusion of home teleshopping, time-starved, and retail accessibility variables.
+-------------------------------------
+
+10132002_183 - 0.777457474019 - travel
+[vehicle, ev, trip, emission, nev, efficient, energy, neighborhood, full-sized, electric]
+
+Proceedings of the Neighborhood Electric Vehicle Workshop
+Neighborhood  electric vehicles (NEVs)  are small, very efficient EVs  that are  designed to be used for urban trips at relatively low speeds. They provide the  potential for greatly reduced air pollution, energy use, petroleum imports,  greenhouse gas emissions, and roadspace. Because they are very energy  efficient, they are better suited to the limitations of today’s batteries than are  full-sized EVs designed for highway travel. As supplements to a household’s  group of vehicles, NEVs  could be used for the vast majority of short trips.  Because these trips account for a disproportionate share of emissions, NEVs  provide even greater per-kilometer emission reductions than full-sized EVs.
+-------------------------------------
+
+10131709_183 - 0.981655570897 - travel
+[disaster, time, loss, transportation, earthquake, bay, prieta, major, metropolitan, loma]
+
+Redundancy: The Lesson from the Loma Prieta Earthquake
+The big news from the Bay Area's 1989 earthquake was that the transportation disruptions were only inconvenient, not dreadful. Structural failures on the Bay Bridge and several elevated concrete freeways cut major metropolitan commuting routes. Nevertheless, the regional transportation system didn't crash at the time. It was resilient because it was redundant - the parallel links took up the burden. Commuters got to work without intolerable hardship. Trucks got their freight delivered, nearly on time. Some businesses suffered in the short-term, but only a few failed. 
+      Estimates place direct losses from the Loma Prieta quake at over $8 billion dollars, making it the costliest natural disaster in American history at the time. In addition, some costs must be assigned to the secondary losses resulting from the breakdown in accessibility. The surprise is that the losses were so low. Our studies into the effects of breaks in the metropolitan transportation network reveal three major reasons why traffic disaster did not follow the earthquake disaster. 
+-------------------------------------
+
+10132141_183 - 0.999999785791 - travel
+[travel]
+
+Involuntary Mobility, Gender, and Travel Demand Management in Metropolitan Phoenix
+Metropolitan Phoenix is an international exemplar of a low-density, automobile-dependent city where car travel is required to conduct daily activities (Newman and Kenworthy 1989).  Population growth, political pressure for new highway construction, and efforts to manage travel demand for air quality improvement purposes coexist. The paper focuses on how people and institutions have created this distinctive urban travel landscape and on some of its key consequences for travel behavior.
+-------------------------------------
+
+10132191_183 - 0.999278730974 - travel
+[shopping, travel, neighborhood, mode, area, non-resident, resident]
+
+Traditional Neighborhood Shopping Districts: Patterns of Use and Modes of Access
+This dissertation examines the New Urbanists' contention that retail centers within easy walking of residential neighborhoods will attract a much higher walk and bike mode share and many fewer and shorter trips than planners and traffic engineers have typically assumed. This contention of the New Urbanists is compared to that of the travel behaviorists, who argue that travelers' choice of destinations for shopping is a function of modal availability, travel time and cost, and the number, amount and variety of land uses available at each destination, such that many residents will bypass shopping in their neighborhood and go to other destinations, while non-residents may choose to shop in the neighborhood based upon its attractiveness and accessibility.
+      This paper answers the following general questions: Who uses neighborhood shopping districts? Under what conditions do the presence of retail activities within walking distance of housing support walking as a mode of transportation for non-work trips? This broad question is answered by considering the following related questions in traditional neighborhoods: (1) To what extent to these shopping areas attract residents and to what extent do they attract non-residents? (2) How do the complexity of travel, frequency of shopping and types of goods and services used by residents differ from those of non-residents? (3) What mode of transportation do the residents and non-residents use to get to the shopping areas? (4) What characteristics of travel (complexity of travel, frequency of travel) and shopping (types of stops influence mode choice? (5) How do the travel and shopping characteristics and the mode of travel vary among the shopping areas? (6) What level of shopping activity is supported in these shopping areas and can they include lower levels of parking as suggested by the New Urbanists? (7) What factors do customers consider in determining where to shop and how do these attitudes differ between walkers and non-walkers? and (8) What factors lead merchants to locate in various shopping areas and how well do merchants understand their customer base?
+-------------------------------------
+
+10132167_183 - 0.803959638172 - travel
+[transit-oriented, planning, rail, development, local, evidence, nature, california, southern, fiscal]
+
+Public Finance and Transit-Oriented Planning: New Evidence from Southern California
+Local governments seem to be continually strapped for funds. While the role of their planners in generating revenue is often discussed, it is also rarely investigated in any detail. We address this research gap by considering the fiscal nature of land use policy vis-a-vis a specific planning opportunity, namely "transit-oriented development."
+      A massive and influential literature has explored the potential for leveraging rail system investments by locating high density residential developments near commuter rail stations. The feasibility and focus of these strategies have been question, however, in the face of evidence that local government support for these projects is mixed at best. To explain this behavior, we examine the role basic fiscal conditions play in the decision to zone land near all existing and proposed commuter rail stations in Southern California. The analysis indicates that station-area zoning depends significantly on community public finances. The importance of sales taxation in financing local services is consistently important in explaining the concentration of commercial activity in each city, associated revenue mix and tax base trends, and many other features differentiating communities. The results underscore how the practice of transit-oriented development must account not only for travel behavior and the broader goals of any given urban design, but also for the parochial and self-interested nature of municipal planning.
+-------------------------------------
+
+10132150_183 - 0.881021698479 - travel
+[trip, neighborhood, non-work, urbanism, transit, travel]
+
+Travel Choices in Pedestrian Versus Automobile Oriented Neighborhoods
+The New Urbanism movement calls for redesigning American neighborhoods so that they are less oriented toward automobile travel and more conducive to walking, bicycling, and transit riding, especially for non-work trips. New Urbanism calls for a return to compact neighborhoods with grid-like street patterns, mixed land uses, and pedestrian amenities. This paper investigates the effects of New Urbanism design principles on both non-work and commuting travel by comparing modal splits between two distinctly different neighborhoods in the San Francisco Bay Area. The neo-traditional neighborhood, Rockridge, and the nearby conventional suburban community, Lafayette, were chosen as case studies because they have similar income profiles, freeway and transit service levels, and geographical locations. Rockridge residents averaged around a 10 percent higher share of non-work trips by non-automobile modes than did residents of Lafayette, controlling for relevant factors like income and transit service levels. The greatest differences were for shop trips under one mile. Modal splits were more similar for work trips, confirming the proposition that neighborhood design practices exert their greatest influence on local shopping trips and other non-work purposes. For work trips, compact, mixed-use, and pedestrian-oriented development appears to have the strongest effect on access trips to rail stations, in particular inducing higher shares of access trips by foot and bicycle.
+-------------------------------------
+
+10137481_183 - 0.999984528484 - travel
+[guide, tour, tourism, khmer, position, cambodia, current, industry, political, cultural]
+
+The Khmer Tour Guide: An Economical, Political and Cultural Nexus in Siem Reap, Cambodia
+The goal of this research project was to investigate the current network of relationships involved in Siem Reap, Cambodia’s tourism network, focusing on the tour guide specifically as a cultural, economic, and political nexus. Closer examination and interviewing revealed the tour guide licensing process as complex and corrupted, but crucial to the tourism industry in Cambodia’s current economy. The question of cultural transmission and self-identification through state intervention is also examined from the tour guide perspective. Rather than focusing on the negative effects of tourism development in a country emerging from third-world status, the focus of this paper was merely to examine the current day-to-day relationships that contribute to the intricacy of the tourism industry with the utilization of a singular position. It is impossible to consider the Cambodian tour guide’s social position without placing it into historical context. Cambodian culture and economy was greatly diminished by the Khmer Rouge; how did this effect the tour guide’s position in society as transmitters of Khmer culture and history? What was the economic and social position most commonly associated with the Khmer tour guide, and how did this affect everyday life and self-identification? Cambodia is still renowned for political corruption, however, the tourism industry seems to be the most bureaucratic and enforced sector as it remains one of the largest sources of income for the country. By exploring the details of becoming a tour guide, interviewing individuals, and observing everyday struggles and successes this paper attempts to approach these conceptual questions.
+-------------------------------------
+
+10136453_183 - 0.963781066728 - travel
+[tourist, tourism, literature, anthropologist, amateur]
+
+Amateur Anthropologists: DIY Tourism as Learning Culture and Accessing Authenticity
+This literature review explores the ways in which the idea of "the tourist" has been theorized by various tourism scholars. First, I will focus on the seminal works and argue that classical tourism literatures have universally approached "the tourist" as one who wishes to be identified as a traveler, coded as a learning-oriented explorer rather than a member of tourists, consumerist dupes who fail to truly experience the wonders of the world. I will refer to this particular type of tourist as "amateur anthropologists," adventurous travelers with a strong do-it-yourself attitude, hoping to discover something both extraordinary and authentic from the journey. Such desires to find the authentic led to a fervent yet futile chase between the tourist industry putting on a lavish performance to lure the tourists, versus amateur anthropologists attempting to access the truly unmediated reality. The latter part of this thesis will analyze more recent literatures on tourism and mediation, and argue that these tourism-media scholars also conceptualize the "tourist" as truth-seekers orienting their travel towards discovering the truth. Finally, I will further allude to the ways in which the advent of cybermedia may give a new shape to tourism practices.
+-------------------------------------
+
+10132170_183 - 0.998173200858 - travel
+[telecommuting, emission, trip, travel, impact, number, personal, non-commute, vehicle, vmt]
+
+The Travel and Emissions Impacts of Telecommuting for the State of California Telecommuting Pilot Project
+The impacts of home-based telecommuting on travel behavior and personal vehicle emissions for participants in the State of California Telecommuting Pilot Project are analyzed using the most advanced emissions modeling tools currently available. A comparison of participants' telecommuting day travel behavior with their before-telecommuting behavior shows a 27% reduction in the number of personal vehicle trips, a 77% decrease in vehicle-miles traveled (VMT), and 39% (and 4%) decreases in the number of cold (and hot) engine starts. These decreases in travel translate into emissions reductions of 48% for total organic gases (TOG), 64% for carbon monoxide (CO), 69% for nitrogen oxide (NOx), and 78% for particulate matter (PM). Although the authors developed the methodology to investigate the emissions impact of telecommuting, the analysis technique can be applied to any demand management or other transportation strategy where all of the necessary model inputs are available. An analysis of the number of personal vehicle trips and VMT partitioned into commute-related and non-commute-related purposes revealed that non-commute personal vehicle trips increase by 0.5 trips per person-day on average, whereas the non-commute VMT decreased by 5.3 miles. This important finding supports (for one indicator, the number of trips) the hypothesis that non-commute travel generation is a potential negative impact of telecommuting. This finding demonstrates the need to monitor these changes as telecommuting moves into the mainstream. In this study, however, the small increase in non-commute trips has a negligible impact compared to the overall travel and emissions savings.
+-------------------------------------
+
+10132771_183 - 0.999999785791 - travel
+[travel]
+
+Driven to Travel: The Identification of Mobility-Inclined Market Segments
+It is a truism repeated countless times in the course of a transportation professional's career - "Travel is a derived demand" - that is, derived from the demand for spatially separated activities. Belief in this truism underlies a number of transportation policies designed to reduce motorized travel (whether to reduce congestion, improve air quality, or reduce the consumption of non-renewable energy). For example, much attention has been given to land use policies designed to bring origins (residences) closer to destinations (work, shopping, entertainment). "Neo-traditional" developments, which mix diverse land uses and maintain higher densities than the typical suburban sprawl, are often suggested as a potential scheme to reduce motorized travel.
+-------------------------------------
+
+10175380_189 - 0.94894680506 - travel
+[airport, hub]
+
+Hijacking Generic Space: The Expanded Airport Hub
+This thesis examines the formal and programmatic expansion of one of the most efficient generic spaces, the international airport hub, by serving the specific needs of an increasingly common mobile citizen, the medical tourist. International airport hubs are comprised of a network of interlinked corridors where large transient populations are received, held and then dispersed again. The medical tourist is a product of the rapidly increasing cost and specialization associated with medical treatment procedures. Recognizing that the density of airport hubs now rivals that of contemporary city centers, this project expands the capacity of the international airport hub, thus enabling the airport to compete for citizens in a manner similar to cities. 
+
+As one iteration of a potential airport expansion system that could serve multiple mobile citizen types, this project exploits the security requirements of an existing airport and an innovative program to hypothesize a new type of airport terminal.
+-------------------------------------
+
+101678_108 - 0.991123511041 - travel
+[policy, tourism, period, development, government, tourist]
+
+Tourism Policy in Jamaica: A Tale of Two Governments
+<p>This paper explores the role of public policy in the development of tourism in Jamaica. It focuses on two separate and contrasting periods. In the first, 1972–80, referred to here as 'The Socialist Era', the Jamaican government pursued goals of self-reliance combined with seeking to integrate tourism into Jamaican life. In the second period, 1980–89, 'The Period of Capitalism', emphasis was shifted to reducing government intervention and pursuing foreign exchange earnings. A comparison of tourism development during these two periods reveals that during the 'Socialist Era' some success was achieved in the Jamaicanisation of tourism but at the same time government policies contributed to an overall decline in the industry as measured by the traditional indicators of tourist arrivals, hotel occupancy, hotel provision and employment. During the 'Period of Capitalism' a change in policy is associated with a successful recovery of tourism numbers but an increasing tension between locals and tourists. The study cannot provide causal explanations of the links between policy shifts and tourism development. The wide range of external variables, including oil crises and world inflation, that occurred during the periods is too great to admit this kind of certainty. However, the policy background provides an important context for understanding the link between policy and development in one of the oldest and most well-developed tourist destinations in the Caribbean. </p>
+-------------------------------------
+
+10132783_183 - 0.732155239322 - travel
+[time, preference, travel, dissertation, motorist, heterogeneity, reliability, model, road, policy]
+
+Heterogeneity in Motorists' Preferences for Time Travel and Time Reliability: Empirical Findings from Multiple Survey Data Sets and Its Policy Implications
+The deregulation experience in airline, banking, and telecommunication suggests that the heterogeneity in consumers’ preferences has important policy significance. However, the varied nature in motorists’ preferences has been hardly recognized in urban passenger transportation sector. In this public sector, the public authority generally offers a uniform class of services to all potential users. This dissertation employs the new advances in econometrics on survey data sets from road pricing experiment in Los Angeles area to study the diversity in motorists’ preferences for travel time and travel time reliability. The empirical findings are used to explore the efficiency and distributional effects of road pricing that accounts for users’ heterogeneity.
+      This dissertation found substantial heterogeneity in motorists’ preferences for both travel time and travel time reliability. Furthermore, based on a simulation model, this dissertation found that road pricing policies catering to varying preferences can substantially increase efficiency while maintaining the same political feasibility as the current experiments. This dissertation also explores how to apply the recent developments in Bayesian econometrics to estimate the multinomial probit models combining different sources of data, which can be used to estimate the diversity in peoples’ preferences with more flexibility in model specification.
+-------------------------------------
+
+10131841_183 - 0.721064399635 - travel
+[rail, ridership, forecasting, high-speed, california, forecast, system, decision, question]
+
+Intercity Rail Ridership Forecasting and the Implementation of High-Speed Rail in California
+This working paper is the first in the CalSpeed series to address the question of the market potential for high-speed passenger rail service in California. Along with construction cost, forecast ridership is the second significant question asked about any proposed high-speed rail system. Indeed, the decision to construct such systems is often portrayed as contingent on such forecasts. For this reason, an examination of the rail ridership forecasting experience is a worthwhile preliminary to the CalSpeed ridership estimates.
+      This first part of the paper focuses on the high-speed rail systems in Europe and Japan and the role that ridership forecasts played in the decision to build the original high-speed rail lines. The European and Japanese situation is then compared to the situation California faces today. The next part draws an analogy between the decision to construct the second-generation rail transit systems in the United States and the decision to construct high-speed rail in California. This part reviews criticism of rail transit ridership forecasting and examines the original bay Area Rapid Transit (BART) forecasts as an illustration of the difficulties involved in forecasting for new modes.
+      Throughout the paper, questions of accuracy and sources of error are addressed as thoroughly as possible. What does the accuracy of past ridership forecasts say about forecasting as a decision-making tool in the public or private arenas? How might the rail forecasting experience benefit a California study? The paper will address these questions and others, and concludes with a discussion of the role that ridership forecasting might play in the decision to build a California high-speed rail system.
+-------------------------------------
+
+10132481_183 - 0.999999042715 - travel
+[travel, policy]
+
+What Happens When Mobility-Inclined Market Segments Face Accessibility-Enhancing Policies?
+Improvements in accessibility are increasingly suggested as strategies leading to a reduction in vehicular travel, congestion, pollution, and their related impacts. This approach assumes that individuals, if offered an opportunity, are likely to reduce their travel. It also assumes that accessibility-enhancing land-use changes will increase transit and non-motorized trips in lieu of automobile usage. However, there are numerous indications that people engage in excess travel and are not necessarily inclined to reduce it. This paper presents a number of hypotheses on the reasons for excess travel and the relationships among attitudes toward travel and responses to accessibility-enhancing strategies. It suggests that different market segments are likely to respond to policy measures in different ways. In particular, if a large segment of the population prefers mobility over the reduced travel offered by accessibility improvements, then such policies will be less effective than anticipated.
+-------------------------------------
+
+10138034_183 - 0.736732654703 - travel
+[care, health, insurance, relative, value, medical, patient, benefit]
+
+Relative Value Health Insurance: A Behavioral Law and Economics Solution to the Medical Care Cost Crises
+Now that the Supreme Court has upheld the constitutionality of the Patient Protection and Affordable Care Act (“PPACA”), access to medical care will sharply increase.  But the new law will do little to reign in the rapidly increasing cost of medical care in the United States.  Regulatory controls on prices or benefits, favored by some on the left, are political non-starters in today’s environment. Consumer directed health care (“CDHC”) proposals, which seek to provide patients with financial incentives to equate marginal costs and benefits at the point of treatment and is favored by many on the right, is infeasible because of the skewed distribution of health care expenses and patient bounded rationality. New approaches are desperately needed.
+      This article proposes a government-facilitated but market-based approach to improvingefficiency in the market for medical care that I call “relative value health insurance.”  The approach would enable even boundedly-rational patients to contract for the efficientlevel of health care services ex ante through their health insurance purchase decisions.The key to facilitating efficient contracting by boundedly-rational consumers is thecreative use of comparative effectiveness research (“CER”), which the PPACA funds at a significant level for the first time. CER should be used to create public ratings ofmedical treatments on a scale of 1-10 based on their relative value, taking into accountcosts and expected benefits.  These relative value ratings would enable consumers tocontract with insurers for different levels of medical care at different prices, reflecting different cost-quality tradeoffs.
+      After situating the concept of relative value health insurance within the context of ahealth insurance system that encourages overuse of resources and CDHC proposals that cannot mitigate the problem, the article describes the considerable benefits of relativevalue health insurance  and considers some of the formidable obstacles to making it areality.
+-------------------------------------
+
+101696_108 - 0.998338036423 - travel
+[travel, emediary, internet, traditional, system]
+
+The Future eTourism intermediaries
+<p>Hitherto, the travel distribution role has been performed by traditional outgoing travel agents, tour operators and incoming travel agencies. They were supported by computer reservation systems, Global Distribution Systems (GDSs) or tour operators’ videotext systems (or leisure travel networks). These <i>traditional electronic intermediaries</i> (eMediaries), particularly GDSs, progressively consolidated their position. The Internet created the conditions for the emergence of new eMediaries, based on three ePlatforms, namely the Internet, Interactive Digital Television (IDTV) and mobile devices. <i>New eMediaries</i> include a wide range of organisations including suppliers (eg airlines, hotels etc) selling direct on the Internet by allowing users to access directly their reservation systems; web-based travel agents; Internet portals and vortals, and auction sites. The expected proliferation of Digital TV and mCommerce will gradually intensify competition further. As a result, traditional eMediaries must reengineer their business processes in order to survive and remain competitive. This exploratory research identifies experts’ opinions on the future of both new and traditional eMediaries as well as the evolution of their business models.</p>
+-------------------------------------
+
+101657_108 - 0.97080399372 - travel
+[forecasting, tourism, demand, model, study]
+
+Tourism Demand Modelling and Forecasting
+<p>This paper reviews the published studies on tourism demand modelling and forecasting since 2000. One of the key findings of this review is that the methods used in analysing and forecasting the demand for tourism have been more diverse than those identified by other review articles. In addition to the most popular time series and econometric models, a number of new techniques have emerged in the literature. However, as far as the forecasting accuracy is concerned, the study shows that there is no single model that consistently outperforms other models in all situations. Furthermore, this study identifies some new research directions, which include improving the forecasting accuracy through forecast combination; integrating both qualitative and quantitative forecasting approaches, tourism cycles and seasonality analysis, events’ impact assessment and risk forecasting.</p>
+-------------------------------------
+
+10132468_183 - 0.996296626357 - travel
+[travel, demand, activity, modeling, model, choice]
+
+A Utility-Theory-Consistent System-of-Demand-Equations Approach to Household Travel Choice
+Modeling personal travel behavior is complex, particularly when one tries to adhere closely to actual causal mechanisms while predicting human response to changes in the transport environment. There has long been a need for explicitly modeling the underlying determinant of travel - the demand for participation in out-of-home activities; and progress is being made in this area, primarily through discrete-choice models coupled with continuous-duration choices. However, these models tend to be restricted in size and conditional on a wide variety of other choices that could be modeled more endogenously.
+      This dissertation derives a system of demands for activity participation and other travel-related goods that is rigorously linked to theories of utility maximization. Two difficulties inherent in the modeling of travel - the discrete nature of many travel-related demands and the formal recognition of a time budget, not just a financial one - are dealt with explicitly. The dissertation then empirically evaluates several such demand systems, based on flexible specifications of indirect utility. The results provide estimates of activity generation and distribution and of economic parameters such as demand elasticities. Several hypotheses regarding travel behavior are tested, and estimates are made of welfare effects generated by changes in the travel environment.
+      The models presented here can be extended to encompass more disaggregate consumption bundles and stronger linkages between consumption of out-of-home activities and other goods. The flexibility and strong behavioral basis of the approach make it a promising new direction for travel demand modeling.
+-------------------------------------
+
+10131630_183 - 0.999993900905 - travel
+[travel, development, form, non-work, suburban]
+
+Regional Versus Local Accessibility: Neo-Traditional Development and Its Implications for Non-work Travel
+The question of how particular forms of metropolitan development affect travel patterns has long been of concern to planners but has recently been at the centre of a heated debate. Much of this debate has focused on the effects of suburbanization in particular, with some arguing that the decentralization of housing and jobs reduces overall travel (for example Gordon et al., 1989; 1991) and most others arguing that the low-density development that is associated with decentralization leads to more automobile travel and gasoline consumption (for example Newman and Kenworthy, 1989; 1992). The debate has taken on a very practical form in proposals that address the problem of growing levels of travel, particularly non-work travel, by changing the way in which individual suburbs are designed. The sprawling, low-density suburban development that has proliferated in recent decades in the United States is defined as the problem and a new approach to design is put forth as the solution. This approach is commonly dubbed 'neo-traditional development'.
+      Despite the popularity of the neo-traditional concept, the evidence on how effective these developments will be at reducing non-work travel is limited. This paper begins to remedy this situation, by providing both a framework through which these proposals must be evaluated and evidence from case studies of four communities within the San Francisco Bay Area as to the relationship between alternative forms of suburban development and the travel patterns of suburban residents. The question addressed is whether 'traditional' suburban forms engender less non-work travel than alternative forms, and the answer is ambiguous.
+-------------------------------------
+
+10133373_183 - 0.999990594199 - travel
+[travel, amount, desire]
+
+Structural Equation Modeling of Relative Desired Travel Amounts
+The “derived demand” perspective on daily travel, which has become axiomatic in the transportation field, holds that travel is derived from the demand to participate in spatially separated activities. The act of traveling itself is not considered to offer any positive utility, and minimizing travel time is a primary goal of all travelers in all situations. This dissertation continues a recent effort to challenge this paradigm by directly modeling the interrelationships among travel amounts, perceptions, affections (or liking), and desires, and, in doing so, asking: why do some individuals want to travel more, and others less? By modeling quantities such as travel affection and desire, I am, importantly, first acknowledging the existence of these measures and, second, formally quantifying their relative impact on daily travel amounts and each other.
+      Five short-distance (one-way trips less than 100 miles) and five long-distance categories of travel are examined, specifically: short-distance overall, commute, work/school-related, entertainment/ social/recreation, and personal vehicle; long-distance overall, work/school-related, entertainment/social/recreation, personal vehicle, and airplane. The models are estimated using data collected in 1998 from more than 1,300 commuting workers in the San Francisco Bay Area. Cross-model analysis reveals three robust relationships, namely: (1) myriad measures of actual travel amounts work together to affect qualitative perceptions of those amounts (e.g. “a little” or “a lot”); (2) those perceptions are consistently important in shaping desires to reduce or increase one’s travel; and (3) affections for travel have a positive influence on those desires. The second finding suggests that two individuals who travel the same objective amount may not have the same desire to reduce their travel: how much each individual perceives his or her travel to be is important. The third point argues that the degree to which travel is enjoyed is a key determinant in shaping desires to reduce travel: the more travel is enjoyed, the less the desire to reduce it. Each of the ten models is estimated with the following four estimation techniques: maximum likelihood, asymptotic distribution free, bootstrapping, and the Mplus approach. A cross-model econometric comparison by estimation technique and sample size is included.
+      The implications of the work are largely theoretical, but the ideas presented can lead to very practical suggestions. For instance, those promoting travel demand management strategies, such as telecommuting, should pay attention to the travel perceptions of their target audience. Even though someone may be objectively traveling a lot, if the individual does not perceive those amounts to be high, he may not embrace a policy aimed at reducing his travel. And the same can be said for those who enjoy travel: those who see value in travel, perhaps because it provides a buffer between the work and home realms of daily life, will logically be less motivated to reduce their travel amounts. The survey respondents exhibit a considerable degree of liking for travel of all kinds studied, and this work unequivocally demonstrates the importance of travel liking to travel behavior.
+-------------------------------------
+
+101700_108 - 0.999764212901 - travel
+[tourism, consumer]
+
+Information Communication Technology Revolutionizing Tourism
+<p>This paper identifies a number of key changes in Information Communication Technologies (ICT) that gradually revolutionize the tourism industry. E-tourism and the Internet in particular support the interactivity between tourism enterprises and consumers and as a result they re-engineer the entire process of developing, managing and marketing tourism products and destinations. All stakeholders related to tourism and hospitality, therefore, gradually see their role being changed and new opportunities and challenges emerging. The paper demonstrates that future of e-Tourism will be focused on consumer centric technologies to ensure that the new sophisticated and experienced consumers are served. Therefore, agile strategies are required at both strategic and tactical management levels to develop the ‘infostructure’ for tourism organizations to manage their internal functions, their relationships with partners and their interactions with all stakeholders including consumers. Only those organizations that appreciate the opportunities which ICTs bring and manage their resources successfully will be able to enhance their innovation and competitiveness in the future.</p>
+-------------------------------------
+
+101693_108 - 0.982324869079 - travel
+[tourism, strategic, technology, industry, information]
+
+Strategic use of information technologies in the tourism industry
+<p>Information technologies (ITs) prevail in all functions of strategic and operational management. As information is the lifeblood of tourism, ITs provide both opportunities and challenges for the industry. Despite the uncertainty experienced in the development of ITs in tourism, the 'only constant will be change'. Increasingly, organizations and destinations, which need to compete will be forced to compute. Unless the current tourism industry improves its competitiveness, by utilizing the emerging ITs and innovative management methods, there is a danger for exogenous players to enter the marketplace, jeopardizing the position of the existing ones. Only creative and innovative suppliers will be able to survive the competition in the new millennium. This paper provides a framework for the utilization of technology in tourism by adopting a strategic perspective. A continuous business process re-engineering is proposed in order to ensure that a wide range of prerequisites such as vision, rational organization, commitment and training are in place, so they can enable destinations and principals to capitalize on the unprecedented opportunities emerging through ITs.</p>
+-------------------------------------
+
+10140272_184 - 0.865730096276 - travel
+[cabell, indiana, journey, proving, jefferson, ground, destination, derosey]
+
+Lt. Col. Derosey Cabell
+Destination Indiana Jefferson Proving Ground Journey
+-------------------------------------
+
+10132709_183 - 0.999999143673 - travel
+[travel, demand]
+
+Understanding the Demand for Travel: It's Not Purely 'Derived'
+We contest the derived demand paradigm for travel as a behavioral absolute. To the contrary, we suggest that travel has an intrinsic positive utility and is valued for its own sake, not just as a means of reaching a destination. We argue that the same positive characteristics that lead people to engage in travel as a recreational activity in itself are likely to motivate them to engage in apparently excess travel in the context of their mandatory and maintenance activities as well. This paper explores the conceptual basis of a positive utility for travel, and presents some results from an ongoing empirical study of attitudes toward travel. In modelling distance traveled (in each of 11 categories), we found that subjective variables such as Travel Liking, the adventure-seeker Personality trait, the travel stress Attitudinal factor, and the Excess Travel indicator added considerable explanatory power to the Demographic variables traditionally used in such models. It appears that, far from being completely determined by demographically based needs, the amount of travel demanded is heavily influenced by one's attitudes toward travel. This is not only true for discretionary (entertainment) purposes, as would be expected, but for more "mandatory" purposes such as work/school-related activities as well. We are convinced that the demand for travel arises from a fundamental human need for mobility and other subjective characteristics, as well as from the external causes typically measured. To more accurately forecast travel demand and policy response, the role of those subjective characteristics needs to be understood much better than it is at present.
+-------------------------------------
+
+10140202_184 - 0.878606532067 - travel
+[indiana, william, fortune]
+
+Memorial to William Fortune at Boonville, Indiana
+Destination Indiana - William Fortune Journey
+-------------------------------------
+
+10131478_183 - 0.798795452486 - travel
+[trip, number, model, generation]
+
+Recursive Model System for Trip Generation and Trip Chaining
+A model system is developed to describe both trip generation and trip chaining in a coherent manner. A recursive structure is adopted to represent the generation of trips for different purposes, and the number of trip chains is expressed as a function of the numbers of trips by purpose. The model system offers theoretically consistent coefficient values and quantifies the relationship between the number of trips and the number of trip chains, and can be used in the conventional forecasting procedure in place of home-based and non-home-based trip generation models. This model is applied to examine how trip chaining patterns vary across sample subgroups. The results indicate no significant variations in trip chaining behavior across car ownership subgroups. It is inferred that car ownership influences household trip generation, but given the number of trips generated, the number of trip chains is not influenced by car ownership.
+-------------------------------------
+
+10131496_183 - 0.999035136075 - travel
+[travel, transportation, demand, management]
+
+Policy Implications of Recent Behavioral Research in Transportation Demand Management
+Transportation planners are increasingly adopting policies aimed at changing travel choices made by citizens. Rather than trying to solve transportation problems by building highways and transit routes, transportation demand management relies on incentives and disincentives to promote carpooling, vanpooling, transit use, and changed work hours. These approaches attempt to accommodate travel demand by more efficiently utilizing existing facilities. Although many argue that transportation behavior cannot be changed, this review demonstrates that many years of behavioral science research on travel show otherwise. Commuters respond to differences in travel time and travel cost and to changes in work hours and other attributes of travel in systematic ways that are quite predictable. As a consequence, travel demand management is a promising approach to regional transportation planning.
+-------------------------------------
+
+10131538_183 - 0.998631106935 - travel
+[decision, travel]
+
+Computational-Process Modelling of Travel Decisions: Review and Conceptual Analysis
+Travel behavior entails several interrelated decisions made by people, as well as the execution of routines not preceded by deliberate decisions. Furthermore, travel decisions are dependent on choices to participate in activities. After a brief review of research aiming at describing activity/travel patterns and approaches in which activity/travel decisions are modelled by means of discrete-choice modelling techniques, a conceptual framework is proposed as a background to an evaluation of several computational-process models. Further needed developments of these models are discussed, as well as the use of geographical information systems in their operationalization and application to traffic planning.
+-------------------------------------
+
+10137748_183 - 0.919119098667 - travel
+[health, world]
+
+Bugs, Drugs & Smoke
+Since the World Health Organization (WHO) was founded in 1948, the world has changed dramatically and so too has its health. But while some scourges (e.g. smallpox and polio) have subsided, others have made a comeback (e.g. tuberculosis) and frightening new diseases (e.g. Ebola and Marburg) have appeared.This book is primarily for young people, especially those interested in working in public health. It explains in simple, non-technical language how humankind developed techniques to protect the health of communities, drawing on first-hand interviews with leading public health figures. It covers a wide range of topics, from the control of infectious disease outbreaks to fighting the stigma attached to mental health conditions.These narratives, told from many parts of the world, show how individuals, communities, institutions and countries can improve people's health when they work together. They show the role that WHO has played in providing countries with the technical support and coordination to make progress in health possible.
+-------------------------------------
+
+10131926_183 - 0.989562052939 - travel
+[travel, decision, household]
+
+Computational-Process Modelling of Household Travel Decisions Using a Geographical Information System
+Household travel behavior entails interdependent deliberate decisions, as well as the execution of routines not preceded by deliberate decisions. Furthermore, travel decisions are dependent on choices to participate in activities. Because of the complexity of the decision-making process in which individuals are engaged, computational-process models (CPMs) are promising means of implementing behavioral principles which unlike other disaggregate modelling approaches do not rely on a utility-maximizing framework. A conceptual framework is proposed as the basis of a CPM interfaced with the geographical information system ARC/INFO. How to model households' travel behavior is illustrated in a case study of a single household in which one member started telecommuting.
+-------------------------------------
+
+10129687_178 - 0.992302119081 - travel
+[community, development]
+
+Banking on the future : the role of bank community development corporations in community development
+Includes bibliographical references (leaves 77-79).
+-------------------------------------
+
+10133192_183 - 0.99987601687 - travel
+[travel, choice, residential, resident, neighborhood, environment]
+
+The Causal Relationship between the Built Environment and Personal Travel Choice: Evidence from Northern California
+Suburban sprawl has been widely criticized for its contribution to auto dependence. Numerous studies have found that suburban residents drive more and walk less than residents in traditional neighborhoods. Accordingly, smart growth programs have been advocated as a means to reduce auto travel. However, most studies have established only an association between the built environment and travel behavior, but not a causal relationship. Their connection may be more a matter of residential choice than of travel choice. For example, residents preferring walking may selectively live in walkable neighborhoods and thus walk more. If so, the effects of land use policies may be overstated. Using data collected from 1682 respondents living in four traditional and four suburban neighborhoods in Northern California in 2003, this dissertation explored this causal link by employing a quasi-longitudinal research design and controlling for residential self-selection (namely, residential preferences and travel attitudes). Specifically, we investigated the influence of the built environment on various measurements of personal travel choices including uses of different modes (driving, transit, walking, and biking), trip frequencies for different purposes (overall travel, nonwork travel, shopping travel, and strolling), auto ownership, and vehicle type choice. The results showed that residential preferences and travel attitudes have pervasive influences on all measurements of travel choices. The results also provide some encouragement that land-use policies designed to put residents closer to destinations and provide them with alternative transportation options will actually lead to less driving and more walking. Taking the evidence from all our analyses together, however, neighborhood design appears to have a stronger influence on walking than on driving. In other words, the residential environment promoted by smart growth programs may be an effective strategy to encourage walking but have less effect on driving, especially after attitudinal predispositions are accounted for. Given that walking is an inadequate substitute for driving, the smart growth movement seems to be more of a solution to public health problems than to transportation problems. Even so, it will give residents a choice to drive less and walk more and this choice is highly valued by a large proportion of respondents in our data as well as in other studies.
+-------------------------------------
+
+10132291_183 - 0.949165818761 - travel
+[use, travel, land, non-work]
+
+Can Land Use Policy Really Affect Travel Behavior? A Study of the Link Between Non-Work Travel and Land Use Characteristics
+Planners are increasingly viewing land use policies as a way to manage transportation demand. Yet the evidence on the link between land use and travel behavior is inconclusive.  This paper uses travel diary data for Southern California residents to examine the demand for non-work travel.  Both non-work automobile trips and non-work miles travelled by car are modelled as a function of individual sociodemographic variables and land use characteristics near the person's place of residence.  The land use variables are rarely statistically significant, and diagnostic tests suggest that land use (and thus residential location choice) is endogenous to non-work travel.  The implications are twofold.  The link between land use and non-work travel is weak at best, at least for the sample studied here, and future research should treat residential location and thus nearby land use characteristics as endogenous in models of travel behavior.
+-------------------------------------
+
+10140266_184 - 0.8825675542 - travel
+[indiana, accident, railroad, recent, deadly, crossings, destination, grade, folly, fortune]
+
+Recent Accidents at Deadly Grade Crossings in Indianapolis
+Destination Indiana Fortune's Folly, Elevating the Railroad Tracks
+-------------------------------------
+
+10140281_184 - 0.978655462848 - travel
+[indiana, journey, proving, ground, jefferson, inch, destination, howitzer]
+
+8 Inch Howitzer being Loaded with 200 lb. Shell
+Destination Indiana Jefferson Proving Ground Journey
+-------------------------------------
+
+10131372_183 - 0.999828103356 - travel
+[trip]
+
+Practical Method for The Estimation of Trip Generation And Trip Chaining
+A model system of trip generation and trip chaining was developed by integrating concepts from activity-based analysis. The structure of the model system is recursive, depicting a sequential decision-making mechanism. The results were based on a data set from the Detroit metropolitan area. They were compared with those of a previous study that used a data set from the Netherlands. Differences were observed not only in the values of the regression parameters estimated but also in the decision mechanism inferred.
+-------------------------------------
+
+10138821_183 - 0.976207223053 - travel
+[bicycle, rail, trip, factor, transit, access, station]
+
+Bike-and-Ride: Build It and They Will Come
+Converting park-and-ride to bike-and-ride trips could yield important environmental, energy conservation, and public-health benefits.  While cycling in general is becoming increasingly popular in the United States, it still makes up a miniscule portion of access trips to most rail transit stations.  At several rail stations of the Bay Area Rapid Transit (BART) system, 10 percent or more of access trips are by bicycle, up considerably from a decade earlier.   This paper adopts a case-study approach to probe factors that have had a hand in not only cycling grabbing a larger market share of access trips to rail stops but also in the enlargement of bike access-sheds over time.   Both on-site factors, like increases the number of secure and protected bicycle parking racks, as well as off-site factors, like increases in the lineal miles of bike-paths and bike boulevards, appear to explain growing use of bicycles for accessing rail stations. The adage “build it and they will come”, we argue, holds for bicycle improvements every bit as much as other forms of urban transportation infrastructure.  Pro-active partnerships between transit agencies, local municipalities, and bicycle advocacy organizations are critical to ensuring such improvements are made. 
+-------------------------------------
+
+10129655_178 - 0.908515984082 - travel
+[health]
+
+The non-profit health maintenance organization (HMO) as developer : development options for an urban health center
+Bibliography: leaves 58-59.
+-------------------------------------
+
+10136631_183 - 0.708426622932 - travel
+[green, guide, a-to-z]
+
+Green Ethics and Philosophy: An A-to-Z Guide; and Green Issues and Debates: An A-to-Z Guide
+This is a book review and there is no abstract.
+-------------------------------------
+
+10131526_183 - 0.999539255738 - travel
+[trip, telecommuting, travel, reduction]
+
+An Evaluation of Telecommuting As a Trip Reduction Measure
+Telecommuting, which is performance of work at home or at a center close to home using telecommunications, has attracted growing interest among planners and researchers as a strategy for reducing travel demand. This paper investigates the potential of telecommuting as a trip reduction measure, using data obtained from a telecommuting pilot project involving State of California government employees.
+      In this pilot project, a three-day trip diary was administered, before and after telecommuting began, to telecommuters, a control group, and driving-age household members of both groups. A sample of 219 "stayers" is analyzed in this paper.
+      Findings include: telecommuting leads to a substantial reduction in trip generation, vehicle-miles traveled, peak period travel, car use, and freeway travel. It does not lead to an increase in non-work trips.
+-------------------------------------
+
+10133221_183 - 0.811371577418 - travel
+[land, catastrophic, lost, fabulous, lemuria, berkeley, ramaswamy, geographies, press, abstract]
+
+RAMASWAMY, SUMATHI, The Lost Land of Lemuria: Fabulous Geographies, Catastrophic Histories, Berkeley: UC Press. 2004. Pp. xvii, 334. $21.95
+No abstract
+-------------------------------------
+
+10131828_183 - 0.981256695938 - travel
+[road]
+
+Responding to Relative Decline: The Plank Road Boom of Antebellum New York
+From 1847 to 1853 New Yorkers built more than 3,500 miles of wooden roads.  Financed primarily by residents of declining rural townships, plank roads were  seen as a means of linking isolated areas to the canal and railroad network. A  broad range of individuals invested in the roads, suggesting that the drive for  bigger markets was supported by a large cross section of the population.  Considerable community spirit animated the movement, indicating that New  Yorkers used the social capital of the community  to reach their entrepreneurial  aspirations.
+-------------------------------------
+
+10140323_184 - 0.869165557136 - travel
+[map, indiana, brennan, destination, indianapolis]
+
+1940 W.A. Brennan Map of Indianapolis
+Destination Indiana 1
+-------------------------------------
+
+10132620_183 - 0.824700786283 - travel
+[transportation, model, travel, emission, act, policy]
+
+Uncertainty in Travel and Emissions Models: A Case Study in the Sacramento Region
+The failures of models used in the analysis of travel and vehicle emissions effects of transportation plans and policies have been enumerated by many in the transportation profession over a period of almost three decades. Models can be insensitive to policy effects, and predictions are typically inaccurate. Despite these shortcomings, travel and emission modeling continues to be widely employed in transportation and environmental policy analysis. Within the last decade, travel and emission modeling has been made necessary by the Clean Air Act Amendments of 1990 (CAAA), the Intermodal Surface Transportation Efficiency Act of 1991 (ISTEA), and its successor the Transportation Equity Act for the 21st Century (TEA-21). Moreover, the legislation and resulting regulation demand a high degree of accuracy and precision from these models.
+-------------------------------------
+
+101698_108 - 0.992049546663 - travel
+[tourism, industry, internet]
+
+ICTs & Internet Adoption in China’s Tourism Industry
+<p>The fast development of information communication technologies (ICTs) and the expansion of the Internet have changed industry structures around the world. New technologies have been adopted in the tourism industry in Europe and America for more than 30 years, and the trend is likely to continue into the future. China, as a fast-growing developing country in Asia, is gaining importance in the international tourism market for its historical and cultural attractiveness as a destination. It is also becoming a booming tourism source country as its population starts travelling overseas. This study examines how the ICT and Internet gradually change the tourism industry structure in China; how important such changes are, and to where such changes will lead China’s tourism industry. This exploratory research is conducted based on information collected from several tourism organisations, suchas airlines, hotels, tour operators, visitor attractions and the tourism authorities within China.</p>
+-------------------------------------
+
+10132679_183 - 0.999978997731 - travel
+[travel, urbanist, use, mode, non-work, transit, employment]
+
+The Road Less Traveled: Land Use and Non-Work Travel Relationships in Portland, Oregon
+New Urbanism seeks to exploit a relationship between urban form and travel behavior in order to develop communities which are simultaneously more egalitarian, more pleasant, and less costly to society as a whole. The focus of New Urbanist design practices is to create environments (both urban and suburban) which promote walking and transit over private automobile use as a mode of travel. Specifically, New Urbanists contend higher residential density, closer residential proximity to employment and shopping, grid street patterns and greater access to transit will lead to reductions in automobile travel. This dissertation tests those assertions and discusses the resulting policy implications. The work presented here concentrates on transportation mode choice for non-work travel, defined here as all travel not related to employment or employment related activities. Non-work travel is of particular interest because it comprises a majority of activities involving travel, yet modeling strategies for various policy goals (e.g., clean air, traffic congestion, transit development) ignore non-work travel, in favor of analyzing employment related commute behavior.
+      The working hypothesis is that land use patterns consistent with New Urbanist principles can alter a person’s willingness to substitute other travel modes (i.e., walking and/or transit) for automobile use by way of changing the amount of time needed to complete trips by these other modes. This willingness to substitute then impacts the number of trips by each mode of travel observed for individuals. The results described here suggest New Urbanist land use practices can work as their proponents suggest, even when one accounts for the interference of people self-selecting into residential environments which promote one form of travel over others. These findings are tempered by further analysis suggesting New Urbanist designs must have their various elements properly balanced, or none of the proposed benefits will come to pass. Also, it appears that in the context of analyzing distances traveled and number of trips made, New Urbanist practices simply provide a premium on travel that can be completed close to the home. The impact of these findings on theories and policies tied to travel behavior are discussed in the concluding section.
+-------------------------------------
+
+10140226_184 - 0.989804932399 - travel
+[indiana, journey, park, flood, destination, fort, baseball, wayne]
+
+Fort Wayne Baseball Park
+Destination Indiana - Flood of 1913 Journey
+-------------------------------------
+
+10131688_183 - 0.701665704866 - travel
+[trip, telecommuting, day, telecommuter, travel]
+
+Impact of Telecommuting on Spatial and Temporal Patterns of Household Travel
+A spatial and temporal analysis of travel diary data collected during the State of California Telecommuting Pilot project is performed to determine the impacts of telecommuting on household travel behavior. The analysis is based on geocoded trip data where missing trips and trip attributes have been augmented to the extent possible. The results confirm the earlier finding that the Pilot Project telecommuters substantially reduced travel; on telecommuting days, the telecommuters made virtually no commute trips, reduced peak-period trip making by 60%, vehicle miles traveled by 80%, and freeway use by 40%. The spatial analysis of the trip records has shown that the telecommuters chose non-work destinations that are closer to home; they exhibited contracted action spaces after the introduction of telecommuting. Importantly, this contraction took place on both telecommuting days and commuting days. The telecommuters distributed their trips over the day and avoided peak-period travel on telecommuting days. Non-work trips, however, show similar patterns of temporal distribution on telecommuting days and commuting days. Non-work trips continued to be made during the lunch period and late afternoon and evening hours. Telecommuter driving-age household members also exhibited contracted action spaces after the introduction of telecommuting. In addition, they did not show any significant increase in automobile use after telecommuting commenced.
+-------------------------------------
+
+101672_108 - 0.938379071402 - travel
+[vietnam, accommodation, sector, tourism, period]
+
+A periodization of the development of Vietnam's tourism accommodation since the open door policy
+<p>This paper proposes that the development of the tourism accommodation sector in Vietnam, since the inauguration of the open door policy within the reform programme of doi moi, can be divided into five periods. This periodisation is based on a study and analysis of the evolving roles of accommodation providers in Vietnam tourism and the shifting patterns of state-owned enterprises, foreign direct investment and private businesses / SMEs in this sector. Each period, and each transition between consecutive periods, is investigated in terms of the dynamics of interrelations between public, private and foreign operators, and the interaction of the accommodation sector with other political, social and economic factors in Vietnam during this era of transition. The paper concludes by identifying factors and trends that best characterise the evolution of Vietnam’s tourism accommodation sector over the last two decades.</p>
+-------------------------------------
+
+10131843_183 - 0.999733099496 - travel
+[trip, reduction, information, travel, geographic, program]
+
+Linking Geographic Information Systems and Trip Reduction: Success and Failure in a Pilot Application
+Travel demand management policies are the focus of a national debate on ways to limit the growth of local highway congestion and improve urban air quality (Bae, 1993; Orski, 1989). One innovative approach, trip reduction programs, requires changes in individual travel behavior, usually in journey to work trips. While precise local goals and requirements vary, major trip reduction programs focus on large employers who must persuade drive-alone employees to increase vehicle occupancy, limit miles traveled, and eliminate travel (Ferguson, 1990).
+      Geographic information systems (GIS) are an innovative technical method with the potential to assist trip reduction marketing, education, and travel analysis activities. Geographic information systems are best understood as a computer-based information technology with five related components: locational data, hardware, software, personnel, and operating procedures (Epstein, 1991). This paper provides a case study of implementation success and failure in a pilot GIS application for the Arizona State University trip reduction program.
+-------------------------------------
+
+101681_108 - 0.986592430715 - travel
+[forecasting, tourism, technique]
+
+New Forecasting Models
+<p>Tourism forecasting plays an important role in tourism planning and management. Various forecasting techniques have been developed and applied to the tourism context, amongst which econometric forecasting has been winning an increasing popularity in tourism research. This paper therefore aims to introduce the latest developments of econometric forecasting approaches and their applications to tourism demand analysis. Particular emphases are placed on the time varying parameter (TVP) forecasting technique and its application to the almost ideal demand system (AIDS). The discussions in this paper fall into two main parts, in line with the two broad categories of econometric forecasting approaches: the first part refers to the single-equation forecasting techniques, focusing particularly on both long-run and short-term TVP models. The second part introduces the system-of-equations forecasting models, represented by the AIDS and its dynamic versions including the combination with the TVP technique, will be discussed one by one following the order of methodological developments.</p>
+-------------------------------------
+
+101668_108 - 0.999085164664 - travel
+[tourism, etourism, industry, development, level, research, ict, greece, smte, travel]
+
+eTourism Developments in Greece: Information Communication Technologies adoption for the strategic management of the Greek tourism industry
+<p>Information Communication Technologies (ICTs) have revolutionised the travel industry in the last decade. eTourism reflects the digitalisation of all processes and value chains in the tourism, travel, hospitality and catering industries. It emerges as a term describing the entire range of applications of ICTs on tourism and the implications for the tourism value chain. Major opportunities and challenges have emerged and need to be addressed by all industry players. However, the level of eTourism developments varies between regions, countries and continents. The key objective of this research has been to examine the eTourism developments in Greece as a country that is gradually embracing eCommerce . In particular the research examines the level of ICT diffusion in Small and Medium–sized Tourism Enterprises (SMTEs) as well as whether the level of online presence is sufficient to cover for the lack of Destination Management System (DMS). Results indicate that the Greek online travel market is at the early stages of its eCommerce deployment but it demonstrates great potential for further eTourism developments. However, the low level of co-operation between SMTEs and the serious doubts about the ability of the National Tourism Organisation to co-ordinate the destination makes the prospect of a DMS development in Greece questionable. The research concludes that ICT-enabled local co-operation can potentially assist SMTEs to enhance their competitiveness and increase their global presence.</p>
+-------------------------------------
+
+10137399_183 - 0.719033055927 - travel
+[park, nature, manufacturing, national, review]
+
+Review:  Manufacturing National Park Nature
+Book Review:  Manufacturing national park nature : photography, ecology, and the wilderness  industry of Jasper
+-------------------------------------
+
+10133292_183 - 0.977145491482 - travel
+[road, impact, town, local, effect, traffic, israel, community, travel]
+
+Economic and Travel Impacts of Bypass Roads: A Comparative Study of Israel and the U.S.
+In this study we are documenting and comparing the economic and travel impacts of bypass roads in the United States and Israel on the towns near which they are constructed. Using historical research, on-site observations, interviews, surveys, and data analyses we consider the effects of bypasses on local and through traffic, travel patterns, development patterns, and the local urban economy in the immediately affected communities. We aim elucidate how road design, market forces, local politics, land use policies, planning and zoning and location-specific factors interact to produce the effects we observe. The incidence of costs and benefits upon various interest groups within the local community is a particular focus of the research.
+      In Israel, we are examining the impacts of a regional road affecting three towns. In the United States, we are examining the impact of two different regional roads, one in New Hampshire and the other in California, each road affecting two towns. For all the cases, the bypasses divert traffic from the centers of small communities that are along major corridors for through traffic. The bypasses have been built at different times and some towns have not been bypassed, allowing us to consider with/without effects as well as the effects of the bypasses over time. We will consider not only overall impacts of the roads but the spatial and socio-economic distribution of those impacts.
+-------------------------------------
+
+10138097_183 - 0.73984907594 - travel
+[active, park, crash, risk, travel, higher, neighborhood, rate, minority, pedestrian]
+
+Safe Routes to Play? Pedestrian and Bicyclist Crashes Near Parks in the Los Angeles Region
+Rationale: Areas near parks may present active travelers with higher risks than in other areas due to the confluence of more pedestrians and bicyclists, younger travelers, and the potential for increased numbers of motor vehicles. These risks may be amplified in low-income and minority neighborhoods due to generally higher rates of walking or lack of safety infrastructure. 
+      Objectives: We pursued three research objectives: (1) to determine if pedestrian and bicycle crashes occur at higher rates in park-adjacent neighborhoods compared to the rest of the study area; (2) to identify if demographic characteristics predict active crash risk after controlling for population and the rate of active trips; and (3) to assess if there is an amplified effect of park proximity for active crash risk in low-income and minority neighborhoods after controlling for population and the rate of active trips. 
+      Methods: With negative binomial regression modeling techniques, we used ten years of geolocated pedestrian and bicyclist crash data and a quarter mile (~400 meter) buffer around public parks to assess the risk of active travel near parks. We controlled for differential exposures to active travel risks using travel survey data. 
+      Measurements: Quarter-mile network buffers were designated around parks from the Green Visions Plan for 21st Century California in 2249 census tracts. Crashes came from the 90,846 pedestrian and bicyclist injuries and fatalities from the Statewide Integrated Traffic Reporting System, and active travel was predicted using travel data from 9135 households that participated in the Southern California Association of Governments 2001 Travel and Congestion Survey. These data were combined with demographic and income data from the U.S. Census and traffic density predictions. 
+      Results: The ratio of active crashes per 100,000 population within the quarter-mile park buffer to those outside is 1.52. The increased risk of crash for active travelers near parks remained after adjusting for varying rates of active travel in different census tracts. Minority and low-income residents of the study area are more likely to walk or bicycle than White and higher-income residents. This higher risk near parks is amplified in neighborhoods with high proportions of minority and low-income people. Higher traffic levels are highly predictive of active crashes.
+      Conclusions: Active travelers accessing parks may lack a safe route to places for play. The socioeconomic modification of active crashes near parks found in this study is supported by existing research showing disparities in park access and higher active travel risks in low-income and minority neighborhoods.
+-------------------------------------
+
+10132160_183 - 0.786418140844 - travel
+[highway, economic]
+
+Highways and Economic Productivity: Interpreting Recent Evidence
+This paper reviews the recent literature on public infrastructure and economic productivity, with special attention to the particular case of highway infrastructure. Recent evidence suggests that, at the margin, highway infrastructure contributes little to state or national productivity. This is consistent with studies that show relatively small land use impacts from modern highways. Yet the idea that highways enhance economic health is common in the policy and planning communities. Two explanations can help reconcile this divergence between academic research and popular perception. First, some of the economic development observed near highways might not actually be caused by the highway. Second, some of the economic development near highways might be a shift of economic activity away from other areas. Either explanation suggests the need for reforms in highway project analysis and funding. Appropriate policy reforms and directions for future research are suggested.
+-------------------------------------
+
+101677_108 - 0.997441248329 - travel
+[critical, tourism, research]
+
+Tourism: A Critical Business
+<p>A research and practice gap is identified demonstrating tourism to be an insufficiently critical business. Initially the idea of critical tourism is addressed in two ways. First an array of meanings is exposed from which the idea of critical theory is developed. Next discussion turns to how critical approaches can contribute to good management and governance of tourism by providing understandings that technical rationality can overlook. Finally the limited extent of critical tourism research is established. The article concludes that tourism should be a critical business and offers pointers for such an agenda. For although positivist research informed by technical rationality is crucial to the better operational management of tourism, critical research is essential for setting an agenda for ethical management, governance and co-existence with the wider world. Indeed it is critical to deep, long term sustainability and even the survival of tourism.</p>
+-------------------------------------
+
+10132274_183 - 0.913248727301 - travel
+[transportation, loss, damage, business, firm, earthquake, response]
+
+Business Losses, Transportation Damage and the Northridge Earthquake
+The January 17, 1994 Northridge Earthquake damaged four major freeways in the Los Angeles area, creating the prospect of gridlock in the nation's prototypical automobile city.  This paper examines the effect of the transportation damage on business activity. Using survey responses from 559 firms in the Los Angeles area, this paper gives information on the extent and magnitude of the business losses that can be attributed to the transportation disruptions.  Despite the fact that the freeway damage was repaired exceptionally quickly, 43% of the firms that reported any earthquake loss stated that some portion of that loss was due to transportation damage.  For the firms that attributed some loss to transportation damage, the average response was that 39% of their earthquake-related business losses were due to the disruptions in the transportation system. Comparing information on these and other survey responses yields several policy recommendations, which are summarized at the end of the paper.
+-------------------------------------
+
+10136092_183 - 0.919850968841 - travel
+[rocket, photoignition, mwcnt, solid, study]
+
+Experimental Study on the Aerospace Applications of Photoreactive Nanomaterials
+This study was concerned with the aerospace applications of the photoignition of carbon nanotubes. First, experiments investigating the volumetric photoignition characteristics of single walled (SWCNTs) and multi walled (MWCNTs) carbon nanotubes were conducted. Photoignition of various SWCNTs, MWCNTs, and ammonium perchlorate/SWCNT mixtures was investigated. The minimum ignition energy (MIE) was measured as a function of bulk temperature using a custom made flash thermal energy sensor. Moreover, design and experiments were carried out to demonstrate individually photoignitable "rocket cells" using mixtures of MWCNTs and solid oxidizers. A number of these rocket cells were assembled and ignited in various arrangements and sequences to demonstrate volumetric photoignition of solid rocket fuel. A proof of concept demonstration of a re-ignitable, controllable, and thrust vectorable solid rocket motor using photoignitable MWCNTs as the ignition source was also constructed and tested. Finally, future work was suggested based on the current state of knowledge and on the results of this study.
+-------------------------------------
+
+101709_108 - 0.998447529024 - travel
+[mountain, responsible, cmh, tourism, marketing]
+
+Best Practices In Responsible Marketing Of Tourism: The Case Of Canadian Mountain Holidays
+<p>Heli-tourism represents one of the great dilemmas and conflicts between recreational enjoyment of the wilderness and the conservation of the fragile alpine and mountain areas where the activity takes place. The question of responsibility towards the environment is one, which tourism operators generally seem reluctant to accept but one operator that appears to have taken a proactive approach to environmental issues in mountain regions is heli-operator Canadian Mountain Holidays (CMH). This paper expands on the limited amount of research that exists on the complex relationship between tourism and the environment by applying a responsible marketing model to CMH. This model is grounded on previous literature in marketing, and strategic and environmental management. Interviews with key stakeholders, observational research, and content analysis of communication materials, were used to identify how near CMH is to finding a balance between responsible action and the communication of these activities.</p>
+-------------------------------------
+
+10133166_183 - 0.948974080358 - travel
+[neighborhood, travel, behavior, preference, resident, level, relationship]
+
+Correlation or causality between the built environment and travel behavior? Evidence from Northern California
+The sprawling patterns of land development common to metropolitan areas of the US have been blamed for high levels of automobile travel, and thus for air quality problems. In response, smart growth programs— designed to counter sprawl—have gained popularity in the US. Studies show that, all else equal, residents of neighborhoods with higher levels of density, land-use mix, transit accessibility, and pedestrian friendliness drive less than residents of neighborhoods with lower levels of these characteristics. These studies have shed little light, however, on the underlying direction of causality—in particular, whether neighborhood design influences travel behavior or whether travel preferences influence the choice of neighborhood. The evidence thus leaves a key question largely unanswered: if cities use land use policies to bring residents closer to destinations and provide viable alternatives to driving, will people drive less and thereby reduce emissions? Here a quasi-longitudinal design is used to investigate the relationship between neighborhood characteristics and travel behavior while taking into account the role of travel preferences and neighborhood preferences in explaining this relationship. A multivariate analysis of crosssectional data shows that differences in travel behavior between suburban and traditional neighborhoods are largely explained by attitudes. However, a quasi-longitudinal analysis of changes in travel behavior and changes in the built environment shows significant associations, even when attitudes have been accounted for, providing support for a causal relationship.
+-------------------------------------
+
+10132963_183 - 0.998650072586 - travel
+[travel, demand, professional, forecast, bias, misuse, future]
+
+The Ethical Challenges and Professional Responses of Travel Demand Forecasters
+Thirty years ago scholars first presented convincing evidence that local officials use biased travel demand forecasts to justify decisions based on unstated considerations. Since then, a number of researchers have demonstrated convincingly that such forecasts are systematically optimistic -- often wildly so -- for reasons that cannot be explained solely by the inherent difficulty of predicting the future. Why do modelers -- professional engineers and planners who use quantitative techniques to predict future demand for travel and estimate its potential impact on built and proposed transportation facilities -- generate biased forecasts and otherwise tolerate the misuse of their work? On initial consideration, it is tempting to surmise that corrupt modelers are responsible for biased forecasting. Indeed, corruption is the most common explanation of forecasting bias and tales of mercenary behavior are all too common in the field. Data from in-depth interviews with twenty-nine travel demand forecasters throughout the United States and Canada, however, suggest new and different ways to understand the suspect behavior of transportation planning professionals.  Those most likely to introduce bias and invite misuse of travel forecasts assume that their technical analyses have little, if any, impact on policy making. For many, this leads to disillusionment and requires responses to cope with feelings of marginalization. Others, untroubled by their apparent lack of influence, are complacent and need ways to avoid the ethical questions of practice. Both types of practictioners circumscribe professional roles and rely on the self-deceptive strategies of evasion and excuse making to mute their own disquieting realities that undermine positive concepts of self. This disillusion wish not to see that they do not matter and the complacent that they do. Bias and misuse seem to be the unintentional byproducts of these attitudes.  Beyond enhancing the understanding of the systemic failures of travel demand modeling, this research suggests practicable steps to reform and outlines an agenda for future work. Attention to these matters is important, not just to avoid expenditures on projects and programs that cannot be justified on the basis of sound utilitarian calculations, but also to restore and preserve the credibility of a profession.
+-------------------------------------
+
+10132722_183 - 0.999949009755 - travel
+[travel, transit, people, vision, blind, various, impaired, behavior]
+
+Investigating travel behavior of nondriving blind and vision impaired people: The role of public transit
+Our purpose is to explore the travel behavior of blind or vision impaired people, focusing in particular on travel by bus. We differentiate the sample depending on the availability of a household car. We examine perceptions of and attitudes toward existing transit and various transit characteristics, highlighting features that seem to be frustrating or difficult. Finally, we have travelers evaluate the potential usefulness of various assistive devices, including electronic information that gives navigational assistance.
+-------------------------------------
+
+101686_108 - 0.999366956443 - travel
+[tourism, product, strategic, greece, competitiveness, analysis]
+
+Tourism in Greece: Strategic analysis and challenges
+<p>This paper provides a strategic analysis of the competitiveness of Greek tourism. It illustrates the importance of tourism as an economic activity and analyses the current situation and structural problems of Greece as a destination. Although Greece offers unique nature, culture and heritage, the lack of differentiation of the tourism product as well as competitive disadvantages in marketing and planning cause an over-dependence on intermediaries for the promotion and distribution of the tourism product whilst jeopardising its quality. This affects the profitability and competitiveness of both the destination and its small and medium-sized tourism enterprises. The paper proposes a grand strategy as well as numerous strategic directions, objectives and tasks aiming to demonstrate the way ahead for Greek tourism. Several major opportunities emerge through the Olympic Games in 2004 as well as the major projects currently being undertaken which will enhance the infrastructure of the country. It is argued that a consistent tourism policy based on professional development and implemented through a Master Plan is urgently required. Strategies and methodologies need to be identified, whilst private enterprises need to increase their cooperation locally in order to enhance the quality and competitiveness of the product.</p>
+-------------------------------------
+
+101710_108 - 0.724285093543 - travel
+[crisis, communication, tourism, response, disaster, outbreak, due, industry, level, foot]
+
+Crisis Communication and Recovery for the Tourism Industry: Lessons from the 2001 Foot and Mouth Disease Outbreak in the UK
+<p>As the number of disasters and crises affecting the tourism industry increases, it is becoming necessary to understand the nature of these disasters and how to manage and limit the impacts of such incidents. This paper defines crises and disasters before discussing the area of crisis communication management and crisis communication in the tourism industry. The paper then applies the foot and mouth disease (FMD) which occurred in the United Kingdom to crisis communication theory at a national level (by examining the response of the British Tourist Authority) and at a local level (by examining the response of a District Council). The response was limited in part because of a lack of preparedness, but also due to the nature of the foot and mouth outbreak, and the speed and severity of international media coverage. Action was taken in the emergency phase of the crisis and was reactive involving inconsistency in developing key messages to stakeholders, partly due to confusion and a lack of information at the national level. Recovery marketing was also limited due to the length of time of the disease outbreak. This paper provides lessons for destinations and organisations are discussed which may help develop crisis communication strategies for tourism organisations.</p>
+-------------------------------------
+
+101665_108 - 0.99998833391 - travel
+[tourism, smte, tour]
+
+The perception of small and medium sized tourism accommodation providers on the impacts of the tour operators' power in Eastern Mediterranean
+<p>This paper examines the relationship between small and medium sized tourism accommodation enterprises and European tour operators. Leisure ''packaged'' mass tourism and the Mediterranean basin are the main product and geographical contexts of reference. However, the potential applicability of the outcomes to other similar tourism products and areas is not excluded. Focusing primarily on SMTEs the study draws extensively from secondary research, while it also employs the outcomes of personal interviews of SMTEs' owners/managers on the Greek island of Corfu. The paper portrays the current status of the co-operation between SMTEs and TOs by illustrating the advantages and the problems faced by SMTEs' owners/managers when dealing with TOs. Finally, the study concludes by proposing actions and policies that could be incorporated in SMTEs' strategies in order to strengthen their negotiating position with large tour operating consortiums and ameliorate their evident over-reliance on tourism intermediaries.</p>
+-------------------------------------
+
+101674_108 - 0.916319967263 - travel
+[tourism, curriculum]
+
+The philosophic practitioner
+<p>This paper develops principles for the ordering of the curriculum for tourism higher education. The framework proposed comprises four key domains of vocational action, vocational reflection, liberal reflection and liberal action. The framework enables the problems of curricula that are over-focused in one part of curriculum space to be surfaced. It also enables the case to be made, and the content outlined, for a tourism higher education which educates philosophic practitioners. These would be graduates who deliver efficient and effective tourism services whilst at the same discharging the role of stewardship for the development of the wider tourism world in which these services are delivered.</p>
+-------------------------------------
+
+10131756_183 - 0.774339710181 - travel
+[accessibility, regional, local, travel, shopping]
+
+Regional Versus Local Accessibility: Implications for Nonwork Travel
+The question of how alternative forms of development affect travel patterns has recently been the focus of a heated debate, much of which centers on the effects of suburbanization in particular. The concept of accessibility provides an important tool for resolving this question. By measuring both the accessibility to activity within the community, or "local" accessibility, and the accessibility to regional centers of activity from that community, or "regional" accessibility, the structure of a community is more fully characterized. The research summarized uses the concepts of local and regional accessibility to test the implications for shopping travel of alternative forms of development in a case study of the San Francisco Bay Area. The results show that higher levels of both local and regional accessibility are associated with lower average shopping distances but are not associated with differences in shopping frequency. As a result, higher levels of both local and regional accessibility are associated with less total shopping travel. However, the effect of high levels of local accessibility is greatest when regional accessibility is low and vice versa. These findings suggest that policies should be directed toward enhancing both types of accessibility, but that the effects may work against each other to some degree.
+-------------------------------------
+
+10132420_183 - 0.982855756579 - travel
+[travel, use, design, pattern, urban, land]
+
+Does Neighborhood Design Influence Travel?: Behavioral Analysis of Travel Diary and GIS Data
+Can urban design improve the environment?  If communities could be designed to reduce automobile use, then yes.  But can urban design influence travel?  Surprisingly perhaps, the effects of any specific neighborhood feature on travel behavior at the margin are all but unknown.  The policy significance of this issue is reflected in the swelling popularity of the “new urbanism” and other planning strategies employing land use tools to mitigate the environmental impacts of metropolitan development.  In addition to asserting that development patterns and densities affect how far, how often, and by what means people travel, urban designers frequently argue that the legibility and shape of the local street pattern play a key role.  “Connected” residential blocks are thus associated with less driving by comparison with the circuitous routes of the modern suburban cul-de-sac — chiefly by reducing trip lengths and facilitating pedestrian and transit access.  Remarkably, there is little empirical and theoretical support for these claims.  This paper provides the first direct tests of these hypotheses within a consistent behavioral framework.  An analysis of household travel diary and GIS data for San Diego finds little role for land use in explaining travel behavior, and no evidence that the street network pattern affects either short or long non-work travel decisions.  While results may vary in other areas, the empirical argument for using land use as an element of regional air quality or other environmental plans remains to be demonstrated.
+-------------------------------------
+
+10131528_183 - 0.988797477273 - travel
+[telecommuting, state, travel]
+
+Telecommuting and Travel: State of the Practice, State of the Art
+This paper provides an overview of the status of telecommuting in the United States, especially as it relates to changes in travel behavior. Regarding the state of the practice, the paper discusses some refinements to the definition of telecommuting that have developed through increased operational experience. It reports several policy statements involving telecommuting, and explores the appeal of telecommuting as a public policy instrument. It highlights some trends in the implementation of home-based and work center-based telecommuting, and suggests that visible public-sector involvement has been crucial to the increased activity in this area.
+      In sketching the state of the art, the paper outlines some frequently-stated hypothesis on telecommuting and travel behavior, and summarizes current empirical findings relating to those hypotheses. Finally, it suggests a variety of topics suitable for further research. These include studying factors influencing the ultimate adoption levels of telecommuting; impacts of energy/air quality, mode choice, and location/urban form; interactions with other transportation demand management strategies; relationships to the traditional urban travel demand forecasting process; cost/benefit tradeoffs; and telecommuting centers.
+-------------------------------------
+
+10140877_184 - 0.734253418708 - travel
+[hotel, prince]
+
+Claypool Hotel
+The Prince and his party occupied 11 rooms at the Claypool Hotel, facing Washington St. While the prince was out seeing the city, other members of his party spent time on the small balconies of the hotel watching activities on the streets. And in turn, people on the streets looked at them. The hotel made their kitchen available to the prince’s chef and discovered his highness was especially fond of bird’s nest soup, bringing those ingredients and other delicacies along with him.
+-------------------------------------
+
+10132976_183 - 0.982961617194 - travel
+[future, utility, vehicle, travel, market, hydrogen, fuel, cell]
+
+Prospecting the Future for Hydrogen Fuel Cell Vehicle Markets
+As there are currently no retail markets for either hydrogen as a transportation fuel or fuel cell vehicles, any discussion of such markets necessarily prospects the future. To do so, we must evoke an image of the future. Such a task is inherently uncertain – many forecasts have been wrong even for mature markets, much less markets as tenuously incipient as those for hydrogen and fuel cell vehicles (FCVs). We undertake this risky enterprise by framing the discussion of future markets for hydrogen and FCVs around these two questions.
+      1.What is the history and future of mobility?
+      2.Within this future, why would anyone buy a hydrogen fuel cell vehicle?
+      We address the uncertainty of predicting the future by grounding our answers in a theory of the development of modern societies and the related long-term development of the infrastructures modern societies build to support themselves. The infrastructures we address are automobility, energy and information. This theory and history describe a trajectory from which we argue modern societies are unlikely to deviate, except in the case of catastrophic events or fundamental shifts in values. Given this, it seems plausible to us that the further into the future we go, the more likely it is that the future we describe will come to pass.
+      Building on insights previously expressed by others (e.g., Jones, 1978; Reichman, 1976; Hupkes, 1982), we have begun a multi-faceted study of the positive utility of travel, that challenges the notion of travel as purely a derived demand. Early papers in this series (Salomon and Mokhtarian, 1998; Mokhtarian and Salomon, 2001) focused on the conceptual basis for such a positive utility. Three components to the utility of travel were identified: (1) the conventional component – the utility of arriving at a desired destination; (2) the utility of activities that can be conducted while traveling (listening to music, talking to a companion, thinking or relaxing, potentially talking on a mobile phone, working on a laptop, or reading); and (3) the utility intrinsic to travel itself. The third component of utility involves psychological needs or motivations such as the enjoyment of movement itself (including, but not exclusively, the enjoyment of speed), curiosity or information-seeking, variety-seeking, a need for escape, a need for independence or desire for freedom, the satisfaction of skillfully handling a vehicle, and the "display" of travel or a vehicle as a status symbol. While even most transportation professionals would readily acknowledge the role of these motivations in the demand for leisure or discretionary travel, we contend that those same motivations are at work to some extent in the demand for daily mandatory and maintenance travel – and that it is important to inquire further into the question of "to what extent".
+-------------------------------------
+
+10131990_183 - 0.99999018856 - travel
+[travel, people, choice, information]
+
+Contribution of GIS to ATIS
+Transportation planning has been turning away from the solutions of building highways and transit routes to changing people's travel choices and making more efficient use of existing facilities. With the recent research focus on Advanced Traveler Information Systems (ATIS), it is imperative to understand the travel behavior of people and the information required to change their travel choices.
+-------------------------------------
+
+10131379_183 - 0.903124182648 - travel
+[turnpike, road, public-goods, problem]
+
+The Voluntary Provision of Public Goods? The Turnpike Companies of Early America
+The heroic role of the agent called "government" in the simple public-goods model is clear enough, but the relevance of the model is still in dispute. A long history of doubters have challenged the premises that the government has the needed information, acts efficiently, and acts in the public interest. Also, doubters have contended that the free-rider problem of many public goods is not as ineluctable as others often seem to suggest. Historical studies have shown the potency of voluntary association in such fields as lighthouse provision Coase 1974, education Ellig & High 1988, bee pollination Cheung, 1973, law and order Anderson & Hill, 1979; Benson, forthcoming, neighborhood infrastructure Beito, forthcoming, agricultural research Majewski, 1989, among others see Cowen, 1988; Wooldridgge, 1970.
+      To help weigh the relevance of the simple public-goods model I discuss the American experience of private turnpike roads. Extreme publicness marked the turnpikes, both in jointness of consumption and in nonexcludability. The excludability problem was partly the result of legal restrictions on toll collection. These restrictions caused in part turnpike unprofitability, which was discovered quickly. The turnpikes afforded enormous indirect and external benefits, however, to the nearby farms, landholdings, and businesses. Since unprofitability was usually foreseen, stock subscription -- necessary to construct the road -- was essentially a means of paying for road benefits. There were two excludability problems: people could use the road without paying a toll, and people could indirectly benefit from the road without buying stock. Though related, the latter is the crux of the public-goods problem at hand. The turnpike companies got started in the 1790s and were in sharp decline in the 1830s, though many turnpikes were operating at the turn of our century. I treat turnpikes in New England, New York, Pennsylvania, New Jersey, and Maryland (the last four I call the "Middle Atlantic states"). Except in Pennsylvania, the turnpikes were almost entirely financed by private subscription to stock, while those in most other states were mixed enterprises. Various facets of toll-road history are being explored by a co-researcher and myself, but here the discussion is confined to the public-goods aspect of the turnpikes.
+-------------------------------------
+
+101653_108 - 0.99999885044 - travel
+[travel, agent, influence, brochure, agency, mystery]
+
+Distribution Channels in the Travel Industry: Using Mystery Shoppers to Understand the Influence of Travel Agency Recommendations
+<p>The objectives of this study were to understand the factors that influence travel agency recommendations in the U.K. The objectives were achieved using a mixture of focus groups, interviews and Mystery Shoppers. Exploration into the process of choosing a holiday showed that the brochure plays an important role for many consumers. However, for the travel agent the brochure is low priority, and even when the brochure is used, the travel agent often has a considerable amount of influence. Whether or not the agency is vertically integrated has considerable influence on the recommendation process. Based on analysis of the interviews and focus groups, a model was developed, and tested using Mystery Shoppers. Results from investigating 156 travel agents across the U.K. indicate that many travel agents owned by large tour operators, will attempt to push the holidays of their parent company rather than give impartial advise to consumers. Theoretical and practical implications are discussed.</p>
+-------------------------------------
+
+10131699_183 - 0.968048181227 - travel
+[road, toll]
+
+From Trunk to Branch: Toll Roads in New York, 1800-1860
+The years 1800-1830 are sometimes designated "the turnpike era," since in the 1830s canals and railroads began eclipsing the old wagon roads. Its true that long distance travel went by water and rail, but the journey often began on one of the many short toll roads feeding the system. This paper documents the changing composition of the New York toll road system as a whole, and provides some firm-level data. Toll roads continued to play an important role up to the Civil War and afterwards.
+-------------------------------------
+
+10133218_183 - 0.999970173428 - travel
+[travel, accessibility, retail]
+
+Balanced Growth, Travel Demand, and Physical Activity
+All smart growth initiatives involve some degree of mixed land uses. Which mixed-use strategies – e.g., jobs-housing balance, adding retail to residential districts -- offer the greatest traffic-reducing benefits? This paper addresses this question by examining the degree to which job accessibility is associated with reduced work travel and how closely retail-service accessibility is correlated with miles and hours logged getting to shopping destinations. Based on data from the San Francisco Bay Area, we find that jobs-housing balance offers the greatest travel reduction benefits, by a substantial margin. Retail accessibility does significantly increase non-motorized travel, which is important given America’s mounting obesity problem. The paper concludes with a discussion of policy measures introduced in California to bring housing, workplaces, and retail centers closer together.
+-------------------------------------
+
+10132814_183 - 0.999983895139 - travel
+[road, travel, pricing, highway, preference, heterogeneity]
+
+Uncovering the Distribution of Motorists' Preferences for Travel Time and Reliability: Implications for Road Pricing
+Recent econometric advances have made it possible to empirically identify the varied nature of consumers' preferences. We apply these advances to study commuters' preferences for speedy and reliable highway travel with the objective of exploring efficiency and distributional effects of road pricing that accounts for users' heterogeneity. Our analysis combines revealed and stated commuter choices of whether to pay a toll for congestion-free express travel or to travel free on regular congested roads. We find that highway users exhibit substantial heterogeneity in their values of travel time and reliability. Moreover, we show that road pricing policies that cater to varying preferences can substantially increase efficiency while maintaining the political feasibility exhibited by current experiments. By recognizing heterogeneity, policymakers may break the current impasse in efforts to relieve highway congestion.
+-------------------------------------
+
+10131388_183 - 0.861640904416 - travel
+[time, variable, travel, car, model, ownership]
+
+The Dynamics of Household Travel Time Expenditures and Car Ownership Decisions
+A dynamic (panel data) structural equations model is developed that links four dependent travel behavior variables at two points in time, one year apart. The four dependent variables are: car ownership, travel time per week by car, travel time by public transit, and travel time by nonmotorized modes. Exogenous variables include 13 household characteristics and variables accounting for period effects over the 1985 to 1987 time frame in the Netherlands. The model treats car ownership as ordered-response probit variables and all travel times as censored (tobit) continuous variables. The model accounts for serially-correlated errors and panel conditioning biases. Results are interpreted in terms of recommendations for forecasting procedures.
+-------------------------------------
+
+10132153_183 - 0.999971445763 - travel
+[activity, travel]
+
+Travel and Activity Participation as Influenced by Car Availability and Use
+The objective of the research described in this paper is to determine how the use of specific modes of travel affects the relationships between out-of-home activity duration and the travel required for such activities.  We proceed by constructing a model that interrelates classes of out-of-home activities and the travel required to participate in these activities, all as a function of population sociodemographic characteristics and the modes of travel used by the population.
+-------------------------------------
+
+10140128_183 - 0.985345273198 - travel
+[park, visitor, neighborhood, number, characteristic, activity, use]
+
+Associations of neighborhood characteristics with active park use: an observational study in two cities in the USA and Belgium
+Abstract
+				
+				
+					
+						Background
+					Public parks can be an important setting for physical activity promotion, but to increase park use and the activity levels of park users, the crucial attributes related to active park use need to be defined. Not only user characteristics and structural park attributes, but also characteristics of the surrounding neighborhood are important to examine. Furthermore, internationally comparable studies are needed, to find out if similar intervention strategies might be effective worldwide. The main aim of this study was to examine whether the overall number of park visitors and their activity levels depend on study site, neighborhood walkability and neighborhood income.
+				
+				
+					
+						Methods
+					Data were collected in 20 parks in Ghent, Belgium and San Diego, USA. Two trained observers systematically coded park characteristics using the Environmental Assessment of Public Recreation Spaces (EAPRS) tool, and park user characteristics using the System for Observing Play and recreation in Communities (SOPARC) tool. Multilevel multiple regression models were conducted in MLwiN 2.25.
+				
+				
+					
+						Results
+					In San Diego parks, activity levels of park visitors and number of vigorously active visitors were higher than in Ghent, while the number of visitors walking and the overall number of park visitors were lower. Neighborhood walkability was positively associated with the overall number of visitors, the number of visitors walking, number of sedentary visitors and mean activity levels of visitors. Neighborhood income was positively associated with the overall number of visitors, but negatively with the number of visitors being vigorously active.
+				
+				
+					
+						Conclusions
+					Neighborhood characteristics are important to explain park use. Neighborhood walkability-related attributes should be taken into account when promoting the use of existing parks or creating new parks. Because no strong differences were found between parks in high- and low-income neighborhoods, it seems that promoting park use might be a promising strategy to increase physical activity in low-income populations, known to be at higher risk for overweight and obesity.
+-------------------------------------
+
+10132639_183 - 0.999992819157 - travel
+[travel, communication]
+
+Consumer E-Commerce, Virtual Accessibility and Sustainable Transport
+The growth of the Internet has rekindled interest in the relationship between communications and travel. New communication technologies have expanded the range, the type, and the number of transactions that can take place without travel. A number of promotions capture the new tradeoffs between communications and travel: initially, the Internet was referred to as "the information superhighway" and Microsoft ran an ad campaign dubbed "where do you want to go today?" The connection between travel and bytes has been summed up as "The Death of Distance" (Cairncross, 1997).
+-------------------------------------
+
+10134172_183 - 0.730626050591 - travel
+[safety, road, transportation, system, traffic, sweden, land, design, professional, health]
+
+Road Safety in the Context of Urban Development in Sweden and California
+Road safety is a serious public health issue throughout the world, with more than one million people killed in traffic accidents each year. Despite the severity of its health impacts, the World Health Organization says that traffic safety is a "neglected" topic. Perhaps this is the case in the US, where traffic accidents are the leading cause of death for people up to age 34, and where the traffic safety record is one of the worst among high-income countries. Other high income countries such as Sweden have much better road safety performance.
+      Differences in road safety between countries could be explained by the quality of infrastructure, driving conditions, the culture of driving, or the power of enforcement. Each of these elements is shaped by institutional contexts such as design, planning, and policy making processes. Moreover, research about other technical systems has shown the powerful effect of organization, norms, and communication on safety. This led me to ask: How do our cultural and professional interpretations of safety influence the way we plan, design, and manage streets? Based on field studies, statistical analysis of crash and injury data, and interviews with practitioners, I found that professionals in California and Sweden share similar ideas about road safety, such as the roles of driver behavior, the road environment, and the vehicle in producing hazards. Professionals in both cases also face similar conflicts in road safety planning, such as whether to provide greater mobility for cars, or to reduce the speed of traffic to prevent injury. These similarities reflect shared professional and disciplinary backgrounds and sources of information, as well as similarities in the issues that municipalities and regions face. The main differences are in the interaction between road safety ideas and larger institutional contexts such as suburban land development. For instance, in the middle of the 20th century, Sweden created a multi-modal transportation system that accommodated cars as well as transit, pedestrians, and bicyclists—even in the suburbs. A combination of architects, city planners, and transportation engineers supported this development. Multi-disciplinary policy communities in Sweden found traction for their safety-oriented designs in the relatively integrated transportation and land use planning system. In the US, such integration was not the norm, and efforts to use design and land use controls to create a safe transportation system often meet resistance from the established institutions of the car-oriented road transportation system. Improving road safety in California and the US requires addressing not only the dominance of automobiles, but also recognizing that sectors outside of, but related to transportation, such as housing, public health, and land use planning, need to be key participants in creating a safe road transportation system.
+-------------------------------------
+
+10130843_183 - 0.961674804981 - travel
+[volcano]
+
+The Pyramid and the Volcano: Carlos Fuentes' Cambio de piel and Malcolm Lowry's Under the Volcano
+No abstract
+-------------------------------------
+
+10132311_183 - 0.87587335244 - travel
+[demand, local, travel, management, government, incentive, pricing, scenario, measure]
+
+Incentives for Local Governments to Implement Travel Demand Management Measures
+Regulatory agencies in the energy field have successfully used incentives to encourage electric and gas utilities to implement conservation measures. We develop a method for allocating federal and state funds to reward local governments that adopt effective travel demand management measures and reduce the need for expenditures on expanded roadway capacity. This method is applied to Sacramento using the region's travel demand models to forecast, for twenty and fifty year time horizons, the effects of two travel demand management scenarios: a congestion pricing scenario and a comprehensive scenario that includes congestion pricing, parking pricing, and a fuel tax. Estimates of the capital, operation, and maintenance costs were obtained from local data and are used in the financial analysis of cost savings. We found that in the Sacramento region travel demand management implementation could defer roadway projects for a minimum of 7 yr and a maximum of 24 yr, resulting in a total savings to federal and state agencies of least $100 million and at most $223 million in 1992 $, which could be used to make annual payments of at least $16 million or at most $31 million a year to local governments. Issues surrounding the technical and political feasibility of funding incentives to local governments are addressed and further research is suggested.
+-------------------------------------
+
+10132873_183 - 0.998487836121 - travel
+[travel, telecommunications, relationship, model, causal, equation, structural, aggregate, mobile, variable]
+
+Aggregate Relationships between Telecommunications and Travel: Structural Equation Modeling of Time Series Data
+The purpose of this study is to explore the aggregate relationships (substitution, complementarity, or neutrality) between telecommunications and travel and to compare such relationships across transportation modes. This study first presents a conceptual model, considering causal relationships among travel, telecommunications, land use, economic activity, and socio-demographics. Then, based on the conceptual model, the aggregate relationships between telecommunications (local telephone calls, toll calls, and mobile phone subscribers) and travel (VMT, transit passengers, and airline PMT) are explored in a comprehensive framework, using structural equation modeling of national time series data spanning 1950-2000 in the U.S. At the most detailed level, individual and joint structural equation models for telecommunications and ground travel or airline travel were developed, using selected subsets of the endogenous variables, and then the causal relationships between the two were compared by mode. The model results suggest that most significant causal relationships between telecommunications and travel are complementary. That is, as telecommunications demand increases, travel demand increases, and vice versa. The only exceptions are the two causal relationships between transit passengers and mobile phone subscribers, which are substitutive. Furthermore, there are a number of neutral (zero net) effects of telecommunications on travel or vice versa. Overall, causal effects between telecommunications and travel are different among their modes. However, most of them are complementary regardless of the causal direction. At a less detailed level, composite indices for eight endogenous variable categories were constructed by combining the variables of a given category into a single composite indicator for that category through confirmatory factor analysis. Then, structural equation models for travel and wired (telephone calls) or mobile (mobile phone subscribers) telecommunications were estimated, using the composite indices and sociodemographic variables. The estimated models also support that the aggregate relationship between actual amounts of telecommunications and travel is complementarity, albeit asymmetric in directional weight. That is, as travel demand increases, telecommunications demand increases, and (to a lesser extent) vice versa. Consequently, the empirical results from both levels of structural equation modeling strongly suggest that the aggregate relationship (or system-wide net effect) between actual amounts of travel and telecommunications is complementarity, not substitution.
+-------------------------------------
+
+10135711_183 - 0.999931262233 - travel
+[travel, behavior, research]
+
+Zen in the Art of Travel Behavior: Using Visual Ethnography to Understand the Transit Experience
+Much transportation research has sought to understand the factor's influencing people's decisions to travel via one mode or another. Bodies of literature, overwhelmingly quantitative, exist about mode choice and the demographics of travel behavior. Most of this research has focused on the who, what, when and why aspects of travel. Little research has sought to explain how people travel, particularly the experiential aspects of travel. This project seeks to fill this gap in the transportation literature by examining travel behavior and decision-making using firsthand visual accounts of transit users in Los Angeles.
+-------------------------------------
+
+10132320_183 - 0.99631828167 - travel
+[activity, travel, model, household, link, head, participation]
+
+A Model of Activity Participation Between Household Heads
+A structural model is used to explain activity interactions between heads of households and, in so doing, to explain household demand for travel. The model attempts to capture links between activity participation and associated derived travel, links between activities performed by male and female heads, links between types of travel, and time-budget feedbacks from travel to activity participation. Data for pairs of opposite gender heads of households are o=from the 1994 Portland Activity and Travel Survey. The results suggest that a feedback mechanism should be introduced in trip generation models to reflect the effect of activity frequency and duration on the level of associated travel.
+-------------------------------------
+
+10131963_183 - 0.754634229663 - travel
+[travel, tcm, datum, model]
+
+Critique of Metropolitan Planning Organizations' Capabilities for Modeling Transportation Control Measures in California
+For each class of transportation control measures (TCMs), the relevant travel behaviors expected to change are identified and techniques for simulating these changes are listed. Then, the latest round of analysis of TCMs in each of the four largest urban regions in California is studied carefully to see whether the relevant behaviors were modeled in a credible fashion, on the basis of local data. In modeling TCMs that change travel time and costs or expand transit options, models were found to lack automobile ownership steps and accessibility variables in some steps. Intersection capacity and delay should be entered into the road networks, and the networks need to be more detailed. In addition, more cost data are needed. Household income should be retained in final trip tables to allow for equity evaluations of changes in travel patterns. In simulating policies that change land uses, walk and bicycle modes should be explicit, and better land use data are needed. For analysis of clean vehicle incentive programs, vehicle types should be linked to trip purposes. Most agencies did a poor job evaluating TCMs; in some cases, they did not even use their travel demand models but instead used spreadsheets with generalized default values. Many improvements are being made to these models, and practice will be improved.
+-------------------------------------
+
+101680_108 - 0.997788195984 - travel
+[policy-maker, tourism, value, national, policy-making, key, fragmented, policy-oriented, interest, learning]
+
+National Policy-Makers for Tourism in China
+<p>This paper reports on a study of the key players and institutional processes involved in national policy-making for China’s tourism sector since 1978. Using the concepts of ‘policy-oriented learning’ with ‘coordination’, it explores how the policy-makers have developed and implemented policy during a period of change in ideologies, organizational values and interests. In doing so it reveals how the fragmented nature of tourism and the fragmented power structure have meant that policy-making has been conducted by a variety of policy-makers, with a diversity of values and interests. It also shows how policy-oriented learning has allowed the policy-makers to succeed in a number of key areas, often with support from the state leaders.</p>
+-------------------------------------
+
+10133034_183 - 0.999943177055 - travel
+[travel, utility, demand]
+
+Wanting to Travel, More or Less: Exploring the Determinants of the Deficit and Surfeit of Personal Travel
+Do people actually want to travel? Not according to the conventional wisdom of the transportation profession, which holds that travel is purely a disutility to be minimized. The fundamental demand (as the common thinking goes) is to participate in various activities that happen to be spatially diverse, and travel is only tolerated as a necessary "evil" means for achieving the desired end. Although many in the profession realize that this assumption is a simplification of reality, many others accept it almost as an article of faith. Even those who understand it to be only an approximation generally believe it to be an adequate one, and until recently there has been little effort to empirically test this belief.
+      Building on insights previously expressed by others (e.g., Jones, 1978; Reichman, 1976; Hupkes, 1982), we have begun a multi-faceted study of the positive utility of travel, that challenges the notion of travel as purely a derived demand. Early papers in this series (Salomon and Mokhtarian, 1998; Mokhtarian and Salomon, 2001) focused on the conceptual basis for such a positive utility. Three components to the utility of travel were identified: (1) the conventional component – the utility of arriving at a desired destination; (2) the utility of activities that can be conducted while traveling (listening to music, talking to a companion, thinking or relaxing, potentially talking on a mobile phone, working on a laptop, or reading); and (3) the utility intrinsic to travel itself. The third component of utility involves psychological needs or motivations such as the enjoyment of movement itself (including, but not exclusively, the enjoyment of speed), curiosity or information-seeking, variety-seeking, a need for escape, a need for independence or desire for freedom, the satisfaction of skillfully handling a vehicle, and the "display" of travel or a vehicle as a status symbol. While even most transportation professionals would readily acknowledge the role of these motivations in the demand for leisure or discretionary travel, we contend that those same motivations are at work to some extent in the demand for daily mandatory and maintenance travel – and that it is important to inquire further into the question of "to what extent".
+-------------------------------------
+
+101671_108 - 0.999211610193 - travel
+[tourism, development, dual, governance, policy, tobago]
+
+The Politics of Tourism Development, a case of dual governance in Tobago
+<p>The purpose of this paper is to report on an exploratory study of the role that tourism policy plays in influencing tourism development. The research is based on two questions, how does tourism policy influence tourism development in the small twin island state of Trinidad and Tobago; and how does an arrangement of dual governance in a small twin-island state promote tourism development?  The exploration demonstrates that tourism development in the context of Tobago, the smaller of the two islands, has been slowed as a result of dual governance and hence dual policy arrangement.</p>
+-------------------------------------
+
+10131531_183 - 0.998991718416 - travel
+[telecommuting, travel, finding, emission, lower, reduction, impact]
+
+The Effectiveness of Telecommuting as a Transportation Control Measure
+This paper examines the potential of telecommuting as a strategy for managing travel demand. In particular, the paper focuses on the travel and air quality implications of telecommuting. A study of travel impacts has been carried out using data obtained from the State of California Telecommuting Pilot Project. This paper presents preliminary findings from the first known empirical study of the emission impacts of telecommuting.
+      Previously-reported travel-related findings include significant reductions in work trips, peak-period travel and distance traveled due to telecommuting while no increase was found in non-work trips. New emission-related findings include substantial reductions in the number of cold starts (60% fewer), and emissions of organic gases (64% lower), carbon monoxide (63% lower), and oxides of nitrogen (73% lower) on telecommuting days. These reductions are nearly proportional to the decrease in distance traveled by auto (76%). Work is ongoing to refine and extend the analysis of emission impacts.
+-------------------------------------
+
+10131287_183 - 0.811714062704 - travel
+[freight, transportation, california, concern, public]
+
+A Freight Network Model For Mode and Route Choice
+As California has become increasingly congested, the importance of addressing freight transportation as a public concern has grown. Most visible in our urban areas is the competition for road capacity between trucks and personal vehicles, especially during commute hours, and the public health and safety concerns associated with the transport of hazardous materials. These issues, along with California's role as a principal transhipment point for trade between the U.S. and the other Pacific Rim nations, combine to create a freight transportation problem of immense proportions, one which is aggravated by the difficulty of implementing new infrastructure improvements.
+-------------------------------------
+
+
+101667_108 1
+10131693_183 1
+101676_108 1
+101658_108 1
+10131675_183 1
+10132014_183 1
+10132557_183 1
+10131540_183 1
+10131382_183 1
+10137973_183 1
+101707_108 1
+10134765_183 1
+10137811_183 1
+10132470_183 1
+10138819_183 1
+10132606_183 1
+10132457_183 1
+10137858_183 1
+10132829_183 1
+10132651_183 1
+10131830_183 1
+10132194_183 1
+10131527_183 1
+10132340_183 1
+10133064_183 1
+10140204_184 1
+10133125_183 1
+10132002_183 1
+10131709_183 1
+10132141_183 1
+10132191_183 1
+10132167_183 1
+10132150_183 1
+10137481_183 1
+10136453_183 1
+10132170_183 1
+10132771_183 1
+10175380_189 1
+101678_108 1
+10132783_183 1
+10131841_183 1
+10132481_183 1
+10138034_183 1
+101696_108 1
+101657_108 1
+10132468_183 1
+10131630_183 1
+10133373_183 1
+101700_108 1
+101693_108 1
+10140272_184 1
+10132709_183 1
+10140202_184 1
+10131478_183 1
+10131496_183 1
+10131538_183 1
+10137748_183 1
+10131926_183 1
+10129687_178 1
+10133192_183 1
+10132291_183 1
+10140266_184 1
+10140281_184 1
+10131372_183 1
+10138821_183 1
+10129655_178 1
+10136631_183 1
+10131526_183 1
+10133221_183 1
+10131828_183 1
+10140323_184 1
+10132620_183 1
+101698_108 1
+10132679_183 1
+10140226_184 1
+10131688_183 1
+101672_108 1
+10131843_183 1
+101681_108 1
+101668_108 1
+10137399_183 1
+10133292_183 1
+10138097_183 1
+10132160_183 1
+101677_108 1
+10132274_183 1
+10136092_183 1
+101709_108 1
+10133166_183 1
+10132963_183 1
+10132722_183 1
+101686_108 1
+101710_108 1
+101665_108 1
+101674_108 1
+10131756_183 1
+10132420_183 1
+10131528_183 1
+10140877_184 1
+10132976_183 1
+10131990_183 1
+10131379_183 1
+101653_108 1
+10131699_183 1
+10133218_183 1
+10132814_183 1
+10131388_183 1
+10132153_183 1
+10140128_183 1
+10132639_183 1
+10134172_183 1
+10130843_183 1
+10132311_183 1
+10132873_183 1
+10135711_183 1
+10132320_183 1
+10131963_183 1
+101680_108 1
+10133034_183 1
+101671_108 1
+10131531_183 1
+10131287_183 1
 

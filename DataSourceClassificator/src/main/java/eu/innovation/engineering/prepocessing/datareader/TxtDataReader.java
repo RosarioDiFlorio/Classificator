@@ -28,11 +28,17 @@ public class TxtDataReader implements DataReader {
 
   public static void main(String[] args) throws Exception{
     TxtDataReader reader = new TxtDataReader("trainingAndTestTogether.txt", PathConfigurator.trainingAndTestFolder);
-    for(int i = 0; i< Configurator.Categories.values().length;i++){
-      reader.checkCategory(Configurator.Categories.values()[i].name(),false);
-    }
+
+    String pathFile1 = PathConfigurator.trainingAndTestFolder+"trainingAndTestTogether.txt";
+    String pathFile2 = PathConfigurator.trainingAndTestFolder+"trainingDatasetFromCsvResult.txt";
+    int limitSource = 70;
+    reader.mergeTxtDataset(pathFile1, pathFile2, limitSource);
   }
 
+  public TxtDataReader(){
+    
+  }
+  
   public TxtDataReader(String filename, String path) {
     this.fileToRead = path + filename;
   }
@@ -57,6 +63,38 @@ public class TxtDataReader implements DataReader {
     return idPapers;
   }
 
+  public void mergeTxtDataset(String pathFile1, String pathFile2,int limitSource) throws IOException{
+    fileToRead = pathFile1;
+    Map<String, HashMap<String, String>> mapFile1 = categoriesWithIds();
+
+    fileToRead = pathFile2;
+    Map<String, HashMap<String, String>> mapFile2 = categoriesWithIds();
+    PrintWriter p = new PrintWriter(new File(PathConfigurator.trainingAndTestFolder+"trainingDatasetMerged.txt"));
+    for(String cf1: mapFile1.keySet()){
+      p.println(cf1);
+      Set<String> ids2 = new HashSet<>();
+      Set<String> ids1 = new HashSet<>(mapFile1.get(cf1).keySet());
+      if(mapFile2.keySet().contains(cf1)) {
+        ids2 = new HashSet<>(mapFile2.get(cf1).keySet());
+      }
+      ids1.addAll(ids2);
+      
+      int countSource = 0;
+      for(String id: ids1){       
+        if (countSource>= limitSource) {
+          break;
+        }
+        countSource++;
+        p.println(id+" 1");
+      }
+      
+      p.println();
+      p.flush();
+    }
+    p.close();
+  }
+
+
   public void checkCategory(String category,boolean withTexts) throws Exception{
     KeywordExtractor kex = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
     SolrClient solr = new SolrClient();
@@ -70,17 +108,13 @@ public class TxtDataReader implements DataReader {
       p.println(src.getId()+" - "+category);
       p.println(src.getTitle());
       p.println(kex.extractKeywordsFromText(src.getTexts(), 10).stream().map(k->k.getText()).collect(Collectors.toList())+"\n");
-      
+
       if(withTexts)
         src.getTexts().stream().forEach(p::println);
       p.println("--------------------------------------\n");
       p.flush();
     }
     p.close();
-
-
-
-
   }
 
   /**
