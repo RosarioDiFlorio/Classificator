@@ -1,0 +1,4 @@
+numero documenti per dizionari 245
+numero documenti per il training 245
+numero documenti per il test 10000
+k per clustering 245

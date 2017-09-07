@@ -1,0 +1,18 @@
+Zika could one day help combat deadly brain cancer
+Zika’s damaging neurological effects might someday be enlisted for good — to treat brain cancer.
+
+In human cells and in mice, the virus infected and killed the stem cells that become a glioblastoma, an aggressive brain tumor, but left healthy brain cells alone. Jeremy Rich, a regenerative medicine scientist at the University of California, San Diego, and colleagues report the findings online September 5 in the Journal of Experimental Medicine.
+
+Previous studies had shown that Zika kills stem cells that generate nerve cells in developing brains (SN: 4/2/16, p. 26). Because of similarities between those neural precursor cells and stem cells that turn into glioblastomas, Rich’s team suspected the virus might also target the cells that cause the notoriously deadly type of cancer. In the United States, about 12,000 people are expected to be diagnosed with glioblastoma in 2017. (It’s the type of cancer U.S. Senator John McCain was found to have in July.) Even with treatment, most patients live only about a year after diagnosis, and tumors frequently recur.
+
+In cultures of human cells, Zika infected glioblastoma stem cells and halted their growth, Rich and colleagues report. The virus also infected full-blown glioblastoma cells but at a lower rate, and didn’t infect normal brain tissues. Zika-infected mice with glioblastoma either saw their tumors shrink or their tumor growth slow compared with uninfected mice. The virus-infected mice lived longer, too. In one trial, almost half of the mice survived more than six weeks after being infected with Zika, while all of the uninfected mice died within two weeks of receiving a placebo.
+
+Using a virus to knock out cancer isn’t a completely new idea. Treatments that rely on modified polioviruses to target tumors such as glioblastomas are already in clinical trials in the United States, and there’s a modified herpesvirus approved by the U.S. Food and Drug Administration for treating melanoma.
+
+These cancer-fighting viruses seem to work in two ways, says Andrew Zloza, an oncologist at the Rutgers Cancer Institute of New Jersey in New Brunswick. First, the viruses infect and kill cancer cells. Then, as those cancer cells split open, previously hidden tumor fragments become visible to the immune system, which can recognize and fight them.
+
+“Right now we don’t know what kind of viruses are best” for fighting cancer, Zloza says — whether it’s more effective to use a common virus that many people have been exposed to or something more unusual. But now, Zika is yet another candidate.
+
+Further testing is needed to determine whether the virus is safe and effective in humans. Since Zika’s effects are more harmful in developing brains, a Zika-based cancer therapy might be safe only in adults. And the virus would need to be genetically modified to make it safer and less transmissible.
+
+Rich and colleagues are now testing in mice whether combining Zika with traditional cancer treatments such as chemotherapy is more effective than either treatment by itself. Because Zika targets the cells that generate tumor cells, it might prevent tumors from recurring.

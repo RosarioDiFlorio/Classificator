@@ -1,0 +1,180 @@
+source list save to data/datasets/TrainingAndTest/TestGeneric.json
+art1.txt
+This Number Will Text You a Work of Art Based on What You Want to See
+
+[museum, artwork, collection, art]
+---------------------------
+
+art2.txt
+San Francisco's MOMA texts modern art to suit your mood
+
+[text, francisco, mood, sfmoma, san, art, modern, museum]
+---------------------------
+
+art3.txt
+Cult British teen drama shocks the Americans
+
+[british, drama, teen]
+---------------------------
+
+bus1.txt
+Toward a neo-Schumpeterian theory of the firm
+
+[theory, distinction]
+---------------------------
+
+bus2.txt
+How to Properly Invoice Your Customer: A Guide
+
+[invoice, business]
+---------------------------
+
+bus3.txt
+How to Start a Trucking Company: A Guide
+
+[company, liability, business, llc]
+---------------------------
+
+fin1.txt
+Information, Finance, and Markets: The Architercute of Allocative Mechanisms 1
+
+[financial, role]
+---------------------------
+
+fin2.txt
+Comparative analysis of firm demographics and survival: evidence from micro-level sources in OECD countries
+
+[firm, country]
+---------------------------
+
+fin3.txt
+Where do transactions come from? Modularity, transactions, and the boundaries of firms
+
+[transaction, boundary, network, task, module, transfer, firm, system, location, cost]
+---------------------------
+
+food1.txt
+Food and drink
+
+[food, ginger]
+---------------------------
+
+food2.txt
+Wedding Gift Spaghetti Sauce
+
+[ground, mixture, heat, beef-sausage, tomato, minute, simmer, onion]
+---------------------------
+
+food3.txt
+Bird's Nest Breakfast Cups
+
+[degree, cup, oven, nest, brown, potato, cheese, mixture, muffin, egg]
+---------------------------
+
+med1.txt
+Zika could one day help combat deadly brain cancer
+
+[brain, zika, cancer]
+---------------------------
+
+med2.txt
+Viscosupplementation for Osteoarthritis of the Knee
+
+[knee, osteoarthritis, viscosupplementation, injection, hyaluronate]
+---------------------------
+
+med3.txt
+Single-Pill Combination Regimens for Treatment of HIV-1 Infection
+
+[regimen, infection, hiv-1, combination, adherence, single-pill]
+---------------------------
+
+rel1.txt
+Woman And Religion
+
+[religion, text, woman]
+---------------------------
+
+rel2.txt
+Withches and Magic
+
+[withch, magic]
+---------------------------
+
+rel3.txt
+The Mystical Pentagram
+
+[pentagram, technique, mystical, personal]
+---------------------------
+
+sci1.txt
+Substance in coffee delays onset of diabetes in laboratory mice
+
+[laboratory, substance, mouse, diabetes, coffee]
+---------------------------
+
+sci2.txt
+Building a morphogen gradient by simple diffusion in a growing plant leaf
+
+[gradient, an3, morphogen, institute, diffusion, leaf]
+---------------------------
+
+sci3.txt
+Research shows how DNA molecules cross nanopores
+
+[research]
+---------------------------
+
+soc1.txt
+Rotherham abuse scandal: no charges against senior council figures	
+
+[abuse, senior, council, charge, rotherham, figure]
+---------------------------
+
+soc2.txt
+OnPolitics Today: Trump makes a good deal. For Democrats, at least.
+
+[trump, democrats, own]
+---------------------------
+
+soc3.txt
+The Story Behind the Famous Little Rock Nine ‘Scream Image’
+
+[story, famous, girl, photo, face, young, image]
+---------------------------
+
+tech1.txt
+GOING GREEN: THE DESIGN AND OPERATION OF A SPRAWLING ENERGY-EFFICIENT DATA CENTER
+
+[datum, center]
+---------------------------
+
+tech2.txt
+Virtual Musical Instruments
+
+[reality, virtual]
+---------------------------
+
+tech3.txt
+ENERGY-INTERFERENCE-FREE DEBUGGER: DEBUGGING GREEN ENERGY
+
+[energy]
+---------------------------
+
+trav1.txt
+10 of the best places to see Britain’s Autumn colours
+
+[britain, autumn]
+---------------------------
+
+trav2.txt
+Rail adventure in North Wales – full steam ahead
+
+[wales, north, steam]
+---------------------------
+
+trav3.txt
+Hotel Review: The Ginger Pig, Brighton & Hove, England, UK
+
+[ginger, room, pig, hotel]
+---------------------------

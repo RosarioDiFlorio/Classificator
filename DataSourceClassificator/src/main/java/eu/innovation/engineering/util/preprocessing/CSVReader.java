@@ -87,7 +87,7 @@ public class CSVReader {
     
     File folder = new File(pathFolder);
     File[] listOfFiles = folder.listFiles();
-
+    String debug ="";
         for (int i = 0; i < listOfFiles.length; i++) {
           if (listOfFiles[i].isFile()) {
             System.out.println(listOfFiles[i].getName());
@@ -108,12 +108,18 @@ public class CSVReader {
               s.setId(txtFile);
               s.setKeywordList((ArrayList<Keyword>) kex.extractKeywordsFromText(texts, 10));
               listSource.add(s);
+              debug+=s.getId()+"\n";
+              debug+= s.getTitle()+"\n\n";
+              debug+=s.getKeywordList().stream().map(k->k.getText()).collect(Collectors.toList()).toString()+"\n";
+              debug +="---------------------------\n\n";
+              
             }catch (Exception e) {
               e.printStackTrace();
             }           
           }
         }
      DatasetBuilder.save(listSource, PathConfigurator.trainingAndTestFolder+"TestGeneric.json");
+     System.out.println(debug);
     
   }
   

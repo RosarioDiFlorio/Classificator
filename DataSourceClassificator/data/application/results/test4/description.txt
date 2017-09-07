@@ -1,0 +1,8 @@
+numero documenti per dizionari 571
+numero documenti per il training 571
+numero documenti per il test 10000
+k per clustering 500
+
+
+Notes
+Non è presente nessuno dei 10000 documenti di test all'interno del dataset di training.

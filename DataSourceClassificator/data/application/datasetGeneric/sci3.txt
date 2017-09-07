@@ -1,0 +1,24 @@
+Research shows how DNA molecules cross nanopores
+Research presented in a new paper co-authored by Northwestern University associate professor of mechanical engineering Sandip Ghosal sheds new light on how polymers cross tiny pores ten thousand times smaller than a human hair.
+
+These findings could propel a deeper understanding of the biophysics of living cells, the measurement of polymer properties in diverse chemical industries such as plastics manufacturing and food processing, and the design of biosensors.
+
+In the paper published Aug. 30 in Nature Communications, Ghosal and his co-authors present data showing how the speed of DNA changes as it enters or exits a nanopore. Surprisingly, the experiment showed that DNA molecules move faster as they enter a nanopore (forward translocation) and slower when they exit (backward translocation).
+
+What's happening with the DNA, Ghosal explains, is something familiar to mechanical engineers: a concept called "buckling," studied by great scientific minds like Leonhard Euler and Daniel Bernoulli more than two centuries ago, but rarely studied at the molecular level.
+
+Ghosal and his collaborators concluded that DNA molecules buckle under the influence of compressive forces when entering the nanopore, but are pulled straight by tensile forces when moving in the opposite direction. The resulting difference in the geometric configuration results in greater hydrodynamic drag on the molecule in the latter case.
+
+The study was motivated by a desire to understand, in detail, the mechanics of a DNA molecule's passage through a nanopore, a subject of rich scientific curiosity and conjecture.
+
+"We wanted to know what is happening to the DNA and why," says Ghosal, who also holds a courtesy appointment in the Department of Engineering Sciences and Applied Mathematics.
+
+Rather than simply determining the DNA's average speed of translocation, Ghosal's U.K.-based collaborators -- Ulrich F. Keyser, Maria Ricci, Kaikai Chen from the University of Cambridge, and Nicholas A.W. Bell, now of the University of Oxford -designed an innovative experiment to reveal the actual variation of the DNA's speed by inserting markers along the DNA molecule. This "DNA ruler" allowed the researchers to measure the speed of translocation at each instant. To then collect large amounts of data within a relatively short time period, the researchers repeatedly flipped the voltage across the pore, sending the DNA in and out of the nanopore in a "ping-pong" mode.
+
+The group's work builds on the "resistive pulse" technique introduced nearly 20 years ago for detecting and characterizing single molecules. That idea has since been applied to a variety of research, including the search for an ultra-fast method of DNA sequencing and the effort to rapidly measure the mechanical properties of cells.
+
+Ghosal describes his team's work as a potential "first step in extending the resistive pulse method to determining the mechanical characteristics of polymers."
+
+Though Ghosal admits the work itself is purely curiosity-driven research designed to probe what more can be done with the resistive pulse technique, the findings could nevertheless have real-world applications in any area where the measurement of polymer properties is important.
+
+"Each polymer has a characteristic load at which it will buckle and, therefore, the difference between the forward and backward translocation times provide a way of gauging the bending rigidity of polymers," Ghosal said. "It is incredibly exciting that we can now observe this," Ghosal says.
