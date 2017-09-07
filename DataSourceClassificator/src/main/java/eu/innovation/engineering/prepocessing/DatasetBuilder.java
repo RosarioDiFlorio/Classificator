@@ -20,7 +20,6 @@ import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 import eu.innovation.engineering.prepocessing.datareader.TxtDataReader;
-import eu.innovation.engineering.prepocessing.interfaces.DataReader;
 import eu.innovation.engineering.util.preprocessing.Paper;
 import eu.innovation.engineering.util.preprocessing.SolrClient;
 import eu.innovation.engineering.util.preprocessing.Source;
@@ -41,7 +40,7 @@ public  class DatasetBuilder {
   private KeywordExtractor keywordExtractor;
   private SolrClient solrClient;
   private ObjectMapper mapper;
-  private DataReader dataReader;
+  private TxtDataReader dataReader;
   private String fileName;
 
   public DatasetBuilder(){
@@ -140,7 +139,7 @@ public  class DatasetBuilder {
   }
 
   public List<Source> addCategories(List<Source> list) throws IOException{
-    Map<String, HashMap<String, String>> categoryPapers = dataReader.categoriesWithIds();
+    Map<String, HashMap<String, String>> categoryPapers = dataReader.categoriesWithIds(dataReader.getFileToRead());
 
     for(Source paper :list){
       ArrayList<CategoriesResult> categoriesForCurrentPaper = new ArrayList<>();

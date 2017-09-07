@@ -22,6 +22,7 @@ import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 import eu.innovation.engineering.prepocessing.DatasetBuilder;
+import eu.innovation.engineering.prepocessing.datareader.TxtDataReader;
 
 public class CSVReader {
   private static final int numKey = 10;
@@ -29,8 +30,28 @@ public class CSVReader {
   
   public static void main(String[] args) throws Exception{
     createGenericDataset(PathConfigurator.applicationFileFolder+"datasetGeneric/");
+    
+   
+    
+    
+    
 //    mainSingleTest(args);
     //mainToCreateTrainingDataset(args);
+  }
+  
+  public void mainToCreateDataset() throws FileNotFoundException{
+    float uThreshold = (float) 1.0;
+    float lThreshold = (float) 0.7;
+    int limitSource = 70;
+    String fileCsv = PathConfigurator.applicationFileFolder+"results.csv";
+    String pathWhereSave = PathConfigurator.trainingAndTestFolder+"trainingDatasetFromCsvResult.txt";
+    String oldDataset = PathConfigurator.trainingAndTestFolder+"trainingDatasetMerged.txt";
+    createTrainingSetFromCsvResults(fileCsv, lThreshold, uThreshold, limitSource,pathWhereSave);
+    TxtDataReader txtReader = new TxtDataReader();
+
+    
+    
+    
   }
 
   public static void mainSingleTest(String[] args) throws Exception{
@@ -183,7 +204,7 @@ public class CSVReader {
   }
 
 
-  public static void createTrainingSetFromCsvResults(String csvFile, float lowThreshold,float upperThreshold,int limitSource) throws FileNotFoundException{
+  public static void createTrainingSetFromCsvResults(String csvFile, float lowThreshold,float upperThreshold,int limitSource,String PathWhereSave) throws FileNotFoundException{
 
     Map<String, List<String>> dataMap = read(csvFile);
     
@@ -213,7 +234,7 @@ public class CSVReader {
     }
 
 
-    PrintWriter p = new PrintWriter(new File(PathConfigurator.trainingAndTestFolder+"trainingDatasetFromCsvResult.txt"));
+    PrintWriter p = new PrintWriter(new File(PathWhereSave));
 
     for(String category: categoryMap.keySet()){
       int countSource = 0;

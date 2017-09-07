@@ -31,8 +31,9 @@ public class TxtDataReader implements DataReader {
 
     String pathFile1 = PathConfigurator.trainingAndTestFolder+"trainingAndTestTogether.txt";
     String pathFile2 = PathConfigurator.trainingAndTestFolder+"trainingDatasetFromCsvResult.txt";
+    String pathWhereSave = PathConfigurator.trainingAndTestFolder+"trainingDatasetMerged.txt";
     int limitSource = 70;
-    reader.mergeTxtDataset(pathFile1, pathFile2, limitSource);
+    reader.mergeTxtDataset(pathFile1, pathFile2, limitSource, pathWhereSave);
   }
 
   public TxtDataReader(){
@@ -63,17 +64,18 @@ public class TxtDataReader implements DataReader {
     return idPapers;
   }
 
-  public void mergeTxtDataset(String pathFile1, String pathFile2,int limitSource) throws IOException{
-    fileToRead = pathFile1;
-    Map<String, HashMap<String, String>> mapFile1 = categoriesWithIds();
+  public void mergeTxtDataset(String pathFile1, String pathFile2,int limitSource, String pathWhereSave) throws IOException{
 
-    fileToRead = pathFile2;
-    Map<String, HashMap<String, String>> mapFile2 = categoriesWithIds();
-    PrintWriter p = new PrintWriter(new File(PathConfigurator.trainingAndTestFolder+"trainingDatasetMerged.txt"));
+    Map<String, HashMap<String, String>> mapFile1 = categoriesWithIds(pathFile1);
+
+
+    Map<String, HashMap<String, String>> mapFile2 = categoriesWithIds(pathFile2);
+    PrintWriter p = new PrintWriter(new File(pathWhereSave));
     for(String cf1: mapFile1.keySet()){
       p.println(cf1);
       Set<String> ids2 = new HashSet<>();
       Set<String> ids1 = new HashSet<>(mapFile1.get(cf1).keySet());
+      
       if(mapFile2.keySet().contains(cf1)) {
         ids2 = new HashSet<>(mapFile2.get(cf1).keySet());
       }
@@ -100,7 +102,7 @@ public class TxtDataReader implements DataReader {
     SolrClient solr = new SolrClient();
 
     List<String> ids = new ArrayList<>();
-    ids.addAll(categoriesWithIds().get("/"+category.replace("_", " ")).keySet());
+    ids.addAll(categoriesWithIds(fileToRead).get("/"+category.replace("_", " ")).keySet());
     List<Source> sources = solr.getSourcesFromSolr(ids, Paper.class);      
 
     PrintWriter p = new PrintWriter(new File(PathConfigurator.applicationTestFolder+category+"ToCheck.txt"));
@@ -122,9 +124,9 @@ public class TxtDataReader implements DataReader {
    * and as value an HashMap with key ids of the document and as value the relevance
    */
   @Override
-  public Map<String, HashMap<String, String>> categoriesWithIds() throws IOException {
+  public Map<String, HashMap<String, String>> categoriesWithIds(String pathFile) throws IOException {
 
-    FileReader reader = new FileReader(fileToRead);
+    FileReader reader = new FileReader(pathFile);
 
     BufferedReader bufferedReader = new BufferedReader(reader);
     String line = bufferedReader.readLine();
