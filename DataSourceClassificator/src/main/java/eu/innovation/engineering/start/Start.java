@@ -43,7 +43,7 @@ public class Start {
       CSVBuilder.buildCSV(jsonPathDictionariesAndTrain, dictionaries, true);
 
     //Test
-    CSVBuilder.buildCSV(PathConfigurator.trainingAndTestFolder+"dataSourcesWithoutCategory_10000_10000.json", dictionaries, false);
+    CSVBuilder.buildCSV(PathConfigurator.trainingAndTestFolder+"TestGeneric.json", dictionaries, false);
 
 
   }

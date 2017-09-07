@@ -1,0 +1,3561 @@
+[ {
+  "id" : "EPA/0000940",
+  "title" : "Gamma-azolyl alcohols and their use as plant growth regulators",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "growth"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "plant"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA/0010459",
+  "title" : "Device and process for producing elements of agglomerated powder; elements obtained thereby",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "element"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "agglomerated"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "powder"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "unit"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000006",
+  "title" : "Process for nitrification of waste water.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "waste"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "nitrification"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "water"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "oxygen"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000036",
+  "title" : "Fluorinated alkylamines and process for preparing same.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "alkylamine"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "3-methylene"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "corresponding"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000039",
+  "title" : "A data transmission process and system to permit substantial reduction of interference between a received first and second digital signal.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "substantial"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "system"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "process"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "second"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000052",
+  "title" : "Chlorination or chlorosulfonation of polyethylene in mixed solvent.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 6.0,
+    "sentiment" : null,
+    "text" : "phase"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "polyethylene"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "solvent"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "liquid"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000071",
+  "title" : "Stabilised thymidine phosphorylase preparation and culture medium containing it.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "thymidine"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "phosphorylase"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "preparation"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "addition"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000079",
+  "title" : "Scanning radiographic apparatus and method.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "x-ray"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "image"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "tube"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "probe"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000085",
+  "title" : "Process for the production and separation of hydrogen iodide and sulphuric acid and their respective uses in the production of hydrogen and oxygen.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 8.0,
+    "sentiment" : null,
+    "text" : "hydrogen"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "reaction"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "oxygen"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "iodide"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000096",
+  "title" : "Method for the manufacture of amino-formaldehyde resins.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "method"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "amino-formaldehyde"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "resin"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000106",
+  "title" : "2-Alkyl nicotinoids and processes for their production and use.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 6.0,
+    "sentiment" : null,
+    "text" : "alkyl"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "lower"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "formulum"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000120",
+  "title" : "Beads of expandable polystyrene with stabilized cell structure and process for making them.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "cell"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "bead"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "expandable"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "polystyrene"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000132",
+  "title" : "Halogen-substituted esters of phosphorous acid, polymeric compositions containing them as reactive flame retardants.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "retardant"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "atom"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "reactive"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "composition"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000151",
+  "title" : "1-Substituted aminoindolines, process for their production and pharmaceutical compositions containing them.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "agent"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "significance"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "formulum"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "useful"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000152",
+  "title" : "Oxaminic acids and esters, process for their preparation and pharmaceutical compositions containing them.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "atom"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "carbon"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "compound"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "derivative"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000162",
+  "title" : "Method for preparing aralkyl and alkyl phenol ethers.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "method"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "aralkyl"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "ether"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "phenol"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000177",
+  "title" : "Continuous casting method and apparatus.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 6.0,
+    "sentiment" : null,
+    "text" : "rotary"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 6.0,
+    "sentiment" : null,
+    "text" : "member"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "annular"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "groove"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000200",
+  "title" : "New N-amidino-3,5-diamino-6-substituted-2-pyrazinecarboxamides and process for preparing same.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "process"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "n-amidino-3"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000205",
+  "title" : "Heat pump apparatus and method for increasing the heat content of a fluid and thereafter transferring the heat content to an ambient atmosphere.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 10.0,
+    "sentiment" : null,
+    "text" : "heat"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 9.0,
+    "sentiment" : null,
+    "text" : "body"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 8.0,
+    "sentiment" : null,
+    "text" : "fluid"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 7.0,
+    "sentiment" : null,
+    "text" : "region"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000211",
+  "title" : "Tracked vehicles.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "vehicle"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "track"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000212",
+  "title" : "Rotary shear pin coupling.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 7.0,
+    "sentiment" : null,
+    "text" : "coupling"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 6.0,
+    "sentiment" : null,
+    "text" : "pin"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 6.0,
+    "sentiment" : null,
+    "text" : "shear"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "member"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000219",
+  "title" : "Macrocyclic polyether complexes and a process for the isolation of macrocyclic polyethers.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "macrocyclic"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "polyether"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000230",
+  "title" : "Process for the biological purification of waste water.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "biological"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "n-compound"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "water"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "purification"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000237",
+  "title" : "Apparatus for the infusion of a labour-inducing drug into the bloodstream of a patient during childbirth.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "value"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "rate"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "dose"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "average"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000238",
+  "title" : "A method of converting a sulphur-containing fuel to a substantially sulphur-free combustible gas.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "gas"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "combustible"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "amount"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "sulfur"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000242",
+  "title" : "Process and apparatus for continuously stretching a synthetic polymeric film in the longitudinal direction.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "film"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "polymeric"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000243",
+  "title" : "Process for preparing 3,5:4,6- protected derivatives of L- or D- gulonic acid, their use in preparing 2- keto-L- or D- gulonic acid or their esters or L- or D- ascorbic acid, and certain novel 2-nitrato-gulonate intermediates.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 8.0,
+    "sentiment" : null,
+    "text" : "acid"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "derivative"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "protected"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000245",
+  "title" : "Dispensing apparatus.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 8.0,
+    "sentiment" : null,
+    "text" : "zone"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "article"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "apparatus"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "holder"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000247",
+  "title" : "Water-absorbent starch copolymerisates and method for their preparation.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 9.0,
+    "sentiment" : null,
+    "text" : "starch"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "copolymerisate"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "water-absorbent"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "linkage"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000249",
+  "title" : "Fluid pressure operable tractor and trailer vehicle braking systems.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 6.0,
+    "sentiment" : null,
+    "text" : "control"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "pressure"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "brake"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "trailer"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000251",
+  "title" : "Production of hydrogen sulfide from sulfur dioxide obtained from flue gas.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 8.0,
+    "sentiment" : null,
+    "text" : "na2"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "gas"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "co3"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "source"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000253",
+  "title" : "Diagnostic kit for blood pool imaging.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "imaging"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "blood"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "diagnostic"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "pool"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000254",
+  "title" : "Antithrombotic 2-(gamma-(1-piperidinyl)propyl)1,2-benzisothiazol 3-one, its pharmaceutically acceptable acid addition salts, their preparation and their compositions.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "salt"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "addition"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "gamma"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "composition"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000262",
+  "title" : "Method of and spinning head for spin coating resist onto a wafer.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 6.0,
+    "sentiment" : null,
+    "text" : "wafer"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "head"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "coating"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "spinning"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000264",
+  "title" : "The production of highly basic calcium sulphonates.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "calcium"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000266",
+  "title" : "Fluid expandable tire building drum with shoe means attached thereto to form a tire building surface.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 6.0,
+    "sentiment" : null,
+    "text" : "surface"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 6.0,
+    "sentiment" : null,
+    "text" : "building"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 6.0,
+    "sentiment" : null,
+    "text" : "tire"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "annular"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000267",
+  "title" : "Light source in an optical communications system.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "system"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "light"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "laser"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "optical"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000271",
+  "title" : "Cathode plate, position sensitive neutral particle sensor using such a cathode plate, sensing system and camera both using such a sensor.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 8.0,
+    "sentiment" : null,
+    "text" : "cathode"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 6.0,
+    "sentiment" : null,
+    "text" : "array"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "strip"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "particle"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000273",
+  "title" : "Cup selection apparatus for beverage vending machines using cups which are pre-charged with dry ingredients.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 10.0,
+    "sentiment" : null,
+    "text" : "tube"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 10.0,
+    "sentiment" : null,
+    "text" : "cup"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 6.0,
+    "sentiment" : null,
+    "text" : "cup-storage"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000276",
+  "title" : "A novel crystalline form of benoxaprofen, methods of preparation thereof and pharmaceutical formulations containing said novel form.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 6.0,
+    "sentiment" : null,
+    "text" : "form"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "novel"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "benoxaprofen"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "formulation"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000283",
+  "title" : "Substituted carbamates, preparation and compositions thereof and use thereof as insecticides.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "carbamate"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "preparation"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "atom"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "carbon"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000284",
+  "title" : "Process and apparatus for reflowing solder of solder plated substrates and substrates formed thereby.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "vapour"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "solder"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000285",
+  "title" : "7-Acylamino-3-((3-(carboxymethyl) thio-1 H-1,2,4-triazol-5-yl) thiomethyl)-3-cephem-4-carboxylic acid derivatives, processes for their preparation and compositions containing them.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "7-acylamino-3"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "cephem-4-carboxylic"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "carboxymethyl"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "thiomethyl"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000286",
+  "title" : "Apparatus for continuously patterning a photosensitive tape by projection printing.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 10.0,
+    "sentiment" : null,
+    "text" : "tape"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "pattern"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "image"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "apparatus"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000288",
+  "title" : "Curable polyurethane prepolymers, adhesive compositions containing them, a method of bonding using the adhesive compositions and the bonded articles so obtained.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "adhesive"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "prepolymer"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "composition"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "polyurethane"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000291",
+  "title" : "A pharmaceutical composition for tropical diseases.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "disease"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "group"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "composition"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "tropical"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000292",
+  "title" : "Production of chloro-s-triazine triones and their use in cleansing or bleaching compositions.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "trione"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "chloro-s-triazine"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "reaction"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000344",
+  "title" : "Improvements in or relating to ladders.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "ladder"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "material"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000382",
+  "title" : "Pyrimido (4,5-c)pyridazines, compositions containing them and processes for their preparation.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "hydroxy"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "benzyl"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "group"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "alkyl"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000383",
+  "title" : "Pyrimido (4,5-c) pyridazines, their use in pharmaceutical preparations, and process for their preparation.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "group"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "alkyl"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "preparation"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "phenyl"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000385",
+  "title" : "Thermosetting compositions based on polyarylacetylenes and substituted polyphenylene oxides and resins obtained by curing them.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "oxide"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "poly"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "composition"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000394",
+  "title" : "Gravity-impelled transport apparatus for aligning an original in a printing station.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 6.0,
+    "sentiment" : null,
+    "text" : "original"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "printing"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "station"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "transport"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000417",
+  "title" : "Suction dredger and method of loading the same.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "dredger"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "suction"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "method"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "lower"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000423",
+  "title" : "Tire building machine.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 10.0,
+    "sentiment" : null,
+    "text" : "shaft"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 9.0,
+    "sentiment" : null,
+    "text" : "flange"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 8.0,
+    "sentiment" : null,
+    "text" : "sleeve"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "distal"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000429",
+  "title" : "Thermoplastic moulding materials based on a styrene-acrylonitrile copolymer, an elastomer and a polyimide.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 8.0,
+    "sentiment" : null,
+    "text" : "material"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "thermoplastic"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "moulding"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "polyimide"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000435",
+  "title" : "Ice making machine.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 6.0,
+    "sentiment" : null,
+    "text" : "ice"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "freezing"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "tank"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "surface"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000436",
+  "title" : "Lavatory seat.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "liquid"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "seat"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "plastic"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "lavatory"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000445",
+  "title" : "Servo valve.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "balance"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "main"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "control"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "spool"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000447",
+  "title" : "Radar reflector.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "reflector"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "path"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000459",
+  "title" : "ARRANGEMENT FOR THE REMOTE DISPLAY OF PROGRESSIVE INFORMATION",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 7.0,
+    "sentiment" : null,
+    "text" : "line"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "transmitter"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "system"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "output"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000469",
+  "title" : "Film cartridge and apparatus for processing the self-developing film strip contained therein.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 9.0,
+    "sentiment" : null,
+    "text" : "film"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "type"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "processing"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "strip"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000477",
+  "title" : "Mandible stimulator.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 11.0,
+    "sentiment" : null,
+    "text" : "circuit"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 9.0,
+    "sentiment" : null,
+    "text" : "electrode"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 8.0,
+    "sentiment" : null,
+    "text" : "current"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "pulse"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000523",
+  "title" : "Fuse cord and process for making it.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "exterior"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "thermoplastic"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "sheath"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "composition"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000524",
+  "title" : "Process of recovering polymeric beads from an aqueous slurry thereof.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "slurry"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "bead"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000550",
+  "title" : "Vertical bulk-conveying apparatus and bulk delivering system utilizing the characteristics thereof.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 13.0,
+    "sentiment" : null,
+    "text" : "bulk"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 6.0,
+    "sentiment" : null,
+    "text" : "belt"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "vertical"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "conveyor"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000563",
+  "title" : "Process for preparing aromatic urethanes.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 9.0,
+    "sentiment" : null,
+    "text" : "compound"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000585",
+  "title" : "Automatic control system for processing signals from an overheat monitor of a dynamoelectric machine.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 6.0,
+    "sentiment" : null,
+    "text" : "machine"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "control"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "monitor"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "signal"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000586",
+  "title" : "Method for rejuvenating ion sources.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "source"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "ion"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000599",
+  "title" : "Electrically photosensitive particles for photoelectrophoretic migration imaging processes.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "migration"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "process"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "imaging"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "particle"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000603",
+  "title" : "Photoelectrophoretic multicolour imaging apparatus.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "imaging"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "pulse"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "apparatus"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000604",
+  "title" : "Antiperspirant applicators.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "antiperspirant"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "phase"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000609",
+  "title" : "Novel 19-nor-pregnahexaenes, process for the preparation thereof, and pharmaceutical compositions containing them.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 9.0,
+    "sentiment" : null,
+    "text" : "hydrogen"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 6.0,
+    "sentiment" : null,
+    "text" : "lower"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "alpha"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "alkyl"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000610",
+  "title" : "Method and apparatus for spraying a metered quantity of a semi-liquid product.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 6.0,
+    "sentiment" : null,
+    "text" : "product"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "container"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "passageway"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "wall"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000611",
+  "title" : "A piston air or gas compressor, preferably for filling divers' breathing air cylinders.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 8.0,
+    "sentiment" : null,
+    "text" : "piston"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 7.0,
+    "sentiment" : null,
+    "text" : "cylinder"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "air"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "ring"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000612",
+  "title" : "Double sectioned tank in particular for ship's ballast and cargo.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 8.0,
+    "sentiment" : null,
+    "text" : "tank"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 6.0,
+    "sentiment" : null,
+    "text" : "cargo"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "part"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "ship"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000613",
+  "title" : "Cathode ray tube storage device with an electroluminescent display panel.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "electron"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "electroluminescent"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "beam"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "panel"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000614",
+  "title" : "Production of dichlorosilane derivatives.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "phenethyldichlorosilane"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "group"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "compound"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "dichlorosilane"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000615",
+  "title" : "Beta-lactam compounds, preparation and use in pharmaceutical compositions and as chemical intermediates.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "use"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "composition"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "intermediate"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "preparation"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000616",
+  "title" : "Matrix addressable electrochromic display device.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 8.0,
+    "sentiment" : null,
+    "text" : "display"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "electrode"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "electrochromic"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "site"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000617",
+  "title" : "Production of unsubstituted and substituted indene.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "part"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "indane"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000621",
+  "title" : "Liquid dielectric composition.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 6.0,
+    "sentiment" : null,
+    "text" : "deg"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "product"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "benzene"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "alkylation"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000622",
+  "title" : "Liquid dielectric composition.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "product"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "alkylation"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "benzene"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "deg"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000625",
+  "title" : "Tobacco smoke filter element with alkali ferrate supported on granular material.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "material"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "fluid"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000629",
+  "title" : "Carpet cleaning device.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "carpet"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "brush"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "powder"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000638",
+  "title" : "Devices including epitaxial layers of dissimilar crystalline materials.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "material"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "device"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000639",
+  "title" : "Method of producing a uniaxially oriented polymer material.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "material"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000640",
+  "title" : "Tetrahydro-s-triazine thiones, process for their preparation and acaricidal compositions containing them.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "lower"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "alkyl"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "preparation"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "process"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000645",
+  "title" : "Isopenicillins, processes for their preparation, and compositions containing them.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "acylamino"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "formulum"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "min"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "azido"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000649",
+  "title" : "5-substituted-1,2-dihydro-3H-pyrrolo(1,2-a)pyrrole-1-carbonitriles and process for their conversion to the corresponding 1-carboxylic acids.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "group"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "compound"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "atom"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "carbon"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000652",
+  "title" : "Internal combustion engine spark ignition apparatus producing an oscillating discharge current of a capacitor.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "ignition"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "current"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "capacitor"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "circuit"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000655",
+  "title" : "Semiconductor charge coupled device with split electrode configuration.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 7.0,
+    "sentiment" : null,
+    "text" : "charge"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "transfer"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "region"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "electrode"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000656",
+  "title" : "4\"-Ureido-oleandomycin derivatives, process for their preparation and their use in pharmaceutical compositions.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "process"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "pharmaceutical"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 2.0,
+    "sentiment" : null,
+    "text" : "composition"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000658",
+  "title" : "Process for preparing ethylenically unsaturated isocyanurates.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "unsaturated"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 1.0,
+    "sentiment" : null,
+    "text" : "isocyanurate"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000660",
+  "title" : "A foldable crutch.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "portion"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "lower"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "upper"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000662",
+  "title" : "Rolling mill for metal powder compaction.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "roll"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000668",
+  "title" : "Diagnostic compositions containing an alkali metal pertechnetate, and method for forming such compositions.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 6.0,
+    "sentiment" : null,
+    "text" : "composition"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "invention"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000717",
+  "title" : "Partition wall fastening unit.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 7.0,
+    "sentiment" : null,
+    "text" : "wall"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 7.0,
+    "sentiment" : null,
+    "text" : "partition"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 6.0,
+    "sentiment" : null,
+    "text" : "bed"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "building"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000738",
+  "title" : "An air purifier of the regenerating type.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "molecule"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "ozone"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "purifier"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "air"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000782",
+  "title" : "Hood system for cooking equipment.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 8.0,
+    "sentiment" : null,
+    "text" : "cooking"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "hood"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 5.0,
+    "sentiment" : null,
+    "text" : "surface"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "air"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+}, {
+  "id" : "EPA1/0000790",
+  "title" : "Process for the production of phosphazene polymers.",
+  "description" : null,
+  "texts" : null,
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "phosphazene"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "product"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "group"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 3.0,
+    "sentiment" : null,
+    "text" : "polymer"
+  } ],
+  "categoryList" : null,
+  "conceptList" : null
+} ]
