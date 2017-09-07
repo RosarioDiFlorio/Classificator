@@ -39,7 +39,7 @@ public class CSVBuilder {
 
   public static void buildCSV(String path,HashMap<String, Dictionary> dictionaries,boolean withLabel) throws IOException{
 
-
+ 
     FeatureExtractor featureExtractor = new FeatureExtractor();
     HashSet<String> categories = (HashSet<String>) Configurator.getCategories();
 

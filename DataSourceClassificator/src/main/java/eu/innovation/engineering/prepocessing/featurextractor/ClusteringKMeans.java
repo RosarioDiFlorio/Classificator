@@ -11,6 +11,7 @@ import java.util.function.ToDoubleFunction;
 import java.util.stream.Collectors;
 
 import org.apache.commons.math3.ml.clustering.CentroidCluster;
+import org.apache.commons.math3.ml.clustering.Clusterable;
 import org.apache.commons.math3.ml.clustering.KMeansPlusPlusClusterer;
 import org.apache.commons.math3.ml.clustering.KMeansPlusPlusClusterer.EmptyClusterStrategy;
 import org.apache.commons.math3.random.JDKRandomGenerator;
@@ -21,6 +22,7 @@ import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
 import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.prepocessing.DatasetBuilder;
+import eu.innovation.engineering.prepocessing.DictionaryBuilder;
 import eu.innovation.engineering.util.featurextractor.Item;
 import eu.innovation.engineering.util.featurextractor.ItemWrapper;
 import eu.innovation.engineering.util.preprocessing.CosineDistance;
@@ -35,17 +37,61 @@ public class ClusteringKMeans {
 
   public static void main (String args[]) throws IOException{
 
-    //clusterWithDatasourceAsItems();
+    clusterWithDatasourceAsItems(PathConfigurator.trainingAndTestFolder+"trainingBig.json",500);
+   // clusterWithDatasourceAsItems(PathConfigurator.trainingAndTestFolder+"dataSourcesWithoutCategory_10000_10000.json",3000);
+    
   }
 
 
 
+  // Misura l'accuratezza del clustering con l'indice di DAVIS-Bouldin
+  public static float DaviesBouldinIndex(List<CentroidCluster<ItemWrapper>> clusterResults, int cut){
 
-  public static void clusterWithKeywordsAsItems() throws IOException {
+    float DB = 0; 
+
+
+    
+    for(int i=0;i<cut;i++){
+      CentroidCluster<ItemWrapper> pointsI = clusterResults.get(i);
+      //Calcolo la distanza media del cluster I
+      float avgI = avgDistanceIntraCluster(clusterResults.get(i));
+      float max = -32000;
+      for(int j=0;j<cut;j++){
+        if(i!=j){
+          float avgJ = avgDistanceIntraCluster(clusterResults.get(j));
+          double centroidDistance = Math.acos(FeatureExtractor.cosineSimilarity(pointsI.getCenter().getPoint(), clusterResults.get(j).getCenter().getPoint()));
+          //System.out.println("i: "+i+" j: "+j+" avgI: "+avgI+" avgJ: "+avgJ+" centroidDistance: "+centroidDistance);
+          if(max < ((avgI+avgJ)/centroidDistance)){
+            max = (float) ((avgI+avgJ)/centroidDistance);
+          }
+        }
+      }
+      DB+=max;
+    }
+    
+    
+    return DB/cut;
+
+  }
+  
+  
+  public static float avgDistanceIntraCluster(CentroidCluster<ItemWrapper> cluster){
+    float avg = 0;
+    Clusterable center = cluster.getCenter();
+    for(ItemWrapper point : cluster.getPoints()){
+      avg+=Math.acos(FeatureExtractor.cosineSimilarity(point.getPoint(), center.getPoint()));
+    }
+    return avg=avg/cluster.getPoints().size();
+    
+    
+    
+  }
+
+  public static void clusterWithKeywordsAsItems(String fileName, int cut) throws IOException {
     CreateMatrix matrixCreator = new CreateMatrix();
 
     DatasetBuilder pb = new DatasetBuilder();
-    pb.parseDatasetFromJson("dataset/datasetWithKeywords.json");
+    pb.parseDatasetFromJson(fileName);
 
     ArrayList<Source> paperList = pb.getSourceList();
     HashSet<String> keywordList = pb.returnAllKeywords(paperList);
@@ -75,11 +121,7 @@ public class ClusteringKMeans {
     items=null;
 
 
-
-    // initialize a new clustering algorithm. 
-    // we use KMeans++ with 10 clusters and 10000 iterations maximum.
-    // we did not specify a distance measure; the default (euclidean distance) is used.
-    KMeansPlusPlusClusterer<ItemWrapper> clusterer = new KMeansPlusPlusClusterer<ItemWrapper>(23, clusterInput.size());
+    KMeansPlusPlusClusterer<ItemWrapper> clusterer = new KMeansPlusPlusClusterer<ItemWrapper>(cut, clusterInput.size(), new CosineDistance(), new JDKRandomGenerator(), EmptyClusterStrategy.LARGEST_POINTS_NUMBER);
 
     List<CentroidCluster<ItemWrapper>> clusterResults = clusterer.cluster(clusterInput);
 
@@ -108,7 +150,7 @@ public class ClusteringKMeans {
 
 
 
-  public HashMap<String, Dictionary> clusterWithDatasourceAsItems(String fileName, int cut) throws IOException {
+  public static HashMap<String, Dictionary> clusterWithDatasourceAsItems(String fileName, int cut) throws IOException {
     CreateMatrix matrixCreator = new CreateMatrix();
 
 
@@ -164,6 +206,8 @@ public class ClusteringKMeans {
     List<CentroidCluster<ItemWrapper>> clusterResults = clusterer.cluster(clusterInput);
     System.out.println("Ended k-means");
 
+    System.out.println("DaviesBouldin-Index: "+DaviesBouldinIndex(clusterResults,cut));
+    
     //creo la lista di dizionari, ogni dizionario contiene la lista di keywords e il vettore che rappresenta l'intero dizionario, utile nell'analisi LSA
     HashMap<String,Dictionary> dictionaries = new HashMap<>();
 
@@ -209,7 +253,7 @@ public class ClusteringKMeans {
       }
     }
 
-
+    
     //STAMPO SU FILE I CLUSTER OTTENUTI
     FileWriter writer = new FileWriter(PathConfigurator.dictionariesFolder+cut+"_dictionaries.txt");
 
@@ -231,7 +275,7 @@ public class ClusteringKMeans {
 
     // per ogni dizionario calcolo anche i vettori che mi serviranno successivamente. 
     HashMap<String, Dictionary> finalDictionaries = returnVectorForDictionaries(dictionaries);
-
+    DictionaryBuilder.save(finalDictionaries, PathConfigurator.dictionariesFolder+"dictionaries.json");
 
     return finalDictionaries;
 
@@ -240,7 +284,7 @@ public class ClusteringKMeans {
 
 
 
-  private float variance(Dictionary d, float avg) {
+  private static float variance(Dictionary d, float avg) {
     float sum = 0;
 
     for(String keymap : d.getKeywords().keySet()){
@@ -252,7 +296,7 @@ public class ClusteringKMeans {
 
 
 
-  private float avg(Dictionary d) {
+  private static float avg(Dictionary d) {
 
     float sum = 0;
     for(String keymap : d.getKeywords().keySet()){
