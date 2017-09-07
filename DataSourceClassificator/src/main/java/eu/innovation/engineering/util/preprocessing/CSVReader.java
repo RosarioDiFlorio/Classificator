@@ -21,14 +21,15 @@ import eu.innovation.engineering.config.Configurator.Categories;
 import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
+import eu.innovation.engineering.prepocessing.DatasetBuilder;
 
 public class CSVReader {
   private static final int numKey = 10;
 
   
   public static void main(String[] args) throws Exception{
-    readResultFolders(PathConfigurator.applicationResultFolder, 200);
-    //mainSingleTest(args);
+    createGenericDataset(PathConfigurator.applicationFileFolder+"datasetGeneric/");
+//    mainSingleTest(args);
     //mainToCreateTrainingDataset(args);
   }
 
@@ -75,31 +76,44 @@ public class CSVReader {
   }
   
   
-  public static void readResultFolders(String pathFolder, int clusterCut) throws Exception{
-    int countDocs = 0;
-    float uThreshold = (float) 1.0;
-    float lThreshold = (float) 0.7;
-    String category = Configurator.Categories.art_and_entertainment.name();
-    category = "all";
-    int batchLine = 0;
-    boolean isCount = true;
+  public static void createGenericDataset(String pathFolder) throws Exception{
+    String line = "";
+    String txtFile="";
+    List<Source> listSource = new ArrayList<>();
+    KeywordExtractor kex = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
+    
+    
+    
     
     File folder = new File(pathFolder);
     File[] listOfFiles = folder.listFiles();
 
         for (int i = 0; i < listOfFiles.length; i++) {
-          if (listOfFiles[i].isDirectory()) {
-            System.out.println("Directory " + listOfFiles[i].getName());
-            File subFolder = new File(listOfFiles[i].getAbsolutePath());
-           
-            File[] list = subFolder.listFiles();
-            for (int j = 0; j < list.length; j++) {
-              System.out.println(list[j].getName());
-            }
-            
+          if (listOfFiles[i].isFile()) {
+            System.out.println(listOfFiles[i].getName());
+            txtFile = listOfFiles[i].getName();
+            String fullPath = pathFolder+txtFile;
+            try (BufferedReader br = new BufferedReader(new FileReader(fullPath))) {
+              int count = 0;
+              List<String> texts = new ArrayList<>();
+              Source s = new Source();
+              while ((line = br.readLine()) != null) {
+                if(count == 0){
+                  s.setTitle(line);
+                  count++;
+                }
+                texts.add(line);
+              }
+              s.setTexts(texts);
+              s.setId(txtFile);
+              s.setKeywordList((ArrayList<Keyword>) kex.extractKeywordsFromText(texts, 10));
+              listSource.add(s);
+            }catch (Exception e) {
+              e.printStackTrace();
+            }           
           }
         }
- 
+     DatasetBuilder.save(listSource, PathConfigurator.trainingAndTestFolder+"TestGeneric.json");
     
   }
   

@@ -8,6 +8,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 
+import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -188,6 +189,18 @@ public  class DatasetBuilder {
 
   public void setFileName(String fileName) {
     this.fileName = fileName;
+  }
+  
+  public static void save(List<Source> listSource,String pathFile) throws JsonGenerationException, JsonMappingException, IOException{
+    ObjectMapper mapper = new ObjectMapper();
+    mapper.writerWithDefaultPrettyPrinter().writeValue(new File(pathFile), listSource);
+    System.out.println("source list save to "+pathFile);
+  }
+  
+  public List<Source> load(String pathFile) throws JsonParseException, JsonMappingException, IOException{
+    ObjectMapper mapper = new ObjectMapper();
+    List<Source> toReturn = mapper.readValue(new File(pathFile), new TypeReference<List<Source>>(){});
+    return toReturn;
   }
 
 
