@@ -22,6 +22,7 @@ import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
 import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.prepocessing.DatasetBuilder;
+import eu.innovation.engineering.prepocessing.DictionaryBuilder;
 import eu.innovation.engineering.util.featurextractor.Item;
 import eu.innovation.engineering.util.featurextractor.ItemWrapper;
 import eu.innovation.engineering.util.preprocessing.CosineDistance;
@@ -252,7 +253,7 @@ public class ClusteringKMeans {
       }
     }
 
-
+    
     //STAMPO SU FILE I CLUSTER OTTENUTI
     FileWriter writer = new FileWriter(PathConfigurator.dictionariesFolder+cut+"_dictionaries.txt");
 
@@ -274,7 +275,7 @@ public class ClusteringKMeans {
 
     // per ogni dizionario calcolo anche i vettori che mi serviranno successivamente. 
     HashMap<String, Dictionary> finalDictionaries = returnVectorForDictionaries(dictionaries);
-
+    DictionaryBuilder.save(finalDictionaries, PathConfigurator.dictionariesFolder+"dictionaries.json");
 
     return finalDictionaries;
 

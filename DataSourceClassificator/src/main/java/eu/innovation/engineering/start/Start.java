@@ -15,7 +15,7 @@ import eu.innovation.engineering.prepocessing.featurextractor.Dictionary;
 public class Start {
 
   private static final boolean readDictionaryFileTXT = true;
-
+  private static final boolean loadDictionariesFromFile = true;
   public static void main(String[] args) throws IOException{
 
     //CREA IL FILE JSON DEI DIZIONARI
@@ -31,8 +31,11 @@ public class Start {
     DictionaryBuilder dictionaryBuilder = new DictionaryBuilder();
     //String jsonPath=PathConfigurator.dictionariesFolder+"dictionariesSource.json";
     String jsonPathDictionariesAndTrain=PathConfigurator.trainingAndTestFolder+"trainingBig.json";
-
-    HashMap<String, Dictionary> dictionaries = dictionaryBuilder.build(jsonPathDictionariesAndTrain, Configurator.numFeatures);    
+    HashMap<String, Dictionary> dictionaries = new HashMap<>();
+    if(loadDictionariesFromFile)
+      dictionaries = dictionaryBuilder.load(PathConfigurator.dictionariesFolder+"dictionaries.json");
+    else
+      dictionaries = dictionaryBuilder.build(jsonPathDictionariesAndTrain, Configurator.numFeatures);    
 
     //Train
     CSVBuilder.buildCSV(jsonPathDictionariesAndTrain, dictionaries, true);
