@@ -16,6 +16,7 @@ public class Start {
 
   private static final boolean readDictionaryFileTXT = true;
   private static final boolean loadDictionariesFromFile = true;
+  private static final boolean buildOnlyTestDataset = true;
   public static void main(String[] args) throws IOException{
 
     //CREA IL FILE JSON DEI DIZIONARI
@@ -38,7 +39,8 @@ public class Start {
       dictionaries = dictionaryBuilder.build(jsonPathDictionariesAndTrain, Configurator.numFeatures);    
 
     //Train
-    CSVBuilder.buildCSV(jsonPathDictionariesAndTrain, dictionaries, true);
+    if(!buildOnlyTestDataset)
+      CSVBuilder.buildCSV(jsonPathDictionariesAndTrain, dictionaries, true);
 
     //Test
     CSVBuilder.buildCSV(PathConfigurator.trainingAndTestFolder+"dataSourcesWithoutCategory_10000_10000.json", dictionaries, false);

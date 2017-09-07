@@ -27,7 +27,7 @@ public class SolrClient {
 
     //useManualCheckKeywords("26783169_645");
        
-    requestNPaper(10000,10000);
+    requestNPatent(0,100);
   }
   
   
@@ -56,9 +56,71 @@ public class SolrClient {
     return toReturn;
   }
 
+  
+    public static void requestNPatent(int firstPatentToJump,int numSourceRequest) throws Exception{
 
+    String cursorMark="*";
+    
+    String url = "http://192.168.200.81:8080/solr4/patents/select?q=abstract%3A%5B%22%22+TO+*%5D&sort=id+asc&fl=id%2Cinvention_title_en%2Cabstract&wt=json&indent=true&cursorMark=";
+    KeywordExtractor extractorInnen = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
 
-  public static void requestNPaper(int firstPaperToJump,int numSourceRequest) throws Exception{
+    int numSourceToSave = 0;
+    JsonParser parserJson = new JsonParser();
+
+    //creo il file 
+    int count = 0;
+    ArrayList<Source> sourceList = new ArrayList<Source>();
+    
+    //Salto i primi paper
+    int paperJumped =0;
+    while(paperJumped<firstPatentToJump){
+      StringBuffer response = requestSOLR(url+cursorMark);
+      paperJumped+=10;
+      cursorMark = parserJson.parse(response.toString()).getAsJsonObject().get("nextCursorMark").getAsString();
+    }
+    
+    //prendo i paper
+    while (numSourceToSave<numSourceRequest){
+      numSourceToSave+=10;
+      StringBuffer response = requestSOLR(url+cursorMark);
+      JsonArray results = parserJson.parse(response.toString()).getAsJsonObject().get("response").getAsJsonObject().get("docs").getAsJsonArray();
+      count+=10;
+      if(cursorMark.equals("AoEpOTk5OTVfMTAy")){
+        System.out.println(results);
+        break;
+      }
+
+      for(int i=0; i<results.size();i++){
+        JsonElement sourceElement = results.get(i);
+        JsonObject sourceObject = sourceElement.getAsJsonObject();
+        String description;
+        if(sourceObject!=null && sourceObject.get("abstract")!=null && (!sourceObject.get("abstract").getAsString().equals(""))){
+          description = sourceObject.get("abstract").getAsString();
+          String title = sourceObject.get("invention_title_en").getAsString();
+          String id = sourceObject.get("id").getAsString();
+          System.out.println(id);
+          Source source = new Source();
+          source.setTitle(title);
+          source.setId(id);
+          List<String> toAnalyze = new ArrayList<String>();
+          toAnalyze.add(source.getTitle());
+          toAnalyze.add(description);
+          source.setKeywordList((ArrayList<Keyword>)extractorInnen.extractKeywordsFromText(toAnalyze,4));
+          sourceList.add(source); 
+        }
+      }
+      cursorMark = parserJson.parse(response.toString()).getAsJsonObject().get("nextCursorMark").getAsString();
+
+    }
+    ObjectMapper mapper = new ObjectMapper();
+    mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.trainingAndTestFolder+"dataSourcesWithoutCategory_10000_10000.json"), sourceList);
+
+    System.out.println(count);
+  }
+
+    
+    
+  public static void requestNTechincalPaper(int firstPaperToJump,int numSourceRequest) throws Exception{
 
     String cursorMark="*";
     String url = "http://192.168.200.81:8080/solr4/technical_papers/select?q=*%3A*&sort=id+asc&fl=id%2Cdc_title%2Cdc_description&wt=json&indent=true&cursorMark=";
