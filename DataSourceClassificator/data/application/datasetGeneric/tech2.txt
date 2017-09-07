@@ -1,0 +1,12 @@
+Virtual Musical Instruments
+Virtual reality (VR), augmented reality (AR), and mixed reality (MR) systems present users with realistic simulations. The most common application is gaming, but did you know that VR/AR/MR can also create virtual musical instruments (VMIs)?
+
+VMIs may or may not mimic traditional physical musical instruments. Physical instruments can produce beautiful music, but they can also be hard to learn and are bound by physical and acoustic constraints. By removing many of these constraints, VMI designers can focus on new challenges such as
+
+making the instrument easy to learn,
+adapting to different performers,
+producing new electronic sounds,
+operating at the phrase or composition level rather than the note level,
+supporting performers with musical intelligence, and
+allowing collaboration among multiple players.
+This September 2017 Computing Now theme presents articles and a video on VMI 3D user interface design and implementation. Although some VMIs are still in the preliminary design stage, these instruments show great potential in the areas of musical games, music education, and live music performance.

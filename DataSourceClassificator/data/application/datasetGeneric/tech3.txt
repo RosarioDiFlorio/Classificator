@@ -1,0 +1,12 @@
+ENERGY-INTERFERENCE-FREE DEBUGGER: DEBUGGING GREEN ENERGY
+Energy-harvesting devices are one giant step closer to simpler, greener technology. They derive power from solar, thermal, wind, and kinetic energy without all the messy wires and batteries.
+
+The problem?
+
+Software runs best in uninterrupted, continuously-powered systems. Unfortunately, energy-harvesting devices experience frequent power failures and interruptions, especially when they need to get juiced up. The constant cycle of charging and discharging makes the interruptions—and resulting program errors—unavoidable.
+
+These errors must be debugged. Unfortunately, conventional debuggers don’t work because they interfere with the target’s power supply.
+
+That’s why researchers propose the Energy-Interference-Free Debugger (EDB), a tool that can debug while monitoring and manipulating the target’s energy level without permitting any significant current to flow between the debugger and the target.
+
+Read more about this energy-efficient system in the May/June 2017 issue of IEEE Micro.
