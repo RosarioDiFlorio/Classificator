@@ -61,7 +61,7 @@ public class SolrClient {
 
     String cursorMark="*";
     
-    String url = "http://192.168.200.81:8080/solr4/patents/select?q=abstract%3A%5B%22%22+TO+*%5D&sort=id+asc&fl=id%2Cinvention_title_en%2Cabstract&wt=json&indent=true&cursorMark=";
+    String url = "http://192.168.200.81:8080/solr4/patents/select?q=original_language%3A+%22eng%22+AND%0Aabstract+%3A+%5B%22%22+TO+*%5D%0A&sort=id+asc&fl=id%2Cabstract%2Cinvention_title_en%2Coriginal_language&wt=json&indent=true&cursorMark=";
     KeywordExtractor extractorInnen = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
 
     int numSourceToSave = 0;
@@ -113,7 +113,7 @@ public class SolrClient {
 
     }
     ObjectMapper mapper = new ObjectMapper();
-    mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.trainingAndTestFolder+"dataSourcesWithoutCategory_10000_10000.json"), sourceList);
+    mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.trainingAndTestFolder+"dataSourcesForTest.json"), sourceList);
 
     System.out.println(count);
   }
