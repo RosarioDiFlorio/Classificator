@@ -65,11 +65,12 @@ public class TxtDataReader implements DataReader {
   }
 
   public void mergeTxtDataset(String pathFile1, String pathFile2,int limitSource, String pathWhereSave) throws IOException{
-
+    
     Map<String, HashMap<String, String>> mapFile1 = categoriesWithIds(pathFile1);
-
+    System.out.println(pathFile1);
 
     Map<String, HashMap<String, String>> mapFile2 = categoriesWithIds(pathFile2);
+    System.out.println(pathFile2);
     PrintWriter p = new PrintWriter(new File(pathWhereSave));
     for(String cf1: mapFile1.keySet()){
       p.println(cf1);
@@ -97,12 +98,12 @@ public class TxtDataReader implements DataReader {
   }
 
 
-  public void checkCategory(String category,boolean withTexts) throws Exception{
+  public void checkCategory(String pathFile,String category,boolean withTexts) throws Exception{
     KeywordExtractor kex = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
     SolrClient solr = new SolrClient();
 
     List<String> ids = new ArrayList<>();
-    ids.addAll(categoriesWithIds(fileToRead).get("/"+category.replace("_", " ")).keySet());
+    ids.addAll(categoriesWithIds(pathFile).get("/"+category.replace("_", " ")).keySet());
     List<Source> sources = solr.getSourcesFromSolr(ids, Paper.class);      
 
     PrintWriter p = new PrintWriter(new File(PathConfigurator.applicationTestFolder+category+"ToCheck.txt"));
