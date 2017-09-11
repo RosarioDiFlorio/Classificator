@@ -67,7 +67,7 @@ public class CSVReader {
     int batchLine = 0;   
     boolean isCount = false;   
     boolean all = true;
-    String batchCategory = "";
+    String batchCategory = Configurator.Categories.science.name();
 
     String category = Configurator.Categories.religion_and_spirituality.name();
     //category = "all";
@@ -226,7 +226,11 @@ public class CSVReader {
     }
     System.out.println(count+" - "+category);
     List<Source> sources = solr.getSourcesFromSolr(idList, Paper.class);
-
+    /*
+    ForkJoinPool poolThreads = new ForkJoinPool();
+    AnalyzerSourceTask analyzerSources = new AnalyzerSourceTask(sources, numKey);
+    List<Source> analyzedSources = poolThreads.invoke(analyzerSources);
+    */
     int localcount = 0;
     for(Source s: sources){
       localcount ++;
@@ -234,6 +238,7 @@ public class CSVReader {
       idToInsert += s.getId()+" 1\n";
       p.println(s.getId()+" - "+dataMap.get(s.getId()).get(0)+" - "+dataMap.get(s.getId()).get(1));
       p.println(kex.extractKeywordsFromText(s.getTexts(), numKey).stream().map(Keyword::getText).collect(Collectors.toList())+"\n");
+      //p.println(s.getKeywordList().stream().map(Keyword::getText).collect(Collectors.toList())+"\n");
       p.println(s.getTitle());
       p.println(s.getTexts().get(1));
       p.println("-------------------------------------\n");

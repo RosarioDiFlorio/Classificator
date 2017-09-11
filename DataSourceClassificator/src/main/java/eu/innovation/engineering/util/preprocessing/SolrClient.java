@@ -30,13 +30,8 @@ public class SolrClient {
   public static void main(String[] args) throws Exception{
     //requestNPatent(0,100);
     //useManualCheckKeywords("26783169_645");
-
-
     requestNPatent(0,100);
-
     requestNTechincalPaper(0,20000);
-    
-
   }
 
 
@@ -201,14 +196,13 @@ public class SolrClient {
       else
         idsString+=idPapers.get(i)+",";
       if(i%Configurator.solrQueryLimit == 0 && i != 0){
-        idsString = "";
         toReturn.add(idsString);
+        idsString = "";
       }
     }
     if(!idsString.equals("")){
       toReturn.add(idsString);
     }
-
     return toReturn;
   }
 
@@ -221,8 +215,7 @@ public class SolrClient {
     JsonParser parserJson = new JsonParser();
 
     List<String> idSources = balanceQuery(list);
-
-
+    
     for(String id : idSources){
 
       if(Paper.class.isAssignableFrom(c)){
@@ -231,18 +224,18 @@ public class SolrClient {
         if(responseProduzione != null){
           resultsProduzione.add(parserJson.parse(responseProduzione.toString()).getAsJsonObject().get("response").getAsJsonObject().get("docs").getAsJsonArray());
         }
-        for(JsonElement json: resultsProduzione){
-          JsonArray tmpJson = json.getAsJsonArray();
-          for(JsonElement el: tmpJson){
-            Paper paper = gson.fromJson(el, Paper.class); 
-            if(paper!=null){
-              toReturn.add(paper.getSource());
-            }
-          }
-        }
-        
+                
       }else if(Patent.class.isAssignableFrom(c)){
         //nuova query per i patent
+      }
+    }
+    for(JsonElement json: resultsProduzione){
+      JsonArray tmpJson = json.getAsJsonArray();
+      for(JsonElement el: tmpJson){
+        Paper paper = gson.fromJson(el, Paper.class); 
+        if(paper!=null){
+          toReturn.add(paper.getSource());
+        }
       }
     }
     return toReturn;
