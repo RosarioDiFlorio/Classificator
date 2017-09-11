@@ -30,15 +30,15 @@ public class CSVReader {
 
   public static void main(String[] args) throws Exception{
     //createGenericDataset(PathConfigurator.applicationFileFolder+"datasetGeneric/");
-    
-    
+
+
     //mainToCreateDataset(args);
     mainToTest(args);
-    
+
     TxtDataReader dataReader = new TxtDataReader();
     //dataReader.categoriesWithIds(PathConfigurator.applicationFileFolder+"trainingDatasetMerged.txt");
-    
-   
+
+
   }
 
   public static void mainToCreateDataset(String[] args) throws IOException{
@@ -47,18 +47,18 @@ public class CSVReader {
     int limitSource = 70;
     String fileCsv = PathConfigurator.applicationFileFolder+"results.csv";
     String pathWhereSave = PathConfigurator.applicationFileFolder+"trainingDatasetFromCsv.txt";
-    
+
     String oldDataset = PathConfigurator.applicationFileFolder+"trainingDatasetMergedIntegrated.txt";
 
-    
-    
+
+
     createTrainingSetFromCsvResults(fileCsv, lThreshold, uThreshold, limitSource,pathWhereSave);
     TxtDataReader txtReader = new TxtDataReader();
     txtReader.mergeTxtDataset(oldDataset, pathWhereSave, 70, PathConfigurator.applicationFileFolder+"trainingDatasetMerged.txt");
-    
+
     /*txtReader.mergeTxtDataset(PathConfigurator.applicationFileFolder+"trainingDatasetMerged.txt", PathConfigurator.applicationFileFolder+"toIntegrate.txt",
         limitSource, PathConfigurator.applicationFileFolder+"trainingDatasetMergedIntegrated.txt");
-    */
+     */
   }
 
   public static void mainToTest(String[] args) throws Exception{
@@ -66,12 +66,14 @@ public class CSVReader {
     float lThreshold = (float) 0.7;
     int batchLine = 0;   
     boolean isCount = false;   
-    boolean all = false;
+    boolean all = true;
+    String batchCategory = "";
 
     String category = Configurator.Categories.religion_and_spirituality.name();
+    //category = "all";
     String testFolderName=PathConfigurator.applicationFileFolder+"results.csv";
     File f = new File(testFolderName);
-    
+
     if(f.isDirectory()){
       System.out.println("FOLDER -> "+testFolderName);
       File[] list = f.listFiles();
@@ -84,14 +86,19 @@ public class CSVReader {
             if(all){
               Categories[] categories = Configurator.Categories.values();  
               for(int j = 0; j<categories.length;j++){
+
                 int countDocs = 0;
                 category = categories[j].name();
-                countDocs = readResultClassifier(fileToAnalyze,lThreshold,uThreshold,category,isCount,batchLine);
-                System.out.println("category -> "+category);
-                System.out.println("Founded sources -> "+countDocs);
-                System.out.println("Upper threshold -> "+uThreshold +"\nLower threshold -> "+lThreshold);
-                System.out.println("------------------------------------------------\n");
-                totalCount += countDocs;
+                if(category.equals(batchCategory) || batchCategory.equals("")){
+                  countDocs = readResultClassifier(fileToAnalyze,lThreshold,uThreshold,category,isCount,batchLine);
+                  System.out.println("category -> "+category);
+                  System.out.println("Founded sources -> "+countDocs);
+                  System.out.println("Upper threshold -> "+uThreshold +"\nLower threshold -> "+lThreshold);
+                  System.out.println("------------------------------------------------\n");
+                  totalCount += countDocs;
+                  batchCategory = "";
+                  batchLine = 0;
+                }
               }
               System.out.println("Total founded sources -> "+totalCount);
             }else{
@@ -115,12 +122,16 @@ public class CSVReader {
         for(int j = 0; j<categories.length;j++){
           int countDocs = 0;
           category = categories[j].name();
-          countDocs = readResultClassifier(f,lThreshold,uThreshold,category,isCount,batchLine);
-          System.out.println("category -> "+category);
-          System.out.println("Founded sources -> "+countDocs);
-          System.out.println("Upper threshold -> "+uThreshold +"\nLower threshold -> "+lThreshold);
-          System.out.println("------------------------------------------------\n");
-          totalCount += countDocs;
+          if(category.equals(batchCategory) || batchCategory.equals("")){
+            countDocs = readResultClassifier(f,lThreshold,uThreshold,category,isCount,batchLine);
+            System.out.println("category -> "+category);
+            System.out.println("Founded sources -> "+countDocs);
+            System.out.println("Upper threshold -> "+uThreshold +"\nLower threshold -> "+lThreshold);
+            System.out.println("------------------------------------------------\n");
+            totalCount += countDocs;
+            batchCategory = "";
+            batchLine = 0;
+          }
         }
       }else{
         int countDocs = readResultClassifier(f,lThreshold,uThreshold,category,isCount,batchLine);
@@ -187,6 +198,7 @@ public class CSVReader {
     PrintWriter p = new PrintWriter(new File(PathConfigurator.applicationTestFolder+category+"_"+csvFile.getName().replace(".csv", "")+".txt"));
     int count = 0;
     String idToInsert= "";
+    List<String> idList  = new ArrayList<>();
     for(String id: dataMap.keySet()){
       float probs = 0;
       try{
@@ -195,11 +207,10 @@ public class CSVReader {
         e.printStackTrace();
         continue;
       }
-      
+
       if((probs <= upperThreshold) && (probs >= lowThreshold) ){       
-        List<String> tmp  = new ArrayList<>();
-        tmp.add(id);
-        if(dataMap.get(id).get(1).contains(category)){
+
+        if(dataMap.get(id).get(1).contains(category)|| category.equals("all")){
 
           if(count < batchLine || isCount){
             count++;
@@ -207,24 +218,27 @@ public class CSVReader {
             p.flush();
             continue;
           }
-
-          List<Source> sources = solr.getSourcesFromSolr(tmp, Paper.class);
-
-          for(Source s: sources){
-            count++;
-            System.out.println(count+" - "+category);
-            idToInsert += s.getId()+" 1\n";
-            p.println(s.getId()+" - "+dataMap.get(s.getId()).get(0)+" - "+dataMap.get(s.getId()).get(1));
-            p.println(kex.extractKeywordsFromText(s.getTexts(), numKey).stream().map(Keyword::getText).collect(Collectors.toList())+"\n");
-            p.println(s.getTitle());
-            p.println(s.getTexts().get(1));
-            p.println("-------------------------------------\n");
-
-          }
+          idList.add(id);
+          count++;
         }
-        p.flush();
+
       }   
     }
+    System.out.println(count+" - "+category);
+    List<Source> sources = solr.getSourcesFromSolr(idList, Paper.class);
+
+    int localcount = 0;
+    for(Source s: sources){
+      localcount ++;
+      System.out.println(localcount+" - "+category);
+      idToInsert += s.getId()+" 1\n";
+      p.println(s.getId()+" - "+dataMap.get(s.getId()).get(0)+" - "+dataMap.get(s.getId()).get(1));
+      p.println(kex.extractKeywordsFromText(s.getTexts(), numKey).stream().map(Keyword::getText).collect(Collectors.toList())+"\n");
+      p.println(s.getTitle());
+      p.println(s.getTexts().get(1));
+      p.println("-------------------------------------\n");
+    }
+
     p.println("\n"+idToInsert);
     p.flush();
     p.close();

@@ -17,20 +17,24 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
+import eu.innovation.engineering.config.Configurator;
 import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 
 public class SolrClient {
 
+
+
+
   public static void main(String[] args) throws Exception{
 
     //useManualCheckKeywords("26783169_645");
-       
+
     requestNPatent(0,100);
   }
-  
-  
+
+
   public static void useManualCheckKeywords(String id) throws Exception{
     SolrClient cl = new SolrClient();
     System.out.println(cl.checkKeywords(id));
@@ -56,11 +60,11 @@ public class SolrClient {
     return toReturn;
   }
 
-  
-    public static void requestNPatent(int firstPatentToJump,int numSourceRequest) throws Exception{
+
+  public static void requestNPatent(int firstPatentToJump,int numSourceRequest) throws Exception{
 
     String cursorMark="*";
-    
+
     String url = "http://192.168.200.81:8080/solr4/patents/select?q=original_language%3A+%22eng%22+AND%0Aabstract+%3A+%5B%22%22+TO+*%5D%0A&sort=id+asc&fl=id%2Cabstract%2Cinvention_title_en%2Coriginal_language&wt=json&indent=true&cursorMark=";
     KeywordExtractor extractorInnen = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
 
@@ -70,7 +74,7 @@ public class SolrClient {
     //creo il file 
     int count = 0;
     ArrayList<Source> sourceList = new ArrayList<Source>();
-    
+
     //Salto i primi paper
     int paperJumped =0;
     while(paperJumped<firstPatentToJump){
@@ -78,7 +82,7 @@ public class SolrClient {
       paperJumped+=10;
       cursorMark = parserJson.parse(response.toString()).getAsJsonObject().get("nextCursorMark").getAsString();
     }
-    
+
     //prendo i paper
     while (numSourceToSave<numSourceRequest){
       numSourceToSave+=10;
@@ -118,8 +122,8 @@ public class SolrClient {
     System.out.println(count);
   }
 
-    
-    
+
+
   public static void requestNTechincalPaper(int firstPaperToJump,int numSourceRequest) throws Exception{
 
     String cursorMark="*";
@@ -132,7 +136,7 @@ public class SolrClient {
     //creo il file 
     int count = 0;
     ArrayList<Source> sourceList = new ArrayList<Source>();
-    
+
     //Salto i primi paper
     int paperJumped =0;
     while(paperJumped<firstPaperToJump){
@@ -140,7 +144,7 @@ public class SolrClient {
       paperJumped+=10;
       cursorMark = parserJson.parse(response.toString()).getAsJsonObject().get("nextCursorMark").getAsString();
     }
-    
+
     //prendo i paper
     while (numSourceToSave<numSourceRequest){
       numSourceToSave+=10;
@@ -181,40 +185,59 @@ public class SolrClient {
   }
 
 
-  public List<Source> getSourcesFromSolr(List<String> idPapers, Class c) throws IOException{
+  private List<String> balanceQuery(List<String> idPapers){
+
+    String idsString = "";
+    List<String> toReturn = new ArrayList<>();
+
+    for(int i = 0;i<idPapers.size();i++){
+      if(i==idPapers.size()-1)
+        idsString+=idPapers.get(i);
+      else
+        idsString+=idPapers.get(i)+",";
+      if(i%Configurator.solrQueryLimit == 0 && i != 0){
+        idsString = "";
+        toReturn.add(idsString);
+      }
+    }
+    if(!idsString.equals("")){
+      toReturn.add(idsString);
+    }
+
+    return toReturn;
+  }
+
+
+  public List<Source> getSourcesFromSolr(List<String> list, Class c) throws IOException{
 
     List<Source> toReturn = new ArrayList<Source>();
     Gson gson = new Gson();
     JsonArray resultsProduzione = new JsonArray();
-    JsonArray resultsLocal = new JsonArray();
     JsonParser parserJson = new JsonParser();
 
-    for(String id : idPapers){
+    List<String> idSources = balanceQuery(list);
+
+
+    for(String id : idSources){
+
       if(Paper.class.isAssignableFrom(c)){
-
-        //System.out.println(id);
-        /*
-        String querylocale = "http://localhost:8983/solr/technical_papers/select?q=id%3A"+id+"&fl=id%2Cdc_title%2Cdc_description&wt=json&indent=true";
-        StringBuffer responseLocale = requestSOLR(querylocale);;
-        resultsLocal.add(parserJson.parse(responseLocale.toString()).getAsJsonObject().get("response").getAsJsonObject().get("docs").getAsJsonArray());
-         */
-
-        String queryProduzione = "http://192.168.200.81:8080/solr4/technical_papers/select?q=id%3A"+id+"&fl=id%2Cdc_title%2Cdc_description&wt=json&indent=true";
+        String queryProduzione = "http://192.168.200.81:8080/solr4/technical_papers/get?ids="+id+"&fl=id,dc_title,dc_description";
         StringBuffer responseProduzione = requestSOLR(queryProduzione);
-        if(responseProduzione != null)
+        if(responseProduzione != null){
           resultsProduzione.add(parserJson.parse(responseProduzione.toString()).getAsJsonObject().get("response").getAsJsonObject().get("docs").getAsJsonArray());
-
-
+        }
+        for(JsonElement json: resultsProduzione){
+          JsonArray tmpJson = json.getAsJsonArray();
+          for(JsonElement el: tmpJson){
+            Paper paper = gson.fromJson(el, Paper.class); 
+            if(paper!=null){
+              toReturn.add(paper.getSource());
+            }
+          }
+        }
+        
       }else if(Patent.class.isAssignableFrom(c)){
         //nuova query per i patent
-      }
-    }
-
-    for(JsonElement json: resultsProduzione){
-      String tmpJson = json.toString().replace("[", "").replaceAll("]", "");
-      Paper paper = gson.fromJson(tmpJson, Paper.class); 
-      if(paper!=null){
-        toReturn.add(paper.getSource());
       }
     }
     return toReturn;
