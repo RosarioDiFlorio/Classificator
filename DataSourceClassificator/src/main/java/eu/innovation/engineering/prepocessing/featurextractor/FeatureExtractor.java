@@ -69,6 +69,9 @@ public class FeatureExtractor {
 
         //calcolo la similarità tra il dizionario ed il paper
         double score = cosineSimilarity(vectorResults[i], dictionaries.get(key).getVector());
+        if(score < 0){
+          score = 0;
+        }
         Features f = new Features(key, score);
         featuresPaper.add(f);
       }

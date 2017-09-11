@@ -474,7 +474,23 @@
     "knowledgeGraph" : null,
     "relevance" : 4.0,
     "sentiment" : null,
+    "text" : "degree"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
     "text" : "cup"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "oven"
   }, {
     "totalTransactions" : null,
     "language" : null,
@@ -531,14 +547,6 @@
     "relevance" : 3.0,
     "sentiment" : null,
     "text" : "egg"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 3.0,
-    "sentiment" : null,
-    "text" : "oven"
   } ],
   "categoryList" : null,
   "conceptList" : null

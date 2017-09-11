@@ -28,10 +28,15 @@ public class SolrClient {
 
 
   public static void main(String[] args) throws Exception{
-
+    //requestNPatent(0,100);
     //useManualCheckKeywords("26783169_645");
 
+
     requestNPatent(0,100);
+
+    requestNTechincalPaper(0,20000);
+    
+
   }
 
 
@@ -179,7 +184,7 @@ public class SolrClient {
 
     }
     ObjectMapper mapper = new ObjectMapper();
-    mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.trainingAndTestFolder+"dataSourcesWithoutCategory_10000_10000.json"), sourceList);
+    mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.trainingAndTestFolder+"test.json"), sourceList);
 
     System.out.println(count);
   }
