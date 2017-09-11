@@ -192,7 +192,7 @@ public class SolrClient {
     for(String id : idPapers){
       if(Paper.class.isAssignableFrom(c)){
 
-        System.out.println(id);
+        //System.out.println(id);
         /*
         String querylocale = "http://localhost:8983/solr/technical_papers/select?q=id%3A"+id+"&fl=id%2Cdc_title%2Cdc_description&wt=json&indent=true";
         StringBuffer responseLocale = requestSOLR(querylocale);;
