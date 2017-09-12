@@ -16,13 +16,23 @@ import eu.innovation.engineering.prepocessing.featurextractor.ClusteringKMeans;
 import eu.innovation.engineering.util.featurextractor.SourceVector;
 import eu.innovation.engineering.util.preprocessing.Source;
 
+/**
+ * @author Rosario
+ *
+ */
 public class SourceVectorBuilder {
 
+  
+  /**
+   * @param args
+   * @throws IOException
+   */
   public static void main(String[] args) throws IOException{
-    boolean fromSolr = false;
+    boolean fromSolr = true;
     String fileName = "trainingDatasetMerged.txt";
     String path = PathConfigurator.trainingAndTestFolder;
     String pathWhereSave = PathConfigurator.applicationFileFolder+"sources.json";
+
     List<Source> sources = new ArrayList<>();
     DatasetBuilder sourceBuilder = new DatasetBuilder();
     if(fromSolr){
@@ -34,7 +44,12 @@ public class SourceVectorBuilder {
     pathWhereSave = PathConfigurator.applicationFileFolder+"sourceVectors.json";
     saveSourceVectorList(pathWhereSave, createSourceVectorList(sources));
   }
- 
+  
+  /**
+   * @param List<Source> sources
+   * @return List<SourceVector> 
+   * @throws IOException
+   */
   public static List<SourceVector> createSourceVectorList(List<Source> sources) throws IOException{
     List<SourceVector> toReturn = new ArrayList<>();   
     float[][] vectors = ClusteringKMeans.returnVectorsFromSourceList((ArrayList<Source>) sources);    
@@ -47,13 +62,28 @@ public class SourceVectorBuilder {
     }
     return toReturn;
   }
-  
+
+  /**
+   * @param path (.json)
+   * @param List<Source> 
+   * @throws JsonGenerationException
+   * @throws JsonMappingException
+   * @throws IOException
+   */
   public static void saveSourceVectorList(String path,List<SourceVector> list) throws JsonGenerationException, JsonMappingException, IOException{
     ObjectMapper mapper = new ObjectMapper();
     mapper.writerWithDefaultPrettyPrinter().writeValue(new File(path), list);
     System.out.println("Source vectors saved into "+path);
   }
-  
+
+  /**
+   * Load Function for Source Vectors from a json file
+   * @param path (.json)
+   * @return List<SourceVector>
+   * @throws JsonParseException
+   * @throws JsonMappingException
+   * @throws IOException
+   */
   public static List<SourceVector> loadSourceVectorList(String path) throws JsonParseException, JsonMappingException, IOException{
     ObjectMapper mapper = new ObjectMapper();
     List<SourceVector> loadedList = mapper.readValue(new File(path), new TypeReference<List<SourceVector>>() {});

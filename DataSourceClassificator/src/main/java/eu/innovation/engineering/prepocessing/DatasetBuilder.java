@@ -27,9 +27,8 @@ import eu.innovation.engineering.util.preprocessing.Source;
 /**
  * Questa classe serve per creare il dataset da documenti Solr. Prende in input un file che contiene id di documenti, divisi per categorie.
  * @author lomasto
- *
+ * @author Rosario
  */
-
 public  class DatasetBuilder {
 
 
@@ -43,6 +42,10 @@ public  class DatasetBuilder {
   private TxtDataReader dataReader;
   private String fileName;
 
+  /**
+   * Constructor
+   * As default instanziate as KeywordExtractor the class InnenExtractor
+   */
   public DatasetBuilder(){
     listSources = new ArrayList<Source>();
     categoryMap = new HashMap<>();
@@ -52,6 +55,13 @@ public  class DatasetBuilder {
   }
 
 
+  /**
+   * This class create the listOfSource taking documents from Solr
+   * @param fileName (.txt), in this file are written the ids of sources by category usually is the training dataset.
+   * @param path in the folder that contains the file.
+   * @return
+   * @throws IOException
+   */
   public List<Source>  buildDataset(String fileName, String path) throws IOException{
     
     dataReader = new TxtDataReader(fileName,path);
