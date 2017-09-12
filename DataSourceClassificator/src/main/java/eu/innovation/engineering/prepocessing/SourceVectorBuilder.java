@@ -17,9 +17,7 @@ import eu.innovation.engineering.util.featurextractor.SourceVector;
 import eu.innovation.engineering.util.preprocessing.Source;
 
 public class SourceVectorBuilder {
-  
-  
-  
+
   public static void main(String[] args) throws IOException{
     boolean fromSolr = false;
     String fileName = "trainingDatasetMerged.txt";
@@ -38,10 +36,8 @@ public class SourceVectorBuilder {
   }
  
   public static List<SourceVector> createSourceVectorList(List<Source> sources) throws IOException{
-    List<SourceVector> toReturn = new ArrayList<>();
-    
-    float[][] vectors = ClusteringKMeans.returnVectorsFromSourceList((ArrayList<Source>) sources);
-    
+    List<SourceVector> toReturn = new ArrayList<>();   
+    float[][] vectors = ClusteringKMeans.returnVectorsFromSourceList((ArrayList<Source>) sources);    
     for(int i=0;i<sources.size();i++){
       SourceVector sv = new SourceVector();
       sv.setId(sources.get(i).getId());
@@ -64,6 +60,4 @@ public class SourceVectorBuilder {
     System.out.println("Source vectors loaded from "+path);
     return loadedList;
   }
-  
-
 }
