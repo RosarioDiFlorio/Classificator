@@ -55,7 +55,7 @@ public class FeatureExtractor {
 
     ClusteringKMeans clusteringDictionaries = new ClusteringKMeans();
     //Costruisco i vettori dei set dei peper, ogni paper ha un vettore che rappresenta l'insieme delle fetures.
-    float[][] vectorResults = clusteringDictionaries.returnVectorFromFeatures(listaPaper);
+    float[][] vectorResults = clusteringDictionaries.returnVectorsFromSourceList(listaPaper);
 
     //costruisco la matrice, ad ogni paper è associata una lista di features (una per dizionario). 
     HashMap<String, ArrayList<Features>> toReturn= new HashMap<String, ArrayList<Features>>();
