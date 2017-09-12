@@ -48,10 +48,11 @@ public  class DatasetBuilder {
     categoryMap = new HashMap<>();
     mapper = new ObjectMapper();
     solrClient = new SolrClient();
+    keywordExtractor = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
   }
 
 
-  public void  buildDataset(String fileName, String path) throws IOException{
+  public List<Source>  buildDataset(String fileName, String path) throws IOException{
     
     dataReader = new TxtDataReader(fileName,path);
     List<String> listIdPaper = new ArrayList<>(dataReader.getIds());
@@ -64,7 +65,7 @@ public  class DatasetBuilder {
     String simpleName =  fileName.replaceAll("\\.[a-zA-Z]*", "");   
     listSources.stream().forEach(p->p.setDescription(null));
     this.mapper.writerWithDefaultPrettyPrinter().writeValue(new File(path+"/"+simpleName+".json"), this.listSources);
-  
+    return listSources;
    
   }
 
@@ -190,13 +191,13 @@ public  class DatasetBuilder {
     this.fileName = fileName;
   }
   
-  public static void save(List<Source> listSource,String pathFile) throws JsonGenerationException, JsonMappingException, IOException{
+  public static void saveSources(List<Source> listSource,String pathFile) throws JsonGenerationException, JsonMappingException, IOException{
     ObjectMapper mapper = new ObjectMapper();
     mapper.writerWithDefaultPrettyPrinter().writeValue(new File(pathFile), listSource);
     System.out.println("source list save to "+pathFile);
   }
   
-  public List<Source> load(String pathFile) throws JsonParseException, JsonMappingException, IOException{
+  public List<Source> loadSources(String pathFile) throws JsonParseException, JsonMappingException, IOException{
     ObjectMapper mapper = new ObjectMapper();
     List<Source> toReturn = mapper.readValue(new File(pathFile), new TypeReference<List<Source>>(){});
     return toReturn;

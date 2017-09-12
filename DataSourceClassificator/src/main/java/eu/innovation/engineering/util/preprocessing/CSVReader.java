@@ -183,8 +183,7 @@ public class CSVReader {
         }           
       }
     }
-    DatasetBuilder.save(listSource, PathConfigurator.trainingAndTestFolder+"TestGeneric.json");
-    //System.out.println(debug);
+    DatasetBuilder.saveSources(listSource, PathConfigurator.trainingAndTestFolder+"TestGeneric.json");
   }
 
   public static int readResultClassifier(File csvFile, float lowThreshold,float upperThreshold,String category,boolean isCount,int batchLine) throws Exception{
@@ -226,11 +225,6 @@ public class CSVReader {
     }
     System.out.println(count+" - "+category);
     List<Source> sources = solr.getSourcesFromSolr(idList, Paper.class);
-    /*
-    ForkJoinPool poolThreads = new ForkJoinPool();
-    AnalyzerSourceTask analyzerSources = new AnalyzerSourceTask(sources, numKey);
-    List<Source> analyzedSources = poolThreads.invoke(analyzerSources);
-    */
     int localcount = 0;
     for(Source s: sources){
       localcount ++;
@@ -238,7 +232,6 @@ public class CSVReader {
       idToInsert += s.getId()+" 1\n";
       p.println(s.getId()+" - "+dataMap.get(s.getId()).get(0)+" - "+dataMap.get(s.getId()).get(1));
       p.println(kex.extractKeywordsFromText(s.getTexts(), numKey).stream().map(Keyword::getText).collect(Collectors.toList())+"\n");
-      //p.println(s.getKeywordList().stream().map(Keyword::getText).collect(Collectors.toList())+"\n");
       p.println(s.getTitle());
       p.println(s.getTexts().get(1));
       p.println("-------------------------------------\n");
