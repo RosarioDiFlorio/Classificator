@@ -37,7 +37,7 @@ public class CSVReader {
 
     TxtDataReader dataReader = new TxtDataReader();
     //dataReader.categoriesWithIds(PathConfigurator.applicationFileFolder+"trainingDatasetMerged.txt");
-
+    //dataReader.checkCategory(PathConfigurator.applicationFileFolder+"trainingDatasetMerged.txt", Configurator.Categories.society.name(), true);
 
   }
 
@@ -66,10 +66,10 @@ public class CSVReader {
     float lThreshold = (float) 0.7;
     int batchLine = 0;   
     boolean isCount = false;   
-    boolean all = true;
-    String batchCategory = Configurator.Categories.science.name();
+    boolean all = false;
+    String batchCategory = "";
 
-    String category = Configurator.Categories.religion_and_spirituality.name();
+    String category = Configurator.Categories.travel.name();
     //category = "all";
     String testFolderName=PathConfigurator.applicationFileFolder+"results.csv";
     File f = new File(testFolderName);

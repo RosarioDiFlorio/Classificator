@@ -154,16 +154,16 @@ public class ClusteringKMeans {
     CreateMatrix matrixCreator = new CreateMatrix();
 
 
-    DatasetBuilder pb = new DatasetBuilder();
-    pb.parseDatasetFromJson(fileName);
+    DatasetBuilder dataBuilder = new DatasetBuilder();
+    dataBuilder.parseDatasetFromJson(fileName);
     // PRENDO LA LISTA DI PAPER DAL FILE USANDO IL METODO DELL OGGETTO pb
-    ArrayList<Source> paperList = pb.getSourceList();
+    ArrayList<Source> paperList = dataBuilder.getSourceList();
 
     //INIZIALIZZO UNA LISTA DI ITEMS, CHE SARANNO GLI OGGETTI CHE VERRANNO CLUSTERIZZATI
     ArrayList<Item> items = new ArrayList<Item>();
 
     //CI PRENDIAMO I VETTORI PER OGNI PAPER
-    float resultsVector[][] = returnVectorFromFeatures(paperList);
+    float resultsVector[][] = returnVectorsFromSourceList(paperList);
 
     ToDoubleFunction<float[]> norm = v -> {
       double normSquared = 0.0;
@@ -357,7 +357,7 @@ public class ClusteringKMeans {
 
 
 
-  public static float[][] returnVectorFromFeatures(ArrayList<Source> paperList) throws IOException {
+  public static float[][] returnVectorsFromSourceList(ArrayList<Source> paperList) throws IOException {
 
     //ISTANZIAMO UNA MATRICE DI STRINGHE
     List<List<String>> docsK = new ArrayList<List<String>>();

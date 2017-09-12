@@ -24,7 +24,7 @@ import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 
 public class SolrClient {
 
-
+  private static final String remoteAddress = "http://192.168.200.82:8080/solr4";
 
 
   public static void main(String[] args) throws Exception{
@@ -219,7 +219,7 @@ public class SolrClient {
     for(String id : idSources){
 
       if(Paper.class.isAssignableFrom(c)){
-        String queryProduzione = "http://192.168.200.81:8080/solr4/technical_papers/get?ids="+id+"&fl=id,dc_title,dc_description";
+        String queryProduzione = remoteAddress+"/technical_papers/get?ids="+id+"&fl=id,dc_title,dc_description";
         StringBuffer responseProduzione = requestSOLR(queryProduzione);
         if(responseProduzione != null){
           resultsProduzione.add(parserJson.parse(responseProduzione.toString()).getAsJsonObject().get("response").getAsJsonObject().get("docs").getAsJsonArray());
