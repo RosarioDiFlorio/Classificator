@@ -1,5 +1,6 @@
 package eu.innovation.engineering.prepocessing.featurextractor;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -17,14 +18,20 @@ import org.apache.commons.math3.ml.clustering.KMeansPlusPlusClusterer.EmptyClust
 import org.apache.commons.math3.random.JDKRandomGenerator;
 import org.apache.cxf.jaxrs.client.WebClient;
 
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider;
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
 import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.prepocessing.DatasetBuilder;
 import eu.innovation.engineering.prepocessing.DictionaryBuilder;
+import eu.innovation.engineering.prepocessing.SourceVectorBuilder;
 import eu.innovation.engineering.util.featurextractor.Item;
 import eu.innovation.engineering.util.featurextractor.ItemWrapper;
+import eu.innovation.engineering.util.featurextractor.SourceVector;
 import eu.innovation.engineering.util.preprocessing.CosineDistance;
 import eu.innovation.engineering.util.preprocessing.Source;
 import eu.innovationengineering.word2vec.common.Constants;
@@ -37,9 +44,9 @@ public class ClusteringKMeans {
 
   public static void main (String args[]) throws IOException{
 
-    clusterWithDatasourceAsItems(PathConfigurator.trainingAndTestFolder+"trainingBig.json",500);
+    //clusterWithDatasourceAsItems(PathConfigurator.trainingAndTestFolder+"trainingBig.json",500);
     // clusterWithDatasourceAsItems(PathConfigurator.trainingAndTestFolder+"dataSourcesWithoutCategory_10000_10000.json",3000);
-
+    clusterSubCategory(PathConfigurator.applicationFileFolder+"sourceVectors.json",PathConfigurator.categoriesScienceJson, "science");
   }
 
 
@@ -147,6 +154,55 @@ public class ClusteringKMeans {
 
 
   }
+
+
+  public static void clusterSubCategory(String sourceFile, String categoryFile, String categoryChoose) throws JsonParseException, JsonMappingException, IOException{
+
+    ObjectMapper mapper = new ObjectMapper();
+    HashMap<String,float[]> categoryVectorList = mapper.readValue(new File(categoryFile), new TypeReference<HashMap<String,float[]>>() {});
+
+    List<SourceVector> sourceList = SourceVectorBuilder.loadSourceVectorList(sourceFile);
+
+    ArrayList<Item> items = new ArrayList<Item>(); 
+
+    for(SourceVector source : sourceList){
+      if(source.getCategory().contains(categoryChoose)){
+        Item item = new Item();
+        item.setId(source.getId());
+        item.setDatasource("Paper");
+        item.setTitle(source.getTitle());
+        double[] features = new double[categoryVectorList.size()];
+        int count = 0;
+        for(String category : categoryVectorList.keySet()){
+          features[count] = FeatureExtractor.cosineSimilarity(source.getVector(), categoryVectorList.get(category));
+          count++;
+        }
+        item.setFeatures(features);
+        items.add(item);
+      }
+    }
+
+    
+    
+    List<ItemWrapper> clusterInput = items.stream().map(ItemWrapper::new).collect(Collectors.toList());
+    KMeansPlusPlusClusterer<ItemWrapper> clusterer = new KMeansPlusPlusClusterer<ItemWrapper>(10, clusterInput.size(), new CosineDistance(), new JDKRandomGenerator(), EmptyClusterStrategy.LARGEST_POINTS_NUMBER);
+
+    System.out.println("Number datasource to create dictionaries: "+clusterInput.size()+" num Cluster:"+10);
+    System.out.println("Starting k-means");
+    List<CentroidCluster<ItemWrapper>> clusterResults = clusterer.cluster(clusterInput);
+    System.out.println("Ended k-means");
+
+    System.out.println("DaviesBouldin-Index: "+DaviesBouldinIndex(clusterResults,10));
+
+    
+    System.out.println(clusterResults.get(0).getPoints().get(0).getItem().getId());
+    
+    
+  }
+
+
+
+
 
 
 
@@ -356,7 +412,7 @@ public class ClusteringKMeans {
 
 
   public static float[][] returnVectorsFromTextList(ArrayList<List<String>> textList) throws IOException{
-    
+
 
     VectorListRequestBean vectorListRequest = new VectorListRequestBean();
     vectorListRequest.setDocs(textList);
