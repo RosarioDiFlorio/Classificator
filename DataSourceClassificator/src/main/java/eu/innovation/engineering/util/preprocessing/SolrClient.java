@@ -29,15 +29,10 @@ public class SolrClient {
 
   public static void main(String[] args) throws Exception{
     //requestNPatent(0,100);
-<<<<<<< HEAD
     //useManualCheckKeywords("26783169_645");
     requestNTechincalPaper(0,100000);
     
-=======
-    //useManualCheckKeywords("26783169_645");
-    requestNPatent(0,100);
-    requestNTechincalPaper(0,20000);
->>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
+
   }
 
 

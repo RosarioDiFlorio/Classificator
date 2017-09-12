@@ -1,0 +1,10 @@
+/biology
+/chemistry
+/computer science
+/ecology
+/engineering
+/geology
+/mathematics
+/physics
+/social science
+/weather
