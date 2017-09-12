@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.core.JsonParseException;
@@ -27,7 +28,7 @@ public class SourceVectorBuilder {
    * @param args
    * @throws IOException
    */
-  public static void main(String[] args) throws IOException{
+  public static void main (String[] args) throws IOException{
     boolean fromSolr = false;
     String fileName = "trainingDatasetMerged.txt";
     String path = PathConfigurator.trainingAndTestFolder;
@@ -58,6 +59,7 @@ public class SourceVectorBuilder {
       sv.setId(sources.get(i).getId());
       sv.setCategory(sources.get(i).getCategoryList().get(0).getLabel());
       sv.setTitle(sources.get(i).getTitle());
+      sv.setKeywords(sources.get(i).getKeywordList().stream().map(k->k.getText()).collect(Collectors.toList()));
       sv.setVector(vectors[i]);
       toReturn.add(sv);
     }
