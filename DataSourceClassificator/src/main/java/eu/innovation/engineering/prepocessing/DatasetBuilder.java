@@ -44,7 +44,7 @@ public  class DatasetBuilder {
 
   /**
    * Constructor
-   * As default instanziate as KeywordExtractor the class InnenExtractor
+   * As default instanziate a KeywordExtractor as InnenExtractor
    */
   public DatasetBuilder(){
     listSources = new ArrayList<Source>();
@@ -66,12 +66,9 @@ public  class DatasetBuilder {
     
     dataReader = new TxtDataReader(fileName,path);
     List<String> listIdPaper = new ArrayList<>(dataReader.getIds());
-    
     listSources.addAll(solrClient.getSourcesFromSolr(listIdPaper,Paper.class));
-    
     listSources = (ArrayList<Source>) addCategories(listSources);
     listSources = (ArrayList<Source>) addKeywords(listSources);
-
     String simpleName =  fileName.replaceAll("\\.[a-zA-Z]*", "");   
     listSources.stream().forEach(p->p.setDescription(null));
     this.mapper.writerWithDefaultPrettyPrinter().writeValue(new File(path+"/"+simpleName+".json"), this.listSources);
@@ -109,26 +106,26 @@ public  class DatasetBuilder {
     this.listSources = mapper.readValue(new File(filename), new TypeReference<ArrayList<Source>>(){});
 
 
-    ArrayList<Source> tmpListpaper = new ArrayList<>();
-    tmpListpaper.addAll(listSources);
+    ArrayList<Source> tmpListSources = new ArrayList<>();
+    tmpListSources.addAll(listSources);
 
-    for(Source p: tmpListpaper){
+    for(Source p: tmpListSources){
       if(p.getKeywordList()==null || p.getKeywordList().isEmpty())
         listSources.remove(p);
     }
 
-    for(Source paper: listSources){
-      if(paper.getCategoryList()!=null && !paper.getCategoryList().isEmpty()){
+    for(Source source: listSources){
+      if(source.getCategoryList()!=null && !source.getCategoryList().isEmpty()){
         //creo l'hashmap tra categorie e paper
-        for(CategoriesResult c : paper.getCategoryList()){
+        for(CategoriesResult c : source.getCategoryList()){
           if(categoryMap.containsKey(c.getLabel())){
             //aggiungo il paper alla lista della mappa
             ArrayList<Source> local = categoryMap.get(c.getLabel());
-            local.add(paper);
+            local.add(source);
             categoryMap.put(c.getLabel(), local);
           }else{
             ArrayList<Source> local = new ArrayList<>();
-            local.add(paper);
+            local.add(source);
             categoryMap.put(c.getLabel(), local);
           }
         }
@@ -139,9 +136,9 @@ public  class DatasetBuilder {
   }
   
   
-  public static HashSet<String> returnAllKeywords(ArrayList<Source> paperList){
+  public static HashSet<String> returnAllKeywords(ArrayList<Source> sourceList){
     HashSet<String> keywordList = new HashSet<String>();
-    for(Source p : paperList){
+    for(Source p : sourceList){
       for(Keyword k : p.getKeywordList()){
         keywordList.add(k.getText());
       }
