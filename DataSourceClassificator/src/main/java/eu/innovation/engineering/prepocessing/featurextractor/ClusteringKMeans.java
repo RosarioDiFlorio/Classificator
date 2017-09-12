@@ -358,10 +358,6 @@ public class ClusteringKMeans {
   public static float[][] returnVectorsFromTextList(ArrayList<List<String>> textList) throws IOException{
     
 
-
-    
-
-
     VectorListRequestBean vectorListRequest = new VectorListRequestBean();
     vectorListRequest.setDocs(textList);
 
