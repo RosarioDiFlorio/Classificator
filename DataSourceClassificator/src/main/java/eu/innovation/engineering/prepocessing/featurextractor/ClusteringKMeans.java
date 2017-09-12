@@ -38,8 +38,8 @@ public class ClusteringKMeans {
   public static void main (String args[]) throws IOException{
 
     clusterWithDatasourceAsItems(PathConfigurator.trainingAndTestFolder+"trainingBig.json",500);
-   // clusterWithDatasourceAsItems(PathConfigurator.trainingAndTestFolder+"dataSourcesWithoutCategory_10000_10000.json",3000);
-    
+    // clusterWithDatasourceAsItems(PathConfigurator.trainingAndTestFolder+"dataSourcesWithoutCategory_10000_10000.json",3000);
+
   }
 
 
@@ -50,7 +50,7 @@ public class ClusteringKMeans {
     float DB = 0; 
 
 
-    
+
     for(int i=0;i<cut;i++){
       CentroidCluster<ItemWrapper> pointsI = clusterResults.get(i);
       //Calcolo la distanza media del cluster I
@@ -68,13 +68,13 @@ public class ClusteringKMeans {
       }
       DB+=max;
     }
-    
-    
+
+
     return DB/cut;
 
   }
-  
-  
+
+
   public static float avgDistanceIntraCluster(CentroidCluster<ItemWrapper> cluster){
     float avg = 0;
     Clusterable center = cluster.getCenter();
@@ -82,9 +82,9 @@ public class ClusteringKMeans {
       avg+=Math.acos(FeatureExtractor.cosineSimilarity(point.getPoint(), center.getPoint()));
     }
     return avg=avg/cluster.getPoints().size();
-    
-    
-    
+
+
+
   }
 
   public static void clusterWithKeywordsAsItems(String fileName, int cut) throws IOException {
@@ -207,7 +207,7 @@ public class ClusteringKMeans {
     System.out.println("Ended k-means");
 
     System.out.println("DaviesBouldin-Index: "+DaviesBouldinIndex(clusterResults,cut));
-    
+
     //creo la lista di dizionari, ogni dizionario contiene la lista di keywords e il vettore che rappresenta l'intero dizionario, utile nell'analisi LSA
     HashMap<String,Dictionary> dictionaries = new HashMap<>();
 
@@ -253,7 +253,7 @@ public class ClusteringKMeans {
       }
     }
 
-    
+
     //STAMPO SU FILE I CLUSTER OTTENUTI
     FileWriter writer = new FileWriter(PathConfigurator.dictionariesFolder+cut+"_dictionaries.txt");
 
@@ -355,7 +355,29 @@ public class ClusteringKMeans {
   }
 
 
+  public static float[][] returnVectorsFromTextList(ArrayList<List<String>> textList) throws IOException{
+    
 
+
+    
+
+
+    VectorListRequestBean vectorListRequest = new VectorListRequestBean();
+    vectorListRequest.setDocs(textList);
+
+    //chiamo il wordToVec per calcolare il vettore delle stinghe ottenute
+    WebClient webClient = WebClient.create("http://smartculture-projects.innovationengineering.eu/word2vec-rest-service/", Arrays.asList(new JacksonJaxbJsonProvider()));
+
+    try (Word2vecServiceImpl word2vecService = new Word2vecServiceImpl()) {      
+      word2vecService.setWebClient(webClient);
+      return word2vecService.getVectorList(Constants.GENERAL_CORPUS, Constants.ENGLISH_LANG, vectorListRequest);
+    }
+    catch(Exception e){
+      System.out.println(e);
+      return null;
+    }
+
+  }
 
   public static float[][] returnVectorsFromSourceList(ArrayList<Source> paperList) throws IOException {
 

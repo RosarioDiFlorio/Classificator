@@ -28,9 +28,9 @@ public class SolrClient {
 
 
   public static void main(String[] args) throws Exception{
-    //requestNPatent(0,100);
-    //useManualCheckKeywords("26783169_645");
+
     requestNTechincalPaper(0,100000);
+
   }
 
 

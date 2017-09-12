@@ -14,7 +14,7 @@ public class PathConfigurator {
   public static final String applicationTestFolder= applicationFileFolder+"test/";
   public static final String applicationResultFolder = applicationFileFolder+"results/";
   public static final String categoriesScience = "data/application/scienceCategory.txt";
-  
+  public static final String categoriesScienceJson = "data/application/scienceCategoryJSON.json";
   
   
 }
