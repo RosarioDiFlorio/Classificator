@@ -28,7 +28,7 @@ public class SourceVectorBuilder {
    * @throws IOException
    */
   public static void main(String[] args) throws IOException{
-    boolean fromSolr = true;
+    boolean fromSolr = false;
     String fileName = "trainingDatasetMerged.txt";
     String path = PathConfigurator.trainingAndTestFolder;
     String pathWhereSave = PathConfigurator.applicationFileFolder+"sources.json";
@@ -57,6 +57,7 @@ public class SourceVectorBuilder {
       SourceVector sv = new SourceVector();
       sv.setId(sources.get(i).getId());
       sv.setCategory(sources.get(i).getCategoryList().get(0).getLabel());
+      sv.setTitle(sources.get(i).getTitle());
       sv.setVector(vectors[i]);
       toReturn.add(sv);
     }

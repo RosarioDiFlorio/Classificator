@@ -6,6 +6,7 @@ public class SourceVector {
   
   private String id;
   private String category;
+  private String title;
   private float[] vector;
   
   public String getId() {
@@ -28,7 +29,13 @@ public class SourceVector {
   }
   @Override
   public String toString() {
-    return "SourceVector [id=" + id + ", category=" + category + ", vector=" + Arrays.toString(vector) + "]";
+    return "SourceVector [id=" + id + ", category=" + category + ", title=" + title + ", vector=" + Arrays.toString(vector) + "]";
+  }
+  public String getTitle() {
+    return title;
+  }
+  public void setTitle(String title) {
+    this.title = title;
   }
   
   
