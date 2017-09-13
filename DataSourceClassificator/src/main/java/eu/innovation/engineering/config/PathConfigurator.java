@@ -13,8 +13,8 @@ public class PathConfigurator {
   public static final String pyFolder = "data/datasets/python/";
   public static final String applicationTestFolder= applicationFileFolder+"test/";
   public static final String applicationResultFolder = applicationFileFolder+"results/";
-  public static final String categoriesScience = "data/application/scienceCategory.txt";
-  public static final String categoriesScienceJson = "data/application/scienceCategoryJSON.json";
+  public static final String categories = "data/application/dictionariesCategory/";
+  
   
   
 }

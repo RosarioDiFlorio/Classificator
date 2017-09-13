@@ -3,6 +3,7 @@ package eu.innovation.engineering.prepocessing.featurextractor;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -46,7 +47,7 @@ public class ClusteringKMeans {
 
     //clusterWithDatasourceAsItems(PathConfigurator.trainingAndTestFolder+"trainingBig.json",500);
     // clusterWithDatasourceAsItems(PathConfigurator.trainingAndTestFolder+"dataSourcesWithoutCategory_10000_10000.json",3000);
-    clusterSubCategory(PathConfigurator.applicationFileFolder+"sourceVectors.json",PathConfigurator.categoriesScienceJson, "science");
+    clusterSubCategory(PathConfigurator.applicationFileFolder+"sourceVectors.json",PathConfigurator.categories+"scienceJson.json", "science");
   }
 
 
@@ -128,7 +129,7 @@ public class ClusteringKMeans {
     items=null;
 
 
-    KMeansPlusPlusClusterer<ItemWrapper> clusterer = new KMeansPlusPlusClusterer<ItemWrapper>(cut, clusterInput.size(), new CosineDistance(), new JDKRandomGenerator(), EmptyClusterStrategy.LARGEST_POINTS_NUMBER);
+    KMeansPlusPlusClusterer<ItemWrapper> clusterer = new KMeansPlusPlusClusterer<ItemWrapper>(cut, -1, new CosineDistance(), new JDKRandomGenerator(), EmptyClusterStrategy.LARGEST_POINTS_NUMBER);
 
     List<CentroidCluster<ItemWrapper>> clusterResults = clusterer.cluster(clusterInput);
 
@@ -163,41 +164,58 @@ public class ClusteringKMeans {
 
     List<SourceVector> sourceList = SourceVectorBuilder.loadSourceVectorList(sourceFile);
 
+    PrintWriter writer = new PrintWriter(PathConfigurator.applicationFileFolder+"CosineSimilarityResults.txt");
     ArrayList<Item> items = new ArrayList<Item>(); 
 
     for(SourceVector source : sourceList){
       if(source.getCategory().contains(categoryChoose)){
+        writer.println("\nID: "+source.getId());
+        writer.println("TITLE: "+source.getTitle());
+        writer.println("KEYWORDS: "+source.getKeywords().toString());
         Item item = new Item();
         item.setId(source.getId());
         item.setDatasource("Paper");
-        item.setTitle(source.getTitle());
+        item.setTitle(source.getTitle()+"\n"+source.getKeywords().toString()+"\n");
         double[] features = new double[categoryVectorList.size()];
         int count = 0;
         for(String category : categoryVectorList.keySet()){
+          
           features[count] = FeatureExtractor.cosineSimilarity(source.getVector(), categoryVectorList.get(category));
+          writer.println("      "+category+": "+features[count]);
           count++;
         }
         item.setFeatures(features);
         items.add(item);
       }
+     
     }
+    writer.flush();
+    writer.close();
 
-    
-    
+
+
+
     List<ItemWrapper> clusterInput = items.stream().map(ItemWrapper::new).collect(Collectors.toList());
-    KMeansPlusPlusClusterer<ItemWrapper> clusterer = new KMeansPlusPlusClusterer<ItemWrapper>(10, clusterInput.size(), new CosineDistance(), new JDKRandomGenerator(), EmptyClusterStrategy.LARGEST_POINTS_NUMBER);
+    KMeansPlusPlusClusterer<ItemWrapper> clusterer = new KMeansPlusPlusClusterer<ItemWrapper>(4);
 
-    System.out.println("Number datasource to create dictionaries: "+clusterInput.size()+" num Cluster:"+10);
+    System.out.println("Number datasource to create dictionaries: "+clusterInput.size()+" num Cluster:"+4);
     System.out.println("Starting k-means");
     List<CentroidCluster<ItemWrapper>> clusterResults = clusterer.cluster(clusterInput);
     System.out.println("Ended k-means");
 
-    System.out.println("DaviesBouldin-Index: "+DaviesBouldinIndex(clusterResults,10));
+    System.out.println("DaviesBouldin-Index: "+DaviesBouldinIndex(clusterResults,4));
 
-    
-    System.out.println(clusterResults.get(0).getPoints().get(0).getItem().getId());
-    
-    
+    writer = new PrintWriter(PathConfigurator.applicationFileFolder+"clusters.txt");
+    for (int i=0; i<clusterResults.size(); i++) {
+     writer.println("\nCluster: "+i);
+     System.out.println("\n\nCluster: "+i);
+      for (ItemWrapper itemWrapper : clusterResults.get(i).getPoints()){
+        writer.println("    id: "+itemWrapper.getItem().getId()+"   Keywords: "+itemWrapper.getItem().getTitle());
+        System.out.println("    id: "+itemWrapper.getItem().getId()+"   Keywords: "+itemWrapper.getItem().getTitle());
+      }
+    }
+    writer.flush();
+    writer.close();
   }
 
 
@@ -255,7 +273,7 @@ public class ClusteringKMeans {
     // initialize a new clustering algorithm. 
     // we use KMeans++ with 10 clusters and 10000 iterations maximum.
     // we did not specify a distance measure; the default (euclidean distance) is used.
-    KMeansPlusPlusClusterer<ItemWrapper> clusterer = new KMeansPlusPlusClusterer<ItemWrapper>(cut, clusterInput.size(), new CosineDistance(), new JDKRandomGenerator(), EmptyClusterStrategy.LARGEST_POINTS_NUMBER);
+    KMeansPlusPlusClusterer<ItemWrapper> clusterer = new KMeansPlusPlusClusterer<ItemWrapper>(cut, -1, new CosineDistance(), new JDKRandomGenerator(), EmptyClusterStrategy.LARGEST_POINTS_NUMBER);
 
     System.out.println("Number datasource to create dictionaries: "+clusterInput.size()+" num Cluster:"+cut);
     System.out.println("Starting k-means");
@@ -416,7 +434,6 @@ public class ClusteringKMeans {
 
     VectorListRequestBean vectorListRequest = new VectorListRequestBean();
     vectorListRequest.setDocs(textList);
-
     //chiamo il wordToVec per calcolare il vettore delle stinghe ottenute
     WebClient webClient = WebClient.create("http://smartculture-projects.innovationengineering.eu/word2vec-rest-service/", Arrays.asList(new JacksonJaxbJsonProvider()));
 

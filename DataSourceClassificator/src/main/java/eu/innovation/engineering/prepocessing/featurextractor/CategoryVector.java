@@ -8,28 +8,30 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import eu.innovation.engineering.config.PathConfigurator;
 
 public class CategoryVector {
-  
-  
+
+
   public static void main(String[] args) throws IOException{
-    execute(PathConfigurator.categoriesScience);
-    
+    execute(PathConfigurator.categories+"science.txt",null);
+
   }
-  
-  public static void execute(String path) throws IOException{
-    
+
+  @Autowired
+  public static void execute(String pathCategory,String pathDictionaries) throws IOException{
+
     ArrayList<List<String>> categoryList = new ArrayList<List<String>>();
-    FileReader file = new FileReader(path);
+    FileReader file = new FileReader(pathCategory);
     BufferedReader reader = new BufferedReader(file);
-    
+
     String line = reader.readLine();
     ArrayList<String> category = new ArrayList<String>();
     while(line!=null){
-      line = line.replace("/", "");
       category.add(line);
       List<String> categoryToAdd = new ArrayList<String>();
       if(line.contains(" ")){
@@ -39,26 +41,45 @@ public class CategoryVector {
       }else{
         categoryToAdd.add(line);
       }
-      categoryList.add(categoryToAdd);
-      line= reader.readLine();
-      
-    }
+      try{
+        if(pathDictionaries!=null){
+          line = line.replace(" ","_");
+          FileReader fileDictionary = new FileReader(pathDictionaries+line+"Dictionary.txt");
+          BufferedReader readerDictionary = new BufferedReader(fileDictionary);
+
+          String lineDictionary = readerDictionary.readLine();
+          while(lineDictionary!=null){
+            String[] splitLine= lineDictionary.split(" ");
+            for(int i=0; i<splitLine.length;i++){
+              categoryToAdd.add(splitLine[i]);
+            }
+            lineDictionary = readerDictionary.readLine();
+          }
+        }
+      }
+      catch(Exception ex){
+        System.out.println("Il file"+pathDictionaries+line+"Dictionary.txt"+" non esiste");
+      }
     
-    float[][] vectors = ClusteringKMeans.returnVectorsFromTextList(categoryList);
-    HashMap<String,float[]> categoryAndVectorList = new HashMap<>();
-    for(int i=0;i<vectors.length;i++){
-      categoryAndVectorList.put(category.get(i), vectors[i]);
-    }
-    
-    String json = new ObjectMapper().writeValueAsString(categoryAndVectorList);
-    
-    FileWriter writer = new FileWriter(PathConfigurator.categoriesScienceJson);
-    
-    writer.write(json);
-    writer.flush();
-    writer.close();
-    
-    
+    categoryList.add(categoryToAdd);
+    line= reader.readLine();
+
   }
+  float[][] vectors = ClusteringKMeans.returnVectorsFromTextList(categoryList);
+  HashMap<String,float[]> categoryAndVectorList = new HashMap<>();
+  for(int i=0;i<vectors.length;i++){
+    categoryAndVectorList.put(category.get(i), vectors[i]);
+  }
+
+  String json = new ObjectMapper().writeValueAsString(categoryAndVectorList);
+
+  FileWriter writer = new FileWriter(PathConfigurator.categories+"scienceJson.json");
+
+  writer.write(json);
+  writer.flush();
+  writer.close();
+
+
+}
 
 }
