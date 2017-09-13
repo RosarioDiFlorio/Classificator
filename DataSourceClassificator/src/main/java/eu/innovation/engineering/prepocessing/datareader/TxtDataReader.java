@@ -163,6 +163,25 @@ public class TxtDataReader implements DataReader {
     return categoryPapers;
   }
 
+  
+  
+  public final static Set<String> getCategories(String pathFileCategories) throws IOException{
+    Set<String> categories = new HashSet<String>();
+    FileReader fr = new FileReader(pathFileCategories);
+    BufferedReader bufferedReader = new BufferedReader(fr);
+    String line = bufferedReader.readLine();
+    while(line!=null){
+      String cat[] = line.split("/");
+      if(cat.length==1)
+        categories.add("/"+line);
+      line=bufferedReader.readLine();
+    }
+    return categories;
+  }
+  
+  
+  
+  
   public String getFileToRead() {
     return fileToRead;
   }

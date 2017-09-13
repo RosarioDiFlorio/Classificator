@@ -29,11 +29,11 @@ public class CSVReader {
 
 
   public static void main(String[] args) throws Exception{
-    //createGenericDataset(PathConfigurator.applicationFileFolder+"datasetGeneric/");
+    createGenericDataset(PathConfigurator.applicationFileFolder+"datasetGeneric/chemistry/");
 
 
     //mainToCreateDataset(args);
-    mainToTest(args);
+    //mainToTest(args);
 
     TxtDataReader dataReader = new TxtDataReader();
     //dataReader.categoriesWithIds(PathConfigurator.applicationFileFolder+"trainingDatasetMerged.txt");
@@ -171,7 +171,7 @@ public class CSVReader {
           }
           s.setTexts(texts);
           s.setId(txtFile);
-          s.setKeywordList((ArrayList<Keyword>) kex.extractKeywordsFromText(texts, 10));
+          s.setKeywordList((ArrayList<Keyword>) kex.extractKeywordsFromText(texts, 20));
           listSource.add(s);
           debug+=s.getId()+"\n";
           debug+= s.getTitle()+"\n\n";
