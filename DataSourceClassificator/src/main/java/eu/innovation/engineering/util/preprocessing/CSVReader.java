@@ -29,13 +29,13 @@ public class CSVReader {
 
 
   public static void main(String[] args) throws Exception{
-    //createGenericDataset(PathConfigurator.applicationFileFolder+"datasetGeneric/");
+    createGenericDataset(PathConfigurator.applicationFileFolder+"datasetGeneric/");
 
 
     //mainToCreateDataset(args);
-    mainToTest(args);
+    //mainToTest(args);
 
-    TxtDataReader dataReader = new TxtDataReader();
+    //TxtDataReader dataReader = new TxtDataReader();
     //dataReader.categoriesWithIds(PathConfigurator.applicationFileFolder+"trainingDatasetMerged.txt");
     //dataReader.checkCategory(PathConfigurator.applicationFileFolder+"trainingDatasetMerged.txt", Configurator.Categories.society.name(), true);
 

@@ -19,9 +19,9 @@ public class Start {
   public static void main(String[] args) throws IOException{
 
     //CREA IL FILE JSON DEI DIZIONARI
-    mainOnlyForDictionaries();
+    //mainOnlyForDictionaries();
     //CREA I FILE JSON DEl DATASET TXT PASSATO( lo lancio sul train, Il test in realtà lo genero con la classe SolrClient)
-    mainToGenerateJsonFromTxt();
+    //mainToGenerateJsonFromTxt();
     //CREA I FILE CSV DI TRAIN E TEST
     mainForCSV();
 
