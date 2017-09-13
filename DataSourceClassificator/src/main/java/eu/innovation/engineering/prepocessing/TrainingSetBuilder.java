@@ -15,6 +15,7 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ibm.watson.developer_cloud.natural_language_understanding.v1.model.CategoriesResult;
 
 import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.prepocessing.featurextractor.CategoryVector;
@@ -23,6 +24,7 @@ import eu.innovation.engineering.prepocessing.featurextractor.FeatureExtractor;
 import eu.innovation.engineering.util.featurextractor.Item;
 import eu.innovation.engineering.util.featurextractor.ItemWrapper;
 import eu.innovation.engineering.util.featurextractor.SourceVector;
+import eu.innovation.engineering.util.preprocessing.Source;
 
 /**
  * Questa classe serve per generare il trainingSet per le categorie indicate
@@ -36,16 +38,16 @@ import eu.innovation.engineering.util.featurextractor.SourceVector;
 
 public class TrainingSetBuilder {
 
-  
-  
-  
+
+
+
   public static void main(String[] args) throws IOException {
     CategoryVector categoryVector = new CategoryVector();
     CategoryVector.execute(PathConfigurator.categories+"science.txt",null);
     clusterSubCategory(PathConfigurator.applicationFileFolder+"sourceVectors.json",PathConfigurator.categories+"scienceJson.json", "science");
 
   }
-  
+
   public static void clusterSubCategory(String sourceFile, String categoryFile, String categoryChoose) throws JsonParseException, JsonMappingException, IOException{
 
     ObjectMapper mapper = new ObjectMapper();
@@ -67,16 +69,23 @@ public class TrainingSetBuilder {
         item.setTitle(source.getTitle()+"\n"+source.getKeywords().toString()+"\n");
         double[] features = new double[categoryVectorList.size()];
         int count = 0;
+        String hightCategory = "";
+        double valHightCategory = 0;
         for(String category : categoryVectorList.keySet()){
-          
+
           features[count] = FeatureExtractor.cosineSimilarity(source.getVector(), categoryVectorList.get(category));
           writer.println("      "+category+": "+features[count]);
+          if(features[count]>valHightCategory){
+            valHightCategory = features[count];
+            hightCategory = category;
+          }
           count++;
         }
+        item.setBestFeature(hightCategory);
         item.setFeatures(features);
         items.add(item);
       }
-     
+
     }
     writer.flush();
     writer.close();
@@ -96,8 +105,8 @@ public class TrainingSetBuilder {
 
     writer = new PrintWriter(PathConfigurator.applicationFileFolder+"clusters.txt");
     for (int i=0; i<clusterResults.size(); i++) {
-     writer.println("\nCluster: "+i);
-     System.out.println("\n\nCluster: "+i);
+      writer.println("\nCluster: "+i);
+      System.out.println("\n\nCluster: "+i);
       for (ItemWrapper itemWrapper : clusterResults.get(i).getPoints()){
         writer.println("    id: "+itemWrapper.getItem().getId()+"   Keywords: "+itemWrapper.getItem().getTitle());
         System.out.println("    id: "+itemWrapper.getItem().getId()+"   Keywords: "+itemWrapper.getItem().getTitle());
@@ -105,6 +114,31 @@ public class TrainingSetBuilder {
     }
     writer.flush();
     writer.close();
+
+
+    List<Source> source = DatasetBuilder.loadSources(PathConfigurator.applicationFileFolder+"allSources.json");
+
+    List<Source> newSource = new ArrayList<Source>();
+    for(Item item : items){
+      for(Source s : source){
+        if(s.getCategoryList().get(0).getLabel().contains(categoryChoose)){
+          if(s.getId().equals(item.getId())){
+            CategoriesResult category = new CategoriesResult();
+            category.setLabel(item.getBestFeature());
+            ArrayList<CategoriesResult> categoryList = new ArrayList<CategoriesResult>();
+            categoryList.add(category);
+            s.setCategoryList(categoryList);
+          }
+          newSource.add(s);
+        }
+      }
+    }
+
+
+    DatasetBuilder.saveSources(newSource, PathConfigurator.applicationFileFolder+"dictionariesCategory/"+categoryChoose+"/sources.json");
+
+
+
   }
-    
+
 }

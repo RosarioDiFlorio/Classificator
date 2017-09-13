@@ -7,6 +7,7 @@ public class Item {
   private double[] features;
   private String datasource;
   private String title;
+  private String bestFeature;
   
   
   
@@ -14,6 +15,20 @@ public class Item {
   
   
   
+  
+  public String getBestFeature() {
+    return bestFeature;
+  }
+
+
+
+  
+  public void setBestFeature(String bestFeature) {
+    this.bestFeature = bestFeature;
+  }
+
+
+
   public String getTitle() {
     return title;
   }
