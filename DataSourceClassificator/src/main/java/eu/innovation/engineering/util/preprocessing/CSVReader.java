@@ -188,6 +188,9 @@ public class CSVReader {
     DatasetBuilder.saveSources(listSource, PathConfigurator.trainingAndTestFolder+"TestGeneric.json");
   }
 
+  
+  
+  
   public static int readResultClassifier(File csvFile, float lowThreshold,float upperThreshold,String category,boolean isCount,int batchLine) throws Exception{
     KeywordExtractor kex = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
     Map<String, List<String>> dataMap = read(csvFile.getAbsolutePath());

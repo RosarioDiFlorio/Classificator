@@ -1,4 +1,26 @@
 [ {
+<<<<<<< HEAD
+  "id" : "Glossary_of_chemistry_terms_13849906.txt",
+  "title" : "absolute zero",
+  "description" : null,
+  "texts" : [ "absolute zero", "kelvin", "absorbance", "accuracy", "acid", "acid anhydride", "acyl group", "acid dissociation constant", "actinium", "lawrencium", "activated complex", "activation energy", "activity series", "actual yield", "addition reaction", "adhesion", "aeration", "alcohol", "aldehyde", "alkali metals", "alkaline earth metals", "alkane", "alkene", "alkyl group", "alkyne", "allomer", "allotropy", "Carbon", "diamonds", "graphite", "fullerene", "amplitude", "anion", "ion", "anode", "aromaticity", "benzene", "atom", "neutrons", "protons", "electrons", "atomic mass unit", "atomic number", "atomic orbital", "atomic radius", "average atomic mass", "Avogadros law", "Avogadros number", "barometer", "pH", "sodium hydroxide", "base anhydride", "Beer-Lambert law", "biochemistry", "Bohr model", "boiling", "phase transition", "boiling point", "boiling-point elevation", "Boyles law", "Braggs law", "buckminsterfullerene", "buffered solution", "burette", "calorimeter", "catalyst", "cation", "centrifugation", "centrifuge", "galvanic cell", "chain reaction", "Charless law", "chelation", "chemical formula", "chemical law", "chemical reaction", "closed system", "colligative properties", "colloid", "milk", "combustion", "condensation", "conjugate acid", "conjugated system", "cooling curve", "covalent bond", "crystal", "cuvette", "spectroscopic", "deliquescence", "density", "diffusion", "dipolar bond", "dipole", "double bond", "diatomic", "electrolyte", "electrochemical cell", "electromagnetic radiation", "electromagnetism", "electromotive force", "electron", "electron shells", "electric charge", "coulomb", "electromagnetic interaction", "atomic number", "energy", "enthalpy", "entropy", "enzyme", "Empirical formula", "exothermic process", "extrinsic property", "freezing", "Faraday constant", "electrical charge", "electrochemistry", "coulomb", "Avogadro number", "Faradays laws of electrolysis", "Michael Faraday", "Ficks laws of diffusion", "frequency", "hertz", "Galvanic cell", "salt bridge", "gas", "Gay-Lussacs Law", "geochemistry", "Gibbs energy", "gram-atom", "halogen", "hadron", "heat", "Henrys law", "Hesss law", "Hunds rules", "ideal gas", "ideal gas law", "induced radioactivity", "inorganic compound", "inorganic chemistry", "IUPAC", "intrinsic property", "ion", "ionic bond", "ionization", "Joule", "kelvin", "ketone", "Kinetic energy", "lanthanides", "Laws of thermodynamics", "Lewis acid", "Lewis base", "liquid", "light", "London dispersion forces", "magnetic quantum number", "malleability", "manometer", "mass", "metal", "melting", "metalloid", "methylene blue", "chemical compound", "molecular formula", "microcentrifuge", "molar attenuation coefficient", "molar mass", "molecular formula", "molecular orbital", "molecular orbital diagram", "molecule", "neutron", "subatomic particle", "neutrino", "radioactive decay", "noble gas", "non-metal", "nuclear magnetic resonance spectroscopy", "number density", "atomic orbital", "molecular orbital", "organic compound", "organic chemistry", "organic redox reaction", "oxidation", "oxidation state", "oxidizing agent", "pH", "potential energy", "accuracy", "photon", "electromagnetic radiation", "proton", "protonation", "quantum mechanics", "quarks", "radiation", "radioactive decay", "Raoults law", "reactivity series", "reagent", "redox", "reducing agent", "reduction potential", "salt bridge", "Schrödinger equation", "semiconductor", "sol-gel", "solid", "Youngs modulus", "solution", "solvent", "spectrochemistry", "spectroscopy", "speed of light", "Standard conditions for temperature and pressure", "state of matter", "matter", "gas", "liquid", "solid", "structural formula", "subatomic particles", "talc", "Mohs Scale", "temperature", "thermal conductivity", "thermochemistry", "thermodynamics", "thermometer", "titration", "torr", "transition metal", "transuranic element", "triple point", "Tyndall effect", "UN number", "uncertainty", "uncertainty principle", "valence electron", "Valence bond theory", "van der Waals force", "van t Hoff factor", "vapor", "vaporization", "viscosity", "volt", "voltmeter", "wave function", "joule", "X-ray", "X-ray photoelectron spectroscopy" ],
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 9.0,
+    "sentiment" : null,
+    "text" : "law"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 4.0,
+    "sentiment" : null,
+    "text" : "reaction"
+=======
   "id" : "art1.txt",
   "title" : "In physics, two wave sources are perfectly coherent if they have a constant phase difference and the same frequency. Coherence is an ideal property of waves that enables stationary (i.e. temporally and spatially constant) interference. It contains several distinct concepts, which are limiting cases that never quite occur in reality but allow an understanding of the physics of waves, and has become a very important concept in quantum physics. More generally, coherence describes all properties of the correlation between physical quantities of a single wave, or between several waves or wave packets.",
   "description" : null,
@@ -35,6 +57,7 @@
     "relevance" : 5.0,
     "sentiment" : null,
     "text" : "fringe"
+>>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
   } ],
   "categoryList" : null,
   "conceptList" : null
