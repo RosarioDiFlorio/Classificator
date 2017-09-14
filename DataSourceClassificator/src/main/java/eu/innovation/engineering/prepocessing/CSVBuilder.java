@@ -176,7 +176,10 @@ public class CSVBuilder {
 
     for(String category : categories){
       for(IdAndTarget idAndTarget : featuresPapersTrainingWithTarget.keySet()){
-        if(idAndTarget.getTarget().equals(category)){
+        System.out.println("  sada "+ idAndTarget.getTarget());
+        System.out.println(category);
+        if(idAndTarget.getTarget().contains(category)){
+          
           String keywordsToWrite= idAndTarget.getId()+",";
           Iterator iterator = featuresPapersTrainingWithTarget.get(idAndTarget).iterator();
           Features feature = (Features) iterator.next();
@@ -197,7 +200,7 @@ public class CSVBuilder {
             else
               keywordsToWrite+=","+0;
           }
-          
+      
           pWriterCSV.println(keywordsToWrite);
         }
       }
