@@ -162,18 +162,16 @@ public class TxtDataReader implements DataReader {
     }
     return categoryPapers;
   }
-
-  
-  
-  public final static Set<String> getCategories(String pathFileCategories) throws IOException{
-    Set<String> categories = new HashSet<String>();
+ 
+  public static List<String> getCategories(String pathFileCategories) throws IOException{
+    List<String> categories = new ArrayList<>();
     FileReader fr = new FileReader(pathFileCategories);
     BufferedReader bufferedReader = new BufferedReader(fr);
     String line = bufferedReader.readLine();
-    while(line!=null){
-      String cat[] = line.split("/");
-      if(cat.length==1)
-        categories.add("/"+line);
+    int index = 0;
+    while(line!= null){
+      categories.add(index, line);
+      index++;
       line=bufferedReader.readLine();
     }
     return categories;
