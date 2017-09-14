@@ -27,9 +27,9 @@ public class DictionaryBuilder {
     db.buildDataset(fileName,path);
   }
 
-  public static HashMap<String, Dictionary> build(String JsonPath,int kMeans) throws IOException{
+  public static HashMap<String, Dictionary> build(String JsonPath,int kMeans,String path) throws IOException{
     ClusteringKMeans clusteringDictionaries = new ClusteringKMeans();
-    return clean(clusteringDictionaries.clusterWithDatasourceAsItems(JsonPath,kMeans),kMeans);
+    return clean(clusteringDictionaries.clusterWithDatasourceAsItems(JsonPath,kMeans,path),kMeans);
   }
 
   public static void save(HashMap<String, Dictionary> dictionaries,String pathToSave) throws JsonGenerationException, JsonMappingException, IOException{

@@ -3,7 +3,6 @@ package eu.innovation.engineering.start;
 import java.io.IOException;
 import java.util.HashMap;
 
-import eu.innovation.engineering.config.Configurator;
 import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.prepocessing.CSVBuilder;
 import eu.innovation.engineering.prepocessing.DatasetBuilder;
@@ -26,11 +25,11 @@ public class Start {
 
   //Test
   private static final boolean buildJsonTest = false;
-  private static final boolean buildCSVTest = false;
+  private static final boolean buildCSVTest = true;
 
   //Other
   private static final String category = "science";
-  private static final int numFeatures = 40;
+  private static final int numFeatures = 45;
 
   public static void main(String[] args) throws IOException{
     
@@ -58,7 +57,7 @@ public class Start {
     if(loadDictionariesFromFile)
       dictionaries = dictionaryBuilder.load(path+"dictionaries.json");
     else
-      dictionaries = dictionaryBuilder.build(path+"dictionariesSource.json", numFeatures);    
+      dictionaries = dictionaryBuilder.build(path+"dictionariesSource.json", numFeatures, path);    
 
     //Train
     if(buildCSVTraining)
@@ -79,7 +78,7 @@ public class Start {
     System.out.println(path);
     dictionaryBuilder.initJsonDataset("dictionariesSource.txt",path);
     String jsonPath = path+"dictionariesSource.json";
-    HashMap<String, Dictionary> dictionaries = dictionaryBuilder.build(jsonPath, Configurator.numFeatures);      
+    HashMap<String, Dictionary> dictionaries = dictionaryBuilder.build(jsonPath, numFeatures,path);      
 
 
   }

@@ -1,31 +1,4 @@
 [ {
-  "id" : "10028700_234",
-  "title" : "Comparative effects of Bcl-2 over-expression and ZVAD.FMK treatment on dexamethasone and VP16-induced apoptosis in CEM cells",
-  "description" : null,
-  "texts" : [ "Comparative effects of Bcl-2 over-expression and ZVAD.FMK treatment on dexamethasone and VP16-induced apoptosis in CEM cells", "Benson, R S Dive, C Watson, A J Wellcome Trust/United Kingdom Research Support, Non-U.S. Gov't England Cell death and differentiation Cell Death Differ. 1998 May;5(5):432-9." ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 3.0,
-    "sentiment" : null,
-    "text" : "cell"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 2.0,
-    "sentiment" : null,
-    "text" : "death"
-  } ],
-  "categoryList" : [ {
-    "label" : "chemistry biology",
-    "score" : null
-  } ],
-  "conceptList" : null
-}, {
   "id" : "10127868_178",
   "title" : "Nanoporous graphene as a desalination membrane : a computational study",
   "description" : null,
@@ -65,7 +38,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -108,50 +81,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
-  } ],
-  "conceptList" : null
-}, {
-  "id" : "10139106_183",
-  "title" : "Crystallographic Analysis of a Hammerhead Ribozyme Variant and Its Impact on Catalytic Activity",
-  "description" : null,
-  "texts" : [ "Crystallographic Analysis of a Hammerhead Ribozyme Variant and Its Impact on Catalytic Activity", "<div style=\"text-align: center;\"><b>Abstract</b></div><div style=\"text-align: center;\">Eric P. Schultz</div></p><div style=\"text-align: center;\">Crystallographic Analysis of a Hammerhead Ribozyme Variant and Its Impact on Catalytic Activity</div></p>Over the past two decades, the hammerhead ribozyme has been extensively studied leading to many new insights regarding the biochemical and structural properties of catalytic RNAs.  Despite these insights, the role metal ions in catalysis is still of great debate.  We have obtained a 1.55Å crystal structure of a hammerhead ribozyme from <em>Schistosoma mansoni</em> in conditions that permit detailed observation of Na<sup>+</sup> ions binding in the ribozyme's active site.  A Na<sup>+</sup> ion binds to the N7 of G10.1 and the adjacent A9 phosphate in a manner identical to that previously observed for divalent cations.  A second Na<sup>+</sup> ion binds to the Hoogsteen face of G12, the general base in the hammerhead ribozyme cleavage reaction, thereby potentially dissipating the negative charge of the catalytically active enolate form of the base.  We have also obtained a 2.2Å crystal structure of a hammerhead ribozyme variant containing adenine substituted for the general base that displays a structurally perturbed active site.  Our results suggest that Na<sup>+</sup> directly and specifically substitutes for divalent cations in the hammerhead active site.  Additionally, we suggest that hammerhead ribozyme substituted with adenine for the general base may compete between two conformational states: an active state in which A12 is situated for deprotonation of the 2'H of C17; and an inactive state in which A12 makes a non-canonical base pair A9, causing a perturbation in the active site, disrupting metal ion binding.  These results permit us to estimate the contribution that structural perturbation has on the catalytic activity of other hammerhead ribozyme variants containing nucleobase substitutions for the general base." ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 9.0,
-    "sentiment" : null,
-    "text" : "hammerhead"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 9.0,
-    "sentiment" : null,
-    "text" : "ribozyme"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 6.0,
-    "sentiment" : null,
-    "text" : "base"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 6.0,
-    "sentiment" : null,
-    "text" : "active"
-  } ],
-  "categoryList" : [ {
-    "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -194,7 +124,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -237,7 +167,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -280,93 +210,7 @@
   } ],
   "categoryList" : [ {
     "label" : "physics",
-    "score" : null
-  } ],
-  "conceptList" : null
-}, {
-  "id" : "10022607_234",
-  "title" : "Alternatively activated dendritic cells regulate CD4+ T-cell polarization in vitro and in vivo",
-  "description" : null,
-  "texts" : [ "Alternatively activated dendritic cells regulate CD4+ T-cell polarization in vitro and in vivo", "Interleukin-4 is a cytokine widely known for its role in CD4(+) T cell polarization and its ability to alternatively activate macrophage populations. In contrast, the impact of IL-4 on the activation and function of dendritic cells (DCs) is poorly understood. We report here that DCs respond to IL-4 both in vitro and in vivo by expression of multiple alternative activation markers with a different expression pattern to that of macrophages. We further demonstrate a central role for DC IL-4Rα expression in the optimal induction of IFNγ responses in vivo in both Th1 and Th2 settings, through a feedback loop in which IL-4 promotes DC secretion of IL-12. Finally, we reveal a central role for RELMα during T-cell priming, establishing that its expression by DCs is critical for optimal IL-10 and IL-13 promotion in vitro and in vivo. Together, these data highlight the significant impact that IL-4 and RELMα can have on DC activation and function in the context of either bacterial or helminth pathogens." ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 6.0,
-    "sentiment" : null,
-    "text" : "dc"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "il-4"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "expression"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 3.0,
-    "sentiment" : null,
-    "text" : "cell"
-  } ],
-  "categoryList" : [ {
-    "label" : "chemistry biology",
-    "score" : null
-  } ],
-  "conceptList" : null
-}, {
-  "id" : "10135629_183",
-  "title" : "Developing Novel Biointerfaces and Biomaterials with Surface Plasmon Resonance and SPR Imaging",
-  "description" : null,
-  "texts" : [ "Developing Novel Biointerfaces and Biomaterials with Surface Plasmon Resonance and SPR Imaging", "Much research has focused on the development of analytical methods to monitor a multitude of biological interactions including protein-carbohydrate, protein-lipid, and protein-DNA among others. Surface plasmon resonance (SPR) remains one of the most exciting techniques that allows for real-time data collection and label free detection amenable to many biological systems. This thesis focuses on the development of novel sensing interfaces/materials for biomolecular interaction analysis (BIA) with SPR and SPR imaging (SPRi).The first half of this work focuses on the development of unique surface chemistry designs to examine biological interactions. Firstly, in an effort to augment understanding of lectin (protein)-carbohydrate interactions, SPR spectroscopy is used to display differential binding of lectins to various synthetic carbohydrates. This biointerface was later adapted to a high-density array format for SPR imaging detection. Secondly, to expand the use of SPR to large bioparticle detection another interface based on the generation of a mass-enhancing product at the sensing interface for highly sensitive and fast detection of <italic>E. coli</italic> is presented. Results indicate a multi-fold signal enhancement of <italic>E. coli</italic> cells in buffer and on spinach leaves.The second part of this thesis focuses on the development of new substrates for both SPR and SPR imaging experiments. Firstly, the fabrication of ultra-thin (ca. 5-8 nm) glass layers on top of a gold surface for SPR biosensing applications is demonstrated. This nanoglassy layer is created by employing a high-pressure, low-volume paint gun technique, resulting in ultra-thin and fracture-free substrates for biosensing applications including monitoring membrane protein interactions in real-time. Finally, the facile fabrication of gold-coated etched glass substrates for SPR imaging that reduces background resonance 5-fold <italic>in situ</italic> compared to the standard gold island array platform is presented. The etching of the glass substrate induces a variation in the resonance condition and thus in the resonance angle between the etched wells and the surrounding area, leading to the isolation of the array spot resonance with a significant reduction of the background resonance. Additionally, these chips enhance the SPR evanescent field intensity 3-fold compared to standard planar gold chips and significantly enhance SPR imaging surface sensitivity." ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 13.0,
-    "sentiment" : null,
-    "text" : "spr"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 7.0,
-    "sentiment" : null,
-    "text" : "resonance"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 6.0,
-    "sentiment" : null,
-    "text" : "imaging"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "surface"
-  } ],
-  "categoryList" : [ {
-    "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -409,7 +253,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -452,7 +296,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -495,7 +339,7 @@
   } ],
   "categoryList" : [ {
     "label" : "geology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -538,50 +382,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
-  } ],
-  "conceptList" : null
-}, {
-  "id" : "10133730_183",
-  "title" : "Nucleation and Cross-Slip of Partial Dislocations in FCC Metals",
-  "description" : null,
-  "texts" : [ "Nucleation and Cross-Slip of Partial Dislocations in FCC Metals", "Nucleation of partial dislocations at a crack and cross-slip of partial dislocations under general loading in FCC metals are analyzed based on a multiscale model which incorporates atomic information into continuum-mechanics approach. In both analyses, the crack and the slip planes are modeled as surfaces of displacement discontinuities embedded in elastic media. The atomic potentials between the adjacent atomic layers along the slip planes are assumed to be the generalized stacking fault energies, which are obtained based on atomic calculations. The relative displacements along the slip planes, corresponding to the configurations of partial dislocations and stacking faults, are solved through the variational boundary integral method. The energetics of partial dislocation nucleation at the crack and cross-slip in FCC metals Al and Cu are comparatively studied for their distinctive difference in the intrinsic stacking fault energy. For the analysis of nucleation of partial dislocations at a crack, several new features have emerged compared with nucleation of perfect dislocations in previous studies. Among them, the critical stress and activation energy for nucleation of partial dislocations are markedly lowered. Depending on the value of stacking fault energy and crack configuration, the saddle-point configurations of partial dislocations can be vastly different in terms of the nucleation sequence and the size of the stacking fault. The implications of these new findings on mechanical behavior of nanostructured crystalline materials are elaborated.For the analysis of cross-slip of partial dislocations, the conclusion from previous studies that cross-slip in FCC metals can be influenced by intrinsic stacking fault energy is confirmed. Furthermore, it is found that in Al, the preference of the gliding plane depends on the competition between the two resolved shear stresses on the slip planes. In Cu, the most preferred loading condition for cross-slip is that a lager compressing Escaig shear stress on the primary slip plane is accompanied with stretching Escaig shear stress on the cross-slip plane. The analysis of activation energy indicates that thermal motion plays an important role in cross-slip in FCC metals." ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 10.0,
-    "sentiment" : null,
-    "text" : "dislocation"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 9.0,
-    "sentiment" : null,
-    "text" : "partial"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 7.0,
-    "sentiment" : null,
-    "text" : "nucleation"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 7.0,
-    "sentiment" : null,
-    "text" : "plane"
-  } ],
-  "categoryList" : [ {
-    "label" : "geology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -624,7 +425,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -667,7 +468,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -710,7 +511,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -753,50 +554,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
-  } ],
-  "conceptList" : null
-}, {
-  "id" : "10130047_178",
-  "title" : "Rational design and directed evolution of probe ligases for site-specific protein labeling and live-cell imaging",
-  "description" : null,
-  "texts" : [ "Rational design and directed evolution of probe ligases for site-specific protein labeling and live-cell imaging", "Includes bibliographical references." ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 1.0,
-    "sentiment" : null,
-    "text" : "ligase"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 1.0,
-    "sentiment" : null,
-    "text" : "bibliographical"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 1.0,
-    "sentiment" : null,
-    "text" : "rational"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 1.0,
-    "sentiment" : null,
-    "text" : "reference"
-  } ],
-  "categoryList" : [ {
-    "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -839,7 +597,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -882,7 +640,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -925,7 +683,7 @@
   } ],
   "categoryList" : [ {
     "label" : "physics",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -968,7 +726,7 @@
   } ],
   "categoryList" : [ {
     "label" : "geology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -1011,7 +769,7 @@
   } ],
   "categoryList" : [ {
     "label" : "physics",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -1038,7 +796,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -1081,50 +839,7 @@
   } ],
   "categoryList" : [ {
     "label" : "physics",
-    "score" : null
-  } ],
-  "conceptList" : null
-}, {
-  "id" : "10138891_183",
-  "title" : "MONITORING ORGAN REGENERATION OF SEA CUCUMBER HOLOTHURIA LEUCOSPILOTA AFTER EVISCERATION",
-  "description" : null,
-  "texts" : [ "MONITORING ORGAN REGENERATION OF SEA CUCUMBER HOLOTHURIA LEUCOSPILOTA AFTER EVISCERATION", "Defense mechanisms have been long recognized as an important factor in establishing the development of many organism life histories. As a result, many processes associated with ensuring survivability have been very well established in organisms that utilize defense mechanisms. How these defense mechanisms have shaped the evisceration and regenerative processes of sea cucumber Holothuria leucospilota still remain largely unstudied. In this study it is revealed that Holothuria leucospilota remain very consistent in their modes of evisceration, ejecting the same organs in every evisceration event. The consistency is compounded by the finding that approximately 28% of their body mass is eviscerated regardless of organism size. In terms of organ regeneration, the thickening of the mesentery tissues is apparent at Day 4 and regeneration of the digestive tract at Day 16. Sediment feeding also resumes at Day 16 along with the regeneration of the digestive tract. No regeneration of the left respiratory tree or gonads is observed within the 28-day study. " ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "regeneration"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "evisceration"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 3.0,
-    "sentiment" : null,
-    "text" : "defense"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 3.0,
-    "sentiment" : null,
-    "text" : "mechanism"
-  } ],
-  "categoryList" : [ {
-    "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -1159,50 +874,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
-  } ],
-  "conceptList" : null
-}, {
-  "id" : "10133759_183",
-  "title" : "Effect of temperature and iron-oxide nano-particle inclusions on the ultrasound vaporization pressure of perfluorocarbon droplets for disease detection and therapy",
-  "description" : null,
-  "texts" : [ "Effect of temperature and iron-oxide nano-particle inclusions on the ultrasound vaporization pressure of perfluorocarbon droplets for disease detection and therapy", "Introduction: The longer circulating time and larger particle count of perfluorocarbon (PFC) droplets make them more effective as targeted contrast agents compared to microbubbles. It has also been shown that conversion of PFC droplets to microbubbles improves ultrasound (US) sensitivity to emulsions by 10 orders of magnitude. PFC droplets, with their higher boiling point and smaller particle size are more desirable to prevent spontaneous aporization and maximum accumulation of emulsions. However, the high US energy required to induce phase conversion in these emulsions is not clinically feasible. We hypothesized that by increasing the temperature and using Iron-oxide nanoparticles(IONP) as nucleation sites within the more stable and submicron droplets, the US energy required to vaporize them may be lowered. Material and method: A sample of 60%w/v iron-oxide loaded PFC droplets with mean diameter of 200nm was manufactured and characterized. A phantom was designed to allow for the interaction between the US energy and droplets. A high intensity focused ultrasound system (HIFU) was used to generate US pressures and a heat exchanger pump was used to control the temperature while emulsions of PFHB and PFP with or without IONP were circulated through the chamber. A harmonic imaging system was also used to detect the generated microbubbles. Discussion and result: The effect of temperature and IONP on the vaporization rate and threshold of PFC emulsions were determined. It was shown that presence of IONP and higher temperature increase the rate and decreases the vaporization threshold of PFC emulsions" ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 7.0,
-    "sentiment" : null,
-    "text" : "droplet"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 6.0,
-    "sentiment" : null,
-    "text" : "pfc"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 6.0,
-    "sentiment" : null,
-    "text" : "emulsion"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "us"
-  } ],
-  "categoryList" : [ {
-    "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -1237,50 +909,7 @@
   } ],
   "categoryList" : [ {
     "label" : "physics",
-    "score" : null
-  } ],
-  "conceptList" : null
-}, {
-  "id" : "10135647_183",
-  "title" : "Thermal Characterization of Nanostructures and Advanced Engineered Materials",
-  "description" : null,
-  "texts" : [ "Thermal Characterization of Nanostructures and Advanced Engineered Materials", "Continuous downscaling of Si complementary metal-oxide semiconductor (CMOS) technology and progress in high-power electronics demand more efficient heat removal techniques to handle the increasing power density and rising temperature of hot spots. For this reason, it is important to investigate thermal properties of materials at nanometer scale and identify materials with the extremely large or extremely low thermal conductivity for applications as heat spreaders or heat insulators in the next generation of integrated circuits. The thin films used in microelectronic and photonic devices need to have high thermal conductivity in order to transfer the dissipated power to heat sinks more effectively. On the other hand, thermoelectric devices call for materials or structures with low thermal conductivity because the performance of thermoelectric devices is determined by the figure of merit Z=S^2e/K, where S is the Seebeck coefficient, K and e are the thermal and electrical conductivity, respectively. Nanostructured superlattices can have drastically reduced thermal conductivity as compared to their bulk counterparts making them promising candidates for high-efficiency thermoelectric materials. Other applications calling for thin films with low thermal conductivity value are high-temperature coatings for engines. Thus, materials with both high thermal conductivity and low thermal conductivity are technologically important. The increasing temperature of the hot spots in state-of-the-art chips stimulates the search for innovative methods for heat removal. One promising approach is to incorporate materials, which have high thermal conductivity into the chip design. Two suitable candidates for such applications are diamond and graphene. Another approach is to integrate the high-efficiency thermoelectric elements for on-spot cooling. In addition, there is strong motivation for improved thermal interface materials (TIMs) for heat transfer from the heat-generating chip to heat-sinking units. This dissertation presents results of the experimental investigation and theoretical interpretation of thermal transport in the advanced engineered materials, which include thin films for thermal management of nanoscale devices, nanostructured superlattices as promising candidates for high-efficiency thermoelectric materials, and improved TIMs with graphene and metal particles as fillers providing enhanced thermal conductivity. The advanced engineered materials studied include chemical vapor deposition (CVD) grown ultra-nanocrystalline diamond (UNCD) and microcrystalline diamond (MCD) films on Si substrates, directly integrated nanocrystalline diamond (NCD) films on GaN, free-standing polycrystalline graphene (PCG) films, graphene oxide (GOx) films, and \"pseudo-superlattices\" of the mechanically exfoliated Bi2Te3 topological insulator films, and thermal interface materials (TIMs) with graphene fillers." ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 16.0,
-    "sentiment" : null,
-    "text" : "thermal"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 11.0,
-    "sentiment" : null,
-    "text" : "material"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 10.0,
-    "sentiment" : null,
-    "text" : "conductivity"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 8.0,
-    "sentiment" : null,
-    "text" : "film"
-  } ],
-  "categoryList" : [ {
-    "label" : "geology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -1323,7 +952,7 @@
   } ],
   "categoryList" : [ {
     "label" : "physics",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -1366,7 +995,7 @@
   } ],
   "categoryList" : [ {
     "label" : "physics",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -1401,7 +1030,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -1444,7 +1073,7 @@
   } ],
   "categoryList" : [ {
     "label" : "mathematics",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -1487,50 +1116,7 @@
   } ],
   "categoryList" : [ {
     "label" : "astronomy",
-    "score" : null
-  } ],
-  "conceptList" : null
-}, {
-  "id" : "10134668_183",
-  "title" : "The regulation of global deSUMOylation by human SUMO- specific proteases",
-  "description" : null,
-  "texts" : [ "The regulation of global deSUMOylation by human SUMO- specific proteases", "SUMOylation - the covalent tagging of a target protein with a SUMO (small ubiquitin-related modifier) molecule - has recently emerged as an important post-translational modification in regulating a wide array of biological events. SUMOylation is a dynamics process, where SUMO- specific proteases (SENPs) process proSUMO molecules and also deconjugate them from substrates. My dissertation focuses on the deconjugating activity of SENPs and addresses the role they play in regulating the global SUMOylation \"status quo\" of eukaryotic cells. SENPs are among the most specific proteases and only cleave SUMO molecules, yet they exhibit substantial substrate specificity among SUMO paralogs. To address the deconjugating specificities of human SENPs, I developed two different proteomics strategies to profile these proteases. One method has the potential to identify lysines of SUMOylation, besides the SUMOylation substrate itself, while the other can differentiate SUMOylated substrates from SUMO-interactors. To this end, I demonstrated the proof-of-principle of both methods and have identified polySUMOylated substrates. Such polySUMOylation (ie: modification of proteins by SUMO chains) has been an elusive phenomenon to study. In fact, so far, mainly mass spectrometry has shed light on the nature of SUMO chains through identifying SUMO-SUMO isopeptides. Thus, in the bulk of my dissertation, using a conjugatable, but not deconjugatable SUMO, I demonstrate the abundance of SUMO chains in vivo, make them visually appreciable and uncover the rapid dynamics of SUMOylation through their deconjugation. I propose that the balance of the dynamics is largely due to the action of SENPs in constantly cleaving SUMO from its targets, whether from a target protein or from another SUMO. This way, SENPs guard the SUMOylation status of the proteome, which by definition includes keeping in check modification of substrates by SUMO chains. I also establish the mechanism of SUMO chain deconjugation, which I show to be stochastic. Lastly, I reiterate the importance of deSUMOylation in vivo, by showing that the lack of deSUMOylation is adversary for the growth of Schizosaccharomyces pombe under replicative stress and for human cells" ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 13.0,
-    "sentiment" : null,
-    "text" : "sumo"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 7.0,
-    "sentiment" : null,
-    "text" : "sumoylation"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 6.0,
-    "sentiment" : null,
-    "text" : "senp"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 6.0,
-    "sentiment" : null,
-    "text" : "substrate"
-  } ],
-  "categoryList" : [ {
-    "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -1573,7 +1159,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -1616,7 +1202,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -1659,7 +1245,7 @@
   } ],
   "categoryList" : [ {
     "label" : "astronomy",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -1678,7 +1264,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -1721,7 +1307,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -1764,7 +1350,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -1783,7 +1369,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -1826,7 +1412,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -1869,7 +1455,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -1912,7 +1498,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -1955,7 +1541,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -1998,50 +1584,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
-  } ],
-  "conceptList" : null
-}, {
-  "id" : "10135911_183",
-  "title" : "Time Courses of Desensitization and Recovery From Adaptation in Mouse Rod Photoreceptors",
-  "description" : null,
-  "texts" : [ "Time Courses of Desensitization and Recovery From Adaptation in Mouse Rod Photoreceptors", "Sensitivity and dynamic range are two important characteristics of sensory receptors in the nervous system that define the physiological role of these cells. Rod cells in the retina of a mouse have the ability to detect very dim lights by closing cyclic-gated nucleotide channels. This extreme sensitivity would be impractical if the dynamic range on these cells was limited. Adaptation is a process by which the sensitivity of the transduction cascade is adjusted so cells can function within broader ranges of stimuli. Electrical recordings of circulating currents have been used to show that in the presence of steady background light, rods are desensitized so that saturation doesn't occur, and they remain responsive to increments and decrements of illumination. Furthermore, changes in calcium concentration have been proposed to mediate modulations of various molecules within the transduction pathways. In this project, we investigated the time course of desensitization and recovery in adaptation using suction electrode recording. We were able to show, desensitization at various ranges of adapting light, as manifested by the fact that reduction in sensitivity acceleration of recovery is already present at 500 ms. We also demonstrated that in recovery from adaptation, sensitivity of the rod returns back to its dark-adapted levels within 2 seconds. The persistence of adaptation in the form of acceleration of recovery was present with extremely dim lights and the time constant of its recovery to dark-adapted levels was dependent on the intensity of the background light." ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 6.0,
-    "sentiment" : null,
-    "text" : "recovery"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "adaptation"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "sensitivity"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "light"
-  } ],
-  "categoryList" : [ {
-    "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -2076,7 +1619,7 @@
   } ],
   "categoryList" : [ {
     "label" : "physics",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -2119,7 +1662,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -2162,42 +1705,7 @@
   } ],
   "categoryList" : [ {
     "label" : "geology",
-    "score" : null
-  } ],
-  "conceptList" : null
-}, {
-  "id" : "100855_108",
-  "title" : "High-K Structures Under Extreme Conditions",
-  "description" : null,
-  "texts" : [ "High-K Structures Under Extreme Conditions", "<p>High-K isomer decay rates are compared and interpreted, with an emphasis on the spin degree of freedom. It is argued that high-K values do not in themselves lead to K mixing. Rather, evidence is presented that the most important consideration is the isomer energy relative to a rotor whose moment of inertia is approximately 85\\% of the rigid-body value. The high-spin limit to the occurrence of high-K isomers is then discussed in connection with predictions of competing oblate rotation-aligned structures. Finally, some observations are made regarding the use of K isomers as a tool to access exotic nuclei, including superheavy elements, and exotic nuclear structures.</p>" ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "high-k"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "isomer"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 3.0,
-    "sentiment" : null,
-    "text" : "structure"
-  } ],
-  "categoryList" : [ {
-    "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -2232,179 +1740,7 @@
   } ],
   "categoryList" : [ {
     "label" : "physics",
-    "score" : null
-  } ],
-  "conceptList" : null
-}, {
-  "id" : "10127035_163",
-  "title" : "Arabian Sea mixed layer deepening during the monsoon : observations and dynamics",
-  "description" : null,
-  "texts" : [ "Arabian Sea mixed layer deepening during the monsoon : observations and dynamics", "The unusual twice-yearly cycle of mixed layer deepening and cooling driven by the monsoon\nis analyzed using a recently collected (1994-95) dataset of concurrent local air-sea\nfluxes and upper ocean dynamics from the Arabian Sea. The winter northeast monsoon has\nmoderate wind forcing and a strongly destabilizing surface buoyancy flux, driven by large\nradiative and latent heat losses at the sea surface. Convective entrainment is the primary\nlocal mechanism driving the observed mixed layer cooling and deepening, although horizontal\nadvection of thermocline depth variations affect the depth which the mixed layer\nattains. Modifications of a one-dimensional mixed layer model and heat balance show that\nthe primary nonlocal forcing of the upper ocean is the horizontal advection of temperature\ngradients below the mixed layer base. The summer southwest monsoon has strong wind\nstresses and a neutral to stabilizing surface buoyancy flux, limited by the extreme humidity\nof the atmosphere, which suppresses both the radiative and latent heat losses at the surface.\nWind-driven shear instabilities at the base of the mixed layer, which entrain cooler\nand fresher water primarily produces the observed mixed layer cooling and deepening.\nHorizontal advection of cooler water within the mixed layer influences the local heat balance\nat the mooring site. Ekman pumping velocities play only a small role in the upper\nocean evolution during both monsoon seasons.Submitted in partial fulfillment of the requirements for the degree of Master of Science at the Massachusetts Institute of Technology and the Woods Hole Oceanographic Institution September 1997This research was funded by ONR grant N00014-94- 1-0161, and I was supported during\nthis time by a generous NDSEG fellowship" ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 9.0,
-    "sentiment" : null,
-    "text" : "layer"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 9.0,
-    "sentiment" : null,
-    "text" : "mixed"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 5.0,
-    "sentiment" : null,
-    "text" : "monsoon"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "heat"
-  } ],
-  "categoryList" : [ {
-    "label" : "chemistry biology",
-    "score" : null
-  } ],
-  "conceptList" : null
-}, {
-  "id" : "10017801_234",
-  "title" : "Exploiting genomic knowledge in optimising molecular breeding programmes: algorithms from evolutionary computing",
-  "description" : null,
-  "texts" : [ "Exploiting genomic knowledge in optimising molecular breeding programmes: algorithms from evolutionary computing", "(In Press)" ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 1.0,
-    "sentiment" : null,
-    "text" : "computing"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 1.0,
-    "sentiment" : null,
-    "text" : "molecular"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 1.0,
-    "sentiment" : null,
-    "text" : "press"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 1.0,
-    "sentiment" : null,
-    "text" : "breeding"
-  } ],
-  "categoryList" : [ {
-    "label" : "chemistry biology",
-    "score" : null
-  } ],
-  "conceptList" : null
-}, {
-  "id" : "100251_102",
-  "title" : "Orientational and phase-coexistence behaviour of hard rod-sphere mixtures",
-  "description" : null,
-  "texts" : [ "Orientational and phase-coexistence behaviour of hard rod-sphere mixtures", "<p>Results are presented from Monte Carlo simulations of bulk mixtures of Hard Gaussian Overlap particles with an aspect ratio of 3:1 and hard spheres with diameters equal to the breadths of the rods. For sphere number-concentrations of 50% and lower, compression of the isotropic fluid results in formation of a homogeneous (i.e. compositionally mixed) nematic phase. The volume fraction of this isotropic-nematic transition is found to increase approximately linearly with sphere concentration. On compression to higher volume fractions, however, this homogeneous nematic phase separates out into coexisting nematic and isotropic phases.</p>" ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 3.0,
-    "sentiment" : null,
-    "text" : "sphere"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 3.0,
-    "sentiment" : null,
-    "text" : "hard"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 3.0,
-    "sentiment" : null,
-    "text" : "phase"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 3.0,
-    "sentiment" : null,
-    "text" : "nematic"
-  } ],
-  "categoryList" : [ {
-    "label" : "physics",
-    "score" : null
-  } ],
-  "conceptList" : null
-}, {
-  "id" : "10137459_183",
-  "title" : "Codazzi Tensors with Two Eigenvalue Functions",
-  "description" : null,
-  "texts" : [ "Codazzi Tensors with Two Eigenvalue Functions", "This paper addresses a gap in the classifcation of Codazzi tensors with exactly two eigenfunctions on a Riemannian manifold of dimension three or higher. Derdzinski proved that if the trace of such a tensor is constant and the dimension of one of the the eigenspaces is n -1, then the metric is a warped product where the base is an open interval. Tojeiro generalized this result given the existence of a certain type of function of the eigenvalues of the Codazzi tensor, of which the trace is one example. We will show the equivalence of Tojeiro's condition to three other conditions. Furthermore, we construct examples of Codazzi tensorshaving two eigenvalue functions, one of which has eigenspace dimension n-1  where the metric is not a warped product with interval base, refuting a remark in Besse that the warped product conclusion holds without any restriction on the trace." ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 4.0,
-    "sentiment" : null,
-    "text" : "codazzi"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 3.0,
-    "sentiment" : null,
-    "text" : "warped"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 3.0,
-    "sentiment" : null,
-    "text" : "eigenvalue"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 3.0,
-    "sentiment" : null,
-    "text" : "dimension"
-  } ],
-  "categoryList" : [ {
-    "label" : "physics",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -2447,7 +1783,7 @@
   } ],
   "categoryList" : [ {
     "label" : "geology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -2490,7 +1826,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -2533,7 +1869,7 @@
   } ],
   "categoryList" : [ {
     "label" : "physics",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -2576,7 +1912,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -2619,7 +1955,7 @@
   } ],
   "categoryList" : [ {
     "label" : "geology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -2662,7 +1998,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -2705,7 +2041,7 @@
   } ],
   "categoryList" : [ {
     "label" : "mathematics",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -2724,7 +2060,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -2767,7 +2103,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 }, {
@@ -2810,7 +2146,7 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : null
+    "score" : 1.0
   } ],
   "conceptList" : null
 } ]

@@ -115,6 +115,7 @@ public class FeatureExtractor {
           for(CategoriesResult paperCategory : paperCategories){
             //SE CONTIENE LA CATEGORIA, SALVO LA RELEVANCE NELLA FEATURES CORRENTE ED ESCO. 
             if(paperCategory.getLabel().contains(category)){
+              
               Features cat = new Features(category,paperCategory.getScore());
               targets.add(cat);
               targetsToPrint.add(cat.getScore());

@@ -6,14 +6,17 @@ Cluster: 0
     id: 10018323_234   Keywords: Abundant IFN-gamma production by local T cells in respiratory syncytial virus-induced eosinophilic lung disease.
 [cell, production, lung, mouse]
 
+    id: 10022607_234   Keywords: Alternatively activated dendritic cells regulate CD4+ T-cell polarization in vitro and in vivo
+[dc, il-4, expression, cell]
+
     id: 10019631_234   Keywords: Characterising the Innate and Adaptive Immune Response to Intestinal Helminth infection
 [response, cell, infection, type]
 
-    id: 4869777_200   Keywords: A Network of Multi-Tasking Proteins at the DNA Replication Fork Preserves Genome Stability
-[gene, replication, nature, dna]
-
     id: 10008608_234   Keywords: Epidermal cytokines and skin sensitization hazard.
 [cytokine, sensitization, epidermal, skin]
+
+    id: 10133730_183   Keywords: Nucleation and Cross-Slip of Partial Dislocations in FCC Metals
+[dislocation, partial, nucleation, plane]
 
     id: 10003596_234   Keywords: GFI1 and GFI1B control the loss of endothelial identity of hemogenic endothelium during hematopoietic commitment.
 [gfi1, hematopoietic, endothelial, progenitor]
@@ -21,23 +24,20 @@ Cluster: 0
     id: 10028844_234   Keywords: Stem cell regeneration of degenerated intervertebral discs: current status.
 [cell, ivd, regeneration, stem]
 
-    id: 10010331_234   Keywords: The yeast vacuolar membrane proteome
-[protein, vacuolar, membrane, vacuole]
-
-    id: 10018699_234   Keywords: Membrane nanotubes: dynamic long-distance connections between animal cells.
-[cell, recent, membrane, nanotube]
-
-    id: 10003524_234   Keywords: Role of metal-reducing bacteria in arsenic release from Bengal delta sediments.
-[arsenic, sediment, bengal, release]
+    id: 25791578_645   Keywords: A Combined Numerical and Experimental Study of Heat Transfer        in a Roughened Square Channel with <math alttext="$45^{circ}$">  <msup>   <mn>45</mn>   <mo>&compfn;</mo>  </msup>   </math> Ribs
+[rib, heat, transfer, coefficient]
 
     id: 10128291_178   Keywords: Engineered gp120 immunogens that elicit VRC01-like antibodies by vaccination
 [antibody, virus]
 
-    id: 10023476_234   Keywords: Aspergillus genomes and the Aspergillus cloud.
-[aspergillus, genome, resource]
+    id: 10138891_183   Keywords: MONITORING ORGAN REGENERATION OF SEA CUCUMBER HOLOTHURIA LEUCOSPILOTA AFTER EVISCERATION
+[regeneration, evisceration, defense, mechanism]
 
-    id: 10133759_183   Keywords: Effect of temperature and iron-oxide nano-particle inclusions on the ultrasound vaporization pressure of perfluorocarbon droplets for disease detection and therapy
-[droplet, pfc, emulsion, us]
+    id: 10127391_178   Keywords: Millihertz quasi-periodic oscillations and thermonuclear bursts from Terzan 5: A showcase of burning regimes
+[netherlands, oscillation, rubicon, nwo]
+
+    id: 10128759_178   Keywords: Search for a Supersymmetric Partner to the Top Quark in Final States with Jets and Missing Transverse Momentum at √s=7  TeV with the ATLAS Detector
+[superscript, subscript, top, supersymmetric]
 
     id: 10005554_234   Keywords: Azole antifungal resistance today: focus on Aspergillus.
 [resistance, aspergillosis, azole, number]
@@ -45,51 +45,43 @@ Cluster: 0
     id: 10127316_178   Keywords: Analysis of Substrate Access to Active Sites in Bacterial Multicomponent Monooxygenase Hydroxylases: X-Ray Crystal Structure of Xenon-Pressurized Phenol Hydroxylase from Pseudomonas Sp Ox1
 [hydroxylase]
 
-    id: 10026237_234   Keywords: Below-ground herbivory promotes soil nutrient transfer and root growth in grassland
-[herbivory, transfer, below-ground, nutrient]
+    id: 101115_108   Keywords: An investigation of interaural time difference fluctuations, part 4: the subjective effect of fluctuations in decaying stimuli delivered over loudspeakers
+[fluctuation, effect, time, difference]
 
     id: 10024793_234   Keywords: Caveolin-1 (P132L), a common breast cancer mutation, confers mammary cell invasiveness and defines a novel stem cell/metastasis-associated gene signature.
 [cav-1, p132l, mutation, cell]
 
-    id: 10004102_234   Keywords: Mechanistic reappraisal of early stage photochemistry in the light-driven enzyme protochlorophyllide oxidoreductase.
-[pchlide, i675, species, chlide]
+    id: 10018643_234   Keywords: The shock response, simulation and microstructural determination of a model composite material
+[samuel, response, determination, model]
 
-    id: 10027448_234   Keywords: Metastasis-promoting anterior gradient 2 protein has a dimeric thioredoxin fold structure and a role in cell adhesion.
-[agr2, structure, adhesion, protein]
+    id: 10135911_183   Keywords: Time Courses of Desensitization and Recovery From Adaptation in Mouse Rod Photoreceptors
+[recovery, adaptation, sensitivity, light]
 
     id: 10024815_234   Keywords: Understanding the Warburg effect and the prognostic value of stromal caveolin-1 as a marker of a lethal tumor microenvironment.
 [tumor, cancer, cell, stromal]
 
-    id: 100855_108   Keywords: High-K Structures Under Extreme Conditions
-[high-k, isomer, structure]
+    id: 10003231_234   Keywords: The role of intra-thalamic and thalamocortical circuits in action selection.
+[action, selection, salience]
+
+    id: 10127035_163   Keywords: Arabian Sea mixed layer deepening during the monsoon : observations and dynamics
+[layer, mixed, monsoon, heat]
+
+    id: 4876079_200   Keywords: Low-energy electron scattering by pyrazine
+[pyrazine, resonance, section, elastic]
+
+    id: 10003268_234   Keywords: A prototypic mathematical model of the human hair cycle.
+[hair, growth, human, model]
+
+    id: 10004176_234   Keywords: The role of ortho, meta, para isomerism in measured solid state and derived sub-cooled liquid vapour pressures of substituted benzoic acids
+[benzoic, pressure, vapour, acid]
 
 
 Cluster: 1
-    id: 27039789_645   Keywords: Biophysics
-[biophysic, biophysicist, physics, biology]
-
-    id: 5181379_222   Keywords: Mixed methods analysis of biology undergraduate choice, persistence, and departure
-[biology, major, student, persister]
-
-    id: 19748253_197   Keywords: Determination and comparison of biological principles in the public press and in BSCS biology texts
-[principle, biology, article, biological]
-
-    id: 10587434_210   Keywords: Derived copy of Biology
-[biology]
-
-    id: 1633942_69   Keywords: Systems biology and cancer, [Editorial]
-[biology, cancer, system, approach]
-
-
-Cluster: 2
     id: 10127868_178   Keywords: Nanoporous graphene as a desalination membrane : a computational study
 [computational, study, desalination, reference]
 
     id: 10029717_234   Keywords: Structure of hydrogen-dosed graphene deduced from low electron energy loss characteristics and density functional calculations
 [electron, energy, loss, hydrogenation]
-
-    id: 10139106_183   Keywords: Crystallographic Analysis of a Hammerhead Ribozyme Variant and Its Impact on Catalytic Activity
-[hammerhead, ribozyme, base, active]
 
     id: 10135629_183   Keywords: Developing Novel Biointerfaces and Biomaterials with Surface Plasmon Resonance and SPR Imaging
 [spr, resonance, imaging, surface]
@@ -134,27 +126,53 @@ Cluster: 2
 [computing, molecular, press, breeding]
 
 
+Cluster: 2
+    id: 27039789_645   Keywords: Biophysics
+[biophysic, biophysicist, physics, biology]
+
+    id: 5181379_222   Keywords: Mixed methods analysis of biology undergraduate choice, persistence, and departure
+[biology, major, student, persister]
+
+    id: 19748253_197   Keywords: Determination and comparison of biological principles in the public press and in BSCS biology texts
+[principle, biology, article, biological]
+
+    id: 10587434_210   Keywords: Derived copy of Biology
+[biology]
+
+    id: 1633942_69   Keywords: Systems biology and cancer, [Editorial]
+[biology, cancer, system, approach]
+
+
 Cluster: 3
+    id: 10139106_183   Keywords: Crystallographic Analysis of a Hammerhead Ribozyme Variant and Its Impact on Catalytic Activity
+[hammerhead, ribozyme, base, active]
+
     id: 10003459_234   Keywords: Common Motifs in Scientific Workflows: An Empirical Analysis
 [workflow, motif, scientific, analysis]
 
-    id: 10022607_234   Keywords: Alternatively activated dendritic cells regulate CD4+ T-cell polarization in vitro and in vivo
-[dc, il-4, expression, cell]
+    id: 4869777_200   Keywords: A Network of Multi-Tasking Proteins at the DNA Replication Fork Preserves Genome Stability
+[gene, replication, nature, dna]
 
-    id: 10133730_183   Keywords: Nucleation and Cross-Slip of Partial Dislocations in FCC Metals
-[dislocation, partial, nucleation, plane]
+    id: 10010331_234   Keywords: The yeast vacuolar membrane proteome
+[protein, vacuolar, membrane, vacuole]
+
+    id: 10018699_234   Keywords: Membrane nanotubes: dynamic long-distance connections between animal cells.
+[cell, recent, membrane, nanotube]
 
     id: 10028409_234   Keywords: The Pinning Potential at Single Flux Vortices Investigated Using Submicron Hall Probes
 [flux, pinning, submicron, reference]
 
-    id: 25791578_645   Keywords: A Combined Numerical and Experimental Study of Heat Transfer        in a Roughened Square Channel with <math alttext="$45^{circ}$">  <msup>   <mn>45</mn>   <mo>&compfn;</mo>  </msup>   </math> Ribs
-[rib, heat, transfer, coefficient]
+    id: 10003524_234   Keywords: Role of metal-reducing bacteria in arsenic release from Bengal delta sediments.
+[arsenic, sediment, bengal, release]
 
     id: 10019960_234   Keywords: PERIODIC DISTURBANCE REJECTION OF NONLINEAR SYSTEMS
 [uncertainty, form, nonlinear, disturbance]
 
-    id: 10138891_183   Keywords: MONITORING ORGAN REGENERATION OF SEA CUCUMBER HOLOTHURIA LEUCOSPILOTA AFTER EVISCERATION
-[regeneration, evisceration, defense, mechanism]
+    id: 10023476_234   Keywords: Aspergillus genomes and the Aspergillus cloud.
+[aspergillus, genome, resource]
+
+    id: 10133759_183   Keywords: Effect of temperature and iron-oxide nano-particle inclusions on the ultrasound vaporization pressure of perfluorocarbon droplets for disease detection and therapy
+[droplet, pfc, emulsion, us]
 
     id: 100679_108   Keywords: Ultraviolet Photoluminescence from Gd-implanted AlN Epilayers
 [emission, nm, aln]
@@ -162,29 +180,20 @@ Cluster: 3
     id: 10024687_234   Keywords: Solving PDEs with random data by stochastic collocation
 [stochastic, random, pde, method]
 
-    id: 10127391_178   Keywords: Millihertz quasi-periodic oscillations and thermonuclear bursts from Terzan 5: A showcase of burning regimes
-[netherlands, oscillation, rubicon, nwo]
-
-    id: 10128759_178   Keywords: Search for a Supersymmetric Partner to the Top Quark in Final States with Jets and Missing Transverse Momentum at √s=7  TeV with the ATLAS Detector
-[superscript, subscript, top, supersymmetric]
-
     id: 10134668_183   Keywords: The regulation of global deSUMOylation by human SUMO- specific proteases
 [sumo, sumoylation, senp, substrate]
 
-    id: 101115_108   Keywords: An investigation of interaural time difference fluctuations, part 4: the subjective effect of fluctuations in decaying stimuli delivered over loudspeakers
-[fluctuation, effect, time, difference]
+    id: 10026237_234   Keywords: Below-ground herbivory promotes soil nutrient transfer and root growth in grassland
+[herbivory, transfer, below-ground, nutrient]
 
-    id: 10018643_234   Keywords: The shock response, simulation and microstructural determination of a model composite material
-[samuel, response, determination, model]
+    id: 10004102_234   Keywords: Mechanistic reappraisal of early stage photochemistry in the light-driven enzyme protochlorophyllide oxidoreductase.
+[pchlide, i675, species, chlide]
 
-    id: 10135911_183   Keywords: Time Courses of Desensitization and Recovery From Adaptation in Mouse Rod Photoreceptors
-[recovery, adaptation, sensitivity, light]
+    id: 10027448_234   Keywords: Metastasis-promoting anterior gradient 2 protein has a dimeric thioredoxin fold structure and a role in cell adhesion.
+[agr2, structure, adhesion, protein]
 
-    id: 10003231_234   Keywords: The role of intra-thalamic and thalamocortical circuits in action selection.
-[action, selection, salience]
-
-    id: 10127035_163   Keywords: Arabian Sea mixed layer deepening during the monsoon : observations and dynamics
-[layer, mixed, monsoon, heat]
+    id: 100855_108   Keywords: High-K Structures Under Extreme Conditions
+[high-k, isomer, structure]
 
     id: 100251_102   Keywords: Orientational and phase-coexistence behaviour of hard rod-sphere mixtures
 [sphere, hard, phase, nematic]
@@ -198,18 +207,9 @@ Cluster: 3
     id: 20442207_198   Keywords: Using multivariate calibration to evaluate hominin brain/body size relationships
 [size, body, brain, change]
 
-    id: 4876079_200   Keywords: Low-energy electron scattering by pyrazine
-[pyrazine, resonance, section, elastic]
-
     id: 25337366_636   Keywords: First Measurement Of The Radiative Process Negative Kaon Proton Going To Lambda Gamma At Beam Momenta 520-750 Mev/c Using The Crystal Ball Detector
 [event, reaction, background, datum]
 
-    id: 10003268_234   Keywords: A prototypic mathematical model of the human hair cycle.
-[hair, growth, human, model]
-
     id: 26870793_645   Keywords: High frequency asymptotic solutions of the reduced wave equation on infinite regions with non-convex boundaries
 [solution, asymptotic, boundary, wave]
-
-    id: 10004176_234   Keywords: The role of ortho, meta, para isomerism in measured solid state and derived sub-cooled liquid vapour pressures of substituted benzoic acids
-[benzoic, pressure, vapour, acid]
 

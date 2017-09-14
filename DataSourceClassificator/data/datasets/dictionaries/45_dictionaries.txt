@@ -1,0 +1,350 @@
+Cluster 6
+    microlensing -> 1.0
+    binary -> 1.0
+    dwarf -> 1.0
+    weak -> 1.0
+AVG: 1.0
+Variance: 0.0
+
+
+Cluster 30
+    liquid -> 1.0
+    exfoliation -> 1.0
+    bibliographical -> 1.0
+    testing -> 1.0
+AVG: 1.0
+Variance: 0.0
+
+
+Cluster 7
+    tumor -> 10.0
+    cancer -> 8.0
+    cav-1 -> 8.0
+    cell -> 12.0
+AVG: 7.714286
+Variance: 2.4327693
+
+
+Cluster 8
+    reaction -> 5.0
+    background -> 5.0
+    event -> 8.0
+AVG: 5.5
+Variance: 1.5
+
+
+Cluster 9
+    reference -> 1.0
+    study -> 1.0
+    desalination -> 1.0
+    computational -> 1.0
+AVG: 1.0
+Variance: 0.0
+
+
+Cluster 12
+    stochastic -> 9.0
+AVG: 7.5
+Variance: 0.8660254
+
+
+Cluster 34
+    fusion -> 3.0
+    pseudostate -> 3.0
+    boron -> 3.0
+AVG: 2.75
+Variance: 0.4330127
+
+
+Cluster 11
+    effect -> 4.0
+    fluctuation -> 6.0
+AVG: 4.0
+Variance: 1.2247449
+
+
+Cluster 33
+    loss -> 3.0
+    electron -> 3.0
+    energy -> 3.0
+AVG: 2.75
+Variance: 0.4330127
+
+
+Cluster 10
+    luminescence -> 6.0
+    autoinduction -> 6.0
+    autoinducer -> 5.0
+AVG: 5.25
+Variance: 0.8291562
+
+
+Cluster 32
+    pyrazine -> 4.0
+    resonance -> 4.0
+AVG: 3.5
+Variance: 0.5
+
+
+Cluster 31
+    arsenic -> 6.0
+    sediment -> 4.0
+AVG: 4.0
+Variance: 1.2247449
+
+
+Cluster 16
+    reference -> 1.0
+    pinning -> 1.0
+    flux -> 1.0
+    submicron -> 1.0
+AVG: 1.0
+Variance: 0.0
+
+
+Cluster 38
+    size -> 26.0
+    body -> 23.0
+    brain -> 22.0
+AVG: 19.75
+Variance: 6.941722
+
+
+Cluster 15
+    lung -> 6.0
+    production -> 7.0
+    cell -> 8.0
+AVG: 6.5
+Variance: 1.118034
+
+
+Cluster 37
+    adsorption -> 6.0
+    surface -> 5.0
+    calcite -> 6.0
+AVG: 5.0
+Variance: 1.2247449
+
+
+Cluster 14
+    response -> 1.0
+    samuel -> 1.0
+    determination -> 1.0
+    model -> 1.0
+AVG: 1.0
+Variance: 0.0
+
+
+Cluster 36
+    subscript -> 7.0
+    superscript -> 7.0
+AVG: 5.25
+Variance: 1.7853571
+
+
+Cluster 13
+    heat -> 8.0
+    transfer -> 8.0
+    rib -> 10.0
+AVG: 8.25
+Variance: 1.0897248
+
+
+Cluster 35
+    vacuolar -> 12.0
+    membrane -> 6.0
+    protein -> 13.0
+    aspergillus -> 8.0
+AVG: 7.285714
+Variance: 3.6140316
+
+
+Cluster 19
+    hematopoietic -> 4.0
+    endothelial -> 4.0
+    gfi1 -> 5.0
+AVG: 4.0
+Variance: 0.70710677
+
+
+Cluster 18
+    uncertainty -> 10.0
+AVG: 7.0
+Variance: 1.7320508
+
+
+Cluster 17
+    infection -> 12.0
+    response -> 15.0
+    cell -> 15.0
+    type -> 8.0
+    resistance -> 9.0
+AVG: 9.0
+Variance: 4.3011627
+
+
+Cluster 39
+    replication -> 5.0
+    gene -> 5.0
+AVG: 4.0
+Variance: 1.0
+
+
+Cluster 0
+    biology -> 53.0
+    system -> 18.0
+    major -> 10.0
+    biophysic -> 11.0
+    cancer -> 23.0
+    approach -> 13.0
+AVG: 15.1
+Variance: 13.830763
+
+
+Cluster 1
+    carcinogenesis -> 2.0
+AVG: 2.0
+Variance: 0.0
+
+
+Cluster 2
+    index -> 5.0
+    soil -> 8.0
+    bhp -> 6.0
+AVG: 5.5
+Variance: 1.8027756
+
+
+Cluster 3
+    agr2 -> 5.0
+AVG: 3.5
+Variance: 0.8660254
+
+
+Cluster 4
+    regeneration -> 3.0
+    ivd -> 4.0
+    cell -> 8.0
+    stem -> 3.0
+AVG: 3.4285715
+Variance: 1.9897698
+
+
+Cluster 5
+    principle -> 17.0
+    biology -> 12.0
+AVG: 11.75
+Variance: 3.344772
+
+
+Cluster 41
+    boundary -> 4.0
+    solution -> 5.0
+    asymptotic -> 4.0
+AVG: 4.0
+Variance: 0.70710677
+
+
+Cluster 40
+    transfer -> 1.0
+    nutrient -> 1.0
+    below-ground -> 1.0
+    herbivory -> 1.0
+AVG: 1.0
+Variance: 0.0
+
+
+Cluster 23
+    action -> 10.0
+AVG: 6.0
+Variance: 2.828427
+
+
+Cluster 22
+    emission -> 4.0
+    nm -> 4.0
+AVG: 3.6666667
+Variance: 0.4714045
+
+
+Cluster 44
+    workflow -> 12.0
+    scientific -> 4.0
+    motif -> 5.0
+    analysis -> 4.0
+AVG: 3.625
+Variance: 3.5333235
+
+
+Cluster 21
+    vapour -> 5.0
+    benzoic -> 9.0
+    pressure -> 5.0
+AVG: 5.75
+Variance: 1.9202864
+
+
+Cluster 43
+    hydroxylase -> 2.0
+AVG: 2.0
+Variance: 0.0
+
+
+Cluster 20
+    pchlide -> 8.0
+    i675 -> 6.0
+AVG: 5.75
+Variance: 1.47902
+
+
+Cluster 42
+    cytokine -> 5.0
+    sensitization -> 5.0
+    epidermal -> 4.0
+AVG: 4.25
+Variance: 0.8291562
+
+
+Cluster 27
+    microarray -> 5.0
+AVG: 3.6666667
+Variance: 0.94280905
+
+
+Cluster 26
+    antibody -> 6.0
+AVG: 4.5
+Variance: 1.5
+
+
+Cluster 25
+    nwo -> 1.0
+    netherlands -> 1.0
+    oscillation -> 1.0
+    rubicon -> 1.0
+AVG: 1.0
+Variance: 0.0
+
+
+Cluster 24
+    hair -> 8.0
+    growth -> 4.0
+AVG: 4.5
+Variance: 2.0615528
+
+
+Cluster 29
+    histology -> 3.0
+    remains -> 3.0
+    dakhleh -> 3.0
+    ancient -> 3.0
+AVG: 3.0
+Variance: 0.0
+
+
+Cluster 28
+    theory -> 13.0
+AVG: 7.0
+Variance: 4.2426405
+
+
