@@ -10,10 +10,6 @@ import java.util.HashSet;
 import java.util.Iterator;
 
 import eu.innovation.engineering.config.Configurator;
-import eu.innovation.engineering.config.EnumManager;
-import eu.innovation.engineering.config.PathConfigurator;
-import eu.innovation.engineering.prepocessing.datareader.TxtDataReader;
-import eu.innovation.engineering.prepocessing.featurextractor.ClusteringKMeans;
 import eu.innovation.engineering.prepocessing.featurextractor.Dictionary;
 import eu.innovation.engineering.prepocessing.featurextractor.FeatureExtractor;
 import eu.innovation.engineering.util.featurextractor.Features;
@@ -32,21 +28,20 @@ public class CSVBuilder {
    * @param args
    * @throws IOException
    */
-  public static void main(String[] args) throws IOException{
-    ClusteringKMeans clusteringDictionaries = new ClusteringKMeans();
-    HashMap<String, Dictionary> dictionaries = clusteringDictionaries.clusterWithDatasourceAsItems(PathConfigurator.dictionariesFolder+"dictionariesSource.json", Configurator.numFeatures);
-    buildCSV("train.json",dictionaries,false);
-  }
+
 
 
   /**
    * @param path
    * @param dictionaries
+   * @param string 
    * @param pathFileCategories
    * @param withLabel
+   * @param numFeatures 
+   * @param numLables 
    * @throws IOException
    */
-  public static void buildCSV(String path,HashMap<String, Dictionary> dictionaries,boolean withLabel) throws IOException{
+  public static void buildCSV(String path,HashMap<String, Dictionary> dictionaries,String string, boolean withLabel, int numLabels, int numFeatures) throws IOException{
 
  
     FeatureExtractor featureExtractor = new FeatureExtractor();
@@ -77,59 +72,12 @@ public class CSVBuilder {
 
     path = path.replaceAll("\\.[a-zA-Z]*", "");
     if(withLabel)
-      createDatasetPython(featuresPapersTrainingWithTarget,categories,path);
+      createDatasetPython(featuresPapersTrainingWithTarget,categories,path,numFeatures,numLabels);
     else     
-      createDatasetPythonWithoutCategories(featuresPapersTraining,path);
+      createDatasetPythonWithoutCategories(featuresPapersTraining,path, numFeatures);
 
   }
   
-  /**
-   * @param path
-   * @param dictionaries
-   * @param pathFileCategories
-   * @param withLabel
-   * @throws IOException
-   */
-  public static void buildSubLevelCSV(String path,HashMap<String, Dictionary> dictionaries,String pathFileCategories,boolean withLabel) throws IOException{
-
- 
-    FeatureExtractor featureExtractor = new FeatureExtractor();
-    HashSet<String> categories = (HashSet<String>) TxtDataReader.getCategories(pathFileCategories);
-
-    
-    
-    
-    System.out.println("CATEGORIE");
-    //System.out.println(categories.toString());
-
-    DatasetBuilder setTraining = new DatasetBuilder();
-    setTraining.parseDatasetFromJson(path);
-    ArrayList<Source> trainingSet = setTraining.getSourceList();
-
-    HashMap<String,ArrayList<Source>>trainingPapersForCategory=categoryListWithAssociatePapers(trainingSet,categories);
-
-    //STAMPO SU FILE LE CLASSI CONTENENTI I PAPER DI TRAINING 
-    FileWriter fileWriterpaperForCategory = new FileWriter("papersForCategory.txt"); 
-    for(String key : trainingPapersForCategory.keySet()){
-      fileWriterpaperForCategory.write("\n"+key.toUpperCase()+"\n");
-      for(Source p : trainingPapersForCategory.get(key)){
-        fileWriterpaperForCategory.write(p.getId()+"\n");
-      }
-    }
-
-    HashMap<String, ArrayList<Features>> featuresPapersTraining = featureExtractor.createFeaturesNormalizedInputDB(trainingSet,dictionaries);
-    HashMap<String, ArrayList<Features>> targetsPapersTraining = featureExtractor.createTargetsInputDB(trainingSet, categories, dictionaries);
-
-    HashMap<IdAndTarget,ArrayList<Features>> featuresPapersTrainingWithTarget = loadTargetForDosuments(featuresPapersTraining,targetsPapersTraining,categories);
-
-    path = path.replaceAll("\\.[a-zA-Z]*", "");
-    if(withLabel)
-      writeDatasetPythonWithSubCategories(featuresPapersTrainingWithTarget, categories, path);
-    else     
-      createDatasetPythonWithoutCategories(featuresPapersTraining,path);
-
-  }
-
   //METODO CHE RESITUISCE UN HASHMAP DI CATEGORIA, PER OGNI CATEGORIA LA LISTA DI PAPER CHE APPARTENGONO
   private static HashMap<String, ArrayList<Source>> categoryListWithAssociatePapers(ArrayList<Source> trainingSet, HashSet<String> categories) {
     HashMap<String, ArrayList<Source>> categoryWithPapers = new HashMap<String, ArrayList<Source>>();
@@ -174,12 +122,12 @@ public class CSVBuilder {
     return toReturn;
   }
 
-  private static void createDatasetPythonWithoutCategories(HashMap<String, ArrayList<Features>> featuresPapers, String fileName) throws IOException {
+  private static void createDatasetPythonWithoutCategories(HashMap<String, ArrayList<Features>> featuresPapers, String fileName, int numFeatures) throws IOException {
     // TODO Auto-generated method stub
 
     String firstLine="id";
     FileWriter writerCSV = new FileWriter(fileName+".csv");
-    for(int i=0;i<Configurator.numFeatures;i++)
+    for(int i=0;i<numFeatures;i++)
       firstLine+=",F"+i;
 
     firstLine+="\n";
@@ -205,9 +153,11 @@ public class CSVBuilder {
    * @param featuresPapersTrainingWithTarget
    * @param categories
    * @param fileName
+   * @param numLables 
+   * @param numFeatures 
    * @throws IOException
    */
-  private static void createDatasetPython(HashMap<IdAndTarget, ArrayList<Features>> featuresPapersTrainingWithTarget, HashSet<String> categories, String fileName) throws IOException {
+  private static void createDatasetPython(HashMap<IdAndTarget, ArrayList<Features>> featuresPapersTrainingWithTarget, HashSet<String> categories, String fileName, int numFeatures, int numLabels) throws IOException {
 
     String firstLine="id";
 
@@ -215,10 +165,10 @@ public class CSVBuilder {
     csvFile.createNewFile();
     PrintWriter pWriterCSV = new PrintWriter(csvFile);
 
-    for(int i=0;i<Configurator.numFeatures;i++)
+    for(int i=0;i<numFeatures;i++)
       firstLine+=",F"+i;
 
-    for(int i=0;i<Configurator.numLabels;i++)
+    for(int i=0;i<numLabels;i++)
       firstLine+=",L"+i;
 
 
@@ -256,58 +206,6 @@ public class CSVBuilder {
 
     pWriterCSV.flush();
     pWriterCSV.close();
-  }
-  
-  
-  private static void writeDatasetPythonWithSubCategories(HashMap<IdAndTarget, ArrayList<Features>> featuresPapersTrainingWithTarget, HashSet<String> categories, String fileName) throws IOException{
-    String firstLine="id";
-
-    File csvFile = new File(fileName+".csv");
-    csvFile.createNewFile();
-    PrintWriter pWriterCSV = new PrintWriter(csvFile);
-
-    for(int i=0;i<Configurator.numFeatures;i++)
-      firstLine+=",F"+i;
-
-    for(int i=0;i<Configurator.numLabels;i++)
-      firstLine+=",L"+i;
-
-
-    pWriterCSV.println(firstLine);
-
-    for(String category : categories){
-      for(IdAndTarget idAndTarget : featuresPapersTrainingWithTarget.keySet()){
-        if(idAndTarget.getTarget().equals(category)){
-          String keywordsToWrite= idAndTarget.getId()+",";
-          Iterator iterator = featuresPapersTrainingWithTarget.get(idAndTarget).iterator();
-          Features feature = (Features) iterator.next();
-          keywordsToWrite+=feature.getScore();
-          do{
-            Features feature2 = (Features) iterator.next();
-            keywordsToWrite+=","+feature2.getScore();
-          }
-          while(iterator.hasNext());
-
-          String currentCategory = idAndTarget.getTarget().replace(" ", "_");
-          
-          for(int i=0; i<EnumManager.ScienceCategories.values().length;i++){
-            
-            if(currentCategory.contains(EnumManager.ScienceCategories.values()[i].toString())){
-              keywordsToWrite+=","+1;
-            }
-            else
-              keywordsToWrite+=","+0;
-          }
-          
-          pWriterCSV.println(keywordsToWrite);
-        }
-      }
-
-    }
-
-    pWriterCSV.flush();
-    pWriterCSV.close();
-  
   }
   
   

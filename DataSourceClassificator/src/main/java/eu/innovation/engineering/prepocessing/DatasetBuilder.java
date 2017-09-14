@@ -204,7 +204,7 @@ public  class DatasetBuilder {
     System.out.println("source list save to "+pathFile);
   }
   
-  public List<Source> loadSources(String pathFile) throws JsonParseException, JsonMappingException, IOException{
+  public static List<Source> loadSources(String pathFile) throws JsonParseException, JsonMappingException, IOException{
     ObjectMapper mapper = new ObjectMapper();
     List<Source> toReturn = mapper.readValue(new File(pathFile), new TypeReference<List<Source>>(){});
     return toReturn;

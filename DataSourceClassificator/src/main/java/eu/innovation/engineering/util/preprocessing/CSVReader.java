@@ -30,12 +30,12 @@ public class CSVReader {
 
   public static void main(String[] args) throws Exception{
 
-    createGenericDataset(PathConfigurator.applicationFileFolder+"datasetGeneric/chemistry/");
+    //createGenericDataset(PathConfigurator.applicationFileFolder+"datasetGeneric/chemistry/");
 
 
 
     //mainToCreateDataset(args);
-    //mainToTest(args);
+    mainToTest(args);
 
     //TxtDataReader dataReader = new TxtDataReader();
     //dataReader.categoriesWithIds(PathConfigurator.applicationFileFolder+"trainingDatasetMerged.txt");
@@ -67,11 +67,11 @@ public class CSVReader {
     float uThreshold = (float) 1.0;
     float lThreshold = (float) 0.7;
     int batchLine = 0;   
-    boolean isCount = false;   
+    boolean isCount = true;   
     boolean all = false;
     String batchCategory = "";
 
-    String category = Configurator.Categories.travel.name();
+    String category = Configurator.Categories.science.name();
     //category = "all";
     String testFolderName=PathConfigurator.applicationFileFolder+"results.csv";
     File f = new File(testFolderName);
