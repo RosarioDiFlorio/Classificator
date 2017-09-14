@@ -39,11 +39,9 @@ import eu.innovation.engineering.util.preprocessing.Source;
 public class TrainingSetBuilder {
 
 
-
-
   public static void main(String[] args) throws IOException {
     CategoryVector categoryVector = new CategoryVector();
-    CategoryVector.execute(PathConfigurator.categories+"science.txt",null);
+    CategoryVector.execute(PathConfigurator.categories+"scienceCategories.txt",null);
     clusterSubCategory(PathConfigurator.applicationFileFolder+"sourceVectors.json",PathConfigurator.categories+"scienceJson.json", "science");
 
   }
@@ -116,13 +114,13 @@ public class TrainingSetBuilder {
     writer.close();
 
 
-    List<Source> source = DatasetBuilder.loadSources(PathConfigurator.applicationFileFolder+"allSources.json");
-
+    List<Source> source = DatasetBuilder.loadSources(PathConfigurator.applicationFileFolder+"sources.json");
+   
     List<Source> newSource = new ArrayList<Source>();
     for(Item item : items){
       for(Source s : source){
-        if(s.getCategoryList().get(0).getLabel().contains(categoryChoose)){
-          if(s.getId().equals(item.getId())){
+        if(s.getId().equals(item.getId())){
+          if(s.getCategoryList().get(0).getLabel().contains(categoryChoose)){
             CategoriesResult category = new CategoriesResult();
             category.setLabel(item.getBestFeature());
             ArrayList<CategoriesResult> categoryList = new ArrayList<CategoriesResult>();
@@ -134,8 +132,8 @@ public class TrainingSetBuilder {
       }
     }
 
-
-    DatasetBuilder.saveSources(newSource, PathConfigurator.applicationFileFolder+"dictionariesCategory/"+categoryChoose+"/sources.json");
+   
+    DatasetBuilder.saveSources(newSource, PathConfigurator.applicationFileFolder+"dictionariesCategory/"+categoryChoose+"/trainingScience.json");
 
 
 

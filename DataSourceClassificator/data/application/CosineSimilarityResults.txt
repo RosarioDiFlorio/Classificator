@@ -1,0 +1,621 @@
+
+ID: 10028700_234
+TITLE: Comparative effects of Bcl-2 over-expression and ZVAD.FMK treatment on dexamethasone and VP16-induced apoptosis in CEM cells
+KEYWORDS: [cell, death]
+      mathematics: 0.08866151362783115
+      physics: 0.05375286618899334
+      geology: 0.031374395804494026
+      astronomy: 0.0504121113633224
+      chemistry biology: 0.23383751741196931
+
+ID: 10127868_178
+TITLE: Nanoporous graphene as a desalination membrane : a computational study
+KEYWORDS: [computational, study, desalination, reference]
+      mathematics: 0.3774145451694283
+      physics: 0.3681035452176117
+      geology: 0.3341471266266439
+      astronomy: 0.3334318269322158
+      chemistry biology: 0.4235378658831761
+
+ID: 10029717_234
+TITLE: Structure of hydrogen-dosed graphene deduced from low electron energy loss characteristics and density functional calculations
+KEYWORDS: [electron, energy, loss, hydrogenation]
+      mathematics: 0.2117865086512215
+      physics: 0.33498416971647627
+      geology: 0.20893526240752583
+      astronomy: 0.23326402635221044
+      chemistry biology: 0.3539137646127545
+
+ID: 10139106_183
+TITLE: Crystallographic Analysis of a Hammerhead Ribozyme Variant and Its Impact on Catalytic Activity
+KEYWORDS: [hammerhead, ribozyme, base, active]
+      mathematics: 0.15785279792206774
+      physics: 0.22601512802929113
+      geology: 0.18594967192975673
+      astronomy: 0.17225832797445373
+      chemistry biology: 0.30270147366491096
+
+ID: 10018323_234
+TITLE: Abundant IFN-gamma production by local T cells in respiratory syncytial virus-induced eosinophilic lung disease.
+KEYWORDS: [cell, production, lung, mouse]
+      mathematics: 0.08223768737337268
+      physics: 0.1423460174448204
+      geology: 0.11158818067238177
+      astronomy: 0.06084773463905821
+      chemistry biology: 0.3114668616948307
+
+ID: 10003459_234
+TITLE: Common Motifs in Scientific Workflows: An Empirical Analysis
+KEYWORDS: [workflow, motif, scientific, analysis]
+      mathematics: 0.17045563300065159
+      physics: 0.20167623276656646
+      geology: 0.14136872821425522
+      astronomy: 0.1488720499814885
+      chemistry biology: 0.2622822835933724
+
+ID: 27039789_645
+TITLE: Biophysics
+KEYWORDS: [biophysic, biophysicist, physics, biology]
+      mathematics: 0.5382328558300883
+      physics: 0.7491074593103345
+      geology: 0.4675887500962586
+      astronomy: 0.5203833843677643
+      chemistry biology: 0.7080396417151119
+
+ID: 10022607_234
+TITLE: Alternatively activated dendritic cells regulate CD4+ T-cell polarization in vitro and in vivo
+KEYWORDS: [dc, il-4, expression, cell]
+      mathematics: 0.1284044907323187
+      physics: 0.1377384041893696
+      geology: 0.03106872641517747
+      astronomy: 0.09056638638471101
+      chemistry biology: 0.1825826819625511
+
+ID: 10135629_183
+TITLE: Developing Novel Biointerfaces and Biomaterials with Surface Plasmon Resonance and SPR Imaging
+KEYWORDS: [spr, resonance, imaging, surface]
+      mathematics: 0.18892492788274692
+      physics: 0.24815902628083789
+      geology: 0.22899549474105538
+      astronomy: 0.2430894115915708
+      chemistry biology: 0.2546926297578331
+
+ID: 10019631_234
+TITLE: Characterising the Innate and Adaptive Immune Response to Intestinal Helminth infection
+KEYWORDS: [response, cell, infection, type]
+      mathematics: 0.052470167304644606
+      physics: 0.02913520615399065
+      geology: 0.06033043085682962
+      astronomy: 0.0060801151384662355
+      chemistry biology: 0.2455242716620877
+
+ID: 4869777_200
+TITLE: A Network of Multi-Tasking Proteins at the DNA Replication Fork Preserves Genome Stability
+KEYWORDS: [gene, replication, nature, dna]
+      mathematics: 0.13604076489741204
+      physics: 0.14279671128671706
+      geology: 0.1866245477576497
+      astronomy: 0.07334349891933617
+      chemistry biology: 0.32338563816211835
+
+ID: 10017159_234
+TITLE: DIET, DISEASE AND DEATH AT DAKHLEH: A HISTOLOGICAL EXAMINATION OF TEN MUMMIES FROM THE KELLIS 1 CEMETERY IN THE DAKHLEH OASIS, EGYPT.
+KEYWORDS: [ancient, dakhleh, histology, remains]
+      mathematics: 0.2311322765930267
+      physics: 0.18126928715362808
+      geology: 0.32409126165763635
+      astronomy: 0.23428991709775876
+      chemistry biology: 0.29444171443026546
+
+ID: 10008608_234
+TITLE: Epidermal cytokines and skin sensitization hazard.
+KEYWORDS: [cytokine, sensitization, epidermal, skin]
+      mathematics: 0.1055648565150813
+      physics: 0.09031222208725959
+      geology: 0.09928972471417176
+      astronomy: 0.05651266201590899
+      chemistry biology: 0.2875456301056633
+
+ID: 10133730_183
+TITLE: Nucleation and Cross-Slip of Partial Dislocations in FCC Metals
+KEYWORDS: [dislocation, partial, nucleation, plane]
+      mathematics: 0.04813364347911646
+      physics: 0.09626473233795267
+      geology: 0.1436668656295325
+      astronomy: -0.012800849560167565
+      chemistry biology: 0.10018428220129987
+
+ID: 10003596_234
+TITLE: GFI1 and GFI1B control the loss of endothelial identity of hemogenic endothelium during hematopoietic commitment.
+KEYWORDS: [gfi1, hematopoietic, endothelial, progenitor]
+      mathematics: 0.09336292526822196
+      physics: 0.15055054086923858
+      geology: 0.1370785007276499
+      astronomy: 0.07624022328815111
+      chemistry biology: 0.25834354265957477
+
+ID: 10028844_234
+TITLE: Stem cell regeneration of degenerated intervertebral discs: current status.
+KEYWORDS: [cell, ivd, regeneration, stem]
+      mathematics: 0.06355858589764603
+      physics: 0.04280974558035791
+      geology: 0.05151324014433832
+      astronomy: 0.049492709927080006
+      chemistry biology: 0.26017079808457777
+
+ID: 10126995_163
+TITLE: Mutant analysis of luminescence and autoinduction in a marine bacterium
+KEYWORDS: [luminescence, autoinduction, autoinducer, ai-2]
+      mathematics: 0.14065007377739772
+      physics: 0.23624167212855177
+      geology: 0.18331806285473812
+      astronomy: 0.2588129217754063
+      chemistry biology: 0.27733331106804593
+
+ID: 10010331_234
+TITLE: The yeast vacuolar membrane proteome
+KEYWORDS: [protein, vacuolar, membrane, vacuole]
+      mathematics: 0.10489205436201256
+      physics: 0.22470016575345333
+      geology: 0.1868462599560404
+      astronomy: 0.042589413182244656
+      chemistry biology: 0.38541514925294523
+
+ID: 10130047_178
+TITLE: Rational design and directed evolution of probe ligases for site-specific protein labeling and live-cell imaging
+KEYWORDS: [ligase, bibliographical, rational, reference]
+      mathematics: 0.27711384908483144
+      physics: 0.21494491756563197
+      geology: 0.2056598048306987
+      astronomy: 0.19745314344633072
+      chemistry biology: 0.3249672617962402
+
+ID: 10018699_234
+TITLE: Membrane nanotubes: dynamic long-distance connections between animal cells.
+KEYWORDS: [cell, recent, membrane, nanotube]
+      mathematics: 0.10523679991720913
+      physics: 0.20519153516383787
+      geology: 0.14628042874240899
+      astronomy: 0.08909628573410869
+      chemistry biology: 0.3399666075978118
+
+ID: 10028409_234
+TITLE: The Pinning Potential at Single Flux Vortices Investigated Using Submicron Hall Probes
+KEYWORDS: [flux, pinning, submicron, reference]
+      mathematics: 0.1712927598200125
+      physics: 0.23200415438504865
+      geology: 0.19215714095289585
+      astronomy: 0.19151957968861236
+      chemistry biology: 0.23553835008236015
+
+ID: 100224_102
+TITLE: Electron-impact excitation of neutral boron using the R-matrix with pseudostates method
+KEYWORDS: [pseudostate, boron, fusion, collision]
+      mathematics: 0.16430334616893882
+      physics: 0.33841848686484
+      geology: 0.25494515054859496
+      astronomy: 0.21417069111051495
+      chemistry biology: 0.3038043659088565
+
+ID: 10003524_234
+TITLE: Role of metal-reducing bacteria in arsenic release from Bengal delta sediments.
+KEYWORDS: [arsenic, sediment, bengal, release]
+      mathematics: 0.10162644544474776
+      physics: 0.16033042838771214
+      geology: 0.32244591777389253
+      astronomy: 0.0600982721649135
+      chemistry biology: 0.2396278402062684
+
+ID: 25791578_645
+TITLE: A Combined Numerical and Experimental Study of Heat Transfer        in a Roughened Square Channel with <math alttext="$45^{circ}$">  <msup>   <mn>45</mn>   <mo>&compfn;</mo>  </msup>   </math> Ribs
+KEYWORDS: [rib, heat, transfer, coefficient]
+      mathematics: 0.09435541099973163
+      physics: 0.2099807727099403
+      geology: 0.0939001202385446
+      astronomy: 0.08604482788417465
+      chemistry biology: 0.16744846452187712
+
+ID: 10128291_178
+TITLE: Engineered gp120 immunogens that elicit VRC01-like antibodies by vaccination
+KEYWORDS: [antibody, virus]
+      mathematics: 0.1165536063407657
+      physics: 0.0973033220361307
+      geology: 0.09801361326725054
+      astronomy: 0.023411662962341654
+      chemistry biology: 0.2684429770919213
+
+ID: 10019960_234
+TITLE: PERIODIC DISTURBANCE REJECTION OF NONLINEAR SYSTEMS
+KEYWORDS: [uncertainty, form, nonlinear, disturbance]
+      mathematics: 0.1498179303269482
+      physics: 0.24635493759031085
+      geology: 0.2041345935438744
+      astronomy: 0.11770487220370209
+      chemistry biology: 0.2321529539090731
+
+ID: 10138891_183
+TITLE: MONITORING ORGAN REGENERATION OF SEA CUCUMBER HOLOTHURIA LEUCOSPILOTA AFTER EVISCERATION
+KEYWORDS: [regeneration, evisceration, defense, mechanism]
+      mathematics: 0.10564973070150965
+      physics: 0.14860088264559373
+      geology: 0.0965615232793446
+      astronomy: 0.06638829539506486
+      chemistry biology: 0.22765088567113861
+
+ID: 10023476_234
+TITLE: Aspergillus genomes and the Aspergillus cloud.
+KEYWORDS: [aspergillus, genome, resource]
+      mathematics: 0.11270869895600483
+      physics: 0.13215455747577134
+      geology: 0.27753403151671574
+      astronomy: 0.1657328063350878
+      chemistry biology: 0.3413584959227305
+
+ID: 10133759_183
+TITLE: Effect of temperature and iron-oxide nano-particle inclusions on the ultrasound vaporization pressure of perfluorocarbon droplets for disease detection and therapy
+KEYWORDS: [droplet, pfc, emulsion, us]
+      mathematics: 0.058863135593083864
+      physics: 0.2103814456281788
+      geology: 0.13551620961089458
+      astronomy: 0.05293540947867662
+      chemistry biology: 0.26815876941126054
+
+ID: 100679_108
+TITLE: Ultraviolet Photoluminescence from Gd-implanted AlN Epilayers
+KEYWORDS: [emission, nm, aln]
+      mathematics: 0.13613511219127641
+      physics: 0.27951654254184416
+      geology: 0.1271745255830497
+      astronomy: 0.19673060551168486
+      chemistry biology: 0.16110849991910503
+
+ID: 10135647_183
+TITLE: Thermal Characterization of Nanostructures and Advanced Engineered Materials
+KEYWORDS: [thermal, material, conductivity, film]
+      mathematics: 0.16969555543641046
+      physics: 0.3088934904504111
+      geology: 0.33326236408080234
+      astronomy: 0.22619487081774048
+      chemistry biology: 0.3113009465036752
+
+ID: 10024687_234
+TITLE: Solving PDEs with random data by stochastic collocation
+KEYWORDS: [stochastic, random, pde, method]
+      mathematics: 0.24021084372624574
+      physics: 0.27147393562690775
+      geology: 0.1581886199030635
+      astronomy: 0.12332399353279039
+      chemistry biology: 0.19912171150142927
+
+ID: 10127391_178
+TITLE: Millihertz quasi-periodic oscillations and thermonuclear bursts from Terzan 5: A showcase of burning regimes
+KEYWORDS: [netherlands, oscillation, rubicon, nwo]
+      mathematics: 0.1505868674174639
+      physics: 0.18659943787519764
+      geology: 0.06624651504978392
+      astronomy: 0.08054648202766258
+      chemistry biology: 0.1381484078380599
+
+ID: 10016813_234
+TITLE: Microarray challenges in ecology
+KEYWORDS: [microarray, ecological, gene]
+      mathematics: 0.19790216662589305
+      physics: 0.19565123517405167
+      geology: 0.2742302990172434
+      astronomy: 0.19334850013735422
+      chemistry biology: 0.3882139549604919
+
+ID: 10128759_178
+TITLE: Search for a Supersymmetric Partner to the Top Quark in Final States with Jets and Missing Transverse Momentum at √s=7  TeV with the ATLAS Detector
+KEYWORDS: [superscript, subscript, top, supersymmetric]
+      mathematics: 0.18111767274618507
+      physics: 0.1602649653669524
+      geology: 0.046295002281484476
+      astronomy: 0.11197922791289801
+      chemistry biology: 0.10907731821587746
+
+ID: 10006533_234
+TITLE: BINGO: a single dish approach to 21cm intensity mapping
+KEYWORDS: [page, intensity, cosmology, mapping]
+      mathematics: 0.3412684146029467
+      physics: 0.3860187258709281
+      geology: 0.3612543579831431
+      astronomy: 0.44269038295543517
+      chemistry biology: 0.37672792974723457
+
+ID: 10134668_183
+TITLE: The regulation of global deSUMOylation by human SUMO- specific proteases
+KEYWORDS: [sumo, sumoylation, senp, substrate]
+      mathematics: 0.15965488544644582
+      physics: 0.25137723320867233
+      geology: 0.16796953806949708
+      astronomy: 0.1481163264455666
+      chemistry biology: 0.26875420806020417
+
+ID: 10005554_234
+TITLE: Azole antifungal resistance today: focus on Aspergillus.
+KEYWORDS: [resistance, aspergillosis, azole, number]
+      mathematics: 0.05820293725620997
+      physics: 0.057827555239044724
+      geology: 0.06947959839451698
+      astronomy: 0.0031073718131750232
+      chemistry biology: 0.2323445876068002
+
+ID: 5181379_222
+TITLE: Mixed methods analysis of biology undergraduate choice, persistence, and departure
+KEYWORDS: [biology, major, student, persister]
+      mathematics: 0.5678376771490662
+      physics: 0.5097730237559972
+      geology: 0.4665410977452326
+      astronomy: 0.4355856567348481
+      chemistry biology: 0.7665877919746815
+
+ID: 10007985_234
+TITLE: OGLE-2008-BLG-510: first automated real-time detection of a weak microlensing anomaly - brown dwarf or stellar binary?
+KEYWORDS: [binary, microlensing, dwarf, weak]
+      mathematics: 0.21512594223618345
+      physics: 0.2574580839271483
+      geology: 0.21330431944211234
+      astronomy: 0.3606367979900465
+      chemistry biology: 0.21942951753317355
+
+ID: 10127316_178
+TITLE: Analysis of Substrate Access to Active Sites in Bacterial Multicomponent Monooxygenase Hydroxylases: X-Ray Crystal Structure of Xenon-Pressurized Phenol Hydroxylase from Pseudomonas Sp Ox1
+KEYWORDS: [hydroxylase]
+      mathematics: 0.12555458072147674
+      physics: 0.07363091311491982
+      geology: 0.035352090460629246
+      astronomy: -0.010500781583634523
+      chemistry biology: 0.21831737117316363
+
+ID: 101115_108
+TITLE: An investigation of interaural time difference fluctuations, part 4: the subjective effect of fluctuations in decaying stimuli delivered over loudspeakers
+KEYWORDS: [fluctuation, effect, time, difference]
+      mathematics: 0.0982201464144423
+      physics: 0.11537601573910877
+      geology: 0.11257552823804505
+      astronomy: 0.062067115526282524
+      chemistry biology: 0.2143493220733849
+
+ID: 10026237_234
+TITLE: Below-ground herbivory promotes soil nutrient transfer and root growth in grassland
+KEYWORDS: [herbivory, transfer, below-ground, nutrient]
+      mathematics: 0.15919417904355151
+      physics: 0.17191195840049228
+      geology: 0.22238165700893414
+      astronomy: 0.1417069882597485
+      chemistry biology: 0.36311137079819183
+
+ID: 10028729_234
+TITLE: The non-genotoxic hepatocarcinogen nafenopin suppresses rodent hepatocyte apoptosis induced by TGFbeta1, DNA damage and Fas
+KEYWORDS: [carcinogenesis]
+      mathematics: 0.21205913927265296
+      physics: 0.22882961220493991
+      geology: 0.23030324228150453
+      astronomy: 0.20502273509178304
+      chemistry biology: 0.4152315906006221
+
+ID: 10024793_234
+TITLE: Caveolin-1 (P132L), a common breast cancer mutation, confers mammary cell invasiveness and defines a novel stem cell/metastasis-associated gene signature.
+KEYWORDS: [cav-1, p132l, mutation, cell]
+      mathematics: 0.09783433966605645
+      physics: 0.08340138913465622
+      geology: 0.10668416801906139
+      astronomy: 0.05277379723983523
+      chemistry biology: 0.29546537027744063
+
+ID: 10004102_234
+TITLE: Mechanistic reappraisal of early stage photochemistry in the light-driven enzyme protochlorophyllide oxidoreductase.
+KEYWORDS: [pchlide, i675, species, chlide]
+      mathematics: 0.1099437161580342
+      physics: 0.07038419120010268
+      geology: 0.26473686690247755
+      astronomy: 0.21992651979061537
+      chemistry biology: 0.2948616344513187
+
+ID: 10027448_234
+TITLE: Metastasis-promoting anterior gradient 2 protein has a dimeric thioredoxin fold structure and a role in cell adhesion.
+KEYWORDS: [agr2, structure, adhesion, protein]
+      mathematics: 0.1355458222601778
+      physics: 0.22358146146423996
+      geology: 0.23315389733955422
+      astronomy: 0.06244675925197194
+      chemistry biology: 0.3503059807018978
+
+ID: 10127886_178
+TITLE: High yield production of inorganic graphene-like materials (MoS₂, WS₂, BN) through liquid exfoliation testing key parameters
+KEYWORDS: [testing, exfoliation, liquid, bibliographical]
+      mathematics: 0.21684706635498968
+      physics: 0.24562692148710863
+      geology: 0.19972888546340536
+      astronomy: 0.18266708476844354
+      chemistry biology: 0.3229150949756906
+
+ID: 10018643_234
+TITLE: The shock response, simulation and microstructural determination of a model composite material
+KEYWORDS: [samuel, response, determination, model]
+      mathematics: 0.12894187734096962
+      physics: 0.12004178278598676
+      geology: 0.14524073953368924
+      astronomy: 0.04150107668358726
+      chemistry biology: 0.1934399783391037
+
+ID: 10135911_183
+TITLE: Time Courses of Desensitization and Recovery From Adaptation in Mouse Rod Photoreceptors
+KEYWORDS: [recovery, adaptation, sensitivity, light]
+      mathematics: 0.03680500452954845
+      physics: 0.10550478535260434
+      geology: 0.12646688815246632
+      astronomy: 0.12451400190712426
+      chemistry biology: 0.17149741764501503
+
+ID: 100465_102
+TITLE: Reconstructed grounded theory: beyond comparison?
+KEYWORDS: [theory, approach, process]
+      mathematics: 0.32397664639989243
+      physics: 0.3736345249733986
+      geology: 0.23064952911866504
+      astronomy: 0.21137602686720358
+      chemistry biology: 0.3285355779259647
+
+ID: 10024815_234
+TITLE: Understanding the Warburg effect and the prognostic value of stromal caveolin-1 as a marker of a lethal tumor microenvironment.
+KEYWORDS: [tumor, cancer, cell, stromal]
+      mathematics: 0.12643657206947875
+      physics: 0.12143487157552717
+      geology: 0.09904915449921495
+      astronomy: 0.09139616071890916
+      chemistry biology: 0.3087614516083742
+
+ID: 10005194_234
+TITLE: Atomistic Simulations of Calcium Uranyl(VI) Carbonate Adsorption on Calcite and Stepped-Calcite Surfaces
+KEYWORDS: [adsorption, calcite, surface, different]
+      mathematics: 0.16236656189801144
+      physics: 0.30432668300061205
+      geology: 0.3877615165223996
+      astronomy: 0.16732339692436302
+      chemistry biology: 0.3082660745331739
+
+ID: 100855_108
+TITLE: High-K Structures Under Extreme Conditions
+KEYWORDS: [high-k, isomer, structure]
+      mathematics: 0.11467778537437452
+      physics: 0.2130629533423447
+      geology: 0.19006861320003807
+      astronomy: 0.0774121928854673
+      chemistry biology: 0.2721433807596513
+
+ID: 10003231_234
+TITLE: The role of intra-thalamic and thalamocortical circuits in action selection.
+KEYWORDS: [action, selection, salience]
+      mathematics: -0.0024426167981702693
+      physics: 0.10322757084833113
+      geology: 0.0142171094732291
+      astronomy: 0.020446918484267478
+      chemistry biology: 0.10290044536447182
+
+ID: 10127035_163
+TITLE: Arabian Sea mixed layer deepening during the monsoon : observations and dynamics
+KEYWORDS: [layer, mixed, monsoon, heat]
+      mathematics: 0.08329257009042691
+      physics: 0.06093908482269723
+      geology: 0.08863696842676902
+      astronomy: -0.0016274782185663052
+      chemistry biology: 0.13206762612103498
+
+ID: 10017801_234
+TITLE: Exploiting genomic knowledge in optimising molecular breeding programmes: algorithms from evolutionary computing
+KEYWORDS: [computing, molecular, press, breeding]
+      mathematics: 0.2948995779928769
+      physics: 0.3357505685936754
+      geology: 0.24817592663354118
+      astronomy: 0.2917186653811682
+      chemistry biology: 0.4346287117293633
+
+ID: 100251_102
+TITLE: Orientational and phase-coexistence behaviour of hard rod-sphere mixtures
+KEYWORDS: [sphere, hard, phase, nematic]
+      mathematics: 0.1899232662709543
+      physics: 0.25873730711976456
+      geology: 0.13541501528045513
+      astronomy: 0.13168763005530842
+      chemistry biology: 0.21181836179645774
+
+ID: 10137459_183
+TITLE: Codazzi Tensors with Two Eigenvalue Functions
+KEYWORDS: [codazzi, warped, eigenvalue, dimension]
+      mathematics: 0.26195260727238223
+      physics: 0.2627660076263984
+      geology: 0.14868349515933366
+      astronomy: 0.13013901792203006
+      chemistry biology: 0.24579573595925966
+
+ID: 10002302_234
+TITLE: Soil organic matter transport along an sub-Arctic river–sea transect
+KEYWORDS: [soil, bhp, index, bay]
+      mathematics: 0.16828778339280973
+      physics: 0.13276403038525125
+      geology: 0.20496516695070224
+      astronomy: 0.0845060895351277
+      chemistry biology: 0.17385872455118687
+
+ID: 20442207_198
+TITLE: Using multivariate calibration to evaluate hominin brain/body size relationships
+KEYWORDS: [size, body, brain, change]
+      mathematics: 0.16241575627761815
+      physics: 0.19251710849680817
+      geology: 0.15709279973454743
+      astronomy: 0.10982835030654194
+      chemistry biology: 0.24597392008695695
+
+ID: 4876079_200
+TITLE: Low-energy electron scattering by pyrazine
+KEYWORDS: [pyrazine, resonance, section, elastic]
+      mathematics: 0.11867752076132979
+      physics: 0.16943628907878594
+      geology: 0.12347439823952389
+      astronomy: 0.07536838053126751
+      chemistry biology: 0.13654962633210999
+
+ID: 19748253_197
+TITLE: Determination and comparison of biological principles in the public press and in BSCS biology texts
+KEYWORDS: [principle, biology, article, biological]
+      mathematics: 0.4128378354377153
+      physics: 0.4311608832280909
+      geology: 0.32844739730763883
+      astronomy: 0.3395549943244118
+      chemistry biology: 0.5679379104321733
+
+ID: 25337366_636
+TITLE: First Measurement Of The Radiative Process Negative Kaon Proton Going To Lambda Gamma At Beam Momenta 520-750 Mev/c Using The Crystal Ball Detector
+KEYWORDS: [event, reaction, background, datum]
+      mathematics: 0.14723091546359093
+      physics: 0.12653710994445028
+      geology: 0.21055876431533527
+      astronomy: 0.12970180509705534
+      chemistry biology: 0.18827989061238748
+
+ID: 10003268_234
+TITLE: A prototypic mathematical model of the human hair cycle.
+KEYWORDS: [hair, growth, human, model]
+      mathematics: 0.1231654435854853
+      physics: 0.13747733692002956
+      geology: 0.09015544562835281
+      astronomy: 0.08527513238521303
+      chemistry biology: 0.23727914857868845
+
+ID: 26870793_645
+TITLE: High frequency asymptotic solutions of the reduced wave equation on infinite regions with non-convex boundaries
+KEYWORDS: [solution, asymptotic, boundary, wave]
+      mathematics: 0.20017535643418646
+      physics: 0.19234078416326483
+      geology: 0.1874625147602466
+      astronomy: 0.09255668419389022
+      chemistry biology: 0.16574942880336213
+
+ID: 10587434_210
+TITLE: Derived copy of Biology
+KEYWORDS: [biology]
+      mathematics: 0.5621866663698425
+      physics: 0.5385861670596738
+      geology: 0.5198938240912521
+      astronomy: 0.48602395040401836
+      chemistry biology: 0.8543958174588645
+
+ID: 1633942_69
+TITLE: Systems biology and cancer, [Editorial]
+KEYWORDS: [biology, cancer, system, approach]
+      mathematics: 0.4252289095796355
+      physics: 0.3926422905845428
+      geology: 0.34394867479762015
+      astronomy: 0.32397203059110025
+      chemistry biology: 0.6056110441133111
+
+ID: 10004176_234
+TITLE: The role of ortho, meta, para isomerism in measured solid state and derived sub-cooled liquid vapour pressures of substituted benzoic acids
+KEYWORDS: [benzoic, pressure, vapour, acid]
+      mathematics: 0.050809955919855626
+      physics: 0.08155579083204743
+      geology: 0.05786296086152051
+      astronomy: -0.07535523156940582
+      chemistry biology: 0.1620606081514436

@@ -5,11 +5,10 @@ import java.util.HashMap;
 
 import eu.innovation.engineering.config.Configurator;
 import eu.innovation.engineering.config.PathConfigurator;
-import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
-import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 import eu.innovation.engineering.prepocessing.CSVBuilder;
 import eu.innovation.engineering.prepocessing.DatasetBuilder;
 import eu.innovation.engineering.prepocessing.DictionaryBuilder;
+import eu.innovation.engineering.prepocessing.datareader.TxtDataReader;
 import eu.innovation.engineering.prepocessing.featurextractor.Dictionary;
 
 public class Start {
@@ -17,56 +16,64 @@ public class Start {
   private static final boolean loadDictionariesFromFile = false;
   private static final boolean buildOnlyTestDataset = false;
   public static void main(String[] args) throws IOException{
-
+    String category = "science";
+     
+    String path = PathConfigurator.rootFolder + category;
+    if(!category.equals(""))
+      path = PathConfigurator.rootFolder + category +"/";
+    
+    
+    
+    int numFeatures = 40;
+    int numLabels = TxtDataReader.getCategories(path+"categories.txt").size();
+    
     //CREA IL FILE JSON DEI DIZIONARI
-    //mainOnlyForDictionaries();
-    //CREA I FILE JSON DEl DATASET TXT PASSATO( lo lancio sul train, Il test in realtà lo genero con la classe SolrClient)
-    //mainToGenerateJsonFromTxt();
+    //mainOnlyForDictionaries(path);
+    //CREA I FILE JSON DEL DATASET TXT PASSATO( lo lancio sul train, Il test in realtà lo genero con la classe SolrClient)
+    mainToGenerateJsonFromTxt(path);
     //CREA I FILE CSV DI TRAIN E TEST
-    mainForCSV();
+    //mainForCSV(path,numFeatures,numLabels);
 
   }
 
-  public static void mainForCSV() throws IOException{
+  public static void mainForCSV(String path, int numFeatures, int numLabels) throws IOException{
     DictionaryBuilder dictionaryBuilder = new DictionaryBuilder();
     
     HashMap<String, Dictionary> dictionaries = new HashMap<>();
     if(loadDictionariesFromFile)
-      dictionaries = dictionaryBuilder.load(PathConfigurator.dictionariesFolder+"dictionaries.json");
+      dictionaries = dictionaryBuilder.load(path+"dictionaries.json");
     else
-      dictionaries = dictionaryBuilder.build(PathConfigurator.dictionariesFolder+"dictionariesSource.json", Configurator.numFeatures);    
+      dictionaries = dictionaryBuilder.build(path+"dictionariesSource.json", numFeatures);    
 
     //Train
     if(!buildOnlyTestDataset)
-      CSVBuilder.buildCSV(PathConfigurator.trainingAndTestFolder+"training.json", dictionaries, true);
+      CSVBuilder.buildCSV(path+"training.json", dictionaries, path+"categories.txt", true, numLabels, numFeatures);
 
     //Test
-    CSVBuilder.buildCSV(PathConfigurator.trainingAndTestFolder+"test.json", dictionaries, false);
-
+    CSVBuilder.buildCSV(path+"test.json", dictionaries,  path+"categories.txt" , false, numLabels, numFeatures);
 
   }
 
 
-  public static void mainOnlyForDictionaries() throws IOException {
+  public static void mainOnlyForDictionaries(String path) throws IOException {
 
     // CREAZIONE DEI DIZIONARI
 
     DictionaryBuilder dictionaryBuilder = new DictionaryBuilder();
-    String jsonPath=PathConfigurator.dictionariesFolder;
-    dictionaryBuilder.initJsonDataset("dictionariesSource.txt",jsonPath);
-    jsonPath = jsonPath+"dictionariesSource.json";
+    System.out.println(path);
+    dictionaryBuilder.initJsonDataset("dictionariesSource.txt",path);
+    String jsonPath = path+"dictionariesSource.json";
     HashMap<String, Dictionary> dictionaries = dictionaryBuilder.build(jsonPath, Configurator.numFeatures);      
    
 
   }
   
   
-  public static void mainToGenerateJsonFromTxt() throws IOException{
+  public static void mainToGenerateJsonFromTxt(String path) throws IOException{
     DatasetBuilder db = new DatasetBuilder();
     
-    KeywordExtractor keywordExtractor = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
-    db.setKeywordExtractor(keywordExtractor);
-    db.buildDataset("training.txt",PathConfigurator.trainingAndTestFolder);    
+    //db.buildDataset("training.txt",path);
+    db.buildDataset("test.txt",path);
   }
 
 }

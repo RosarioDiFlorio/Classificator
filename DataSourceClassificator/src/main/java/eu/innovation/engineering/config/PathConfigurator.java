@@ -4,6 +4,7 @@ package eu.innovation.engineering.config;
 public class PathConfigurator {
 
   public static final String datasetFolder = "data/datasets/";
+  public static final String rootFolder = "data/root/";
   public static final String trainingAndTestFolder = "data/datasets/TrainingAndTest/";
   public static final String applicationFileFolder = "data/application/";
   public static final String backUpDatasetFolder = "data/datasets/backup/";
