@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import com.ibm.watson.developer_cloud.natural_language_understanding.v1.model.CategoriesResult;
@@ -85,7 +86,7 @@ public class FeatureExtractor {
 
 
   //METODO CHE COSTRUISCE LA MATRICE DI TARGET
-  public static HashMap<String,ArrayList<Features>> createTargetsInputDB (ArrayList<Source> listaPaper, HashSet<String> classUsed, HashMap<String, Dictionary> dictionaries) throws IOException{
+  public static HashMap<String,ArrayList<Features>> createTargetsInputDB (ArrayList<Source> listaPaper, List<String> categories, HashMap<String, Dictionary> dictionaries) throws IOException{
 
 
     HashMap<String,ArrayList<Features>> toReturn = new HashMap<String,ArrayList<Features>>();
@@ -104,7 +105,7 @@ public class FeatureExtractor {
       count = 0;
 
       //PER OGNI CATEGORIA SETTO IL VALORE DELLA CELLA
-      for(String category : classUsed){
+      for(String category : categories){
 
         ArrayList<CategoriesResult> paperCategories = p.getCategoryList();
         if(paperCategories != null){

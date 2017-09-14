@@ -1,35 +1,10 @@
 package eu.innovationengineering.classification;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-
-import org.neuroph.core.NeuralNetwork;
-import org.neuroph.core.data.DataSet;
-import org.neuroph.core.learning.SupervisedLearning;
-import org.neuroph.nnet.MultiLayerPerceptron;
-import org.neuroph.util.NeuronProperties;
-import org.neuroph.util.TransferFunctionType;
-
-import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
-import com.ibm.watson.developer_cloud.natural_language_understanding.v1.model.CategoriesResult;
-
-import eu.innovation.engineering.config.Configurator;
-import eu.innovation.engineering.prepocessing.DatasetBuilder;
-import eu.innovation.engineering.prepocessing.featurextractor.ClusteringKMeans;
-import eu.innovation.engineering.prepocessing.featurextractor.Dictionary;
-import eu.innovation.engineering.prepocessing.featurextractor.FeatureExtractor;
-import eu.innovation.engineering.util.featurextractor.BestSetting;
-import eu.innovation.engineering.util.featurextractor.Features;
-import eu.innovation.engineering.util.featurextractor.IdAndTarget;
-import eu.innovation.engineering.util.preprocessing.Source;
-
-
-
+/*
+ * 
+ * 
+ *
+ 
 public class NeuralNetworkClassifier {
 
   private static int numClasses;
@@ -64,7 +39,7 @@ public class NeuralNetworkClassifier {
     ArrayList<Paper> testSet = balancer.getTestSet();*/
     ////////////////////////////////////////////////////
 
-
+    /*
     //PARTE DI CODICE SENZA BALANCER E DUE DATASET DIVERSI
     DatasetBuilder pbTraining = new DatasetBuilder();
     pbTraining.parseDatasetFromJson("datasetTrainingAndTest/train.json");
@@ -503,6 +478,7 @@ public class NeuralNetworkClassifier {
          System.out.println("                expected: " + outputTest[k]+"\n");
        }
        System.out.println("\n\n");*/
+/*
           boolean containsOneCategory = false;
           for(CategoriesResult cat : categories){
             containsOneCategory=false;
@@ -594,3 +570,4 @@ public class NeuralNetworkClassifier {
 
   }
 }
+*/

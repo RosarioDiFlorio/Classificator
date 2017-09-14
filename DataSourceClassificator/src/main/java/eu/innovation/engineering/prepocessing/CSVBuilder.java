@@ -6,10 +6,10 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
 
-import eu.innovation.engineering.config.Configurator;
+import eu.innovation.engineering.prepocessing.datareader.TxtDataReader;
 import eu.innovation.engineering.prepocessing.featurextractor.Dictionary;
 import eu.innovation.engineering.prepocessing.featurextractor.FeatureExtractor;
 import eu.innovation.engineering.util.featurextractor.Features;
@@ -24,30 +24,21 @@ import eu.innovation.engineering.util.preprocessing.Source;
 public class CSVBuilder {
 
   /**
-   * Example Main
-   * @param args
-   * @throws IOException
-   */
-
-
-
-  /**
    * @param path
    * @param dictionaries
-   * @param string 
-   * @param pathFileCategories
+   * @param pathCategories
    * @param withLabel
-   * @param numFeatures 
-   * @param numLables 
+   * @param numLabels
+   * @param numFeatures
    * @throws IOException
    */
-  public static void buildCSV(String path,HashMap<String, Dictionary> dictionaries,String string, boolean withLabel, int numLabels, int numFeatures) throws IOException{
+  public static void buildCSV(String path,HashMap<String, Dictionary> dictionaries,String pathCategories, boolean withLabel, int numLabels, int numFeatures) throws IOException{
 
  
     FeatureExtractor featureExtractor = new FeatureExtractor();
-    HashSet<String> categories = (HashSet<String>) Configurator.getCategories();
+    List<String> categories = TxtDataReader.getCategories(pathCategories);
 
-    System.out.println("CATEGORIE");
+    //System.out.println("CATEGORIE");
     //System.out.println(categories.toString());
 
     DatasetBuilder setTraining = new DatasetBuilder();
@@ -79,14 +70,14 @@ public class CSVBuilder {
   }
   
   //METODO CHE RESITUISCE UN HASHMAP DI CATEGORIA, PER OGNI CATEGORIA LA LISTA DI PAPER CHE APPARTENGONO
-  private static HashMap<String, ArrayList<Source>> categoryListWithAssociatePapers(ArrayList<Source> trainingSet, HashSet<String> categories) {
+  private static HashMap<String, ArrayList<Source>> categoryListWithAssociatePapers(ArrayList<Source> trainingSet, List<String> categories) {
     HashMap<String, ArrayList<Source>> categoryWithPapers = new HashMap<String, ArrayList<Source>>();
 
     for(String category : categories){
       ArrayList<Source> toInsert = new ArrayList<Source>();
       for(Source p: trainingSet){
         if(p.getCategoryList()!=null && !p.getCategoryList().isEmpty()){
-          if(p.getCategoryList().get(0).getLabel().contains(category.replace("/", ""))){
+          if(p.getCategoryList().get(0).getLabel().contains(category)){
             toInsert.add(p);
           }
           categoryWithPapers.put(category, toInsert);
@@ -98,7 +89,7 @@ public class CSVBuilder {
 
   //METODO CHE ASSOCIA OGNI DOCUMENTO ALLA CLASSE D?APPARTENENZA, SALVANDO ID E TARGET IN UN OGGETTO DI TIPO IdAndTarget
   private static HashMap<IdAndTarget, ArrayList<Features>> loadTargetForDosuments(HashMap<String, ArrayList<Features>> featuresPapersTraining,
-      HashMap<String, ArrayList<Features>> targetsPapersTraining, HashSet<String> categories) {
+      HashMap<String, ArrayList<Features>> targetsPapersTraining, List<String> categories) {
     HashMap<IdAndTarget, ArrayList<Features>> toReturn = new HashMap<>();
     for(String key : featuresPapersTraining.keySet()){
       ArrayList<Features> targetsCurrentPaper = targetsPapersTraining.get(key);
@@ -157,7 +148,7 @@ public class CSVBuilder {
    * @param numFeatures 
    * @throws IOException
    */
-  private static void createDatasetPython(HashMap<IdAndTarget, ArrayList<Features>> featuresPapersTrainingWithTarget, HashSet<String> categories, String fileName, int numFeatures, int numLabels) throws IOException {
+  private static void createDatasetPython(HashMap<IdAndTarget, ArrayList<Features>> featuresPapersTrainingWithTarget, List<String> categories, String fileName, int numFeatures, int numLabels) throws IOException {
 
     String firstLine="id";
 
@@ -167,12 +158,11 @@ public class CSVBuilder {
 
     for(int i=0;i<numFeatures;i++)
       firstLine+=",F"+i;
-
     for(int i=0;i<numLabels;i++)
       firstLine+=",L"+i;
-
-
+    
     pWriterCSV.println(firstLine);
+<<<<<<< HEAD
 
     for(String category : categories){
       for(IdAndTarget idAndTarget : featuresPapersTrainingWithTarget.keySet()){
@@ -180,6 +170,11 @@ public class CSVBuilder {
         System.out.println(category);
         if(idAndTarget.getTarget().contains(category)){
           
+=======
+    for(String category : categories){     
+      for(IdAndTarget idAndTarget : featuresPapersTrainingWithTarget.keySet()){       
+        if(idAndTarget.getTarget().equals(category)){
+>>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
           String keywordsToWrite= idAndTarget.getId()+",";
           Iterator iterator = featuresPapersTrainingWithTarget.get(idAndTarget).iterator();
           Features feature = (Features) iterator.next();
@@ -189,24 +184,24 @@ public class CSVBuilder {
             keywordsToWrite+=","+feature2.getScore();
           }
           while(iterator.hasNext());
-
-          String currentCategory = idAndTarget.getTarget().replace(" ", "_");
-          
-          for(int i=0; i<Configurator.Categories.values().length;i++){
-            
-            if(currentCategory.contains(Configurator.Categories.values()[i].toString())){
+          String currentCategory = idAndTarget.getTarget().replace(" ", "_");         
+          for(int i=0; i<categories.size();i++){            
+            if(currentCategory.contains(categories.get(i))){
               keywordsToWrite+=","+1;
             }
             else
               keywordsToWrite+=","+0;
+<<<<<<< HEAD
           }
       
+=======
+          }        
+>>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
           pWriterCSV.println(keywordsToWrite);
         }
       }
 
     }
-
     pWriterCSV.flush();
     pWriterCSV.close();
   }
