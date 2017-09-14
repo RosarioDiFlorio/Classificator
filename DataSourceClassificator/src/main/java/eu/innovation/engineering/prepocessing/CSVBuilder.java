@@ -44,6 +44,7 @@ public class CSVBuilder {
     DatasetBuilder setTraining = new DatasetBuilder();
     setTraining.parseDatasetFromJson(path);
     ArrayList<Source> trainingSet = setTraining.getSourceList();
+    
 
     HashMap<String,ArrayList<Source>>trainingPapersForCategory=categoryListWithAssociatePapers(trainingSet,categories);
 
@@ -174,9 +175,9 @@ public class CSVBuilder {
             keywordsToWrite+=","+feature2.getScore();
           }
           while(iterator.hasNext());
-          String currentCategory = idAndTarget.getTarget().replace(" ", "_");         
-          for(int i=0; i<categories.size();i++){            
-            if(currentCategory.contains(categories.get(i))){
+          String currentCategory = idAndTarget.getTarget();         
+          for(int i=0; i<categories.size();i++){        
+            if(currentCategory.equals(categories.get(i))){
               keywordsToWrite+=","+1;
             }
             else

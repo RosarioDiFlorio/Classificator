@@ -224,7 +224,7 @@ public class ClusteringKMeans {
 
 
 
-  public static HashMap<String, Dictionary> clusterWithDatasourceAsItems(String fileName, int cut) throws IOException {
+  public static HashMap<String, Dictionary> clusterWithDatasourceAsItems(String fileName, int cut, String path) throws IOException {
     CreateMatrix matrixCreator = new CreateMatrix();
 
 
@@ -349,7 +349,7 @@ public class ClusteringKMeans {
 
     // per ogni dizionario calcolo anche i vettori che mi serviranno successivamente. 
     HashMap<String, Dictionary> finalDictionaries = returnVectorForDictionaries(dictionaries);
-    DictionaryBuilder.save(finalDictionaries, PathConfigurator.dictionariesFolder+"dictionaries.json");
+    DictionaryBuilder.save(finalDictionaries, path+"dictionaries.json");
 
     return finalDictionaries;
 

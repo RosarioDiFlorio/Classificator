@@ -38,15 +38,23 @@ import eu.innovation.engineering.util.preprocessing.Source;
 
 public class TrainingSetBuilder {
 
-
-  public static void main(String[] args) throws IOException {
+  private static final String category = "science";
+  
+  public static void main(String[] args) throws IOException { 
+    String path = PathConfigurator.rootFolder + category;
+    if(!category.equals(""))
+      path = PathConfigurator.rootFolder + category +"/";
+    
+    
+    
     CategoryVector categoryVector = new CategoryVector();
-    CategoryVector.execute(PathConfigurator.categories+"scienceCategories.txt",null);
-    clusterSubCategory(PathConfigurator.applicationFileFolder+"sourceVectors.json",PathConfigurator.categories+"scienceJson.json", "science");
+    CategoryVector.execute(path+"categories.txt",null,path);
+    
+    clusterSubCategory(PathConfigurator.applicationFileFolder+"sourceVectors.json",path+"vectorCategory.json", "science", path);
 
   }
 
-  public static void clusterSubCategory(String sourceFile, String categoryFile, String categoryChoose) throws JsonParseException, JsonMappingException, IOException{
+  public static void clusterSubCategory(String sourceFile, String categoryFile, String categoryChoose, String path) throws JsonParseException, JsonMappingException, IOException{
 
     ObjectMapper mapper = new ObjectMapper();
     HashMap<String,float[]> categoryVectorList = mapper.readValue(new File(categoryFile), new TypeReference<HashMap<String,float[]>>() {});
@@ -123,6 +131,7 @@ public class TrainingSetBuilder {
           if(s.getCategoryList().get(0).getLabel().contains(categoryChoose)){
             CategoriesResult category = new CategoriesResult();
             category.setLabel(item.getBestFeature());
+            category.setScore(1.0);
             ArrayList<CategoriesResult> categoryList = new ArrayList<CategoriesResult>();
             categoryList.add(category);
             s.setCategoryList(categoryList);
@@ -133,7 +142,7 @@ public class TrainingSetBuilder {
     }
 
    
-    DatasetBuilder.saveSources(newSource, PathConfigurator.applicationFileFolder+"dictionariesCategory/"+categoryChoose+"/trainingScience.json");
+    DatasetBuilder.saveSources(newSource, path+"/training.json");
 
 
 

@@ -13,7 +13,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import eu.innovation.engineering.config.Configurator;
 import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
@@ -132,7 +131,7 @@ public class TxtDataReader implements DataReader {
     BufferedReader bufferedReader = new BufferedReader(reader);
     String line = bufferedReader.readLine();
 
-    Set<String> categories = Configurator.getCategories();
+    List<String> categories = getCategories(pathFile);
     HashMap<String,HashMap<String,String>> categoryPapers = new HashMap<>();
     HashMap<String,String> paperIntoCurrentCategory = null;
 

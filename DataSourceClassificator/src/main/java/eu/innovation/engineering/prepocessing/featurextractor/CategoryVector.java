@@ -18,12 +18,12 @@ public class CategoryVector {
 
 
   public static void main(String[] args) throws IOException{
-    execute(PathConfigurator.categories+"science.txt",null);
+    execute(PathConfigurator.categories+"science.txt",null,"");
 
   }
 
   @Autowired
-  public static void execute(String pathCategory,String pathDictionaries) throws IOException{
+  public static void execute(String pathCategory,String pathDictionaries, String path) throws IOException{
 
     ArrayList<List<String>> categoryList = new ArrayList<List<String>>();
     FileReader file = new FileReader(pathCategory);
@@ -42,6 +42,7 @@ public class CategoryVector {
         categoryToAdd.add(line);
       }
       try{
+        //leggo i glossari per ogni sottocategoria
         if(pathDictionaries!=null){
           line = line.replace(" ","_");
           FileReader fileDictionary = new FileReader(pathDictionaries+line+"Dictionary.txt");
@@ -73,7 +74,7 @@ public class CategoryVector {
 
   String json = new ObjectMapper().writeValueAsString(categoryAndVectorList);
 
-  FileWriter writer = new FileWriter(PathConfigurator.categories+"scienceJson.json");
+  FileWriter writer = new FileWriter(path+"vectorCategory.json");
 
   writer.write(json);
   writer.flush();
