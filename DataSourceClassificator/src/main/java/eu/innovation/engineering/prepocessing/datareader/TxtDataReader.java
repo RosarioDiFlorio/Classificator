@@ -138,7 +138,6 @@ public class TxtDataReader implements DataReader {
 
     String currentCategory="";
     while(line!=null){
-
       if(categories.contains(line)){
         currentCategory = line;
         paperIntoCurrentCategory = new HashMap<>();
@@ -154,8 +153,6 @@ public class TxtDataReader implements DataReader {
     }
     //SALVO ANCHE L?ULTIMA CATEGORIA
     categoryPapers.put(currentCategory, paperIntoCurrentCategory);
-
-
 
     for(String category : categoryPapers.keySet()){
       System.out.println(category+" "+categoryPapers.get(category).size());
@@ -176,10 +173,7 @@ public class TxtDataReader implements DataReader {
     }
     return categories;
   }
-  
-  
-  
-  
+
   public String getFileToRead() {
     return fileToRead;
   }

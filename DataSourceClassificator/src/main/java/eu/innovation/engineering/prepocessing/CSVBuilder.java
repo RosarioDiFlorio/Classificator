@@ -24,14 +24,6 @@ import eu.innovation.engineering.util.preprocessing.Source;
 public class CSVBuilder {
 
   /**
-   * Example Main
-   * @param args
-   * @throws IOException
-   */
-
-
-
-  /**
    * @param path
    * @param dictionaries
    * @param pathCategories
