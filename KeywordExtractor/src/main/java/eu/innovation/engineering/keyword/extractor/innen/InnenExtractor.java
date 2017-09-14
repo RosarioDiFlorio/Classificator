@@ -5,15 +5,20 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.GenericApplicationContext;
+import org.springframework.util.CollectionUtils;
 
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
@@ -45,6 +50,9 @@ public class InnenExtractor implements KeywordExtractor {
 
   }
 
+  
+  
+  
   @Override
   public List<Keyword> extractKeywordsFromText(List<String> texts, int numKeywordsToReturn) throws LanguageException{
     ArrayList<Keyword> toReturn  = new ArrayList<>();

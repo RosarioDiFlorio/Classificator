@@ -1,3 +1,5 @@
+superscript
+subscript
 new
 ma
 london
@@ -9,7 +11,6 @@ X
 à
 Å
 Ã
-Σ
 Å
 à
 é
@@ -23,7 +24,6 @@ k
 Â
 Â
 X
-Σ
 K
 Z
 γ

@@ -151,9 +151,7 @@ public class TxtDataReader implements DataReader {
       line = bufferedReader.readLine();
       categoryPapers.put(currentCategory, paperIntoCurrentCategory);
     }
-    //SALVO ANCHE L?ULTIMA CATEGORIA
     categoryPapers.put(currentCategory, paperIntoCurrentCategory);
-
     for(String category : categoryPapers.keySet()){
       System.out.println(category+" "+categoryPapers.get(category).size());
     }

@@ -30,8 +30,8 @@ public class SourceVectorBuilder {
    */
   public static void main (String[] args) throws IOException{
     boolean fromSolr = false;
-    String fileName = "trainingDatasetMerged.txt";
-    String path = PathConfigurator.trainingAndTestFolder;
+    String fileName = "training_results.txt";
+    String path = PathConfigurator.applicationFileFolder;
     String pathWhereSave = PathConfigurator.applicationFileFolder+"sources.json";
 
     List<Source> sources = new ArrayList<>();
@@ -40,7 +40,7 @@ public class SourceVectorBuilder {
       sources = sourceBuilder.buildDataset(fileName, path);
       sourceBuilder.saveSources(sources, pathWhereSave);
     }else{
-      sources = sourceBuilder.loadSources(PathConfigurator.applicationFileFolder+"sources.json");
+      sources = sourceBuilder.loadSources(PathConfigurator.applicationFileFolder+"training_results.json");
     }
     pathWhereSave = PathConfigurator.applicationFileFolder+"sourceVectors.json";
     saveSourceVectorList(pathWhereSave, createSourceVectorList(sources));
