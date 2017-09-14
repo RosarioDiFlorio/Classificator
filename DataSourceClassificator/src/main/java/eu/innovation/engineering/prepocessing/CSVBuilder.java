@@ -162,19 +162,9 @@ public class CSVBuilder {
       firstLine+=",L"+i;
     
     pWriterCSV.println(firstLine);
-<<<<<<< HEAD
-
-    for(String category : categories){
-      for(IdAndTarget idAndTarget : featuresPapersTrainingWithTarget.keySet()){
-        System.out.println("  sada "+ idAndTarget.getTarget());
-        System.out.println(category);
-        if(idAndTarget.getTarget().contains(category)){
-          
-=======
     for(String category : categories){     
       for(IdAndTarget idAndTarget : featuresPapersTrainingWithTarget.keySet()){       
         if(idAndTarget.getTarget().equals(category)){
->>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
           String keywordsToWrite= idAndTarget.getId()+",";
           Iterator iterator = featuresPapersTrainingWithTarget.get(idAndTarget).iterator();
           Features feature = (Features) iterator.next();
@@ -191,12 +181,7 @@ public class CSVBuilder {
             }
             else
               keywordsToWrite+=","+0;
-<<<<<<< HEAD
-          }
-      
-=======
           }        
->>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
           pWriterCSV.println(keywordsToWrite);
         }
       }
