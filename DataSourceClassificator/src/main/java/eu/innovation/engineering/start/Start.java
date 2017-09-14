@@ -13,32 +13,47 @@ import eu.innovation.engineering.prepocessing.featurextractor.Dictionary;
 
 public class Start {
 
+
+  //**MENU**
+  
+  //Dictionaries
+  private static final boolean buildJsonDictionaries = false;
   private static final boolean loadDictionariesFromFile = false;
-  private static final boolean buildOnlyTestDataset = false;
+
+  //Train
+  private static final boolean buildJsonTraining = true;
+  private static final boolean buildCSVTraining = true;
+
+  //Test
+  private static final boolean buildJsonTest = true;
+  private static final boolean buildCSVTest = true;
+
+  //Other
+  private static final String category = "science";
+  private static final int numFeatures = 40;
+
   public static void main(String[] args) throws IOException{
-    String category = "science";
-     
+    
+
     String path = PathConfigurator.rootFolder + category;
     if(!category.equals(""))
       path = PathConfigurator.rootFolder + category +"/";
-    
-    
-    
-    int numFeatures = 40;
+
     int numLabels = TxtDataReader.getCategories(path+"categories.txt").size();
-    
+
     //CREA IL FILE JSON DEI DIZIONARI
-    //mainOnlyForDictionaries(path);
+    if(buildJsonDictionaries)
+      mainOnlyForDictionaries(path);
     //CREA I FILE JSON DEL DATASET TXT PASSATO( lo lancio sul train, Il test in realtà lo genero con la classe SolrClient)
     mainToGenerateJsonFromTxt(path);
     //CREA I FILE CSV DI TRAIN E TEST
-    //mainForCSV(path,numFeatures,numLabels);
+    mainForCSV(path,numFeatures,numLabels);
 
   }
 
   public static void mainForCSV(String path, int numFeatures, int numLabels) throws IOException{
     DictionaryBuilder dictionaryBuilder = new DictionaryBuilder();
-    
+
     HashMap<String, Dictionary> dictionaries = new HashMap<>();
     if(loadDictionariesFromFile)
       dictionaries = dictionaryBuilder.load(path+"dictionaries.json");
@@ -46,11 +61,12 @@ public class Start {
       dictionaries = dictionaryBuilder.build(path+"dictionariesSource.json", numFeatures);    
 
     //Train
-    if(!buildOnlyTestDataset)
+    if(buildCSVTraining)
       CSVBuilder.buildCSV(path+"training.json", dictionaries, path+"categories.txt", true, numLabels, numFeatures);
 
     //Test
-    CSVBuilder.buildCSV(path+"test.json", dictionaries,  path+"categories.txt" , false, numLabels, numFeatures);
+    if(buildCSVTest)
+      CSVBuilder.buildCSV(path+"test.json", dictionaries,  path+"categories.txt" , false, numLabels, numFeatures);
 
   }
 
@@ -64,16 +80,18 @@ public class Start {
     dictionaryBuilder.initJsonDataset("dictionariesSource.txt",path);
     String jsonPath = path+"dictionariesSource.json";
     HashMap<String, Dictionary> dictionaries = dictionaryBuilder.build(jsonPath, Configurator.numFeatures);      
-   
+
 
   }
-  
-  
+
+
   public static void mainToGenerateJsonFromTxt(String path) throws IOException{
     DatasetBuilder db = new DatasetBuilder();
-    
-    //db.buildDataset("training.txt",path);
-    db.buildDataset("test.txt",path);
+
+    if(buildJsonTraining)
+      db.buildDataset("training.txt",path);
+    if(buildJsonTest)
+      db.buildDataset("test.txt",path);
   }
 
 }
