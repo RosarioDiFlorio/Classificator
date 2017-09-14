@@ -9,6 +9,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -16,8 +17,6 @@ import java.util.stream.Collectors;
 
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
-import eu.innovation.engineering.config.Configurator;
-import eu.innovation.engineering.config.Configurator.Categories;
 import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
@@ -67,11 +66,13 @@ public class CSVReader {
     float uThreshold = (float) 1.0;
     float lThreshold = (float) 0.7;
     int batchLine = 0;   
-    boolean isCount = true;   
+    boolean isCount = false;   
     boolean all = false;
     String batchCategory = "";
 
-    String category = Configurator.Categories.science.name();
+    String categoryFolder = "science";
+    
+    String category = "mathematics";
     //category = "all";
     String testFolderName=PathConfigurator.applicationFileFolder+"results.csv";
     File f = new File(testFolderName);
@@ -86,11 +87,16 @@ public class CSVReader {
             File fileToAnalyze = list[i];
             System.out.println(fileToAnalyze.getName()+"\n");
             if(all){
-              Categories[] categories = Configurator.Categories.values();  
-              for(int j = 0; j<categories.length;j++){
+              List<String> categories = Collections.EMPTY_LIST;
+              if(category.length()<1)
+                categories = TxtDataReader.getCategories(PathConfigurator.rootFolder+"categories.txt");
+              else
+                categories = TxtDataReader.getCategories(PathConfigurator.rootFolder+categoryFolder+"/"+"categories.txt");  
+              
+              for(int j = 0; j<categories.size();j++){
 
                 int countDocs = 0;
-                category = categories[j].name();
+                category = categories.get(j);
                 if(category.equals(batchCategory) || batchCategory.equals("")){
                   countDocs = readResultClassifier(fileToAnalyze,lThreshold,uThreshold,category,isCount,batchLine);
                   System.out.println("category -> "+category);
@@ -120,10 +126,15 @@ public class CSVReader {
       int totalCount = 0;
       System.out.println("FILE -> "+testFolderName);
       if(all){
-        Categories[] categories = Configurator.Categories.values();  
-        for(int j = 0; j<categories.length;j++){
+        List<String> categories = Collections.EMPTY_LIST;
+        if(category.length()<1)
+          categories = TxtDataReader.getCategories(PathConfigurator.rootFolder+"categories.txt");
+        else
+          categories = TxtDataReader.getCategories(PathConfigurator.rootFolder+categoryFolder+"/"+"categories.txt");  
+        
+        for(int j = 0; j<categories.size();j++){
           int countDocs = 0;
-          category = categories[j].name();
+          category = categories.get(j);
           if(category.equals(batchCategory) || batchCategory.equals("")){
             countDocs = readResultClassifier(f,lThreshold,uThreshold,category,isCount,batchLine);
             System.out.println("category -> "+category);
@@ -188,9 +199,9 @@ public class CSVReader {
     DatasetBuilder.saveSources(listSource, PathConfigurator.trainingAndTestFolder+"TestGeneric.json");
   }
 
-  
-  
-  
+
+
+
   public static int readResultClassifier(File csvFile, float lowThreshold,float upperThreshold,String category,boolean isCount,int batchLine) throws Exception{
     KeywordExtractor kex = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
     Map<String, List<String>> dataMap = read(csvFile.getAbsolutePath());

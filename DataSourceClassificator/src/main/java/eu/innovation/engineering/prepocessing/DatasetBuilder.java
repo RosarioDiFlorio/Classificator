@@ -219,11 +219,7 @@ public  class DatasetBuilder {
    */
   public static void main(String[] args) throws IOException{
     DatasetBuilder db = new DatasetBuilder();
-    
-    //KeywordExtractor keywordExtractor = new MauiExtractor("../KeywordExtractor/", "none", "newInnenModel");
-    KeywordExtractor keywordExtractor = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
-    db.setKeywordExtractor(keywordExtractor);
-    db.buildDataset("trainAndTestTogether.txt",PathConfigurator.trainingAndTestFolder);    
+    db.buildDataset("training_results.txt",PathConfigurator.applicationFileFolder);    
     
   }
 
