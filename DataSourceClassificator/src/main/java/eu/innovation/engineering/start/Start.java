@@ -24,7 +24,7 @@ public class Start {
   private static final boolean buildCSVTraining = true;
 
   //Test
-  private static final boolean buildJsonTest = false;
+  private static final boolean buildJsonTest = true;
   private static final boolean buildCSVTest = true;
 
   //Other
