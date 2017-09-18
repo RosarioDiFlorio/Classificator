@@ -29,7 +29,7 @@ import eu.innovation.engineering.keyword.extractor.stopwords.Stopwords;
 import eu.innovation.engineering.keyword.extractor.stopwords.StopwordsEnglish;
 import eu.innovation.engineering.keyword.extractor.util.Candidate;
 import eu.innovation.engineering.keyword.extractor.util.Counter;
-import eu.innovation.engineering.keyword.extractor.vocab.Vocabulary;
+import eu.innovation.engineering.keywordExtractor.vocab.Vocabulary;
 /*
  *    MauiTopicExtractor.java
  *    Copyright (C) 2001-2009 Eibe Frank, Olena Medelyan
