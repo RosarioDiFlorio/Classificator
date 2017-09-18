@@ -1,14 +1,17 @@
 package eu.innovation.engineering.LSA.keywordExtractor;
 import java.util.List;
 
+import org.apache.commons.math3.linear.Array2DRowRealMatrix;
+
 public class MatrixRepresentation {
-  private float[][] matrixA;
+  private Array2DRowRealMatrix matrixA;
+  
   private List<String> tokenList;
   
-  public float[][] getMatrixA() {
+  public Array2DRowRealMatrix getMatrixA() {
     return matrixA;
   }
-  public void setMatrixA(float[][] matrixA) {
+  public void setMatrixA(Array2DRowRealMatrix matrixA) {
     this.matrixA = matrixA;
   }
   public List<String> getTokenList() {
