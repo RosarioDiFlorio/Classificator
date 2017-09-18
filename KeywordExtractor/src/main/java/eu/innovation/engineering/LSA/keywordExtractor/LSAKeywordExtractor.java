@@ -1,6 +1,9 @@
 package eu.innovation.engineering.LSA.keywordExtractor;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.commons.math3.linear.Array2DRowRealMatrix;
 
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
@@ -38,10 +41,23 @@ public class LSAKeywordExtractor implements KeywordExtractor {
   }
 
   /**
+   * Create matrix A from chuncks
    * @param chunks
    * @return
    */
   public static MatrixRepresentation buildMatrixA(List<String> chunks){
+    
+    List<String> wordList = new ArrayList<String>();
+    
+    for(String chunk : chunks){
+      if(!wordList.contains(chunk)){
+          wordList.add(chunk);
+      }
+    }
+    
+    
+    
+    
     return null;
   }
 
@@ -49,12 +65,12 @@ public class LSAKeywordExtractor implements KeywordExtractor {
    * @param <E>
    * @return toDefine
    */
-  public static SVDMatrix SVD(MatrixRepresentation matrixA){  
+  public static Array2DRowRealMatrix SVD(MatrixRepresentation matrixA){  
     return null;
   }
   
   
-  private static  List<Keyword> getKeywordList(MatrixRepresentation matrixA, SVDMatrix SVDResult){
+  private static  List<Keyword> getKeywordList(MatrixRepresentation matrixA, Array2DRowRealMatrix SVDResult){
     return null;
   }
   
