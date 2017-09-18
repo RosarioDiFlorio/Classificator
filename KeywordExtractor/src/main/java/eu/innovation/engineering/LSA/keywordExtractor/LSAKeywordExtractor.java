@@ -34,8 +34,8 @@ public class LSAKeywordExtractor implements KeywordExtractor {
       List<List<String>> sentenceList = createSentencesFromText(text);
       MatrixRepresentation matrixA = buildMatrixA(sentenceList);
       System.out.println(matrixA.getMatrixA().toString());
-      Array2DRowRealMatrix U = SVD(matrixA);
-      keywordList = getKeywordList(matrixA, U, numKeywordsToReturn);
+      //Array2DRowRealMatrix U = SVD(matrixA);
+      //keywordList = getKeywordList(matrixA, U, numKeywordsToReturn);
     }
     return keywordList;
 
@@ -101,7 +101,7 @@ public class LSAKeywordExtractor implements KeywordExtractor {
 
     for(String word : wordList){
       column=0;
-      for(List<String> sentence : sentences){    
+      for(List<String> sentence : sentences){  
         matrix.addToEntry(row, column, Tf(word, sentences, column)*Isf(word,sentences));
         column++;
       }
@@ -197,18 +197,18 @@ public class LSAKeywordExtractor implements KeywordExtractor {
    * @param j
    * @return
    */
-  private static float Tf(String word,List<List<String>> sentences, int j){
+  private static double Tf(String word,List<List<String>> sentences, int j){
 
     List<String> sentenceJ = sentences.get(j);
     //number of times word i in sentence j
-    int countSentenceJ=0;
+    double countSentenceJ=0;
     for(String tmpWord : sentenceJ){
       if(tmpWord.equals(word)){
         countSentenceJ++;
       }
     }
-
-    return countSentenceJ/sentenceJ.size();
+    double results = countSentenceJ/sentenceJ.size();
+    return results;
 
   }
 
@@ -219,16 +219,16 @@ public class LSAKeywordExtractor implements KeywordExtractor {
    * @param chunks
    * @return
    */
-  private static float Isf(String word,List<List<String>> sentences){
+  private static double Isf(String word,List<List<String>> sentences){
 
     //number of sentences with word i
-    float numberSentenceWithWord = 0;
+    double numberSentenceWithWord = 0;
 
     for(List<String> sentence : sentences){
       if(sentence.contains(word))
         numberSentenceWithWord++;
     }
-
+    System.out.println("isf: "+sentences.size()+"/"+numberSentenceWithWord);
     return sentences.size()/numberSentenceWithWord;
   }
 
