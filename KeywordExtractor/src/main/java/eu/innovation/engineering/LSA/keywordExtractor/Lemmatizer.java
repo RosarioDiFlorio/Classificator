@@ -1,4 +1,4 @@
-package eu.innovationengineering.Tester;
+package eu.innovation.engineering.LSA.keywordExtractor;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Properties;
@@ -13,7 +13,7 @@ import edu.stanford.nlp.util.CoreMap;
 
 public class Lemmatizer {
   
-      protected StanfordCoreNLP pipeline;
+      protected static StanfordCoreNLP pipeline;
       
       public Lemmatizer() {
           // Create StanfordCoreNLP object properties, with POS tagging
@@ -27,7 +27,7 @@ public class Lemmatizer {
           this.pipeline = new StanfordCoreNLP(props);
       }
 
-      public List<String> lemmatize(String documentText)
+      public static List<String> lemmatize(String documentText)
       {
           List<String> lemmas = new LinkedList<String>();
 
@@ -35,7 +35,7 @@ public class Lemmatizer {
           Annotation document = new Annotation(documentText);
 
           // run all Annotators on this text
-          this.pipeline.annotate(document);
+          pipeline.annotate(document);
           
           // Iterate over all of the sentences found
           List<CoreMap> sentences = document.get(SentencesAnnotation.class);
@@ -44,7 +44,7 @@ public class Lemmatizer {
               for (CoreLabel token: sentence.get(TokensAnnotation.class)) {
                   // Retrieve and add the lemma for each word into the list of lemmas
                   lemmas.add(token.get(LemmaAnnotation.class));
-                  System.out.println(token);
+                  //System.out.println(token);
               }
           }
           

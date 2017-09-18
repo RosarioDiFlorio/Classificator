@@ -19,7 +19,6 @@ import eu.innovationengineering.lang.ISO_639_1_LanguageCode;
 import eu.innovationengineering.lang.exceptions.LanguageException;
 import eu.innovationengineering.nlp.analyzer.stanfordnlp.StanfordnlpAnalyzer;
 import eu.innovationengineering.nlp.beans.AnnotatedWord;
-import eu.innovationengineering.nlp.beans.CompleteSentenceAnalysis;
 import eu.innovationengineering.nlp.beans.oat.SentenceChunk;
 
 /**
@@ -42,26 +41,39 @@ public class LSAKeywordExtractor implements KeywordExtractor {
    * @return
    * @throws LanguageException 
    */
-  public static List<SentenceChunk> createChunkFromText(String text) throws LanguageException{
-    text = text.toLowerCase();
-    String[] cleanedString = text.split(" ");
-    text = "";
-    for(String s : cleanedString){
-      if(!CleanUtilis.getBlackList().contains(s))
-        text+= s+" ";
-    }
+  public static List<List<String>> createSentecesFromText(String text) throws LanguageException{
     StanfordnlpAnalyzer nlpAnalyzer = new StanfordnlpAnalyzer();
-    CompleteSentenceAnalysis results = nlpAnalyzer.executeCompleteSentenceAnalysis(text, ISO_639_1_LanguageCode.ENGLISH, true, true);
-    List<SentenceChunk> chunkList = cleanChunks(results.getChunks());
+    List<String> senteces = nlpAnalyzer.detectSentences(text, ISO_639_1_LanguageCode.ENGLISH);
     
+    List<List<String>> sentecesList = new ArrayList<List<String>>();
+    
+
+    System.out.println(cleanAndSplitSentece(senteces.get(0)).toString());
     //debug print
     //List<List<String>> toprint = chunkList.stream().map(sc->sc.getWords().stream().map(w->w.getWord()).collect(Collectors.toList())).collect(Collectors.toList());
     //toprint.stream().forEach(System.out::println);
     
     
-    return chunkList;
+    return sentecesList;
   }
 
+  private static List<String> cleanAndSplitSentece(String text){
+    Set<String> stopwords = CleanUtilis.getBlackList();
+    Lemmatizer lemmatizer = new Lemmatizer();
+    
+    List<String> textLemmatized = lemmatizer.lemmatize(text);
+
+    Iterator<String> it = textLemmatized.iterator();
+    while(it.hasNext()){
+      String str = it.next();
+      System.out.println(str);
+      if(stopwords.contains(str) || str.length()<=2)
+        it.remove();
+    }
+  
+    return textLemmatized;
+  }
+  
   /**
    * @param chunks
    * @return
