@@ -10,12 +10,12 @@ import java.util.Set;
 public class CleanUtilis {
   
   private static Set<String> blackList;
-  private static String stopWordPath= "data/stopwords/stopwords_en.txt";
   
-  public  static  Set<String> getBlackList(){
+  
+  public  static  Set<String> getBlackList(String stopWordPath){
     if (blackList == null) {
       blackList = new HashSet<String>();
-      File txt = new File(getStopWordPath());  
+      File txt = new File(stopWordPath);  
       InputStreamReader is;
       String sw = null;
       try {
@@ -31,13 +31,6 @@ public class CleanUtilis {
     return blackList;
   }
 
-  public static  String getStopWordPath() {
-    return stopWordPath;
-  }
-
-  public static void setStopWordPath(String stopWords) {
-    stopWordPath = stopWords;
-  }
 
   public static void setBlacklist(Set<String> blacklist) {
     CleanUtilis.blackList = blacklist;

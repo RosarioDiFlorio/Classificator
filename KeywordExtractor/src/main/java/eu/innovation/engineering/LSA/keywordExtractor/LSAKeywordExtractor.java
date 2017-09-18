@@ -25,6 +25,20 @@ import eu.innovationengineering.nlp.analyzer.stanfordnlp.StanfordnlpAnalyzer;
  *
  */
 public class LSAKeywordExtractor implements KeywordExtractor {  
+  
+  
+  
+  private String mainDirectory = "";
+  private static String stopWordPath= "data/stopwords/stopwords_en.txt";
+  
+  
+
+  public LSAKeywordExtractor(String mainDir) {
+    setMainDirectory(mainDir);
+    setStopWordPath(getMainDirectory() + stopWordPath);
+  }
+  
+  
   /* (non-Javadoc)
    * @see eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor#extractKeywordsFromText(java.util.List, int)
    */
@@ -64,7 +78,7 @@ public class LSAKeywordExtractor implements KeywordExtractor {
    * @return
    */
   private static List<String> cleanAndSplitSentence(String text, Lemmatizer lemmatizer){
-    Set<String> stopwords = CleanUtilis.getBlackList();
+    Set<String> stopwords = CleanUtilis.getBlackList(getStopWordPath());
     text = text.toLowerCase();
     List<String> textLemmatized = lemmatizer.lemmatize(text);
     Iterator<String> it = textLemmatized.iterator();
@@ -234,6 +248,22 @@ public class LSAKeywordExtractor implements KeywordExtractor {
     }
  
     return numberSentenceWithWord/sentences.size();
+  }
+
+  public String getMainDirectory() {
+    return mainDirectory;
+  }
+
+  public void setMainDirectory(String mainDirectory) {
+    this.mainDirectory = mainDirectory;
+  }
+
+  public static String getStopWordPath() {
+    return stopWordPath;
+  }
+
+  public static void setStopWordPath(String stopWordPath) {
+    LSAKeywordExtractor.stopWordPath = stopWordPath;
   }
 
 
