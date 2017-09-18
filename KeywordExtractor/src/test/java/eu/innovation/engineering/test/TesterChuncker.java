@@ -16,7 +16,7 @@ public class TesterChuncker {
     String test2 = "The dog is on the table";
     LSAKeywordExtractor kex = new LSAKeywordExtractor();
     
-    kex.createSentecesFromText(test);
+    kex.createSentencesFromText(test);
   
   }
   
