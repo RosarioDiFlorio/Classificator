@@ -1,4 +1,4 @@
-package eu.innovation.engineering.util.preprocessing;
+package eu.innovation.engineering.prepocessing.datareader;
 
 
 
@@ -21,18 +21,21 @@ import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 import eu.innovation.engineering.prepocessing.DatasetBuilder;
-import eu.innovation.engineering.prepocessing.datareader.TxtDataReader;
+import eu.innovation.engineering.util.preprocessing.Paper;
+import eu.innovation.engineering.util.preprocessing.SolrClient;
+import eu.innovation.engineering.util.preprocessing.Source;
 
-public class CSVReader {
+public class CSVDataReader {
   private static final int numKey = 10;
+  private static final float upperThreshold = (float) 1.0;
+  private static final float lowThreshold = (float) 0.7;
+  private static final int limitSource = 70;
+
 
 
   public static void main(String[] args) throws Exception{
 
     //createGenericDataset(PathConfigurator.applicationFileFolder+"datasetGeneric/chemistry/");
-
-
-
     //mainToCreateDataset(args);
     mainToTest(args);
 
@@ -46,32 +49,25 @@ public class CSVReader {
     float uThreshold = (float) 1.0;
     float lThreshold = (float) 0.7;
     int limitSource = 70;
+    String  categoryFilter = "";
     String fileCsv = PathConfigurator.applicationFileFolder+"results.csv";
     String pathWhereSave = PathConfigurator.applicationFileFolder+"trainingDatasetFromCsv.txt";
-
     String oldDataset = PathConfigurator.applicationFileFolder+"trainingDatasetMergedIntegrated.txt";
-
-
-
-    createTrainingSetFromCsvResults(fileCsv, lThreshold, uThreshold, limitSource,pathWhereSave);
+    createTxtTrainingFromCsvResults(fileCsv,lThreshold,uThreshold,pathWhereSave, categoryFilter);
     TxtDataReader txtReader = new TxtDataReader();
     txtReader.mergeTxtDataset(oldDataset, pathWhereSave, 70, PathConfigurator.applicationFileFolder+"trainingDatasetMerged.txt");
-
-    /*txtReader.mergeTxtDataset(PathConfigurator.applicationFileFolder+"trainingDatasetMerged.txt", PathConfigurator.applicationFileFolder+"toIntegrate.txt",
-        limitSource, PathConfigurator.applicationFileFolder+"trainingDatasetMergedIntegrated.txt");
-     */
   }
 
   public static void mainToTest(String[] args) throws Exception{
     float uThreshold = (float) 1.0;
     float lThreshold = (float) 0.7;
     int batchLine = 0;   
-    boolean isCount = false;   
+    boolean isCount =  false;   
     boolean all = false;
     String batchCategory = "";
 
     String categoryFolder = "science";
-    
+
     String category = "mathematics";
     //category = "all";
     String testFolderName=PathConfigurator.applicationFileFolder+"results.csv";
@@ -92,7 +88,7 @@ public class CSVReader {
                 categories = TxtDataReader.getCategories(PathConfigurator.rootFolder+"categories.txt");
               else
                 categories = TxtDataReader.getCategories(PathConfigurator.rootFolder+categoryFolder+"/"+"categories.txt");  
-              
+
               for(int j = 0; j<categories.size();j++){
 
                 int countDocs = 0;
@@ -131,7 +127,7 @@ public class CSVReader {
           categories = TxtDataReader.getCategories(PathConfigurator.rootFolder+"categories.txt");
         else
           categories = TxtDataReader.getCategories(PathConfigurator.rootFolder+categoryFolder+"/"+"categories.txt");  
-        
+
         for(int j = 0; j<categories.size();j++){
           int countDocs = 0;
           category = categories.get(j);
@@ -156,6 +152,66 @@ public class CSVReader {
       }
       System.out.println("Total sources found -> " +totalCount);
     }
+  }
+
+  public static void createTxtTrainingFromCsvResults(String csvFile,float lowThreshold,float upperThreshold,String PathWhereSave,String categoryFilter) throws FileNotFoundException{
+    HashMap<String, List<String>> categoryMap = getCategoryMap(csvFile, lowThreshold, upperThreshold);
+    
+    PrintWriter p = new PrintWriter(new File(PathWhereSave.replace(".txt", categoryFilter+".txt")));
+    if(categoryFilter.equals("")){
+      for(String category: categoryMap.keySet()){
+        int countSource = 0;
+        p.println("/"+category.replace("_", " "));
+        for(String id: categoryMap.get(category)){ 
+          if(countSource >= limitSource)
+            break;
+          countSource++;
+          p.println(id+" 1");       
+        }
+        p.println("\n");
+        p.flush();
+      }
+    }
+    else{
+      int countSource = 0;
+      for(String id: categoryMap.get(categoryFilter)){ 
+        if(countSource >= limitSource)
+          break;
+        countSource++;
+        p.println(id+" 1");       
+      }
+      p.println("\n");
+      p.flush();
+    }
+    p.close();
+  }
+
+  public static HashMap<String, List<String>> getCategoryMap(String csvFile, float lowThreshold,float upperThreshold){
+    Map<String, List<String>> dataMap = read(csvFile);
+    HashMap<String, List<String>> categoryMap = new HashMap<>();
+    float probs = 0;
+    for(String id : dataMap.keySet()){
+      try{
+        probs = Float.parseFloat(dataMap.get(id).get(0));
+      }catch (Exception e) {
+        e.printStackTrace();
+        continue;
+      }
+  
+      if(probs <= upperThreshold && probs >= lowThreshold ){
+        String category = dataMap.get(id).get(1);
+        if(categoryMap.containsKey(category)){
+          List<String> tmp = categoryMap.get(category);
+          tmp.add(id);
+          categoryMap.put(category, tmp);
+        }else{
+          List<String> tmp = new ArrayList<>();
+          tmp.add(id);
+          categoryMap.put(category, tmp);
+        }       
+      }
+    }
+    return categoryMap;
   }
 
   public static void createGenericDataset(String pathFolder) throws Exception{
@@ -208,7 +264,6 @@ public class CSVReader {
 
     List<String> ids = new ArrayList<>();
     ids.addAll(dataMap.keySet());
-
     SolrClient solr = new SolrClient();
     PrintWriter p = new PrintWriter(new File(PathConfigurator.applicationTestFolder+category+"_"+csvFile.getName().replace(".csv", "")+".txt"));
     int count = 0;
@@ -222,11 +277,8 @@ public class CSVReader {
         e.printStackTrace();
         continue;
       }
-
       if((probs <= upperThreshold) && (probs >= lowThreshold) ){       
-
-        if(dataMap.get(id).get(1).contains(category)|| category.equals("all")){
-
+        if(dataMap.get(id).get(1).contains(category)|| category.equals("")){
           if(count < batchLine || isCount){
             count++;
             p.println(id+" 1");
@@ -236,7 +288,6 @@ public class CSVReader {
           idList.add(id);
           count++;
         }
-
       }   
     }
     System.out.println(count+" - "+category);
@@ -260,52 +311,7 @@ public class CSVReader {
   }
 
 
-  public static void createTrainingSetFromCsvResults(String csvFile, float lowThreshold,float upperThreshold,int limitSource,String PathWhereSave) throws FileNotFoundException{
 
-    Map<String, List<String>> dataMap = read(csvFile);
-
-    HashMap<String, List<String>> categoryMap = new HashMap<>();
-
-    float probs = 0;
-    for(String id : dataMap.keySet()){
-      try{
-        probs = Float.parseFloat(dataMap.get(id).get(0));
-      }catch (Exception e) {
-        e.printStackTrace();
-        continue;
-      }
-
-      if(probs <= upperThreshold && probs >= lowThreshold ){
-        String category = dataMap.get(id).get(1);
-        if(categoryMap.containsKey(category)){
-          List<String> tmp = categoryMap.get(category);
-          tmp.add(id);
-          categoryMap.put(category, tmp);
-        }else{
-          List<String> tmp = new ArrayList<>();
-          tmp.add(id);
-          categoryMap.put(category, tmp);
-        }       
-      }
-    }
-
-
-    PrintWriter p = new PrintWriter(new File(PathWhereSave));
-
-    for(String category: categoryMap.keySet()){
-      int countSource = 0;
-      p.println("/"+category.replace("_", " "));
-      for(String id: categoryMap.get(category)){ 
-        if(countSource >= limitSource)
-          break;
-        countSource++;
-        p.println(id+" 1");       
-      }
-      p.println("\n");
-      p.flush();
-    }
-    p.close();
-  }
 
 
   public static Map<String,List<String>> read(String csvFile) {
@@ -313,9 +319,7 @@ public class CSVReader {
     String cvsSplitBy = ",";
     Map<String, List<String>> dataMap = new HashMap<>();
     try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
-
       while ((line = br.readLine()) != null) {
-
         // use comma as separator
         String[] csvData = line.split(cvsSplitBy); 
         List<String> data = new ArrayList<>();
@@ -325,18 +329,11 @@ public class CSVReader {
         }
         String key = csvData[0].trim();
         dataMap.put(key, data);
-
-
       }
-
       return dataMap;
-
-
     } catch (IOException e) {
       e.printStackTrace();
     }
     return dataMap;
-
   }
-
 }
