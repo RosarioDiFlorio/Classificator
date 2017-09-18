@@ -1,58 +1,5 @@
 
 Cluster: 0
-    id: 10127868_178   Keywords: Nanoporous graphene as a desalination membrane : a computational study
-[computational, study, desalination, reference]
-
-    id: 10029717_234   Keywords: Structure of hydrogen-dosed graphene deduced from low electron energy loss characteristics and density functional calculations
-[electron, energy, loss, hydrogenation]
-
-    id: 10135629_183   Keywords: Developing Novel Biointerfaces and Biomaterials with Surface Plasmon Resonance and SPR Imaging
-[spr, resonance, imaging, surface]
-
-    id: 10017159_234   Keywords: DIET, DISEASE AND DEATH AT DAKHLEH: A HISTOLOGICAL EXAMINATION OF TEN MUMMIES FROM THE KELLIS 1 CEMETERY IN THE DAKHLEH OASIS, EGYPT.
-[ancient, dakhleh, histology, remains]
-
-    id: 10126995_163   Keywords: Mutant analysis of luminescence and autoinduction in a marine bacterium
-[luminescence, autoinduction, autoinducer, ai-2]
-
-    id: 10130047_178   Keywords: Rational design and directed evolution of probe ligases for site-specific protein labeling and live-cell imaging
-[ligase, bibliographical, rational, reference]
-
-    id: 100224_102   Keywords: Electron-impact excitation of neutral boron using the R-matrix with pseudostates method
-[pseudostate, boron, fusion, collision]
-
-    id: 10135647_183   Keywords: Thermal Characterization of Nanostructures and Advanced Engineered Materials
-[thermal, material, conductivity, film]
-
-    id: 10016813_234   Keywords: Microarray challenges in ecology
-[microarray, ecological, gene]
-
-    id: 10128759_178   Keywords: Search for a Supersymmetric Partner to the Top Quark in Final States with Jets and Missing Transverse Momentum at √s=7  TeV with the ATLAS Detector
-[top, supersymmetric, quark]
-
-    id: 10006533_234   Keywords: BINGO: a single dish approach to 21cm intensity mapping
-[page, intensity, cosmology, mapping]
-
-    id: 10007985_234   Keywords: OGLE-2008-BLG-510: first automated real-time detection of a weak microlensing anomaly - brown dwarf or stellar binary?
-[binary, microlensing, dwarf, weak]
-
-    id: 10028729_234   Keywords: The non-genotoxic hepatocarcinogen nafenopin suppresses rodent hepatocyte apoptosis induced by TGFbeta1, DNA damage and Fas
-[carcinogenesis]
-
-    id: 10127886_178   Keywords: High yield production of inorganic graphene-like materials (MoS₂, WS₂, BN) through liquid exfoliation testing key parameters
-[testing, exfoliation, liquid, bibliographical]
-
-    id: 100465_102   Keywords: Reconstructed grounded theory: beyond comparison?
-[theory, approach, process]
-
-    id: 10005194_234   Keywords: Atomistic Simulations of Calcium Uranyl(VI) Carbonate Adsorption on Calcite and Stepped-Calcite Surfaces
-[adsorption, calcite, surface, different]
-
-    id: 10017801_234   Keywords: Exploiting genomic knowledge in optimising molecular breeding programmes: algorithms from evolutionary computing
-[computing, molecular, press, breeding]
-
-
-Cluster: 1
     id: 10028700_234   Keywords: Comparative effects of Bcl-2 over-expression and ZVAD.FMK treatment on dexamethasone and VP16-induced apoptosis in CEM cells
 [cell, death]
 
@@ -86,6 +33,9 @@ Cluster: 1
     id: 10138891_183   Keywords: MONITORING ORGAN REGENERATION OF SEA CUCUMBER HOLOTHURIA LEUCOSPILOTA AFTER EVISCERATION
 [regeneration, evisceration, defense, mechanism]
 
+    id: 10133759_183   Keywords: Effect of temperature and iron-oxide nano-particle inclusions on the ultrasound vaporization pressure of perfluorocarbon droplets for disease detection and therapy
+[droplet, pfc, emulsion, us]
+
     id: 10127391_178   Keywords: Millihertz quasi-periodic oscillations and thermonuclear bursts from Terzan 5: A showcase of burning regimes
 [netherlands, oscillation, rubicon, nwo]
 
@@ -116,6 +66,9 @@ Cluster: 1
     id: 10127035_163   Keywords: Arabian Sea mixed layer deepening during the monsoon : observations and dynamics
 [layer, mixed, monsoon, heat]
 
+    id: 10002302_234   Keywords: Soil organic matter transport along an sub-Arctic river–sea transect
+[soil, bhp, index, bay]
+
     id: 4876079_200   Keywords: Low-energy electron scattering by pyrazine
 [pyrazine, resonance, section, elastic]
 
@@ -126,41 +79,62 @@ Cluster: 1
 [benzoic, pressure, vapour, acid]
 
 
-Cluster: 2
-    id: 27039789_645   Keywords: Biophysics
-[biophysic, biophysicist, physics, biology]
+Cluster: 1
+    id: 10127868_178   Keywords: Nanoporous graphene as a desalination membrane : a computational study
+[computational, study, desalination, reference]
 
-    id: 5181379_222   Keywords: Mixed methods analysis of biology undergraduate choice, persistence, and departure
-[biology, major, student, persister]
+    id: 10006533_234   Keywords: BINGO: a single dish approach to 21cm intensity mapping
+[page, intensity, cosmology, mapping]
+
+    id: 100465_102   Keywords: Reconstructed grounded theory: beyond comparison?
+[theory, approach, process]
+
+    id: 10017801_234   Keywords: Exploiting genomic knowledge in optimising molecular breeding programmes: algorithms from evolutionary computing
+[computing, molecular, press, breeding]
 
     id: 19748253_197   Keywords: Determination and comparison of biological principles in the public press and in BSCS biology texts
 [principle, biology, article, biological]
-
-    id: 10587434_210   Keywords: Derived copy of Biology
-[biology]
 
     id: 1633942_69   Keywords: Systems biology and cancer, [Editorial]
 [biology, cancer, system, approach]
 
 
-Cluster: 3
+Cluster: 2
+    id: 10029717_234   Keywords: Structure of hydrogen-dosed graphene deduced from low electron energy loss characteristics and density functional calculations
+[electron, energy, loss, hydrogenation]
+
     id: 10139106_183   Keywords: Crystallographic Analysis of a Hammerhead Ribozyme Variant and Its Impact on Catalytic Activity
 [hammerhead, ribozyme, base, active]
 
     id: 10003459_234   Keywords: Common Motifs in Scientific Workflows: An Empirical Analysis
 [workflow, motif, scientific, analysis]
 
+    id: 10135629_183   Keywords: Developing Novel Biointerfaces and Biomaterials with Surface Plasmon Resonance and SPR Imaging
+[spr, resonance, imaging, surface]
+
     id: 4869777_200   Keywords: A Network of Multi-Tasking Proteins at the DNA Replication Fork Preserves Genome Stability
 [gene, replication, nature, dna]
 
+    id: 10017159_234   Keywords: DIET, DISEASE AND DEATH AT DAKHLEH: A HISTOLOGICAL EXAMINATION OF TEN MUMMIES FROM THE KELLIS 1 CEMETERY IN THE DAKHLEH OASIS, EGYPT.
+[ancient, dakhleh, histology, remains]
+
+    id: 10126995_163   Keywords: Mutant analysis of luminescence and autoinduction in a marine bacterium
+[luminescence, autoinduction, autoinducer, ai-2]
+
     id: 10010331_234   Keywords: The yeast vacuolar membrane proteome
 [protein, vacuolar, membrane, vacuole]
+
+    id: 10130047_178   Keywords: Rational design and directed evolution of probe ligases for site-specific protein labeling and live-cell imaging
+[ligase, bibliographical, rational, reference]
 
     id: 10018699_234   Keywords: Membrane nanotubes: dynamic long-distance connections between animal cells.
 [cell, recent, membrane, nanotube]
 
     id: 10028409_234   Keywords: The Pinning Potential at Single Flux Vortices Investigated Using Submicron Hall Probes
 [flux, pinning, submicron, reference]
+
+    id: 100224_102   Keywords: Electron-impact excitation of neutral boron using the R-matrix with pseudostates method
+[pseudostate, boron, fusion, collision]
 
     id: 10003524_234   Keywords: Role of metal-reducing bacteria in arsenic release from Bengal delta sediments.
 [arsenic, sediment, bengal, release]
@@ -171,26 +145,44 @@ Cluster: 3
     id: 10023476_234   Keywords: Aspergillus genomes and the Aspergillus cloud.
 [aspergillus, genome, resource]
 
-    id: 10133759_183   Keywords: Effect of temperature and iron-oxide nano-particle inclusions on the ultrasound vaporization pressure of perfluorocarbon droplets for disease detection and therapy
-[droplet, pfc, emulsion, us]
-
     id: 100679_108   Keywords: Ultraviolet Photoluminescence from Gd-implanted AlN Epilayers
 [emission, nm, aln]
+
+    id: 10135647_183   Keywords: Thermal Characterization of Nanostructures and Advanced Engineered Materials
+[thermal, material, conductivity, film]
 
     id: 10024687_234   Keywords: Solving PDEs with random data by stochastic collocation
 [stochastic, random, pde, method]
 
+    id: 10016813_234   Keywords: Microarray challenges in ecology
+[microarray, ecological, gene]
+
+    id: 10128759_178   Keywords: Search for a Supersymmetric Partner to the Top Quark in Final States with Jets and Missing Transverse Momentum at √s=7  TeV with the ATLAS Detector
+[top, supersymmetric, quark]
+
     id: 10134668_183   Keywords: The regulation of global deSUMOylation by human SUMO- specific proteases
 [sumo, sumoylation, senp, substrate]
 
+    id: 10007985_234   Keywords: OGLE-2008-BLG-510: first automated real-time detection of a weak microlensing anomaly - brown dwarf or stellar binary?
+[binary, microlensing, dwarf, weak]
+
     id: 10026237_234   Keywords: Below-ground herbivory promotes soil nutrient transfer and root growth in grassland
 [herbivory, transfer, below-ground, nutrient]
+
+    id: 10028729_234   Keywords: The non-genotoxic hepatocarcinogen nafenopin suppresses rodent hepatocyte apoptosis induced by TGFbeta1, DNA damage and Fas
+[carcinogenesis]
 
     id: 10004102_234   Keywords: Mechanistic reappraisal of early stage photochemistry in the light-driven enzyme protochlorophyllide oxidoreductase.
 [pchlide, i675, species, chlide]
 
     id: 10027448_234   Keywords: Metastasis-promoting anterior gradient 2 protein has a dimeric thioredoxin fold structure and a role in cell adhesion.
 [agr2, structure, adhesion, protein]
+
+    id: 10127886_178   Keywords: High yield production of inorganic graphene-like materials (MoS₂, WS₂, BN) through liquid exfoliation testing key parameters
+[testing, exfoliation, liquid, bibliographical]
+
+    id: 10005194_234   Keywords: Atomistic Simulations of Calcium Uranyl(VI) Carbonate Adsorption on Calcite and Stepped-Calcite Surfaces
+[adsorption, calcite, surface, different]
 
     id: 100855_108   Keywords: High-K Structures Under Extreme Conditions
 [high-k, isomer, structure]
@@ -201,9 +193,6 @@ Cluster: 3
     id: 10137459_183   Keywords: Codazzi Tensors with Two Eigenvalue Functions
 [codazzi, warped, eigenvalue, dimension]
 
-    id: 10002302_234   Keywords: Soil organic matter transport along an sub-Arctic river–sea transect
-[soil, bhp, index, bay]
-
     id: 20442207_198   Keywords: Using multivariate calibration to evaluate hominin brain/body size relationships
 [size, body, brain, change]
 
@@ -212,4 +201,15 @@ Cluster: 3
 
     id: 26870793_645   Keywords: High frequency asymptotic solutions of the reduced wave equation on infinite regions with non-convex boundaries
 [solution, asymptotic, boundary, wave]
+
+
+Cluster: 3
+    id: 27039789_645   Keywords: Biophysics
+[biophysic, biophysicist, physics, biology]
+
+    id: 5181379_222   Keywords: Mixed methods analysis of biology undergraduate choice, persistence, and departure
+[biology, major, student, persister]
+
+    id: 10587434_210   Keywords: Derived copy of Biology
+[biology]
 

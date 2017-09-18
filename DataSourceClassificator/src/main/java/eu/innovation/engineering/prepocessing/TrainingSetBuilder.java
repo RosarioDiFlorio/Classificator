@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -15,9 +16,11 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 import com.ibm.watson.developer_cloud.natural_language_understanding.v1.model.CategoriesResult;
 
 import eu.innovation.engineering.config.PathConfigurator;
+import eu.innovation.engineering.prepocessing.datareader.TxtDataReader;
 import eu.innovation.engineering.prepocessing.featurextractor.CategoryVector;
 import eu.innovation.engineering.prepocessing.featurextractor.ClusteringKMeans;
 import eu.innovation.engineering.prepocessing.featurextractor.FeatureExtractor;
@@ -39,17 +42,17 @@ import eu.innovation.engineering.util.preprocessing.Source;
 public class TrainingSetBuilder {
 
   private static final String category = "science";
-  
+
   public static void main(String[] args) throws IOException { 
     String path = PathConfigurator.rootFolder + category;
     if(!category.equals(""))
       path = PathConfigurator.rootFolder + category +"/";
-    
-    
-    
+
+
+
     CategoryVector categoryVector = new CategoryVector();
     CategoryVector.execute(path+"categories.txt",null,path);
-    
+
     clusterSubCategory(PathConfigurator.applicationFileFolder+"sourceVectors.json",path+"vectorCategory.json", "science", path);
 
   }
@@ -123,7 +126,7 @@ public class TrainingSetBuilder {
 
 
     List<Source> source = DatasetBuilder.loadSources(PathConfigurator.applicationFileFolder+"sources.json");
-   
+
     List<Source> newSource = new ArrayList<Source>();
     for(Item item : items){
       for(Source s : source){
@@ -141,11 +144,77 @@ public class TrainingSetBuilder {
       }
     }
 
-   
+
+
+
+     
+    List<String> listCategories = TxtDataReader.getCategories(path+"categories.txt");
+    newSource=keywordFilterLSA(newSource, listCategories);
+    
     DatasetBuilder.saveSources(newSource, path+"/training.json");
 
 
+  }
+
+
+  public static List<Source> keywordFilterLSA (List<Source> sourceList, List<String> categoryChoose) throws IOException{
+
+
+    for(Source src : sourceList ){
+      ArrayList<Keyword> keywordList = src.getKeywordList();
+      for(Iterator<Keyword> it = keywordList.iterator(); it.hasNext();){
+        Keyword k = it.next();
+        double max = 0;
+        for(String category : categoryChoose){
+
+          ArrayList<List<String>> textList = new ArrayList<List<String>>();
+          List<String> list = new ArrayList<String>();
+          if(category.contains(" ")){
+            String[] categories = category.split(" ");
+            for(String s : categories){
+              list.add(s);
+            }
+
+
+          }
+          else{
+            list.add(category);
+          }
+
+          textList.add(list);
+          float[] vectorCategoryChoose = ClusteringKMeans.returnVectorsFromTextList(textList)[0];
+          String label = k.getText();
+          textList = new ArrayList<List<String>>();
+          list = new ArrayList<String>();
+          list.add(label);
+          textList.add(list);
+          float[] vector = ClusteringKMeans.returnVectorsFromTextList(textList)[0];
+          double vectorResult = FeatureExtractor.cosineSimilarity(vectorCategoryChoose, vector);
+          
+          if(vectorResult>max){
+            max=vectorResult;
+          }
+          
+          //System.out.println(label+" "+vectorResult);
+
+        }
+        
+        if(max<0.1){
+          System.out.println("Rimossa. "+k.getText()+" "+max);
+          it.remove();
+        }
+
+      }
+
+    }
+    return sourceList;
 
   }
+
+
+
+
+
+
 
 }
