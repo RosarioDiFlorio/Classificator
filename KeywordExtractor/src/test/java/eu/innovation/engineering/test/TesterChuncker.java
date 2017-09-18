@@ -1,6 +1,10 @@
 package eu.innovation.engineering.test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import eu.innovation.engineering.LSA.keywordExtractor.LSAKeywordExtractor;
+import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
 import eu.innovationengineering.lang.exceptions.LanguageException;
 
 public class TesterChuncker {
@@ -15,9 +19,10 @@ public class TesterChuncker {
     
     String test2 = "The dog is on the table";
     LSAKeywordExtractor kex = new LSAKeywordExtractor();
-    
-    System.out.println(kex.createSentencesFromText(test));
-  
+    InnenExtractor inneKex = new InnenExtractor("");
+    List<String> testList = new ArrayList<>();
+    testList.add(test);
+    System.out.println(inneKex.extractKeywordsFromText(testList, 5));
   }
   
   
