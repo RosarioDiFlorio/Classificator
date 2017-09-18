@@ -1,5 +1,12 @@
 package eu.innovation.engineering.start;
-
+/**
+ * @author lomasto
+ * Data pre-processing.
+ * This class is used for data-preprocessing. With this we can create training and test csv file. There are three phases. 
+ * First, create JSON file that contains source for dictionaries. For this, we need txt file were are ID document's (for Solr query).  
+ * In second phase, are created training and test json file, starting with file txt (Solr Id).
+ * After that, in the final phase, we load or create dictionary with Json file dictionarySource.json and create CSV for training and test    
+ */
 import java.io.IOException;
 import java.util.HashMap;
 
@@ -15,16 +22,16 @@ public class Start {
 
   //**MENU**
   
-  //Dictionaries
+  //Primo passo, creazione del file dizionaries.json
   private static final boolean buildJsonDictionaries = false;
-  private static final boolean loadDictionariesFromFile = false;
-
-  //Train
+  
+  //Secondo passo creare i file Json di train e test
   private static final boolean buildJsonTraining = false;
-  private static final boolean buildCSVTraining = true;
-
-  //Test
   private static final boolean buildJsonTest = true;
+
+  //Terzo passo, decidere se predere i dizionari persistenti o creare altri, creare i csv
+  private static final boolean loadDictionariesFromFile = false;
+  private static final boolean buildCSVTraining = true;
   private static final boolean buildCSVTest = true;
 
   //Other
