@@ -47,22 +47,24 @@ public class LSAKeywordExtractor implements KeywordExtractor {
    * @throws LanguageException 
    */
   public static List<List<String>> createSentencesFromText(String text) throws LanguageException{
+    List<List<String>> sentecesList = new ArrayList<List<String>>();
     StanfordnlpAnalyzer nlpAnalyzer = new StanfordnlpAnalyzer();
     List<String> senteces = nlpAnalyzer.detectSentences(text, ISO_639_1_LanguageCode.ENGLISH);
-    List<List<String>> sentecesList = new ArrayList<List<String>>();
+    Lemmatizer lemmatizer = new Lemmatizer();
     for(String sentence: senteces){
-      sentecesList.add(cleanAndSplitSentence(sentence));
+      sentecesList.add(cleanAndSplitSentence(sentence,lemmatizer));
     }   
     return sentecesList;
   }
 
   /**
    * @param text
+   * @param lemmatizer 
    * @return
    */
-  private static List<String> cleanAndSplitSentence(String text){
+  private static List<String> cleanAndSplitSentence(String text, Lemmatizer lemmatizer){
     Set<String> stopwords = CleanUtilis.getBlackList();
-    Lemmatizer lemmatizer = new Lemmatizer();
+    text = text.toLowerCase();
     List<String> textLemmatized = lemmatizer.lemmatize(text);
     Iterator<String> it = textLemmatized.iterator();
     while(it.hasNext()){
