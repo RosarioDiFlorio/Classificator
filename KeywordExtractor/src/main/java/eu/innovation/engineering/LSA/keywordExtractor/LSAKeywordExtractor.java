@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.apache.commons.math3.linear.Array2DRowRealMatrix;
+import org.apache.commons.math3.linear.RealMatrix;
 import org.apache.commons.math3.linear.SingularValueDecomposition;
 
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
@@ -33,9 +34,9 @@ public class LSAKeywordExtractor implements KeywordExtractor {
     for(String text: toAnalyze){
       List<List<String>> sentenceList = createSentencesFromText(text);
       MatrixRepresentation matrixA = buildMatrixA(sentenceList);
-      System.out.println(matrixA.getMatrixA().toString());
-      //Array2DRowRealMatrix U = SVD(matrixA);
-      //keywordList = getKeywordList(matrixA, U, numKeywordsToReturn);
+      System.out.println(matrixA.getTokenList().toString());
+      RealMatrix U = SVD(matrixA);
+      keywordList = getKeywordList(matrixA, U, numKeywordsToReturn);
     }
     return keywordList;
 
@@ -122,12 +123,12 @@ public class LSAKeywordExtractor implements KeywordExtractor {
    * @param <E>
    * @return toDefine
    */
-  public static Array2DRowRealMatrix SVD(MatrixRepresentation matrixA){  
+  public static RealMatrix SVD(MatrixRepresentation matrixA){  
 
     SingularValueDecomposition svd = new SingularValueDecomposition(matrixA.getMatrixA());
 
 
-    return (Array2DRowRealMatrix) svd.getU();
+    return svd.getU();
   }
 
 
@@ -139,7 +140,7 @@ public class LSAKeywordExtractor implements KeywordExtractor {
    * @param SVDResult
    * @return
    */
-  private static  List<Keyword> getKeywordList(MatrixRepresentation matrixA, Array2DRowRealMatrix U, int threshold){
+  private static  List<Keyword> getKeywordList(MatrixRepresentation matrixA, RealMatrix U, int threshold){
 
     double[] bestColumn = U.getColumn(0);
 
@@ -209,6 +210,7 @@ public class LSAKeywordExtractor implements KeywordExtractor {
         countSentenceJ++;
       }
     }
+    
     double results = countSentenceJ/sentenceJ.size();
     return results;
 
@@ -230,8 +232,8 @@ public class LSAKeywordExtractor implements KeywordExtractor {
       if(sentence.contains(word))
         numberSentenceWithWord++;
     }
-    System.out.println("isf: "+sentences.size()+"/"+numberSentenceWithWord);
-    return sentences.size()/numberSentenceWithWord;
+ 
+    return numberSentenceWithWord/sentences.size();
   }
 
 
