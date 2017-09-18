@@ -51,6 +51,8 @@ public class LSAKeywordExtractor implements KeywordExtractor {
       System.out.println(matrixA.getTokenList().toString());
       RealMatrix U = SVD(matrixA);
       keywordList = getKeywordList(matrixA, U, numKeywordsToReturn);
+      matrixA = null;
+      Runtime.getRuntime().gc();
     }
     return keywordList;
 

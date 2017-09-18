@@ -10,6 +10,7 @@ package eu.innovation.engineering.start;
 import java.io.IOException;
 import java.util.HashMap;
 
+import eu.innovation.engineering.LSA.keywordExtractor.LSAKeywordExtractor;
 import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.prepocessing.CSVBuilder;
 import eu.innovation.engineering.prepocessing.DatasetBuilder;
@@ -26,16 +27,16 @@ public class Start {
   private static final boolean buildJsonDictionaries = false;
   
   //Secondo passo creare i file Json di train e test
-  private static final boolean buildJsonTraining = false;
-  private static final boolean buildJsonTest = true;
+  private static final boolean buildJsonTraining = true;
+  private static final boolean buildJsonTest = false;
 
   //Terzo passo, decidere se predere i dizionari persistenti o creare altri, creare i csv
   private static final boolean loadDictionariesFromFile = false;
-  private static final boolean buildCSVTraining = true;
-  private static final boolean buildCSVTest = true;
+  private static final boolean buildCSVTraining = false;
+  private static final boolean buildCSVTest = false;
 
   //Other
-  private static final String category = "science";
+  private static final String category = "test";
   private static final int numFeatures = 45;
 
   public static void main(String[] args) throws IOException{
@@ -93,7 +94,7 @@ public class Start {
 
   public static void mainToGenerateJsonFromTxt(String path) throws IOException{
     DatasetBuilder db = new DatasetBuilder();
-
+    db.setKeywordExtractor(new LSAKeywordExtractor(PathConfigurator.keywordExtractorsFolder));
     if(buildJsonTraining)
       db.buildDataset("training.txt",path);
     if(buildJsonTest)
