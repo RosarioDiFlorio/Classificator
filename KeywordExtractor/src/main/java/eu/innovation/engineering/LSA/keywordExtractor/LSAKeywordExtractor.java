@@ -50,7 +50,9 @@ public class LSAKeywordExtractor implements KeywordExtractor {
     StanfordnlpAnalyzer nlpAnalyzer = new StanfordnlpAnalyzer();
     List<String> senteces = nlpAnalyzer.detectSentences(text, ISO_639_1_LanguageCode.ENGLISH);
     List<List<String>> sentecesList = new ArrayList<List<String>>();
-    System.out.println(cleanAndSplitSentence(senteces.get(0)).toString());
+    for(String sentence: senteces){
+      sentecesList.add(cleanAndSplitSentence(sentence));
+    }   
     return sentecesList;
   }
 
@@ -65,7 +67,6 @@ public class LSAKeywordExtractor implements KeywordExtractor {
     Iterator<String> it = textLemmatized.iterator();
     while(it.hasNext()){
       String str = it.next();
-      System.out.println(str);
       if(stopwords.contains(str) || str.length()<=2)
         it.remove();
     }
