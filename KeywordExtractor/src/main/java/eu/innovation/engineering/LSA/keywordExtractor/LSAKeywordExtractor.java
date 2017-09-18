@@ -5,6 +5,7 @@ import java.util.List;
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
+import eu.innovationengineering.nlp.analyzer.stanfordnlp.StanfordnlpAnalyzer;
 
 /**
  * @author Rosario
@@ -26,6 +27,7 @@ public class LSAKeywordExtractor implements KeywordExtractor {
    * @return
    */
   public static List<String> createChunkFromText(String text){
+    StanfordnlpAnalyzer nlpAnalyzer = new StanfordnlpAnalyzer();
     return null;
   }
 

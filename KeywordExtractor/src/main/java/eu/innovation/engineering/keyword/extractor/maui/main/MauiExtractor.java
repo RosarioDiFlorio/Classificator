@@ -19,7 +19,7 @@ import eu.innovation.engineering.keyword.extractor.stemmers.Stemmer;
 import eu.innovation.engineering.keyword.extractor.stopwords.Stopwords;
 import eu.innovation.engineering.keyword.extractor.stopwords.StopwordsEnglish;
 import eu.innovation.engineering.keyword.extractor.util.LanguageDetector;
-import eu.innovation.engineering.keyword.extractor.vocab.Vocabulary;
+import eu.innovation.engineering.keywordExtractor.vocab.Vocabulary;
 import weka.core.Attribute;
 import weka.core.FastVector;
 import weka.core.Instance;

@@ -1,4 +1,4 @@
-package eu.innovation.engineering.keyword.extractor.vocab;
+package eu.innovation.engineering.keywordExtractor.vocab;
 
 import java.io.BufferedReader;
 import java.io.File;
