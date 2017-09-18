@@ -1,5 +1,5 @@
 package eu.innovation.engineering.LSA.keywordExtractor;
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
@@ -20,7 +20,7 @@ public class Lemmatizer {
           // (required for lemmatization), and lemmatization
           Properties props;
           props = new Properties();
-          props.put("annotators", "tokenize, ssplit, pos,lemma ,parse");
+          props.put("annotators", "tokenize, ssplit, pos,lemma");
           // StanfordCoreNLP loads a lot of models, so you probably
           // only want to do this once per execution
           this.pipeline = new StanfordCoreNLP(props);
@@ -28,7 +28,7 @@ public class Lemmatizer {
 
       public static List<String> lemmatize(String documentText)
       {
-          List<String> lemmas = new LinkedList<String>();
+          List<String> lemmas = new ArrayList<String>();
 
           // create an empty Annotation just with the given text
           Annotation document = new Annotation(documentText);

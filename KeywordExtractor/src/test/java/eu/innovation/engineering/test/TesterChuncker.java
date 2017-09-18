@@ -1,11 +1,9 @@
 package eu.innovation.engineering.test;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import eu.innovation.engineering.LSA.keywordExtractor.LSAKeywordExtractor;
-import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
-import eu.innovation.engineering.keyword.extractor.maui.main.MauiExtractor;
+import eu.innovation.engineering.LSA.keywordExtractor.Lemmatizer;
+import eu.innovationengineering.nlp.analyzer.stanfordnlp.StanfordLemmatizer;
+import eu.innovationengineering.nlp.analyzer.stanfordnlp.StanfordnlpAnalyzer;
 
 public class TesterChuncker {
 
@@ -16,14 +14,40 @@ public class TesterChuncker {
         +"On 25 July Russia began mobilisation and on 28 July the Austro-Hungarians declared war on Serbia. Germany presented an ultimatum to Russia to demobilise, and when this was refused, declared war on Russia on 1 August. Being outnumbered on the Eastern Front, Russia urged its Triple Entente ally France to open up a second front in the west. Over forty years earlier in 1870, the Franco-Prussian War had ended the Second French Empire and France had ceded the provinces of Alsace-Lorraine to a unified Germany. Bitterness over that defeat and the determination to retake Alsace-Lorraine made the acceptance of Russia's plea for help an easy choice, so France began full mobilisation on 1 August and, on 3 August, Germany declared war on France. The border between France and Germany was heavily fortified on both sides so, according to the Schlieffen Plan, Germany then invaded neutral Belgium and Luxembourg before moving towards France from the north, leading the United Kingdom to declare war on Germany on 4 August due to their violation of Belgian neutrality.[13][14] After the German march on Paris was halted in the Battle of the Marne, what became known as the Western Front settled into a battle of attrition, with a trench line that changed little until 1917. On the Eastern Front, the Russian army led a successful campaign against the Austro-Hungarians, but the Germans stopped its invasion of East Prussia in the battles of Tannenberg and the Masurian Lakes. In November 1914, the Ottoman Empire joined the Central Powers, opening fronts in the Caucasus, Mesopotamia and the Sinai. In 1915, Italy joined the Allies and Bulgaria joined the Central Powers; Romania joined the Allies in 1916, as did the United States in 1917."
         +"The Russian government collapsed in March 1917, and a revolution in November followed by a further military defeat brought the Russians to terms with the Central Powers via the Treaty of Brest Litovsk, which granted the Germans a significant victory. After a stunning German offensive along the Western Front in the spring of 1918, the Allies rallied and drove back the Germans in a series of successful offensives. On 4 November 1918, the Austro-Hungarian empire agreed to an armistice, and Germany, which had its own trouble with revolutionaries, agreed to an armistice on 11 November 1918, ending the war in victory for the Allies."
         +"By the end of the war or soon after, the German Empire, Russian Empire, Austro-Hungarian Empire and the Ottoman Empire ceased to exist. National borders were redrawn, with several independent nations restored or created, and Germany's colonies were parceled out among the victors. During the Paris Peace Conference of 1919, the Big Four (Britain, France, the United States and Italy) imposed their terms in a series of treaties. The League of Nations was formed with the aim of preventing any repetition of such a conflict. This effort failed, and economic depression, renewed nationalism, weakened successor states, and feelings of humiliation (particularly in Germany) eventually contributed to the start of World War II";
-    
-    String test2 = "The dog is on the table";
     LSAKeywordExtractor kex = new LSAKeywordExtractor("");
+    /*
+    String test2 = "The dog is on the table";
+
     KeywordExtractor inneKex = new MauiExtractor("", "none", "newInnenModel");
     List<String> testList = new ArrayList<>();
     testList.add(test.toLowerCase());
     System.out.println(kex.extractKeywordsFromText(testList, 5));
+     */
+    StanfordnlpAnalyzer analyzer = new StanfordnlpAnalyzer();
+    StanfordLemmatizer lemmStan = new StanfordLemmatizer();
+    Lemmatizer lemm = new Lemmatizer();
+    long startTime = 0;
+    
+    startTime = System.currentTimeMillis();
+    System.out.println(kex.createSentencesFromText(test));
+    System.out.println(System.currentTimeMillis() - startTime);
+
+
+    
+    startTime = System.currentTimeMillis();
+    lemm.lemmatize(test);
+    System.out.println(System.currentTimeMillis() - startTime);
+
+    /*
+    startTime = System.currentTimeMillis(); 
+    List<String> sentences = analyzer.detectSentences(test, ISO_639_1_LanguageCode.ENGLISH);
+    System.out.println(System.currentTimeMillis() - startTime);
+
+    startTime = System.currentTimeMillis();    
+    System.out.println(lemmStan.lemmatizeTerm(test, "", ISO_639_1_LanguageCode.ENGLISH));
+    System.out.println(System.currentTimeMillis() - startTime);
+     */
   }
-  
-  
+
+
 }
