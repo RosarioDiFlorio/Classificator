@@ -2,7 +2,6 @@ package eu.innovation.engineering.LSA.keywordExtractor;
 
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -53,7 +52,7 @@ public class LSAKeywordExtractor implements KeywordExtractor {
     List<String> senteces = nlpAnalyzer.detectSentences(text, ISO_639_1_LanguageCode.ENGLISH);
     Lemmatizer lemmatizer = new Lemmatizer();
     for(String sentence: senteces){
-      sentecesList.add(cleanAndSplitSentence(sentence,lemmatizer,false));
+      sentecesList.add(cleanAndSplitSentence(sentence,lemmatizer));
     }   
     return sentecesList;
   }
@@ -63,16 +62,10 @@ public class LSAKeywordExtractor implements KeywordExtractor {
    * @param lemmatizer 
    * @return
    */
-  private static List<String> cleanAndSplitSentence(String text, Lemmatizer lemmatizer,boolean useLemmatizer){
+  private static List<String> cleanAndSplitSentence(String text, Lemmatizer lemmatizer){
     Set<String> stopwords = CleanUtilis.getBlackList();
     text = text.toLowerCase();
-    List<String> textLemmatized = new ArrayList<>();
-    if(useLemmatizer)
-      textLemmatized = lemmatizer.lemmatize(text);
-    else
-      textLemmatized = Arrays.asList(text.split(" "));
-
-
+    List<String> textLemmatized = lemmatizer.lemmatize(text);
     Iterator<String> it = textLemmatized.iterator();
     while(it.hasNext()){
       String str = it.next();
