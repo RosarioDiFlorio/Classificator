@@ -6,7 +6,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 import org.apache.commons.math3.linear.Array2DRowRealMatrix;
 import org.apache.commons.math3.linear.SingularValueDecomposition;
@@ -32,9 +31,17 @@ public class LSAKeywordExtractor implements KeywordExtractor {
    * @see eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor#extractKeywordsFromText(java.util.List, int)
    */
   @Override
-  public List<Keyword> extractKeywordsFromText(List<String> toAnalyze, int numKeywordsToReturn) throws Exception {
-    // TODO Auto-generated method stub
-    return null;
+  public  List<Keyword> extractKeywordsFromText(List<String> toAnalyze, int numKeywordsToReturn) throws Exception {
+    List<Keyword> keywordList = new ArrayList<Keyword>();
+    for(String text: toAnalyze){
+      List<List<String>> sentenceList = createSentencesFromText(text);
+      MatrixRepresentation matrixA = buildMatrixA(sentenceList);
+      System.out.println(matrixA.getMatrixA().toString());
+      Array2DRowRealMatrix U = SVD(matrixA);
+      keywordList = getKeywordList(matrixA, U, numKeywordsToReturn);
+    }
+    return keywordList;
+
   }
 
   /**
@@ -53,12 +60,12 @@ public class LSAKeywordExtractor implements KeywordExtractor {
     StanfordnlpAnalyzer nlpAnalyzer = new StanfordnlpAnalyzer();
     CompleteSentenceAnalysis results = nlpAnalyzer.executeCompleteSentenceAnalysis(text, ISO_639_1_LanguageCode.ENGLISH, true, true);
     List<SentenceChunk> chunkList = cleanChunks(results.getChunks());
-    
+
     //debug print
     //List<List<String>> toprint = chunkList.stream().map(sc->sc.getWords().stream().map(w->w.getWord()).collect(Collectors.toList())).collect(Collectors.toList());
     //toprint.stream().forEach(System.out::println);
-    
-    
+
+
     return chunkList;
   }
 
@@ -89,28 +96,30 @@ public class LSAKeywordExtractor implements KeywordExtractor {
    * @param chunks
    * @return
    */
-  public static MatrixRepresentation buildMatrixA(List<SentenceChunk> chunks){
+  public static MatrixRepresentation buildMatrixA(List<List<String>> sentences){
 
     List<String> wordList = new ArrayList<String>();
-    Array2DRowRealMatrix matrix = new Array2DRowRealMatrix();
+
+
 
     //crea la lista di word
-    for(SentenceChunk chunk : chunks){
-      for(AnnotatedWord word : chunk.getWords()){
-        if(!wordList.contains(word.getWord())){
-          wordList.add(word.getWord());
+    for(List<String> sentencce : sentences){
+      for(String word : sentencce){
+        if(!wordList.contains(word)){
+          wordList.add(word);
         }
       }
     }
 
     //crea la matrice
+    Array2DRowRealMatrix matrix = new Array2DRowRealMatrix(wordList.size(),sentences.size());
     int row=0;
     int column=0;
 
     for(String word : wordList){
       column=0;
-      for(SentenceChunk chunk : chunks){
-        matrix.addToEntry(row, column, Tf(word, chunks, column)*Isf(word,chunks));
+      for(List<String> sentence : sentences){    
+        matrix.addToEntry(row, column, Tf(word, sentences, column)*Isf(word,sentences));
         column++;
       }
       row++;
@@ -129,10 +138,10 @@ public class LSAKeywordExtractor implements KeywordExtractor {
    * @return toDefine
    */
   public static Array2DRowRealMatrix SVD(MatrixRepresentation matrixA){  
-    
+
     SingularValueDecomposition svd = new SingularValueDecomposition(matrixA.getMatrixA());
-    
-    
+
+
     return (Array2DRowRealMatrix) svd.getU();
   }
 
@@ -146,18 +155,18 @@ public class LSAKeywordExtractor implements KeywordExtractor {
    * @return
    */
   private static  List<Keyword> getKeywordList(MatrixRepresentation matrixA, Array2DRowRealMatrix U, int threshold){
-    
+
     double[] bestColumn = U.getColumn(0);
-    
+
     HashMap<Integer,Double> bestIndex = new HashMap<Integer,Double>();
     List<Keyword> keywordList = new ArrayList<Keyword>();
-    
+
     if(threshold<=bestColumn.length){
       while(threshold>0){
-       int index= max(bestColumn);
-       bestIndex.put(index,bestColumn[index]);
-       bestColumn[index]=0;
-       threshold--;
+        int index= max(bestColumn);
+        bestIndex.put(index,bestColumn[index]);
+        bestColumn[index]=0;
+        threshold--;
       }
     }
     else
@@ -165,14 +174,14 @@ public class LSAKeywordExtractor implements KeywordExtractor {
       System.out.println("Threshold value is greater then column size");
       return null;
     }
-    
+
     for(int index : bestIndex.keySet()){
       Keyword k = new Keyword();
       k.setText(matrixA.getTokenList().get(index));
       k.setRelevance(bestIndex.get(index));
       keywordList.add(k);
     }
-    
+
     return keywordList;
   }
 
@@ -190,9 +199,9 @@ public class LSAKeywordExtractor implements KeywordExtractor {
         indexMax = i;
       }
     }
-    
+
     return indexMax;
-    
+
 
   }
 
@@ -205,16 +214,18 @@ public class LSAKeywordExtractor implements KeywordExtractor {
    * @param j
    * @return
    */
-  private static float Tf(String word,List<SentenceChunk> chunks, int j){
-    
-    SentenceChunk sentenceJ = chunks.get(j);
+  private static float Tf(String word,List<List<String>> sentences, int j){
+
+    List<String> sentenceJ = sentences.get(j);
     //number of times word i in sentence j
     int countSentenceJ=0;
-    for(AnnotatedWord tmpWord : sentenceJ.getWords())
-      if(tmpWord.getWord().equals(word))
+    for(String tmpWord : sentenceJ){
+      if(tmpWord.equals(word)){
         countSentenceJ++;
-     
-    return countSentenceJ/sentenceJ.getWords().size();
+      }
+    }
+    
+    return countSentenceJ/sentenceJ.size();
 
   }
 
@@ -225,19 +236,17 @@ public class LSAKeywordExtractor implements KeywordExtractor {
    * @param chunks
    * @return
    */
-  private static float Isf(String word,List<SentenceChunk> chunks){
-    
+  private static float Isf(String word,List<List<String>> sentences){
+
     //number of sentences with word i
-    int numberSentenceWithWord = 0;
-    
-    for(SentenceChunk sentence : chunks){
-      List<String> wordList = sentence.getWords().stream().map(AnnotatedWord::getWord).collect(Collectors.toList());
-      if(wordList.contains(word))
+    float numberSentenceWithWord = 0;
+
+    for(List<String> sentence : sentences){
+      if(sentence.contains(word))
         numberSentenceWithWord++;
     }
-    
-    
-    return chunks.size()/numberSentenceWithWord;
+
+    return sentences.size()/numberSentenceWithWord;
   }
 
 
