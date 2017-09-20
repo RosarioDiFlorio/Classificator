@@ -82,8 +82,7 @@ public class InnenExtractor implements KeywordExtractor {
             break;
         }       
       });
-      if(!keywordList.isEmpty() && keywordList!= null)
-        toReturn.add(keywordList);
+      toReturn.add(keywordList);
     }
     //System.out.println(toReturn.size());
     return toReturn;
