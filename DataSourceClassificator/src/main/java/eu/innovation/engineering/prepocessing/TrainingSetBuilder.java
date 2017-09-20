@@ -48,11 +48,8 @@ public class TrainingSetBuilder {
     if(!category.equals(""))
       path = PathConfigurator.rootFolder + category +"/";
 
-
-
     CategoryVector categoryVector = new CategoryVector();
     CategoryVector.execute(path+"categories.txt",null,path);
-
     clusterSubCategory(PathConfigurator.applicationFileFolder+"sourceVectors.json",path+"vectorCategory.json", "science", path);
 
   }
