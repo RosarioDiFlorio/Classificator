@@ -24,20 +24,20 @@ public class Start {
   //**MENU**
   
   //Primo passo, creazione del file dizionaries.json
-  private static final boolean buildJsonDictionaries = false;
+  private static final boolean buildJsonDictionaries = true;
   
   //Secondo passo creare i file Json di train e test
   private static final boolean buildJsonTraining = true;
-  private static final boolean buildJsonTest = false;
+  private static final boolean buildJsonTest = true;
 
   //Terzo passo, decidere se predere i dizionari persistenti o creare altri, creare i csv
   private static final boolean loadDictionariesFromFile = false;
-  private static final boolean buildCSVTraining = false;
-  private static final boolean buildCSVTest = false;
+  private static final boolean buildCSVTraining = true;
+  private static final boolean buildCSVTest = true;
 
   //Other
-  private static final String category = "test";
-  private static final int numFeatures = 45;
+  private static final String category = "";
+  private static final int numFeatures = 500;
 
   public static void main(String[] args) throws IOException{
     
@@ -50,15 +50,15 @@ public class Start {
 
     //CREA IL FILE JSON DEI DIZIONARI
     if(buildJsonDictionaries)
-      mainOnlyForDictionaries(path);
+      createDictionaries(path);
     //CREA I FILE JSON DEL DATASET TXT PASSATO( lo lancio sul train, Il test in realtà lo genero con la classe SolrClient)
-    mainToGenerateJsonFromTxt(path);
+    generateJsonFromTxt(path);
     //CREA I FILE CSV DI TRAIN E TEST
-    mainForCSV(path,numFeatures,numLabels);
+    generateCSV(path,numFeatures,numLabels);
 
   }
 
-  public static void mainForCSV(String path, int numFeatures, int numLabels) throws IOException{
+  public static void generateCSV(String path, int numFeatures, int numLabels) throws IOException{
     DictionaryBuilder dictionaryBuilder = new DictionaryBuilder();
 
     HashMap<String, Dictionary> dictionaries = new HashMap<>();
@@ -78,7 +78,7 @@ public class Start {
   }
 
 
-  public static void mainOnlyForDictionaries(String path) throws IOException {
+  public static void createDictionaries(String path) throws IOException {
 
     // CREAZIONE DEI DIZIONARI
 
@@ -92,7 +92,7 @@ public class Start {
   }
 
 
-  public static void mainToGenerateJsonFromTxt(String path) throws IOException{
+  public static void generateJsonFromTxt(String path) throws IOException{
     DatasetBuilder db = new DatasetBuilder();
     db.setKeywordExtractor(new LSAKeywordExtractor(PathConfigurator.keywordExtractorsFolder));
     if(buildJsonTraining)
