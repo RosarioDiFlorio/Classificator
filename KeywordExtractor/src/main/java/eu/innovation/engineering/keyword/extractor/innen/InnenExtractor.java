@@ -5,20 +5,15 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.GenericApplicationContext;
-import org.springframework.util.CollectionUtils;
 
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
@@ -50,44 +45,45 @@ public class InnenExtractor implements KeywordExtractor {
 
   }
 
-  
-  
-  
+
+
+
   @Override
-  public List<Keyword> extractKeywordsFromText(List<String> texts, int numKeywordsToReturn) throws LanguageException{
-    ArrayList<Keyword> toReturn  = new ArrayList<>();
-    String[] configLocations = new String[] {"classpath:/spring/base-context.xml","classpath:/spring/solrclient-beans.xml", "classpath:/spring/oat-analysis.xml", "classpath:/spring/keywords-context.xml"};
-    executeInSpringContext(configLocations, context -> {
+  public List<List<Keyword>> extractKeywordsFromTexts(List<String> texts, int numKeywordsToReturn) throws LanguageException{
+    
+    List<String> enTexts = languageDetector.filterForLanguage(texts, "en");
+    List<List<Keyword>> toReturn = new ArrayList<List<Keyword>>();
+    for(String toAnalyze: enTexts){
+      ArrayList<Keyword> keywordList  = new ArrayList<>();
+      String[] configLocations = new String[] {"classpath:/spring/base-context.xml","classpath:/spring/solrclient-beans.xml", "classpath:/spring/oat-analysis.xml", "classpath:/spring/keywords-context.xml"};
+      executeInSpringContext(configLocations, context -> {
 
+        TextAnalyzer textAnalyzer = context.getBean(TextAnalyzer.class);
+        KeywordExtractionRunnable analyzerRunnable = context.getBean("keywordExtractionRunnable", KeywordExtractionRunnable.class);
+        analyzerRunnable.setBlackList(this.getBlackList());
+        analyzerRunnable.setTexts(toAnalyze);
+        analyzerRunnable.setNdcElements();
+        analyzerRunnable.setDataType("grant");
+        analyzerRunnable.setExternalId(""+toAnalyze.hashCode());
+        List<WordFrequency> keywords = new ArrayList<>();
+        analyzerRunnable.setKeywordsConsumer(dwk -> dwk.getKeywords().forEach(keywords::add));
+        analyzerRunnable.run();
 
-      String toAnalyze = languageDetector.filterForLanguage(texts, "en");
-      TextAnalyzer textAnalyzer = context.getBean(TextAnalyzer.class);
-
-      KeywordExtractionRunnable analyzerRunnable = context.getBean("keywordExtractionRunnable", KeywordExtractionRunnable.class);
-      analyzerRunnable.setBlackList(this.getBlackList());
-      analyzerRunnable.setTexts(toAnalyze);
-      analyzerRunnable.setNdcElements();
-      analyzerRunnable.setDataType("grant");
-      analyzerRunnable.setExternalId(""+toAnalyze.hashCode());
-      List<WordFrequency> keywords = new ArrayList<>();
-      analyzerRunnable.setKeywordsConsumer(dwk -> dwk.getKeywords().forEach(keywords::add));
-      analyzerRunnable.run();
-
-
-      int count=0;
-      for(WordFrequency word: keywords){
-        if(count<numKeywordsToReturn){
-          count++;
-          Keyword k = new Keyword();
-          k.setText(word.getWord());
-          k.setRelevance((double) word.getFrequency());
-          toReturn.add(k);
-        }
-        else
-          break;
-      }
-    });
-
+        int count=0;
+        for(WordFrequency word: keywords){
+          if(count<numKeywordsToReturn){
+            count++;
+            Keyword k = new Keyword();
+            k.setText(word.getWord());
+            k.setRelevance((double) word.getFrequency());
+            keywordList.add(k);
+          }
+          else
+            break;
+        }       
+      });
+      toReturn.add(keywordList);
+    }
     //System.out.println(toReturn.size());
     return toReturn;
   }

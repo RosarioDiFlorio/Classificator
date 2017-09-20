@@ -21,11 +21,11 @@ public class App {
     List<String> toTest = new ArrayList<>();
     toTest.add(test);
     
-    System.out.println(mauiwrapper.extractKeywordsFromText(toTest, 0));
+    System.out.println(mauiwrapper.extractKeywordsFromTexts(toTest, 0));
     
     
     InnenExtractor innwrapper = new InnenExtractor("./");
-    System.out.println(innwrapper.extractKeywordsFromText(toTest,4));
+    System.out.println(innwrapper.extractKeywordsFromTexts(toTest,4));
     
     
   }

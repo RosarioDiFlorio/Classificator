@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
@@ -34,30 +35,31 @@ public class KeywordExtractorTester
       writer.println(source.getId()+"\n");
       writer.println(source.getTitle()+"\n");
       writer.println("INNEN EXTRACTOR");
-      List<Keyword> keywordsResultInnen = innenExtractor.extractKeywordsFromText(source.getTexts(),4);
+      List<Keyword> keywordsResultInnen = innenExtractor.extractKeywordsFromTexts(source.getTexts(),4).stream().flatMap(l->l.stream()).collect(Collectors.toList());
+
       int count =0;
       for(Keyword k :keywordsResultInnen){
         if(count<5){
           count++;
-        writer.println(k.getText()+"("+k.getRelevance()+")");
+          writer.println(k.getText()+"("+k.getRelevance()+")");
         }
         else
           break;
-        
+
       }
 
       writer.println("\nMAUI EXTRACTOR");
       KeywordExtractor mauiExtractor = new MauiExtractor("../KeywordExtractor/", "none", "newInnenModel");
 
-      List<Keyword> keywordsResultInnenMaui =  mauiExtractor.extractKeywordsFromText(source.getTexts(),4);
+      List<Keyword> keywordsResultInnenMaui =  mauiExtractor.extractKeywordsFromTexts(source.getTexts(),4).stream().flatMap(l->l.stream()).collect(Collectors.toList());
 
       for(Keyword k :keywordsResultInnenMaui){
         writer.println(k.getText()+"("+k.getRelevance()+")");
       }
-      
+
       writer.println("\n-------------------------------------------");
     }
-    
+
     writer.flush();
     writer.close();
   }

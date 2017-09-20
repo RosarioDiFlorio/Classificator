@@ -45,8 +45,8 @@ public class MauiExtractor implements KeywordExtractor{
   private static final String dir = "Maui1.2/";
   private LanguageDetector languageDetector;
 
-  
-  
+
+
   /**
    * Constructor, which loads the data
    * @param dataDirectory - e.g. Maui's main directory (should has "data" dir in it)
@@ -269,8 +269,8 @@ public class MauiExtractor implements KeywordExtractor{
 
   public static void main(String[] args){
 
-      main1(args);
-    
+    main1(args);
+
   }
 
 
@@ -324,69 +324,66 @@ public class MauiExtractor implements KeywordExtractor{
   }
 
   @Override
-  public List<Keyword> extractKeywordsFromText(List<String> toAnalyze, int numKeywordsToreturn) throws Exception {
+  public List<List<Keyword>> extractKeywordsFromTexts(List<String> toAnalyze, int numKeywordsToreturn) throws Exception {
     // TODO Auto-generated method stub
-    String text = languageDetector.filterForLanguage(toAnalyze, "en");
+    List<String> enTexts = languageDetector.filterForLanguage(toAnalyze, "en");
+    List<List<Keyword>> toReturn = new ArrayList<List<Keyword>>();
     
-
-    if (text.length() < 5) {
-      throw new Exception("Text is too short!");
-    }
-
-    extractionModel.setWikipedia(null);
-    extractionModel.setFrequencyFeatures(true);
-    FastVector atts = new FastVector(3);
-    atts.addElement(new Attribute("filename", (FastVector) null));
-    atts.addElement(new Attribute("doc", (FastVector) null));
-    atts.addElement(new Attribute("keyphrases", (FastVector) null));
-    Instances data = new Instances("keyphrase_training_data", atts, 0);
-
-    double[] newInst = new double[3];
-
-    newInst[0] = data.attribute(0).addStringValue("inputFile");
-    newInst[1] = data.attribute(1).addStringValue(text);
-    newInst[2] = Instance.missingValue();
-    data.add(new Instance(1.0, newInst));
-
-    extractionModel.input(data.instance(0));
-
-    data = data.stringFreeStructure();
-    Instance[] topRankedInstances = new Instance[numKeywordsToreturn];
-    Instance inst;
-    // Iterating over all extracted keyphrases (inst)
-    while ((inst = extractionModel.output()) != null) {
-
-      int index = (int) inst.value(extractionModel.getRankIndex()) - 1;
-
-      if (index < numKeywordsToreturn) {
-        topRankedInstances[index] = inst;
+    for(String text : enTexts){
+      if (text.length() < 5) {
+        throw new Exception("Text is too short!");
       }
-    }
 
-    ArrayList<Keyword> toReturn = new ArrayList<Keyword>();
-    for (int i = 0; i < numKeywordsToreturn; i++) {
-      
-      if (topRankedInstances[i] != null) {
-        String topic = topRankedInstances[i].stringValue(extractionModel
-            .getOutputFormIndex());
+      extractionModel.setWikipedia(null);
+      extractionModel.setFrequencyFeatures(true);
+      FastVector atts = new FastVector(3);
+      atts.addElement(new Attribute("filename", (FastVector) null));
+      atts.addElement(new Attribute("doc", (FastVector) null));
+      atts.addElement(new Attribute("keyphrases", (FastVector) null));
+      Instances data = new Instances("keyphrase_training_data", atts, 0);
 
-        double invfreq = topRankedInstances[i].value(extractionModel.getOutputFormat().attribute("IDF"));
-        double freq = topRankedInstances[i].value(extractionModel.getOutputFormat().attribute("Term_frequency"));
-        double tdidf = topRankedInstances[i].value(extractionModel.getOutputFormat().attribute("TFxIDF"));
-        Keyword k = new Keyword();
-        k.setText(topic);
-        k.setRelevance(tdidf);
-        //k.setInverseFrequency(invfreq);
-        //k.setFrequency(freq);
-        toReturn.add(k);
+      double[] newInst = new double[3];
+
+      newInst[0] = data.attribute(0).addStringValue("inputFile");
+      newInst[1] = data.attribute(1).addStringValue(text);
+      newInst[2] = Instance.missingValue();
+      data.add(new Instance(1.0, newInst));
+
+      extractionModel.input(data.instance(0));
+
+      data = data.stringFreeStructure();
+      Instance[] topRankedInstances = new Instance[numKeywordsToreturn];
+      Instance inst;
+      // Iterating over all extracted keyphrases (inst)
+      while ((inst = extractionModel.output()) != null) {
+
+        int index = (int) inst.value(extractionModel.getRankIndex()) - 1;
+
+        if (index < numKeywordsToreturn) {
+          topRankedInstances[index] = inst;
+        }
       }
+
+      ArrayList<Keyword> keywords = new ArrayList<Keyword>();
+      for (int i = 0; i < numKeywordsToreturn; i++) {
+
+        if (topRankedInstances[i] != null) {
+          String topic = topRankedInstances[i].stringValue(extractionModel
+              .getOutputFormIndex());
+
+          double invfreq = topRankedInstances[i].value(extractionModel.getOutputFormat().attribute("IDF"));
+          double freq = topRankedInstances[i].value(extractionModel.getOutputFormat().attribute("Term_frequency"));
+          double tdidf = topRankedInstances[i].value(extractionModel.getOutputFormat().attribute("TFxIDF"));
+          Keyword k = new Keyword();
+          k.setText(topic);
+          k.setRelevance(tdidf);
+          keywords.add(k);
+        }
+      }
+      extractionModel.batchFinished();
+      toReturn.add(keywords);
     }
-
-    extractionModel.batchFinished();
-
     return toReturn;
-    
-    
   }
 
 

@@ -43,30 +43,33 @@ public class LSAKeywordExtractor implements KeywordExtractor {
    * @see eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor#extractKeywordsFromText(java.util.List, int)
    */
   @Override
-  public  List<Keyword> extractKeywordsFromText(List<String> toAnalyze, int numKeywordsToReturn) throws Exception {
-    List<Keyword> keywordList = new ArrayList<Keyword>();
+  public  List<List<Keyword>> extractKeywordsFromTexts(List<String> toAnalyze, int numKeywordsToReturn) throws Exception {
+    List<List<Keyword>> toReturn = new ArrayList<List<Keyword>>();
     for(String text: toAnalyze){
+      List<Keyword> keywordList = new ArrayList<Keyword>();
       List<List<String>> sentenceList = createSentencesFromText(text);
       MatrixRepresentation matrixA = buildMatrixA(sentenceList);
       System.out.println(matrixA.getTokenList().toString());
       RealMatrix U = SVD(matrixA);
       keywordList = getKeywordList(matrixA, U, numKeywordsToReturn);
+      toReturn.add(keywordList);
       matrixA = null;
       Runtime.getRuntime().gc();
     }
-    return keywordList;
+    return toReturn;
 
   }
 
   /**
-   * @param text
-   * @return
+   * Create the list of sentence for a document.
+   * @param document - The string representing the document to split in sentence.
+   * @return The list of sentence for the document, each list is a list of word of the sentence.
    * @throws LanguageException 
    */
-  public static List<List<String>> createSentencesFromText(String text) throws LanguageException{
+  public static List<List<String>> createSentencesFromText(String document) throws LanguageException{
     List<List<String>> sentecesList = new ArrayList<List<String>>();
     StanfordnlpAnalyzer nlpAnalyzer = new StanfordnlpAnalyzer();
-    List<String> senteces = nlpAnalyzer.detectSentences(text, ISO_639_1_LanguageCode.ENGLISH);
+    List<String> senteces = nlpAnalyzer.detectSentences(document, ISO_639_1_LanguageCode.ENGLISH);
     Lemmatizer lemmatizer = new Lemmatizer();
     for(String sentence: senteces){
       sentecesList.add(cleanAndSplitSentence(sentence,lemmatizer));
@@ -75,15 +78,18 @@ public class LSAKeywordExtractor implements KeywordExtractor {
   }
 
   /**
-   * @param text
+   * Trasform the sentence in lower case, clean the sentence from punctuation,
+   * remove eventually stopwords, lemmatize each word of the sentence
+   * and create a list of word.
+   * @param sentence - The string representing one sentence.
    * @param lemmatizer 
-   * @return
+   * @return The list of words for a sentence.
    */
-  private static List<String> cleanAndSplitSentence(String text, Lemmatizer lemmatizer){
+  private static List<String> cleanAndSplitSentence(String sentence, Lemmatizer lemmatizer){
     Set<String> stopwords = CleanUtilis.getBlackList(getStopWordPath());
-    text = text.toLowerCase();
-    text = text.replaceAll("[.!?\\\\/|<>\'\"+;%$#@&\\^\\(\\),-]\\*", "");
-    List<String> textLemmatized = lemmatizer.lemmatize(text);
+    sentence = sentence.toLowerCase();
+    sentence = sentence.replaceAll("[.!?\\\\/|<>\'\"+;%$#@&\\^\\(\\),-]\\*", "");
+    List<String> textLemmatized = lemmatizer.lemmatize(sentence);
     Iterator<String> it = textLemmatized.iterator();
     while(it.hasNext()){
       String str = it.next();
@@ -95,9 +101,11 @@ public class LSAKeywordExtractor implements KeywordExtractor {
 
 
   /**
-   * Create matrix A from chuncks
-   * @param chunks
-   * @return
+   * Build the matrix used for the SVD method.
+   * @param sentences - the sentence's list of the document.
+   * @return A MatrixRepresentation object that contains a double[][] matrix and a list of unique words.
+   * An matrix A (nm) is a matrix that has n words and m sentences that make up the document. 
+   * Each cell in the matrix represents the weight that the term has in the corresponding sentence.
    */
   public static MatrixRepresentation buildMatrixA(List<List<String>> sentences){
 
@@ -135,10 +143,13 @@ public class LSAKeywordExtractor implements KeywordExtractor {
     return matrixA;
   }
 
-  /**
-   * return matrix U after SVD decomposition
-   * @param <E>
-   * @return toDefine
+
+  /** 
+   * Perform the SVD method and return U.
+   *  U is an mxm RealMatrix
+   * @param matrixA - The MatrixRepresentation object that contains the matrix for the 
+   *        SVD decomposition.
+   * @return matrix U after SVD decomposition
    */
   public static RealMatrix SVD(MatrixRepresentation matrixA){  
 
@@ -148,14 +159,13 @@ public class LSAKeywordExtractor implements KeywordExtractor {
     return svd.getU();
   }
 
-
-
-
   /**
-   * Return keywordList from matrix U after SVD decomposition
-   * @param matrixA
-   * @param SVDResult
-   * @return
+   *  Return keywordList from matrix U after SVD decomposition
+   * @param matrixA - The MatrixRepresentation object that contains the 
+   * original matrix.
+   * @param U - is the mxm matrix result of the SVD method.
+   * @param threshold - number of keyword that the method have to consider.
+   * @return The list of Keyword 
    */
   private static  List<Keyword> getKeywordList(MatrixRepresentation matrixA, RealMatrix U, int threshold){
 
@@ -237,7 +247,7 @@ public class LSAKeywordExtractor implements KeywordExtractor {
   /**
    * return ISF value
    * @param word
-   * @param chunks
+   * @param sentences
    * @return
    */
   private static double Isf(String word,List<List<String>> sentences){
@@ -253,18 +263,30 @@ public class LSAKeywordExtractor implements KeywordExtractor {
     return numberSentenceWithWord/sentences.size();
   }
 
+  /**
+   * @return
+   */
   public String getMainDirectory() {
     return mainDirectory;
   }
 
+  /**
+   * @param mainDirectory
+   */
   public void setMainDirectory(String mainDirectory) {
     this.mainDirectory = mainDirectory;
   }
 
+  /**
+   * @return the path of the stopwords file
+   */
   public static String getStopWordPath() {
     return stopWordPath;
   }
 
+  /**
+   * @param stopWordPath
+   */
   public static void setStopWordPath(String stopWordPath) {
     LSAKeywordExtractor.stopWordPath = stopWordPath;
   }

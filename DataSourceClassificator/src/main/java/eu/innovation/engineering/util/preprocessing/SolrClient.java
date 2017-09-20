@@ -8,6 +8,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
@@ -54,7 +55,7 @@ public class SolrClient {
 
     toReturn.remove(id);
     KeywordExtractor innenK = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
-    innenK.extractKeywordsFromText(texts, 4).stream().map(Keyword::getText).forEach(toReturn::add);
+    innenK.extractKeywordsFromTexts(texts, 4).stream().flatMap(l -> l.stream()).map(Keyword::getText).forEach(toReturn::add);
 
     return toReturn;
   }
@@ -108,7 +109,7 @@ public class SolrClient {
           List<String> toAnalyze = new ArrayList<String>();
           toAnalyze.add(source.getTitle());
           toAnalyze.add(description);
-          source.setKeywordList((ArrayList<Keyword>)extractorInnen.extractKeywordsFromText(toAnalyze,4));
+          source.setKeywordList((ArrayList<Keyword>)extractorInnen.extractKeywordsFromTexts(toAnalyze, 4).stream().flatMap(l->l.stream()).collect(Collectors.toList()));
           sourceList.add(source); 
         }
       }
@@ -170,7 +171,7 @@ public class SolrClient {
           List<String> toAnalyze = new ArrayList<String>();
           toAnalyze.add(source.getTitle());
           toAnalyze.add(description);
-          source.setKeywordList((ArrayList<Keyword>)extractorInnen.extractKeywordsFromText(toAnalyze,4));
+          source.setKeywordList((ArrayList<Keyword>)extractorInnen.extractKeywordsFromTexts(toAnalyze, 4).stream().flatMap(l->l.stream()).collect(Collectors.toList()));
           sourceList.add(source); 
         }
       }

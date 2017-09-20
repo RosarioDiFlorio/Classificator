@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.core.JsonParseException;
@@ -81,7 +82,7 @@ public  class DatasetBuilder {
   public List<Source> addKeywords(ArrayList<Source> list) {
     for(Source p: list){
       try {
-        p.setKeywordList((ArrayList<Keyword>) keywordExtractor.extractKeywordsFromText(p.getTexts(),4));
+        p.setKeywordList((ArrayList<Keyword>) keywordExtractor.extractKeywordsFromTexts(p.getTexts(),4).stream().flatMap(l->l.stream()).collect(Collectors.toList()));
       }
       catch (Exception e) {
         // TODO Auto-generated catch block

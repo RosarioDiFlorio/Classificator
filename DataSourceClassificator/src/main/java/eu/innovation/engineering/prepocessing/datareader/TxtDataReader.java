@@ -109,7 +109,7 @@ public class TxtDataReader implements DataReader {
     for(Source src: sources){
       p.println(src.getId()+" - "+category);
       p.println(src.getTitle());
-      p.println(kex.extractKeywordsFromText(src.getTexts(), 10).stream().map(k->k.getText()).collect(Collectors.toList())+"\n");
+      p.println(kex.extractKeywordsFromTexts(src.getTexts(), 10).stream().flatMap(l->l.stream()).map(k->k.getText()).collect(Collectors.toList())+"\n");
 
       if(withTexts)
         src.getTexts().stream().forEach(p::println);

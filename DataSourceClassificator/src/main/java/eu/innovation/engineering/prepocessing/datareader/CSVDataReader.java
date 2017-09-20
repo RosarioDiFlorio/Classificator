@@ -240,7 +240,7 @@ public class CSVDataReader {
           }
           s.setTexts(texts);
           s.setId(txtFile);
-          s.setKeywordList((ArrayList<Keyword>) kex.extractKeywordsFromText(texts, 20));
+          s.setKeywordList((ArrayList<Keyword>) kex.extractKeywordsFromTexts(texts, 20).stream().flatMap(l->l.stream()).collect(Collectors.toList()));
           listSource.add(s);
           debug+=s.getId()+"\n";
           debug+= s.getTitle()+"\n\n";
@@ -298,7 +298,7 @@ public class CSVDataReader {
       System.out.println(localcount+" - "+category);
       idToInsert += s.getId()+" 1\n";
       p.println(s.getId()+" - "+dataMap.get(s.getId()).get(0)+" - "+dataMap.get(s.getId()).get(1));
-      p.println(kex.extractKeywordsFromText(s.getTexts(), numKey).stream().map(Keyword::getText).collect(Collectors.toList())+"\n");
+      p.println(kex.extractKeywordsFromTexts(s.getTexts(), numKey).stream().flatMap(l->l.stream()).map(Keyword::getText).collect(Collectors.toList())+"\n");
       p.println(s.getTitle());
       p.println(s.getTexts().get(1));
       p.println("-------------------------------------\n");
