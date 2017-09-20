@@ -81,6 +81,7 @@ public class LSAKeywordExtractor implements KeywordExtractor {
   private static List<String> cleanAndSplitSentence(String text, Lemmatizer lemmatizer){
     Set<String> stopwords = CleanUtilis.getBlackList(getStopWordPath());
     text = text.toLowerCase();
+    text = text.replaceAll("[.!?\\\\/|<>\'\"+;%$#@&\\^\\(\\),-]\\*", "");
     List<String> textLemmatized = lemmatizer.lemmatize(text);
     Iterator<String> it = textLemmatized.iterator();
     while(it.hasNext()){
