@@ -50,7 +50,7 @@ public class InnenExtractor implements KeywordExtractor {
 
   @Override
   public List<List<Keyword>> extractKeywordsFromTexts(List<String> texts, int numKeywordsToReturn) throws LanguageException{
-    
+
     List<String> enTexts = languageDetector.filterForLanguage(texts, "en");
     List<List<Keyword>> toReturn = new ArrayList<List<Keyword>>();
     for(String toAnalyze: enTexts){
@@ -82,7 +82,8 @@ public class InnenExtractor implements KeywordExtractor {
             break;
         }       
       });
-      toReturn.add(keywordList);
+      if(!keywordList.isEmpty() && keywordList!= null)
+        toReturn.add(keywordList);
     }
     //System.out.println(toReturn.size());
     return toReturn;

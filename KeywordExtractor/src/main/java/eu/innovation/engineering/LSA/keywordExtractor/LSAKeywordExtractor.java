@@ -25,20 +25,20 @@ import eu.innovationengineering.nlp.analyzer.stanfordnlp.StanfordnlpAnalyzer;
  *
  */
 public class LSAKeywordExtractor implements KeywordExtractor {  
-  
-  
-  
+
+
+
   private String mainDirectory = "";
   private static String stopWordPath= "data/stopwords/stopwords_en.txt";
-  
-  
+
+
 
   public LSAKeywordExtractor(String mainDir) {
     setMainDirectory(mainDir);
     setStopWordPath(getMainDirectory() + stopWordPath);
   }
-  
-  
+
+
   /* (non-Javadoc)
    * @see eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor#extractKeywordsFromText(java.util.List, int)
    */
@@ -51,7 +51,8 @@ public class LSAKeywordExtractor implements KeywordExtractor {
       MatrixRepresentation matrixA = buildMatrixA(sentenceList);
       RealMatrix U = SVD(matrixA);
       keywordList = getKeywordList(matrixA, U, numKeywordsToReturn);
-      toReturn.add(keywordList);
+      if(!keywordList.isEmpty() && keywordList != null)
+        toReturn.add(keywordList);
       matrixA = null;
       Runtime.getRuntime().gc();
     }
@@ -236,7 +237,7 @@ public class LSAKeywordExtractor implements KeywordExtractor {
         countSentenceJ++;
       }
     }
-    
+
     double results = countSentenceJ/sentenceJ.size();
     return results;
 
@@ -258,7 +259,7 @@ public class LSAKeywordExtractor implements KeywordExtractor {
       if(sentence.contains(word))
         numberSentenceWithWord++;
     }
- 
+
     return numberSentenceWithWord/sentences.size();
   }
 
