@@ -17,6 +17,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 import com.ibm.watson.developer_cloud.natural_language_understanding.v1.model.CategoriesResult;
 
+import eu.innovation.engineering.config.Configurator;
 import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
@@ -55,6 +56,14 @@ public  class DatasetBuilder {
     keywordExtractor = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
   }
 
+  public DatasetBuilder(KeywordExtractor ke){
+    listSources = new ArrayList<Source>();
+    categoryMap = new HashMap<>();
+    mapper = new ObjectMapper();
+    solrClient = new SolrClient();
+    keywordExtractor = ke;
+  }
+
 
   /**
    * This class create the listOfSource taking documents from Solr
@@ -63,10 +72,11 @@ public  class DatasetBuilder {
    * @return
    * @throws IOException
    */
-  public List<Source>  buildDataset(String fileName, String path) throws IOException{
+  public List<Source>  buildDataset(String fileName, String path, String category) throws IOException{
     
-    dataReader = new TxtDataReader(fileName,path);
+    dataReader = new TxtDataReader(category,fileName,path);
     List<String> listIdPaper = new ArrayList<>(dataReader.getIds());
+    
     listSources.addAll(solrClient.getSourcesFromSolr(listIdPaper,Paper.class));
     listSources = (ArrayList<Source>) addCategories(listSources);
     listSources = (ArrayList<Source>) addKeywords(listSources);
@@ -74,21 +84,37 @@ public  class DatasetBuilder {
     listSources.stream().forEach(p->p.setDescription(null));
     this.mapper.writerWithDefaultPrettyPrinter().writeValue(new File(path+"/"+simpleName+".json"), this.listSources);
     return listSources;
-   
+
   }
 
 
 
   public List<Source> addKeywords(ArrayList<Source> list) {
+    ArrayList<Source> toRemove = new ArrayList<>();
     for(Source p: list){
-      try {
-        p.setKeywordList((ArrayList<Keyword>) keywordExtractor.extractKeywordsFromTexts(p.getTexts(),4).stream().flatMap(l->l.stream()).collect(Collectors.toList()));
+     
+      StringBuilder strbuilder = new StringBuilder();
+      p.getTexts().stream().forEach(strbuilder::append);
+      ArrayList<String> toAnalyze = new ArrayList<>();
+      //toAnalyze.add(toAnalyze.toString());
+      toAnalyze.add(p.getTexts().get(0)+p.getTexts().get(1));
+      try {   
+        if((ArrayList<Keyword>) keywordExtractor.extractKeywordsFromTexts(toAnalyze,Configurator.numKeywords).stream().flatMap(l->l.stream()).collect(Collectors.toList())!=null){
+          p.setKeywordList((ArrayList<Keyword>) keywordExtractor.extractKeywordsFromTexts(toAnalyze,Configurator.numKeywords).stream().flatMap(l->l.stream()).collect(Collectors.toList()));
+        }
+        else{
+          toRemove.add(p);
+        }
       }
       catch (Exception e) {
         // TODO Auto-generated catch block
         e.printStackTrace();
       }
     }
+    for(Source p:toRemove){
+      list.remove(p);
+    }
+    
     return list;
   }
 
@@ -132,11 +158,11 @@ public  class DatasetBuilder {
         }
       }
     }
-    
+
     return listSources;
   }
-  
-  
+
+
   public static HashSet<String> returnAllKeywords(ArrayList<Source> sourceList){
     HashSet<String> keywordList = new HashSet<String>();
     for(Source p : sourceList){
@@ -148,8 +174,8 @@ public  class DatasetBuilder {
   }
 
   public List<Source> addCategories(List<Source> list) throws IOException{
-    Map<String, HashMap<String, String>> categoryPapers = dataReader.categoriesWithIds(dataReader.getFileToRead());
-
+    
+    Map<String, HashMap<String, String>> categoryPapers = dataReader.categoriesWithIds(dataReader.getFileToReadSource(),dataReader.getFileToReadCategory());
     for(Source paper :list){
       ArrayList<CategoriesResult> categoriesForCurrentPaper = new ArrayList<>();
       //PER IL PAPER CORRENTE MI PRENDO LE CATEGORIE ALLE QUALI APPARTIENE, CICLO PER LE CATEGORIE
@@ -198,13 +224,13 @@ public  class DatasetBuilder {
   public void setFileName(String fileName) {
     this.fileName = fileName;
   }
-  
+
   public static void saveSources(List<Source> listSource,String pathFile) throws JsonGenerationException, JsonMappingException, IOException{
     ObjectMapper mapper = new ObjectMapper();
     mapper.writerWithDefaultPrettyPrinter().writeValue(new File(pathFile), listSource);
     System.out.println("source list save to "+pathFile);
   }
-  
+
   public static List<Source> loadSources(String pathFile) throws JsonParseException, JsonMappingException, IOException{
     ObjectMapper mapper = new ObjectMapper();
     List<Source> toReturn = mapper.readValue(new File(pathFile), new TypeReference<List<Source>>(){});
@@ -220,8 +246,8 @@ public  class DatasetBuilder {
    */
   public static void main(String[] args) throws IOException{
     DatasetBuilder db = new DatasetBuilder();
-    db.buildDataset("training_results.txt",PathConfigurator.applicationFileFolder);    
-    
+    //db.buildDataset("training_results.txt",PathConfigurator.applicationFileFolder);    
+
   }
 
 

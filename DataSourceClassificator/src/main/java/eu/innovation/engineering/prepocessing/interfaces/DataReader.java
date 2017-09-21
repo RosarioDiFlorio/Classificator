@@ -8,5 +8,5 @@ import java.util.Set;
 public interface DataReader {
   
   public Set<String> getIds() throws IOException;
-  public Map<String,HashMap<String,String>> categoriesWithIds(String pathFile) throws IOException;
+  public Map<String,HashMap<String,String>> categoriesWithIds(String pathFileSource,String pathFileCategories) throws IOException;
 }

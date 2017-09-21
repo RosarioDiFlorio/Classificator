@@ -47,7 +47,7 @@ public class ClusteringKMeans {
 
     //clusterWithDatasourceAsItems(PathConfigurator.trainingAndTestFolder+"trainingBig.json",500);
     // clusterWithDatasourceAsItems(PathConfigurator.trainingAndTestFolder+"dataSourcesWithoutCategory_10000_10000.json",3000);
-    clusterSubCategory(PathConfigurator.applicationFileFolder+"sourceVectors.json",PathConfigurator.categories+"scienceJson.json", "science");
+    //clusterSubCategory(PathConfigurator.applicationFileFolder+"sourceVectors.json",PathConfigurator.categories+"scienceJson.json", "science");
   }
 
 
@@ -62,11 +62,12 @@ public class ClusteringKMeans {
     for(int i=0;i<cut;i++){
       CentroidCluster<ItemWrapper> pointsI = clusterResults.get(i);
       //Calcolo la distanza media del cluster I
-      float avgI = avgDistanceIntraCluster(clusterResults.get(i));
+      ClusteringKMeans clustering = new ClusteringKMeans();
+      float avgI = clustering.avgDistanceIntraCluster(clusterResults.get(i));
       float max = -32000;
       for(int j=0;j<cut;j++){
         if(i!=j){
-          float avgJ = avgDistanceIntraCluster(clusterResults.get(j));
+          float avgJ = clustering.avgDistanceIntraCluster(clusterResults.get(j));
           double centroidDistance = Math.acos(FeatureExtractor.cosineSimilarity(pointsI.getCenter().getPoint(), clusterResults.get(j).getCenter().getPoint()));
           //System.out.println("i: "+i+" j: "+j+" avgI: "+avgI+" avgJ: "+avgJ+" centroidDistance: "+centroidDistance);
           if(max < ((avgI+avgJ)/centroidDistance)){
@@ -83,7 +84,7 @@ public class ClusteringKMeans {
   }
 
 
-  public static float avgDistanceIntraCluster(CentroidCluster<ItemWrapper> cluster){
+  public  float avgDistanceIntraCluster(CentroidCluster<ItemWrapper> cluster){
     float avg = 0;
     Clusterable center = cluster.getCenter();
     for(ItemWrapper point : cluster.getPoints()){
@@ -95,7 +96,7 @@ public class ClusteringKMeans {
 
   }
 
-  public static void clusterWithKeywordsAsItems(String fileName, int cut) throws IOException {
+  public  void clusterWithKeywordsAsItems(String fileName, int cut) throws IOException {
     CreateMatrix matrixCreator = new CreateMatrix();
 
     DatasetBuilder pb = new DatasetBuilder();
@@ -157,7 +158,7 @@ public class ClusteringKMeans {
   }
 
 
-  public static void clusterSubCategory(String sourceFile, String categoryFile, String categoryChoose) throws JsonParseException, JsonMappingException, IOException{
+  public  void clusterSubCategory(String sourceFile, String categoryFile, String categoryChoose) throws JsonParseException, JsonMappingException, IOException{
 
     ObjectMapper mapper = new ObjectMapper();
     HashMap<String,float[]> categoryVectorList = mapper.readValue(new File(categoryFile), new TypeReference<HashMap<String,float[]>>() {});
@@ -179,7 +180,7 @@ public class ClusteringKMeans {
         double[] features = new double[categoryVectorList.size()];
         int count = 0;
         for(String category : categoryVectorList.keySet()){
-          
+
           features[count] = FeatureExtractor.cosineSimilarity(source.getVector(), categoryVectorList.get(category));
           writer.println("      "+category+": "+features[count]);
           count++;
@@ -187,7 +188,7 @@ public class ClusteringKMeans {
         item.setFeatures(features);
         items.add(item);
       }
-     
+
     }
     writer.flush();
     writer.close();
@@ -207,8 +208,8 @@ public class ClusteringKMeans {
 
     writer = new PrintWriter(PathConfigurator.applicationFileFolder+"clusters.txt");
     for (int i=0; i<clusterResults.size(); i++) {
-     writer.println("\nCluster: "+i);
-     System.out.println("\n\nCluster: "+i);
+      writer.println("\nCluster: "+i);
+      System.out.println("\n\nCluster: "+i);
       for (ItemWrapper itemWrapper : clusterResults.get(i).getPoints()){
         writer.println("    id: "+itemWrapper.getItem().getId()+"   Keywords: "+itemWrapper.getItem().getTitle());
         System.out.println("    id: "+itemWrapper.getItem().getId()+"   Keywords: "+itemWrapper.getItem().getTitle());
@@ -224,7 +225,7 @@ public class ClusteringKMeans {
 
 
 
-  public static HashMap<String, Dictionary> clusterWithDatasourceAsItems(String fileName, int cut, String path) throws IOException {
+  public  HashMap<String, Dictionary> clusterWithDatasourceAsItems(String fileName, int cut, String path) throws IOException {
     CreateMatrix matrixCreator = new CreateMatrix();
 
 
@@ -349,7 +350,8 @@ public class ClusteringKMeans {
 
     // per ogni dizionario calcolo anche i vettori che mi serviranno successivamente. 
     HashMap<String, Dictionary> finalDictionaries = returnVectorForDictionaries(dictionaries);
-    DictionaryBuilder.save(finalDictionaries, path+"dictionaries.json");
+    DictionaryBuilder db = new DictionaryBuilder();
+    db.save(finalDictionaries, path+"dictionaries.json");
 
     return finalDictionaries;
 
@@ -358,7 +360,7 @@ public class ClusteringKMeans {
 
 
 
-  private static float variance(Dictionary d, float avg) {
+  private  float variance(Dictionary d, float avg) {
     float sum = 0;
 
     for(String keymap : d.getKeywords().keySet()){
@@ -370,7 +372,7 @@ public class ClusteringKMeans {
 
 
 
-  private static float avg(Dictionary d) {
+  private  float avg(Dictionary d) {
 
     float sum = 0;
     for(String keymap : d.getKeywords().keySet()){
@@ -382,7 +384,7 @@ public class ClusteringKMeans {
 
 
 
-  private static HashMap<String, Dictionary> returnVectorForDictionaries(HashMap<String, Dictionary> dictionaries) throws IOException {
+  private  HashMap<String, Dictionary> returnVectorForDictionaries(HashMap<String, Dictionary> dictionaries) throws IOException {
 
     List<List<String>> docsK = new ArrayList<List<String>>();
 
@@ -429,7 +431,7 @@ public class ClusteringKMeans {
   }
 
 
-  public static float[][] returnVectorsFromTextList(ArrayList<List<String>> textList) throws IOException{
+  public  float[][] returnVectorsFromTextList(ArrayList<List<String>> textList) throws IOException{
 
 
     VectorListRequestBean vectorListRequest = new VectorListRequestBean();
@@ -448,7 +450,7 @@ public class ClusteringKMeans {
 
   }
 
-  public static float[][] returnVectorsFromSourceList(ArrayList<Source> paperList) throws IOException {
+  public  float[][] returnVectorsFromSourceList(ArrayList<Source> paperList) throws IOException {
 
     //ISTANZIAMO UNA MATRICE DI STRINGHE
     List<List<String>> docsK = new ArrayList<List<String>>();
@@ -460,14 +462,21 @@ public class ClusteringKMeans {
 
       // creo l'arrayList di stringhe da passare a word2Vec
       ArrayList<String> stringToVec = new ArrayList<>();
+
       for(Keyword k : p.getKeywordList()){
         double resultDivision = k.getRelevance()/minRelevance;
+        if(resultDivision>10)
+          resultDivision=10;
         int numOccurence = (int) Math.ceil(resultDivision);
         //Aggiungo la keyword nel vettore di keywords "numOccurence" volte
+
         String parts[] = k.getText().split(" ");
-        for(int i = 0; i<numOccurence; i++){
-          Arrays.stream(parts).forEach(stringToVec::add);
-        }
+          for(int i = 0; i<numOccurence; i++){
+            //Arrays.stream(parts).forEach(stringToVec::add);
+            for(int j=0;j<parts.length;++j){
+              stringToVec.add(parts[j]);
+            }
+          }
       }
       //AGGIUNGO LA LISTA DI KEYWORDS ALLA MATRICE PER IL PAPER CORRENTE
       docsK.add(stringToVec);

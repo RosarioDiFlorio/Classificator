@@ -37,7 +37,7 @@ public class SourceVectorBuilder {
     List<Source> sources = new ArrayList<>();
     DatasetBuilder sourceBuilder = new DatasetBuilder();
     if(fromSolr){
-      sources = sourceBuilder.buildDataset(fileName, path);
+      sources = sourceBuilder.buildDataset(fileName, path, "categores.txt");
       sourceBuilder.saveSources(sources, pathWhereSave);
     }else{
       sources = sourceBuilder.loadSources(PathConfigurator.applicationFileFolder+"training_results.json");
@@ -53,7 +53,8 @@ public class SourceVectorBuilder {
    */
   public static List<SourceVector> createSourceVectorList(List<Source> sources) throws IOException{
     List<SourceVector> toReturn = new ArrayList<>();   
-    float[][] vectors = ClusteringKMeans.returnVectorsFromSourceList((ArrayList<Source>) sources);    
+    ClusteringKMeans clustering = new ClusteringKMeans();
+    float[][] vectors = clustering.returnVectorsFromSourceList((ArrayList<Source>) sources);    
     for(int i=0;i<sources.size();i++){
       SourceVector sv = new SourceVector();
       sv.setId(sources.get(i).getId());

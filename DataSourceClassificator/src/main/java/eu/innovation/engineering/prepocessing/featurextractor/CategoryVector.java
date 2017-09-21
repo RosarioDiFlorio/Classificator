@@ -66,7 +66,8 @@ public class CategoryVector {
     line= reader.readLine();
 
   }
-  float[][] vectors = ClusteringKMeans.returnVectorsFromTextList(categoryList);
+  ClusteringKMeans clustering = new ClusteringKMeans();
+  float[][] vectors = clustering.returnVectorsFromTextList(categoryList);
   HashMap<String,float[]> categoryAndVectorList = new HashMap<>();
   for(int i=0;i<vectors.length;i++){
     categoryAndVectorList.put(category.get(i), vectors[i]);
