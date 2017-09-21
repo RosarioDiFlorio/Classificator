@@ -62,13 +62,13 @@ public class CSVDataReader {
     float uThreshold = (float) 1.0;
     float lThreshold = (float) 0.7;
     int batchLine = 0;   
-    boolean isCount =  false;   
+    boolean isCount =  true;   
     boolean all = false;
     String batchCategory = "";
 
-    String categoryFolder = "science";
+    String categoryFolder = "";
 
-    String category = "mathematics";
+    String category = "science";
     //category = "all";
     String testFolderName=PathConfigurator.applicationFileFolder+"results.csv";
     File f = new File(testFolderName);

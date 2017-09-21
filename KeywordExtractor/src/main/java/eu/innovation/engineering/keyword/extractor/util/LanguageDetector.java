@@ -32,4 +32,5 @@ public class LanguageDetector {
     }
     return toReturn;
   }
+
 }
