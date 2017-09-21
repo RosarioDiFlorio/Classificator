@@ -185,15 +185,13 @@ public class LSAKeywordExtractor implements KeywordExtractor {
       System.out.println("Threshold value is greater then column size");
       return null;
     }
-
+   
     for(int index : bestIndex.keySet()){
+     
       Keyword k = new Keyword();
       k.setText(matrixA.getTokenList().get(index));
-      double relevance = 0;
-      for(int i=0;i<matrixA.getMatrixA().getColumnDimension();i++){
-        relevance+=matrixA.getMatrixA().getEntry(index, i);
-      }
-      k.setRelevance(relevance);
+      //System.out.println(U.getEntry(index, 0)+" "+translateFunction(U.getEntry(index, 0)));
+      k.setRelevance(translateFunction(U.getEntry(index, 0)));
       keywordList.add(k);
     }
 
@@ -294,5 +292,12 @@ public class LSAKeywordExtractor implements KeywordExtractor {
     LSAKeywordExtractor.stopWordPath = stopWordPath;
   }
 
+  
+  public double translateFunction(double x){
+    //System.out.println(x);
+    
+    return (Math.atan(5 * x - 3)/Math.PI)+(0.5);
+        
+  }
 
 }

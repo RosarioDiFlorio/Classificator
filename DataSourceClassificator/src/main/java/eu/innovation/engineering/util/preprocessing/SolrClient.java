@@ -32,7 +32,7 @@ public class SolrClient {
   public static void main(String[] args) throws Exception{
 
     KeywordExtractor ke = new LSAKeywordExtractor(PathConfigurator.keywordExtractorsFolder);
-    requestNTechincalPaper(0,20,ke);
+    requestNTechincalPaper(0,20000,ke);
 
   }
 
