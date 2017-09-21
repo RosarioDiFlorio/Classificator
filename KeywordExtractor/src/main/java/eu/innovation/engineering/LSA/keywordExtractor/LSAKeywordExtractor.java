@@ -53,8 +53,12 @@ public class LSAKeywordExtractor implements KeywordExtractor {
       keywordList = getKeywordList(matrixA, U, numKeywordsToReturn);
       toReturn.add(keywordList);
       matrixA = null;
+      U=null;
+      keywordList=null;
+      sentenceList=null;
       Runtime.getRuntime().gc();
     }
+    
     return toReturn;
 
   }
@@ -65,7 +69,7 @@ public class LSAKeywordExtractor implements KeywordExtractor {
    * @return The list of sentence for the document, each list is a list of word of the sentence.
    * @throws LanguageException 
    */
-  public static List<List<String>> createSentencesFromText(String document) throws LanguageException{
+  public  List<List<String>> createSentencesFromText(String document) throws LanguageException{
     List<List<String>> sentecesList = new ArrayList<List<String>>();
     StanfordnlpAnalyzer nlpAnalyzer = new StanfordnlpAnalyzer();
     List<String> senteces = nlpAnalyzer.detectSentences(document, ISO_639_1_LanguageCode.ENGLISH);
@@ -84,7 +88,7 @@ public class LSAKeywordExtractor implements KeywordExtractor {
    * @param lemmatizer 
    * @return The list of words for a sentence.
    */
-  private static List<String> cleanAndSplitSentence(String sentence, Lemmatizer lemmatizer){
+  private  List<String> cleanAndSplitSentence(String sentence, Lemmatizer lemmatizer){
     Set<String> stopwords = CleanUtilis.getBlackList(getStopWordPath());
     sentence = sentence.toLowerCase();
     sentence = sentence.replaceAll("[.!?\\\\/|<>\'\"+;%$#@&\\^\\(\\),-]\\*", "");
@@ -106,7 +110,7 @@ public class LSAKeywordExtractor implements KeywordExtractor {
    * An matrix A (nm) is a matrix that has n words and m sentences that make up the document. 
    * Each cell in the matrix represents the weight that the term has in the corresponding sentence.
    */
-  public static MatrixRepresentation buildMatrixA(List<List<String>> sentences){
+  public  MatrixRepresentation buildMatrixA(List<List<String>> sentences){
 
     List<String> wordList = new ArrayList<String>();
 
@@ -150,7 +154,7 @@ public class LSAKeywordExtractor implements KeywordExtractor {
    *        SVD decomposition.
    * @return matrix U after SVD decomposition
    */
-  public static RealMatrix SVD(MatrixRepresentation matrixA){  
+  public  RealMatrix SVD(MatrixRepresentation matrixA){  
 
     SingularValueDecomposition svd = new SingularValueDecomposition(matrixA.getMatrixA());
 
@@ -166,7 +170,7 @@ public class LSAKeywordExtractor implements KeywordExtractor {
    * @param threshold - number of keyword that the method have to consider.
    * @return The list of Keyword 
    */
-  private static  List<Keyword> getKeywordList(MatrixRepresentation matrixA, RealMatrix U, int threshold){
+  private   List<Keyword> getKeywordList(MatrixRepresentation matrixA, RealMatrix U, int threshold){
 
     double[] bestColumn = U.getColumn(0);
 
@@ -175,9 +179,9 @@ public class LSAKeywordExtractor implements KeywordExtractor {
 
     if(threshold<=bestColumn.length){
       while(threshold>0){
-        int index= max(bestColumn);
+        int index = max(bestColumn);
         bestIndex.put(index,bestColumn[index]);
-        bestColumn[index]=0;
+        bestColumn[index]=-10000;
         threshold--;
       }
     }
@@ -202,8 +206,8 @@ public class LSAKeywordExtractor implements KeywordExtractor {
    * @param bestColumn
    * @return
    */
-  private static int max(double[] bestColumn) {
-    double max = 0;
+  private  int max(double[] bestColumn) {
+    double max = bestColumn[0];
     int indexMax=0;
     for(int i=0; i<bestColumn.length;i++){
       if(bestColumn[i]>max){
@@ -226,7 +230,7 @@ public class LSAKeywordExtractor implements KeywordExtractor {
    * @param j
    * @return
    */
-  private static double Tf(String word,List<List<String>> sentences, int j){
+  private  double Tf(String word,List<List<String>> sentences, int j){
 
     List<String> sentenceJ = sentences.get(j);
     //number of times word i in sentence j
@@ -249,7 +253,7 @@ public class LSAKeywordExtractor implements KeywordExtractor {
    * @param sentences
    * @return
    */
-  private static double Isf(String word,List<List<String>> sentences){
+  private  double Isf(String word,List<List<String>> sentences){
 
     //number of sentences with word i
     double numberSentenceWithWord = 0;
@@ -279,14 +283,14 @@ public class LSAKeywordExtractor implements KeywordExtractor {
   /**
    * @return the path of the stopwords file
    */
-  public static String getStopWordPath() {
+  public  String getStopWordPath() {
     return stopWordPath;
   }
 
   /**
    * @param stopWordPath
    */
-  public static void setStopWordPath(String stopWordPath) {
+  public  void setStopWordPath(String stopWordPath) {
     LSAKeywordExtractor.stopWordPath = stopWordPath;
   }
 

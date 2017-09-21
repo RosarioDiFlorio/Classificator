@@ -179,13 +179,15 @@ public class TrainingSetBuilder {
           }
 
           textList.add(list);
-          float[] vectorCategoryChoose = ClusteringKMeans.returnVectorsFromTextList(textList)[0];
+          ClusteringKMeans clustering = new ClusteringKMeans();
+          float[] vectorCategoryChoose = clustering.returnVectorsFromTextList(textList)[0];
           String label = k.getText();
           textList = new ArrayList<List<String>>();
           list = new ArrayList<String>();
           list.add(label);
           textList.add(list);
-          float[] vector = ClusteringKMeans.returnVectorsFromTextList(textList)[0];
+          
+          float[] vector = clustering.returnVectorsFromTextList(textList)[0];
           double vectorResult = FeatureExtractor.cosineSimilarity(vectorCategoryChoose, vector);
           
           if(vectorResult>max){

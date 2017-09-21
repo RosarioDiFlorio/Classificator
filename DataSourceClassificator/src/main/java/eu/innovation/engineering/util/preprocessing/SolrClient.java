@@ -30,7 +30,7 @@ public class SolrClient {
 
   public static void main(String[] args) throws Exception{
 
-    requestNTechincalPaper(0,100000);
+    requestNTechincalPaper(0,20000);
 
   }
 

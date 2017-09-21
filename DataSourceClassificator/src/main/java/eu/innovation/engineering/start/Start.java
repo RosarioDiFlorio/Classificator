@@ -12,6 +12,7 @@ import java.util.HashMap;
 
 import eu.innovation.engineering.LSA.keywordExtractor.LSAKeywordExtractor;
 import eu.innovation.engineering.config.PathConfigurator;
+import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 import eu.innovation.engineering.prepocessing.CSVBuilder;
 import eu.innovation.engineering.prepocessing.DatasetBuilder;
 import eu.innovation.engineering.prepocessing.DictionaryBuilder;
@@ -28,12 +29,12 @@ public class Start {
   
   //Secondo passo creare i file Json di train e test
   private static final boolean buildJsonTraining = true;
-  private static final boolean buildJsonTest = true;
+  private static final boolean buildJsonTest = false;
 
   //Terzo passo, decidere se predere i dizionari persistenti o creare altri, creare i csv
-  private static final boolean loadDictionariesFromFile = false;
+  private static final boolean loadDictionariesFromFile = true;
   private static final boolean buildCSVTraining = true;
-  private static final boolean buildCSVTest = true;
+  private static final boolean buildCSVTest = false;
 
   //Other
   private static final String category = "";
@@ -41,24 +42,27 @@ public class Start {
 
   public static void main(String[] args) throws IOException{
     
+    Start start = new Start();
 
     String path = PathConfigurator.rootFolder + category;
     if(!category.equals(""))
       path = PathConfigurator.rootFolder + category +"/";
 
     int numLabels = TxtDataReader.getCategories(path+"categories.txt").size();
+    
+    KeywordExtractor ke = new LSAKeywordExtractor(PathConfigurator.keywordExtractorsFolder);
 
     //CREA IL FILE JSON DEI DIZIONARI
     if(buildJsonDictionaries)
-      createDictionaries(path);
+      start.createDictionaries(path,ke);
     //CREA I FILE JSON DEL DATASET TXT PASSATO( lo lancio sul train, Il test in realtà lo genero con la classe SolrClient)
-    generateJsonFromTxt(path);
+    start.generateJsonFromTxt(path,ke);
     //CREA I FILE CSV DI TRAIN E TEST
-    generateCSV(path,numFeatures,numLabels);
+    start.generateCSV(path,numFeatures,numLabels);
 
   }
 
-  public static void generateCSV(String path, int numFeatures, int numLabels) throws IOException{
+  public  void generateCSV(String path, int numFeatures, int numLabels) throws IOException{
     DictionaryBuilder dictionaryBuilder = new DictionaryBuilder();
 
     HashMap<String, Dictionary> dictionaries = new HashMap<>();
@@ -78,23 +82,24 @@ public class Start {
   }
 
 
-  public static void createDictionaries(String path) throws IOException {
+  public  void createDictionaries(String path, KeywordExtractor ke) throws IOException {
 
     // CREAZIONE DEI DIZIONARI
 
     DictionaryBuilder dictionaryBuilder = new DictionaryBuilder();
-    System.out.println(path);
-    dictionaryBuilder.initJsonDataset("dictionariesSource.txt",path);
+    dictionaryBuilder.initJsonDataset("dictionariesSource.txt",path,ke);
     String jsonPath = path+"dictionariesSource.json";
+    
+    Runtime.getRuntime().gc();
+    
     HashMap<String, Dictionary> dictionaries = dictionaryBuilder.build(jsonPath, numFeatures,path);      
-
+    
 
   }
 
 
-  public static void generateJsonFromTxt(String path) throws IOException{
-    DatasetBuilder db = new DatasetBuilder();
-    db.setKeywordExtractor(new LSAKeywordExtractor(PathConfigurator.keywordExtractorsFolder));
+  public  void generateJsonFromTxt(String path, KeywordExtractor ke) throws IOException{
+    DatasetBuilder db = new DatasetBuilder(ke);
     if(buildJsonTraining)
       db.buildDataset("training.txt",path);
     if(buildJsonTest)
