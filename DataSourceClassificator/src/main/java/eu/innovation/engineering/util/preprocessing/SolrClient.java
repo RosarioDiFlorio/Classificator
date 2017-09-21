@@ -32,7 +32,7 @@ public class SolrClient {
   public static void main(String[] args) throws Exception{
 
     KeywordExtractor ke = new LSAKeywordExtractor(PathConfigurator.keywordExtractorsFolder);
-    requestNTechincalPaper(0,20000,ke);
+    requestNTechincalPaper(0,20,ke);
 
   }
 
@@ -170,10 +170,12 @@ public class SolrClient {
           source.setTitle(title);
           source.setId(id);
           List<String> toAnalyze = new ArrayList<String>();
-          toAnalyze.add(source.getTitle());
-          toAnalyze.add(description);
-          source.setKeywordList((ArrayList<Keyword>)ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).stream().flatMap(l->l.stream()).collect(Collectors.toList()));
-          sourceList.add(source); 
+          toAnalyze.add(source.getTitle()+description);
+          ArrayList<Keyword> keywordsList = (ArrayList<Keyword>) ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0);
+          if(keywordsList!=null){
+            source.setKeywordList(keywordsList);
+            sourceList.add(source); 
+          }
         }
       }
       cursorMark = parserJson.parse(response.toString()).getAsJsonObject().get("nextCursorMark").getAsString();
@@ -216,7 +218,7 @@ public class SolrClient {
     JsonParser parserJson = new JsonParser();
 
     List<String> idSources = balanceQuery(list);
-    
+
     for(String id : idSources){
 
       if(Paper.class.isAssignableFrom(c)){
@@ -225,7 +227,7 @@ public class SolrClient {
         if(responseProduzione != null){
           resultsProduzione.add(parserJson.parse(responseProduzione.toString()).getAsJsonObject().get("response").getAsJsonObject().get("docs").getAsJsonArray());
         }
-                
+
       }else if(Patent.class.isAssignableFrom(c)){
         //nuova query per i patent
       }

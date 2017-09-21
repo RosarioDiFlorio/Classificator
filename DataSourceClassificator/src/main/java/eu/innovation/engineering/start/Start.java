@@ -10,8 +10,8 @@ package eu.innovation.engineering.start;
 import java.io.IOException;
 import java.util.HashMap;
 
-import eu.innovation.engineering.LSA.keywordExtractor.LSAKeywordExtractor;
 import eu.innovation.engineering.config.PathConfigurator;
+import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 import eu.innovation.engineering.prepocessing.CSVBuilder;
 import eu.innovation.engineering.prepocessing.DatasetBuilder;
@@ -50,7 +50,7 @@ public class Start {
 
     int numLabels = TxtDataReader.getCategories(path+"categories.txt").size();
     
-    KeywordExtractor ke = new LSAKeywordExtractor(PathConfigurator.keywordExtractorsFolder);
+    KeywordExtractor ke = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
 
     //CREA IL FILE JSON DEI DIZIONARI
     if(buildJsonDictionaries)

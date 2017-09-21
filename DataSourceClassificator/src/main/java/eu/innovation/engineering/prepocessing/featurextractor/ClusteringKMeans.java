@@ -465,8 +465,8 @@ public class ClusteringKMeans {
 
       for(Keyword k : p.getKeywordList()){
         double resultDivision = k.getRelevance()/minRelevance;
-        if(resultDivision>10)
-          resultDivision=10;
+       // if(resultDivision>10)
+          //resultDivision=10;
         int numOccurence = (int) Math.ceil(resultDivision);
         //Aggiungo la keyword nel vettore di keywords "numOccurence" volte
 

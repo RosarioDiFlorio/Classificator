@@ -52,13 +52,9 @@ public class LSAKeywordExtractor implements KeywordExtractor {
       RealMatrix U = SVD(matrixA);
       keywordList = getKeywordList(matrixA, U, numKeywordsToReturn);
       toReturn.add(keywordList);
-      matrixA = null;
-      U=null;
-      keywordList=null;
-      sentenceList=null;
-      Runtime.getRuntime().gc();
+
     }
-    
+
     return toReturn;
 
   }
@@ -117,8 +113,8 @@ public class LSAKeywordExtractor implements KeywordExtractor {
 
 
     //crea la lista di word
-    for(List<String> sentencce : sentences){
-      for(String word : sentencce){
+    for(List<String> sentence : sentences){
+      for(String word : sentence){
         if(!wordList.contains(word)){
           wordList.add(word);
         }
@@ -132,9 +128,10 @@ public class LSAKeywordExtractor implements KeywordExtractor {
 
     for(String word : wordList){
       column=0;
-      for(List<String> sentence : sentences){  
+      for(List<String> sentence : sentences){ 
         matrix.addToEntry(row, column, Tf(word, sentences, column)*Isf(word,sentences));
         column++;
+
       }
       row++;
     }
@@ -157,8 +154,6 @@ public class LSAKeywordExtractor implements KeywordExtractor {
   public  RealMatrix SVD(MatrixRepresentation matrixA){  
 
     SingularValueDecomposition svd = new SingularValueDecomposition(matrixA.getMatrixA());
-
-
     return svd.getU();
   }
 
@@ -194,7 +189,11 @@ public class LSAKeywordExtractor implements KeywordExtractor {
     for(int index : bestIndex.keySet()){
       Keyword k = new Keyword();
       k.setText(matrixA.getTokenList().get(index));
-      k.setRelevance(bestIndex.get(index));
+      double relevance = 0;
+      for(int i=0;i<matrixA.getMatrixA().getColumnDimension();i++){
+        relevance+=matrixA.getMatrixA().getEntry(index, i);
+      }
+      k.setRelevance(relevance);
       keywordList.add(k);
     }
 
@@ -240,7 +239,8 @@ public class LSAKeywordExtractor implements KeywordExtractor {
         countSentenceJ++;
       }
     }
-
+    if(sentenceJ.size()==0)
+      return 0;
     double results = countSentenceJ/sentenceJ.size();
     return results;
 
