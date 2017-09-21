@@ -164,7 +164,8 @@ public class CSVBuilder {
     
     pWriterCSV.println(firstLine);
     for(String category : categories){     
-      for(IdAndTarget idAndTarget : featuresPapersTrainingWithTarget.keySet()){       
+      for(IdAndTarget idAndTarget : featuresPapersTrainingWithTarget.keySet()){      
+        
         if(idAndTarget.getTarget().equals(category)){
           String keywordsToWrite= idAndTarget.getId()+",";
           Iterator iterator = featuresPapersTrainingWithTarget.get(idAndTarget).iterator();
@@ -173,6 +174,7 @@ public class CSVBuilder {
           do{
             Features feature2 = (Features) iterator.next();
             keywordsToWrite+=","+feature2.getScore();
+            ;
           }
           while(iterator.hasNext());
           String currentCategory = idAndTarget.getTarget();         

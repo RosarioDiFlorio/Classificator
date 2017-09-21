@@ -72,10 +72,11 @@ public  class DatasetBuilder {
    * @return
    * @throws IOException
    */
-  public List<Source>  buildDataset(String fileName, String path) throws IOException{
-
-    dataReader = new TxtDataReader(fileName,path);
+  public List<Source>  buildDataset(String fileName, String path, String category) throws IOException{
+    
+    dataReader = new TxtDataReader(category,fileName,path);
     List<String> listIdPaper = new ArrayList<>(dataReader.getIds());
+    
     listSources.addAll(solrClient.getSourcesFromSolr(listIdPaper,Paper.class));
     listSources = (ArrayList<Source>) addCategories(listSources);
     listSources = (ArrayList<Source>) addKeywords(listSources);
@@ -173,8 +174,8 @@ public  class DatasetBuilder {
   }
 
   public List<Source> addCategories(List<Source> list) throws IOException{
-    Map<String, HashMap<String, String>> categoryPapers = dataReader.categoriesWithIds(dataReader.getFileToRead());
-
+    
+    Map<String, HashMap<String, String>> categoryPapers = dataReader.categoriesWithIds(dataReader.getFileToReadSource(),dataReader.getFileToReadCategory());
     for(Source paper :list){
       ArrayList<CategoriesResult> categoriesForCurrentPaper = new ArrayList<>();
       //PER IL PAPER CORRENTE MI PRENDO LE CATEGORIE ALLE QUALI APPARTIENE, CICLO PER LE CATEGORIE
@@ -245,7 +246,7 @@ public  class DatasetBuilder {
    */
   public static void main(String[] args) throws IOException{
     DatasetBuilder db = new DatasetBuilder();
-    db.buildDataset("training_results.txt",PathConfigurator.applicationFileFolder);    
+    //db.buildDataset("training_results.txt",PathConfigurator.applicationFileFolder);    
 
   }
 

@@ -1,3897 +1,5604 @@
 Cluster 150
-    education -> 5.0
-    experience -> 4.0
-AVG: 3.75
-Variance: 0.8291562
+    quality -> -10000.0
+AVG: -10000.0
+Variance: 0.0
 
 
 Cluster 271
-    chinese -> 11.0
-    pork -> 19.0
-AVG: 12.25
-Variance: 3.9607449
+    use -> 0.1897094216692573
+    ventricle -> 0.10554168419312697
+    atrial -> 0.20807472683739514
+    network -> 1.9382233407380167
+    protocol -> 0.16766014734950666
+    problem -> 0.26602551068302294
+    load -> 0.17239245138454487
+    t-tubule -> 0.6649075565880983
+    band -> 0.17908869720160575
+    energy -> 0.28972732652839667
+    disease -> 0.08648623908951454
+    myocyte -> 0.10627942477748335
+    mfc -> 0.41962051265581773
+    heart -> 0.08648623908951454
+    hole -> 0.2995710008451841
+    node -> 0.43995127823479624
+    fibril -> 0.21913453812594175
+    extensive -> 0.24965214341810632
+    route -> 0.1703916392190165
+    sensor -> 0.27285129372249467
+    time -> 0.13500082931195928
+    raman -> 0.14003600174193828
+AVG: 0.25755596
+Variance: 0.3505919
 
 
 Cluster 392
-    energy -> 8.0
-AVG: 5.0
-Variance: 1.7320508
+    industrial -> 0.2559921024495335
+    production -> 0.2559921024495335
+    volkswagen -> 0.2559921024495335
+    renault -> 0.2559921024495335
+    globalisation -> 0.704574025527644
+    relation -> 0.2559921024495335
+AVG: 0.25328207
+Variance: 0.16065243
 
 
 Cluster 151
-    datum -> 10.0
-    problem -> 10.0
-    topology -> 9.0
-    graph -> 22.0
-    algorithm -> 26.0
-AVG: 12.571428
-Variance: 7.518684
+    result -> 0.23883985600320773
+    study -> 0.33057212137629405
+    scientific -> 0.21536317733140503
+    technique -> 0.34550081565526525
+    remains -> 0.21536317733140503
+    ancient -> 0.5811503167154031
+AVG: 0.2535967
+Variance: 0.13018818
 
 
 Cluster 272
-    page -> 2.0
-AVG: 2.0
+    kingdom -> -10000.0
+AVG: -10000.0
 Variance: 0.0
 
 
 Cluster 393
-    well-being -> 15.0
-    education -> 9.0
-    school -> 31.0
-    staff -> 14.0
-AVG: 10.222222
-Variance: 8.376924
+    effective -> 0.2631781278800106
+    fast -> 0.28103591824398283
+    aim -> 0.21009581362175744
+    safe -> 0.28103591824398294
+    food -> 0.7426360904131704
+AVG: 0.24893725
+Variance: 0.17466979
 
 
 Cluster 390
-    roof -> 1.0
-    museum -> 1.0
-    drawing -> 1.0
-    mit -> 1.0
-AVG: 1.0
-Variance: 0.0
+    core -> 0.13749242088071584
+    tableau -> 0.7352220251904753
+    component -> 0.13749242088071584
+    inference -> 0.3531898284195337
+    engine -> 0.13749242088071584
+    logic-independent -> 0.3531898284195337
+    mettel -> 0.3531898284195335
+AVG: 0.23636787
+Variance: 0.20541894
 
 
 Cluster 270
-    hazard -> 4.0
-    industry -> 4.0
-AVG: 3.5
-Variance: 0.5
+    song -> 0.16945736358726332
+    take -> 0.08298031374556059
+    syllable -> 0.9180535118510529
+    species -> 0.15778317553245458
+    use -> 0.07508242770100172
+    bird -> 0.11167021741379132
+    stimulus -> 0.2033990501759882
+    sparrow -> 0.0716386964093527
+    multidimensional -> 0.07835231543173336
+AVG: 0.19281419
+Variance: 0.2461429
 
 
 Cluster 391
-    skill -> 3.0
-    craft -> 3.0
-AVG: 2.5
-Variance: 0.5
+    practice -> 0.06551679657881702
+    woman -> 0.11993579690493009
+    explore -> 0.06025325274162847
+    purpose -> 0.09299707110381077
+    prospects -> 0.037872967187282086
+    personal -> 0.07800039929724165
+    experience -> 0.21046791533101752
+    spirituality -> 1.8830868041028805
+    life -> 0.13400997423924363
+    point -> 0.037872967187282086
+    everyday -> 0.1078850656763317
+    view -> 0.037872967187282086
+    religiosity -> 0.24101041269599022
+    qualitative -> 0.07988947685357489
+    person -> 0.037872967187282086
+    spiritual -> 0.0835860245570912
+    divide -> 0.11478042058095063
+    state -> 0.09507598817794789
+AVG: 0.19544376
+Variance: 0.41290227
 
 
 Cluster 158
-    cav-1 -> 8.0
-    p132l -> 7.0
-AVG: 6.75
-Variance: 0.8291562
+    chapter -> 0.11021357329806804
+    capital -> 0.7426351562676448
+    development -> 0.155900177129103
+    crisis -> 0.16721076553364775
+    enterprise -> 0.5719434842902711
+    investment -> 1.387606935299677
+    basis -> 0.09812891757774196
+    domestic -> 0.15387707519747068
+    long-run -> 0.10426663799083409
+    find -> 0.2563484415283648
+    fixed -> 0.13829647877369444
+    aid -> 0.1091798006044622
+    flow -> 0.13090402766904202
+    economic -> 0.33066125922414047
+AVG: 0.2597245
+Variance: 0.3279289
 
 
 Cluster 279
-    firm -> 12.0
-    investment -> 22.0
-    spike -> 11.0
-AVG: 9.5
-Variance: 6.5510817
+    167 -> 0.326792445722845
+    radiation -> 0.6664372288092831
+    protection -> 0.6664372288092832
+AVG: 0.18104607
+Variance: 0.25909445
 
 
 Cluster 159
-    ronin -> 5.0
-AVG: 3.5
-Variance: 0.8660254
+    combined -> -10000.0
+AVG: -10000.0
+Variance: 0.0
 
 
 Cluster 156
-    abundance -> 6.0
-    fish -> 6.0
-    isotope -> 6.0
-    water -> 5.0
-    marsh -> 5.0
-AVG: 5.0
-Variance: 0.8660254
+    robust -> 0.19825833413004207
+    system -> 0.1090915780677492
+    management -> 0.8532210001852643
+    asset -> 0.22551459562416346
+    policy -> 0.3317010568541657
+AVG: 0.211835
+Variance: 0.22878493
 
 
 Cluster 277
-    alzheimer -> 11.0
-    disease -> 19.0
-    trem2 -> 8.0
-    variant -> 9.0
-    parkinson -> 8.0
-AVG: 9.857142
-Variance: 3.943478
+AVG: -0.28867513
+Variance: 5.181208E-9
 
 
 Cluster 398
-    corporate -> 6.0
-    financial -> 10.0
-AVG: 6.25
-Variance: 2.2776084
+    carer -> 0.5098606261153555
+    role -> 0.1902336835501299
+    nursing -> 0.18295753991363514
+    community -> 0.4376688961776504
+    stroke -> 1.2172140010873975
+    patient -> 0.9966861515216574
+    discharge -> 0.21322488839609627
+    nurse -> 0.3518471313536151
+    hospital -> 0.2596220643148676
+AVG: 0.34230456
+Variance: 0.3244395
 
 
 Cluster 157
-    firm -> 5.0
-    sme -> 4.0
-    different -> 5.0
-AVG: 4.25
-Variance: 0.8291562
+    use -> 0.15438371940256027
+    context -> 0.0909394601542459
+    show -> 0.08751879275243266
+    thread -> 0.9012948723169955
+    processor -> 0.23691452751947423
+    prioritization -> 0.26904689467421145
+AVG: 0.19394997
+Variance: 0.24795133
 
 
 Cluster 278
-    travel -> 4.0
-AVG: 3.3333333
-Variance: 0.4714045
+AVG: -0.30151132
+Variance: 2.7086234E-8
 
 
 Cluster 399
-    audio -> 7.0
-    quality -> 8.0
-AVG: 6.3333335
-Variance: 1.6996732
+    include -> 0.1383414505076607
+    belong -> 0.6961689947667187
+    believe -> 0.6961689947667187
+    population -> 0.07196003995328573
+AVG: 0.17828019
+Variance: 0.26118124
 
 
 Cluster 154
-    evaluation -> 6.0
-    information -> 5.0
-AVG: 4.75
-Variance: 0.8291562
+    number -> 0.7183737381582119
+    problem -> 0.1080957181136163
+    multiple -> 0.11679060669197908
+    copy -> 0.6108663907694162
+    region -> 0.10282271619526823
+    sample -> 0.1080957181136163
+    variation -> 0.1426852068042955
+AVG: 0.21099277
+Variance: 0.22926553
 
 
 Cluster 275
-    3d-cranking -> 2.0
-    self-consistent -> 2.0
-    description -> 2.0
-    mg-24 -> 2.0
-AVG: 2.0
-Variance: 0.0
+    study -> 0.4166932072409659
+    use -> 0.25499066924447483
+    assumption -> 0.295727896780865
+    value -> 0.42364261550042953
+    case -> 0.43724951177938
+    governance -> 0.315336220484602
+AVG: 0.28085777
+Variance: 0.110158965
 
 
 Cluster 396
-    surface -> 6.0
-    cell -> 8.0
-AVG: 5.75
-Variance: 1.47902
+    pro12alum -> 0.26613543563981806
+    pparg -> 0.272920618626598
+    weight -> 0.19737255518104058
+    concentration -> 0.1839786718998428
+    increase -> 0.1865961045469834
+    leu162val -> 0.266135435639818
+    lipid -> 0.26477990676710134
+    ppara -> 0.1839786718998428
+    genotype -> 0.34570558433153326
+    acid -> 0.22290216817034902
+    dietary -> 0.3689959558143638
+    ldl -> 0.42071007018946777
+    fatty -> 0.22290216817034902
+    cholesterol -> 0.603990690528855
+    plasma -> 0.9449648101122285
+AVG: 0.27591696
+Variance: 0.20431623
 
 
 Cluster 155
-    number -> 7.0
-    copy -> 6.0
-AVG: 4.75
-Variance: 1.7853571
+AVG: -0.18257418
+Variance: 3.0862608E-9
 
 
 Cluster 276
-    infection -> 10.0
-    fibrosis -> 11.0
-    cystic -> 11.0
-AVG: 10.25
-Variance: 0.8291562
+    swallow -> 0.6589083239212276
+    liquid -> 0.5150494959140244
+    beneficial -> 0.12293144828766768
+    effect -> 0.2874846654921654
+    carbonated -> 0.4178553926313001
+AVG: 0.22954008
+Variance: 0.21509245
 
 
 Cluster 397
-    boston -> 1.0
-    study -> 1.0
-    business -> 1.0
-    renewal -> 1.0
-AVG: 1.0
-Variance: 0.0
+    datum -> 0.4036019957493098
+    chip -> 0.4570831984999497
+    experiment -> 0.263269844611288
+    affect -> 0.20280789867315424
+    use -> 0.387776711100118
+    chip-seq -> 0.19556453214318165
+    quality -> 0.5225833204579955
+AVG: 0.26935524
+Variance: 0.1556371
 
 
 Cluster 152
-    ustekinumab -> 8.0
-    psoriasis -> 11.0
-    infliximab -> 7.0
-AVG: 6.285714
-Variance: 2.373321
+    1996 -> 0.31247528107486644
+    society -> 0.5459734535826843
+    acoustical -> 0.5459734535826843
+    america -> 0.5459734535826843
+AVG: 0.21315591
+Variance: 0.23315422
 
 
 Cluster 273
-    sausage -> 5.0
-AVG: 4.3333335
-Variance: 0.47140452
+    firm -> 0.2532304486197002
+    gvc -> 0.6145435735444167
+    producer -> 0.21170373279943341
+    global -> 0.28288983509006704
+    local -> 0.35658726195316515
+    lead -> 0.4756370552032158
+AVG: 0.25638807
+Variance: 0.17255512
 
 
 Cluster 394
-    lipoatrophy -> 11.0
-    child -> 8.0
-AVG: 7.25
-Variance: 2.4874685
+    production -> 0.4255364452966223
+    engineer -> 0.3190234993105579
+    glutamicum -> 0.5143295274376394
+    platform -> 0.3190234993105581
+AVG: 0.26841334
+Variance: 0.11709759
 
 
 Cluster 153
-    honour -> 9.0
-    school -> 8.0
-    family -> 26.0
-AVG: 11.4
-Variance: 7.337575
+    uniformily -> -1.1318729615465012E-7
+    characterize -> -1.1318729615465012E-7
+    ideal -> -1.1318729615465012E-7
+    spatially -> -1.1318729615465012E-7
+    azimuthal -> -1.1318729615465012E-7
+    piston -> -1.1318729615465012E-7
+    circular -> -1.1318729615465012E-7
+    consider -> -1.1318729615465012E-7
+    represent -> -1.1318729615465012E-7
+    example -> -1.1318729615465012E-7
+AVG: -1.131873E-7
+Variance: 1.602017E-15
 
 
 Cluster 274
-    education -> 1.0
-    hyperon-nucleon -> 1.0
-    interaction -> 1.0
-    grant -> 1.0
-AVG: 1.0
-Variance: 0.0
+    actor -> 0.22867213857131402
+    predictive -> 0.21917480168246747
+    abstainer -> 0.22867213857131402
+    validity -> 0.21917480168246747
+    prototype -> 0.8381817374963999
+AVG: 0.22849242
+Variance: 0.21029203
 
 
 Cluster 395
-    religious -> 9.0
-    high -> 9.0
-    depression -> 13.0
-AVG: 9.75
-Variance: 1.9202864
+    transport -> -10000.0
+AVG: -10000.0
+Variance: 0.0
 
 
 Cluster 161
-    airport -> 2.0
-AVG: 2.0
-Variance: 0.0
+    inclusion -> 0.4834425638555777
+    process -> 0.21837126959847386
+    issue -> 0.21837126959847386
+    school -> 0.5301425885142078
+    collaborative -> 0.21837126959847386
+    racial -> 0.4834425638555777
+    lead -> 0.21837126959847386
+    research -> 0.21837126959847386
+AVG: 0.2658934
+Variance: 0.16812128
 
 
 Cluster 282
-    construction -> 14.0
-AVG: 8.75
-Variance: 3.0310888
+AVG: -0.28867513
+Variance: 5.181208E-9
 
 
 Cluster 162
-    single -> 1.0
-    thomson -> 1.0
-    grant -> 1.0
-    proton -> 1.0
-AVG: 1.0
-Variance: 0.0
+    process -> 0.3953322808241742
+    individual -> 0.11304800302799686
+    decision-making -> 0.10413532706569636
+    behaviour -> 0.7816594355716897
+    consumer -> 0.4080779804740492
+AVG: 0.21563694
+Variance: 0.22754788
 
 
 Cluster 283
-    research -> 11.0
-AVG: 6.6666665
-Variance: 3.091206
+    tourist -> 0.617055893679283
+    product -> 0.31984904255596575
+    tourism -> 0.4731402226190104
+    travel -> 0.28406017368056063
+AVG: 0.2573777
+Variance: 0.1594464
 
 
 Cluster 280
-    development -> 1.0
-    systems -> 1.0
-    retrieval -> 1.0
-    grant -> 1.0
-AVG: 1.0
-Variance: 0.0
+    explain -> 0.20890489792965375
+    implementation -> 0.2644351032857823
+    motivation -> 0.45744387285274957
+    fat -> 0.2491377813327109
+    difference -> 0.4178097958593075
+    intention -> 0.26443510328578235
+    group -> 0.5247270596986471
+AVG: 0.27687582
+Variance: 0.13919117
 
 
 Cluster 160
-    indigenous -> 6.0
-    skill -> 8.0
-AVG: 6.0
-Variance: 1.2247449
+    disease -> 0.16705477318917664
+    psorpte -> 0.15197343271876992
+    mange -> 0.23349264354053148
+    infested -> 0.16859224448427504
+    man -> 0.12422649403281327
+    different -> 0.12617722085681593
+    type -> 0.12617722085681593
+    dog -> 0.8754755499562812
+    mite -> 0.1661197813485952
+AVG: 0.22242351
+Variance: 0.22085422
 
 
 Cluster 281
-    illegibility -> 5.0
-AVG: 4.25
-Variance: 0.4330127
+    charge -> -10000.0
+AVG: -10000.0
+Variance: 0.0
 
 
 Cluster 169
-    english -> 8.0
-AVG: 5.0
-Variance: 1.7320508
+    innovation -> 1.2814734306901934
+    product -> 1.2644132628927531
+    study -> 0.12351482289395567
+    involvement -> 0.1685951900155726
+    oem -> 0.09022656319430891
+    supplier -> 0.6464352854907252
+    automotive -> 0.09022656319430891
+    relationship -> 0.100788523389554
+    knowledge -> 0.22686048985460272
+AVG: 0.29438075
+Variance: 0.40913197
 
 
 Cluster 167
-    suicide -> 10.0
-    scotland -> 8.0
-AVG: 7.5
-Variance: 1.6583124
+AVG: -0.31622773
+Variance: 3.192794E-8
 
 
 Cluster 288
-    system -> 1.0
-    supplies -> 1.0
-    airdrop -> 1.0
-    warfighter -> 1.0
-AVG: 1.0
-Variance: 0.0
+    corporate -> 0.49985343833205903
+    federal -> 0.3482593434366614
+    tax -> 0.6138590932242186
+    state -> 0.31300359973919084
+    welfare -> 0.26524095733410313
+AVG: 0.2560852
+Variance: 0.17850086
 
 
 Cluster 168
-    disposition -> 1.0
-    art -> 1.0
-    massachusetts -> 1.0
-    state -> 1.0
-AVG: 1.0
-Variance: 0.0
+AVG: -0.30151132
+Variance: 2.7086234E-8
 
 
 Cluster 289
-    foreign -> 2.0
-AVG: 2.0
-Variance: 0.0
+    adsorption -> 0.1890614127435045
+    surface -> 0.7778527453926338
+    complex -> 0.18746180310167868
+    calcite -> 0.4410658450707568
+    different -> 0.1792178097689072
+AVG: 0.22685981
+Variance: 0.20917536
 
 
 Cluster 165
-    ad -> 5.0
-    transgenic -> 5.0
-    diet -> 5.0
-AVG: 4.75
-Variance: 0.4330127
+    response -> 0.33443271361925
+    predict -> 0.5017425739557743
+    growth -> 0.6690524342922989
+    hormone -> 0.16730986033652445
+AVG: 0.21744671
+Variance: 0.20208234
 
 
 Cluster 286
-    hotel -> 2.0
-AVG: 2.0
-Variance: 0.0
+    report -> 0.13842318840962856
+    national -> 0.38659685712499825
+    section -> 0.12895077208194644
+    geological -> 0.3853207806293277
+    park -> 0.7846273120536321
+AVG: 0.22603925
+Variance: 0.21857664
 
 
 Cluster 166
-    cash -> 5.0
-    flow -> 5.0
-AVG: 4.0
-Variance: 1.0
+    performance -> 0.1737824407989815
+    fabric -> 0.7158092901057069
+    construction -> 0.24828158870703543
+    ballistic -> 0.6052735644174116
+AVG: 0.20832174
+Variance: 0.23603426
 
 
 Cluster 287
-    design -> 6.0
-    poster -> 12.0
-AVG: 7.0
-Variance: 2.9154758
+    unqualified -> 0.17219223390851404
+    teacher -> 0.254715608754571
+    school -> 0.0979164830307666
+    science -> 0.9026793352642146
+    teaching -> 0.10650424105512883
+    primary -> 0.22970211701320212
+AVG: 0.1980242
+Variance: 0.24584118
 
 
 Cluster 163
-    datum -> 8.0
-AVG: 4.25
-Variance: 2.1650636
+    insurance -> 0.19928016369164517
+    mutualisation -> 0.378050750575459
+    deposit -> 0.19928016369164517
+    union -> 0.6369739720351411
+    partial -> 0.17314178274845154
+    debt -> 0.4963888270282407
+AVG: 0.24978292
+Variance: 0.18012702
 
 
 Cluster 284
-    national -> 5.0
-    park -> 8.0
-    geological -> 5.0
-AVG: 5.5
-Variance: 1.5
+    alternative -> -20000.0
+AVG: -20000.0
+Variance: 0.0
 
 
 Cluster 164
-    equality -> 4.0
-AVG: 3.3333333
-Variance: 0.4714045
+    income -> 0.2487136800169457
+    micro-chp -> 0.28361060264604027
+    fuel -> 0.2729595530583419
+    consumption -> 0.7214612668167395
+    electricity -> 0.19535340048496957
+    control -> 0.16761521188246373
+    increase -> 0.46583007010356275
+    earnings -> 0.2729595530583419
+    fall -> 0.8927244829760245
+    heating -> 0.22077027262607424
+    export -> 0.2729595530583419
+    operation -> 0.22178317099452388
+AVG: 0.24712607
+Variance: 0.22224636
 
 
 Cluster 285
-    investment -> 5.0
-    bit -> 7.0
-AVG: 5.0
-Variance: 1.2247449
+    practice -> 0.09356493521319657
+    freedom -> 0.39482381497003577
+    rights -> 0.8628204039090935
+    human -> 0.19413595759410512
+    oman -> 0.11193534922452324
+AVG: 0.19979134
+Variance: 0.24156757
 
 
 Cluster 370
-    art -> 10.0
-    mallarme -> 5.0
-AVG: 5.5
-Variance: 2.6925824
+    study -> 0.22489689966057363
+    interpretation -> 0.1379942292039696
+    display -> 0.7533638863468044
+    figure-ground -> 0.46136575128669044
+    ambiguous -> 0.27297183882572745
+    stvm -> 0.16572583221380788
+AVG: 0.23787782
+Variance: 0.20476742
 
 
 Cluster 491
-    market -> 12.0
-    chapter -> 5.0
-AVG: 6.25
-Variance: 3.344772
+    accurate -> 0.11567373005975437
+    resource -> 0.08833928156551163
+    timing -> 0.15410050020033267
+    use -> 0.08833928156551163
+    model -> 0.9378050520562508
+    contention -> 0.1797079215603742
+    tool -> 0.07712267291874639
+    network -> 0.08833928156551163
+AVG: 0.18207261
+Variance: 0.25513536
 
 
 Cluster 250
-    system -> 1.0
-    drawing -> 1.0
-    mit -> 1.0
-    research -> 1.0
-AVG: 1.0
+    determination -> -10000.0
+AVG: -10000.0
 Variance: 0.0
 
 
 Cluster 371
-    patient -> 4.0
-    narrative -> 5.0
-AVG: 3.75
-Variance: 0.8291562
+    craft -> 1.0453440392674653
+    learning -> 0.5657047764560559
+    traditional -> 0.35855533478908935
+    design -> 0.35855533478908935
+    skill -> 0.8379014023678002
+    online -> 0.3288630763231043
+AVG: 0.26523602
+Variance: 0.28469658
 
 
 Cluster 492
-    school -> 100.0
-    gardening -> 23.0
-    garden -> 48.0
-    place -> 35.0
-AVG: 29.857143
-Variance: 33.425518
+    government -> 0.2525051071607013
+    public -> 0.15938026181663104
+    infrastructure -> 0.5386275432245324
+    financing -> 0.11083346691182527
+    investment -> 0.7614960792182234
+AVG: 0.21288016
+Variance: 0.23194829
 
 
 Cluster 490
-    factory -> 11.0
-    productivity -> 8.0
-AVG: 7.5
-Variance: 2.291288
+AVG: -0.12126781
+Variance: 2.054261E-9
 
 
 Cluster 136
-    poet -> 39.0
-    hoelderlin -> 37.0
-AVG: 27.0
-Variance: 11.113055
+    religious -> 0.4260845062536409
+    practice -> 0.3727302727718153
+    childhood -> 0.22384957978620937
+    survivor -> 0.27562440259921034
+    religiosity -> 0.35115351973164777
+    spiritual -> 0.618975477965731
+    depression -> 1.057575837500634
+    physical -> 0.25747723204210954
+    belief -> 0.6311562851677245
+AVG: 0.3185192
+Variance: 0.25454968
 
 
 Cluster 257
-    index -> 5.0
-    soil -> 8.0
-    bhp -> 6.0
-AVG: 5.5
-Variance: 1.8027756
+    motesanib -> 0.13927695875097082
+    change -> 0.19736850311699253
+    association -> 0.19736850311699253
+    arm -> 0.9168382044767484
+    plgf -> 0.19736850311699253
+AVG: 0.1908612
+Variance: 0.25027448
 
 
 Cluster 378
-    social -> 3.0
-    work -> 3.0
-    worker -> 3.0
-AVG: 2.75
-Variance: 0.4330127
+    evaluation -> 0.5331027271407914
+    system -> 0.2919404304376038
+    retrieval -> 0.3720083995602572
+    information -> 0.5317753265034655
+    user-centred -> 0.3492215111939396
+    cross-language -> 0.17641683010508136
+AVG: 0.2571682
+Variance: 0.17752568
 
 
 Cluster 499
-    innovation -> 28.0
-    food -> 16.0
-AVG: 16.75
-Variance: 6.759253
+    reduce -> 0.1308978805049723
+    small -> 0.09183291409753691
+    software -> 1.1865043969633176
+    additional -> 0.2960810766614638
+    subsystem -> 0.7758279815180014
+    main -> 0.1308978805049723
+    availability -> 0.1308978805049723
+    processor -> 0.1789991803888223
+    integrate -> 0.2977258693116818
+    heterogeneity -> 0.1960263227881166
+    application -> 0.1308978805049723
+    behavior -> 0.11620467164900192
+    add-on -> 0.09183291409753691
+    hardware -> 0.20470015035062017
+AVG: 0.22460586
+Variance: 0.27701113
 
 
 Cluster 137
-    colour -> 13.0
-    package -> 7.0
-    fruit -> 6.0
-AVG: 7.5
-Variance: 3.354102
+    valuation -> -10000.0
+AVG: -10000.0
+Variance: 0.0
 
 
 Cluster 258
-    business -> 37.0
-    group -> 22.0
-AVG: 19.5
-Variance: 11.456439
+    exhibition -> 0.25046973629939984
+    service -> 0.3504636743370935
+    work -> 0.22058063147718962
+    quaker -> 0.8324164580744503
+    memorial -> 0.20265298957794944
+AVG: 0.2136297
+Variance: 0.22966772
 
 
 Cluster 379
-    material -> 4.0
-AVG: 3.25
-Variance: 0.4330127
+    feedback -> 0.21124464785519448
+    personalised -> 0.23250224544310066
+    fat -> 0.6861484942381069
+    intake -> 0.6416894208027034
+AVG: 0.20427608
+Variance: 0.24026783
 
 
 Cluster 134
-    household -> 8.0
-    water -> 8.0
-AVG: 7.5
-Variance: 0.5
+    decision -> 0.21537972078886825
+    decision-making -> 0.5230784326447389
+    need -> 0.30194029771939035
+    factor -> 0.2051104218405618
+    local -> 0.2187219590099862
+    pupil -> 0.6026951138022719
+AVG: 0.25892514
+Variance: 0.16220422
 
 
 Cluster 255
-    income -> 5.0
-    fall -> 6.0
-    consumption -> 6.0
-AVG: 5.0
-Variance: 1.2247449
+    student -> 0.48845488164104744
+    interest -> 0.22527936570818177
+    teach -> 0.5254899153845308
+    topic -> 0.46319078149125814
+    research -> 0.46319078149125814
+AVG: 0.22592697
+Variance: 0.22043017
 
 
 Cluster 376
-    welding -> 10.0
-    intermetallic -> 6.0
-    layer -> 6.0
-AVG: 6.75
-Variance: 1.9202864
+    ranking -> -10000.0
+AVG: -10000.0
+Variance: 0.0
 
 
 Cluster 497
-    process -> 8.0
-    art-making -> 4.0
-    change -> 4.0
-    analysis -> 8.0
-AVG: 4.428571
-Variance: 2.3819046
+AVG: -0.22941573
+Variance: 4.2286477E-9
 
 
 Cluster 135
-    antibody -> 6.0
-AVG: 4.5
-Variance: 1.5
+    navigate -> -10000.0
+AVG: -10000.0
+Variance: 0.0
 
 
 Cluster 256
-    process -> 19.0
-    business -> 9.0
-    behaviour -> 16.0
-    consumer -> 13.0
-AVG: 10.571428
-Variance: 5.1229773
+    test -> -0.2581988897471611
+    pressurized -> -0.2581988897471611
+    fuel -> -0.2581988897471611
+    design -> -0.2581988897471611
+    simulated -> -0.2581988897471611
+    behavior -> -0.258198889747161
+    sic -> -0.2581988897471611
+    triplex -> -0.2581988897471611
+    cladd -> -0.2581988897471611
+    water -> -0.2581988897471611
+AVG: -0.25819892
+Variance: 2.7164916E-8
 
 
 Cluster 377
-    process -> 1.0
-    cost -> 1.0
-    strategy -> 1.0
-    inspection -> 1.0
-AVG: 1.0
+    optimum -> -10000.0
+AVG: -10000.0
 Variance: 0.0
 
 
 Cluster 498
-    cocteau -> 7.0
-    art -> 9.0
-    artistic -> 8.0
-    poet -> 7.0
-AVG: 6.8333335
-Variance: 1.5723301
+    search -> 0.6960981531343043
+    hybrid -> 0.2532633292058327
+    problem -> 0.2822196411501454
+    method -> 0.17646113659134957
+    design -> 0.28760429883151994
+    algorithm -> 0.19870209447633713
+AVG: 0.24116321
+Variance: 0.1635997
 
 
 Cluster 132
-    streamer -> 8.0
-    pressboard -> 5.0
-    interface -> 6.0
-    voltage -> 7.0
-AVG: 5.0
-Variance: 1.7320508
+    religious -> 0.5010908365889768
+    declare -> 0.22584528510083907
+    spirituality -> 0.43839640033039307
+    belief -> 0.22111146287855216
+    participant -> 0.6261133972895078
+AVG: 0.24330175
+Variance: 0.19551578
 
 
 Cluster 253
-    fabric -> 9.0
-    ballistic -> 9.0
-AVG: 6.75
-Variance: 2.2776084
+    digital -> -0.25819888974716115
+    analog -> -0.25819888974716115
+    combinedbibliography -> -0.25819888974716115
+    practice -> -0.25819888974716115
+    use -> -0.25819888974716115
+    leave -> -0.25819888974716115
+    investigation -> -0.25819888974716115
+    113-115 -> -0.25819888974716115
+    potential -> -0.25819888974716115
+    theory -> -0.25819888974716115
+AVG: -0.25819892
+Variance: 2.7164916E-8
 
 
 Cluster 374
-    injury -> 6.0
-    adult -> 5.0
-AVG: 4.75
-Variance: 0.8291562
+    movie -> 0.04527383322574472
+    star -> 0.020977434259278744
+    turkish -> 0.03210176819502151
+    design -> 0.09091326190555601
+    melodrama -> 0.028867352492373457
+    yeşilçam -> 0.06681095367238718
+    well -> 0.04212636009706557
+    film -> 0.03229179030241597
+    poster -> 0.9877039613404477
+    graphic -> 0.03453897553808986
+AVG: 0.13816057
+Variance: 0.28386062
 
 
 Cluster 495
-    strategic -> 1.0
-    fund -> 1.0
-    investingbibliography -> 1.0
-    pension -> 1.0
-AVG: 1.0
-Variance: 0.0
+AVG: -0.31622773
+Variance: 3.192794E-8
 
 
 Cluster 133
-    investor -> 6.0
-    occupant-owner -> 6.0
-AVG: 5.0
-Variance: 1.0
+    work -> 1.1637908781008097
+    narrative -> 0.12076795180096674
+    vocal -> 0.43339736062950945
+    argue -> 0.13351016194402238
+    creative -> 0.2845324274252014
+    fragment -> 0.13351016194402238
+    form -> 0.14472281202372989
+    final -> 0.13351016194402238
+    beethoven -> 0.3776766701425899
+    chaucer -> 0.7090090455995449
+    text -> 0.16149347166561273
+    word -> 0.17597121591407655
+    struggle -> 0.13351016194402238
+AVG: 0.24642277
+Variance: 0.26504457
 
 
 Cluster 254
-    fish -> 6.0
-    distribution -> 5.0
-AVG: 4.75
-Variance: 0.8291562
+    sadie -> 0.07574297604027092
+    access -> 0.14691017428221295
+    web -> 0.9613425874271507
+    reader -> 0.05302080621510134
+    use -> 0.054952719638628064
+    screen -> 0.05302080621510134
+    visually -> 0.04330781084982234
+    information -> 0.10281154493741863
+    page -> 0.08101644343749036
+    ontology -> 0.08673390477870611
+AVG: 0.16588598
+Variance: 0.2667381
 
 
 Cluster 375
-    patient -> 14.0
-    care -> 16.0
-AVG: 13.75
-Variance: 1.47902
+    product -> 0.20789365369837484
+    hazard -> 0.46833527459385316
+    recall -> 0.5403524390457839
+    biological -> 0.29894851486327845
+    agri-food -> 0.2997388189067154
+    industry -> 0.370965679315209
+AVG: 0.27637237
+Variance: 0.13866532
 
 
 Cluster 496
-    dietary -> 9.0
-    intake -> 12.0
-AVG: 8.5
-Variance: 2.291288
+    belong -> 0.17879848396877493
+    sociological -> 0.2306081308614933
+    social -> 0.18746492121874564
+    place -> 0.906922348883481
+    people -> 0.07726136018401975
+    life -> 0.10397599137233832
+    research -> 0.1660940005228254
+AVG: 0.19734094
+Variance: 0.24551128
 
 
 Cluster 130
-    sti -> 10.0
-    travel -> 13.0
-    traveller -> 8.0
-AVG: 9.25
-Variance: 2.58602
+AVG: -0.19245008
+Variance: 1.3388245E-8
 
 
 Cluster 251
-    biology -> 23.0
-    system -> 18.0
-    cancer -> 23.0
-AVG: 19.25
-Variance: 4.145781
+    median -> 0.632510488367615
+    patient -> 0.5696131827921356
+    tumour -> 0.17812142702957168
+    5-year -> 0.2349207202785362
+    apoptosis -> 0.2493656236308024
+    sf2 -> 0.1708644036481233
+AVG: 0.25082648
+Variance: 0.18193142
 
 
 Cluster 372
-    optimization -> 6.0
-    multiobjective -> 6.0
-    learning -> 5.0
-AVG: 5.0
-Variance: 1.2247449
+    stromal -> 0.17219380848816607
+    autophagy -> 0.17134683083816005
+    tumor -> 0.7696171340640267
+    cancer -> 0.4202917846511761
+    cell -> 0.3450434487997724
+AVG: 0.22866985
+Variance: 0.21435201
 
 
 Cluster 493
-    mortality -> 8.0
-    incidence -> 9.0
-    trial -> 7.0
-AVG: 7.5
-Variance: 1.118034
+    reduce -> 0.1913914566982122
+    compare -> 0.20230392757216098
+    density -> 0.28845183496907495
+    ca1 -> 0.14375599148085133
+    intraneuronal -> 0.2609799399432688
+    ntrp -> 0.17164327621594813
+    animal -> 0.34256914683394524
+    transgenic -> 0.1566910982533684
+    htrp -> 0.28845183496907495
+    diet -> 0.494672431779584
+AVG: -0.009089001
+Variance: 0.2870378
 
 
 Cluster 131
-    education -> 89.0
-    environmental -> 60.0
-    teacher -> 30.0
-    knowledge -> 26.0
-AVG: 32.0
-Variance: 29.437586
+    improve -> -20000.0
+AVG: -20000.0
+Variance: 0.0
 
 
 Cluster 252
-    capital -> 19.0
-    development -> 10.0
-    infrastructure -> 12.0
-    enterprise -> 15.0
-    investment -> 41.0
-AVG: 14.0
-Variance: 10.327955
+    dutch -> 0.16246297637021392
+    alcoholic -> 0.22422791130235628
+    dietary -> 0.35162915682476553
+    beverage -> 0.22422791130235592
+    preference -> 0.8264365718303447
+AVG: 0.2207419
+Variance: 0.21946712
 
 
 Cluster 373
-    gvc -> 7.0
-    global -> 7.0
-AVG: 6.0
-Variance: 1.0
+    sandwich -> -10000.0
+AVG: -10000.0
+Variance: 0.0
 
 
 Cluster 494
-    art -> 25.0
-    artist -> 18.0
-AVG: 16.75
-Variance: 5.3560715
+    society -> 0.6507811448665805
+    role -> 0.12713270596880674
+    civil -> 0.6507811448665805
+    peace -> 0.13441373361155295
+    sector -> 0.10266730767672592
+    group -> 0.3035458867353831
+AVG: 0.21618263
+Variance: 0.22941475
 
 
 Cluster 138
-    glucose -> 1.0
-    rd -> 1.0
-    decomposition -> 1.0
-    short-term -> 1.0
-AVG: 1.0
-Variance: 0.0
+    innovation -> 0.180460173840543
+    process -> 0.37352039639590084
+    goal -> 0.19048039618027035
+    business -> 1.4414153363950857
+    change -> 0.10372227808515962
+    preference -> 0.24212254898947502
+    protection -> 0.0923584673634761
+    priority -> 0.10372227808515962
+    incumbent -> 0.1725642665816853
+    framework -> 0.08122470823915508
+    form -> 0.0923584673634761
+    design -> 0.110618110065975
+    model -> 0.6100474345746284
+    strategy -> 0.39253510525389046
+AVG: 0.2333568
+Variance: 0.31928927
 
 
 Cluster 259
-    steel -> 21.0
-    industry -> 22.0
-AVG: 14.75
-Variance: 6.9056134
+    elicit -> 0.17357726594689593
+    neutralize -> 0.2638711060567125
+    antibody -> 0.8471848547114894
+    hiv -> 0.11623902760130965
+    epitope -> 0.1887775673955462
+    virus -> 0.2638711060567125
+AVG: 0.21163997
+Variance: 0.22485934
 
 
 Cluster 139
-    affordable -> 1.0
-    environmental -> 1.0
-    statesincludes -> 1.0
-    housing -> 2.0
-    united -> 1.0
-    community -> 1.0
-    affordability -> 1.0
-AVG: 1.1428572
-Variance: 0.3499271
+    persistence -> -10000.0
+AVG: -10000.0
+Variance: 0.0
 
 
 Cluster 260
-    dietary -> 7.0
-    preference -> 10.0
-AVG: 7.25
-Variance: 1.6393596
+AVG: -0.21821788
+Variance: 1.0702225E-8
 
 
 Cluster 381
-    ageism -> 7.0
-    man -> 8.0
-    gay -> 13.0
-AVG: 8.0
-Variance: 3.2403703
+    swallow -> 0.9197267883865673
+    temperature -> 0.2325170221789699
+    challenge -> 0.06781792384362342
+    cold -> 0.06644791583250283
+    water -> 0.1890028915134731
+    carbonation -> 0.18886502935879432
+AVG: 0.18629143
+Variance: 0.25366518
 
 
 Cluster 140
-    reference -> 3.0
-    bibliographical -> 3.0
-AVG: 1.5
-Variance: 0.8660254
+    vapour -> 0.1495415633301506
+    bcc -> 0.29658363484307265
+    use -> 0.15015668120897369
+    association -> 0.15609124229090682
+    pressure -> 0.1495415633301506
+    acid -> 1.033806129255721
+    scc -> 0.3599540084520678
+    amino -> 0.19919810260281054
+    fatty -> 0.29329585148965215
+    benzoic -> 0.8158738936755798
+    risk -> 0.39771999969073896
+    intake -> 0.19762133998397108
+AVG: 0.25640926
+Variance: 0.24957709
 
 
 Cluster 261
-    market -> 7.0
-    auditor -> 4.0
-AVG: 4.25
-Variance: 1.6393596
+    theatre -> 0.07285506069617537
+    chapter -> 0.0997945272893808
+    performance -> 0.12183535609489447
+    achievement -> 0.2280075595878694
+    work -> 0.08399632028876088
+    talawa -> 0.9257570140103196
+    company -> 0.08706127636961693
+    history -> 0.07305162569140007
+    discuss -> 0.16566584105750531
+AVG: 0.19131503
+Variance: 0.24971291
 
 
 Cluster 382
-    keloid -> 8.0
-    treatment -> 4.0
-    fibroblast -> 8.0
-    therapy -> 4.0
-    candida -> 3.0
-AVG: 4.125
-Variance: 2.368412
+    transfer -> 0.2776969549860353
+    social -> 0.4848714810977756
+    global -> 0.22034138114339405
+    poverty -> 0.506366853774686
+    develop -> 0.2667008971531823
+    assistance -> 0.3958066937936269
+AVG: 0.26971787
+Variance: 0.13856417
 
 
 Cluster 380
-    arabic -> 9.0
-    imagery -> 6.0
-    theory -> 6.0
-AVG: 6.5
-Variance: 1.5
+    compare -> 0.17740698127839602
+    noc -> 0.7938043299506817
+    topology -> 0.13215613647130417
+    consumption -> 0.3715868805164994
+    power -> 0.3715868805164994
+    speed -> 0.15947488569876955
+AVG: 0.22096303
+Variance: 0.22523975
 
 
 Cluster 147
-    response -> 1.0
-    samuel -> 1.0
-    determination -> 1.0
-    model -> 1.0
-AVG: 1.0
-Variance: 0.0
+    keloid -> 0.5886549473842578
+    pdt -> 0.401492332288995
+    treatment -> 0.16424268211378698
+    compare -> 0.21071369630572878
+    fibroblast -> 0.5918914930619837
+AVG: 0.23584744
+Variance: 0.20206729
 
 
 Cluster 268
-    period -> 4.0
-    patient -> 4.0
-    clozapine -> 8.0
-AVG: 4.75
-Variance: 1.9202864
+    liquid -> -10000.0
+AVG: -10000.0
+Variance: 0.0
 
 
 Cluster 389
-    art -> 1.0
-    center -> 1.0
-    leaf -> 1.0
-    harvard -> 1.0
-AVG: 1.0
-Variance: 0.0
+    system -> 0.46138419462074026
+    variety -> 0.4688814551745503
+    capitalism -> 0.31302027305087277
+    national -> 0.5153599545513962
+    economic -> 0.1784236644131375
+AVG: 0.2538703
+Variance: 0.16013116
 
 
 Cluster 148
-    imatinib -> 9.0
-AVG: 6.5
-Variance: 2.5
+    offer -> 0.15078107850643427
+    balance -> 0.15078107850643427
+    accessibility -> 0.25912165123229247
+    jobs-housing -> 0.15078107850643427
+    travel -> 0.7257201007979284
+    retail -> 0.40116448169887114
+    benefit -> 0.15078107850643427
+    greatest -> 0.15078107850643427
+AVG: 0.23503947
+Variance: 0.18426546
 
 
 Cluster 269
-    exhibition -> 9.0
-    museum -> 27.0
-    identity -> 9.0
-    design -> 16.0
-AVG: 12.166667
-Variance: 7.4479675
+AVG: -0.31622773
+Variance: 3.192794E-8
 
 
 Cluster 145
-    art -> 1.0
-    center -> 1.0
-    york -> 1.0
-    citybibliography -> 1.0
-AVG: 1.0
-Variance: 0.0
+    profession -> 0.08837606647426725
+    role -> 0.15510554492453843
+    educational -> 0.3379513106421723
+    teacher -> 0.07567623841204964
+    psychologist -> 0.06705983317561907
+    research -> 0.901721137094789
+AVG: 0.18310891
+Variance: 0.2539021
 
 
 Cluster 266
-    irritable -> 8.0
-    syndrome -> 8.0
-    bowel -> 11.0
-AVG: 7.75
-Variance: 2.4874685
+    mouse -> 0.5453894688456701
+    3xtgad -> 0.3823678670804606
+    weight -> 0.5774666218291139
+    model -> 0.1777509015438373
+    body -> 0.17734278604308035
+    food -> 0.18553945584199122
+AVG: 0.2561197
+Variance: 0.16895698
 
 
 Cluster 387
-    hair -> 8.0
-    growth -> 7.0
-    model -> 6.0
-AVG: 4.8333335
-Variance: 2.2669117
+AVG: -0.28867513
+Variance: 5.181208E-9
 
 
 Cluster 146
-    identity -> 19.0
-    racial -> 30.0
-AVG: 17.75
-Variance: 7.8222437
+    study -> 0.13983611279339475
+    irritable -> 0.4969312373821878
+    syndrome -> 0.4969312373821878
+    bowel -> 0.6462581268722716
+    antagonist -> 0.13983611279339475
+AVG: 0.23033759
+Variance: 0.21203141
 
 
 Cluster 267
-    production -> 3.0
-AVG: 2.25
-Variance: 0.4330127
+    exhibition -> 0.6144585061918034
+    carter -> 0.2305914937123393
+    monkey -> 0.3050882934969781
+    need -> 0.36788657978062905
+    present -> 0.2305914937123393
+    gallery -> 0.4754758851516909
+AVG: 0.266282
+Variance: 0.16799311
 
 
 Cluster 388
-    depression -> 13.0
-AVG: 7.0
-Variance: 3.4641016
+    montgomery-asberg -> 0.12195468279857648
+    identify -> 0.06928594516283992
+    patient -> 0.1441606712749826
+    nurse -> 0.1539556650375507
+    rating -> 0.12195468279857648
+    scale -> 0.12195468279857648
+    depression -> 0.9314565830695108
+    stroke -> 0.10720863055013999
+AVG: 0.18984783
+Variance: 0.24911727
 
 
 Cluster 143
-    emission -> 4.0
-    field -> 4.0
-AVG: 3.5
-Variance: 0.5
+    firm -> 0.6198352255537439
+    entry -> 0.342870210925981
+    exit -> 0.34287021092598097
+    financial -> 0.5247238124553363
+    model -> 0.16645335973635023
+AVG: 0.24653637
+Variance: 0.18983604
 
 
 Cluster 264
-    business -> 41.0
-    community -> 18.0
-    percent -> 19.0
-AVG: 23.0
-Variance: 10.559356
+    supermarket -> 0.1481145219171073
+    include -> 0.09241502722329772
+    process -> 0.11072910430315414
+    modeling -> 0.09965393437043754
+    refrigeration -> 0.1764909946246401
+    build -> 0.11399845039645044
+    design -> 0.10302977305871727
+    model -> 0.07243164319847295
+    building -> 0.06747215707602706
+    energy -> 0.9328300387897738
+AVG: 0.19171657
+Variance: 0.24896756
 
 
 Cluster 385
-    young -> 4.0
-    indebtedness -> 4.0
-    credit -> 5.0
-AVG: 4.0
-Variance: 0.70710677
+    art -> 0.4309763722124196
+    artist -> 0.44729501826889045
+    work -> 0.22785789812551288
+    disability -> 0.6778946047068283
+    visual -> 0.24763641905187037
+AVG: 0.24043569
+Variance: 0.20258136
 
 
 Cluster 144
-    acid -> 6.0
-    fatty -> 6.0
-    ldl -> 6.0
-    plasma -> 6.0
-AVG: 6.0
-Variance: 0.0
+    scenario -> 0.07057459850789773
+    use -> 0.06624702200857929
+    finally -> 0.04234213283160762
+    draft -> 0.04234213283160762
+    reality -> 0.045755435550754786
+    project -> 0.10147620932655751
+    augmented -> 0.045755435550754786
+    approach -> 0.04234213283160762
+    research -> 0.6978468147683154
+AVG: -999.81555
+Variance: 2999.831
 
 
 Cluster 265
-    firm -> 44.0
-    access -> 29.0
-    patent -> 33.0
-    finance -> 20.0
-AVG: 22.833334
-Variance: 14.13526
+    treatment -> 0.22240953423368162
+    nail -> 0.233749808939505
+    year -> 0.32781608243969745
+    infliximab -> 0.7238238334267219
+    patient -> 0.3075545303348105
+    psoriasis -> 0.2900613549726356
+AVG: 0.2534786
+Variance: 0.17843443
 
 
 Cluster 386
-    system -> 4.0
-AVG: 3.3333333
-Variance: 0.4714045
+    religious/spiritual -> 0.3423564181509994
+    method -> 0.14483919042324753
+    contents -> 0.14817154738705085
+    therapy -> 0.2851326018155067
+    patient -> 0.17186196031417128
+    use -> 0.14576785140922227
+    staff -> 0.8236686500676715
+AVG: 0.22711262
+Variance: 0.21716219
 
 
 Cluster 141
-    changedavy -> 1.0
-    shao -> 1.0
-    climate -> 1.0
-    maize -> 1.0
-AVG: 1.0
-Variance: 0.0
+    ruth -> 0.43690022339173407
+    kent -> 0.4369002233917339
+    hyde -> 0.14717509133759724
+    reid -> 0.1471750913375973
+    collection -> 0.7490241643790833
+AVG: 0.21013674
+Variance: 0.2350729
 
 
 Cluster 262
-    noc -> 6.0
-    network -> 5.0
-AVG: 4.75
-Variance: 0.8291562
+    chapter -> 0.16783564662256303
+    literature -> 0.10309278676069844
+    century -> 0.16783564662256303
+    study -> 0.29434708440408863
+    cuban -> 0.7474592927131414
+    paradigm -> 0.11793111757663219
+    moor -> 0.11932693322194839
+    dissertation -> 0.13079524758065875
+    arab -> 0.15626354764856212
+AVG: -999.7629
+Variance: 2999.957
 
 
 Cluster 383
-    ratio -> 11.0
-    exacerbation -> 10.0
-AVG: 9.0
-Variance: 1.5811388
+    environment -> 0.12018739075558094
+    education -> 1.8278088330984463
+    environmental -> 0.7353062047941138
+    teacher -> 0.2191800758791508
+    school -> 0.15218446325820295
+    knowledge -> 0.10794580676084149
+    primary -> 0.0766933683788712
+AVG: 0.33734173
+Variance: 0.53412795
 
 
 Cluster 142
-    pittsburgh -> 1.0
-    ywca -> 1.0
-    drawing -> 1.0
-    mit -> 1.0
-AVG: 1.0
-Variance: 0.0
+    factory -> 0.07551424433886364
+    product -> 0.2888885985999432
+    study -> 0.17892967270932053
+    environmental -> 0.0970603709331615
+    brazil -> 0.0920706373680458
+    import -> 0.07046754483971447
+    use -> 0.06860433792283831
+    substance -> 0.23904313858553441
+    greenhouse -> 0.06398513941383159
+    volatile -> 0.13739171118833401
+    emission -> 0.06525677011565852
+    conventional -> 0.09554603630477314
+    find -> 0.08019474258565128
+    science -> 0.1278564407441664
+    gas -> 0.06398513941383159
+    solvent -> 0.16666863668176954
+    organic -> 1.8229245239533025
+    park -> 0.1278564407441664
+AVG: 0.21456912
+Variance: 0.39493868
 
 
 Cluster 263
-    school -> 15.0
-    dropout -> 18.0
-    child -> 16.0
-AVG: 14.25
-Variance: 3.7666297
+    environmental -> 0.5736653083956187
+    education -> 0.6983379944096748
+    teacher -> 0.2080081874582592
+    nature -> 0.21522353993038607
+    child -> 0.2761155830514284
+AVG: 0.22050472
+Variance: 0.22558114
 
 
 Cluster 384
-    contributor -> 1.0
-    abstract -> 1.0
-AVG: 1.0
-Variance: 0.0
+AVG: -0.26726124
+Variance: 5.0063726E-9
 
 
 Cluster 149
-    market -> 7.0
-    fraud -> 8.0
-    financial -> 7.0
-AVG: 7.0
-Variance: 0.70710677
+    isotretinoin -> 0.18201130260882
+    001 -> 0.18540800497884577
+    treatment -> 0.3081103782114068
+    acne -> 0.21408573740406278
+    depression -> 0.30669110598627364
+    qol -> 0.6244149953427429
+    group -> 0.5217941802261322
+AVG: 0.2585403
+Variance: 0.17795442
 
 
 Cluster 194
-    reference -> 2.0
-    bibliographical -> 2.0
-AVG: 1.3333334
-Variance: 0.47140452
+    controlled -> 0.30185785321571645
+    supplementation -> 0.33611952054903255
+    association -> 0.3419929945458595
+    weight -> 0.5272132733655942
+    body -> 0.2949763294517508
+    randomize -> 0.30185785321571645
+    trial -> 0.30185785321571645
+AVG: 0.28246826
+Variance: 0.11555403
 
 
 Cluster 195
-    teacher -> 6.0
-    year -> 4.0
-    course -> 4.0
-AVG: 4.25
-Variance: 1.0897248
+    measure -> 0.20870807536990776
+    material -> 0.5917257974908187
+    sense -> 0.5111950131386092
+    comprise -> 0.38724062283173233
+AVG: 0.25994226
+Variance: 0.16373672
 
 
 Cluster 192
-    design -> 7.0
-    craft -> 5.0
-    learning -> 6.0
-AVG: 5.5
-Variance: 1.118034
+    narrative -> 0.5666372197186231
+    history -> 0.3626858209876199
+    life -> 0.3626858209876199
+    methodology -> 0.3626858209876199
+    transition -> 0.27527182654119925
+    professional -> 0.23417121405430708
+AVG: 0.27928698
+Variance: 0.12854101
 
 
 Cluster 193
-    vacuolar -> 12.0
-    membrane -> 6.0
-    protein -> 16.0
-AVG: 7.6666665
-Variance: 4.714045
+    1st -> 0.17084257633868286
+    migrant -> 0.8193709615297865
+    strike -> 0.22889080017694977
+    political -> 0.25213039281710825
+    italy -> 0.3079858462836295
+    march -> 0.17084257633868286
+AVG: 0.23317055
+Variance: 0.20895235
 
 
 Cluster 190
-    carcinogenesis -> 2.0
-AVG: 2.0
-Variance: 0.0
+    development -> 0.34896610712391396
+    rm-odp -> 0.733169270886005
+    mobile -> 0.22601078702604444
+    technology -> 0.15827621464190197
+    experience -> 0.2665649315543297
+    communication -> 0.36715120377917076
+AVG: 0.23620303
+Variance: 0.20071541
 
 
 Cluster 191
-    genome -> 5.0
-    aspergillus -> 7.0
-AVG: 5.0
-Variance: 1.6329932
+    datum -> 0.28739511148080293
+    delay -> 0.32184249971234247
+    topology -> 0.13248394895609164
+    model -> 0.7959485508117213
+    experimental -> 0.28739511148080293
+    clock -> 0.1324839489560917
+AVG: 0.23522732
+Variance: 0.20660509
 
 
 Cluster 198
-    luminescence -> 6.0
-    autoinduction -> 6.0
-    autoinducer -> 5.0
-AVG: 5.25
-Variance: 0.8291562
+    thought -> -10000.0
+AVG: -10000.0
+Variance: 0.0
 
 
 Cluster 199
-    emission -> 4.0
-    nm -> 4.0
-AVG: 3.6666667
-Variance: 0.4714045
+    teacher -> 0.30893627729853423
+    criterion -> 0.11192486246750258
+    english -> 0.804038519194788
+    language -> 0.3767008333490772
+    racial -> 0.18015951828020832
+AVG: 0.21599838
+Variance: 0.22160774
 
 
 Cluster 196
-    spiritual -> 6.0
-    spirituality -> 7.0
-    participant -> 5.0
-AVG: 5.5
-Variance: 1.118034
+AVG: -0.31622773
+Variance: 3.192794E-8
 
 
 Cluster 197
-    supplier -> 6.0
-    integration -> 6.0
-AVG: 5.5
-Variance: 0.5
+    2008 -> 0.6447623986497222
+    inter-research -> 0.7001985801409099
+    use -> 0.2527735216174743
+    isotope -> 0.08437884875681118
+AVG: 0.19862726
+Variance: 0.24476592
 
 
 Cluster 172
-    private -> 3.0
-    equity -> 7.0
-    entity -> 3.0
-AVG: 3.4
-Variance: 1.8547237
+    society -> 0.5820461767846884
+    peace -> 0.5288718535431793
+    civil -> 0.6084862893010616
+AVG: 0.19371973
+Variance: 0.24908487
 
 
 Cluster 293
-    flexible -> 5.0
-    sensor -> 9.0
-AVG: 5.5
-Variance: 2.0615528
+    import -> 0.6540057462622118
+    rice -> 0.6231949651522095
+    error -> 0.1862607960494174
+    correction -> 0.1862607960494174
+    demand -> 0.20328741912687875
+AVG: 0.23392728
+Variance: 0.20719935
 
 
 Cluster 173
-    cytokine -> 5.0
-    sensitization -> 5.0
-    epidermal -> 4.0
-AVG: 4.25
-Variance: 0.8291562
+    die -> 0.24784497213907572
+    pact -> 0.7253711032522755
+    service -> 0.18795766680140877
+    suicide -> 0.5208592530206198
+    recent -> 0.14378090676415828
+    case -> 0.1888710966290755
+AVG: 0.2350128
+Variance: 0.20703833
 
 
 Cluster 294
-    social -> 6.0
-    theory -> 6.0
-AVG: 5.5
-Variance: 0.5
+    induce -> 0.21697477816631466
+    woman -> 0.218640749622521
+    sensitise -> 0.16421607357569032
+    rectal -> 0.37640549208858354
+    sensitivity -> 0.2797363563271086
+    diarrhoea -> 0.7596572139502414
+AVG: 0.24354875
+Variance: 0.19260699
 
 
 Cluster 170
-    seamount -> 17.0
-AVG: 8.75
-Variance: 4.7631397
+    chest -> 0.5270224296796234
+    pain -> 0.7828481692994913
+    access -> 0.10813446603559801
+    patient -> 0.22943325283744487
+    rapid -> 0.10813446603559801
+    clinic -> 0.1336176367137939
+AVG: 0.20897074
+Variance: 0.23640372
 
 
 Cluster 291
-    design -> 21.0
-    research -> 16.0
-AVG: 8.666667
-Variance: 7.133645
+    achieve -> 0.19905062521988032
+    yeast-to-hyphal -> 0.19905062521988032
+    model -> 0.8656147902132976
+    growth -> 0.3060781950917962
+    transition -> 0.19905062521988032
+AVG: 0.21670067
+Variance: 0.22889979
 
 
 Cluster 171
-    patient -> 6.0
-    community -> 4.0
-    stroke -> 7.0
-AVG: 4.6
-Variance: 1.6248076
+    factory -> 0.3238928043220026
+    process -> 0.26306151488492313
+    use -> 0.22041109570597042
+    modelling -> 0.2556319288286584
+    building -> 0.33844081144372457
+    flow -> 0.23892322680899347
+    energy -> 0.6991412327898311
+AVG: 0.26716962
+Variance: 0.16509765
 
 
 Cluster 292
-    hematopoietic -> 4.0
-    endothelial -> 4.0
-    gfi1 -> 5.0
-AVG: 4.0
-Variance: 0.70710677
+    toxicity -> 0.22530777140953287
+    systemic -> 0.6073364734722888
+    treatment -> 0.13160240408378562
+    utility -> 0.13160240408378562
+    chemotherapy -> 0.2252176846210713
+    copd -> 0.559843275482208
+    circulate -> 0.3339748590799867
+    inflammation -> 0.38863695095731815
+    patient -> 1.0057458555543697
+    staphylococcus -> 0.13498620477802933
+    predict -> 0.19109206846064644
+    potential -> 0.2365218235505793
+    lymphoma -> 0.3244444770907907
+    biomarker -> 0.6245826172300597
+    streptococcus -> 0.19058951235956892
+    psoriasis -> 0.8780813140639074
+AVG: 0.2558852
+Variance: 0.2505156
 
 
 Cluster 290
-    reference -> 2.0
-    bibliographical -> 2.0
-AVG: 1.4
-Variance: 0.48989794
+    firm -> 0.46367445419592856
+    capital -> 0.5870289466530764
+    spinoff -> 0.16553003925787474
+    venture -> 0.5870289466530769
+    return -> 0.16993925734611967
+AVG: 0.23211119
+Variance: 0.21175952
 
 
 Cluster 178
-    artefact -> 4.0
-AVG: 3.3333333
-Variance: 0.4714045
+AVG: -0.31622773
+Variance: 3.192794E-8
 
 
 Cluster 299
-    search -> 4.0
-    algorithm -> 5.0
-AVG: 3.75
-Variance: 0.8291562
+    rift -> 0.08806264487632046
+    production -> 0.05788004909499228
+    fault -> 0.12058940528234464
+    valley -> 0.08900893368469814
+    seamount -> 0.9440915085456214
+    ridge -> 0.13111676820700807
+    axis -> 0.07282245776613233
+    population -> 0.19211518044834558
+AVG: 0.17922285
+Variance: 0.2584056
 
 
 Cluster 179
-    study -> 11.0
-    neural -> 8.0
-    processing -> 7.0
-    word -> 9.0
-AVG: 4.5555553
-Variance: 3.890476
+    firm -> 0.5046787611094581
+    competition -> 0.35439176630910985
+    industry -> 0.32403295271427396
+    acquisition -> 0.3222197385335698
+    merger -> 0.49884083135984475
+AVG: 0.27433792
+Variance: 0.14255702
 
 
 Cluster 176
-    pact -> 8.0
-    suicide -> 6.0
-AVG: 5.5
-Variance: 1.6583124
+    elja -> -0.03996803834887159
+    statistical -> -0.03996803834887159
+    applicationslist -> -0.03996803834887159
+    contributor -> -0.03996803834887159
+    berzuini -> -0.03996803834887159
+    arja -> -0.03996803834887159
+    carlo -> -0.03996803834887159
+    perspective -> -0.03996803834887159
+    bernardinellus -> -0.03996803834887159
+    helsinkus -> -0.03996803834887159
+AVG: -0.03996804
+Variance: 1.4915884E-9
 
 
 Cluster 297
-    period -> 6.0
-    patient -> 5.0
-AVG: 4.75
-Variance: 0.8291562
+    normal -> 0.13450932305125482
+    include -> 0.11656653870282412
+    impurity -> 0.11656653870282412
+    role -> 0.13450932305125482
+    thioredoxin -> 0.10389340836595895
+    show -> 0.13047415224155856
+    agr2 -> 0.814534633684678
+    plasmon -> 0.2167726652996572
+    structure -> 1.185281371637332
+    pi-plasmon -> 0.17319991119703804
+    fold -> 0.16117051663825763
+    modify -> 0.22106413985771164
+    abnormal -> 0.13450932305125482
+    unstructured -> 0.14986087543734558
+    model -> 0.22106413985771164
+    region -> 0.14986087543734558
+    atom -> 0.15356083992673839
+AVG: 0.23467842
+Variance: 0.2724581
 
 
 Cluster 177
-    liquid -> 1.0
-    exfoliation -> 1.0
-    testing -> 1.0
-    ws -> 1.0
-AVG: 1.0
-Variance: 0.0
+    fade -> 0.46796339970525375
+    use -> 0.1657460515718446
+    parameter -> 0.16574605157184452
+    battery -> 0.6106086257911021
+    approach -> 0.2854940079501275
+    capacity -> 0.46796339970525375
+AVG: 0.242102
+Variance: 0.19435774
 
 
 Cluster 298
-    joint -> 4.0
-    excursion -> 4.0
-AVG: 3.6666667
-Variance: 0.4714045
-
-
-Cluster 174
-    heart -> 2.0
-AVG: 2.0
+    turn -> -10000.0
+AVG: -10000.0
 Variance: 0.0
 
 
+Cluster 174
+    country -> 0.23161988397492297
+    capital -> 0.8916326803705623
+    growth -> 0.1884517136086039
+    develop -> 0.22503252032197274
+    miss -> 0.21022664795364562
+AVG: 0.2006381
+Variance: 0.24302937
+
+
 Cluster 295
-    relationships -> 2.0
-    emotion -> 2.0
-    organic -> 2.0
-    human-animal -> 2.0
-AVG: 2.0
+    ultraviolet -> -10000.0
+AVG: -10000.0
 Variance: 0.0
 
 
 Cluster 175
-    ruth -> 4.0
-    kent -> 4.0
-    collection -> 6.0
-AVG: 4.25
-Variance: 1.0897248
+    lipoatrophy -> 0.763439641612273
+    pre-pubertal -> 0.09265874376910394
+    need -> 0.11449431800601381
+    stavudine -> 0.15207019319372783
+    child -> 0.5686374950956586
+AVG: 0.20747586
+Variance: 0.23457797
 
 
 Cluster 296
-    health -> 22.0
-    risk -> 30.0
-    travel -> 21.0
-AVG: 21.75
-Variance: 5.673403
+    request -> 0.0756839609601797
+    process -> 0.060168617247027385
+    package -> 0.02904965501223946
+    use -> 0.08146233368452165
+    two -> 0.024215833039521385
+    approach -> 0.032049140819744935
+    graph -> 0.05475386575068058
+    network -> 0.024516611533865914
+    node -> 0.04905053453510461
+    circulant -> 0.02246185488108231
+    route -> 1.7087930005294594
+    problem -> 0.11750567796322625
+    on-demand -> 0.03651474583227987
+    discovery -> 0.16744287053951099
+    present -> 0.06985804790243043
+    region -> 0.03822871130782535
+    algorithm -> 0.8510246344576898
+AVG: 0.20251648
+Variance: 0.42158437
 
 
 Cluster 183
-    senior -> 1.0
-    pennsylvaniabibliography -> 1.0
-    high -> 1.0
-    school -> 1.0
-AVG: 1.0
-Variance: 0.0
+    study -> 0.0683060738441319
+    method -> 0.4419327501010802
+    social -> 1.6959721185668604
+    student -> 0.250149095273132
+    work -> 0.15213427694049836
+    health -> 0.062244028908877966
+    association -> 0.05231956865292695
+    article -> 0.08566050900467573
+    school -> 0.3764264313781456
+    international -> 0.11177664061410124
+    worker -> 0.13480173547588084
+    support -> 0.1494116283548775
+    policy -> 0.16481490464769605
+    discuss -> 0.08452460495959753
+AVG: 0.23146027
+Variance: 0.3833178
 
 
 Cluster 184
-    battery -> 4.0
-    approach -> 4.0
-    capacity -> 5.0
-AVG: 4.0
-Variance: 0.70710677
+AVG: -0.026279416
+Variance: 6.261039E-10
 
 
 Cluster 181
-    tableau -> 4.0
-AVG: 4.0
-Variance: 0.0
+    number -> 0.2298561183080131
+    rate -> 0.04071035129126196
+    fumigatus -> 0.041289855332859594
+    find -> 0.04535642262619271
+    aspergillosis -> 0.04363390900859438
+    increase -> 0.08934900674218857
+    mechanism -> 0.09864114941205006
+    resistance -> 0.9553756254309814
+    azole -> 0.06032247708476886
+    concern -> 0.04071035129126196
+AVG: 0.16452453
+Variance: 0.2693002
 
 
 Cluster 182
-    spinnaker -> 4.0
-AVG: 3.3333333
-Variance: 0.4714045
+    optimization -> 0.6369103133278191
+    seminar -> 0.2772470104591376
+    multiobjective -> 0.636910313327819
+    learning -> 0.1411559263033995
+    outcome -> 0.1580135337539071
+AVG: 0.2302355
+Variance: 0.21158911
 
 
 Cluster 180
-    stabilization -> 2.0
-    peace -> 2.0
-AVG: 2.0
-Variance: 0.0
+    process -> 0.0994699970489606
+    school -> 0.5347101178642762
+    dropout -> 0.785077525359705
+    basic -> 0.07516786545995563
+    child -> 0.26957467141919994
+AVG: 0.19436604
+Variance: 0.24893652
 
 
 Cluster 189
-    grass -> 8.0
-    cassava -> 10.0
-AVG: 8.0
-Variance: 1.2247449
+    society -> 0.5387259768057373
+    access -> 0.43870159422868954
+    citizenship -> 0.4210730927018176
+    civil -> 0.5387259768057373
+AVG: 0.23553321
+Variance: 0.20656939
 
 
 Cluster 187
-    darwin -> 3.0
-AVG: 2.5
-Variance: 0.5
+    market -> 0.10171675428448934
+    subprime -> 0.6890476063907304
+    financial -> 0.10470991272344818
+    borrower -> 0.5380682294626641
+    credit -> 0.4446112040579585
+AVG: 0.20456228
+Variance: 0.23920128
 
 
 Cluster 188
-    design -> 9.0
-    visual -> 20.0
-    rhetoric -> 9.0
-    message -> 7.0
-AVG: 8.833333
-Variance: 5.3980446
+    learn -> -10000.0
+AVG: -10000.0
+Variance: 0.0
 
 
 Cluster 185
-    innovation -> 10.0
-    firm -> 12.0
-    capability -> 12.0
-    governance -> 18.0
-AVG: 9.0
-Variance: 5.182388
+    european -> 0.059742915531708136
+    citizenship -> 0.8955196163246404
+    supranational -> 0.18772282769449294
+    national -> 0.16821646939905305
+    union -> 0.3358548904781468
+AVG: 0.18588212
+Variance: 0.2540753
 
 
 Cluster 186
-    il-1ra -> 10.0
-    pet -> 6.0
-AVG: 6.5
-Variance: 2.0615528
+    firm -> 0.592724198917738
+    difference -> 0.2078990446700475
+    different -> 0.5145333265323419
+    group -> 0.361895532976395
+    aggregate -> 0.22632344480809108
+AVG: 0.26495555
+Variance: 0.15971465
 
 
 Cluster 312
-    millihertz -> 1.0
-    nwo -> 1.0
-    oscillation -> 1.0
-    rubicon -> 1.0
-AVG: 1.0
-Variance: 0.0
+    sub-arctic -> 0.14664432466141625
+    arctic -> 0.19184073235768173
+    soil -> 0.34522120827973013
+    derive -> 0.11029491810727157
+    trace -> 0.18030953352853277
+    potential -> 0.14664432466141625
+    organic -> 0.09559036350424073
+    index -> 0.24376282971194904
+    bhp -> 0.2741830680893575
+    sediment -> 0.09398093274822304
+AVG: -0.08692818
+Variance: 0.20677373
 
 
 Cluster 433
-    item -> 8.0
-AVG: 7.25
-Variance: 0.4330127
+    study -> 0.4546890322626091
+    neural -> 0.45359692985860905
+    auditory -> 0.19079781513968605
+    processing -> 0.35408830639692246
+    infant -> 0.22207903979918564
+    word -> 0.5460771034400663
+AVG: 0.26344317
+Variance: 0.16561857
 
 
 Cluster 313
-    product -> 16.0
-    relationship -> 14.0
-    consumer -> 14.0
-AVG: 14.0
-Variance: 1.4142135
+    software -> 0.3982101605310726
+    trucking -> 0.44280751497161697
+    company -> 0.442807514971617
+    type -> 0.35361280609052803
+    congestion -> 0.44280751497161713
+AVG: 0.27787882
+Variance: 0.1442865
 
 
 Cluster 434
-    autobiographical -> 4.0
-    life -> 4.0
-AVG: 3.5
-Variance: 0.5
+    microarray -> -10000.0
+AVG: -10000.0
+Variance: 0.0
 
 
 Cluster 310
-    pain -> 19.0
-    review -> 16.0
-    intervention -> 17.0
-AVG: 16.0
-Variance: 2.5495098
+    severity -> 0.16902453358260422
+    distress -> 0.2628218074297494
+    scar -> 0.8854845774283435
+    psychosocial -> 0.3059067102866403
+    type -> 0.08777362805650737
+AVG: 0.19670482
+Variance: 0.24695574
 
 
 Cluster 431
-    temporary -> 4.0
-    employment -> 4.0
-AVG: 3.5
-Variance: 0.5
+    solution -> 0.10605713083013353
+    management -> 0.7932435470090969
+    part -> 0.10605713083013353
+    lie -> 0.10605713083013353
+    significant -> 0.10605713083013353
+    traffic -> 0.5387488829760998
+AVG: 0.20086122
+Variance: 0.2402433
 
 
 Cluster 311
-    reference -> 1.0
-    form -> 1.0
-    bibliographical -> 1.0
-    visual -> 1.0
-AVG: 1.0
-Variance: 0.0
+    product -> 0.41491657154853373
+    process -> 0.21366542071563355
+    dfe -> 0.4167108589392411
+    design -> 0.4679964104063423
+    teaching -> 0.4643323486858707
+    approach -> 0.24405017665516557
+AVG: 0.26629442
+Variance: 0.15083747
 
 
 Cluster 432
-    subprime -> 8.0
-    financial -> 5.0
-    borrower -> 8.0
-    credit -> 7.0
-AVG: 6.0
-Variance: 2.280351
+    food -> -10000.0
+AVG: -10000.0
+Variance: 0.0
 
 
 Cluster 430
-    market -> 6.0
-    corporate -> 5.0
-    control -> 5.0
-AVG: 5.0
-Variance: 0.70710677
+    biofuel -> 0.7033807032922618
+    production -> 0.4343406087964866
+    technology -> 0.3792404373629162
+AVG: 0.25444826
+Variance: 0.18450384
 
 
 Cluster 318
-    tie -> 5.0
-    investment -> 5.0
-    network -> 10.0
-AVG: 6.0
-Variance: 2.345208
+    bacterium -> 0.1040780813851453
+    probiotic -> 0.23024633550050835
+    induce -> 0.10407808138514532
+    display -> 0.19053917895291905
+    health -> 0.8688547373077465
+    glow -> 0.261706228099225
+AVG: 0.2130791
+Variance: 0.22689767
 
 
 Cluster 439
-    polanyi -> 5.0
-    technology -> 5.0
-AVG: 4.5
-Variance: 0.5
+    speculative -> 2.653586140337514E-17
+    treatment -> 2.653586140337514E-17
+    literature -> 2.653586140337514E-17
+    deal -> 2.653586140337514E-17
+    pre -> 2.653586140337514E-17
+    thought -> 2.653586140337514E-17
+    course -> 2.653586140337514E-17
+    topic -> 2.653586140337514E-17
+    text -> 2.653586140337514E-17
+    post-darwinian -> 2.653586140337514E-17
+AVG: 2.6535858E-17
+Variance: 0.0
 
 
 Cluster 319
-    vowel -> 5.0
-    speaker -> 5.0
-AVG: 4.5
-Variance: 0.5
+    small -> 0.2306580552690092
+    period -> 0.4242483242727998
+    cut -> 0.15976798324847022
+    business -> 0.36303990260725433
+    lending -> 0.6127205187522267
+    ethical -> 0.5824606895818454
+    banking -> 0.7033607066708083
+    bank -> 0.6646301298781996
+    sector -> 0.26241403908830674
+AVG: 0.24635927
+Variance: 0.2306825
 
 
 Cluster 316
-    thread -> 18.0
-    processor -> 12.0
-AVG: 11.5
-Variance: 4.092676
+AVG: -0.28867513
+Variance: 5.181208E-9
 
 
 Cluster 437
-    school -> 3.0
-AVG: 2.25
-Variance: 0.4330127
+    result -> 0.03424676315203241
+    fall -> 0.9862255362350015
+    sex -> 0.021006621435969153
+    fall-related -> 0.019174389154462075
+    injury -> 0.09668709059982183
+    adult -> 0.07208483302234388
+    incidence -> 0.020828754412743622
+    age -> 0.042362570558425426
+    associate -> 0.021006621435969153
+    fracture -> 0.06791293123424781
+AVG: 0.13815358
+Variance: 0.2838283
 
 
 Cluster 317
-    private -> 1.0
-    schoolbibliography -> 1.0
-    boy -> 1.0
-AVG: 1.0
-Variance: 0.0
+    capital -> 0.31017012733714827
+    government -> 0.7151835005557252
+    cost -> 0.53474686573539
+    taxpayer -> 0.16454075801986834
+    risk -> 0.1456395167711806
+    evaluate -> 0.13710346816116858
+AVG: 0.23107803
+Variance: 0.21281238
 
 
 Cluster 438
-    tourist -> 19.0
-    guidebook -> 9.0
-AVG: 10.75
-Variance: 4.81534
+    intermetallic -> 0.19264052195345097
+    reaction -> 0.18442346944444524
+    welding -> 0.7641059093416311
+    time -> 0.353842141408911
+    layer -> 0.3492066256883867
+AVG: 0.23108038
+Variance: 0.20307066
 
 
 Cluster 314
-    modern -> 1.0
-    musicbibliography -> 1.0
-    work -> 1.0
-    sound -> 1.0
-AVG: 1.0
-Variance: 0.0
+    vol -> 2.980997665925787E-17
+    thresher -> 8.942992997777362E-17
+    houston -> 2.980997665925787E-17
+    tex -> -1.4904988329628936E-16
+    february -> 0.01995219744750873
+    ill -> 0.01995219744750873
+    friday -> 0.01995219744750873
+    1925four -> 0.01995219744750873
+    page -> 0.9992035024298416
+    no. -> 0.0
+AVG: 0.10790123
+Variance: 0.2972496
 
 
 Cluster 435
-    marketing -> 8.0
-    pawpaw -> 8.0
-AVG: 6.75
-Variance: 1.299038
+    impact -> 0.12358184715308741
+    mortality -> 0.31138412767437335
+    cancer -> 0.40655821457774083
+    incidence -> 0.8283271094870357
+    trial -> 0.0989592476445728
+AVG: 0.20550942
+Variance: 0.23832504
 
 
 Cluster 315
-    performance -> 5.0
-    space -> 6.0
-AVG: 4.25
-Variance: 1.299038
+    agent -> 0.5210209897622299
+    study -> 0.22000867125309098
+    elearning -> 0.22554272498512906
+    course -> 0.21763751033761405
+    tourism -> 0.2108308812191338
+    travel -> 0.6963299522040751
+AVG: 0.24926917
+Variance: 0.19143857
 
 
 Cluster 436
-    agent -> 20.0
-    elearning -> 21.0
-    travel -> 22.0
-AVG: 19.75
-Variance: 2.2776084
+    first-generation -> 0.5000619229752418
+    term -> 0.16504963703457634
+    antipsychotic -> 0.4905922507114947
+    second-generation -> 0.6286967211775316
+    drug -> 0.2214928186634786
+    group -> 0.16180317021632365
+AVG: 0.22938755
+Variance: 0.21595766
 
 
 Cluster 202
-    christian -> 15.0
-    moral -> 9.0
-AVG: 9.5
-Variance: 3.2787192
+    18:7 -> 0.22881482200285516
+    1992 -> 0.22881482200285516
+    style -> 0.4624808905571319
+    analysis -> 0.80942751115655
+AVG: 0.20726438
+Variance: 0.23798625
 
 
 Cluster 323
-    import -> 8.0
-    rice -> 9.0
-AVG: 6.25
-Variance: 2.2776084
+    mutation -> 0.2882666460606972
+    metastasis -> 0.09520857084596838
+    show -> 0.11320306436925358
+    cell -> 0.12191468389080289
+    cav-1 -> 0.8383808678734703
+    p132l -> 0.3691241618964686
+AVG: 0.21068537
+Variance: 0.23137106
 
 
 Cluster 444
-    severity -> 8.0
-    scar -> 16.0
-    psychosocial -> 8.0
-AVG: 9.75
-Variance: 3.6314597
+    bubble -> 0.36276586318254506
+    young -> 0.18024674656937303
+    indebtedness -> 0.27195950028420063
+    credit -> 0.7898928155866296
+    recent -> 0.14994311266021265
+AVG: 0.22023876
+Variance: 0.20993999
 
 
 Cluster 203
-    arthritis -> 6.0
-    psa -> 6.0
-    ra -> 6.0
-AVG: 5.75
-Variance: 0.4330127
+    wipe -> 0.7182997832085746
+    use -> 0.3433623352862023
+    effect -> 0.1744853089065653
+    baby -> 0.5139124160272188
+    water -> 0.13905463432397516
+AVG: 0.2303093
+Variance: 0.21343367
 
 
 Cluster 324
-    substance -> 19.0
-    organic -> 33.0
-AVG: 19.5
-Variance: 8.20061
+    temporary -> 0.5555530952328546
+    brazil -> 0.36890204333617965
+    industry -> 0.36890204333617965
+    staffing -> 0.5555530952328546
+AVG: 0.25541958
+Variance: 0.17969222
 
 
 Cluster 445
-    reference -> 2.0
-    site -> 2.0
-AVG: 1.3333334
-Variance: 0.47140452
+    datum -> 0.09443726404642341
+    reaction -> 0.15121837045731712
+    background -> 0.14940570903649236
+    use -> 0.3197314669342369
+    event -> 0.907032399834716
+    type -> 0.07504552197265985
+AVG: 0.1860298
+Variance: 0.25407273
 
 
 Cluster 200
-    resonance -> 4.0
-AVG: 3.25
-Variance: 0.4330127
+    exhibition -> 0.04110001654110503
+    college -> 0.3086160053071149
+    include -> 0.06561769275561928
+    german -> 0.036992402892940986
+    art -> 1.116954646683781
+    young -> 0.0333248653815585
+    artist -> 0.9684972335641335
+    work -> 0.0650958253002842
+    2012 -> 0.094278871710558
+    2011 -> 0.03465651542850918
+    hold -> 0.09057683245372795
+    fine -> 0.14898541728905781
+    design -> 0.025350111062675113
+    exhibit -> 0.02196211251767155
+    royal -> 0.05158674031833675
+    value -> 0.10183477075945617
+    gallery -> 0.06941196586661784
+AVG: 0.17437565
+Variance: 0.30573457
 
 
 Cluster 321
-    watts -> 1.0
-    composite -> 1.0
-    kaleem -> 1.0
-    creep -> 1.0
-AVG: 1.0
-Variance: 0.0
+    overdose -> 0.47144861229524854
+    take -> 0.08668870226414814
+    treatment -> 0.19941838074510668
+    amiodarone -> 0.8192597847025486
+    patient -> 0.08668870226414814
+    3.4 -> 0.08668870226414814
+    describe -> 0.08668870226414814
+    management.a -> 0.08668870226414814
+AVG: 0.20482643
+Variance: 0.23643783
 
 
 Cluster 442
-    vietnam -> 6.0
-    national -> 5.0
-    conflict -> 5.0
-AVG: 5.0
-Variance: 0.70710677
+    treatment -> 0.3238264291825436
+    study -> 0.14629657531108875
+    disease -> 1.421755198556299
+    ccl11 -> 0.15630290560833462
+    result -> 0.10740570038738322
+    lung -> 0.13464368624515535
+    site -> 0.10740570038738322
+    correlate -> 0.10740570038738322
+    patient -> 0.3428390561890855
+    th2-driven -> 0.14629657531108875
+    strengthen -> 0.14629657531108875
+    small-bowel -> 0.19894401408946175
+    eosinophil -> 0.12720480480014576
+    anti-ccl11 -> 0.6243351818864359
+    case -> 0.14629657531108875
+AVG: 0.23495583
+Variance: 0.30921802
 
 
 Cluster 201
-    study -> 5.0
-    food -> 8.0
-    resident -> 5.0
-AVG: 5.5
-Variance: 1.5
+    market -> 0.12244843851078997
+    politics -> 0.082403770867235
+    low -> 0.08760992117540814
+    inflation -> 0.6602357788882489
+    policy -> 0.7067237353902358
+    labour -> 0.1164878346466623
+AVG: 0.19599466
+Variance: 0.24551378
 
 
 Cluster 322
-    probiotic -> 6.0
-AVG: 4.5
-Variance: 0.8660254
+    standard -> 0.7155279933278542
+    lunch -> 0.19517814672861133
+    school -> 0.4406989281308709
+    publication -> 0.22643648351373824
+    nutritional -> 0.40110644563460796
+    detail -> 0.13282410646276438
+AVG: 0.23087148
+Variance: 0.21280016
 
 
 Cluster 443
-    freedom -> 7.0
-    rights -> 11.0
-AVG: 7.5
-Variance: 2.0615528
+    lung -> 0.3120532394036452
+    reduce -> 0.11939613271139017
+    ox40 -> 0.21734320440244242
+    immune -> 0.1673988155739632
+    cell -> 0.8578465048088035
+    naive -> 0.11715041283491447
+AVG: 0.20270161
+Variance: 0.23236431
 
 
 Cluster 440
-    service -> 8.0
-    sme -> 10.0
-    export -> 8.0
-AVG: 8.0
-Variance: 1.4142135
+    top -> 0.20136444899024059
+    grass -> 0.4448106928160661
+    cassava -> 0.538231027727288
+    livestock -> 0.30506382724284203
+    guinea -> 0.20136444899024059
+    silage -> 0.4627065069566006
+AVG: 0.27029693
+Variance: 0.14928493
 
 
 Cluster 320
-    adsorption -> 10.0
-    dft -> 5.0
-    surface -> 5.0
-    semiconductor -> 5.0
-    calcite -> 6.0
-    ge -> 5.0
-AVG: 5.571429
-Variance: 1.9897697
+    business -> 0.07453486465338972
+    year -> 0.04519037678722012
+    work -> 0.0924678286440826
+    store -> 0.0503290314674184
+    liquor -> 0.0503290314674184
+    house -> 0.0394558397983393
+    dangzalan -> 0.9794149668131599
+    labor -> 0.07613380436491998
+    watsonville -> 0.06030011948645406
+    californium -> 0.03581891026259566
+AVG: 0.15039748
+Variance: 0.27686563
 
 
 Cluster 441
-    display -> 8.0
-    figure-ground -> 6.0
-AVG: 5.5
-Variance: 1.6583124
+    ethnic -> 0.17315520736007878
+    identity -> 0.35135074410163075
+    discrimination -> 0.14310211893393726
+    racial -> 0.821722665120469
+    socialization -> 0.33165314280946007
+AVG: 0.21889298
+Variance: 0.22554587
 
 
 Cluster 208
-    firm -> 14.0
-    taiwanese -> 15.0
-    financing -> 18.0
-AVG: 14.25
-Variance: 2.8613808
+    market -> 0.7004123332811406
+    behave -> 0.32514796631057774
+    period -> 0.3197732933269435
+    auditor -> 0.4422299355853234
+    euphoria -> 0.3197732933269435
+AVG: 0.22086325
+Variance: 0.22612295
 
 
 Cluster 329
-    reference -> 1.0
-    bibliographical -> 1.0
-    postwar -> 1.0
-    narrative -> 1.0
-AVG: 1.0
-Variance: 0.0
+    ai-2 -> 0.15219001177295674
+    call -> 0.15294449086130815
+    autoinducer -> 0.9024107525571146
+    fischerus -> 0.2292017978823822
+    synthase -> 0.15323679566823556
+    dramatically -> 0.10368272718977457
+    mutant -> 0.10368272718977461
+AVG: 0.2022293
+Variance: 0.2379735
 
 
 Cluster 209
-    indicator -> 40.0
-    school -> 53.0
-AVG: 37.5
-Variance: 10.259142
+    comparison -> -10000.0
+AVG: -10000.0
+Variance: 0.0
 
 
 Cluster 206
-    suicide -> 11.0
-    behaviour -> 7.0
-AVG: 7.3333335
-Variance: 2.867442
+    metal-reducing -> 0.002934480126725561
+    bacterium -> 0.0029344801267255317
+    role -> 0.0029344801267259064
+    release -> 0.008027602340100335
+    show -> 0.005050527228118507
+    west -> 0.0029344801267255317
+    health -> 0.0020679505222377494
+    bengal -> 0.004102217396495019
+    arsenic -> 0.9998694519069681
+    sediment -> 0.008926110720880105
+AVG: 0.10397818
+Variance: 0.2986385
 
 
 Cluster 327
-    wealth -> 5.0
-    lending -> 4.0
-    accumulation -> 4.0
-AVG: 4.0
-Variance: 0.70710677
+    rehabilitation -> 0.4855717407906651
+    role -> 0.25525662047460995
+    contribution -> 0.17873193103527835
+    nurse -> 0.7536696373435827
+    care -> 0.14498256282516508
+AVG: 0.22650424
+Variance: 0.21185102
 
 
 Cluster 448
-    innovation -> 5.0
-    supplier -> 7.0
-    relationship -> 5.0
-AVG: 5.25
-Variance: 1.0897248
+    market -> 0.18085357877460562
+    country -> 0.2630112218475251
+    product -> 0.25485220678986337
+    financial -> 0.21293859409040378
+    export -> 0.8748174183582416
+AVG: 0.20075014
+Variance: 0.24176317
 
 
 Cluster 207
-    union -> 4.0
-    debt -> 4.0
-AVG: 3.6666667
-Variance: 0.4714045
+    painting -> 0.4267189109131575
+    album -> 0.4617365222384837
+    style -> 0.30582591394920516
+    kim -> 0.5700820152624408
+AVG: 0.25752172
+Variance: 0.1629381
 
 
 Cluster 328
-    reference -> 1.0
-    money -> 1.0
-    bibliographical -> 1.0
-    projectsinclude -> 1.0
-AVG: 1.0
-Variance: 0.0
+    datum -> 0.7394603425301649
+    node -> 0.12639715878529348
+    search -> 0.12537203528128335
+    ranking -> 0.18920115917792238
+    keyword -> 0.18657272279112216
+    graph -> 0.5321839381018277
+    objectrank -> 0.14688990210740674
+AVG: 0.22430797
+Variance: 0.2153376
 
 
 Cluster 449
-    problem -> 1.0
-    reaction -> 1.0
-    business -> 1.0
-    roxbury -> 1.0
-AVG: 1.0
-Variance: 0.0
+    antecedent -> 0.21245254000956937
+    innovation -> 0.40163838373064586
+    generation -> 0.37398519249188195
+    supplier -> 0.7631980030859326
+    relationship -> 0.14935171658378996
+AVG: 0.23142007
+Variance: 0.2120726
 
 
 Cluster 204
-    art -> 1.0
-    wellesley -> 1.0
-    center -> 1.0
-    collegebibliography -> 1.0
-AVG: 1.0
-Variance: 0.0
+    marketing -> 0.4437355622956899
+    production -> 0.4277515952822668
+    constrain -> 0.2997431339559148
+    pawpaw -> 0.7047981088308174
+AVG: 0.2260185
+Variance: 0.22017482
 
 
 Cluster 325
-    disorder -> 7.0
-    routine -> 6.0
-AVG: 5.25
-Variance: 1.299038
+    regeneration -> 0.32759915669142325
+    ivd -> 0.6425681602859212
+    cell -> 0.4385901743829668
+    potential -> 0.2105292576427177
+    stem -> 0.2520796968420985
+AVG: 0.26074836
+Variance: 0.15785068
 
 
 Cluster 446
-    reference -> 1.0
-    desalination -> 1.0
-    studyinclude -> 1.0
-    computational -> 1.0
-AVG: 1.0
-Variance: 0.0
+    week -> 0.12378107109180062
+    patient -> 0.19101274298404097
+    dihydrocodeine -> 0.7511499715335209
+    breathlessness -> 0.5800392015054995
+    placebo -> 0.12371252635798786
+AVG: 0.20932195
+Variance: 0.23470043
 
 
 Cluster 205
-    nc275 -> 1.0
-    reference -> 1.0
-    times -> 1.0
-    probespart -> 1.0
-AVG: 1.0
-Variance: 0.0
+    terzan -> -0.2581988897471611
+    burn -> -0.2581988897471611
+    millihertz -> -0.258198889747161
+    quasi-periodic -> -0.2581988897471611
+    regimesnetherland -> -0.2581988897471611
+    organization -> -0.2581988897471611
+    oscillation -> -0.2581988897471611
+    showcase -> -0.2581988897471611
+    thermonuclear -> -0.2581988897471611
+    burst -> -0.2581988897471611
+AVG: -0.25819892
+Variance: 2.7164916E-8
 
 
 Cluster 326
-    erlotinib -> 7.0
-    pertuzumab -> 6.0
-    combination -> 6.0
-AVG: 6.0
-Variance: 0.70710677
+    computing -> 0.3076894285519466
+    simulation -> 0.3501322287374871
+    high-throughput -> 0.3076894285519463
+    model -> 0.37156110876901166
+    analysis -> 0.37156110876901166
+    condor-copasus -> 0.41650931863884666
+AVG: 0.29131618
+Variance: 0.084274635
 
 
 Cluster 447
-    playwrights -> 2.0
-    workshop -> 2.0
-    script -> 2.0
-AVG: 2.0
-Variance: 0.0
+    signaling -> 0.09729775821233956
+    grow -> 0.15814318529837304
+    defense -> 0.21242587849718653
+    response -> 0.2273706771167296
+    transcriptional -> 0.09729775821233956
+    plant -> 0.8575909711611882
+    coi1 -> 0.09729775821233959
+    mutant -> 0.12217836537761546
+AVG: 0.20277457
+Variance: 0.2240427
 
 
 Cluster 411
-    crisis -> 11.0
-    financial -> 19.0
-    investment -> 13.0
-    sme -> 12.0
-AVG: 10.428572
-Variance: 4.5936956
+    exhibition -> 0.4061902864747601
+    process -> 0.1407679175436385
+    criterion -> 0.10286312810000059
+    museum -> 0.49886755006145705
+    design -> 0.7316839714505465
+AVG: 0.2141296
+Variance: 0.23206143
 
 
 Cluster 412
-    education -> 4.0
-    online -> 4.0
-AVG: 4.0
+    role -> -10000.0
+AVG: -10000.0
 Variance: 0.0
 
 
 Cluster 410
-    chapter -> 12.0
-    edition -> 13.0
-AVG: 11.25
-Variance: 1.299038
+    japonisme -> 0.0687961328982761
+    art -> 0.8809897189437345
+    orientalism -> 0.04402980348497489
+    movement -> 0.4125765034291353
+    modernize -> 0.20537110915762966
+AVG: 0.17259285
+Variance: 0.26460788
 
 
 Cluster 419
-    salem -> 1.0
-    museum -> 1.0
-    massachusettsbibliography -> 1.0
-    peabody -> 1.0
-AVG: 1.0
-Variance: 0.0
+    image -> 0.14083169260556816
+    colour -> 0.8697234533720971
+    product -> 0.14813251221361268
+    package -> 0.22261238907218373
+    fruit -> 0.24627560727083747
+    design -> 0.12815881088541684
+    expectation -> 0.10949813680689346
+    perceive -> 0.21681614716623868
+AVG: 0.2187196
+Variance: 0.22605695
 
 
 Cluster 417
-    international -> 4.0
-AVG: 3.5
-Variance: 0.5
+AVG: -0.28867513
+Variance: 5.181208E-9
 
 
 Cluster 418
-    ell -> 7.0
-    student -> 8.0
-    arizona -> 6.0
-AVG: 6.5
-Variance: 1.118034
+    study -> 0.6212328926977009
+    system -> 0.1466839311310695
+    food -> 0.6255558499728714
+    case -> 0.1299102871920525
+    resident -> 0.31507764596104376
+AVG: 0.22675636
+Variance: 0.20963725
 
 
 Cluster 415
-    society -> 9.0
-    access -> 10.0
-    civil -> 9.0
-AVG: 9.0
-Variance: 0.70710677
+    confirm -> 0.15658411833829594
+    patient -> 0.21097473214947626
+    psoriasis -> 0.7854995236404532
+    rel -> 0.39243512364722305
+    association -> 0.16027936118807035
+    early-onset -> 0.2671269347869542
+AVG: 0.23122951
+Variance: 0.20813172
 
 
 Cluster 416
-    citizenship -> 14.0
-    union -> 10.0
-AVG: 8.25
-Variance: 4.0233693
+    eye -> 0.18182103805390565
+    making -> 0.18182103805390565
+    document -> 0.18182103805390565
+    report -> 0.18182103805390565
+    film -> 0.4323546380868232
+    filmmaker -> 0.18182103805390565
+    post-racial -> 0.7959967141946345
+AVG: 0.22405252
+Variance: 0.22076717
 
 
 Cluster 413
-    social -> 33.0
-    health -> 37.0
-AVG: 27.0
-Variance: 8.154754
+    cluster -> 0.8597610780265876
+    -lcb- -> 0.28032376808254994
+    -rcb- -> 0.28032376808254994
+    xcs-dr1 -> 0.12925000256701843
+    survey -> 0.16212590377309966
+    present -> 0.1553503355341124
+AVG: 0.21743116
+Variance: 0.2272135
 
 
 Cluster 414
-    agv -> 7.0
-    control -> 8.0
-    vehicle -> 7.0
-AVG: 7.0
-Variance: 0.70710677
+    doctoral -> -10000.0
+AVG: -10000.0
+Variance: 0.0
 
 
 Cluster 301
-    decision-making -> 9.0
-    need -> 7.0
-    pupil -> 7.0
-AVG: 6.75
-Variance: 1.7853571
+    system -> 0.5974179251376475
+    global -> 0.06441822684937135
+    satellite -> 0.15456069750007148
+    position -> 0.7782228079925023
+AVG: 0.17743345
+Variance: 0.2611072
 
 
 Cluster 422
-    lung -> 6.0
-    disease -> 7.0
-    cancer -> 4.0
-AVG: 4.142857
-Variance: 1.5518258
+    fabrizio.zilibotti@econ.uzh.ch -> 0.15348678679162578
+    barcelona -> 0.03549147748375366
+    gse -> 0.03549147748375366
+    daron@mit.edu -> 0.01761644541352531
+    cepr -> 0.038839659132164826
+    creus -> 0.01761644541352531
+    ggancia@crei.cat -> 0.15348678679162578
+    email -> 0.9737700569903308
+AVG: 0.1429406
+Variance: 0.2820779
 
 
 Cluster 302
-    reference -> 1.0
-    historic -> 1.0
-    city -> 1.0
-    bibliographical -> 1.0
-AVG: 1.0
-Variance: 0.0
+    religiosity -> 0.23717564792807078
+    social -> 0.5074413280009037
+    effect -> 0.2854919685019597
+    health -> 0.7307266688461174
+    positive -> 0.1748437494347214
+    support -> 0.136966169657901
+AVG: 0.231462
+Variance: 0.21414573
 
 
 Cluster 423
-    form -> 6.0
-    uncertainty -> 10.0
-    nonlinear -> 6.0
-AVG: 6.75
-Variance: 1.9202864
+    site -> 0.16448172329653848
+    month -> 0.12148119825804647
+    rate -> 0.11749219983189155
+    patient -> 0.23171526216922259
+    survival -> 0.19389794272489536
+    heal -> 0.13301233281273497
+    fresh -> 0.13301233281273497
+    extraction -> 0.13301233281273497
+    implant -> 0.8853866605458984
+AVG: 0.2189198
+Variance: 0.2259123
 
 
 Cluster 420
-    wipe -> 9.0
-    baby -> 11.0
-    water -> 9.0
-AVG: 9.0
-Variance: 1.4142135
+    government -> 0.1861481465493539
+    association -> 0.6665413853568023
+    community -> 0.11262558677147946
+    youth -> 0.6665413853568024
+AVG: 0.21340568
+Variance: 0.22885472
 
 
 Cluster 300
-    government -> 6.0
-    cost -> 6.0
-AVG: 4.5
-Variance: 1.5
+    environment -> 0.3397075198590559
+    student -> 0.4265555174424856
+    use -> 0.2127077287694428
+    visualize -> 0.27325287807906345
+    wireless -> 0.22614503415975096
+    signal -> 0.6546567249100643
+AVG: 0.25436848
+Variance: 0.17135873
 
 
 Cluster 421
-    vol -> 33.0
-    business -> 22.0
-    international -> 21.0
-AVG: 23.5
-Variance: 5.6789083
+    nanoplankton -> 0.16795459408244923
+    abundance -> 0.4191216694156614
+    imperfora -> 0.7425636445049097
+    sample -> 0.17763283317920484
+    water -> 0.36569867893108776
+AVG: 0.23061326
+Variance: 0.20663618
 
 
 Cluster 309
-    signal -> 4.0
-AVG: 3.25
-Variance: 0.4330127
+    domestic -> -0.25819888974716115
+    investor -> -0.25819888974716115
+    leave -> -0.25819888974716115
+    direct -> -0.25819888974716115
+    estate -> -0.25819888974716115
+    investment -> -0.25819888974716115
+    real -> -0.25819888974716115
+    different -> -0.25819888974716115
+    chicago -> -0.25819888974716115
+    investors?bibliography -> -0.25819888974716115
+AVG: -0.25819892
+Variance: 2.7164916E-8
 
 
 Cluster 307
-    globalisation -> 6.0
-AVG: 3.75
-Variance: 1.299038
+    explain -> 0.3401367812052731
+    news -> 0.18805272710425716
+    effect -> 0.2089981181643952
+    cash -> 0.582593366717389
+    return -> 0.20034285070733546
+    flow -> 0.582593366717389
+AVG: 0.24540004
+Variance: 0.18549094
 
 
 Cluster 428
-    attachment -> 15.0
-    therapy -> 6.0
-AVG: 7.5
-Variance: 4.387482
+    chapter -> 0.12632205932410434
+    study -> 0.287571237882377
+    education -> 0.113896413338011
+    student -> 0.7048166695187583
+    use -> 0.07965094202263096
+    learning -> 0.2743613835792637
+    program -> 1.4547553014409094
+    percent -> 0.09276765944041926
+    e-learning -> 0.11603788635614583
+    system -> 0.23452422990909655
+    online -> 0.3749286646629599
+AVG: 0.24803741
+Variance: 0.3572497
 
 
 Cluster 308
-    vandetanib -> 10.0
-    gc -> 5.0
-    vc -> 5.0
-AVG: 6.0
-Variance: 2.345208
+    distress -> 0.20683470989837555
+    treatment -> 0.5578630019494385
+    role -> 0.3826374205304353
+    cancer -> 0.2982256887712094
+    passive -> 0.2527173159600905
+    life -> 0.20683470989837555
+    quality -> 0.20683470989837555
+AVG: 0.2645645
+Variance: 0.115659006
 
 
 Cluster 429
-    reference -> 1.0
-    process -> 1.0
-    m&a -> 1.0
-    improvement -> 1.0
-AVG: 1.0
-Variance: 0.0
+    immobilization -> 0.34541990659336497
+    surface -> 0.13394894576103902
+    response -> 0.14076936701953777
+    pcl -> 0.13928789119151425
+    adhesion -> 0.11398367561379077
+    cell -> 0.8562023206928773
+    rgd -> 0.15015619070224132
+AVG: 0.21817163
+Variance: 0.2234947
 
 
 Cluster 305
-    capital -> 8.0
-    growth -> 5.0
-AVG: 4.75
-Variance: 2.046338
+    cultural -> 0.12533985518026677
+    disadvantage -> 0.1279706440551919
+    mother -> 0.10954160323216257
+    process -> 0.13052395078197404
+    capital -> 0.12533985518026677
+    educational -> 0.08786668144657968
+    context -> 0.09103944861857625
+    class -> 0.9031281947833046
+    local -> 0.22169547716542806
+AVG: 0.19965182
+Variance: 0.23759395
 
 
 Cluster 426
-    micro-business -> 10.0
-    business -> 13.0
-    design -> 13.0
-AVG: 10.5
-Variance: 2.8722813
+    process -> 0.06280799418942191
+    smith -> 0.015062749472700403
+    change -> 0.015110952455518762
+    control -> 0.01216455941887563
+    theme -> 0.02851172763674053
+    interpretativephenomenological -> 0.1848387911422679
+    indicate -> 0.013591868933428229
+    analysis -> 0.9784587673724857
+    creative -> 0.037087358173023895
+    participant -> 0.025606632741339876
+AVG: 0.13732414
+Variance: 0.28470066
 
 
 Cluster 306
-    educational -> 3.0
-    teaching -> 6.0
-    learning -> 3.0
-AVG: 3.0
-Variance: 1.4142135
+    household -> 0.47681069983596996
+    willingness -> 0.42674365842949147
+    pay -> 0.46690740495077365
+    water -> 0.4397991089809678
+    supply -> 0.35822464810007104
+AVG: 0.25945792
+Variance: 0.17959851
 
 
 Cluster 427
-    organisational -> 3.0
-    school -> 7.0
-    university -> 24.0
-    cambridge -> 7.0
-AVG: 5.6666665
-Variance: 6.78233
+    profession -> 0.1667481149497233
+    education -> 0.1374255513755952
+    govern -> 0.40599749138555713
+    design -> 0.6424824122487728
+    graphic -> 0.5844145024220541
+AVG: 0.22766852
+Variance: 0.21703035
 
 
 Cluster 303
-    biology -> 24.0
-    major -> 10.0
-    student -> 8.0
-    persister -> 6.0
-AVG: 7.714286
-Variance: 7.284314
+    level -> 0.6690144741456271
+    contribute -> 0.1476070923225369
+    rise -> 0.3426029436150289
+    debt -> 0.5940189928315994
+    consumer -> 0.19200303659862328
+AVG: 0.22192219
+Variance: 0.22377744
 
 
 Cluster 424
-    plasmon -> 5.0
-    atom -> 3.0
-    oxygen -> 3.0
-    structure -> 5.0
-AVG: 3.0
-Variance: 1.2247449
+    include -> 0.26794249480660054
+    file -> 0.584564789030855
+    disc -> 0.3728867618718283
+    media -> 0.584564789030855
+AVG: 0.25247025
+Variance: 0.18608455
 
 
 Cluster 304
-    environment -> 59.0
-    student -> 65.0
-    learning -> 56.0
-AVG: 51.5
-Variance: 15.074814
+    inclusive -> 0.10837103060747365
+    multi-level -> 0.10577099119264502
+    cater -> 0.10440133719849948
+    education -> 0.09260146479740056
+    individual -> 0.105770991192645
+    student -> 0.3386172030783541
+    level -> 0.15013756206976214
+    need -> 0.19455949703048445
+    attainment -> 0.487074825349772
+    population -> 0.10440133719849948
+    barrier -> 0.11914941564028542
+    school -> 1.4847219723501786
+    academic -> 0.34707000537953864
+    provision -> 0.19910753783946716
+    send -> 0.3286320700597988
+AVG: 0.24506633
+Variance: 0.32395837
 
 
 Cluster 425
-    guidance -> 6.0
-    machine -> 7.0
-    accuracy -> 6.0
-AVG: 6.0
-Variance: 0.70710677
+    gfi1b -> 0.2698488055447561
+    eht -> 0.2698488055447559
+    endothelial -> 0.26970646150947997
+    gfi1 -> 0.7460471800327553
+    runx1 -> 0.26777126811466423
+    progenitor -> 0.20701494768573392
+AVG: 0.24974382
+Variance: 0.17946038
 
 
 Cluster 470
-    disease -> 25.0
-    health -> 27.0
-    travel -> 27.0
-AVG: 25.5
-Variance: 1.6583124
+    proposal -> -0.2085144140570748
+    study -> -0.2085144140570748
+    development -> -0.2085144140570748
+    north -> -0.2085144140570748
+    function -> -0.2085144140570748
+    crazy -> -0.2085144140570748
+    american -> -0.2085144140570748
+    preliminary -> -0.2085144140570748
+    indian -> -0.2085144140570748
+    contiguous -> -0.2085144140570748
+AVG: -0.20851442
+Variance: 8.1211935E-9
 
 
 Cluster 114
-    infection -> 7.0
-    foxp3 -> 10.0
-    treg-cell -> 8.0
-AVG: 7.5
-Variance: 1.8027756
-
-
-Cluster 235
-    environment -> 1.0
-    social -> 1.0
-    design -> 1.0
-    structure -> 1.0
-AVG: 1.0
+    high -> -10000.0
+AVG: -10000.0
 Variance: 0.0
 
 
+Cluster 235
+    erlotinib -> 0.7394447626169128
+    patient -> 0.16322546158413045
+    pertuzumab -> 0.5360338112482703
+    combination -> 0.2979405416924131
+AVG: 0.21371607
+Variance: 0.22847228
+
+
 Cluster 356
-    white -> 10.0
-    person -> 9.0
-    god -> 9.0
-AVG: 9.0
-Variance: 0.70710677
+    pyrazine -> 0.42002297360166885
+    electron -> 0.233358881417422
+    cross -> 0.4514722951276002
+    elastic -> 0.4514722951276002
+    section -> 0.4514722951276002
+    close -> 0.19205485762632304
+AVG: 0.25790128
+Variance: 0.15820457
 
 
 Cluster 477
-    special -> 40.0
-    education -> 40.0
-    teacher -> 32.0
-AVG: 32.5
-Variance: 8.9861
+    patient -> 0.5017772319704231
+    nurse -> 0.34389402245520473
+    activation -> 0.263909491401935
+    programme -> 0.48519083386666967
+    attitude -> 0.39027389195418494
+    care -> 0.2758242862422014
+AVG: 0.27572227
+Variance: 0.14561407
 
 
 Cluster 115
-    firm -> 20.0
-    flexibility -> 16.0
-    cash -> 21.0
-AVG: 14.5
-Variance: 4.8562675
+    binding -> 0.28180944529557184
+    growth -> 0.4822350158851945
+    protein-1 -> 0.28180944529557184
+    factor -> 0.5487260087348488
+    insulin-like -> 0.4822350158851945
+AVG: 0.2606469
+Variance: 0.17414239
 
 
 Cluster 236
-    system -> 8.0
-    wheel -> 11.0
-    torque -> 10.0
-AVG: 8.75
-Variance: 1.9202864
+    angular -> -10000.0
+AVG: -10000.0
+Variance: 0.0
 
 
 Cluster 357
-    reference -> 2.0
-    image -> 2.0
-    bibliographical -> 2.0
-AVG: 1.6
-Variance: 0.48989797
+    arabic -> 0.851625542632559
+    literary -> 0.2232944736925536
+    imagery -> 0.17676001808259903
+    classical -> 0.26604201231837676
+    theory -> 0.23899427878630308
+    element -> 0.15029589866476722
+AVG: 0.22481653
+Variance: 0.21975039
 
 
 Cluster 478
-    computing -> 4.0
-    simulation -> 4.0
-    condor-copasi -> 4.0
-    model -> 4.0
-AVG: 4.0
+    kinetics -> -10000.0
+AVG: -10000.0
 Variance: 0.0
 
 
 Cluster 112
-    epigraphy -> 6.0
-    literary -> 6.0
-AVG: 4.75
-Variance: 1.299038
+    c-14 -> -0.27735009811261463
+    glucose -> -0.27735009811261463
+    soiltime -> -0.27735009811261463
+    heavy-metal -> -0.27735009811261463
+    cite -> -0.27735009811261463
+    decomposition -> -0.27735009811261463
+    short-term -> -0.27735009811261463
+    label -> -0.27735009811261463
+    pasture -> -0.27735009811261463
+    contamination -> -0.27735009811261463
+AVG: -0.27735013
+Variance: 2.9584374E-8
 
 
 Cluster 233
-    society -> 3.0
-    scatterer -> 3.0
-    acoustical -> 3.0
-    america -> 3.0
-AVG: 3.0
-Variance: 0.0
+AVG: -0.2236068
+Variance: 2.6774236E-9
 
 
 Cluster 354
-    dietary -> 8.0
-    cholesterol -> 14.0
-    plasma -> 8.0
-AVG: 9.25
-Variance: 2.772634
+    hoard -> 0.211147650076589
+    bank -> 0.46337258537113946
+    perform -> 0.46337258537113946
+    liquidity -> 0.6845968291889549
+    worse -> 0.211147650076589
+AVG: 0.22058049
+Variance: 0.22511551
 
 
 Cluster 475
-    dangzalan -> 18.0
-    watsonville -> 8.0
-AVG: 9.75
-Variance: 4.81534
+    biology -> 0.43511096713559766
+    instructor -> 0.233993363327884
+    science -> 0.44444375776591877
+    course -> 0.4565336514905131
+AVG: 0.26770058
+Variance: 0.11730521
 
 
 Cluster 113
-    program -> 42.0
-AVG: 23.0
-Variance: 10.977249
+    beam -> 0.30444838887394976
+    hom -> 0.3116631098695568
+    diode -> 0.21192311471236047
+    coupler -> 0.3116631098695568
+    position -> 0.30444838887394976
+    signal -> 0.6249472626436686
+    frequency -> 0.20470839371675267
+AVG: 0.2535817
+Variance: 0.15579693
 
 
 Cluster 234
-    stochastic -> 9.0
-AVG: 7.5
-Variance: 0.8660254
+    interpersonal -> -10000.0
+AVG: -10000.0
+Variance: 0.0
 
 
 Cluster 355
-    system -> 12.0
-    gp -> 8.0
-    satellite -> 9.0
-AVG: 8.75
-Variance: 2.1650636
+    prepare -> 0.2985515799433641
+    priacanthus -> 0.3177684700155309
+    meat -> 0.13592945951345695
+    hamrur -> 0.3177684700155309
+    sausage -> 0.8027921582172577
+AVG: 0.22096911
+Variance: 0.22163348
 
 
 Cluster 476
-    carer -> 16.0
-    patient -> 14.0
-    nurse -> 9.0
-    depression -> 11.0
-AVG: 10.333333
-Variance: 3.9440532
+    endogenous -> 0.06735134033233733
+    formalisation -> 0.0983990502276583
+    monetary -> 0.07504136109607988
+    keyne -> 0.06333615355498477
+    examine -> 0.13871533732147434
+    use -> 0.19272865150148544
+    discipline -> 0.3223822792879636
+    money -> 1.417403836854022
+    flexible -> 0.10130548990453203
+    aspiration -> 0.15531880408454318
+    low-income -> 0.05826123464882537
+    endogeneity -> 0.14033290808458454
+    collective -> 0.10130548990453203
+    strategy -> 0.3223822792879636
+    theory -> 0.74409009499019
+AVG: 0.21973372
+Variance: 0.32517758
 
 
 Cluster 110
-    pfg -> 9.0
-    treatment -> 8.0
-    cg -> 9.0
-AVG: 8.25
-Variance: 0.8291562
+    public -> 0.1939785227295856
+    tax -> 0.13161841846137548
+    increase -> 0.25266436487370797
+    collateral -> 0.19397852272958577
+    debt -> 0.864828378951745
+    friction -> 0.15647252716433446
+AVG: 0.20852351
+Variance: 0.22699794
 
 
 Cluster 231
-    corporate -> 10.0
-    federal -> 6.0
-    tax -> 11.0
-    state -> 6.0
-AVG: 5.75
-Variance: 2.9895651
+    wealth -> 0.7054151707214127
+    accumulation -> 0.5400199238560132
+    social -> 0.20940690032513595
+    home -> 0.2832006015277466
+AVG: 0.23496756
+Variance: 0.20599762
 
 
 Cluster 352
-    reaction -> 5.0
-    background -> 5.0
-    event -> 8.0
-AVG: 5.5
-Variance: 1.5
+    result -> 0.058380073867557856
+    radial -> 0.10637579649031575
+    site -> 0.14617388803097647
+    access -> 0.9546808229851701
+    pcus -> 0.1238598437800035
+    use -> 0.09166302519317293
+    transradial -> 0.07378843744774823
+    increase -> 0.12055637646874291
+AVG: 0.17466813
+Variance: 0.26242605
 
 
 Cluster 473
-    denton -> 1.0
-    transfer -> 1.0
-    growth -> 1.0
-    grasslandbardgett -> 1.0
-AVG: 1.0
-Variance: 0.0
+    datum -> 0.889396308140333
+    transfer -> 0.19962740849160274
+    scheduling -> 0.1028523280719235
+    online -> 0.10285232807192374
+    reservation -> 0.11248775410564749
+    model -> 0.10600012934262174
+    movement -> 0.10820320157391705
+    operation -> 0.10820320157391705
+    algorithm -> 0.09451038874776614
+    advance -> 0.20293201683854575
+AVG: 0.20270653
+Variance: 0.23206763
 
 
 Cluster 111
-    endoscopy -> 3.0
-AVG: 2.25
-Variance: 0.4330127
+    market -> 0.5920974548617083
+    system -> 0.2896263976361966
+    financial -> 0.2909340170276295
+    fraud -> 0.44035743126328436
+    case -> 0.3807595525160643
+    ontology -> 0.20998135776243518
+AVG: 0.2716789
+Variance: 0.15232272
 
 
 Cluster 232
-    painting -> 8.0
-    album -> 8.0
-    kim -> 8.0
-AVG: 7.25
-Variance: 1.299038
+    study -> 0.08087394529658115
+    honour -> 0.08337681530709355
+    problem -> 0.03657436960403501
+    social -> 0.026962916603475433
+    member -> 0.20104192277852256
+    neighbour -> 0.027011921582161594
+    family -> 0.9654218032035684
+    party -> 0.029310760935913692
+    participant -> 0.05928656440504769
+    professional -> 0.04284433566605461
+AVG: 0.15527053
+Variance: 0.27456585
 
 
 Cluster 353
-    song -> 7.0
-    syllable -> 9.0
-    species -> 11.0
-    pchlide -> 8.0
-AVG: 7.142857
-Variance: 2.2315
+    often -> -10000.0
+AVG: -10000.0
+Variance: 0.0
 
 
 Cluster 474
-    ethical -> 17.0
-    banking -> 22.0
-AVG: 14.5
-Variance: 5.315073
+    firm -> 0.41543538115751105
+    holding -> 0.2313237947839817
+    adjustment -> 0.6058687902480164
+    cash -> 0.49812897388528393
+    target -> 0.24218760372792922
+AVG: 0.26174277
+Variance: 0.17305863
 
 
 Cluster 350
-    biology -> 6.0
-AVG: 4.5
-Variance: 0.8660254
+AVG: -0.23570225
+Variance: 1.39679805E-8
 
 
 Cluster 471
-    student -> 15.0
-AVG: 10.0
-Variance: 5.0
+    lung -> 0.5119619346966455
+    promote -> 0.2667760822748638
+    major -> 0.2761254004554713
+    focus -> 0.21610957855646948
+    cancer -> 0.6161297710089984
+AVG: 0.2547026
+Variance: 0.16658686
 
 
 Cluster 230
-    potential -> 8.0
-AVG: 5.0
-Variance: 1.7320508
+    long-distance -> 0.30616679946338915
+    storytelling -> 0.30616679946338915
+    collaboration -> 0.7227990992464621
+    design -> 0.22130990970317418
+    format -> 0.31957206881439015
+AVG: 0.24804032
+Variance: 0.17864592
 
 
 Cluster 351
-    timing -> 3.0
-    model -> 10.0
-    3-d -> 3.0
-    contention -> 3.0
-AVG: 3.8333333
-Variance: 2.7938423
+    financial -> 1.4328272921687373
+    regulatory -> 0.1784102482035922
+    sme -> 0.3451602427500446
+    stakeholder -> 0.34939782917710055
+    bank -> 0.175398239617514
+    interest -> 0.2450794544066125
+    civil -> 0.18768143951483263
+    protect -> 0.34939782917710055
+    crisis -> 0.5517081606258765
+    investment -> 0.5163136382552054
+    control -> 0.5206622238696513
+    market -> 0.47625212184636434
+    corporate -> 0.5825142524029525
+    finance -> 0.29792120542995826
+AVG: 0.28593764
+Variance: 0.28256258
 
 
 Cluster 472
-    collaboration -> 6.0
-    design -> 4.0
-    format -> 4.0
-AVG: 4.25
-Variance: 1.0897248
+    social -> 0.1524616207333098
+    authority -> 0.11643523633498615
+    change -> 0.3085409975392839
+    pattern -> 0.1603625545999464
+    man -> 0.2101170198367696
+    beer -> 0.8417939620335673
+    1977 -> 0.1524616207333098
+AVG: 0.22103062
+Variance: 0.21662816
 
 
 Cluster 118
-    association -> 9.0
-    youth -> 9.0
-AVG: 6.75
-Variance: 2.2776084
+AVG: -0.30151132
+Variance: 2.7086234E-8
 
 
 Cluster 239
-    trust -> 8.0
-    security -> 8.0
-AVG: 8.0
-Variance: 0.0
+    symptom -> 0.0851499434211323
+    management -> 0.11375469304120527
+    observation -> 0.0736124753505984
+    patient -> 0.14576144046533804
+    understand -> 0.07620070176937625
+    nurse -> 0.9519668636154696
+    well -> 0.07620070176937625
+    theserole -> 0.07620070176937625
+    encounter -> 0.06371407998405527
+    enact -> 0.07620070176937625
+AVG: 0.17387623
+Variance: 0.2603945
 
 
 Cluster 119
-    factory -> 9.0
-    process -> 8.0
-    set-up -> 9.0
-AVG: 8.25
-Variance: 0.8291562
+    market -> 0.11985703334298721
+    chinese -> 0.28713234656298425
+    u.s. -> 0.17330916476167255
+    import -> 0.2652578623371786
+    variety -> 0.11965550055987476
+    meat -> 0.14565890419433977
+    pork -> 0.8599501184888806
+AVG: 0.21937494
+Variance: 0.22556002
 
 
 Cluster 116
-    environmental -> 28.0
-    education -> 29.0
-    nature -> 24.0
-    child -> 27.0
-AVG: 15.857142
-Variance: 12.94415
+    functional -> -0.2085144140570748
+    ecosystem -> -0.2085144140570748
+    evidence -> -0.2085144140570748
+    identity -> -0.2085144140570748
+    carbon -> -0.2085144140570748
+    peatland -> -0.2085144140570748
+    flux -> -0.2085144140570748
+    short-term -> -0.2085144140570748
+    group -> -0.2085144140570748
+    influence -> -0.2085144140570748
+AVG: -0.20851442
+Variance: 8.1211935E-9
 
 
 Cluster 237
-    patient -> 9.0
-    nurse -> 17.0
-    care -> 8.0
-AVG: 7.5
-Variance: 4.7871356
+    education -> 0.2558133422579322
+    student -> 0.18986696375143444
+    classroom -> 0.6034318143661073
+    positive -> 0.2521941443163355
+    climate -> 0.6034318143661073
+    higher -> 0.2558133422579322
+AVG: 0.24277243
+Variance: 0.19678743
 
 
 Cluster 358
-    site -> 6.0
-    psoriasis -> 10.0
-    patient -> 14.0
-    prosthesis -> 6.0
-    implant -> 6.0
-AVG: 7.428571
-Variance: 3.1102202
+    chinese -> 0.1291759610484251
+    firm -> 0.08777723498163105
+    government -> 0.21496069962478617
+    subsidy -> 0.9257022798319697
+    find -> 0.09181642875577066
+    state -> 0.06567827564053894
+    value -> 0.1912310256656508
+    relevance -> 0.07756327256654566
+AVG: 0.18803835
+Variance: 0.2517797
 
 
 Cluster 479
-    literacy -> 7.0
-    primary -> 5.0
-AVG: 4.75
-Variance: 1.47902
+    chapter -> 0.4380336024055186
+    overview -> 0.2522915948004854
+    modernity -> 0.4053691124043698
+    collection -> 0.6039405797378813
+    tradition -> 0.24863934425806444
+AVG: 0.25990665
+Variance: 0.16011567
 
 
 Cluster 117
-    society -> 44.0
-    civil -> 45.0
-    peace -> 32.0
-AVG: 28.6
-Variance: 15.081114
+    period -> 0.5648157759893223
+    patient -> 0.5498262429078911
+    survival -> 0.219096422263323
+    time -> 0.42228395400633
+    resection -> 0.205571285260971
+AVG: 0.24163957
+Variance: 0.18649992
 
 
 Cluster 238
-    student -> 8.0
-    signal -> 9.0
-AVG: 7.25
-Variance: 1.299038
+    voice -> 0.18251508757786628
+    participation -> 0.11226889161851177
+    study -> 0.23927019549959427
+    student -> 3.5835127992628095
+    achievement -> 0.20266618723278382
+    examine -> 0.03516090910002321
+    project -> 0.029606636180440574
+    learning -> 0.20099616643073068
+    investigate -> 0.0929700467569044
+    approach -> 0.09184122676772676
+    research -> 0.3798570560597898
+    moral -> 0.230174951612361
+    principal -> 0.24362776215005774
+    promote -> 0.05175626943112958
+    teacher -> 0.20586271971730496
+    common -> 0.06789115048913363
+    school -> 1.9462223706679334
+    peer -> 0.16291311366875316
+    find -> 0.10412318211767949
+    leadership -> 0.7069767874336043
+    ict -> 0.048786333927430314
+    consider -> 0.15170596600518702
+    relationship -> 0.03516090910002321
+    policy -> 0.033718554957573
+    process -> 0.06380235230792934
+    researcher -> 0.11453128517578176
+    address -> 0.0962035670897818
+    identify -> 0.251422378051309
+    issue -> 0.09743393406317617
+    work -> 0.02334741784896547
+    2000 -> 0.04327319911443311
+    secondary -> 0.05727226261089042
+    take -> 0.0548296862308459
+    decision-making -> 0.07910069764796926
+    culture -> 0.31046054232591436
+    elementary -> 0.15609571442917508
+    behaviour -> 0.11261097402640313
+AVG: 0.2864856
+Variance: 0.63491315
 
 
 Cluster 359
-    school -> 37.0
-    culture -> 18.0
-AVG: 22.25
-Variance: 8.525697
+    pfg -> 0.2503509571839324
+    treatment -> 0.5884049895245907
+    iii -> 0.19461832823893124
+    class -> 0.1946183282389313
+    protraction -> 0.48220906245487605
+    early -> 0.3497665280248924
+    facemask -> 0.3497665280248921
+AVG: 0.2674348
+Variance: 0.16440499
 
 
 Cluster 480
-    standard -> 6.0
-    school -> 13.0
-    academic -> 4.0
-    nutritional -> 4.0
-    attainment -> 4.0
-AVG: 5.285714
-Variance: 3.282607
+    compare -> 0.12788598290104164
+    period -> 0.2873926115372123
+    patient -> 0.36727135476026607
+    clozapine -> 0.7807952162284992
+    reduction -> 0.2545545678453971
+    2-year -> 0.14781101610238792
+AVG: 0.22919957
+Variance: 0.2080086
 
 
 Cluster 360
-    file -> 3.0
-    media -> 3.0
-AVG: 2.5
-Variance: 0.5
+    system -> 0.20424989834066412
+    igf-i -> 0.24099465553784952
+    dietary -> 0.5789531585925313
+    igf -> 0.36498653732048153
+    intake -> 0.5811874805276066
+AVG: 0.2507282
+Variance: 0.18387692
 
 
 Cluster 481
-    literacy -> 7.0
-AVG: 4.75
-Variance: 1.299038
+    education -> 0.077363749815345
+    student -> 0.9058159827365605
+    academic -> 0.07603104014199816
+    detail -> 0.1541988441773725
+    experience -> 0.31728217529855296
+    higher -> 0.07736374981534501
+    eight -> 0.1541988441773725
+AVG: 0.18795156
+Variance: 0.25258347
 
 
 Cluster 125
-    diamond -> 1.0
-    designpp -> 1.0
-    booster -> 1.0
-AVG: 1.0
-Variance: 0.0
+    size -> 0.46302886190853443
+    brain -> 0.60516361375767
+    body -> 0.6354404112562689
+AVG: 0.198522
+Variance: 0.24557045
 
 
 Cluster 246
-    religious -> 4.0
-AVG: 3.3333333
-Variance: 0.4714045
+    electrochemical -> -10000.0
+AVG: -10000.0
+Variance: 0.0
 
 
 Cluster 367
-    transmission -> 1.0
-    high-speed -> 1.0
-    public-key -> 1.0
-    applicationsbibliography -> 1.0
-AVG: 1.0
-Variance: 0.0
+    ustekinumab -> 0.8223778089752304
+    psoriasis -> 0.4772179326730254
+    patient -> 0.23364774182329276
+    biologic -> 0.09397496099220264
+    pasus -> 0.07736335258053004
+AVG: 0.19552107
+Variance: 0.24574365
 
 
 Cluster 488
-    level -> 9.0
-    debt -> 8.0
-AVG: 7.3333335
-Variance: 1.6996732
+AVG: -0.31622773
+Variance: 3.192794E-8
 
 
 Cluster 126
-    cooling -> 4.0
-    power -> 4.0
-    ccpp -> 4.0
-AVG: 3.75
-Variance: 0.4330127
+    expressionism -> 0.15099124156514146
+    view -> 0.07080592258147868
+    philosopher -> 0.05960586872587126
+    set -> 0.07080592258147868
+    introduce -> 0.167715291774477
+    argue -> 0.07080592258147868
+    implausible -> 0.07080592258147868
+    yablo -> 0.9272348976552508
+    account -> 0.17460019282699124
+    article -> 0.07080592258147868
+AVG: 0.18341771
+Variance: 0.25166968
 
 
 Cluster 247
-    chapter -> 9.0
-    tourism -> 10.0
-    vehicle -> 8.0
-AVG: 8.5
-Variance: 1.118034
+    supportinginclude -> -0.24999999999999994
+    reference -> -0.24999999999999994
+    firm -> -0.24999999999999994
+    system -> -0.24999999999999994
+    decision -> -0.24999999999999994
+    strategic -> -0.24999999999999994
+    use -> -0.24999999999999994
+    bibliographical -> -0.24999999999999994
+    information -> -0.24999999999999994
+    leaf -> -0.24999999999999994
+AVG: -0.25
+Variance: 5.551115E-17
 
 
 Cluster 368
-    religious -> 23.0
-    religion -> 19.0
-AVG: 9.833333
-Variance: 7.987838
+    pi-plasmon -> 0.4552795131662152
+    feature -> 0.469357656763028
+    spectrum -> 0.4785202035209312
+    occur -> 0.22416591296801336
+    hydrogenation -> 0.4785202035209312
+    vanish -> 0.22416591296801336
+AVG: 0.24993968
+Variance: 0.19197676
 
 
 Cluster 489
-    swallow -> 5.0
-    temperature -> 5.0
-    water -> 7.0
-AVG: 5.25
-Variance: 1.0897248
+    software -> 0.24807171227765087
+    use -> 0.5746584072823143
+    language -> 0.265535116009596
+    learning -> 0.3738121107636314
+    analysis -> 0.11403351524621631
+    look -> 0.1345375052098305
+    produce -> 0.18871737600680494
+    feedback -> 0.2941321087961755
+    system -> 0.47883376988202564
+    build -> 0.9414787290415594
+    learner -> 0.11991713011414763
+AVG: 0.2248705
+Variance: 0.22558811
 
 
 Cluster 123
-    video -> 7.0
-    text -> 4.0
-    film -> 3.0
-    representation -> 3.0
-AVG: 2.857143
-Variance: 2.0303814
+    joint -> 0.5165284945185038
+    school-university -> 0.5165284945185038
+    school -> 0.2529311360733799
+    member -> 0.2549718483682775
+    appointment -> 0.37665953712310146
+    team -> 0.3944892805424063
+AVG: 0.2597186
+Variance: 0.17516974
 
 
 Cluster 244
-    atopic -> 3.0
-    dermatitis -> 3.0
-AVG: 2.6666667
-Variance: 0.47140452
+AVG: -0.26726124
+Variance: 5.0063726E-9
 
 
 Cluster 365
-    system -> 4.0
-    food -> 5.0
-AVG: 4.0
-Variance: 0.8164966
+    reduce -> 0.22679477961594735
+    identify -> 0.11738065124576955
+    use -> 0.15953274204873716
+    investment -> 1.3567379554611874
+    asymmetry -> 0.1529715545566716
+    accounting -> 0.14846161270581598
+    quality -> 0.5731797978298938
+    spike -> 0.457478885842015
+    filter -> 0.14813914275842094
+    biddle -> 0.13361834435827533
+    firm -> 0.49314646194902834
+    2006 -> 0.13361834435827533
+    information -> 0.1529715545566716
+    account -> 0.13812828620913103
+    finance -> 0.10634153551018023
+AVG: 0.25608194
+Variance: 0.30672753
 
 
 Cluster 486
-    art -> 16.0
-    painting -> 29.0
-AVG: 18.75
-Variance: 5.9319053
+    number -> 0.07301719223120993
+    identify -> 0.07210658245715988
+    mean -> 0.06542303283197778
+    estimated -> 0.06542303283197778
+    enrich -> 0.08512071516317742
+    locus -> 0.874925028266664
+    heritable -> 0.3847145855482446
+    heritability -> 0.19258384442030516
+AVG: 0.18934016
+Variance: 0.24932705
 
 
 Cluster 124
-    education -> 4.0
-    classroom -> 4.0
-    climate -> 4.0
-    higher -> 4.0
-AVG: 4.0
-Variance: 0.0
+    waste -> 0.19558576658770516
+    suspend -> 0.5468185354691206
+    solid -> 0.7473269053563248
+    liquid -> 0.1176297638544853
+    separation -> 0.1878422436713576
+AVG: 0.21532032
+Variance: 0.22539653
 
 
 Cluster 245
-    educational -> 7.0
-    education -> 7.0
-    worker -> 6.0
-AVG: 6.25
-Variance: 0.8291562
+    country -> 0.11604746920078034
+    ecological -> 0.33074591504943046
+    biodiversity -> 0.10332826859053187
+    ecosystem -> 0.19750330330106222
+    business -> 0.16195555309115367
+    institution -> 0.10719690557585179
+    total -> 0.22728676387526334
+    framework -> 0.10291511566828525
+    valuation -> 0.15577825636100148
+    regulation -> 0.10737686193634949
+    institutional -> 0.21778999348939596
+    growth -> 0.7454363804307335
+    value -> 0.24956894617629316
+    economic -> 1.327264099531376
+    theory -> 0.17597841328099914
+    combine -> 0.12413881175056701
+AVG: 0.24464999
+Variance: 0.29538006
 
 
 Cluster 366
-    biophysicist -> 5.0
-    biology -> 8.0
-    biophysic -> 11.0
-AVG: 6.2
-Variance: 2.9257476
+    practice -> 0.11354497914011204
+    student -> 2.2843813298105
+    use -> 0.17696881099526376
+    type -> 0.08935239231565689
+    preparation -> 0.21862194681866196
+    assessment -> 0.39217538761531184
+    teacher -> 0.2042520681402835
+    school -> 0.3732066763559577
+    communication -> 0.11354497914011204
+    relationship -> 0.08964494292089847
+    write -> 0.11354497914011204
+    include -> 0.1034558286726928
+    test -> 0.06852904789793199
+    russian -> 0.10238979946254974
+    work -> 0.3884443415832659
+    analysis -> 0.16828406267412452
+    provide -> 0.11354497914011204
+    answer -> 0.08110684788624857
+    instruction -> 0.11354497914011204
+    topic -> 0.1034558286726928
+    oral -> 0.11354497914011204
+    step -> 0.0820536578901709
+    present -> 0.33567606936322275
+    pedagogic -> 0.3237019014342438
+    mark -> 0.051973900324675464
+    theory -> 0.16289560618843377
+    discuss -> 0.2844479167705101
+AVG: 0.2429817
+Variance: 0.40667045
 
 
 Cluster 487
-    loss -> 17.0
-    bank -> 12.0
-    fair -> 12.0
-    value -> 23.0
-AVG: 12.285714
-Variance: 5.547568
+AVG: -0.31622773
+Variance: 3.192794E-8
 
 
 Cluster 121
-    treatment -> 9.0
-AVG: 6.0
-Variance: 1.7320508
+    election -> 0.38721557394328165
+    unfunded -> 0.19958164310825235
+    liability -> 0.6852635849500314
+    find -> 0.19097466109907843
+    absence -> 0.19958164310825235
+    pension -> 0.19958164310825235
+    compensate -> 0.19958164310825235
+    account -> 0.23132866432486637
+AVG: 0.2608932
+Variance: 0.15433098
 
 
 Cluster 242
-    inflation -> 10.0
-    policy -> 11.0
-AVG: 7.5
-Variance: 3.0413814
+    playwright -> 0.5383482751607359
+    work -> 0.23074539105972316
+    workshop -> 0.38457373251457455
+    script -> 0.5383482751607359
+AVG: 0.26533666
+Variance: 0.15352692
 
 
 Cluster 363
-    pain -> 18.0
-    chest -> 14.0
-    symptom -> 10.0
-    patient -> 28.0
-    dihydrocodeine -> 7.0
-    clinic -> 6.0
-    breathlessness -> 7.0
-    arm -> 7.0
-AVG: 9.307693
-Variance: 6.6608458
+    anxiety -> 0.3381540450776056
+    disease -> 0.6524002356042393
+    cognitive -> 0.21381580255024932
+    parkinson -> 0.5052747727610387
+    depression -> 0.35784572712849805
+    participant -> 0.13153312593418365
+AVG: 0.23540735
+Variance: 0.2093365
 
 
 Cluster 484
-    amiodarone -> 4.0
-AVG: 3.5
-Variance: 0.5
+    chapter -> 0.030852055525524245
+    intersign -> 0.029367640355248577
+    explore -> 0.011121217194745901
+    howe -> 0.007412387260163218
+    scanning -> 0.0146289260509489
+    destructible -> 0.0146289260509489
+    twombly -> 0.011394113686407536
+    propose -> 0.0146289260509489
+    ??? -> 0.99846046886456
+    microfont -> 0.0146289260509489
+AVG: 0.11471236
+Variance: 0.29467148
 
 
 Cluster 122
-    function -> 9.0
-    oesophageal -> 13.0
-AVG: 9.0
-Variance: 2.4494898
+    pulmonary -> -10000.0
+AVG: -10000.0
+Variance: 0.0
 
 
 Cluster 243
-    pim-1 -> 12.0
-    mmm -> 10.0
-AVG: 9.75
-Variance: 1.47902
+    3-m -> 0.3819874617383443
+    cul7 -> 0.6605206192506129
+    interact -> 0.24063554161637643
+    obsl1 -> 0.5022305895749313
+AVG: 0.242703
+Variance: 0.19379768
 
 
 Cluster 364
-    chaucer -> 6.0
-    creative -> 4.0
-AVG: 4.0
-Variance: 1.2247449
+    delay -> 0.018408121597486993
+    system -> 0.03313717284632372
+    parameter -> 0.036830827633051025
+    eliminate -> 0.04419436772615039
+    uncertainty -> 0.8863154644010414
+    nonlinear -> 0.4550577864918854
+    type -> 0.045750020675194604
+AVG: 0.154699
+Variance: 0.27575403
 
 
 Cluster 485
-    micro-chp -> 4.0
-    consumption -> 4.0
-    control -> 4.0
-    heating -> 4.0
-AVG: 4.0
-Variance: 0.0
+    graphene-like -> -0.27735009811261463
+    material -> -0.27735009811261463
+    liquid -> -0.27735009811261463
+    production -> -0.27735009811261463
+    exfoliation -> -0.27735009811261463
+    yield -> -0.27735009811261463
+    testing -> -0.27735009811261463
+    parametersinclude -> -0.27735009811261463
+    inorganic -> -0.27735009811261463
+    key -> -0.27735009811261463
+AVG: -0.27735013
+Variance: 2.9584374E-8
 
 
 Cluster 240
-    workflow -> 12.0
-AVG: 7.0
-Variance: 3.5590262
+    lifespan -> 0.17062508837253626
+    vowel -> 0.30558887986880445
+    speaker -> 0.7254999390508293
+    change -> 0.17062508837253626
+    show -> 0.2235658001567877
+    diphthongization -> 0.22493215923428186
+    community -> 0.27561904355408545
+AVG: 0.2504916
+Variance: 0.16868351
 
 
 Cluster 361
-    readmission -> 7.0
-AVG: 6.25
-Variance: 0.4330127
+    reply932ss -> -0.21320071635561041
+    density -> -0.21320071635561041
+    age-related -> -0.21320071635561041
+    patient -> -0.21320071635561041
+    author -> -0.21320071635561041
+    wet -> -0.21320071635561041
+    pigment -> -0.21320071635561041
+    unilateral -> -0.21320071635561041
+    optical -> -0.21320071635561041
+    degeneration -> -0.21320071635561041
+AVG: -0.21320072
+Variance: 1.8088335E-9
 
 
 Cluster 482
-    sadie -> 6.0
-    web -> 15.0
-    ontology -> 6.0
-AVG: 8.0
-Variance: 4.0620193
+    literacy -> 0.5505248987238537
+    virtual -> 0.38384402329142425
+    practice -> 0.33618541113985784
+    world -> 0.38384402329142425
+    work -> 0.30229538691741537
+AVG: 0.2725434
+Variance: 0.13462926
 
 
 Cluster 120
-    social -> 8.0
-    place -> 15.0
-AVG: 8.5
-Variance: 3.905125
+    small -> 0.0595557023620436
+    explain -> 0.013905004108046189
+    owner -> 0.11932336263402968
+    study -> 0.028505526398748347
+    business -> 1.8530585435060372
+    own -> 0.07614403449419484
+    say -> 0.06836711783417575
+    formation -> 0.02334319584321335
+    community -> 0.14703691748983977
+    percent -> 0.232305792472183
+    entrepreneur -> 0.0651444528265332
+    important -> 0.05105629904708498
+    provide -> 0.014046013733007703
+    portfolio -> 0.015768886238772147
+    person -> 0.03423975678688593
+    farm -> 0.04274702168029399
+    sector -> 0.038454076785399326
+    live -> 0.04830732851356758
+    group -> 0.39347100481432823
+AVG: 0.17498843
+Variance: 0.4056411
 
 
 Cluster 241
-    chemical -> 1.0
-    sensings20111 -> 1.0
-    computation -> 1.0
-AVG: 1.0
-Variance: 0.0
+    boundary -> -0.14002800840280102
+    chapter -> -0.14002800840280102
+    part -> -0.14002800840280102
+    crose -> -0.14002800840280094
+    relationshipssusan -> -0.14002800840280102
+    investigate -> -0.14002800840280102
+    dawson -> -0.14002800840280102
+    two-sharing -> -0.14002800840280102
+    life -> -0.14002800840280102
+    ellum -> -0.14002800840280102
+AVG: -0.14002801
+Variance: 6.37629E-9
 
 
 Cluster 362
-    spiritual -> 6.0
-    depression -> 7.0
-    belief -> 7.0
-AVG: 6.25
-Variance: 0.8291562
+AVG: -0.19611612
+Variance: 1.5514999E-8
 
 
 Cluster 483
-    turkish -> 6.0
-    cheese -> 6.0
-AVG: 5.0
-Variance: 1.0
+    study -> 0.14111193577566522
+    biology -> 0.773833501872469
+    major -> 0.13054258555911216
+    student -> 0.23574536563590773
+    persister -> 0.33973419673210703
+    switcher -> 0.33973419673210703
+AVG: 0.22634359
+Variance: 0.20815104
 
 
 Cluster 129
-    engine -> 59.0
-    plant -> 44.0
-AVG: 31.5
-Variance: 20.694202
+    vica -> 0.09603002340441151
+    travel -> 0.5774187468666385
+    demand -> 0.543063155791309
+    telecommunications -> 0.5774187468666379
+AVG: 0.21208096
+Variance: 0.23245098
 
 
 Cluster 127
-    political -> 5.0
-AVG: 4.25
-Variance: 0.4330127
+    distributional -> -0.25819888974716115
+    credit.bibliography -> -0.25819888974716115
+    housing -> -0.25819888974716115
+    homeownership -> -0.25819888974716115
+    use -> -0.25819888974716115
+    leave -> -0.25819888974716115
+    effect -> -0.25819888974716115
+    instrument -> -0.25819888974716115
+    consumption -> -0.25819888974716115
+    334-342 -> -0.25819888974716115
+AVG: -0.25819892
+Variance: 2.7164916E-8
 
 
 Cluster 248
-    cluster -> 16.0
-AVG: 10.5
-Variance: 5.5
+    happen -> -10000.0
+AVG: -10000.0
+Variance: 0.0
 
 
 Cluster 369
-    educational -> 6.0
-    class -> 10.0
-    local -> 6.0
-AVG: 6.75
-Variance: 1.9202864
+    forum -> 0.5812085216836321
+    area -> 0.4745946987853413
+    recognition -> 0.22797618478068898
+    require -> 0.22797618478068898
+    support -> 0.2327734924596352
+    outcome -> 0.22797618478068898
+    research -> 0.22797618478068898
+AVG: 0.27253884
+Variance: 0.13206795
 
 
 Cluster 128
-    investment -> 13.0
-    accrual -> 18.0
-AVG: 10.75
-Variance: 5.0682836
+    income -> 0.7225187721270971
+    tyranny -> 0.46069121895863013
+    earn -> 0.4606912189586301
+    escape -> 0.2221920354346026
+AVG: 0.19866146
+Variance: 0.24575055
 
 
 Cluster 249
-    pittsburgh -> 1.0
-    polymersalim -> 1.0
-    nov -> 1.0
-    acrylic -> 1.0
-    abstract -> 1.0
-    rautemaa -> 1.0
-AVG: 1.0
-Variance: 0.0
+    pde -> 0.34984382684532855
+    random -> 0.3077794454298829
+    method -> 0.40459039032463945
+    stochastic -> 0.7477850683174059
+AVG: 0.23231371
+Variance: 0.21147783
 
 
 Cluster 213
-    method -> 42.0
-    financial -> 30.0
-AVG: 31.5
-Variance: 6.1846585
+    immediate -> 0.4930171059800439
+    patient -> 0.4930171059800439
+    conclude -> 0.21875140533984755
+    endoscopy -> 0.5485314012803928
+    emergency -> 0.21875140533984755
+    unnecessary -> 0.21875140533984755
+    majority -> 0.21875140533984755
+AVG: 0.25761142
+Variance: 0.18001008
 
 
 Cluster 334
-    effect -> 4.0
-    fluctuation -> 6.0
-AVG: 4.0
-Variance: 1.2247449
+    britain -> -0.2581988897471611
+    canada -> -0.2581988897471611
+    housing -> -0.2581988897471611
+    japan -> -0.2581988897471611
+    unite -> -0.2581988897471611
+    homeownership -> -0.258198889747161
+    germany -> -0.2581988897471611
+    west -> -0.2581988897471611
+    great -> -0.2581988897471611
+    affordability -> -0.2581988897471611
+AVG: -0.25819892
+Variance: 2.7164916E-8
 
 
 Cluster 455
-    remittance -> 40.0
-    banking -> 17.0
-AVG: 21.5
-Variance: 10.7354555
+    spinnaker -> 0.735897244327563
+    massively-parallel -> 0.20212612664967144
+    performance -> 0.15119181001703963
+    system -> 0.3396813809206434
+    neuron -> 0.20212612664967144
+    power -> 0.3215263799913748
+    spike -> 0.20212612664967144
+AVG: 0.24003968
+Variance: 0.18704383
 
 
 Cluster 214
-    action -> 10.0
-AVG: 7.0
-Variance: 3.0
+    capital -> 0.3178135164121075
+    portfolio -> 0.2696993091398374
+    equity -> 0.4600401426102762
+    finance -> 0.28758810265544954
+    entity -> 0.4332069523368583
+AVG: 0.27636582
+Variance: 0.095666856
 
 
 Cluster 335
-    election -> 4.0
-    liability -> 5.0
-AVG: 3.75
-Variance: 0.8291562
+AVG: -0.30151132
+Variance: 2.7086234E-8
 
 
 Cluster 456
-    student -> 16.0
-    research -> 8.0
-AVG: 6.5
-Variance: 4.5368857
+AVG: -0.20412412
+Variance: 2.2373882E-8
 
 
 Cluster 211
-    chico -> 2.0
-AVG: 2.0
-Variance: 0.0
+    pim-1 -> 0.7892104544586883
+    use -> 0.12396279871694173
+    permeability -> 0.268988062418619
+    filler -> 0.22752241984978075
+    gas -> 0.1701421295579918
+    mmm -> 0.41998354376310304
+AVG: 0.22480698
+Variance: 0.21881647
 
 
 Cluster 332
-    education -> 11.0
-    discipline -> 5.0
-AVG: 6.0
-Variance: 2.9154758
+    transnational -> 0.1839410237117745
+    call -> 0.3711234694193838
+    examine -> 0.5718593187925701
+    autobiographical -> 0.44397294800799963
+    life -> 0.3048006724444092
+AVG: 0.25647357
+Variance: 0.15073426
 
 
 Cluster 453
-    exhibition -> 9.0
-    gallery -> 8.0
-AVG: 6.75
-Variance: 1.7853571
+    tikvahia -> 0.08168010491618657
+    ammonium -> 0.16165696676190514
+    nitrate -> 0.19506905091281163
+    enrichment -> 0.4854931866175444
+    species -> 0.17493983579155128
+    estuary -> 0.09816141295436227
+    response -> 0.21888666672859655
+    growth -> 0.4378570766201478
+    greater -> 0.09921419093343686
+AVG: -0.035897266
+Variance: 0.27236894
 
 
 Cluster 212
-    business -> 7.0
-    model -> 7.0
-    strategy -> 5.0
-AVG: 5.5
-Variance: 1.6583124
+    epigraphy -> 0.521892616540225
+    offer -> 0.21177843738163052
+    subject -> 0.26599728675952616
+    literary -> 0.7006573785021857
+    ancient -> 0.1651295250783163
+    epigraphical -> 0.1416425414875942
+AVG: 0.23771092
+Variance: 0.19964266
 
 
 Cluster 333
-    mouse -> 5.0
-    ad -> 5.0
-    weight -> 6.0
-AVG: 5.0
-Variance: 0.70710677
+    pre-service -> 0.18846302607029392
+    practice -> 0.1664799852183977
+    teacher -> 0.5073646951862579
+    education -> 0.3602517481398902
+    teaching -> 0.30033780633556956
+    sport -> 0.6597747812150377
+AVG: 0.24282491
+Variance: 0.20082067
 
 
 Cluster 454
-    route -> 20.0
-    algorithm -> 15.0
-AVG: 14.75
-Variance: 3.344772
+AVG: -0.31622773
+Variance: 3.192794E-8
 
 
 Cluster 330
-    leader -> 24.0
-    chief -> 25.0
-    baluch -> 22.0
-AVG: 22.25
-Variance: 2.6809514
+    country -> 0.30097351142656126
+    condition -> 0.30097351142656126
+    organisational -> 0.41334184238946325
+    oecd -> 0.30097351142656126
+    major -> 0.30097351142656126
+    university -> 0.26300913658278363
+    actorhood -> 0.30097351142656126
+AVG: 0.28134707
+Variance: 0.062057354
 
 
 Cluster 451
-    binge -> 11.0
-    drinking -> 9.0
-AVG: 7.75
-Variance: 2.384848
+AVG: -0.30151132
+Variance: 2.7086234E-8
 
 
 Cluster 210
-    portfolio -> 3.0
-AVG: 3.0
-Variance: 0.0
+    investor -> 0.9113174376513913
+    foreclosure -> 0.1267883126039095
+    occupant-owner -> 0.31765069750580077
+    bad -> 0.12230285331362382
+    guy -> 0.1223028533136238
+    risk -> 0.09893473829625825
+AVG: 0.18704484
+Variance: 0.25402033
 
 
 Cluster 331
-    project -> 6.0
-AVG: 4.5
-Variance: 0.8660254
+    automation -> 0.17812615819158345
+    task -> 0.23044003156177967
+    method -> 0.17584127306157515
+    constructibility -> 0.21356950380594594
+    design -> 0.11200093835948398
+    automate -> 0.0898728088986645
+    construction -> 0.8936842903594168
+AVG: 0.20659666
+Variance: 0.23769268
 
 
 Cluster 452
-    educational -> 6.0
-    research -> 9.0
-AVG: 5.75
-Variance: 2.046338
+    integrity -> 0.342551740547368
+    ted -> 0.21468264957935673
+    report -> 0.23264021488690778
+    client -> 0.635260326765803
+    platform -> 0.3802498050126078
+    measurement -> 0.3191617621483833
+AVG: 0.26878303
+Variance: 0.15097415
 
 
 Cluster 450
-    solution -> 5.0
-    asymptotic -> 4.0
-AVG: 3.75
-Variance: 0.8291562
+    england -> 0.27080583359782157
+    wale -> 0.17218908810700637
+    rate -> 0.24133808621153052
+    suicide -> 0.7601467050203983
+    scotland -> 0.4802958997058082
+AVG: 0.2238482
+Variance: 0.22145209
 
 
 Cluster 219
-    financing -> 3.0
-AVG: 2.3333333
-Variance: 0.47140452
+AVG: -0.23570225
+Variance: 1.39679805E-8
 
 
 Cluster 217
-    market -> 37.0
-    country -> 25.0
-    product -> 21.0
-    financial -> 29.0
-    fdi -> 7.0
-AVG: 12.333333
-Variance: 11.685699
+    evaluation -> 0.22765122918099506
+    include -> 0.3690038668038877
+    design -> 0.36243206218776763
+    technique -> 0.3690038668038877
+    interface -> 0.44988760310086834
+    user -> 0.4498876031008677
+AVG: 0.2741807
+Variance: 0.13478588
 
 
 Cluster 338
-    meal -> 7.0
-    effective -> 4.0
-    socio-cultural -> 5.0
-    habit -> 5.0
-    safe -> 4.0
-    allergy -> 4.0
-    food -> 30.0
-AVG: 6.2
-Variance: 8.158431
+    knee -> 0.2417239712318706
+    study -> 0.06858686746802409
+    osteoarthritis -> 0.8382820776842209
+    potential -> 0.0840130071231387
+    vitamin -> 0.4635169773369237
+AVG: 0.1859397
+Variance: 0.25459903
 
 
 Cluster 459
-    aspergillosis -> 5.0
-    resistance -> 9.0
-AVG: 5.5
-Variance: 2.0615528
+    cytokine -> 0.596960001498678
+    induction -> 0.1961890989759155
+    skin -> 0.19341691995566002
+    sensitization -> 0.5403456895269784
+    epidermal -> 0.42038111535774786
+AVG: 0.24743696
+Variance: 0.18582271
 
 
 Cluster 218
-    system -> 4.0
-    language -> 4.0
-    learning -> 4.0
-AVG: 3.75
-Variance: 0.4330127
+    aroma -> -10000.0
+AVG: -10000.0
+Variance: 0.0
 
 
 Cluster 339
-    growth -> 12.0
-    factor -> 12.0
-    insulin-like -> 12.0
-AVG: 11.0
-Variance: 1.7320508
+    art -> 0.20674424539342234
+    curator -> 0.13186558946881854
+    museum -> 0.8810124514513886
+    identity -> 0.30570806151398994
+    link -> 0.1452824185759169
+    centre -> 0.14432016130399997
+AVG: 0.206566
+Variance: 0.23690523
 
 
 Cluster 215
-    doctor -> 10.0
-    practice -> 6.0
-AVG: 6.5
-Variance: 2.0615528
+AVG: -0.30151132
+Variance: 2.7086234E-8
 
 
 Cluster 336
-    datum -> 17.0
-AVG: 8.75
-Variance: 4.7631397
+    chapter -> 0.3441994248995576
+    fund -> 0.7524573919661605
+    effect -> 0.1256702563031185
+    repurchase -> 0.14051794743995902
+    closed-end -> 0.4585100415563435
+AVG: 0.22999294
+Variance: 0.21175212
 
 
 Cluster 457
-    reference -> 1.0
-    filmmakinginclude -> 1.0
-    propaganda -> 1.0
-    bibliographical -> 1.0
-AVG: 1.0
-Variance: 0.0
+    education -> 0.6092542980189258
+    marketised -> 0.13903754451081313
+    university -> 0.677189566253482
+    neo-liberal -> 0.13903754451081313
+    engineering -> 0.5483638794741162
+    curriculum -> 0.6898811593857576
+    analysis -> 0.13903754451081313
+    conceptualisation -> 0.4197961407031001
+    institution -> 0.13903754451081313
+    ground -> 0.13903754451081313
+    table -> 0.1733846218140286
+    higher -> 0.1733846218140286
+AVG: 0.23076028
+Variance: 0.2243308
 
 
 Cluster 216
-    enrichment -> 7.0
-    nutrient -> 8.0
-    growth -> 9.0
-    nitrate -> 6.0
-    arsenic -> 6.0
-AVG: 5.625
-Variance: 2.2325714
+    cytokine -> 0.29871462206210964
+    production -> 0.5495595631734859
+    sputum -> 0.221764065339546
+    cell -> 0.9492963180809444
+    neutrophil -> 0.221764065339546
+    copd -> 0.4921705917114326
+    lung -> 0.5795674899541603
+    ifn-gamma -> 0.24258806106063327
+    p38 -> 0.39057740581494016
+    mapk -> 0.4986771178280759
+AVG: 0.29519442
+Variance: 0.23145625
 
 
 Cluster 337
-    time -> 47.0
-    travel -> 25.0
-AVG: 26.5
-Variance: 12.298374
+    traveler -> 0.41348730987922133
+    health -> 0.46201084248648355
+    risk -> 1.6335514421836352
+    travel -> 0.8778618770181469
+    accident -> 0.1781236305214448
+    perception -> 0.2851664459740031
+AVG: 0.38411605
+Variance: 0.4618121
 
 
 Cluster 458
-    woman -> 5.0
-    rectal -> 5.0
-    diarrhoea -> 8.0
-AVG: 5.5
-Variance: 1.5
+AVG: -0.23570225
+Variance: 1.39679805E-8
 
 
 Cluster 103
-    solid -> 6.0
-AVG: 4.0
-Variance: 1.4142135
+    genetic -> 0.32419881495309205
+    background -> 0.32419881495309205
+    comparative -> 0.32419881495309205
+    cad -> 0.6821674531933399
+    limit -> 0.32419881495309205
+    research -> 0.32419881495309205
+AVG: 0.24382405
+Variance: 0.20051856
 
 
 Cluster 224
-    state -> 3.0
-    projectile -> 3.0
-    isomeric -> 3.0
-AVG: 2.75
-Variance: 0.4330127
+    receive -> 0.12228292334334333
+    100 -> 0.10484836466495741
+    vandetanib -> 0.8824109818493715
+    patient -> 0.3114534885744156
+    mg/d -> 0.10484836466495741
+    plus -> 0.2125572757839204
+AVG: 0.19858122
+Variance: 0.24056819
 
 
 Cluster 345
-    phase -> 7.0
-    solid-solid -> 3.0
-    model -> 3.0
-    growth -> 5.0
-AVG: 3.6666667
-Variance: 1.7950549
+    carer -> 0.6508312316889557
+    nurse -> 0.46196282563283086
+    sign -> 0.19551453794338475
+    scale -> 0.19551453794338475
+    depression -> 0.5018426799986255
+AVG: 0.23381475
+Variance: 0.21104656
 
 
 Cluster 466
-    film -> 5.0
-AVG: 3.6666667
-Variance: 0.94280905
+    waste -> 0.2997120405910435
+    factory -> 0.7870219090222955
+    productivity -> 0.5026008862120297
+    downgrade -> 0.14155910837786756
+AVG: 0.20009117
+Variance: 0.24392748
 
 
 Cluster 104
-    non-stationary -> 4.0
-    diversity -> 4.0
-AVG: 3.5
-Variance: 0.5
+    bank -> 0.23700225743960135
+    framework -> 0.257162500312512
+    mechanism -> 0.26892070276903335
+    governance -> 0.8947657224871516
+AVG: 0.17838734
+Variance: 0.260791
 
 
 Cluster 225
-    pre-travel -> 15.0
-    traveler -> 20.0
-    health -> 26.0
-AVG: 13.5
-Variance: 7.5883684
+    chapter -> 0.22506083038476937
+    evidence -> 0.06915046634292078
+    regulate -> 0.052453926147396274
+    financial -> 0.02465286976014081
+    use -> 0.1041145648267718
+    stock-based -> 0.06666843961847153
+    trader -> 0.22720252691442336
+    ethiopian -> 0.12192708309617936
+    pay -> 0.05027812841754406
+    market -> 1.8815669824681027
+    agricultural -> 0.15758062064261844
+    likelihood -> 0.054110460829604703
+    compensation -> 0.026598702531984812
+    asset -> 0.02689883578376432
+    value -> 0.026904283296790604
+    make -> 0.08145951831474489
+    ethiopium -> 0.05998267117658215
+    pricing -> 0.07744158508966541
+    conflict -> 0.052453926147396274
+AVG: 0.1782372
+Variance: 0.40579244
 
 
 Cluster 346
-    memory -> 6.0
-    problem -> 4.0
-    system -> 4.0
-AVG: 4.0
-Variance: 1.4142135
+    capital -> 0.8513823450677361
+    rate -> 0.1293006894680901
+    use -> 0.18560111566398071
+    growth -> 0.19941995737520202
+    physical -> 0.20360266560081564
+    human -> 0.305179054340742
+AVG: 0.2241281
+Variance: 0.21978882
 
 
 Cluster 467
-    patient -> 7.0
-    biomarker -> 7.0
-AVG: 6.5
-Variance: 0.5
+    resource -> 0.2919869525573671
+    european -> 0.2919869525573671
+    weather -> 0.5839739051147342
+    plan -> 0.2919869525573671
+    space -> 0.5839739051147342
+AVG: 0.24643798
+Variance: 0.19127536
 
 
 Cluster 101
-    arxiv -> 1.0
-    brown -> 1.0
-    ogle-2008-blg-510 -> 1.0
-    weak -> 1.0
-AVG: 1.0
-Variance: 0.0
+    conservative -> 2.9212336984708614E-17
+    argument -> 0.7071067811865475
+    depict -> 2.9212336984708614E-17
+    stabilization -> 5.5473650679790267E-17
+    run -> 2.9212336984708614E-17
+    essentially -> 2.9212336984708614E-17
+    doctrine -> 2.9212336984708614E-17
+    counter -> 2.9212336984708614E-17
+    state -> 5.5473650679790267E-17
+    stability -> 0.7071067811865475
+AVG: 0.14142135
+Variance: 0.28284273
 
 
 Cluster 222
-    infection -> 11.0
-    response -> 15.0
-    cell -> 15.0
-AVG: 12.25
-Variance: 2.9474566
+    cocteau -> 0.04048185133365878
+    art -> 1.6100668423757933
+    process -> 0.07632951772643318
+    expression -> 0.02138636725947528
+    reflection -> 0.059504951370610334
+    use -> 0.05282751906218798
+    ucsd -> 0.11854741276287309
+    artistic -> 0.0707067919601918
+    film -> 0.015646722212761865
+    activism -> 0.13865400082570395
+    cinematography -> 0.018156595096668986
+    second -> 0.017002635906384483
+    theatre -> 0.029904864986121334
+    performance -> 0.26651179918746026
+    identity -> 0.09013650482268497
+    inspire -> 0.09255283292389085
+    context -> 0.10430540950363312
+    poet -> 0.01986650385743804
+    collective -> 0.6695275940358127
+AVG: 0.18484825
+Variance: 0.36596355
 
 
 Cluster 343
-    method -> 6.0
-    social -> 6.0
-    school -> 5.0
-AVG: 5.0
-Variance: 1.2247449
+    study -> 0.15262407033202055
+    private -> 0.15262407033202055
+    funding -> 0.15262407033202055
+    environmental -> 0.15579345140692585
+    form -> 0.46104159207096695
+    public -> 0.15262407033202055
+    provide -> 0.15262407033202055
+    financing -> 0.6168350434778929
+    well -> 0.15262407033202055
+    consider -> 0.15262407033202055
+AVG: 0.23020384
+Variance: 0.15825202
 
 
 Cluster 464
-    unit -> 6.0
-    plot -> 7.0
-    film -> 7.0
-AVG: 5.4
-Variance: 1.6248076
+    happen -> 0.1419422400695025
+    parent -> 0.1308663484608321
+    country -> 0.07415218045803589
+    transmission -> 0.09425440479502967
+    largely -> 0.05441299511869017
+    secularisation -> 0.1419422400695025
+    find -> 0.1308663484608321
+    people -> 0.05441299511869017
+    little -> 0.05441299511869017
+AVG: -999.818
+Variance: 2999.7466
 
 
 Cluster 102
-    reference -> 1.0
-    use -> 1.0
-    video -> 1.0
-    graphic -> 1.0
-AVG: 1.0
+    student -> -10000.0
+AVG: -10000.0
 Variance: 0.0
 
 
 Cluster 223
-    rift -> 4.0
-    composite -> 4.0
-AVG: 3.5
-Variance: 0.5
+AVG: -0.042485926
+Variance: 2.5659215E-9
 
 
 Cluster 344
-    hj -> 1.0
-    atkinson -> 1.0
-    potato -> 1.0
-    transgenic -> 1.0
-AVG: 1.0
-Variance: 0.0
+    country -> 0.10621939551404401
+    traveler -> 0.8582884086143042
+    advice -> 0.09059201629357787
+    destination -> 0.19208832801039913
+    health -> 0.19785845546802486
+    travel -> 0.38016091288921955
+AVG: 0.20209965
+Variance: 0.24056673
 
 
 Cluster 465
-    boundary -> 6.0
-    crack -> 6.0
-    model -> 5.0
-AVG: 5.25
-Variance: 0.8291562
+    reward -> 0.11949736324142897
+    firm -> 0.26513355816695183
+    product -> 0.8933164127157911
+    manager -> 0.11830694071996614
+    decision -> 0.09270268662318286
+    success -> 0.10389295767939827
+    invest -> 0.09565787929114268
+    kill -> 0.21413471122667738
+AVG: 0.20673421
+Variance: 0.23604326
 
 
 Cluster 220
-    ivd -> 4.0
-    cell -> 7.0
-AVG: 4.25
-Variance: 1.6393596
+    rare -> 0.326141270448778
+    mary -> 0.37832929801661214
+    joseph -> 0.37832929801661214
+AVG: 0.30879858
+Variance: 0.037035253
 
 
 Cluster 341
-    debt -> 5.0
-AVG: 5.0
-Variance: 0.0
+    secondary -> 1.6507678168190043E-18
+    al. -> 1.0
+    teacher -> 2.9150209466645087E-18
+    smith -> 1.1102230246251565E-16
+    learn -> 2.92612068503905E-18
+    cochran -> 1.1102230246251565E-16
+    utilise -> 6.012340595420314E-19
+    devise -> 6.012340595420314E-19
+    approach -> 6.012340595420314E-19
+    perception -> 6.51532284825333E-18
+AVG: 0.1
+Variance: 0.29999998
 
 
 Cluster 462
-    software -> 4.0
-    build -> 4.0
-AVG: 3.5
-Variance: 0.5
+    boundary -> 0.2121113503322927
+    crack -> 0.8728510879100297
+    propagation -> 0.11454244868073586
+    arise -> 0.13021890044488316
+    resistant -> 0.09548340986550274
+    model -> 0.31698459220180003
+AVG: 0.20734617
+Variance: 0.23333135
 
 
 Cluster 100
-    swimming -> 1.0
-    science -> 1.0
-    foundation -> 1.0
-    grant -> 1.0
-AVG: 1.0
-Variance: 0.0
+    bacterium -> 0.22802717966775257
+    death -> 0.1222479506288219
+    elderly -> 0.17036556363954647
+    innate -> 0.17083110620464903
+    inflammatory -> 0.1704025383885585
+    control -> 0.1789616728871733
+    lead -> 0.1222479506288219
+    lung -> 0.12646628852121614
+    prevalence -> 0.2206862886348245
+    negative -> 0.12470875170069404
+    probiotic -> 0.855609633314482
+    bacterial -> 0.8895756970214933
+    pneumonia -> 0.1222479506288219
+    oral -> 0.20674831651891523
+    extreme -> 0.1222479506288219
+    sepsis -> 0.1222479506288219
+    candida -> 0.17473739638310293
+AVG: 0.21744172
+Variance: 0.22303624
 
 
 Cluster 221
-    systemic -> 7.0
-    copd -> 6.0
-AVG: 5.25
-Variance: 1.299038
+    mission -> -0.24999999999999994
+    joint -> -0.24999999999999994
+    system -> -0.24999999999999994
+    supplies -> -0.24999999999999994
+    impact -> -0.24999999999999994
+    precision -> -0.24999999999999994
+    airdrop -> -0.24999999999999994
+    deliver -> -0.24999999999999994
+    warfighter -> -0.24999999999999994
+    essential -> -0.24999999999999994
+AVG: -0.25
+Variance: 5.551115E-17
 
 
 Cluster 342
-    reference -> 1.0
-    opera -> 1.0
-    lincoln -> 1.0
-    house -> 1.0
-AVG: 1.0
-Variance: 0.0
+    theatre -> 0.6760155133918955
+    country -> 0.12062249599161454
+    proliferation -> 0.08286285642614702
+    european -> 0.12062249599161454
+    national -> 0.6747310019827564
+    france -> 0.20082022286042506
+AVG: 0.20148559
+Variance: 0.24242322
 
 
 Cluster 463
-    literacy -> 4.0
-    participation -> 4.0
-    learning -> 4.0
-AVG: 3.75
-Variance: 0.4330127
+    process -> 0.07816573997948544
+    ground -> 0.723269203960338
+    construct -> 0.1718607612303505
+    theory -> 0.6528282078587891
+AVG: 0.1872529
+Variance: 0.2540405
 
 
 Cluster 460
-    locking -> 1.0
-    technology -> 1.0
-    state -> 1.0
-    superconducting -> 1.0
-AVG: 1.0
-Variance: 0.0
+    religious -> 0.1289108138459705
+    ghanaian -> 0.11988455838681153
+    scheme -> 0.17331810347272547
+    pentecostal -> 0.10564316127898765
+    research -> 0.15190072299671417
+    religion -> 0.9793502706430832
+    moral -> 0.39838819658504565
+    christian -> 0.7357324550740894
+    morality -> 0.3111836258959763
+    african -> 0.20202186157344285
+    akan -> 0.17954041928871678
+    virtue -> 0.0968429756828404
+AVG: 0.19621906
+Variance: 0.24276622
 
 
 Cluster 340
-    processes -> 1.0
-    qcd -> 1.0
-    instanton-induced -> 1.0
-    deep-inelastic -> 1.0
-AVG: 1.0
-Variance: 0.0
+    secondary -> 0.10079229769252766
+    datum -> 0.10481960211335463
+    school -> 0.779515222562999
+    2011 -> 0.10391437321477881
+    edition -> 0.15549664763175328
+    2010 -> 0.10079229769252766
+    family -> 0.5610190469760782
+AVG: 0.20201738
+Variance: 0.24189267
 
 
 Cluster 461
-    myth -> 9.0
-    poet -> 8.0
-AVG: 7.0
-Variance: 2.1602468
+    teaching -> 0.7228134452210107
+    learning -> 0.3839820601383597
+    introduction -> 0.29133091063362265
+AVG: 0.24177845
+Variance: 0.17853177
 
 
 Cluster 109
-    editor -> 1.0
-    acknowledgement -> 1.0
-    comment -> 1.0
-    abstract -> 1.0
-AVG: 1.0
-Variance: 0.0
+    por -> 0.1386780464367129
+    species -> 0.3452182888801682
+    pchlide -> 0.6560003906863803
+    state -> 0.14176030111979063
+    i675 -> 0.5717725956790449
+AVG: 0.22944763
+Variance: 0.20707217
 
 
 Cluster 107
-    enrichment -> 1.0
-    bardgett -> 1.0
-    feedbackmanning -> 1.0
-    structure -> 1.0
-AVG: 1.0
-Variance: 0.0
+    datum -> 1.044031862562435
+    visualization -> 0.1393196518612009
+    study -> 0.04457661856970764
+    set -> 0.04897442868680129
+    activity -> 0.0863760581887618
+    workflow -> 0.9459147105651452
+    scientific -> 0.11332919020383769
+    abstraction -> 0.1313263631992717
+    seismic -> 0.04457661856970764
+    analysis -> 0.08943901573031021
+    result -> 0.04897442868680129
+    feature -> 0.034959735514388565
+    step -> 0.042994190096886695
+    motif -> 0.1937850261832759
+    tag -> 0.04129138399411783
+    data-centric -> 0.03588880009151435
+    architecture -> 0.07917655925088725
+    object -> 0.04183742602530508
+AVG: 0.17018916
+Variance: 0.286588
 
 
 Cluster 228
-    actii-orf4 -> 6.0
-    uua -> 4.0
-    polyester -> 3.0
-    production -> 8.0
-    actinorhodin -> 6.0
-    glutamicum -> 4.0
-    platform -> 3.0
-AVG: 4.0
-Variance: 2.2110832
+    http://www.aspergillus-genomes.org.uk -> 0.11096839387626128
+    genome -> 0.6346934676573797
+    accessible -> 0.11096839387626128
+    resource -> 0.09236273144852426
+    aspergillus -> 0.7467500667234618
+AVG: 0.18021378
+Variance: 0.25906342
 
 
 Cluster 349
-    fruit -> 10.0
-    pectin -> 7.0
-    ascorbate -> 7.0
-AVG: 7.0
-Variance: 2.1213202
+    process -> -0.27735009811261463
+    qcd -> -0.27735009811261463
+    -lcb- -> -0.27735009811261463
+    scattering -> -0.27735009811261463
+    -509 -> -0.27735009811261463
+    eur.phys.j.c25 -> -0.27735009811261463
+    instanton-induced -> -0.27735009811261463
+    hera -> -0.27735009811261463
+    deep-inelastic -> -0.27735009811261463
+    :495 -> -0.27735009811261463
+AVG: -0.27735013
+Variance: 2.9584374E-8
 
 
 Cluster 108
-    innovation -> 21.0
-    product -> 25.0
-    supplier -> 15.0
-    knowledge -> 6.0
-AVG: 10.125
-Variance: 8.343224
+    loss -> 0.6623569605634272
+    bank -> 0.286401992372552
+    fair -> 0.3496857941906759
+    value -> 0.4741794373343237
+    gain -> 0.2314043996757759
+AVG: 0.25489986
+Variance: 0.18244015
 
 
 Cluster 229
-    size -> 26.0
-    body -> 23.0
-    brain -> 22.0
-AVG: 19.75
-Variance: 6.941722
+    adoption -> 0.5421586254969599
+    impact -> 0.32829458183056004
+    e-business -> 0.7566998048374836
+AVG: 0.19846918
+Variance: 0.24492219
 
 
 Cluster 105
-    note -> 1.0
-    atlantic -> 1.0
-    humanities -> 1.0
-    lord -> 1.0
-AVG: 1.0
-Variance: 0.0
+    institution -> 0.12384945995665551
+    performance -> 0.6064594386582559
+    cost -> 0.12384945995665551
+    approach -> 0.12895884150600695
+    space -> 0.7232946832429508
+AVG: 0.20484647
+Variance: 0.23317221
 
 
 Cluster 226
-    development -> 8.0
-    travellers -> 10.0
-    social -> 7.0
-    neighbourhood -> 7.0
-    community -> 28.0
-    ndc -> 7.0
-    traveller -> 18.0
-AVG: 8.8
-Variance: 8.047359
+    readmission -> 0.3140955433417984
+    regional -> 0.27545434585054485
+    discharge -> 0.21954361349844106
+    difference -> 0.6133838259381096
+    hospital -> 0.4837008177569582
+AVG: 0.26779068
+Variance: 0.15370233
 
 
 Cluster 347
-    supplementation -> 4.0
-    weight -> 5.0
-AVG: 3.75
-Variance: 0.8291562
+    institution -> 0.31124340594244976
+    corporate -> 0.7170776868827403
+    bumiputera -> 0.29856234804772475
+    governance -> 0.5209987435120181
+AVG: 0.21740763
+Variance: 0.22786777
 
 
 Cluster 468
-    system -> 1.0
-    education -> 1.0
-    design -> 1.0
-    drawing -> 1.0
-AVG: 1.0
-Variance: 0.0
+    small -> 0.13133652727954542
+    dependency -> 0.19709454799380244
+    origin -> 0.27383094895874105
+    investment -> 0.27408488650469137
+    evolution -> 0.13905845302032085
+    life -> 0.25900495976146987
+    local -> 0.14334847196963277
+    gain -> 0.16404355477144497
+    network -> 1.616158548713615
+    everyday -> 0.16404355477144497
+    inequality -> 0.21446447709685265
+    tie -> 0.15324496968011483
+    gravity -> 0.08743197664528488
+    organization -> 0.23835470006349277
+    unanticipated -> 0.164043554771445
+    connection -> 0.19031502318866805
+    model -> 0.1219154724045791
+    international -> 0.11616814908853294
+AVG: 0.2485006
+Variance: 0.32738993
 
 
 Cluster 106
-    money -> 35.0
-    endogeneity -> 10.0
-    economy -> 10.0
-    theory -> 43.0
-AVG: 12.777778
-Variance: 14.38964
+    transfer -> 0.2732144836278347
+    system -> 0.6544593044029341
+    fund -> 0.2480921669508517
+    ift -> 0.1880327936432644
+    informal -> 0.5567523811178582
+AVG: 0.24484667
+Variance: 0.19169767
 
 
 Cluster 227
-    bank -> 18.0
-    framework -> 13.0
-    corporate -> 14.0
-    governance -> 40.0
-AVG: 16.0
-Variance: 10.281745
+    market -> 0.19838145151139566
+    self-drive -> 0.27820829998042507
+    chapter -> 0.09390767651379195
+    change -> 0.13145158894855982
+    tourism -> 0.8733607054245862
+    drive -> 0.117602943795707
+    vehicle -> 0.209179718443154
+AVG: 0.20959441
+Variance: 0.23169255
 
 
 Cluster 348
-    study -> 1.0
-    environmental -> 1.0
-    mediabibliography -> 1.0
-    spatial -> 1.0
-AVG: 1.0
-Variance: 0.0
+    country -> 0.22237257558014753
+    period -> 0.22237257558014753
+    civil -> 0.5872904591455025
+    unrest -> 0.6912563483539873
+AVG: 0.22075804
+Variance: 0.217738
 
 
 Cluster 469
-    boston -> 1.0
-    reference -> 1.0
-    art -> 1.0
-    leaf -> 1.0
-AVG: 1.0
-Variance: 0.0
+    sti -> 0.7643420537225074
+    travel -> 0.28529295918309666
+    traveller -> 0.5316274766752682
+AVG: 0.20998049
+Variance: 0.23376955
 
 
 Cluster 96
-    3-m -> 5.0
-    cul7 -> 5.0
-    growth -> 10.0
-AVG: 6.0
-Variance: 2.345208
+    hyperon-nucleon -> 0.0
+    composition -> -0.0
+    matterchina -> -0.0
+    interaction -> 0.0
+    quantum -> -0.0
+    chromodynamic -> -0.0
+    nuclear -> -0.0
+    dense -> -0.0
+AVG: -0.1
+Variance: 0.2
 
 
 Cluster 95
-    rm-odp -> 6.0
-AVG: 3.75
-Variance: 1.299038
+    single -> -0.24999999999999994
+    laser-produced -> -0.24999999999999994
+    scattering -> -0.24999999999999994
+    bubble -> -0.24999999999999994
+    use -> -0.24999999999999994
+    collide -> -0.24999999999999994
+    thomson -> -0.24999999999999994
+    radiographylawrence -> -0.24999999999999994
+    plasma -> -0.24999999999999994
+    proton -> -0.24999999999999994
+AVG: -0.25
+Variance: 5.551115E-17
 
 
 Cluster 94
-    therapy -> 5.0
-    patient -> 5.0
-    staff -> 10.0
-AVG: 6.0
-Variance: 2.345208
+    literacy -> 0.6703689778611628
+    digital -> 0.16228728525391523
+    study -> 0.4267224819939971
+    practice -> 0.16228728525391523
+    primary -> 0.4125830470190957
+AVG: 0.24586697
+Variance: 0.18141872
 
 
 Cluster 93
-    art -> 7.0
-    collective -> 6.0
-AVG: 5.0
-Variance: 1.5811388
+    disciplinary -> 0.12271653922553706
+    practice -> 0.09715359698578921
+    education -> 0.921490969539629
+    explore -> 0.057899345558783635
+    design -> 0.2760360467983769
+    training -> 0.0923981831127341
+    discipline -> 0.09554247573854079
+    relationship -> 0.10420352751194357
+AVG: 0.18435659
+Variance: 0.25391737
 
 
 Cluster 99
-    museum -> 1.0
-    history -> 1.0
-    leaf -> 1.0
-AVG: 1.0
+    audit -> -10000.0
+AVG: -10000.0
 Variance: 0.0
 
 
 Cluster 98
-    war -> 1.0
-    cambridge -> 1.0
-    memorial -> 1.0
-AVG: 1.0
-Variance: 0.0
+    study -> 0.1146224443626833
+    teacher -> 0.8786463120029112
+    ell -> 0.17109350513494267
+    arizona -> 0.26842035039819956
+    student -> 0.20195260770846055
+    english -> 0.1579700652913135
+AVG: 0.21437915
+Variance: 0.22902556
 
 
 Cluster 97
-    man -> 5.0
-    beer -> 8.0
-AVG: 5.0
-Variance: 1.8708287
+    movie -> 0.2088492276036256
+    business -> 0.12926219453721519
+    city -> 0.26745692212492495
+    sub-sector -> 0.13194234361193902
+    global -> 0.13194234361193902
+    film -> 0.8166644809491961
+    video -> 0.23433595135497465
+    distribution -> 0.1249538689068886
+AVG: 0.22611523
+Variance: 0.20399506
 
 
 Cluster 85
-    dictionary -> 4.0
-AVG: 4.0
-Variance: 0.0
+    chapter -> 0.43663197183019214
+    blake -> 0.2525944671999301
+    blakean -> 0.30457178749097785
+    echo -> 0.520964169382089
+    jone -> 0.33498331193252917
+    poetry -> 0.41720714047580876
+AVG: 0.27854612
+Variance: 0.14257887
 
 
 Cluster 84
-    plant -> 7.0
-AVG: 5.0
-Variance: 2.0
+    market -> 0.3886490184638952
+    world -> 0.1761246425363934
+    interest -> 0.4843797000602828
+    rate -> 0.7204521735660693
+    emerge -> 0.12699176842927265
+AVG: 0.22404628
+Variance: 0.21764301
 
 
 Cluster 83
-    shrimp -> 8.0
-AVG: 6.5
-Variance: 0.8660254
+    process -> 0.1467436122619352
+    material -> 0.9336818078667354
+    selection -> 0.23516951583613285
+    design -> 0.07505357098914905
+    aspect -> 0.0711944006394282
+    architect -> 0.07638145602815806
+    focus -> 0.07263034384885797
+    consideration -> 0.1420914529120525
+    group -> 0.06686503247899651
+AVG: 0.18562974
+Variance: 0.25530753
 
 
 Cluster 82
-    hydroxylase -> 2.0
-AVG: 2.0
-Variance: 0.0
+AVG: -0.24253562
+Variance: 4.108522E-9
 
 
 Cluster 89
-    skill -> 5.0
-    craft -> 5.0
-    space -> 5.0
-AVG: 4.75
-Variance: 0.4330127
+    firm -> 0.4392435901905351
+    taiwanese -> 0.4298919842401474
+    taiwan -> 0.1776240855142851
+    problem -> 0.17475443010855615
+    financing -> 0.7354432999641578
+AVG: 0.22000463
+Variance: 0.2258724
 
 
 Cluster 88
-    performance -> 9.0
-    management -> 23.0
-    rate -> 9.0
-    manufacturing -> 10.0
-AVG: 7.3333335
-Variance: 6.253887
+    computer -> 0.2645632719060667
+    guidance -> 0.3506437960121418
+    machine -> 0.7863188954685841
+    accuracy -> 0.24130198246629006
+    control -> 0.18731154409492787
+AVG: 0.22963619
+Variance: 0.20543565
 
 
 Cluster 87
-    replication -> 5.0
-    microarray -> 4.0
-    gene -> 8.0
-AVG: 4.3333335
-Variance: 1.7950549
+    religious -> 0.8650057840250485
+    suffer -> 0.08785561109937602
+    problem -> 0.22283330606391846
+    illiteracy -> 0.3867741863495607
+    word -> 0.08785561109937602
+    religion -> 0.08893291648946643
+    lifestyle -> 0.08213823536762173
+AVG: 0.202106
+Variance: 0.24133077
 
 
 Cluster 86
-    building -> 21.0
-    energy -> 24.0
-AVG: 19.75
-Variance: 2.9474566
+    educational -> 0.6218589803730252
+    education -> 0.7581381171578208
+    work -> 0.42607636504672597
+    field -> 0.773228921305466
+    online -> 0.5436225451922373
+    worker -> 0.2787913421981502
+    present -> 0.36775104047347934
+AVG: 0.308154
+Variance: 0.22470137
 
 
 Cluster 92
-    bc -> 5.0
-    node -> 7.0
-    fibril -> 5.0
-    protocol -> 5.0
-    t-tubule -> 7.0
-    connection -> 6.0
-    mfc -> 5.0
-    network -> 27.0
-    energy -> 5.0
-AVG: 7.090909
-Variance: 6.416662
+    shrimp -> 0.5957357986023919
+    vacuum -> 0.4436679101404297
+    air -> 0.20951251108511149
+    melanosis -> 0.358484542450443
+    pack -> 0.21860666812830876
+    quality -> 0.39881439821420894
+AVG: 0.2656481
+Variance: 0.16667382
 
 
 Cluster 91
-    insurance -> 2.0
-    investment -> 2.0
-AVG: 2.0
-Variance: 0.0
+    incentive -> 0.18057019074837702
+    government -> 0.38860468789611535
+    management -> 0.26071014279266985
+    use -> 0.2962231503031375
+    travel -> 0.2913508085925611
+    demand -> 0.2913508085925611
+    local -> 0.6373073271895011
+AVG: 0.25939432
+Variance: 0.16220818
 
 
 Cluster 90
-    abnormal -> 7.0
-    fund -> 13.0
-AVG: 8.0
-Variance: 2.9154758
+    system -> 0.5575025555663549
+    biology -> 0.7033883605536847
+    cancer -> 0.3801475378844128
+    approach -> 0.2018319170088842
+AVG: 0.20099886
+Variance: 0.243249
 
 
 Cluster 400
-    travel -> 4.0
-AVG: 3.25
-Variance: 0.4330127
+    biology -> 0.4673653404204569
+    need -> 0.288265255923411
+    quantitative -> 0.4293145392111117
+    science -> 0.3403144791872504
+    biological -> 0.2971055704364801
+    physical -> 0.2364755133109692
+    approach -> 0.43380445077501284
+AVG: 0.27805668
+Variance: 0.13798366
 
 
 Cluster 401
-    travel -> 11.0
-    demand -> 10.0
-    telecommunications -> 7.0
-AVG: 6.6666665
-Variance: 2.9814239
+    susceptibility -> 0.3794003416420497
+    arthritis -> 0.602220020299254
+    gene -> 0.3974838695676329
+    associate -> 0.22609422517579042
+    psa -> 0.45493207305786143
+AVG: 0.25287592
+Variance: 0.18215114
 
 
 Cluster 408
-    macular -> 2.0
-AVG: 2.0
-Variance: 0.0
+    firm -> 0.25122179684547835
+    chain -> 0.43316287054511693
+    lean -> 0.40732633477761604
+    strategy -> 0.40732633477761604
+    supply -> 0.43316287054511693
+AVG: 0.29788822
+Variance: 0.1019059
 
 
 Cluster 409
-    study -> 1.0
-    teacher -> 1.0
-    somerville -> 1.0
-    reduction-in-force -> 1.0
-AVG: 1.0
-Variance: 0.0
+    datum -> 0.24175512313574773
+    accelerator -> 0.8779711728864678
+    memory -> 0.3040091267214196
+    system -> 0.19536037555424668
+    model -> 0.16887074784871933
+AVG: 0.19853894
+Variance: 0.24549359
 
 
 Cluster 406
-    mary -> 4.0
-    desmoplastic -> 3.0
-    uganda -> 3.0
-    press -> 3.0
-    joseph -> 4.0
-    sister -> 3.0
-AVG: 3.0
-Variance: 0.70710677
+    medicine -> 0.6233667240637333
+    experience -> 0.3242841901562623
+    generic -> 0.5820823953701727
+    perception -> 0.12093954715074824
+    lung -> 0.28085158884590466
+    symptom -> 0.5540368680074567
+    patient -> 1.1113780492371244
+    cancer -> 0.28085158884590466
+AVG: 0.2346617
+Variance: 0.2842395
 
 
 Cluster 407
-    firm -> 37.0
-    capital -> 38.0
-    health -> 31.0
-AVG: 23.5
-Variance: 12.25765
+    temporary -> 0.6334580498340854
+    total -> 0.09514442136589271
+    variety -> 0.09514442136589271
+    worldwide -> 0.09514442136589271
+    studieseurope -> 0.09514442136589271
+    percent -> 0.09514442136589271
+    introduction -> 0.09514442136589271
+    case -> 0.09514442136589271
+    account -> 0.09514442136589271
+    staffing -> 0.6334580498340854
+AVG: 0.20280714
+Variance: 0.21532544
 
 
 Cluster 404
-    weather -> 4.0
-    space -> 4.0
-AVG: 4.0
-Variance: 0.0
+    plane -> 0.32921819375241
+    mass -> 0.32921819375241
+    exclusion -> 0.32921819375241
+    370 -> 0.32921819375241
+    region -> 0.6750070821576608
+    evaluate -> 0.32921819375241
+AVG: 0.23801407
+Variance: 0.20784084
 
 
 Cluster 405
-    technique -> 3.0
-    remains -> 3.0
-    dakhleh -> 3.0
-    ancient -> 3.0
-AVG: 3.0
-Variance: 0.0
+    obtain -> 0.31295080225158417
+    computer -> 0.28410962663984685
+    load -> 0.31295080225158417
+    profile -> 0.31295080225158417
+    cooling -> 0.7058333055561817
+AVG: 0.2560776
+Variance: 0.17263904
 
 
 Cluster 402
-    chapter -> 6.0
-    series -> 6.0
-    fascist -> 6.0
-AVG: 5.75
-Variance: 0.4330127
+    firm -> 0.4548869258274512
+    capital -> 0.5849314011518276
+    health -> 0.5926170961750873
+    investment -> 0.28059359114338367
+AVG: 0.22001047
+Variance: 0.2268127
 
 
 Cluster 403
-    area -> 5.0
-    ethnic -> 5.0
-    health -> 5.0
-    association -> 5.0
-AVG: 5.0
-Variance: 0.0
+    vocational -> 0.31143756263053707
+    education -> 0.31143756263053707
+    technical -> 0.31143756263053707
+    indigenous -> 0.4527272238818793
+    use -> 0.23378181019547473
+    skill -> 0.5894107005991592
+AVG: 0.26747388
+Variance: 0.15450706
 
 
 Cluster 12
-    temporary -> 11.0
-    staffing -> 11.0
-AVG: 7.5
-Variance: 3.5
+    internal -> 0.17565742907258428
+    access -> 0.2912325614126777
+    patent -> 0.33261820310823303
+    financial -> 0.5844792850721954
+    part -> 0.14369046089031287
+    demand -> 0.1834490066107926
+    capacity -> 0.15392530963331033
+    firm -> 1.0783085000599193
+    flexibility -> 0.7378123143819073
+    debt -> 0.15392530963331033
+    finance -> 0.3184409777492795
+AVG: 0.2659044
+Variance: 0.26500207
 
 
 Cluster 11
-    production -> 13.0
-    acetaldehyde -> 9.0
-    glycerol -> 8.0
-    biodiesel -> 9.0
-AVG: 8.285714
-Variance: 2.3123448
+AVG: -0.30151132
+Variance: 2.7086234E-8
 
 
 Cluster 10
-    paradisus -> 6.0
-    citrus -> 8.0
-    group -> 6.0
-AVG: 6.25
-Variance: 1.0897248
+    business -> 0.19215646434041211
+    public -> 0.09878299020672697
+    section -> 0.6001064890819645
+    nfc -> 0.7470430829101079
+AVG: 0.1997556
+Variance: 0.24244739
 
 
 Cluster 16
-    access -> 14.0
-    nc -> 8.0
-AVG: 8.0
-Variance: 3.6742346
+    well-being -> 0.601561942031121
+    delivery -> 0.26148523863387463
+    year -> 0.34532220908141703
+    change -> 0.26148523863387463
+    project -> 0.6948037506849956
+    staff -> 0.8957949725160363
+    school -> 0.42577421199559906
+    supervision -> 0.384762243824513
+AVG: 0.24714467
+Variance: 0.24480058
 
 
 Cluster 15
-    transport -> 4.0
-AVG: 3.5
-Variance: 0.5
+    religious -> 0.0799514175598152
+    agama-agama -> 0.06973776317824713
+    srpb -> 0.09582142676823335
+    istilah -> 0.1653276286199946
+    people -> 0.04930068958414937
+    qol -> 0.9171756494981503
+    dan -> 0.13228071257596755
+    inus -> 0.10045145471892931
+    contribution -> 0.04814650258372835
+    islam -> 0.10581605978960472
+    spiritualita -> 0.3298531350907367
+    domain -> 0.1247531511203785
+    spiritual -> 1.2009830279971174
+    yang -> 0.09566176098576167
+    term -> 0.11124847738237506
+    pada -> 0.07874277808873303
+AVG: 0.20057058
+Variance: 0.3049159
 
 
 Cluster 14
-    datum -> 5.0
-AVG: 4.25
-Variance: 0.4330127
+    country -> 0.13084466724012067
+    current -> 0.07817877703384853
+    iii -> 0.038227522326946574
+    investment -> 0.04011775536030305
+    us-china -> 0.14056762417715563
+    bit -> 0.9653500007446449
+    potential -> 0.1388438917972001
+AVG: 0.16005716
+Variance: 0.27251035
 
 
 Cluster 13
-    princeton -> 4.0
-AVG: 4.0
-Variance: 0.0
+    datum -> 0.10173372894656253
+    country -> 0.2668354139170325
+    fdus -> 0.8703966253143329
+    japanese -> 0.11777461931637402
+    industrialising -> 0.11351092091194367
+    asian -> 0.11351092091194367
+    industry -> 0.11142615020177848
+    determinant -> 0.20831224567098655
+AVG: 0.20880577
+Variance: 0.22707342
 
 
 Cluster 19
-    variable -> 6.0
-    behaviour -> 9.0
-    prototype -> 9.0
-AVG: 7.0
-Variance: 2.1213202
+    u.s. -> -0.27735009811261463
+    scenesnational -> -0.27735009811261463
+    system -> -0.27735009811261463
+    memory -> -0.27735009811261463
+    retrieval -> -0.27735009811261463
+    health -> -0.27735009811261463
+    institute -> -0.27735009811261463
+    brain -> -0.27735009811261463
+    associate -> -0.27735009811261463
+    successful -> -0.27735009811261463
+AVG: -0.27735013
+Variance: 2.9584374E-8
 
 
 Cluster 18
-    exhibition -> 25.0
-    art -> 46.0
-AVG: 29.5
-Variance: 9.552486
+    albican -> 0.2636794819680167
+    phase -> 0.5807611348025782
+    antigenicity -> 0.26367948196801666
+    systemic -> 0.31708165283456147
+    use -> 0.31708165283456147
+    growth -> 0.2636794819680167
+    candida -> 0.2636794819680167
+AVG: 0.26651615
+Variance: 0.12582092
 
 
 Cluster 17
-    principle -> 17.0
-    biology -> 12.0
-AVG: 11.75
-Variance: 3.344772
+    hair -> 0.9106860358916155
+    dynamics -> 0.07076174168685048
+    keratinocyte -> 0.07076174168685048
+    prototypic -> 0.0722627608608866
+    model -> 0.19616702625175728
+    growth -> 0.24708447560706853
+    matrix -> 0.07076174168685048
+    human -> 0.0665280003372861
+    cycle -> 0.10775701329945067
+    lead -> 0.07584118465151345
+AVG: 0.18886116
+Variance: 0.24783643
 
 
 Cluster 30
-    chinese -> 11.0
-    subsidy -> 14.0
-AVG: 10.0
-Variance: 2.738613
+    educational -> 0.2708807631989087
+    observation -> 0.48691367996806023
+    classroom -> 0.48691367996806023
+    teaching -> 0.2708807631989086
+    class -> 0.4639251649791371
+AVG: 0.27928728
+Variance: 0.13924117
 
 
 Cluster 34
-    teacher -> 4.0
-AVG: 3.25
-Variance: 0.4330127
+    suicide -> 0.8048947547932092
+    behaviour -> 0.5287524125234958
+    mechanism -> 0.15037071339627728
+    psychosis -> 0.12105976044140766
+AVG: 0.19483142
+Variance: 0.24604166
 
 
 Cluster 33
-    chapter -> 7.0
-    work -> 15.0
-    talawa -> 10.0
-    beethoven -> 7.0
-AVG: 8.0
-Variance: 3.207135
+AVG: -0.31622773
+Variance: 3.192794E-8
 
 
 Cluster 32
-    digital -> 5.0
-AVG: 4.0
-Variance: 1.0
+    art -> 0.9451697031082172
+    modern -> 0.09587318572598551
+    provide -> 0.047936592862992636
+    mass -> 0.1680677693146512
+    culturethi -> 0.047936592862992636
+    modernism -> 0.047936592862992636
+    class -> 0.047936592862992636
+    introduction -> 0.047936592862992636
+    theory -> 0.047936592862992636
+    object -> 0.13992572665011205
+AVG: 0.16366558
+Variance: 0.26387247
 
 
 Cluster 31
-    tourist -> 12.0
-    product -> 9.0
-    tourism -> 11.0
-AVG: 9.25
-Variance: 2.6809514
+    pain -> 0.3296146409764324
+    review -> 0.27152025280364345
+    opioid -> 0.2162068682627383
+    intervention -> 0.7847916177175773
+    placebo -> 0.15192101871903174
+    labour -> 0.15315299308580804
+AVG: 0.24285066
+Variance: 0.19242221
 
 
 Cluster 38
-    loss -> 3.0
-    electron -> 3.0
-    energy -> 3.0
-AVG: 2.75
-Variance: 0.4330127
+    antenna -> 0.4943160081367338
+    acousto-optic -> 0.31805990930786116
+    phased-array -> 0.1523576517353455
+    processor -> 0.742869394495507
+AVG: 0.2275016
+Variance: 0.2137308
 
 
 Cluster 37
-    social -> 27.0
-    community -> 7.0
-    policy -> 12.0
-AVG: 11.0
-Variance: 8.508819
+    tendon -> 0.2779091972149296
+    joint -> 0.43423997892516275
+    motion -> 0.1980116746710044
+    excursion -> 0.7246823807291127
+    hand -> 0.1980116746710044
+AVG: 0.2345886
+Variance: 0.19279571
 
 
 Cluster 36
-    business -> 9.0
-    nfc -> 14.0
-    section -> 9.0
-AVG: 9.75
-Variance: 2.58602
+    exist -> 0.2954705456984905
+    pure-play -> 0.526049446389629
+    product -> 0.39341114121323983
+    retailer -> 0.3573482751996734
+    use -> 0.3093932134916595
+    relationship -> 1.326921866983559
+    consumer -> 1.0779074338280132
+AVG: 0.44942495
+Variance: 0.3782894
 
 
 Cluster 35
-    study -> 7.0
-    cuban -> 8.0
-AVG: 6.25
-Variance: 1.299038
+    patient -> 0.4334110180467166
+    response -> 0.4957813906731705
+    narrative -> 0.4478316684128155
+    patient-centred -> 0.23936158487991455
+    care -> 0.48059375352949335
+    professional -> 0.17006734701308981
+AVG: 0.25679713
+Variance: 0.1774473
 
 
 Cluster 39
-    financial -> 2.0
-    cepr -> 2.0
-    grant -> 2.0
-    support -> 2.0
-AVG: 2.0
-Variance: 0.0
+    participation -> 0.5418822358305043
+    work -> 0.18647569699263172
+    concept -> 0.32302004607300244
+    adaptation -> 0.2416402911033108
+    learning -> 0.9953131530995806
+    ensemble -> 0.31148724583849013
+    literacy -> 0.2972184461735448
+    diversity -> 0.4923469074522696
+    non-stationary -> 0.4780063061563904
+    2.0 -> 0.22349801227688287
+    web -> 0.2234980122768831
+    rate -> 0.2416402911033108
+AVG: 0.2799781
+Variance: 0.21796048
 
 
 Cluster 23
-    feedback -> 7.0
-    acid -> 7.0
-    scc -> 6.0
-    personalised -> 7.0
-    fat -> 17.0
-    risk -> 6.0
-    intake -> 22.0
-AVG: 8.888889
-Variance: 5.8962216
+    ethnographic -> 0.21528804210700195
+    dream -> 0.4609418549324102
+    film -> 0.5302465343076191
+    ronin -> 0.5829658158210644
+AVG: 0.24642968
+Variance: 0.1876327
 
 
 Cluster 22
-    reference -> 3.0
-    bibliographical -> 3.0
-AVG: 1.5
-Variance: 0.8660254
+    participation -> 0.10461316051713812
+    study -> 0.16125102575509803
+    network -> 0.10920065607492994
+    relation -> 0.13743683296164363
+    capacity -> 0.1023463371774408
+    public -> 0.10461316051713847
+    implication -> 0.05236526425956525
+    neighbourhood -> 0.33751888965369786
+    state -> 0.04942856092847687
+    traveller -> 0.933966016780928
+    policy -> 0.5813944892380829
+    group -> 0.16712191847901747
+    development -> 0.19856436674814118
+    social -> 0.35531735054948976
+    change -> 0.09621929870856027
+    community -> 1.8482911621628713
+    ndc -> 0.3279501138983451
+    infrastructure -> 0.11022979213393987
+    report -> 0.08116877698261497
+    describe -> 0.044540157663791866
+AVG: 0.23416887
+Variance: 0.37958482
 
 
 Cluster 21
-    service -> 9.0
-    adult -> 11.0
-AVG: 7.5
-Variance: 2.6925824
+    binge -> 0.6080937512380239
+    drinking -> 0.5142700865956445
+    student -> 0.17564258731474436
+    evening -> 0.3565307532694955
+    belief -> 0.15496470094887735
+    drink -> 0.3700571878429414
+AVG: 0.24270375
+Variance: 0.1948116
 
 
 Cluster 20
-    film -> 6.0
-AVG: 3.75
-Variance: 1.299038
+    meal -> 0.10875320706417631
+    nutrient -> 0.15021058833246742
+    snack -> 0.9635621110332994
+    subject -> 0.13485107340971836
+    mean -> 0.044438273101857016
+    consume -> 0.06605278231307274
+    intake -> 0.04993049362346051
+    energy -> 0.05579504242932684
+AVG: 0.16277394
+Variance: 0.27008954
 
 
 Cluster 27
-    onychiurus-procampatus -> 1.0
-    preference -> 1.0
-    cited -> 1.0
-    food -> 1.0
-AVG: 1.0
-Variance: 0.0
+    wheel -> 0.9049985489480332
+    use -> 0.15658700246523422
+    torque -> 0.2224547191036365
+    control -> 0.4043391774229893
+    vehicle -> 0.7687117393232828
+    agv -> 0.2801530185619618
+    system -> 0.19143247855631915
+    position -> 0.19329293542970247
+    steer -> 0.8505192876415686
+AVG: 0.28830478
+Variance: 0.29411423
 
 
 Cluster 26
-    intensity -> 1.0
-    dish -> 1.0
-    moriond -> 1.0
-    bingo -> 1.0
-AVG: 1.0
+    use -> -10000.0
+AVG: -10000.0
 Variance: 0.0
 
 
 Cluster 25
-    lung -> 18.0
-    mouse -> 5.0
-    bacterial -> 5.0
-    production -> 7.0
-    cell -> 18.0
-    mapk -> 7.0
-    copd -> 8.0
-AVG: 7.4545455
-Variance: 5.2112403
+    result -> 0.04152023773416619
+    salience -> 0.2648469261790648
+    non-selected -> 0.04642067745769763
+    ongoing -> 0.055899050209464035
+    select -> 0.06413629790243257
+    selection -> 0.114666177784102
+    low -> 0.03838229655826347
+    action -> 0.9443463322913314
+    increase -> 0.05880879243533345
+AVG: 0.16559768
+Variance: 0.2678864
 
 
 Cluster 24
-    bank -> 5.0
-    lending -> 6.0
-    business -> 5.0
-AVG: 5.0
-Variance: 0.70710677
+    sorely -> 0.26100688903516395
+    field -> 0.26100688903516395
+    young -> 0.26100688903516395
+    need -> 0.26100688903516395
+    progress -> 0.26100688903516395
+    recent -> 0.6002914264159276
+    research -> 0.5220137780703279
+AVG: 0.25865728
+Variance: 0.1772153
 
 
 Cluster 29
-    country -> 1.0
-    multi-family -> 1.0
-    house -> 1.0
-    19th-century -> 1.0
-AVG: 1.0
-Variance: 0.0
+    area -> 0.20739600267493621
+    leader -> 0.3559000876807876
+    education -> 0.2134872538597543
+    school -> 0.7533768889769576
+    identity -> 0.18246264336715792
+    economic -> 0.17608599702478575
+    policy -> 0.2667327462046606
+AVG: 0.25195798
+Variance: 0.18150763
 
 
 Cluster 28
-    probiotic -> 4.0
-    health -> 5.0
-AVG: 4.0
-Variance: 0.8164966
+    biodistribution -> 0.07318192539120097
+    study -> 0.17905476278846721
+    min -> 0.215077996676548
+    il-1ra -> 0.9183996166960218
+    uptake -> 0.06475228181177474
+    brain -> 0.06220776459028253
+    pet -> 0.15914990317385885
+    rapidly -> 0.08042208802818414
+AVG: 0.18669918
+Variance: 0.25000182
 
 
 Cluster 6
-    depression -> 7.0
-    qol -> 9.0
-    group -> 7.0
-AVG: 7.25
-Variance: 1.0897248
+    disease -> 0.4089546318251334
+    health -> 0.220461217042629
+    rabies -> 0.08885494147971008
+    travel -> 0.8551588842572193
+    traveller -> 0.16394098149495037
+    illness -> 0.07602228568553775
+AVG: 0.197968
+Variance: 0.24583523
 
 
 Cluster 52
-    median -> 7.0
-    aus -> 10.0
-AVG: 7.0
-Variance: 1.8708287
+    actii-orf4 -> 0.6392361190602319
+    transcription -> 0.2007071072455096
+    production -> 0.3486981793875528
+    gene -> 0.22171481962601652
+    culture -> 0.20012895665286823
+    actinorhodin -> 0.4464696064561237
+    increase -> 0.18271587726944447
+AVG: 0.25728124
+Variance: 0.16354936
 
 
 Cluster 7
-    bottle -> 50.0
-    acetaldehyde -> 27.0
-    water -> 22.0
-    drink -> 19.0
-AVG: 19.125
-Variance: 13.5963
+    aesthetic -> 0.6146999646222718
+    need -> 0.192239890852829
+    poor -> 0.1489224198011929
+    design -> 0.23656395376289038
+    ephemeral -> 0.6146999646222718
+    visual -> 0.1432686012161278
+    human -> 0.192239890852829
+AVG: 0.23951595
+Variance: 0.1938732
 
 
 Cluster 51
-    trust -> 1.0
-    economyfinancial -> 1.0
-    deepening -> 1.0
-    sector -> 1.0
-AVG: 1.0
-Variance: 0.0
+    attachment -> 0.9247167665901785
+    therapy -> 0.11341036382410151
+    change -> 0.08638293386799653
+    association -> 0.11197340935862976
+    global -> 0.12826194532832896
+    adult -> 0.21425083671046738
+    representation -> 0.07147289741970923
+    outcome -> 0.16772122554687002
+AVG: 0.19385488
+Variance: 0.24800245
 
 
 Cluster 8
-    adoption -> 7.0
-    e-business -> 8.0
-AVG: 6.0
-Variance: 1.5811388
+    yeast -> -10000.0
+AVG: -10000.0
+Variance: 0.0
 
 
 Cluster 50
-    market -> 16.0
-    rate -> 25.0
-    exchange -> 17.0
-AVG: 17.0
-Variance: 5.338539
+    psychic -> -10000.0
+AVG: -10000.0
+Variance: 0.0
 
 
 Cluster 9
-    product -> 19.0
-    organic -> 33.0
-AVG: 19.75
-Variance: 7.980445
+    fifty-six -> 0.19137487355798993
+    identify -> 0.19137487355798993
+    gene -> 0.870163759912228
+    dna2-interacting -> 0.39895238741928063
+AVG: 0.18397279
+Variance: 0.25643903
 
 
 Cluster 56
-    diffusion -> 7.0
-    thermal -> 7.0
-    boron -> 16.0
-    fluorine -> 9.0
-AVG: 6.714286
-Variance: 4.494895
+    polanyus -> 0.10887641478655521
+    society -> 0.2511047277506346
+    bring -> 0.22568114806664402
+    well -> 0.10169027124839566
+    threat -> 0.10169027124839566
+    technology -> 0.8689626771878904
+    benefit -> 0.10169027124839566
+    concern -> 0.1960513672747848
+AVG: 0.21435738
+Variance: 0.22552055
 
 
 Cluster 55
-    tumor -> 10.0
-    cancer -> 7.0
-    cell -> 7.0
-AVG: 7.25
-Variance: 1.7853571
+AVG: -0.28867513
+Variance: 5.181208E-9
 
 
 Cluster 54
-    firm -> 8.0
-    merger -> 8.0
-AVG: 7.5
-Variance: 0.5
+    normal -> 0.2598047130703326
+    patient -> 0.2512405219679254
+    function -> 0.3731422979862803
+    oesophageal -> 0.6983097744978872
+    ventricular -> 0.41677089883596274
+    group -> 0.19187063669743568
+AVG: 0.24619874
+Variance: 0.19619037
 
 
 Cluster 53
-    woman -> 7.0
-    spiritual -> 10.0
-    spirituality -> 23.0
-    life -> 6.0
-AVG: 9.0
-Variance: 6.5828056
+    innovation -> 0.8740651587272414
+    firm -> 0.1673993497498519
+    sme -> 0.1802303927218691
+    thai -> 0.1594964038730314
+    main -> 0.0965119190062638
+    food -> 0.3526539363894267
+AVG: 0.20362179
+Variance: 0.24114077
 
 
 Cluster 59
-    capital -> 11.0
-    human -> 7.0
-AVG: 6.5
-Variance: 2.8722813
+    normal -> 0.4458212522425246
+    hometown -> 0.0034199968806687773
+    world -> 0.003557471273910481
+    cut -> 0.0035277227744964198
+    social -> 0.00557363888808698
+    work -> 0.005563445583471618
+    de-skilling -> 0.0035277227744964198
+    campaign -> 0.0035209272380861763
+    retail -> 0.8950119392747311
+    flexibilisation -> 0.003557471273910481
+AVG: 0.13730815
+Variance: 0.28485155
 
 
 Cluster 58
-    benzoic -> 9.0
-AVG: 6.3333335
-Variance: 1.8856181
+    use -> 0.21523842676529695
+    design -> 0.09861478114505066
+    visual -> 0.8836382823277135
+    language -> 0.11983858276280238
+    rhetoric -> 0.31969539128518015
+    message -> 0.12079155303595039
+    research -> 0.1112734098471937
+AVG: 0.20266318
+Variance: 0.24041305
 
 
 Cluster 57
-    school -> 1.0
-    north -> 1.0
-    recreation -> 1.0
-    facility -> 1.0
-AVG: 1.0
-Variance: 0.0
+    poetic -> 0.1481195783113801
+    myth -> 0.6480279707163114
+    work -> 0.0774951499253217
+    poet -> 0.7240599275517184
+AVG: 0.19226614
+Variance: 0.24919498
 
 
 Cluster 0
-    unrest -> 5.0
-    civil -> 4.0
-AVG: 3.75
-Variance: 0.8291562
+    adoption -> 0.23299888644466382
+    management -> 0.3909367611024039
+    travel-related -> 0.3080598982315876
+    personal -> 0.23299888644466377
+    consideration -> 0.23299888644466382
+    travel -> 0.6444649514008355
+AVG: 0.2702307
+Variance: 0.14423287
 
 
 Cluster 1
-    area -> 8.0
-    leader -> 10.0
-    education -> 6.0
-    student -> 56.0
-    work -> 7.0
-    internationalisation -> 4.0
-    analysis -> 6.0
-    research -> 8.0
-    school -> 54.0
-    identity -> 8.0
-    leadership -> 6.0
-    behaviour -> 5.0
-    ict -> 9.0
-AVG: 11.705882
-Variance: 15.95864
+    antimony -> 0.08317799937725187
+    material -> 0.10594696635824048
+    find -> 0.04127848621468899
+    concentration -> 0.04194998115780502
+    acetaldehyde -> 0.18351666392644486
+    bottle -> 0.9629238006929927
+    water -> 0.03952220828924135
+    pet -> 0.07806753295705651
+    drink -> 0.05102230632864284
+    soft -> 0.05102230632864284
+AVG: 0.16384283
+Variance: 0.26961565
 
 
 Cluster 2
-    trial -> 7.0
-    therapist -> 6.0
-AVG: 5.75
-Variance: 0.8291562
+    panus -> 0.39040240160770645
+    method -> 0.18510816886444637
+    solution -> 0.6424984802777407
+    sensor -> 0.5002651022732496
+AVG: 0.25202927
+Variance: 0.17961822
 
 
 Cluster 3
-    accelerator -> 61.0
-    memory -> 37.0
-AVG: 39.75
-Variance: 12.557368
+    private -> 0.48536145137303294
+    argument -> 0.27410289604455856
+    consequence -> 0.27410289604455856
+    lose -> 0.23552519949092304
+    change -> 0.27410289604455856
+    industry -> 0.23552519949092257
+    equity -> 0.5595685586792278
+AVG: 0.261737
+Variance: 0.1503109
 
 
 Cluster 4
-    reference -> 3.0
-    bibliographical -> 3.0
-    cinema -> 2.0
-    leaf -> 3.0
-AVG: 2.4
-Variance: 0.8
+    supportive -> 0.13102124588476108
+    practice -> 0.4721900742311279
+    role -> 0.14752796564304269
+    palliative -> 0.20883311504205251
+    nursing -> 0.233737263308454
+    rehabilitation -> 0.14752796564304269
+    rehabilitation.this -> 0.14752796564304269
+    hour -> 0.16249279624644883
+    patient -> 0.8852126249097148
+    nurse -> 0.14752796564304269
+    deputise -> 0.3680484990210513
+    carer -> 0.26850674450138706
+    explore -> 0.14752796564304269
+    stroke -> 0.29505593128608537
+    article -> 0.14752796564304269
+    quality -> 0.2162872151180749
+    call -> 0.15194914530387063
+    doctor -> 0.7360969980421026
+    district -> 0.4522366468506633
+    care -> 1.4892668861914458
+AVG: 0.283879
+Variance: 0.31281096
 
 
 Cluster 5
-    chapter -> 40.0
-    online -> 38.0
-    learning -> 42.0
-AVG: 39.0
-Variance: 2.236068
+    religious -> 0.5418691484416479
+    faith -> 0.907002637711516
+    say -> 0.07756485544833727
+    experience -> 0.27576385538006726
+    truth -> 0.08828428250733597
+    god -> 0.10095052338210807
+    belief -> 1.1016267152387678
+    kierkegaard -> 0.24838251556317717
+    rational -> 0.0740887884422441
+    knowledge -> 0.0857533906553946
+AVG: 0.22094789
+Variance: 0.31481996
 
 
 Cluster 41
-    religious -> 78.0
-    experience -> 57.0
-    belief -> 97.0
-    religion -> 47.0
-AVG: 37.875
-Variance: 34.718285
+    diffusion -> 0.3063717053421456
+    adsorption -> 0.4816735541636438
+    surface -> 0.2517473281402939
+    semiconductor -> 0.38051122899617956
+    profile -> 0.24220152067952377
+    metal -> 0.23309788483584967
+    dose -> 0.23674277889366277
+    dft -> 0.3785951860691648
+    oxide -> 0.3347852217311702
+    thermal -> 0.3063717053421456
+    boron -> 0.7132758320872857
+    fepc -> 0.20168313742746044
+    fluorine -> 0.3644134766133222
+AVG: 0.26030284
+Variance: 0.15300167
 
 
 Cluster 40
-    patient -> 15.0
-    medicine -> 25.0
-    generic -> 20.0
-AVG: 16.75
-Variance: 6.647368
+AVG: -0.30151132
+Variance: 2.7086234E-8
 
 
 Cluster 45
-    art -> 17.0
-    artist -> 17.0
-    disability -> 22.0
-AVG: 16.75
-Variance: 3.8971143
+    rorty -> 0.7798590236623837
+    religious -> 0.32677708948907075
+    use -> 0.36595350904999263
+    claim -> 0.17158253399203433
+    argue -> 0.15334359558375843
+    belief -> 0.23092968754639787
+AVG: 0.23392026
+Variance: 0.20821336
 
 
 Cluster 44
-    theatre -> 6.0
-    small -> 5.0
-    system -> 11.0
-    production -> 5.0
-    national -> 11.0
-    industry -> 5.0
-AVG: 5.7777777
-Variance: 2.9731305
+    infection -> 0.6952763624637026
+    foxp3 -> 0.690813429338003
+    treg-cell -> 0.4244393541797319
+    burkholderia -> 0.42820568072740134
+    cepacia -> 0.42820568072740134
+    ico -> 0.397707061503721
+    response -> 0.18509698719284629
+    complex -> 0.3329076518675838
+    fibrosis -> 0.3927968476879637
+    cystic -> 0.3927968476879637
+AVG: 0.27318463
+Variance: 0.20375821
 
 
 Cluster 43
-    metaphor -> 4.0
-    financial -> 6.0
-AVG: 4.3333335
-Variance: 1.2472191
+    tourist -> 0.9523754472171596
+    german -> 0.07255873627799792
+    mobility -> 0.07840795618033303
+    guidebook -> 0.10605288845921809
+    analyse -> 0.06111535639948174
+    information -> 0.08787590903021372
+    behaviour -> 0.20157758121983868
+    place -> 0.08982495805080166
+    article -> 0.055560120840879995
+AVG: 0.17369407
+Variance: 0.26310202
 
 
 Cluster 42
-    blake -> 12.0
-    echo -> 10.0
-    poetry -> 10.0
-AVG: 10.25
-Variance: 1.0897248
+    give -> 0.19933586224707084
+    death -> 0.09994239756655321
+    verdict -> 0.548022315460463
+    suicide -> 0.7810310980701193
+    coroner -> 0.16203634312326773
+AVG: 0.20133796
+Variance: 0.24315146
 
 
 Cluster 49
-    reference -> 1.0
-    private -> 1.0
-    public -> 1.0
-    sector -> 1.0
-AVG: 1.0
-Variance: 0.0
+    temporary -> 0.5197034403294266
+    oecd -> 0.29583758703250695
+    work -> 0.1830886565394855
+    employment -> 0.5196808086370927
+    europe -> 0.33410618217033494
+AVG: 0.25332123
+Variance: 0.14971168
 
 
 Cluster 48
-    service -> 5.0
-    quaker -> 6.0
-AVG: 4.25
-Variance: 1.299038
+    hnscc -> 0.06817347257390742
+    acc -> 0.09569767254835193
+    kinase -> 0.11612940974419886
+    interaction -> 0.09226192914975577
+    imatinib -> 0.9478689127855799
+    synergistic -> 0.07158826932413405
+    gemcitabine -> 0.10675838153576188
+    investigate -> 0.08069157132832934
+    observe -> 0.09226573687121747
+    combine -> 0.08337881947338108
+AVG: 0.17548141
+Variance: 0.25784114
 
 
 Cluster 47
-    social -> 5.0
-    poverty -> 4.0
-    assistance -> 4.0
-AVG: 4.0
-Variance: 0.70710677
+    ethnic -> 0.5085534412672454
+    neighbourhood -> 0.23144678595143198
+    effect -> 0.34350605766753467
+    association -> 0.5085534412672454
+    differential -> 0.23144678595143217
+AVG: 0.25853768
+Variance: 0.13801603
 
 
 Cluster 46
-    nutrient -> 12.0
-    snack -> 17.0
-AVG: 11.0
-Variance: 3.9370039
+    domestic -> 0.2443065820875163
+    saving -> 0.4054920900042449
+    enterprise -> 0.22308124900872217
+    household -> 0.36928715562548386
+    investment -> 0.6388500586158755
+    electricity -> 0.22271445129614365
+    finance -> 0.2823054031203385
+AVG: 0.27314484
+Variance: 0.15602703
 
 
 Cluster 74
-    integrity -> 7.0
-    client -> 9.0
-AVG: 6.75
-Variance: 1.47902
+    ageing -> 0.11364313150967185
+    midlife -> 0.22263884372214315
+    ageism -> 0.2709205598837543
+    man -> 0.40533552240038073
+    gay -> 0.8187438282291579
+AVG: 0.21095827
+Variance: 0.23273675
 
 
 Cluster 73
-    reference -> 1.0
-    capital -> 1.0
-    imperfect -> 1.0
-    intertemporal -> 1.0
-AVG: 1.0
-Variance: 0.0
+    reduce -> 0.22766266634140672
+    production -> 0.4481014027900363
+    use -> 0.20151855854734607
+    produce -> 0.3956029696328215
+    glycerol -> 0.22790616215196
+    rapeseed -> 0.4073551218318387
+    xylitol -> 0.3788824339072222
+    acetaldehyde -> 0.8103501731436005
+    candida -> 0.18163706137445348
+    biodiesel -> 0.6816073732176212
+AVG: 0.27868366
+Variance: 0.20036505
 
 
 Cluster 72
-    software -> 19.0
-    processor -> 6.0
-    heterogeneity -> 7.0
-    hardware -> 7.0
-AVG: 7.5
-Variance: 5.408327
+    treatment -> 0.5913841010430133
+    therapy -> 0.2075565092941831
+    effect -> 0.16477183311532928
+    complex -> 0.1608726026667928
+    clustering -> 0.16477183311532928
+    trial -> 0.6467360769441916
+    therapist -> 0.18542069822913881
+AVG: 0.23971634
+Variance: 0.19454075
 
 
 Cluster 71
-    growth -> 8.0
-    economic -> 7.0
-AVG: 6.0
-Variance: 1.5811388
-
-
-Cluster 78
-    suicide -> 21.0
-    verdict -> 15.0
-AVG: 12.25
-Variance: 6.1390147
-
-
-Cluster 77
-    reference -> 3.0
-    system -> 1.0
-    fast -> 1.0
-    housing -> 1.0
-    reactorsinclude -> 1.0
-    processing -> 1.0
-    technology -> 2.0
-    fourier -> 1.0
-    hardware -> 1.0
-AVG: 1.3333334
-Variance: 0.6666667
-
-
-Cluster 76
-    knee -> 9.0
-    osteoarthritis -> 12.0
-    vitamin -> 9.0
-AVG: 8.75
-Variance: 2.4874685
-
-
-Cluster 75
-    teacher -> 24.0
-    education -> 18.0
-    teaching -> 26.0
-    sport -> 27.0
-AVG: 18.666666
-Variance: 7.9930525
-
-
-Cluster 79
-    land -> 92.0
-    consumption -> 65.0
-AVG: 67.5
-Variance: 14.671401
-
-
-Cluster 81
-    manager -> 3.0
-    trucking -> 3.0
-    company -> 3.0
-    congestion -> 3.0
-AVG: 3.0
+    streamer -> -10000.0
+AVG: -10000.0
 Variance: 0.0
 
 
+Cluster 78
+    receive -> 0.03876578737642465
+    study -> 0.06221038996713571
+    hepatocyte -> 0.08250719642480271
+    liver -> 0.14113049231113634
+    fruit -> 1.0400608405204095
+    scission -> 0.02685523999465271
+    juice -> 0.12193884931071415
+    paradisus -> 0.6469188050317025
+    citrus -> 0.7089219955608146
+    white -> 0.08350146404368022
+    group -> 0.09766196739406756
+AVG: 0.16521302
+Variance: 0.28558406
+
+
+Cluster 77
+    biotype -> 0.8877488908469288
+    lemon -> 0.1280348451754892
+    recover -> 0.1280348451754892
+    predominant -> 0.23189887436123163
+    15 3/7 -> 0.23189887436123163
+    153 -> 0.23189887436123163
+AVG: 0.20281672
+Variance: 0.2407834
+
+
+Cluster 76
+    biophysicist -> 0.9990329646913004
+    principle -> 0.004256378774580345
+    biology -> 0.009824857447663106
+    question -> 0.009697735323915001
+    meet -> 0.0064230564727123865
+    biophysic -> 0.005202691826695064
+    physics -> 0.00980016847720146
+    final -> 0.009697735323915001
+    idiom -> 0.036135171018543966
+    believe -> 0.009697735323915001
+AVG: 0.10997687
+Variance: 0.29647675
+
+
+Cluster 75
+    infection -> 0.20634951240590185
+    response -> 0.5866687485454141
+    follow -> 0.1302348798564282
+    type -> 0.11976135256122218
+    cell -> 0.7121072633056249
+    two -> 0.11621148739185355
+AVG: 0.22180438
+Variance: 0.21848886
+
+
+Cluster 79
+    small -> 0.1813994775514055
+    factory -> 0.1760658384998214
+    system -> 0.6564369799510735
+    production -> 0.4278163090093557
+    function -> 0.18090687550179554
+    industry -> 0.25571266631036194
+    base -> 0.3833596212117864
+AVG: 0.25676492
+Variance: 0.17197508
+
+
+Cluster 81
+    access -> 0.2393815910114239
+    decision -> 0.8085516918748005
+    maker -> 0.20652987712292725
+    information -> 0.3821399104034728
+    investigate -> 0.22709564775480381
+AVG: 0.22312681
+Variance: 0.2193241
+
+
 Cluster 80
-    methylation -> 4.0
-    psoriasis -> 5.0
-    locus -> 12.0
-    heritable -> 6.0
-    heritability -> 4.0
-AVG: 5.285714
-Variance: 2.9137254
+    non-specific -> 0.3122213556549805
+    item -> 0.5422068933797441
+    pain -> 0.24649650423445957
+    low -> 0.3122213556549805
+    reliability -> 0.46345188156589595
+    examination -> 0.3701347266338017
+AVG: 0.27613947
+Variance: 0.1462509
 
 
 Cluster 63
-    reference -> 4.0
-    generatorinclude -> 1.0
-    diary -> 1.0
-    hillhousing -> 1.0
-    art -> 1.0
-    bibliographical -> 4.0
-    center -> 1.0
-    noise -> 1.0
-    filmsinclude -> 1.0
-    poetry -> 1.0
-AVG: 1.6
-Variance: 1.1999999
+    designer -> -10000.0
+AVG: -10000.0
+Variance: 0.0
 
 
 Cluster 62
-    spiritual -> 21.0
-    istilah -> 7.0
-    indonesia -> 7.0
-    qol -> 12.0
-AVG: 8.857142
-Variance: 5.488392
+    trust -> 0.6824446894680399
+    security -> 0.6824446894680402
+    grid -> 0.20647430204133022
+    technology -> 0.07500940142594381
+AVG: 0.18597405
+Variance: 0.25336146
 
 
 Cluster 61
-    top -> 4.0
-AVG: 3.3333333
-Variance: 0.4714045
+    datum -> 0.23678514491033356
+    chapter -> 0.8257531348562864
+    edition -> 0.3419290318923122
+    exercise -> 0.31154271986468096
+AVG: 0.21212533
+Variance: 0.23017365
 
 
 Cluster 60
-    heat -> 8.0
-    transfer -> 8.0
-    rib -> 9.0
-AVG: 8.0
-Variance: 0.70710677
+AVG: -0.28867513
+Variance: 5.181208E-9
 
 
 Cluster 67
-    first-generation -> 7.0
-    antipsychotic -> 8.0
-    second-generation -> 9.0
-AVG: 7.5
-Variance: 1.118034
+    engagement -> 0.12394712610303973
+    patient -> 0.08370600130591285
+    service -> 0.5838147101684845
+    appointment -> 0.0907769360119622
+    adult -> 0.7675215736507393
+    transition -> 0.1278784917413523
+    paediatric -> 0.09170221961704696
+AVG: 0.20061672
+Variance: 0.24272083
 
 
 Cluster 66
-    saving -> 11.0
-    investment -> 15.0
-    electricity -> 10.0
-AVG: 11.0
-Variance: 2.5495098
+    development -> 0.22172459098780814
+    study -> 0.13803758431234128
+    period -> 0.1138193650657011
+    historical -> 0.12531935363105176
+    political -> 0.1138193650657011
+    vietnam -> 0.39331198831278785
+    decay -> 0.12531935363105173
+    accident -> 0.12531935363105176
+    management -> 0.0964052373567564
+    national -> 0.27672230887113325
+    uganda -> 0.9605570725585574
+    case -> 0.13803758431234128
+    park -> 0.2535003314035929
+    conflict -> 0.7424314985894607
+AVG: 0.21226135
+Variance: 0.2403356
 
 
 Cluster 65
-    mange -> 4.0
-    dog -> 7.0
-    psorptes -> 4.0
-AVG: 4.5
-Variance: 1.5
+    study -> 0.167737930712835
+    character -> 0.13410941393414152
+    white -> 0.8730047304086256
+    person -> 0.17399602440919593
+    concept -> 0.13410941393414152
+    spirituality -> 0.2740125355472316
+    god -> 0.19315699784489102
+AVG: 0.21494234
+Variance: 0.22810625
 
 
 Cluster 64
-    design -> 12.0
-    graphic -> 11.0
-AVG: 8.5
-Variance: 3.0413814
+    description -> -20000.0
+AVG: -20000.0
+Variance: 0.0
 
 
 Cluster 69
-    process -> 12.0
-    material -> 17.0
-    selection -> 8.0
-    design -> 18.0
-AVG: 8.555555
-Variance: 5.397759
+    firm -> 1.3541142726208832
+    capability -> 0.45504526227803543
+    high-tech -> 0.36629021366631254
+    strategic -> 0.39645855479721454
+    resource -> 0.5043562009513787
+    technology -> 0.8591126708127553
+    governance -> 0.42139307293335776
+AVG: 0.5079246
+Variance: 0.33120155
 
 
 Cluster 68
-    contents -> 2.0
-    abstract -> 2.0
-AVG: 2.0
+    link -> -10000.0
+AVG: -10000.0
 Variance: 0.0
 
 
 Cluster 70
-    reference -> 1.0
-    bibliographical -> 1.0
-    assembly -> 1.0
-    disassemblyinclude -> 1.0
-AVG: 1.0
+    investigation -> -10000.0
+AVG: -10000.0
 Variance: 0.0
 
 

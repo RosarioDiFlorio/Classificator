@@ -20,9 +20,9 @@ public class DictionaryBuilder {
 
 
 
-  public  void initJsonDataset(String fileName, String path, KeywordExtractor ke) throws IOException{
+  public  void initJsonDataset(String fileName, String path, KeywordExtractor ke, String categories) throws IOException{
     DatasetBuilder db = new DatasetBuilder(ke);
-    db.buildDataset(fileName,path);
+    db.buildDataset(fileName,path,categories);
   }
 
   public  HashMap<String, Dictionary> build(String JsonPath,int kMeans,String path) throws IOException{

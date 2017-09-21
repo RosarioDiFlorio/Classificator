@@ -55,7 +55,7 @@ public class CSVDataReader {
     String oldDataset = PathConfigurator.applicationFileFolder+"trainingDatasetMergedIntegrated.txt";
     createTxtTrainingFromCsvResults(fileCsv,lThreshold,uThreshold,pathWhereSave, categoryFilter);
     TxtDataReader txtReader = new TxtDataReader();
-    txtReader.mergeTxtDataset(oldDataset, pathWhereSave, 70, PathConfigurator.applicationFileFolder+"trainingDatasetMerged.txt");
+    //txtReader.mergeTxtDataset(oldDataset, pathWhereSave, 70, PathConfigurator.applicationFileFolder+"trainingDatasetMerged.txt");
   }
 
   public static void mainToTest(String[] args) throws Exception{

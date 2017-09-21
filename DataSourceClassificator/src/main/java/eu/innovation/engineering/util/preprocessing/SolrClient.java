@@ -18,6 +18,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
+import eu.innovation.engineering.LSA.keywordExtractor.LSAKeywordExtractor;
 import eu.innovation.engineering.config.Configurator;
 import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
@@ -30,7 +31,8 @@ public class SolrClient {
 
   public static void main(String[] args) throws Exception{
 
-    requestNTechincalPaper(0,20000);
+    KeywordExtractor ke = new LSAKeywordExtractor(PathConfigurator.keywordExtractorsFolder);
+    requestNTechincalPaper(0,20000,ke);
 
   }
 
@@ -124,11 +126,10 @@ public class SolrClient {
 
 
 
-  public static void requestNTechincalPaper(int firstPaperToJump,int numSourceRequest) throws Exception{
+  public static void requestNTechincalPaper(int firstPaperToJump,int numSourceRequest, KeywordExtractor ke) throws Exception{
 
     String cursorMark="*";
     String url = "http://192.168.200.81:8080/solr4/technical_papers/select?q=*%3A*&sort=id+asc&fl=id%2Cdc_title%2Cdc_description&wt=json&indent=true&cursorMark=";
-    KeywordExtractor extractorInnen = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
 
     int numSourceToSave = 0;
     JsonParser parserJson = new JsonParser();
@@ -171,7 +172,7 @@ public class SolrClient {
           List<String> toAnalyze = new ArrayList<String>();
           toAnalyze.add(source.getTitle());
           toAnalyze.add(description);
-          source.setKeywordList((ArrayList<Keyword>)extractorInnen.extractKeywordsFromTexts(toAnalyze, 4).stream().flatMap(l->l.stream()).collect(Collectors.toList()));
+          source.setKeywordList((ArrayList<Keyword>)ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).stream().flatMap(l->l.stream()).collect(Collectors.toList()));
           sourceList.add(source); 
         }
       }

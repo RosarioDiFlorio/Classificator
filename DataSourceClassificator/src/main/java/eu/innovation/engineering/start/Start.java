@@ -25,7 +25,7 @@ public class Start {
   //**MENU**
   
   //Primo passo, creazione del file dizionaries.json
-  private static final boolean buildJsonDictionaries = true;
+  private static final boolean buildJsonDictionaries = false;
   
   //Secondo passo creare i file Json di train e test
   private static final boolean buildJsonTraining = true;
@@ -82,17 +82,16 @@ public class Start {
   }
 
 
-  public  void createDictionaries(String path, KeywordExtractor ke) throws IOException {
+  public void createDictionaries(String path, KeywordExtractor ke) throws IOException {
 
-    // CREAZIONE DEI DIZIONARI
+    // CREAZIONE DEL FILE JSON DEI SOURCE DA USARE PER I DIZIONARI
 
     DictionaryBuilder dictionaryBuilder = new DictionaryBuilder();
-    dictionaryBuilder.initJsonDataset("dictionariesSource.txt",path,ke);
+    dictionaryBuilder.initJsonDataset("dictionariesSource.txt",path,ke,"categories.txt");
     String jsonPath = path+"dictionariesSource.json";
     
-    Runtime.getRuntime().gc();
-    
-    HashMap<String, Dictionary> dictionaries = dictionaryBuilder.build(jsonPath, numFeatures,path);      
+    // CREAZIONE DEI DIZIONARI CON CLUSTERING
+    dictionaryBuilder.build(jsonPath, numFeatures,path);      
     
 
   }
@@ -101,9 +100,9 @@ public class Start {
   public  void generateJsonFromTxt(String path, KeywordExtractor ke) throws IOException{
     DatasetBuilder db = new DatasetBuilder(ke);
     if(buildJsonTraining)
-      db.buildDataset("training.txt",path);
+      db.buildDataset("training.txt",path,"categories.txt");
     if(buildJsonTest)
-      db.buildDataset("test.txt",path);
+      db.buildDataset("test.txt",path,"categories.txt");
   }
 
 }
