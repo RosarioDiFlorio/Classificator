@@ -1,39 +1,55 @@
 package eu.innovation.engineering.test;
 
-import eu.innovation.engineering.LSA.keywordExtractor.LSAKeywordExtractor;
-import eu.innovation.engineering.LSA.keywordExtractor.Lemmatizer;
-import eu.innovationengineering.nlp.analyzer.stanfordnlp.StanfordLemmatizer;
-import eu.innovationengineering.nlp.analyzer.stanfordnlp.StanfordnlpAnalyzer;
+import java.util.ArrayList;
+import java.util.List;
+
+import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
+import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 
 public class TesterChuncker {
 
   public static void main(String[] args) throws Exception{
-    String test= "World War I (WWI or WW1), also known as the First World War, the Great War, or the War to End All Wars,[5] was a global war originating in Europe that lasted from 28 July 1914 to 11 November 1918. More than 70 million military personnel, including 60 million Europeans, were mobilised in one of the largest wars in history.[6][7] Over nine million combatants and seven million civilians died as a result of the war (including the victims of a number of genocides), a casualty rate exacerbated by the belligerents' technological and industrial sophistication, and the tactical stalemate caused by gruelling trench warfare. It was one of the deadliest conflicts in history, and paved the way for major political changes, including revolutions in many of the nations involved. Unresolved rivalries still extant at the end of the conflict contributed to the start of the Second World War only twenty-one years later.[8]"
-        +"The war drew in all the world's economic great powers,[9] assembled in two opposing alliances: the Allies (based on the Triple Entente of the Russian Empire, the French Third Republic, and the United Kingdom of Great Britain and Ireland) versus the Central Powers of Germany and Austria-Hungary. Although Italy was a member of the Triple Alliance alongside Germany and Austria-Hungary, it did not join the Central Powers, as Austria-Hungary had taken the offensive against the terms of the alliance.[10] These alliances were reorganised and expanded as more nations entered the war: Italy, Japan and the United States joined the Allies, while the Ottoman Empire and Bulgaria joined the Central Powers."
-        +"The trigger for the war was the assassination of Archduke Franz Ferdinand of Austria, heir to the throne of Austria-Hungary, by Yugoslav nationalist Gavrilo Princip in Sarajevo on 28 June 1914. This set off a diplomatic crisis when Austria-Hungary delivered an ultimatum to the Kingdom of Serbia,[11][12] and entangled international alliances formed over the previous decades were invoked. Within weeks, the major powers were at war and the conflict soon spread around the world."
-        +"On 25 July Russia began mobilisation and on 28 July the Austro-Hungarians declared war on Serbia. Germany presented an ultimatum to Russia to demobilise, and when this was refused, declared war on Russia on 1 August. Being outnumbered on the Eastern Front, Russia urged its Triple Entente ally France to open up a second front in the west. Over forty years earlier in 1870, the Franco-Prussian War had ended the Second French Empire and France had ceded the provinces of Alsace-Lorraine to a unified Germany. Bitterness over that defeat and the determination to retake Alsace-Lorraine made the acceptance of Russia's plea for help an easy choice, so France began full mobilisation on 1 August and, on 3 August, Germany declared war on France. The border between France and Germany was heavily fortified on both sides so, according to the Schlieffen Plan, Germany then invaded neutral Belgium and Luxembourg before moving towards France from the north, leading the United Kingdom to declare war on Germany on 4 August due to their violation of Belgian neutrality.[13][14] After the German march on Paris was halted in the Battle of the Marne, what became known as the Western Front settled into a battle of attrition, with a trench line that changed little until 1917. On the Eastern Front, the Russian army led a successful campaign against the Austro-Hungarians, but the Germans stopped its invasion of East Prussia in the battles of Tannenberg and the Masurian Lakes. In November 1914, the Ottoman Empire joined the Central Powers, opening fronts in the Caucasus, Mesopotamia and the Sinai. In 1915, Italy joined the Allies and Bulgaria joined the Central Powers; Romania joined the Allies in 1916, as did the United States in 1917."
-        +"The Russian government collapsed in March 1917, and a revolution in November followed by a further military defeat brought the Russians to terms with the Central Powers via the Treaty of Brest Litovsk, which granted the Germans a significant victory. After a stunning German offensive along the Western Front in the spring of 1918, the Allies rallied and drove back the Germans in a series of successful offensives. On 4 November 1918, the Austro-Hungarian empire agreed to an armistice, and Germany, which had its own trouble with revolutionaries, agreed to an armistice on 11 November 1918, ending the war in victory for the Allies."
-        +"By the end of the war or soon after, the German Empire, Russian Empire, Austro-Hungarian Empire and the Ottoman Empire ceased to exist. National borders were redrawn, with several independent nations restored or created, and Germany's colonies were parceled out among the victors. During the Paris Peace Conference of 1919, the Big Four (Britain, France, the United States and Italy) imposed their terms in a series of treaties. The League of Nations was formed with the aim of preventing any repetition of such a conflict. This effort failed, and economic depression, renewed nationalism, weakened successor states, and feelings of humiliation (particularly in Germany) eventually contributed to the start of World War II";
-    LSAKeywordExtractor kex = new LSAKeywordExtractor("");
-    /*
-    String test2 = "The dog is on the table";
+    String test= "Boundary Characterization of a Smooth Domain with Non-Compact Automorphism Group"+
+        "One of the most important problems in the field of several complex variables is the Greene-Krantz conjecture: <bold>Conjecture<bold/>  Let D be a smoothly bounded domain in C<super>n<super/> with non-compact automorphism group. Then the boundary of D is of finite type at any boundary orbit accumulation point. The purpose of this dissertation is to prove a result that supports the truthfulness of this conjecture: <bold>Theorem<bold/> Let D be a smoothly bounded convex domain in C<super>n<super/>. Suppose there exists a point p in D and a sequence  of automorphisms of D, f <sub>j<sub/>, such that f <sub>j<sub/>(p) &rarr q in the boundary of D non-tangentially. Furthermore, suppose Condition LTW holds. Then, the boundary of D is variety-free at q.";
 
-    KeywordExtractor inneKex = new MauiExtractor("", "none", "newInnenModel");
+    String test2 = "Alternatively activated dendritic cells regulate CD4+ T-cell polarization in vitro and in vivo"+
+        "Interleukin-4 is a cytokine widely known for its role in CD4(+) T cell polarization and its ability to alternatively activate macrophage populations. In contrast, the impact of IL-4 on the activation and function of dendritic cells (DCs) is poorly understood. We report here that DCs respond to IL-4 both in vitro and in vivo by expression of multiple alternative activation markers with a different expression pattern to that of macrophages. We further demonstrate a central role for DC IL-4Rα expression in the optimal induction of IFNγ responses in vivo in both Th1 and Th2 settings, through a feedback loop in which IL-4 promotes DC secretion of IL-12. Finally, we reveal a central role for RELMα during T-cell priming, establishing that its expression by DCs is critical for optimal IL-10 and IL-13 promotion in vitro and in vivo. Together, these data highlight the significant impact that IL-4 and RELMα can have on DC activation and function in the context of either bacterial or helminth pathogens";
+    String test3 = "Atomistic Simulations of Calcium Uranyl(VI) Carbonate Adsorption on Calcite and Stepped-Calcite Surfaces"+
+        "Adsorption of actinyl ions onto mineral surfaces is one of the main mechanisms that control the migration of these ions in environmental systems. Here, we present computational classical molecular dynamics (MD) simulations to investigate the behavior of U(VI) in contact with different calcite surfaces. The calcium-uranyl-carbonate [Ca2UO2(CO3)(3)] species is shown to display both inner and outer-sphere adsorption to the flat {10 (1) over bar4} and the stepped {31 (4) over bar8} and {3 (12) over bar 16} planes of calcite. Free energy calculations, using the umbrella sampling method, are employed to simulate adsorption paths of the same uranyl species on the different calcite surfaces under aqueous condition. Outer-sphere adsorption is found to dominate over inner-sphere adsorption because of the high free energy barrier of removing a uranyl-carbonate interaction and replacing it with a new uranyl-surface interaction. An important bin monolayer between the surface and the sorbed complex. From the free complex was also found to adsorb preferentially on the acute-stepped ding mode is proposed involving a single vicinal water energy profiles of the different Calcite surfaces, the uranyl {31 (4) over bar8} face of calcite, in agreement with experiment";
+    String test4 = "Epidermal cytokines and skin sensitization hazard."+
+        "The induction phase of skin sensitization is associated with the passage of antigen-bearing Langerhans cells (LC) from the epidermis to the draining lymph nodes. Recent investigations have revealed that the induction of LC migration following topical sensitization is dependent on tumour necrosis factor alpha (TNF-alpha), an epidermal cytokine. While in transit to the lymph nodes LC are subject to both phenotypic and functional maturation which, by analogy with in vitro studies, is also effected by epidermal cytokines (granulocyte/macrophage colony-stimulating factor, GM-CSF and interleukin-1, IL-1). It is now apparent that Langerhans cell function, the induction of cutaneous immune responses and effective sensitization are dependent on the availability of such cytokines and that contact allergens are able to provoke their production by keratinocytes and by Langerhans cells themselves. The development of screening strategies for the evaluation of skin sensitization potential as a function of epidermal cytokine production is discussed.";
+    String test5 = "Brain structures that control sexual and aggressive behavior in mice are wired differently in females than in males. This the finding of a study led by scientists at NYU School of Medicine and published online Sept. 18 in Nature Neuroscience."+
+        "Specifically, researchers found that, while control of aggressive behavior resides in same brain region in female and male mice, certain groups of brain cells in that region are organized differently. Two separate groups of cells were found to control sex and aggression in females, whereas circuits that encourage sex and aggression in males overlapped, say the study authors."+
+        "Knowing how aggressive behaviors are regulated is important because they are essential to survival in mice, as well as in humans, which have evolved to compete for food, mates, and territory, researchers say.";
+    LSACosineKeywordExtraction kex = new LSACosineKeywordExtraction("");
+
+
     List<String> testList = new ArrayList<>();
-    testList.add(test.toLowerCase());
-    System.out.println(kex.extractKeywordsFromText(testList, 5));
-     */
+    testList.add(test3);
+
+    List<String> toCompare = new ArrayList<>();
+
+    toCompare.addAll(kex.readGlossay("data/Glossary_of_biology.txt"));
+    toCompare.addAll(kex.readGlossay("data/Glossary_of_chemistry_terms.txt"));
+    toCompare.addAll(kex.readGlossay("data/mathematics.txt"));
+
+    //toCompare.add("science");
+    System.out.println(kex.extractKeywordsFromTexts(testList, toCompare,5));
+    
+    KeywordExtractor ke = new InnenExtractor("");
+    System.out.println(ke.extractKeywordsFromTexts(testList, 5));
+    /*
     StanfordnlpAnalyzer analyzer = new StanfordnlpAnalyzer();
     StanfordLemmatizer lemmStan = new StanfordLemmatizer();
     Lemmatizer lemm = new Lemmatizer();
     long startTime = 0;
-    
+
     startTime = System.currentTimeMillis();
     System.out.println(kex.createSentencesFromText(test));
     System.out.println(System.currentTimeMillis() - startTime);
 
 
-    
+
     startTime = System.currentTimeMillis();
     lemm.lemmatize(test);
     System.out.println(System.currentTimeMillis() - startTime);
@@ -47,7 +63,10 @@ public class TesterChuncker {
     System.out.println(lemmStan.lemmatizeTerm(test, "", ISO_639_1_LanguageCode.ENGLISH));
     System.out.println(System.currentTimeMillis() - startTime);
      */
+
   }
+
+
 
 
 }
