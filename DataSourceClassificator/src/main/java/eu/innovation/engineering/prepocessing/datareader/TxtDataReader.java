@@ -150,7 +150,8 @@ public class TxtDataReader implements DataReader {
       }
       else{
         String split[] = line.split(" ");
-        if(split.length>1){
+        
+        if(split!=null && split.length>1){
           paperIntoCurrentCategory.put(split[0], split[1]);
         }
       }
@@ -187,12 +188,12 @@ public class TxtDataReader implements DataReader {
     this.fileToReadSource = PathConfigurator.applicationFileFolder + fileToRead;
   }
   
-  public static String getFileToReadCategory() {
+  public  String getFileToReadCategory() {
     return fileToReadCategory;
   }
 
   
-  public static void setFileToReadCategory(String fileToReadCategory) {
+  public  void setFileToReadCategory(String fileToReadCategory) {
     TxtDataReader.fileToReadCategory = fileToReadCategory;
   }
 
