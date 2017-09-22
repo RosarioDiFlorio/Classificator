@@ -60,16 +60,16 @@ public class CSVDataReader {
   public static void mainToTest(String[] args) throws Exception{
     float uThreshold = (float) 1.0;
     float lThreshold = (float) 0.7;
-    int batchLine = 1920;   
+    int batchLine = 0;   
     boolean isCount =  false;   
     boolean all = true;
     String batchCategory = "";
 
     String categoryFolder = "";
 
-    String category = "science";
+    String category = "finance";
     //category = "all";
-    String testFolderName=PathConfigurator.applicationFileFolder+"resultsLSAke.csv";
+    String testFolderName=PathConfigurator.applicationFileFolder+"results/extractors/resultsLSAke.csv";
     File f = new File(testFolderName);
 
     if(f.isDirectory()){
@@ -155,7 +155,7 @@ public class CSVDataReader {
 
   public static void createTxtTrainingFromCsvResults(String csvFile,float lowThreshold,float upperThreshold,String PathWhereSave,String categoryFilter) throws FileNotFoundException{
     HashMap<String, List<String>> categoryMap = getCategoryMap(csvFile, lowThreshold, upperThreshold);
-    
+
     PrintWriter p = new PrintWriter(new File(PathWhereSave.replace(".txt", categoryFilter+".txt")));
     if(categoryFilter.equals("")){
       for(String category: categoryMap.keySet()){
@@ -196,7 +196,7 @@ public class CSVDataReader {
         e.printStackTrace();
         continue;
       }
-  
+
       if(probs <= upperThreshold && probs >= lowThreshold ){
         String category = dataMap.get(id).get(1);
         if(categoryMap.containsKey(category)){
@@ -292,14 +292,22 @@ public class CSVDataReader {
     List<Source> sources = solr.getSourcesFromSolr(idList, Paper.class);
     int localcount = 0;
     for(Source s: sources){
-      localcount ++;
-      System.out.println(localcount+" - "+category);
-      idToInsert += s.getId()+" 1\n";
-      p.println(s.getId()+" - "+dataMap.get(s.getId()).get(0)+" - "+dataMap.get(s.getId()).get(1));
-      p.println(kex.extractKeywordsFromTexts(s.getTexts(), numKey).stream().filter(l->l != null).flatMap(l->l.stream()).map(Keyword::getText).collect(Collectors.toList())+"\n");
-      p.println(s.getTitle());
-      p.println(s.getTexts().get(1));
-      p.println("-------------------------------------\n");
+        idToInsert += s.getId()+" 1\n";
+        p.println(s.getId()+" - "+dataMap.get(s.getId()).get(0)+" - "+dataMap.get(s.getId()).get(1));
+        
+        List<String> tmp = new ArrayList<String>();
+        String strTmp = "";
+        for(String str: s.getTexts()){
+          strTmp += str;
+        }
+        tmp.add(strTmp);
+        
+        p.println(kex.extractKeywordsFromTexts(tmp, numKey).stream().filter(l->l != null).flatMap(l->l.stream()).map(Keyword::getText).collect(Collectors.toList())+"\n");
+        localcount ++;
+        System.out.println(localcount+" - "+category);
+        p.println(s.getTitle());
+        p.println(s.getTexts().get(1));
+        p.println("-------------------------------------\n");      
     }
 
     p.println("\n"+idToInsert);
