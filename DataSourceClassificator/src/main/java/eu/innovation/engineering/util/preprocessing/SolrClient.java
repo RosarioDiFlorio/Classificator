@@ -8,7 +8,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
@@ -18,12 +17,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
-import eu.innovation.engineering.LSA.keywordExtractor.LSAKeywordExtractor;
 import eu.innovation.engineering.config.Configurator;
 import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 
+/**
+ * Questa classe serve per generare i dataset Json di test, facendo query da Solr per prendere N source
+ * @author lomasto
+ *
+ */
 public class SolrClient {
 
   private static final String remoteAddress = "http://192.168.200.82:8080/solr4";
@@ -31,8 +34,8 @@ public class SolrClient {
 
   public static void main(String[] args) throws Exception{
 
-    KeywordExtractor ke = new LSAKeywordExtractor(PathConfigurator.keywordExtractorsFolder);
-    requestNTechincalPaper(0,20000,ke);
+    KeywordExtractor ke = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
+    requestNTechincalPaper(0,5000,ke);
 
   }
 
@@ -63,12 +66,11 @@ public class SolrClient {
   }
 
 
-  public static void requestNPatent(int firstPatentToJump,int numSourceRequest) throws Exception{
+  public static void requestNPatent(int firstPatentToJump,int numSourceRequest,KeywordExtractor ke) throws Exception{
 
     String cursorMark="*";
 
     String url = "http://192.168.200.81:8080/solr4/patents/select?q=original_language%3A+%22eng%22+AND%0Aabstract+%3A+%5B%22%22+TO+*%5D%0A&sort=id+asc&fl=id%2Cabstract%2Cinvention_title_en%2Coriginal_language&wt=json&indent=true&cursorMark=";
-    KeywordExtractor extractorInnen = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
 
     int numSourceToSave = 0;
     JsonParser parserJson = new JsonParser();
@@ -109,10 +111,14 @@ public class SolrClient {
           source.setTitle(title);
           source.setId(id);
           List<String> toAnalyze = new ArrayList<String>();
-          toAnalyze.add(source.getTitle());
-          toAnalyze.add(description);
-          source.setKeywordList((ArrayList<Keyword>)extractorInnen.extractKeywordsFromTexts(toAnalyze, 4).stream().flatMap(l->l.stream()).collect(Collectors.toList()));
-          sourceList.add(source); 
+          toAnalyze.add(source.getTitle()+description); 
+          if(ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords)!=null && ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).size()>0)
+            if(ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0)!=null)
+              if(ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0).size()>0){
+                ArrayList<Keyword> keywordsList = (ArrayList<Keyword>) ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0);
+                source.setKeywordList(keywordsList);
+                sourceList.add(source); 
+              }
         }
       }
       cursorMark = parserJson.parse(response.toString()).getAsJsonObject().get("nextCursorMark").getAsString();
@@ -171,11 +177,13 @@ public class SolrClient {
           source.setId(id);
           List<String> toAnalyze = new ArrayList<String>();
           toAnalyze.add(source.getTitle()+description);
-          ArrayList<Keyword> keywordsList = (ArrayList<Keyword>) ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0);
-          if(keywordsList!=null){
-            source.setKeywordList(keywordsList);
-            sourceList.add(source); 
-          }
+          if(ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords)!=null && ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).size()>0)
+            if(ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0)!=null)
+              if(ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0).size()>0){
+                ArrayList<Keyword> keywordsList = (ArrayList<Keyword>) ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0);
+                source.setKeywordList(keywordsList);
+                sourceList.add(source); 
+              }
         }
       }
       cursorMark = parserJson.parse(response.toString()).getAsJsonObject().get("nextCursorMark").getAsString();

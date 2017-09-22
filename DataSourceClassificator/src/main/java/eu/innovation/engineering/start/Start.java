@@ -38,7 +38,7 @@ public class Start {
 
   //Other
   private static final String category = "";
-  private static final int numFeatures = 550;
+  private static final int numFeatures = 500;
 
   public static void main(String[] args) throws IOException{
     
