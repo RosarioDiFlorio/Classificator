@@ -99,7 +99,7 @@ public  class DatasetBuilder {
       //toAnalyze.add(toAnalyze.toString());
       toAnalyze.add(p.getTexts().get(0)+p.getTexts().get(1));
       try {   
-        if((ArrayList<Keyword>) keywordExtractor.extractKeywordsFromTexts(toAnalyze,Configurator.numKeywords).stream().flatMap(l->l.stream()).collect(Collectors.toList())!=null){
+        if(keywordExtractor.extractKeywordsFromTexts(toAnalyze,Configurator.numKeywords).get(0) != null){
           p.setKeywordList((ArrayList<Keyword>) keywordExtractor.extractKeywordsFromTexts(toAnalyze,Configurator.numKeywords).stream().flatMap(l->l.stream()).collect(Collectors.toList()));
         }
         else{
