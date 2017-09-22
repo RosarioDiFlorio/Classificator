@@ -17,6 +17,7 @@ import java.util.stream.Collectors;
 
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
+import eu.innovation.engineering.LSA.keywordExtractor.LSAKeywordExtractor;
 import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
@@ -26,11 +27,9 @@ import eu.innovation.engineering.util.preprocessing.SolrClient;
 import eu.innovation.engineering.util.preprocessing.Source;
 
 public class CSVDataReader {
-  private static final int numKey = 10;
-  private static final float upperThreshold = (float) 1.0;
-  private static final float lowThreshold = (float) 0.7;
+  private static final int numKey = 4;
   private static final int limitSource = 70;
-
+  private static final KeywordExtractor kex = new LSAKeywordExtractor(PathConfigurator.keywordExtractorsFolder);
 
 
   public static void main(String[] args) throws Exception{
@@ -61,16 +60,16 @@ public class CSVDataReader {
   public static void mainToTest(String[] args) throws Exception{
     float uThreshold = (float) 1.0;
     float lThreshold = (float) 0.7;
-    int batchLine = 0;   
-    boolean isCount =  true;   
-    boolean all = false;
+    int batchLine = 1920;   
+    boolean isCount =  false;   
+    boolean all = true;
     String batchCategory = "";
 
     String categoryFolder = "";
 
     String category = "science";
     //category = "all";
-    String testFolderName=PathConfigurator.applicationFileFolder+"results.csv";
+    String testFolderName=PathConfigurator.applicationFileFolder+"resultsLSAke.csv";
     File f = new File(testFolderName);
 
     if(f.isDirectory()){
@@ -259,7 +258,6 @@ public class CSVDataReader {
 
 
   public static int readResultClassifier(File csvFile, float lowThreshold,float upperThreshold,String category,boolean isCount,int batchLine) throws Exception{
-    KeywordExtractor kex = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
     Map<String, List<String>> dataMap = read(csvFile.getAbsolutePath());
 
     List<String> ids = new ArrayList<>();
@@ -298,7 +296,7 @@ public class CSVDataReader {
       System.out.println(localcount+" - "+category);
       idToInsert += s.getId()+" 1\n";
       p.println(s.getId()+" - "+dataMap.get(s.getId()).get(0)+" - "+dataMap.get(s.getId()).get(1));
-      p.println(kex.extractKeywordsFromTexts(s.getTexts(), numKey).stream().flatMap(l->l.stream()).map(Keyword::getText).collect(Collectors.toList())+"\n");
+      p.println(kex.extractKeywordsFromTexts(s.getTexts(), numKey).stream().filter(l->l != null).flatMap(l->l.stream()).map(Keyword::getText).collect(Collectors.toList())+"\n");
       p.println(s.getTitle());
       p.println(s.getTexts().get(1));
       p.println("-------------------------------------\n");
