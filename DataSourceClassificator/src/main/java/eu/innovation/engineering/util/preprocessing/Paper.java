@@ -9,6 +9,7 @@ public class Paper{
   private String id;
   private String dc_title;
   private String dc_description;
+  private String full_text;
   
   
   public String getId() {
@@ -37,8 +38,15 @@ public class Paper{
     List<String> texts = new ArrayList<>();
     texts.add(this.dc_title);
     texts.add(this.dc_description);
+    texts.add(this.full_text);
     Source s = new Source(id,dc_title,texts);
     return s;
+  }
+  public String getFull_text() {
+    return full_text;
+  }
+  public void setFull_text(String full_text) {
+    this.full_text = full_text;
   }
 
   

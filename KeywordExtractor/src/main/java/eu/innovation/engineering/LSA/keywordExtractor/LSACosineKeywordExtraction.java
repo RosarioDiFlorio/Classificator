@@ -1,4 +1,4 @@
-package eu.innovation.engineering.test;
+package eu.innovation.engineering.LSA.keywordExtractor;
 
 
 import java.io.BufferedReader;
@@ -19,8 +19,6 @@ import org.apache.cxf.jaxrs.client.WebClient;
 import com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider;
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
-import eu.innovation.engineering.LSA.keywordExtractor.Lemmatizer;
-import eu.innovation.engineering.LSA.keywordExtractor.MatrixRepresentation;
 import eu.innovation.engineering.keyword.extractor.util.CleanUtilis;
 import eu.innovationengineering.lang.ISO_639_1_LanguageCode;
 import eu.innovationengineering.lang.exceptions.LanguageException;
@@ -147,6 +145,7 @@ public class LSACosineKeywordExtraction {
 
     for(String word : wordList){
       column=0;
+      
       List<String> tmp = new ArrayList<>();
       tmp.add(word);
       textList = new ArrayList<>();
@@ -161,7 +160,11 @@ public class LSACosineKeywordExtraction {
       //weigth = weigth / toCompareVectors.length-1;
 
 
-      for(List<String> sentence : sentences){  
+      for(List<String> sentence : sentences){
+        if(sentence.contains(word))
+          weigth = weigth *  Tf(word, sentences, column);
+        else
+          weigth = 0;
         matrix.addToEntry(row, column,weigth);
         column++;
       }

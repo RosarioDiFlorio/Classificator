@@ -13,15 +13,10 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
-import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
-
-import eu.innovation.engineering.LSA.keywordExtractor.LSAKeywordExtractor;
 import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
-import eu.innovation.engineering.prepocessing.DatasetBuilder;
 import eu.innovation.engineering.util.preprocessing.Paper;
 import eu.innovation.engineering.util.preprocessing.SolrClient;
 import eu.innovation.engineering.util.preprocessing.Source;
@@ -54,18 +49,23 @@ public class CSVDataReader {
     //txtReader.mergeTxtDataset(oldDataset, pathWhereSave, 70, PathConfigurator.applicationFileFolder+"trainingDatasetMerged.txt");
   }
 
+  /**
+   * This function is the main function to read the results and analize them
+   * @param args
+   * @throws Exception
+   */
   public static void mainToTest(String[] args) throws Exception{
-    String testFolderName=PathConfigurator.applicationFileFolder+"results/extractors/resultsLSA.csv";
-    KeywordExtractor kex = new LSAKeywordExtractor(PathConfigurator.keywordExtractorsFolder);
+    String testFolderName=PathConfigurator.applicationFileFolder+"results/extractors/resultsINN.csv";
+    KeywordExtractor kex = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
     
     float uThreshold = (float) 1.0;
-    float lThreshold = (float) 0.7;
+    float lThreshold = (float) 0.8;
     int batchLine = 0;   
-    boolean isCount =  false;   
+    boolean isCount =  true;   
     boolean all = true;
     String batchCategory = "";
     String categoryFolder = "";
-    String category = "finance";
+    String category = "business and industrial";
 
     File f = new File(testFolderName);
 
@@ -87,6 +87,23 @@ public class CSVDataReader {
     }
   }
   
+  /**
+   * 
+   * This function call the function read ResultClassifier and format
+   * the results for different setup and different type of keyword extraction.
+   * to analyze in the deep the results.
+   * @param fileToAnalyze
+   * @param kex
+   * @param lThreshold
+   * @param uThreshold
+   * @param category
+   * @param batchCategory
+   * @param categoryFolder
+   * @param isCount
+   * @param batchLine
+   * @param all
+   * @throws Exception
+   */
   public static void formatResultsFile(File fileToAnalyze, KeywordExtractor kex, float lThreshold,float uThreshold,String category,String batchCategory,String categoryFolder,boolean isCount,int batchLine,boolean all) throws Exception{
     int totalCount = 0;
     System.out.println("FILE -> "+fileToAnalyze);
@@ -96,9 +113,7 @@ public class CSVDataReader {
         categories = TxtDataReader.getCategories(PathConfigurator.rootFolder+"categories.txt");
       else
         categories = TxtDataReader.getCategories(PathConfigurator.rootFolder+categoryFolder+"/"+"categories.txt");  
-      
-      System.out.println(categories.size());
-      
+            
       for(int j = 0; j<categories.size();j++){
         int countDocs = 0;
         category = categories.get(j);
@@ -144,7 +159,7 @@ public class CSVDataReader {
         continue;
       }
       if((probs <= upperThreshold) && (probs >= lowThreshold) ){       
-        if(dataMap.get(id).get(1).replace("_", " ").contains(category)|| category.equals("")){
+        if(dataMap.get(id).get(1).replace("_", " ").equals(category)|| category.equals("")){
           if(count < batchLine || isCount){
             count++;
             p.println(id+" 1");
@@ -170,7 +185,7 @@ public class CSVDataReader {
         }
         tmp.add(strTmp);
         
-        p.println(kex.extractKeywordsFromTexts(tmp, numKey).stream().filter(l->l != null).flatMap(l->l.stream()).map(Keyword::getText).collect(Collectors.toList())+"\n");
+        //p.println(kex.extractKeywordsFromTexts(tmp, numKey).stream().filter(l->l != null).flatMap(l->l.stream()).map(Keyword::getText).collect(Collectors.toList())+"\n");
         localcount ++;
         System.out.println(localcount+" - "+category);
         p.println(s.getTitle());
@@ -244,50 +259,11 @@ public class CSVDataReader {
     return categoryMap;
   }
 
-  public static void createGenericDataset(String pathFolder) throws Exception{
-    String line = "";
-    String txtFile="";
-    List<Source> listSource = new ArrayList<>();
-    KeywordExtractor kex = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
-    File folder = new File(pathFolder);
-    File[] listOfFiles = folder.listFiles();
-    String debug ="";
-    for (int i = 0; i < listOfFiles.length; i++) {
-      if (listOfFiles[i].isFile()) {
-        System.out.println(listOfFiles[i].getName());
-        txtFile = listOfFiles[i].getName();
-        String fullPath = pathFolder+txtFile;
-        try (BufferedReader br = new BufferedReader(new FileReader(fullPath))) {
-          int count = 0;
-          List<String> texts = new ArrayList<>();
-          Source s = new Source();
-          while ((line = br.readLine()) != null) {
-            if(count == 0){
-              s.setTitle(line);
-              count++;
-            }
-            texts.add(line);
-          }
-          s.setTexts(texts);
-          s.setId(txtFile);
-          s.setKeywordList((ArrayList<Keyword>) kex.extractKeywordsFromTexts(texts, 20).stream().flatMap(l->l.stream()).collect(Collectors.toList()));
-          listSource.add(s);
-          debug+=s.getId()+"\n";
-          debug+= s.getTitle()+"\n\n";
-          debug+=s.getKeywordList().stream().map(k->k.getText()).collect(Collectors.toList()).toString()+"\n";
-          debug +="---------------------------\n\n";
-
-        }catch (Exception e) {
-          e.printStackTrace();
-        }           
-      }
-    }
-    DatasetBuilder.saveSources(listSource, PathConfigurator.trainingAndTestFolder+"TestGeneric.json");
-  }
-
-
-
-
+  /**
+   * The basic function that read the the csv file.
+   * @param csvFile
+   * @return
+   */
   public static Map<String,List<String>> read(String csvFile) {
     String line = "";
     String cvsSplitBy = ",";

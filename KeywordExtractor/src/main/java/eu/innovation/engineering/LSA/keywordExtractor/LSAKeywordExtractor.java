@@ -47,12 +47,15 @@ public class LSAKeywordExtractor implements KeywordExtractor {
     List<List<Keyword>> toReturn = new ArrayList<List<Keyword>>();
     for(String text: toAnalyze){
       List<Keyword> keywordList = new ArrayList<Keyword>();
+      System.out.println("Senteces step start");
       List<List<String>> sentenceList = createSentencesFromText(text);
+      System.out.println("Step over\n Next Step -> building matrix A");
       MatrixRepresentation matrixA = buildMatrixA(sentenceList);
+      System.out.println("Step over\n Next Step -> SVD decomposition");
       RealMatrix U = SVD(matrixA);
       keywordList = getKeywordList(matrixA, U, numKeywordsToReturn);
+      System.out.println("All step completed");
       toReturn.add(keywordList);
-
     }
 
     return toReturn;
@@ -109,7 +112,7 @@ public class LSAKeywordExtractor implements KeywordExtractor {
   public  MatrixRepresentation buildMatrixA(List<List<String>> sentences){
 
     List<String> wordList = new ArrayList<String>();
-
+    
 
 
     //crea la lista di word
@@ -120,7 +123,8 @@ public class LSAKeywordExtractor implements KeywordExtractor {
         }
       }
     }
-
+    System.out.println("senteces number -> "+sentences.size());
+    System.out.println("words number -> "+wordList.size());
     //crea la matrice
     Array2DRowRealMatrix matrix = new Array2DRowRealMatrix(wordList.size(),sentences.size());
     int row=0;
