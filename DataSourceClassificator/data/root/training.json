@@ -1375,17 +1375,6 @@
   } ],
   "conceptList" : null
 }, {
-  "id" : "10132325_183",
-  "title" : "Contents",
-  "description" : null,
-  "texts" : [ "Contents", "[No abstract]" ],
-  "keywordList" : null,
-  "categoryList" : [ {
-    "label" : "society",
-    "score" : 1.0
-  } ],
-  "conceptList" : null
-}, {
   "id" : "27039789_645",
   "title" : "Biophysics",
   "description" : null,
@@ -3573,17 +3562,6 @@
     "sentiment" : null,
     "text" : "variation"
   } ],
-  "categoryList" : [ {
-    "label" : "society",
-    "score" : 1.0
-  } ],
-  "conceptList" : null
-}, {
-  "id" : "10131781_183",
-  "title" : "Contents",
-  "description" : null,
-  "texts" : [ "Contents", "[No abstract]" ],
-  "keywordList" : null,
   "categoryList" : [ {
     "label" : "society",
     "score" : 1.0
@@ -9094,17 +9072,6 @@
   } ],
   "conceptList" : null
 }, {
-  "id" : "10130599_183",
-  "title" : "Pittsburgh U.S.A.",
-  "description" : null,
-  "texts" : [ "Pittsburgh U.S.A.", "[No abstract]" ],
-  "keywordList" : null,
-  "categoryList" : [ {
-    "label" : "society",
-    "score" : 1.0
-  } ],
-  "conceptList" : null
-}, {
   "id" : "10138785_183",
   "title" : "High prevalence of lipoatrophy in pre-pubertal South African children on antiretroviral therapy: a cross-sectional study",
   "description" : null,
@@ -10776,17 +10743,6 @@
     "sentiment" : null,
     "text" : "reus"
   } ],
-  "categoryList" : [ {
-    "label" : "society",
-    "score" : 1.0
-  } ],
-  "conceptList" : null
-}, {
-  "id" : "10132908_183",
-  "title" : "[Contributors]",
-  "description" : null,
-  "texts" : [ "[Contributors]", "[No abstract]" ],
-  "keywordList" : null,
   "categoryList" : [ {
     "label" : "society",
     "score" : 1.0

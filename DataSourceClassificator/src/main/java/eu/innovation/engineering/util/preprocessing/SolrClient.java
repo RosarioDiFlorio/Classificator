@@ -35,7 +35,7 @@ public class SolrClient {
   public static void main(String[] args) throws Exception{
 
     KeywordExtractor ke = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
-    requestNTechincalPaper(0,5000,ke);
+    requestNTechincalPaper(0,10000,ke);
 
   }
 
@@ -177,13 +177,19 @@ public class SolrClient {
           source.setId(id);
           List<String> toAnalyze = new ArrayList<String>();
           toAnalyze.add(source.getTitle()+description);
+          try{
           if(ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords)!=null && ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).size()>0)
-            if(ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0)!=null)
+            if(ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0)!=null && !ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0).isEmpty()){
               if(ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0).size()>0){
                 ArrayList<Keyword> keywordsList = (ArrayList<Keyword>) ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0);
                 source.setKeywordList(keywordsList);
                 sourceList.add(source); 
+                }
               }
+            }
+          catch(Exception ex){
+            System.out.println("Vado in exception per un motivo sconosciuto");
+          }
         }
       }
       cursorMark = parserJson.parse(response.toString()).getAsJsonObject().get("nextCursorMark").getAsString();
