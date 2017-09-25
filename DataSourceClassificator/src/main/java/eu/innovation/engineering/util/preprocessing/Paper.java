@@ -40,6 +40,7 @@ public class Paper{
     texts.add(this.dc_description);
     texts.add(this.full_text);
     Source s = new Source(id,dc_title,texts);
+    s.setDescription(dc_description);
     return s;
   }
   public String getFull_text() {

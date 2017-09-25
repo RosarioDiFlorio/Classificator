@@ -11,10 +11,17 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
+import eu.innovation.engineering.LSA.keywordExtractor.LSACosineKeywordExtraction;
+import eu.innovation.engineering.config.Configurator;
 import eu.innovation.engineering.config.PathConfigurator;
+import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
+import eu.innovation.engineering.prepocessing.datareader.TxtDataReader;
 import eu.innovation.engineering.prepocessing.featurextractor.ClusteringKMeans;
 import eu.innovation.engineering.util.featurextractor.SourceVector;
+import eu.innovation.engineering.util.preprocessing.Paper;
+import eu.innovation.engineering.util.preprocessing.SolrClient;
 import eu.innovation.engineering.util.preprocessing.Source;
 
 /**
@@ -24,25 +31,47 @@ import eu.innovation.engineering.util.preprocessing.Source;
 public class SourceVectorBuilder {
 
   
+  
+  public static void main(String[] args) throws Exception{
+    buildSourceVectors(PathConfigurator.rootFolder+"science/", true,true);
+  }
+  
+  
   /**
    * @param args
-   * @throws IOException
+   * @throws Exception 
+   * @throws s 
    */
-  public static void main (String[] args) throws IOException{
-    boolean fromSolr = false;
-    String fileName = "training_results.txt";
-    String path = PathConfigurator.applicationFileFolder;
-    String pathWhereSave = PathConfigurator.applicationFileFolder+"sources.json";
+  public static void buildSourceVectors (String path,boolean withGlossaries,boolean fromSolr) throws Exception{
 
+    String trainingFile = path+"training.txt";
+    String glossaryFile = path+"glossaries.json";
+    String pathWhereSave = path+"sourceVector.json";
+    
+    //prendo gli id dal file training.txt
+    TxtDataReader dataReader = new TxtDataReader();
+    dataReader.setFileToReadSource(trainingFile);    
+    List<String> sourcesIds = new ArrayList<>();
+    sourcesIds.addAll(dataReader.getIds());
+    
     List<Source> sources = new ArrayList<>();
-    DatasetBuilder sourceBuilder = new DatasetBuilder();
-    if(fromSolr){
-      sources = sourceBuilder.buildDataset(fileName, path, "categories.txt");
-      sourceBuilder.saveSources(sources, pathWhereSave);
+    DatasetBuilder dataBuilder = new DatasetBuilder();
+    if(fromSolr){    
+      if(withGlossaries){
+        KeywordExtractor ke = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder, glossaryFile);
+        sources = SolrClient.getSourcesFromSolr(sourcesIds, Paper.class);        
+        for(Source source : sources){
+          String titleAndDes = source.getTitle()+" "+source.getDescription();
+          List<String> toAnalyze = new ArrayList<>();
+          toAnalyze.add(titleAndDes);
+          source.setKeywordList((ArrayList<Keyword>) ke.extractKeywordsFromTexts(toAnalyze,Configurator.numKeywords).stream().flatMap(l->l.stream()).collect(Collectors.toList()));
+        }                
+      }else      
+        sources = dataBuilder.buildDataset("training.txt", path, "categories.txt");
     }else{
-      sources = sourceBuilder.loadSources(PathConfigurator.applicationFileFolder+"training_results.json");
+      sources = DatasetBuilder.loadSources(path+"training.json");
     }
-    pathWhereSave = PathConfigurator.applicationFileFolder+"sourceVectors.json";
+    pathWhereSave = path+"sourceVectors.json";
     saveSourceVectorList(pathWhereSave, createSourceVectorList(sources));
   }
   

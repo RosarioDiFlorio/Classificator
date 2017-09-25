@@ -11,11 +11,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 import eu.innovation.engineering.config.PathConfigurator;
-import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
-import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 import eu.innovation.engineering.prepocessing.interfaces.DataReader;
 import eu.innovation.engineering.util.preprocessing.Paper;
 import eu.innovation.engineering.util.preprocessing.SolrClient;
@@ -67,6 +64,7 @@ public class TxtDataReader implements DataReader {
     }
     return idPapers;
   }
+  
 
   public void mergeTxtDataset(String pathFile1, String pathFile2,int limitSource, String pathWhereSave, String pathCategories) throws IOException{
     
@@ -103,25 +101,16 @@ public class TxtDataReader implements DataReader {
 
 
   public void checkCategory(String pathFile,String category,boolean withTexts,String pathCategories) throws Exception{
-    KeywordExtractor kex = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
     SolrClient solr = new SolrClient();
 
     List<String> ids = new ArrayList<>();
     ids.addAll(categoriesWithIds(pathFile,pathCategories).get("/"+category.replace("_", " ")).keySet());
     List<Source> sources = solr.getSourcesFromSolr(ids, Paper.class);      
 
-    PrintWriter p = new PrintWriter(new File(PathConfigurator.applicationTestFolder+category+"ToCheck.txt"));
     for(Source src: sources){
-      p.println(src.getId()+" - "+category);
-      p.println(src.getTitle());
-      p.println(kex.extractKeywordsFromTexts(src.getTexts(), 10).stream().flatMap(l->l.stream()).map(k->k.getText()).collect(Collectors.toList())+"\n");
 
-      if(withTexts)
-        src.getTexts().stream().forEach(p::println);
-      p.println("--------------------------------------\n");
-      p.flush();
     }
-    p.close();
+
   }
 
   /**
@@ -185,7 +174,7 @@ public class TxtDataReader implements DataReader {
   }
 
   public void setFileToReadSource(String fileToRead) {
-    this.fileToReadSource = PathConfigurator.applicationFileFolder + fileToRead;
+    this.fileToReadSource =  fileToRead;
   }
   
   public  String getFileToReadCategory() {

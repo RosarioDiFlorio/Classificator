@@ -202,7 +202,7 @@ public class SolrClient {
   }
 
 
-  private List<String> balanceQuery(List<String> idPapers){
+  private static List<String> balanceQuery(List<String> idPapers){
 
     String idsString = "";
     List<String> toReturn = new ArrayList<>();
@@ -224,7 +224,7 @@ public class SolrClient {
   }
 
 
-  public List<Source> getSourcesFromSolr(List<String> list, Class c) throws IOException{
+  public static List<Source> getSourcesFromSolr(List<String> list, Class c) throws IOException{
 
     List<Source> toReturn = new ArrayList<Source>();
     Gson gson = new Gson();

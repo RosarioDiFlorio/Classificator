@@ -2,6 +2,7 @@ package eu.innovation.engineering.LSA.keywordExtractor;
 
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -9,6 +10,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import org.apache.commons.math3.linear.Array2DRowRealMatrix;
@@ -16,9 +18,14 @@ import org.apache.commons.math3.linear.RealMatrix;
 import org.apache.commons.math3.linear.SingularValueDecomposition;
 import org.apache.cxf.jaxrs.client.WebClient;
 
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider;
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
+import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 import eu.innovation.engineering.keyword.extractor.util.CleanUtilis;
 import eu.innovationengineering.lang.ISO_639_1_LanguageCode;
 import eu.innovationengineering.lang.exceptions.LanguageException;
@@ -32,25 +39,34 @@ import eu.innovationengineering.word2vec.service.rest.impl.Word2vecServiceImpl;
  * @author Luigi
  *
  */
-public class LSACosineKeywordExtraction {  
+public class LSACosineKeywordExtraction implements KeywordExtractor {  
 
 
 
   private String mainDirectory = "";
   private static String stopWordPath= "data/stopwords/stopwords_en.txt";
+  private static List<String> toCompare;
+  
 
 
-
-  public LSACosineKeywordExtraction(String mainDir) {
+  public LSACosineKeywordExtraction(String mainDir,String glossaryName) throws JsonParseException, JsonMappingException, IOException {
     setMainDirectory(mainDir);
     setStopWordPath(getMainDirectory() + stopWordPath);
+    
+    ObjectMapper mapper = new ObjectMapper();
+    Map<String,List<String>> glossaryMap = mapper.readValue(new File(glossaryName),new TypeReference<Map<String,List<String>>>() {});
+    toCompare = new ArrayList<>();
+    for(String glossary: glossaryMap.keySet()){
+      toCompare.addAll(glossaryMap.get(glossary));
+    }  
+    
   }
 
 
-  /* (non-Javadoc)
-   * @see eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor#extractKeywordsFromText(java.util.List, int)
-   */
-  public static List<List<Keyword>> extractKeywordsFromTexts(List<String> toAnalyze,List<String> toCompare, int numKeywordsToReturn) throws Exception {
+
+
+  @Override
+  public List<List<Keyword>> extractKeywordsFromTexts(List<String> toAnalyze, int numKeywordsToReturn) throws Exception {
     List<List<Keyword>> toReturn = new ArrayList<List<Keyword>>();
     List<List<String>> textList = new ArrayList<>();
     
@@ -376,5 +392,17 @@ public class LSACosineKeywordExtraction {
     }
     return toReturn;
   }
+
+
+  public static List<String> getToCompare() {
+    return toCompare;
+  }
+
+
+  public static void setToCompare(List<String> toCompare) {
+    LSACosineKeywordExtraction.toCompare = toCompare;
+  }
+
+
 
 }

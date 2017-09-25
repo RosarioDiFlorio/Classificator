@@ -50,7 +50,7 @@ public class TesterChuncker {
         +"substantial financial support to this research and to my graduate education"
         +"through AASERT funding under ONR Grant N00014-93-1-1140. NSF supported the purchase of"
         +"hardware and services under NSF Grant OCE-9314357";
-    LSACosineKeywordExtraction kex = new LSACosineKeywordExtraction("");
+    LSACosineKeywordExtraction kex = new LSACosineKeywordExtraction("","");
 
 
     List<String> testList = new ArrayList<>();

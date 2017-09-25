@@ -14,6 +14,6 @@ public interface KeywordExtractor {
    */
   public List<List<Keyword>> extractKeywordsFromTexts(List<String> toAnalyze, int numKeywordsToReturn) throws Exception;
   
-
+  
 
 }

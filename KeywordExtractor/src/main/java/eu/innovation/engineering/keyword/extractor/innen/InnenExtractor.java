@@ -36,7 +36,7 @@ public class InnenExtractor implements KeywordExtractor {
   private String stopWordPath= "data/stopwords/stopwords_en.txt";
   private String mainDirectory = "";
   private LanguageDetector languageDetector;
-
+  
 
   public InnenExtractor(String mainDirectory){
     this.mainDirectory = mainDirectory;
@@ -130,6 +130,10 @@ public class InnenExtractor implements KeywordExtractor {
   public void setStopWordPath(String stopWordPath) {
     this.stopWordPath = stopWordPath;
   }
+
+
+
+
 
 
 

@@ -30,7 +30,7 @@ public class Test {
      */
     KeywordExtractor lsaKe = new LSAKeywordExtractor(PathConfigurator.keywordExtractorsFolder);
     KeywordExtractor innKe = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
-    LSACosineKeywordExtraction lsaCosKe = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder);
+    LSACosineKeywordExtraction lsaCosKe = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder,"");
 
 
     ObjectMapper mapper = new ObjectMapper();
@@ -68,7 +68,7 @@ public class Test {
 
       List<List<Keyword>> innResults = innKe.extractKeywordsFromTexts(toAnalyze, 5);
       //    List<List<Keyword>> lsaResults = lsaKe.extractKeywordsFromTexts(toAnalyze, 5);
-      List<List<Keyword>> lsaCosResults = lsaCosKe.extractKeywordsFromTexts(toAnalyze, toCompare, 5);
+      List<List<Keyword>> lsaCosResults = lsaCosKe.extractKeywordsFromTexts(toAnalyze, 5);
 
       System.out.println("ID -> "+source.getId());
       System.out.println("Title ->"+source.getTitle()+"\n");
@@ -79,12 +79,6 @@ public class Test {
       System.out.println("LSACosine -> "+lsaCosResults.get(0));
       System.out.println("--------------------------\n");
     }
-    /*
-    System.out.println("Keyword from full_text");
-    System.out.println("INNEN ->"+innResults.get(1));
-//    System.out.println("LSA ->"+lsaResults.get(1));
-    System.out.println("LSACosine -> "+lsaCosResults.get(1));
-    System.out.println("--------------------------\n");
-     */
+
   }
 }
