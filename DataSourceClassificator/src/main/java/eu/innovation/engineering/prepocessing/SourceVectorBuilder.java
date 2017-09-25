@@ -37,7 +37,7 @@ public class SourceVectorBuilder {
     List<Source> sources = new ArrayList<>();
     DatasetBuilder sourceBuilder = new DatasetBuilder();
     if(fromSolr){
-      sources = sourceBuilder.buildDataset(fileName, path, "categores.txt");
+      sources = sourceBuilder.buildDataset(fileName, path, "categories.txt");
       sourceBuilder.saveSources(sources, pathWhereSave);
     }else{
       sources = sourceBuilder.loadSources(PathConfigurator.applicationFileFolder+"training_results.json");

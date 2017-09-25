@@ -145,7 +145,7 @@ public class TrainingSetBuilder {
 
      
     List<String> listCategories = TxtDataReader.getCategories(path+"categories.txt");
-    newSource=keywordFilterLSA(newSource, listCategories);
+    //newSource=keywordFilterLSA(newSource, listCategories);
     
     DatasetBuilder.saveSources(newSource, path+"/training.json");
 
@@ -153,7 +153,8 @@ public class TrainingSetBuilder {
   }
 
 
-  public static List<Source> keywordFilterLSA (List<Source> sourceList, List<String> categoryChoose) throws IOException{
+  //Metodo che filtra le keywords delle source. Da usare solo quando si usa InnenExtractor nelle sottogatergorie. Permette di eliminare le keywords con basso valore semantico rispetto alla subcategory
+  public static List<Source> keywordFilterLSA (List<Source> sourceList, List<String> categoriesChoose) throws IOException{
 
 
     for(Source src : sourceList ){
@@ -161,7 +162,7 @@ public class TrainingSetBuilder {
       for(Iterator<Keyword> it = keywordList.iterator(); it.hasNext();){
         Keyword k = it.next();
         double max = 0;
-        for(String category : categoryChoose){
+        for(String category : categoriesChoose){
 
           ArrayList<List<String>> textList = new ArrayList<List<String>>();
           List<String> list = new ArrayList<String>();
