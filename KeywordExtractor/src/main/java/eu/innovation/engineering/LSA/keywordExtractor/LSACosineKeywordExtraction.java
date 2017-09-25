@@ -144,34 +144,36 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
   public static MatrixRepresentation buildMatrixA(List<List<String>> sentences,float[][] toCompareVectors) throws IOException{
     List<String> wordList = new ArrayList<String>();
     //crea la lista di word
+   
+    
+    List<List<String>> textList = new ArrayList<>();
     for(List<String> sentencce : sentences){
       for(String word : sentencce){
         if(!wordList.contains(word)){
-          wordList.add(word);
+          List<String> tmp = new ArrayList<>();
+          wordList.add(word); 
+          tmp.add(word);
+          textList.add(tmp);
         }
       }
     }
 
-    List<List<String>> textList = new ArrayList<>();
-   
+    
+    float[][] wordVectors = returnVectorsFromTextList(textList);
+ 
     //crea la matrice
     Array2DRowRealMatrix matrix = new Array2DRowRealMatrix(wordList.size(),sentences.size());
     int row=0;
     int column=0;
 
-    for(String word : wordList){
+    for(int i = 0;i<wordList.size();i++){
       column=0;
-      
-      List<String> tmp = new ArrayList<>();
-      tmp.add(word);
-      textList = new ArrayList<>();
-      textList.add(tmp);
-      float[] wordVector = returnVectorsFromTextList(textList)[0];
+      String word = wordList.get(i);
+
       double weigth = 0;
 
-      for(int i = 0;i <toCompareVectors.length;i++){
-
-        weigth += cosineSimilarity(wordVector, toCompareVectors[i]);
+      for(int j = 0;j <toCompareVectors.length;j++){
+        weigth += cosineSimilarity(wordVectors[i], toCompareVectors[j]);
       }
       //weigth = weigth / toCompareVectors.length-1;
 

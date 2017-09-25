@@ -1,12 +1,8 @@
 package eu.innovation.engineering.DataSourceClassificator;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
 import eu.innovation.engineering.LSA.keywordExtractor.LSACosineKeywordExtraction;
@@ -30,16 +26,10 @@ public class Test {
      */
     KeywordExtractor lsaKe = new LSAKeywordExtractor(PathConfigurator.keywordExtractorsFolder);
     KeywordExtractor innKe = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
-    LSACosineKeywordExtraction lsaCosKe = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder,"");
+    LSACosineKeywordExtraction lsaCosKe = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder,PathConfigurator.applicationFileFolder+"glossaries.json");
 
 
-    ObjectMapper mapper = new ObjectMapper();
-    Map<String,List<String>> glossaryMap = mapper.readValue(new File(PathConfigurator.applicationFileFolder+"Glossaries.json"),new TypeReference<Map<String,List<String>>>() {});
-
-    List<String> toCompare = new ArrayList<>();
-    for(String glossary: glossaryMap.keySet()){
-      toCompare.addAll(glossaryMap.get(glossary));
-    }
+ 
 
 
 
@@ -67,8 +57,10 @@ public class Test {
 
 
       List<List<Keyword>> innResults = innKe.extractKeywordsFromTexts(toAnalyze, 5);
+      System.out.println("INNEN finished");
       //    List<List<Keyword>> lsaResults = lsaKe.extractKeywordsFromTexts(toAnalyze, 5);
       List<List<Keyword>> lsaCosResults = lsaCosKe.extractKeywordsFromTexts(toAnalyze, 5);
+      System.out.println("LSACosine finished");
 
       System.out.println("ID -> "+source.getId());
       System.out.println("Title ->"+source.getTitle()+"\n");
