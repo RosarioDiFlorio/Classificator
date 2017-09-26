@@ -53,7 +53,7 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
   public LSACosineKeywordExtraction(String mainDir,String glossaryName) throws JsonParseException, JsonMappingException, IOException {
     setMainDirectory(mainDir);
     setStopWordPath(getMainDirectory() + stopWordPath);
-    
+
     stopwords = CleanUtilis.getBlackList(getStopWordPath());
     lemmatizer = new Lemmatizer();
     nlpAnalyzer = new StanfordnlpAnalyzer();
@@ -85,7 +85,7 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
   public List<List<Keyword>> extractKeywordsFromTexts(List<String> toAnalyze, int numKeywordsToReturn) throws Exception {
     List<List<Keyword>> toReturn = new ArrayList<List<Keyword>>();
     List<List<String>> textList = new ArrayList<>();
-   
+
     for(String text: toAnalyze){
       List<Keyword> keywordList = new ArrayList<Keyword>();
       List<List<String>> sentenceList = createSentencesFromText(text);
@@ -170,14 +170,16 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
     for(int i = 0;i<wordList.size();i++){
       column=0;
       String word = wordList.get(i);
+      double weigth = 0;
       //weigth = weigth / toCompareVectors.length-1;
-      for(List<String> sentence : sentences){
-        double weigth = 0;
-        if(sentence.contains(word)){
-          for(int j = 0;j <toCompareVectors.length;j++){ 
-            weigth += cosineSimilarity(wordVectors[i], toCompareVectors[j]);
-          }
+      for(int j = 0;j <toCompareVectors.length;j++){ 
+        weigth += cosineSimilarity(wordVectors[i], toCompareVectors[j]);
+      }
+      for(List<String> sentence : sentences){     
+        if(sentence.contains(word)){       
           weigth = weigth *  Tf(word, sentences, column);
+        }else{
+          weigth = 0;
         }
         matrix.addToEntry(row, column,weigth);
         column++;
