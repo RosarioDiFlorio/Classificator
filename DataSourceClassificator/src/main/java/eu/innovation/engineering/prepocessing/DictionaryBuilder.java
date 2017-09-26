@@ -22,7 +22,7 @@ public class DictionaryBuilder {
 
   public  void initJsonDataset(String fileName, String path, KeywordExtractor ke, String categories) throws IOException{
     DatasetBuilder db = new DatasetBuilder(ke);
-    db.buildDataset(fileName,path,categories);
+    db.buildDataset(fileName,path,categories, true);
   }
 
   public  HashMap<String, Dictionary> build(String JsonPath,int kMeans,String path) throws IOException{

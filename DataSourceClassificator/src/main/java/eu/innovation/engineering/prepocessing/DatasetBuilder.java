@@ -72,13 +72,15 @@ public  class DatasetBuilder {
    * @return
    * @throws IOException
    */
-  public List<Source>  buildDataset(String fileName, String path, String category) throws IOException{
+  public List<Source>  buildDataset(String fileName, String path, String category,boolean withCategory) throws IOException{
     
     dataReader = new TxtDataReader(category,fileName,path);
     List<String> listIdPaper = new ArrayList<>(dataReader.getIds());
     
     listSources.addAll(solrClient.getSourcesFromSolr(listIdPaper,Paper.class));
-    listSources = (ArrayList<Source>) addCategories(listSources);
+    if(withCategory)
+      listSources = (ArrayList<Source>) addCategories(listSources);
+    
     listSources = (ArrayList<Source>) addKeywords(listSources);
     String simpleName =  fileName.replaceAll("\\.[a-zA-Z]*", "");   
     listSources.stream().forEach(p->p.setDescription(null));
