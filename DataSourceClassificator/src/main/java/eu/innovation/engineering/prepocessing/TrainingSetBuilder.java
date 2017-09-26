@@ -94,20 +94,18 @@ public class TrainingSetBuilder {
 
 
     //carcico il file che contiene i source con la cagetory scelta e tutte le info (title, id, keywords) faccio un merge con la lista di Item per cambiare la categoria (da category a subcategory)
-    List<Source> source = DatasetBuilder.loadSources(PathConfigurator.applicationFileFolder+"sources.json");
+    List<Source> source = DatasetBuilder.loadSources(path+"sources.json");
 
     List<Source> newSource = new ArrayList<Source>();
     for(Item item : items){
       for(Source s : source){
         if(s.getId().equals(item.getId())){
-          if(s.getCategoryList().get(0).getLabel().contains(categoryChoose)){
             CategoriesResult category = new CategoriesResult();
             category.setLabel(item.getBestFeature());
             category.setScore(1.0);
             ArrayList<CategoriesResult> categoryList = new ArrayList<CategoriesResult>();
             categoryList.add(category);
             s.setCategoryList(categoryList);
-          }
           newSource.add(s);
         }
       }

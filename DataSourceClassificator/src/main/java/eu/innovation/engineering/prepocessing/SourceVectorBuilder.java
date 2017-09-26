@@ -71,7 +71,7 @@ public class SourceVectorBuilder {
           source.setKeywordList((ArrayList<Keyword>) ke.extractKeywordsFromTexts(toAnalyze,Configurator.numKeywords).stream().flatMap(l->l.stream()).collect(Collectors.toList()));
         }
       }else      
-        sources = dataBuilder.buildDataset("training.txt", path, "categories.txt");
+        sources = dataBuilder.buildDataset("training.txt", path, "categories.txt", true);
       DatasetBuilder.saveSources(sources, path+"sources.json");
     }else{
       sources = DatasetBuilder.loadSources(path+"training.json");

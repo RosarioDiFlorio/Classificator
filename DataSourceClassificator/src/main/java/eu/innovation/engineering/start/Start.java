@@ -8,7 +8,9 @@ package eu.innovation.engineering.start;
  * After that, in the final phase, we load or create dictionary with Json file dictionarySource.json and create CSV for training and test    
  */
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import eu.innovation.engineering.LSA.keywordExtractor.LSACosineKeywordExtraction;
 import eu.innovation.engineering.config.PathConfigurator;
@@ -32,13 +34,13 @@ public class Start {
   private static final boolean buildJsonTest = true;
 
   //Terzo passo, decidere se predere i dizionari persistenti o creare altri, creare i csv
-  private static final boolean loadDictionariesFromFile = false;
+  private static final boolean loadDictionariesFromFile = true;
   private static final boolean buildCSVTraining = true;
   private static final boolean buildCSVTest = true;
 
   //Other
-  private static final String category = "";
-  private static final int numFeatures = 500;
+  private static final String category = "science";
+  private static final int numFeatures = 50;
 
   public static void main(String[] args) throws IOException{
     
@@ -87,7 +89,13 @@ public class Start {
     // CREAZIONE DEL FILE JSON DEI SOURCE DA USARE PER I DIZIONARI
 
     DictionaryBuilder dictionaryBuilder = new DictionaryBuilder();
-    dictionaryBuilder.initJsonDataset("dictionariesSource.txt",path,ke,"categories.txt");
+    List<String> categories = new ArrayList<>();
+    String pathToReadcategories = "";
+    if(category.equals(""))
+      pathToReadcategories = "categories.txt";
+    else
+      pathToReadcategories ="../categories.txt";
+    dictionaryBuilder.initJsonDataset("dictionariesSource.txt",path,ke,pathToReadcategories);
     String jsonPath = path+"dictionariesSource.json";
     
     // CREAZIONE DEI DIZIONARI CON CLUSTERING
@@ -100,9 +108,9 @@ public class Start {
   public  void generateJsonFromTxt(String path, KeywordExtractor ke) throws IOException{
     DatasetBuilder db = new DatasetBuilder(ke);
     if(buildJsonTraining)
-      db.buildDataset("training.txt",path,"categories.txt");
+      db.buildDataset("training.txt",path,"categories.txt",true);
     if(buildJsonTest)
-      db.buildDataset("test.txt",path,"categories.txt");
+      db.buildDataset("test.txt",path,"categories.txt",false);
   }
 
 }
