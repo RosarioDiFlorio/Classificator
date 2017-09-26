@@ -33,7 +33,8 @@ public class SourceVectorBuilder {
   
   
   public static void main(String[] args) throws Exception{
-    buildSourceVectors(PathConfigurator.rootFolder+"science/", true,true);
+    SourceVectorBuilder sourceVectorBuilder = new SourceVectorBuilder();
+    sourceVectorBuilder.buildSourceVectors(PathConfigurator.rootFolder+"science/","science",true,true);
   }
   
   
@@ -42,7 +43,7 @@ public class SourceVectorBuilder {
    * @throws Exception 
    * @throws s 
    */
-  public static void buildSourceVectors (String path,boolean withGlossaries,boolean fromSolr) throws Exception{
+  public void buildSourceVectors (String path,String category,boolean withGlossaries,boolean fromSolr) throws Exception{
 
     String trainingFile = path+"training.txt";
     String glossaryFile = path+"glossaries.json";
@@ -53,18 +54,21 @@ public class SourceVectorBuilder {
     dataReader.setFileToReadSource(trainingFile);    
     List<String> sourcesIds = new ArrayList<>();
     sourcesIds.addAll(dataReader.getIds());
-    
+    System.out.println("Sources size "+sourcesIds.size());
     List<Source> sources = new ArrayList<>();
     DatasetBuilder dataBuilder = new DatasetBuilder();
     if(fromSolr){    
       if(withGlossaries){
         KeywordExtractor ke = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder, glossaryFile);
-        sources = SolrClient.getSourcesFromSolr(sourcesIds, Paper.class);        
+        sources = SolrClient.getSourcesFromSolr(sourcesIds, Paper.class);
+        int count = 1;
         for(Source source : sources){
+          System.out.println("source "+count);
+          count++;
           String titleAndDes = source.getTitle()+" "+source.getDescription();
           List<String> toAnalyze = new ArrayList<>();
           toAnalyze.add(titleAndDes);
-          source.setKeywordList((ArrayList<Keyword>) ke.extractKeywordsFromTexts(toAnalyze,Configurator.numKeywords).stream().flatMap(l->l.stream()).collect(Collectors.toList()));
+          source.setKeywordList((ArrayList<Keyword>) ke.extractKeywordsFromTexts(toAnalyze,Configurator.numKeywords).stream().flatMap(l->l.stream()).collect(Collectors.toList()));       
         }                
       }else      
         sources = dataBuilder.buildDataset("training.txt", path, "categories.txt");
@@ -72,7 +76,7 @@ public class SourceVectorBuilder {
       sources = DatasetBuilder.loadSources(path+"training.json");
     }
     pathWhereSave = path+"sourceVectors.json";
-    saveSourceVectorList(pathWhereSave, createSourceVectorList(sources));
+    saveSourceVectorList(pathWhereSave, createSourceVectorList(sources,category));
   }
   
   /**
@@ -80,19 +84,20 @@ public class SourceVectorBuilder {
    * @return List<SourceVector> 
    * @throws IOException
    */
-  public static List<SourceVector> createSourceVectorList(List<Source> sources) throws IOException{
+  public List<SourceVector> createSourceVectorList(List<Source> sources,String category) throws IOException{
     List<SourceVector> toReturn = new ArrayList<>();   
     ClusteringKMeans clustering = new ClusteringKMeans();
     float[][] vectors = clustering.returnVectorsFromSourceList((ArrayList<Source>) sources);    
     for(int i=0;i<sources.size();i++){
       SourceVector sv = new SourceVector();
       sv.setId(sources.get(i).getId());
-      sv.setCategory(sources.get(i).getCategoryList().get(0).getLabel());
+      sv.setCategory(category);
       sv.setTitle(sources.get(i).getTitle());
       sv.setKeywords(sources.get(i).getKeywordList().stream().map(k->k.getText()).collect(Collectors.toList()));
       sv.setVector(vectors[i]);
       toReturn.add(sv);
     }
+    vectors = null;
     return toReturn;
   }
 

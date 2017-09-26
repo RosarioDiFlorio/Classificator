@@ -450,13 +450,13 @@ public class ClusteringKMeans {
 
   }
 
-  public  float[][] returnVectorsFromSourceList(ArrayList<Source> paperList) throws IOException {
+  public  float[][] returnVectorsFromSourceList(ArrayList<Source> sourceList) throws IOException {
 
     //ISTANZIAMO UNA MATRICE DI STRINGHE
     List<List<String>> docsK = new ArrayList<List<String>>();
 
     //PER OGNI PAPER COSTRUIAMO IL SET DI KEYWORDS DA CUI POI OTTENERE IL VETTORE
-    for(Source p: paperList){
+    for(Source p: sourceList){
       //calcolo la relevance minima
       double minRelevance = p.getKeywordList().stream().mapToDouble(Keyword::getRelevance).min().getAsDouble();
 
@@ -464,13 +464,15 @@ public class ClusteringKMeans {
       ArrayList<String> stringToVec = new ArrayList<>();
 
       for(Keyword k : p.getKeywordList()){
-        double resultDivision = k.getRelevance()/minRelevance;
+        double resultDivision = 0;
+        if(minRelevance>0){
+          resultDivision = k.getRelevance()/minRelevance;
+        }
        // if(resultDivision>10)
           //resultDivision=10;
         int numOccurence = (int) Math.ceil(resultDivision);
         //Aggiungo la keyword nel vettore di keywords "numOccurence" volte
-
-        String parts[] = k.getText().split(" ");
+        String parts[] = k.getText().replace("-", " ").split(" ");
           for(int i = 0; i<numOccurence; i++){
             //Arrays.stream(parts).forEach(stringToVec::add);
             for(int j=0;j<parts.length;++j){

@@ -44,22 +44,29 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
 
 
   private String mainDirectory = "";
-  private static String stopWordPath= "data/stopwords/stopwords_en.txt";
-  private static List<String> toCompare;
-  
+  private String stopWordPath= "data/stopwords/stopwords_en.txt";
+  private List<String> toCompare;
+  private float[][] toCompareVectors;
 
 
   public LSACosineKeywordExtraction(String mainDir,String glossaryName) throws JsonParseException, JsonMappingException, IOException {
     setMainDirectory(mainDir);
     setStopWordPath(getMainDirectory() + stopWordPath);
-    
+
     ObjectMapper mapper = new ObjectMapper();
     Map<String,List<String>> glossaryMap = mapper.readValue(new File(glossaryName),new TypeReference<Map<String,List<String>>>() {});
     toCompare = new ArrayList<>();
     for(String glossary: glossaryMap.keySet()){
       toCompare.addAll(glossaryMap.get(glossary));
     }  
-    
+    List<List<String>> textList = new ArrayList<>();
+    for(String toC: toCompare){
+      List<String> tmp = new ArrayList<>();
+      tmp.add(toC);
+      textList.add(tmp);
+    }
+    toCompareVectors = returnVectorsFromTextList(textList);
+
   }
 
 
@@ -69,16 +76,6 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
   public List<List<Keyword>> extractKeywordsFromTexts(List<String> toAnalyze, int numKeywordsToReturn) throws Exception {
     List<List<Keyword>> toReturn = new ArrayList<List<Keyword>>();
     List<List<String>> textList = new ArrayList<>();
-    
-    for(String toC: toCompare){
-      List<String> tmp = new ArrayList<>();
-      tmp.add(toC);
-      textList.add(tmp);
-    }
-    
-    //textList.add(toCompare);
-    float[][] toCompareVectors = returnVectorsFromTextList(textList);
-    
     for(String text: toAnalyze){
       List<Keyword> keywordList = new ArrayList<Keyword>();
       List<List<String>> sentenceList = createSentencesFromText(text);
@@ -99,7 +96,7 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
    * @return The list of sentence for the document, each list is a list of word of the sentence.
    * @throws LanguageException 
    */
-  public static List<List<String>> createSentencesFromText(String document) throws LanguageException{
+  public  List<List<String>> createSentencesFromText(String document) throws LanguageException{
     List<List<String>> sentecesList = new ArrayList<List<String>>();
     StanfordnlpAnalyzer nlpAnalyzer = new StanfordnlpAnalyzer();
     List<String> senteces = nlpAnalyzer.detectSentences(document, ISO_639_1_LanguageCode.ENGLISH);
@@ -118,7 +115,7 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
    * @param lemmatizer 
    * @return The list of words for a sentence.
    */
-  private static List<String> cleanAndSplitSentence(String sentence, Lemmatizer lemmatizer){
+  private  List<String> cleanAndSplitSentence(String sentence, Lemmatizer lemmatizer){
     Set<String> stopwords = CleanUtilis.getBlackList(getStopWordPath());
     sentence = sentence.toLowerCase();
     //sentence = sentence.replaceAll("[.!?\\\\/|<>\'\"+;%$#@&\\^\\(\\),-]\\*", "");
@@ -141,41 +138,36 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
    * Each cell in the matrix represents the weight that the term has in the corresponding sentence.
    * @throws IOException 
    */
-  public static MatrixRepresentation buildMatrixA(List<List<String>> sentences,float[][] toCompareVectors) throws IOException{
+  public  MatrixRepresentation buildMatrixA(List<List<String>> sentences,float[][] toCompareVectors) throws IOException{
     List<String> wordList = new ArrayList<String>();
+
     //crea la lista di word
+    List<List<String>> textList = new ArrayList<>();
     for(List<String> sentencce : sentences){
       for(String word : sentencce){
         if(!wordList.contains(word)){
-          wordList.add(word);
+          List<String> tmp = new ArrayList<>();
+          wordList.add(word); 
+          tmp.add(word);
+          textList.add(tmp);
         }
       }
     }
+    float[][] wordVectors = returnVectorsFromTextList(textList);
 
-    List<List<String>> textList = new ArrayList<>();
-   
     //crea la matrice
     Array2DRowRealMatrix matrix = new Array2DRowRealMatrix(wordList.size(),sentences.size());
     int row=0;
     int column=0;
 
-    for(String word : wordList){
+    for(int i = 0;i<wordList.size();i++){
       column=0;
-      
-      List<String> tmp = new ArrayList<>();
-      tmp.add(word);
-      textList = new ArrayList<>();
-      textList.add(tmp);
-      float[] wordVector = returnVectorsFromTextList(textList)[0];
+      String word = wordList.get(i);
       double weigth = 0;
-
-      for(int i = 0;i <toCompareVectors.length;i++){
-
-        weigth += cosineSimilarity(wordVector, toCompareVectors[i]);
+      for(int j = 0;j <toCompareVectors.length;j++){ 
+        weigth += cosineSimilarity(wordVectors[i], toCompareVectors[j]);
       }
       //weigth = weigth / toCompareVectors.length-1;
-
-
       for(List<String> sentence : sentences){
         if(sentence.contains(word))
           weigth = weigth *  Tf(word, sentences, column);
@@ -202,13 +194,15 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
    *        SVD decomposition.
    * @return matrix U after SVD decomposition
    */
-  public static RealMatrix SVD(MatrixRepresentation matrixA){  
+  public  RealMatrix SVD(MatrixRepresentation matrixA){  
 
     SingularValueDecomposition svd = new SingularValueDecomposition(matrixA.getMatrixA());
 
 
     return svd.getU();
   }
+
+ 
 
   /**
    *  Return keywordList from matrix U after SVD decomposition
@@ -218,7 +212,7 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
    * @param threshold - number of keyword that the method have to consider.
    * @return The list of Keyword 
    */
-  private static  List<Keyword> getKeywordList(MatrixRepresentation matrixA, RealMatrix U, int threshold){
+  private static List<Keyword> getKeywordList(MatrixRepresentation matrixA, RealMatrix U, int threshold){
 
     double[] bestColumn = U.getColumn(0);
 
@@ -227,9 +221,9 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
 
     if(threshold<=bestColumn.length){
       while(threshold>0){
-        int index= max(bestColumn);
+        int index = max(bestColumn);
         bestIndex.put(index,bestColumn[index]);
-        bestColumn[index]=0;
+        bestColumn[index]=-10000;
         threshold--;
       }
     }
@@ -238,24 +232,27 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
       System.out.println("Threshold value is greater then column size");
       return null;
     }
-
+   
     for(int index : bestIndex.keySet()){
+     
       Keyword k = new Keyword();
       k.setText(matrixA.getTokenList().get(index));
-      k.setRelevance(bestIndex.get(index));
+      //System.out.println(U.getEntry(index, 0)+" "+translateFunction(U.getEntry(index, 0)));
+      k.setRelevance(translateFunction(U.getEntry(index, 0)));
       keywordList.add(k);
     }
 
     return keywordList;
   }
+  
 
   /**
    * return position of max value into double array 
    * @param bestColumn
    * @return
    */
-  private static int max(double[] bestColumn) {
-    double max = 0;
+  private static  int max(double[] bestColumn) {
+    double max = bestColumn[0];
     int indexMax=0;
     for(int i=0; i<bestColumn.length;i++){
       if(bestColumn[i]>max){
@@ -265,8 +262,6 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
     }
 
     return indexMax;
-
-
   }
 
 
@@ -278,7 +273,7 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
    * @param j
    * @return
    */
-  private static double Tf(String word,List<List<String>> sentences, int j){
+  private  double Tf(String word,List<List<String>> sentences, int j){
 
     List<String> sentenceJ = sentences.get(j);
     //number of times word i in sentence j
@@ -301,7 +296,7 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
    * @param sentences
    * @return
    */
-  private static double Isf(String word,List<List<String>> sentences){
+  private  double Isf(String word,List<List<String>> sentences){
 
     //number of sentences with word i
     double numberSentenceWithWord = 0;
@@ -331,18 +326,18 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
   /**
    * @return the path of the stopwords file
    */
-  public static String getStopWordPath() {
+  public String getStopWordPath() {
     return stopWordPath;
   }
 
   /**
    * @param stopWordPath
    */
-  public static void setStopWordPath(String stopWordPath) {
-    LSACosineKeywordExtraction.stopWordPath = stopWordPath;
+  public void setStopWordPath(String stopWordPath) {
+    this.stopWordPath = stopWordPath;
   }
 
-  public static float[][] returnVectorsFromTextList(List<List<String>> textList) throws IOException{
+  public float[][] returnVectorsFromTextList(List<List<String>> textList) throws IOException{
 
 
     VectorListRequestBean vectorListRequest = new VectorListRequestBean();
@@ -361,7 +356,7 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
 
   }
 
-  public static double cosineSimilarity(float[] vectorA, float[] vectorB) {
+  public double cosineSimilarity(float[] vectorA, float[] vectorB) {
     double dotProduct = 0.0;
     double normA = 0.0;
     double normB = 0.0;
@@ -378,8 +373,8 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
     else
       return ((dotProduct) / (Math.sqrt(normA * normB)));
   }
-  
-  public static List<String> readGlossay(String pathFile) throws IOException{
+
+  public List<String> readGlossay(String pathFile) throws IOException{
     List<String> toReturn = new ArrayList<>();
     String line= "";
 
@@ -394,15 +389,22 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
   }
 
 
-  public static List<String> getToCompare() {
+  public List<String> getToCompare() {
     return toCompare;
   }
 
 
-  public static void setToCompare(List<String> toCompare) {
-    LSACosineKeywordExtraction.toCompare = toCompare;
+  public void setToCompare(List<String> toCompare) {
+    this.toCompare = toCompare;
   }
 
+  
+  public static double translateFunction(double x){
+    //System.out.println(x);
+    
+    return (Math.atan(5 * x - 3)/Math.PI)+(0.5);
+        
+  }
 
 
 }

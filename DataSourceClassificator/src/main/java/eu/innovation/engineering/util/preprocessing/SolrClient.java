@@ -236,7 +236,7 @@ public class SolrClient {
     for(String id : idSources){
 
       if(Paper.class.isAssignableFrom(c)){
-        String queryProduzione = remoteAddress+"/technical_papers/get?ids="+id+"&fl=id,dc_title,dc_description,full_text";
+        String queryProduzione = remoteAddress+"/technical_papers/get?ids="+id+"&fl=id,dc_title,dc_description";
         StringBuffer responseProduzione = requestSOLR(queryProduzione);
         if(responseProduzione != null){
           resultsProduzione.add(parserJson.parse(responseProduzione.toString()).getAsJsonObject().get("response").getAsJsonObject().get("docs").getAsJsonArray());
