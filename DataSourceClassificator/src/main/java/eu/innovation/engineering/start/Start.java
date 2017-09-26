@@ -10,7 +10,7 @@ package eu.innovation.engineering.start;
 import java.io.IOException;
 import java.util.HashMap;
 
-import eu.innovation.engineering.LSA.keywordExtractor.LSAKeywordExtractor;
+import eu.innovation.engineering.LSA.keywordExtractor.LSACosineKeywordExtraction;
 import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 import eu.innovation.engineering.prepocessing.CSVBuilder;
@@ -28,8 +28,8 @@ public class Start {
   private static final boolean buildJsonDictionaries = true;
   
   //Secondo passo creare i file Json di train e test
-  private static final boolean buildJsonTraining = true;
-  private static final boolean buildJsonTest = false;
+  private static final boolean buildJsonTraining = false;
+  private static final boolean buildJsonTest = true;
 
   //Terzo passo, decidere se predere i dizionari persistenti o creare altri, creare i csv
   private static final boolean loadDictionariesFromFile = false;
@@ -50,7 +50,7 @@ public class Start {
 
     int numLabels = TxtDataReader.getCategories(path+"categories.txt").size();
     
-    KeywordExtractor ke = new LSAKeywordExtractor(PathConfigurator.keywordExtractorsFolder);
+    KeywordExtractor ke = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder,path+"glossaries.json");
 
     //CREA IL FILE JSON DEI DIZIONARI
     if(buildJsonDictionaries)
