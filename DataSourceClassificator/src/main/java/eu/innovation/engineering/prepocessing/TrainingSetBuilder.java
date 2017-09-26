@@ -52,6 +52,8 @@ public class TrainingSetBuilder {
     clusterSubCategory(PathConfigurator.applicationFileFolder+"sourceVectors.json",path+"vectorCategory.json", category, path);
 
   }
+  
+  
 
   public static void clusterSubCategory(String sourceFile, String categoryFile, String categoryChoose, String path) throws JsonParseException, JsonMappingException, IOException{
 
