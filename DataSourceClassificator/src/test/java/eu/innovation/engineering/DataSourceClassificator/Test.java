@@ -26,7 +26,7 @@ public class Test {
      */
     KeywordExtractor lsaKe = new LSAKeywordExtractor(PathConfigurator.keywordExtractorsFolder);
     KeywordExtractor innKe = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
-    LSACosineKeywordExtraction lsaCosKe = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder,PathConfigurator.applicationFileFolder+"glossaries.json");
+    LSACosineKeywordExtraction lsaCosKe = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder,PathConfigurator.rootFolder+"science/"+"glossaries.json");
 
 
  
@@ -34,9 +34,9 @@ public class Test {
 
 
     SolrClient solrClient = new SolrClient();
-    String id="10008302_234";
-    String id2 ="10018323_234";
-    String id3 = "10013570_234";
+    String id="10127886_178";
+    String id2 ="10028729_234";
+    String id3 = "10026237_234";
 
     
 

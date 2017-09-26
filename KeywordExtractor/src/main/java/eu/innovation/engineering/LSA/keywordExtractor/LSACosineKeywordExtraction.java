@@ -221,9 +221,9 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
 
     if(threshold<=bestColumn.length){
       while(threshold>0){
-        int index= max(bestColumn);
+        int index = max(bestColumn);
         bestIndex.put(index,bestColumn[index]);
-        bestColumn[index]=0;
+        bestColumn[index]=-10000;
         threshold--;
       }
     }
@@ -232,16 +232,19 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
       System.out.println("Threshold value is greater then column size");
       return null;
     }
-
+   
     for(int index : bestIndex.keySet()){
+     
       Keyword k = new Keyword();
       k.setText(matrixA.getTokenList().get(index));
-      k.setRelevance(bestIndex.get(index));
+      //System.out.println(U.getEntry(index, 0)+" "+translateFunction(U.getEntry(index, 0)));
+      k.setRelevance(translateFunction(U.getEntry(index, 0)));
       keywordList.add(k);
     }
 
     return keywordList;
   }
+  
 
   /**
    * return position of max value into double array 
@@ -249,7 +252,7 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
    * @return
    */
   private static  int max(double[] bestColumn) {
-    double max = 0;
+    double max = bestColumn[0];
     int indexMax=0;
     for(int i=0; i<bestColumn.length;i++){
       if(bestColumn[i]>max){
@@ -259,8 +262,6 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
     }
 
     return indexMax;
-
-
   }
 
 
@@ -397,6 +398,13 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
     this.toCompare = toCompare;
   }
 
+  
+  public static double translateFunction(double x){
+    //System.out.println(x);
+    
+    return (Math.atan(5 * x - 3)/Math.PI)+(0.5);
+        
+  }
 
 
 }
