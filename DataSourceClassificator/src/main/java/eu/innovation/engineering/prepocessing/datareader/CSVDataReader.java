@@ -13,9 +13,12 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
+import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
+
+import eu.innovation.engineering.LSA.keywordExtractor.LSACosineKeywordExtraction;
 import eu.innovation.engineering.config.PathConfigurator;
-import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 import eu.innovation.engineering.util.preprocessing.Paper;
 import eu.innovation.engineering.util.preprocessing.SolrClient;
@@ -55,17 +58,24 @@ public class CSVDataReader {
    * @throws Exception
    */
   public static void mainToTest(String[] args) throws Exception{
-    String testFolderName=PathConfigurator.applicationFileFolder+"results/extractors/resultsINN.csv";
-    KeywordExtractor kex = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
+    String testFolderName=PathConfigurator.applicationFileFolder+"resultScience.csv";
     
     float uThreshold = (float) 1.0;
-    float lThreshold = (float) 0.8;
+    float lThreshold = (float) 0.7;
     int batchLine = 0;   
-    boolean isCount =  true;   
-    boolean all = true;
+    boolean isCount =  false;   
+    boolean all = false;
     String batchCategory = "";
-    String categoryFolder = "";
-    String category = "business and industrial";
+    String categoryFolder = "science";
+    String category = "geology";
+    
+    KeywordExtractor kex = null;
+    if(!isCount)
+      kex = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder,PathConfigurator.rootFolder+"science/glossaries.json");
+
+      
+
+    
 
     File f = new File(testFolderName);
 
@@ -113,7 +123,7 @@ public class CSVDataReader {
         categories = TxtDataReader.getCategories(PathConfigurator.rootFolder+"categories.txt");
       else
         categories = TxtDataReader.getCategories(PathConfigurator.rootFolder+categoryFolder+"/"+"categories.txt");  
-            
+      System.out.println(categories);
       for(int j = 0; j<categories.size();j++){
         int countDocs = 0;
         category = categories.get(j);
@@ -185,7 +195,7 @@ public class CSVDataReader {
         }
         tmp.add(strTmp);
         
-        //p.println(kex.extractKeywordsFromTexts(tmp, numKey).stream().filter(l->l != null).flatMap(l->l.stream()).map(Keyword::getText).collect(Collectors.toList())+"\n");
+        p.println(kex.extractKeywordsFromTexts(tmp, numKey).stream().filter(l->l != null).flatMap(l->l.stream()).map(Keyword::getText).collect(Collectors.toList())+"\n");
         localcount ++;
         System.out.println(localcount+" - "+category);
         p.println(s.getTitle());

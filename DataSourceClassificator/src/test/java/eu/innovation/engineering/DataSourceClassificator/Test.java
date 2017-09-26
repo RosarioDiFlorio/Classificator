@@ -26,7 +26,7 @@ public class Test {
      */
     KeywordExtractor lsaKe = new LSAKeywordExtractor(PathConfigurator.keywordExtractorsFolder);
     KeywordExtractor innKe = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
-    LSACosineKeywordExtraction lsaCosKe = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder,PathConfigurator.rootFolder+"science/"+"glossaries.json");
+    LSACosineKeywordExtraction lsaCosKe = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder,PathConfigurator.applicationFileFolder+"glossaries.json");
 
 
 
@@ -34,16 +34,16 @@ public class Test {
 
 
     SolrClient solrClient = new SolrClient();
-    String id="10127886_178";
-    String id2 ="10028729_234";
-    String id3 = "10026237_234";
+    String id="10127141_163";
+//    String id2 ="10028729_234";
+//    String id3 = "10026237_234";
 
 
 
     List<String> ids = new ArrayList<>();
     ids.add(id);
-    ids.add(id3);
-    ids.add(id2);
+//    ids.add(id3);
+//    ids.add(id2);
     List<Source> sources = solrClient.getSourcesFromSolr(ids, Paper.class);
     
    long totalTime = 0;
@@ -67,11 +67,9 @@ public class Test {
       List<List<Keyword>> lsaCosResults = lsaCosKe.extractKeywordsFromTexts(toAnalyze, 5);
       totalTime += (System.currentTimeMillis() - startTime);
       System.out.println("LSACosine finished -> " + (System.currentTimeMillis() - startTime));
-      /*
+      
       System.out.println("ID -> "+source.getId());
-      System.out.println("Title ->"+source.getTitle()+"\n");
-      */
-      System.out.println("Keyword from description");
+      System.out.println("Title ->"+source.getTitle()+"\n");  
       //      System.out.println("INNEN ->"+innResults.get(0));
       //    System.out.println("LSA ->"+lsaResults.get(0));
       System.out.println("LSACosine -> "+lsaCosResults.get(0));
