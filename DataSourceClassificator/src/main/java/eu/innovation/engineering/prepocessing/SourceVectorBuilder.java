@@ -34,7 +34,7 @@ public class SourceVectorBuilder {
   
   public static void main(String[] args) throws Exception{
     SourceVectorBuilder sourceVectorBuilder = new SourceVectorBuilder();
-    sourceVectorBuilder.buildSourceVectors(PathConfigurator.rootFolder+"science/", true,true);
+    sourceVectorBuilder.buildSourceVectors(PathConfigurator.rootFolder+"science/","science",true,true);
   }
   
   
@@ -43,7 +43,7 @@ public class SourceVectorBuilder {
    * @throws Exception 
    * @throws s 
    */
-  public void buildSourceVectors (String path,boolean withGlossaries,boolean fromSolr) throws Exception{
+  public void buildSourceVectors (String path,String category,boolean withGlossaries,boolean fromSolr) throws Exception{
 
     String trainingFile = path+"training.txt";
     String glossaryFile = path+"glossaries.json";
@@ -76,7 +76,7 @@ public class SourceVectorBuilder {
       sources = DatasetBuilder.loadSources(path+"training.json");
     }
     pathWhereSave = path+"sourceVectors.json";
-    saveSourceVectorList(pathWhereSave, createSourceVectorList(sources));
+    saveSourceVectorList(pathWhereSave, createSourceVectorList(sources,category));
   }
   
   /**
@@ -84,14 +84,14 @@ public class SourceVectorBuilder {
    * @return List<SourceVector> 
    * @throws IOException
    */
-  public List<SourceVector> createSourceVectorList(List<Source> sources) throws IOException{
+  public List<SourceVector> createSourceVectorList(List<Source> sources,String category) throws IOException{
     List<SourceVector> toReturn = new ArrayList<>();   
     ClusteringKMeans clustering = new ClusteringKMeans();
     float[][] vectors = clustering.returnVectorsFromSourceList((ArrayList<Source>) sources);    
     for(int i=0;i<sources.size();i++){
       SourceVector sv = new SourceVector();
       sv.setId(sources.get(i).getId());
-      //sv.setCategory(sources.get(i).getCategoryList().get(0).getLabel());
+      sv.setCategory(category);
       sv.setTitle(sources.get(i).getTitle());
       sv.setKeywords(sources.get(i).getKeywordList().stream().map(k->k.getText()).collect(Collectors.toList()));
       sv.setVector(vectors[i]);

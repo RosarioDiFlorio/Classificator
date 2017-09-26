@@ -472,7 +472,7 @@ public class ClusteringKMeans {
           //resultDivision=10;
         int numOccurence = (int) Math.ceil(resultDivision);
         //Aggiungo la keyword nel vettore di keywords "numOccurence" volte
-        String parts[] = k.getText().split(" ");
+        String parts[] = k.getText().replace("-", " ").split(" ");
           for(int i = 0; i<numOccurence; i++){
             //Arrays.stream(parts).forEach(stringToVec::add);
             for(int j=0;j<parts.length;++j){
