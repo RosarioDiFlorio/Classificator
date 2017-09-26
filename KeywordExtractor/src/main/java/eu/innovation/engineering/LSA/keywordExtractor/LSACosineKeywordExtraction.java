@@ -41,17 +41,27 @@ import eu.innovationengineering.word2vec.service.rest.impl.Word2vecServiceImpl;
  */
 public class LSACosineKeywordExtraction implements KeywordExtractor {  
 
-
-
   private String mainDirectory = "";
   private String stopWordPath= "data/stopwords/stopwords_en.txt";
   private List<String> toCompare;
   private float[][] toCompareVectors;
+  private Set<String> stopwords;
+  private StanfordnlpAnalyzer nlpAnalyzer;
+  private Lemmatizer lemmatizer;
 
 
   public LSACosineKeywordExtraction(String mainDir,String glossaryName) throws JsonParseException, JsonMappingException, IOException {
     setMainDirectory(mainDir);
     setStopWordPath(getMainDirectory() + stopWordPath);
+    
+    stopwords = CleanUtilis.getBlackList(getStopWordPath());
+    lemmatizer = new Lemmatizer();
+    nlpAnalyzer = new StanfordnlpAnalyzer();
+    initGlossary(glossaryName);
+
+  }
+
+  private void initGlossary(String glossaryName) throws IOException{
 
     ObjectMapper mapper = new ObjectMapper();
     Map<String,List<String>> glossaryMap = mapper.readValue(new File(glossaryName),new TypeReference<Map<String,List<String>>>() {});
@@ -66,7 +76,6 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
       textList.add(tmp);
     }
     toCompareVectors = returnVectorsFromTextList(textList);
-
   }
 
 
@@ -76,6 +85,7 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
   public List<List<Keyword>> extractKeywordsFromTexts(List<String> toAnalyze, int numKeywordsToReturn) throws Exception {
     List<List<Keyword>> toReturn = new ArrayList<List<Keyword>>();
     List<List<String>> textList = new ArrayList<>();
+   
     for(String text: toAnalyze){
       List<Keyword> keywordList = new ArrayList<Keyword>();
       List<List<String>> sentenceList = createSentencesFromText(text);
@@ -98,11 +108,10 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
    */
   public  List<List<String>> createSentencesFromText(String document) throws LanguageException{
     List<List<String>> sentecesList = new ArrayList<List<String>>();
-    StanfordnlpAnalyzer nlpAnalyzer = new StanfordnlpAnalyzer();
-    List<String> senteces = nlpAnalyzer.detectSentences(document, ISO_639_1_LanguageCode.ENGLISH);
-    Lemmatizer lemmatizer = new Lemmatizer();
-    for(String sentence: senteces){
-      sentecesList.add(cleanAndSplitSentence(sentence,lemmatizer));
+    List<String> senteces = nlpAnalyzer.detectSentences(document.toLowerCase(), ISO_639_1_LanguageCode.ENGLISH);
+    for(String sentence: senteces)
+    {
+      sentecesList.add(cleanAndSplitSentence(sentence, lemmatizer));
     }   
     return sentecesList;
   }
@@ -116,8 +125,6 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
    * @return The list of words for a sentence.
    */
   private  List<String> cleanAndSplitSentence(String sentence, Lemmatizer lemmatizer){
-    Set<String> stopwords = CleanUtilis.getBlackList(getStopWordPath());
-    sentence = sentence.toLowerCase();
     //sentence = sentence.replaceAll("[.!?\\\\/|<>\'\"+;%$#@&\\^\\(\\),-]\\*", "");
     List<String> textLemmatized = lemmatizer.lemmatize(sentence);
     Iterator<String> it = textLemmatized.iterator();
@@ -143,8 +150,8 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
 
     //crea la lista di word
     List<List<String>> textList = new ArrayList<>();
-    for(List<String> sentencce : sentences){
-      for(String word : sentencce){
+    for(List<String> sentence : sentences){
+      for(String word : sentence){
         if(!wordList.contains(word)){
           List<String> tmp = new ArrayList<>();
           wordList.add(word); 
@@ -163,16 +170,15 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
     for(int i = 0;i<wordList.size();i++){
       column=0;
       String word = wordList.get(i);
-      double weigth = 0;
-      for(int j = 0;j <toCompareVectors.length;j++){ 
-        weigth += cosineSimilarity(wordVectors[i], toCompareVectors[j]);
-      }
       //weigth = weigth / toCompareVectors.length-1;
       for(List<String> sentence : sentences){
-        if(sentence.contains(word))
+        double weigth = 0;
+        if(sentence.contains(word)){
+          for(int j = 0;j <toCompareVectors.length;j++){ 
+            weigth += cosineSimilarity(wordVectors[i], toCompareVectors[j]);
+          }
           weigth = weigth *  Tf(word, sentences, column);
-        else
-          weigth = 0;
+        }
         matrix.addToEntry(row, column,weigth);
         column++;
       }
@@ -201,8 +207,7 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
 
     return svd.getU();
   }
-
- 
+
 
   /**
    *  Return keywordList from matrix U after SVD decomposition
@@ -212,7 +217,7 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
    * @param threshold - number of keyword that the method have to consider.
    * @return The list of Keyword 
    */
-  private static List<Keyword> getKeywordList(MatrixRepresentation matrixA, RealMatrix U, int threshold){
+  private List<Keyword> getKeywordList(MatrixRepresentation matrixA, RealMatrix U, int threshold){
 
     double[] bestColumn = U.getColumn(0);
 
@@ -231,10 +236,8 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
     {
       System.out.println("Threshold value is greater then column size");
       return null;
-    }
-   
-    for(int index : bestIndex.keySet()){
-     
+    }
+    for(int index : bestIndex.keySet()){
       Keyword k = new Keyword();
       k.setText(matrixA.getTokenList().get(index));
       //System.out.println(U.getEntry(index, 0)+" "+translateFunction(U.getEntry(index, 0)));
@@ -243,15 +246,14 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
     }
 
     return keywordList;
-  }
-  
+  }   
 
   /**
    * return position of max value into double array 
    * @param bestColumn
    * @return
    */
-  private static  int max(double[] bestColumn) {
+  private  int max(double[] bestColumn) {
     double max = bestColumn[0];
     int indexMax=0;
     for(int i=0; i<bestColumn.length;i++){
@@ -309,6 +311,67 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
     return numberSentenceWithWord/sentences.size();
   }
 
+  private double translateFunction(double x){
+    //System.out.println(x);
+    return (Math.atan(5 * x - 3)/Math.PI)+(0.5);
+  }
+
+
+
+
+  public float[][] returnVectorsFromTextList(List<List<String>> textList) throws IOException{
+    VectorListRequestBean vectorListRequest = new VectorListRequestBean();
+    vectorListRequest.setDocs(textList);
+    //chiamo il wordToVec per calcolare il vettore delle stinghe ottenute
+    WebClient webClient = WebClient.create("http://smartculture-projects.innovationengineering.eu/word2vec-rest-service/", Arrays.asList(new JacksonJaxbJsonProvider()));
+    try (Word2vecServiceImpl word2vecService = new Word2vecServiceImpl()) {      
+      word2vecService.setWebClient(webClient);
+      return word2vecService.getVectorList(Constants.GENERAL_CORPUS, Constants.ENGLISH_LANG, vectorListRequest);
+    }
+    catch(Exception e){
+      System.out.println(e);
+      return null;
+    }
+  }
+
+
+
+
+  public double cosineSimilarity(float[] vectorA, float[] vectorB) {
+    double dotProduct = 0.0;
+    double normA = 0.0;
+    double normB = 0.0;
+    if(vectorA!=null && vectorB!=null && vectorA.length==vectorB.length){
+      for (int i = 0; i < vectorA.length; i++) {
+        dotProduct += vectorA[i] * vectorB[i];
+        normA += vectorA[i] * vectorA[i];
+        normB += vectorB[i] * vectorB[i];
+      }   
+    }
+    if(dotProduct == 0 || (normA * normB) == 0)
+      return 0;
+    else
+      return ((dotProduct) / (Math.sqrt(normA * normB)));
+  }
+
+
+
+
+  public List<String> readGlossay(String pathFile) throws IOException{
+    List<String> toReturn = new ArrayList<>();
+    String line= "";
+    FileReader fstream = new FileReader(pathFile);
+    BufferedReader br = new BufferedReader(fstream);
+    while ((line = br.readLine()) != null) {
+      if(!line.contains(" "))
+        toReturn.add(line);
+    }
+    return toReturn;
+  }
+
+
+
+
   /**
    * @return
    */
@@ -337,58 +400,6 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
     this.stopWordPath = stopWordPath;
   }
 
-  public float[][] returnVectorsFromTextList(List<List<String>> textList) throws IOException{
-
-
-    VectorListRequestBean vectorListRequest = new VectorListRequestBean();
-    vectorListRequest.setDocs(textList);
-    //chiamo il wordToVec per calcolare il vettore delle stinghe ottenute
-    WebClient webClient = WebClient.create("http://smartculture-projects.innovationengineering.eu/word2vec-rest-service/", Arrays.asList(new JacksonJaxbJsonProvider()));
-
-    try (Word2vecServiceImpl word2vecService = new Word2vecServiceImpl()) {      
-      word2vecService.setWebClient(webClient);
-      return word2vecService.getVectorList(Constants.GENERAL_CORPUS, Constants.ENGLISH_LANG, vectorListRequest);
-    }
-    catch(Exception e){
-      System.out.println(e);
-      return null;
-    }
-
-  }
-
-  public double cosineSimilarity(float[] vectorA, float[] vectorB) {
-    double dotProduct = 0.0;
-    double normA = 0.0;
-    double normB = 0.0;
-    if(vectorA!=null && vectorB!=null && vectorA.length==vectorB.length){
-      for (int i = 0; i < vectorA.length; i++) {
-        dotProduct += vectorA[i] * vectorB[i];
-        normA += vectorA[i] * vectorA[i];
-        normB += vectorB[i] * vectorB[i];
-      }   
-    }
-
-    if(dotProduct == 0 || (normA * normB) == 0)
-      return 0;
-    else
-      return ((dotProduct) / (Math.sqrt(normA * normB)));
-  }
-
-  public List<String> readGlossay(String pathFile) throws IOException{
-    List<String> toReturn = new ArrayList<>();
-    String line= "";
-
-    FileReader fstream = new FileReader(pathFile);
-    BufferedReader br = new BufferedReader(fstream);
-
-    while ((line = br.readLine()) != null) {
-      if(!line.contains(" "))
-        toReturn.add(line);
-    }
-    return toReturn;
-  }
-
-
   public List<String> getToCompare() {
     return toCompare;
   }
@@ -396,14 +407,6 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
 
   public void setToCompare(List<String> toCompare) {
     this.toCompare = toCompare;
-  }
-
-  
-  public static double translateFunction(double x){
-    //System.out.println(x);
-    
-    return (Math.atan(5 * x - 3)/Math.PI)+(0.5);
-        
   }
 
 

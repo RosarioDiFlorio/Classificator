@@ -29,7 +29,7 @@ public class Test {
     LSACosineKeywordExtraction lsaCosKe = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder,PathConfigurator.rootFolder+"science/"+"glossaries.json");
 
 
- 
+
 
 
 
@@ -38,15 +38,17 @@ public class Test {
     String id2 ="10028729_234";
     String id3 = "10026237_234";
 
-    
+
 
     List<String> ids = new ArrayList<>();
     ids.add(id);
     ids.add(id3);
     ids.add(id2);
     List<Source> sources = solrClient.getSourcesFromSolr(ids, Paper.class);
-
+    
+   long totalTime = 0;
     for(Source source: sources){
+      long startTime = 0;
       String description = source.getTitle()+" "+source.getTexts().get(1);
       String fullText = source.getTexts().get(2);
 
@@ -55,22 +57,28 @@ public class Test {
       toAnalyze.add(description);
       //toAnalyze.add(fullText);
 
-
+      /*
+      startTime = System.currentTimeMillis();
       List<List<Keyword>> innResults = innKe.extractKeywordsFromTexts(toAnalyze, 5);
-      System.out.println("INNEN finished");
-      //    List<List<Keyword>> lsaResults = lsaKe.extractKeywordsFromTexts(toAnalyze, 5);
-      List<List<Keyword>> lsaCosResults = lsaCosKe.extractKeywordsFromTexts(toAnalyze, 5);
-      System.out.println("LSACosine finished");
+      System.out.println("INNEN finished -> " + (System.currentTimeMillis() - startTime));
+       */
 
+      startTime = System.currentTimeMillis();
+      List<List<Keyword>> lsaCosResults = lsaCosKe.extractKeywordsFromTexts(toAnalyze, 5);
+      totalTime += (System.currentTimeMillis() - startTime);
+      System.out.println("LSACosine finished -> " + (System.currentTimeMillis() - startTime));
+      /*
       System.out.println("ID -> "+source.getId());
       System.out.println("Title ->"+source.getTitle()+"\n");
-
+      */
       System.out.println("Keyword from description");
-      System.out.println("INNEN ->"+innResults.get(0));
+      //      System.out.println("INNEN ->"+innResults.get(0));
       //    System.out.println("LSA ->"+lsaResults.get(0));
       System.out.println("LSACosine -> "+lsaCosResults.get(0));
       System.out.println("--------------------------\n");
+      
     }
+    System.out.println("Total time ->" + totalTime);
 
   }
 }
