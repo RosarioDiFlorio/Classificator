@@ -68,10 +68,11 @@ public class SourceVectorBuilder {
           String titleAndDes = source.getTitle()+" "+source.getDescription();
           List<String> toAnalyze = new ArrayList<>();
           toAnalyze.add(titleAndDes);
-          source.setKeywordList((ArrayList<Keyword>) ke.extractKeywordsFromTexts(toAnalyze,Configurator.numKeywords).stream().flatMap(l->l.stream()).collect(Collectors.toList()));       
-        }                
+          source.setKeywordList((ArrayList<Keyword>) ke.extractKeywordsFromTexts(toAnalyze,Configurator.numKeywords).stream().flatMap(l->l.stream()).collect(Collectors.toList()));
+        }
       }else      
         sources = dataBuilder.buildDataset("training.txt", path, "categories.txt");
+      DatasetBuilder.saveSources(sources, path+"sources.json");
     }else{
       sources = DatasetBuilder.loadSources(path+"training.json");
     }
@@ -93,7 +94,7 @@ public class SourceVectorBuilder {
       sv.setId(sources.get(i).getId());
       sv.setCategory(category);
       sv.setTitle(sources.get(i).getTitle());
-      sv.setKeywords(sources.get(i).getKeywordList().stream().map(k->k.getText()).collect(Collectors.toList()));
+      sv.setKeywords(sources.get(i).getKeywordList());
       sv.setVector(vectors[i]);
       toReturn.add(sv);
     }
