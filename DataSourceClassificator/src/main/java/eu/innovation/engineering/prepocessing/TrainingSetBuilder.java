@@ -2,15 +2,10 @@ package eu.innovation.engineering.prepocessing;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.stream.Collectors;
-
-import org.apache.commons.math3.ml.clustering.CentroidCluster;
-import org.apache.commons.math3.ml.clustering.KMeansPlusPlusClusterer;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -20,12 +15,10 @@ import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 import com.ibm.watson.developer_cloud.natural_language_understanding.v1.model.CategoriesResult;
 
 import eu.innovation.engineering.config.PathConfigurator;
-import eu.innovation.engineering.prepocessing.datareader.TxtDataReader;
 import eu.innovation.engineering.prepocessing.featurextractor.CategoryVector;
 import eu.innovation.engineering.prepocessing.featurextractor.ClusteringKMeans;
 import eu.innovation.engineering.prepocessing.featurextractor.FeatureExtractor;
 import eu.innovation.engineering.util.featurextractor.Item;
-import eu.innovation.engineering.util.featurextractor.ItemWrapper;
 import eu.innovation.engineering.util.featurextractor.SourceVector;
 import eu.innovation.engineering.util.preprocessing.Source;
 
@@ -48,8 +41,10 @@ public class TrainingSetBuilder {
     if(!category.equals(""))
       path = PathConfigurator.rootFolder + category +"/";
 
+    // SERVE PER GENERARE IL FILE CHE CONTIENE I VETTORI DELLE CATEGORIE
     CategoryVector.execute(path+"categories.txt",null,path);
-    clusterSubCategory(PathConfigurator.applicationFileFolder+"sourceVectors.json",path+"vectorCategory.json", category, path);
+    // SERVE PER GENEARRE IL TRAINING.JSON CON LE SOTTOCATEGORIE DELLA CATEGORIA SCELTA
+    clusterSubCategory(path+"sourceVectors.json",path+"vectorCategory.json", category, path);
 
   }
   
@@ -60,16 +55,17 @@ public class TrainingSetBuilder {
     ObjectMapper mapper = new ObjectMapper();
     HashMap<String,float[]> categoryVectorList = mapper.readValue(new File(categoryFile), new TypeReference<HashMap<String,float[]>>() {});
 
+    //carico una lista di sourceVector, ovvero delle source che contengono anche il vettore (che rappresenta la concatenazione delle keywords)
     List<SourceVector> sourceList = SourceVectorBuilder.loadSourceVectorList(sourceFile);
 
-    PrintWriter writer = new PrintWriter(PathConfigurator.applicationFileFolder+"CosineSimilarityResults.txt");
+    
+    
+    //creo una lista di item, per ogni source(item) mi calcolo la subcategory migliore 
     ArrayList<Item> items = new ArrayList<Item>(); 
 
     for(SourceVector source : sourceList){
       if(source.getCategory().contains(categoryChoose)){
-        writer.println("\nID: "+source.getId());
-        writer.println("TITLE: "+source.getTitle());
-        writer.println("KEYWORDS: "+source.getKeywords().toString());
+
         Item item = new Item();
         item.setId(source.getId());
         item.setDatasource("Paper");
@@ -81,7 +77,7 @@ public class TrainingSetBuilder {
         for(String category : categoryVectorList.keySet()){
 
           features[count] = FeatureExtractor.cosineSimilarity(source.getVector(), categoryVectorList.get(category));
-          writer.println("      "+category+": "+features[count]);
+
           if(features[count]>valHightCategory){
             valHightCategory = features[count];
             hightCategory = category;
@@ -94,35 +90,10 @@ public class TrainingSetBuilder {
       }
 
     }
-    writer.flush();
-    writer.close();
+  
 
 
-
-
-    List<ItemWrapper> clusterInput = items.stream().map(ItemWrapper::new).collect(Collectors.toList());
-    KMeansPlusPlusClusterer<ItemWrapper> clusterer = new KMeansPlusPlusClusterer<ItemWrapper>(4);
-
-    System.out.println("Number datasource to create dictionaries: "+clusterInput.size()+" num Cluster:"+4);
-    System.out.println("Starting k-means");
-    List<CentroidCluster<ItemWrapper>> clusterResults = clusterer.cluster(clusterInput);
-    System.out.println("Ended k-means");
-
-    System.out.println("DaviesBouldin-Index: "+ClusteringKMeans.DaviesBouldinIndex(clusterResults,4));
-
-    writer = new PrintWriter(PathConfigurator.applicationFileFolder+"clusters.txt");
-    for (int i=0; i<clusterResults.size(); i++) {
-      writer.println("\nCluster: "+i);
-      System.out.println("\n\nCluster: "+i);
-      for (ItemWrapper itemWrapper : clusterResults.get(i).getPoints()){
-        writer.println("    id: "+itemWrapper.getItem().getId()+"   Keywords: "+itemWrapper.getItem().getTitle());
-        System.out.println("    id: "+itemWrapper.getItem().getId()+"   Keywords: "+itemWrapper.getItem().getTitle());
-      }
-    }
-    writer.flush();
-    writer.close();
-
-
+    //carcico il file che contiene i source con la cagetory scelta e tutte le info (title, id, keywords) faccio un merge con la lista di Item per cambiare la categoria (da category a subcategory)
     List<Source> source = DatasetBuilder.loadSources(PathConfigurator.applicationFileFolder+"sources.json");
 
     List<Source> newSource = new ArrayList<Source>();
@@ -143,10 +114,7 @@ public class TrainingSetBuilder {
     }
 
 
-
-
-     
-    List<String> listCategories = TxtDataReader.getCategories(path+"categories.txt");
+    //List<String> listCategories = TxtDataReader.getCategories(path+"categories.txt");
     //newSource=keywordFilterLSA(newSource, listCategories);
     
     DatasetBuilder.saveSources(newSource, path+"/training.json");
