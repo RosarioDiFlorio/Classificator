@@ -230,6 +230,7 @@ public class SolrClient {
     Gson gson = new Gson();
     JsonArray resultsProduzione = new JsonArray();
     JsonParser parserJson = new JsonParser();
+    TextValidator textValidator = new TextValidator(Configurator.minDescriptionLength);
 
     List<String> idSources = balanceQuery(list);
 
@@ -250,7 +251,7 @@ public class SolrClient {
       JsonArray tmpJson = json.getAsJsonArray();
       for(JsonElement el: tmpJson){
         Paper paper = gson.fromJson(el, Paper.class); 
-        if(paper!=null){
+        if(paper!=null && textValidator.analyzer(paper.getDescription())){
           toReturn.add(paper.getSource());
         }
       }

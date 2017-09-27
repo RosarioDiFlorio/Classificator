@@ -39,86 +39,6 @@
   "categoryList" : null,
   "conceptList" : null
 }, {
-  "id" : "10028700_234",
-  "title" : "Comparative effects of Bcl-2 over-expression and ZVAD.FMK treatment on dexamethasone and VP16-induced apoptosis in CEM cells",
-  "description" : null,
-  "texts" : [ "Comparative effects of Bcl-2 over-expression and ZVAD.FMK treatment on dexamethasone and VP16-induced apoptosis in CEM cells", "Benson, R S Dive, C Watson, A J Wellcome Trust/United Kingdom Research Support, Non-U.S. Gov't England Cell death and differentiation Cell Death Differ. 1998 May;5(5):432-9.", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "bcl-2"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "over-expression"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "zvad.fmk"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "vp16-induced"
-  } ],
-  "categoryList" : null,
-  "conceptList" : null
-}, {
-  "id" : "10126772_182",
-  "title" : "Greens-Function and Generalized Phase-Shift for Surface and Interface Problems",
-  "description" : null,
-  "texts" : [ "Greens-Function and Generalized Phase-Shift for Surface and Interface Problems", "Journals published by the American Physical Society can be found at http://journals.aps.org/", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "greens-function"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "phase-shift"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "problemsjournal"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "http://journals.aps.org/"
-  } ],
-  "categoryList" : null,
-  "conceptList" : null
-}, {
   "id" : "10139300_183",
   "title" : "TECA: A Parallel Toolkit for Extreme Climate Analysis",
   "description" : null,
@@ -275,46 +195,6 @@
     "relevance" : 0.17685745205176018,
     "sentiment" : null,
     "text" : "microbubble"
-  } ],
-  "categoryList" : null,
-  "conceptList" : null
-}, {
-  "id" : "10017801_234",
-  "title" : "Exploiting genomic knowledge in optimising molecular breeding programmes: algorithms from evolutionary computing",
-  "description" : null,
-  "texts" : [ "Exploiting genomic knowledge in optimising molecular breeding programmes: algorithms from evolutionary computing", "(In Press)", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.08509063207850792,
-    "sentiment" : null,
-    "text" : "exploit"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "optimise"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "programme"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.09319553006894271,
-    "sentiment" : null,
-    "text" : "press"
   } ],
   "categoryList" : null,
   "conceptList" : null
@@ -479,46 +359,6 @@
   "categoryList" : null,
   "conceptList" : null
 }, {
-  "id" : "10028301_234",
-  "title" : "Electron Tunneling through Ultrathin Boron Nitride Crystalline Barriers",
-  "description" : null,
-  "texts" : [ "Electron Tunneling through Ultrathin Boron Nitride Crystalline Barriers", "907GW Times Cited:22 Cited References Count:18", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "barriers907gw"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : ":22"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.08877992188451167,
-    "sentiment" : null,
-    "text" : "count"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : ":18"
-  } ],
-  "categoryList" : null,
-  "conceptList" : null
-}, {
   "id" : "10018323_234",
   "title" : "Abundant IFN-gamma production by local T cells in respiratory syncytial virus-induced eosinophilic lung disease.",
   "description" : null,
@@ -555,46 +395,6 @@
     "relevance" : 0.4364254506188078,
     "sentiment" : null,
     "text" : "lung"
-  } ],
-  "categoryList" : null,
-  "conceptList" : null
-}, {
-  "id" : "10126790_182",
-  "title" : "New Technique for Molecular-Dynamics Computer-Simulations - Hellmann-Feynman Theorem and Subspace Hamiltonian Approach",
-  "description" : null,
-  "texts" : [ "New Technique for Molecular-Dynamics Computer-Simulations - Hellmann-Feynman Theorem and Subspace Hamiltonian Approach", "Journals published by the American Physical Society can be found at http://journals.aps.org/", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "molecular-dynamics"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "computer-simulation"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "hellmann-feynman"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "hamiltonian"
   } ],
   "categoryList" : null,
   "conceptList" : null
@@ -799,46 +599,6 @@
   "categoryList" : null,
   "conceptList" : null
 }, {
-  "id" : "10129756_178",
-  "title" : "Elimination of lead zirconate titatate thin film breakage caused by electric current arcing and intrinsic differential strains during poling",
-  "description" : null,
-  "texts" : [ "Elimination of lead zirconate titatate thin film breakage caused by electric current arcing and intrinsic differential strains during poling", "Includes bibliographical references (p. 66).", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.08685380890379563,
-    "sentiment" : null,
-    "text" : "elimination"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.0869793779409323,
-    "sentiment" : null,
-    "text" : "lead"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "titatate"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "polinginclude"
-  } ],
-  "categoryList" : null,
-  "conceptList" : null
-}, {
   "id" : "10128759_178",
   "title" : "Search for a Supersymmetric Partner to the Top Quark in Final States with Jets and Missing Transverse Momentum at √s=7  TeV with the ATLAS Detector",
   "description" : null,
@@ -919,46 +679,6 @@
   "categoryList" : null,
   "conceptList" : null
 }, {
-  "id" : "10006533_234",
-  "title" : "BINGO: a single dish approach to 21cm intensity mapping",
-  "description" : null,
-  "texts" : [ "BINGO: a single dish approach to 21cm intensity mapping", "September 1, 2012 4 pages, 2 figures, to appear in the Proceedings of Moriond Cosmology 2012", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "21cm"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "mappingseptember"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "2012"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "moriond"
-  } ],
-  "categoryList" : null,
-  "conceptList" : null
-}, {
   "id" : "10134668_183",
   "title" : "The regulation of global deSUMOylation by human SUMO- specific proteases",
   "description" : null,
@@ -1035,46 +755,6 @@
     "relevance" : 0.22620732977401548,
     "sentiment" : null,
     "text" : "mammal"
-  } ],
-  "categoryList" : null,
-  "conceptList" : null
-}, {
-  "id" : "10007665_234",
-  "title" : "Hydrothermal formation of the calcium silicate hydrates, tobermorite (Ca 5Si 6O 16(OH) 2 ?? 4H 2O) and xonotlite (Ca 6Si 6O 17(OH) 2): An in situ synchrotron study",
-  "description" : null,
-  "texts" : [ "Hydrothermal formation of the calcium silicate hydrates, tobermorite (Ca 5Si 6O 16(OH) 2 ?? 4H 2O) and xonotlite (Ca 6Si 6O 17(OH) 2): An in situ synchrotron study", "cited By (since 1996) 63", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "tobermorite"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "5si"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "xonotlite"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "6si"
   } ],
   "categoryList" : null,
   "conceptList" : null
@@ -1439,46 +1119,6 @@
   "categoryList" : null,
   "conceptList" : null
 }, {
-  "id" : "10130117_178",
-  "title" : "Evaluation of probabilistic underspecification as a method for incorporating uncertainty into comparative life cycle assessments",
-  "description" : null,
-  "texts" : [ "Evaluation of probabilistic underspecification as a method for incorporating uncertainty into comparative life cycle assessments", "Includes bibliographical references (p. 97-100).", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "underspecification"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.07826610720085586,
-    "sentiment" : null,
-    "text" : "incorporate"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "assessmentsinclude"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "97-100"
-  } ],
-  "categoryList" : null,
-  "conceptList" : null
-}, {
   "id" : "10003596_234",
   "title" : "GFI1 and GFI1B control the loss of endothelial identity of hemogenic endothelium during hematopoietic commitment.",
   "description" : null,
@@ -1515,46 +1155,6 @@
     "relevance" : 0.6306687946681571,
     "sentiment" : null,
     "text" : "hematopoietic"
-  } ],
-  "categoryList" : null,
-  "conceptList" : null
-}, {
-  "id" : "10127316_178",
-  "title" : "Analysis of Substrate Access to Active Sites in Bacterial Multicomponent Monooxygenase Hydroxylases: X-Ray Crystal Structure of Xenon-Pressurized Phenol Hydroxylase from Pseudomonas Sp Ox1",
-  "description" : null,
-  "texts" : [ "Analysis of Substrate Access to Active Sites in Bacterial Multicomponent Monooxygenase Hydroxylases: X-Ray Crystal Structure of Xenon-Pressurized Phenol Hydroxylase from Pseudomonas Sp Ox1", "National Institute of General Medical Sciences (U.S.) (Grant GM032134)", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "monooxygenase"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "x-ray"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "xenon-pressurized"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "pseudomona"
   } ],
   "categoryList" : null,
   "conceptList" : null
@@ -1679,86 +1279,6 @@
   "categoryList" : null,
   "conceptList" : null
 }, {
-  "id" : "10026237_234",
-  "title" : "Below-ground herbivory promotes soil nutrient transfer and root growth in grassland",
-  "description" : null,
-  "texts" : [ "Below-ground herbivory promotes soil nutrient transfer and root growth in grassland", "Bardgett, RD Denton, CS Cook, R", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "below-ground"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.09282078793841719,
-    "sentiment" : null,
-    "text" : "promote"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "grasslandbardgett"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "denton"
-  } ],
-  "categoryList" : null,
-  "conceptList" : null
-}, {
-  "id" : "10028729_234",
-  "title" : "The non-genotoxic hepatocarcinogen nafenopin suppresses rodent hepatocyte apoptosis induced by TGFbeta1, DNA damage and Fas",
-  "description" : null,
-  "texts" : [ "The non-genotoxic hepatocarcinogen nafenopin suppresses rodent hepatocyte apoptosis induced by TGFbeta1, DNA damage and Fas", "Gill, J H James, N H Roberts, R A Dive, C Research Support, Non-U.S. Gov't England Carcinogenesis Carcinogenesis. 1998 Feb;19(2):299-304.", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "non-genotoxic"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "hepatocarcinogen"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "nafenopin"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "tgfbeta1"
-  } ],
-  "categoryList" : null,
-  "conceptList" : null
-}, {
   "id" : "10139036_183",
   "title" : "Efficient Bug Prediction and Fix Suggestions",
   "description" : null,
@@ -1835,86 +1355,6 @@
     "relevance" : 0.22942675469368784,
     "sentiment" : null,
     "text" : "ion"
-  } ],
-  "categoryList" : null,
-  "conceptList" : null
-}, {
-  "id" : "10130047_178",
-  "title" : "Rational design and directed evolution of probe ligases for site-specific protein labeling and live-cell imaging",
-  "description" : null,
-  "texts" : [ "Rational design and directed evolution of probe ligases for site-specific protein labeling and live-cell imaging", "Includes bibliographical references.", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.0834501940085079,
-    "sentiment" : null,
-    "text" : "direct"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "site-specific"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "live-cell"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "imaginginclude"
-  } ],
-  "categoryList" : null,
-  "conceptList" : null
-}, {
-  "id" : "10127886_178",
-  "title" : "High yield production of inorganic graphene-like materials (MoS₂, WS₂, BN) through liquid exfoliation testing key parameters",
-  "description" : null,
-  "texts" : [ "High yield production of inorganic graphene-like materials (MoS₂, WS₂, BN) through liquid exfoliation testing key parameters", "Includes bibliographical references (p. 41).", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.08656873574006435,
-    "sentiment" : null,
-    "text" : "high"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "graphene-like"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.08545011839669575,
-    "sentiment" : null,
-    "text" : "key"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "parametersinclude"
   } ],
   "categoryList" : null,
   "conceptList" : null
@@ -2439,46 +1879,6 @@
   "categoryList" : null,
   "conceptList" : null
 }, {
-  "id" : "10009389_234",
-  "title" : "Biologically Inspired Computation for Chemical Sensing",
-  "description" : null,
-  "texts" : [ "Biologically Inspired Computation for Chemical Sensing", "S20111", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.05300122580319061,
-    "sentiment" : null,
-    "text" : "biologically"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.08740287535541102,
-    "sentiment" : null,
-    "text" : "inspire"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.05730116182425388,
-    "sentiment" : null,
-    "text" : "computation"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "sensings20111"
-  } ],
-  "categoryList" : null,
-  "conceptList" : null
-}, {
   "id" : "10129603_178",
   "title" : "Patterns of methylation heritability in a genome-wide analysis of four brain regions",
   "description" : null,
@@ -2959,46 +2359,6 @@
   "categoryList" : null,
   "conceptList" : null
 }, {
-  "id" : "10028418_234",
-  "title" : "Randomly Distributed Ultrasmall Metal Particles on the Surface of High-Mobility 2deg Samples",
-  "description" : null,
-  "texts" : [ "Randomly Distributed Ultrasmall Metal Particles on the Surface of High-Mobility 2deg Samples", "Qa793 Times Cited:1 Cited References Count:5", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.0970021634922722,
-    "sentiment" : null,
-    "text" : "distribute"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "high-mobility"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "2deg"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "samplesqa793"
-  } ],
-  "categoryList" : null,
-  "conceptList" : null
-}, {
   "id" : "10022449_234",
   "title" : "Synchrotron micro-tomography and strain mapping on a fatigue cracked Ti/SiC fibre composite.",
   "description" : null,
@@ -3195,46 +2555,6 @@
     "relevance" : 0.19789294906244764,
     "sentiment" : null,
     "text" : "particle"
-  } ],
-  "categoryList" : null,
-  "conceptList" : null
-}, {
-  "id" : "10018582_234",
-  "title" : "Some experimental observations on crack closure and crack-tip plasticity",
-  "description" : null,
-  "texts" : [ "Some experimental observations on crack closure and crack-tip plasticity", "Times Cited: 0", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.08238436304720803,
-    "sentiment" : null,
-    "text" : "crack"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "crack-tip"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "plasticitytime"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.07805038876563797,
-    "sentiment" : null,
-    "text" : "cite"
   } ],
   "categoryList" : null,
   "conceptList" : null
@@ -3479,46 +2799,6 @@
   "categoryList" : null,
   "conceptList" : null
 }, {
-  "id" : "10127499_178",
-  "title" : "Classical Time Crystals",
-  "description" : null,
-  "texts" : [ "Classical Time Crystals", "United States. Dept. of Energy (Grant DE-FG02-05ER41360)", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "crystalsunited"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "dept."
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "energy"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "grant"
-  } ],
-  "categoryList" : null,
-  "conceptList" : null
-}, {
   "id" : "10001942_234",
   "title" : "Optimization of supervised cluster analysis for extracting reference tissue input curves in (R)-[11C]PK11195 brain PET studies.",
   "description" : null,
@@ -3635,86 +2915,6 @@
     "relevance" : 0.19374299194036837,
     "sentiment" : null,
     "text" : "proton"
-  } ],
-  "categoryList" : null,
-  "conceptList" : null
-}, {
-  "id" : "10127938_178",
-  "title" : "Scanning tunnelling microscopy and spectroscopy of ultra-flat graphene on hexagonal boron nitride",
-  "description" : null,
-  "texts" : [ "Scanning tunnelling microscopy and spectroscopy of ultra-flat graphene on hexagonal boron nitride", "United States. Office of Naval Research (Multi University Research Initiative (MURI) on Graphene Advanced Terahertz Engineering (Gate) at MIT, Harvard and Boston Unversity, 2009)", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.2641368157347679,
-    "sentiment" : null,
-    "text" : "microscopy"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.28698606903950846,
-    "sentiment" : null,
-    "text" : "spectroscopy"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.3155677917395414,
-    "sentiment" : null,
-    "text" : "graphene"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.2933717333724848,
-    "sentiment" : null,
-    "text" : "boron"
-  } ],
-  "categoryList" : null,
-  "conceptList" : null
-}, {
-  "id" : "10024890_234",
-  "title" : "Deep-Inelastic Inclusive ep Scattering at Low x and a Determination of alpha\\_s",
-  "description" : null,
-  "texts" : [ "Deep-Inelastic Inclusive ep Scattering at Low x and a Determination of alpha\\_s", "{Eur.Phys.J.C21:33-61},2001", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "deep-inelastic"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "-lcb-"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "eur.phys.j.c21"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : ":33"
   } ],
   "categoryList" : null,
   "conceptList" : null
@@ -4075,46 +3275,6 @@
     "relevance" : 0.18154740543440134,
     "sentiment" : null,
     "text" : "boundary"
-  } ],
-  "categoryList" : null,
-  "conceptList" : null
-}, {
-  "id" : "10028905_234",
-  "title" : "Accuracy and tractability of a kriging model of intramolecular polarisable multipolar electrostatics and its application to histidine",
-  "description" : null,
-  "texts" : [ "Accuracy and tractability of a kriging model of intramolecular polarisable multipolar electrostatics and its application to histidine", "(Accepted 24th April 2013)", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "krige"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "polarisable"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "24th"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "2013"
   } ],
   "categoryList" : null,
   "conceptList" : null

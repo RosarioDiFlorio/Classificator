@@ -42,6 +42,7 @@
   } ],
   "conceptList" : null
 }, {
+<<<<<<< HEAD
   "id" : "10127868_178",
   "title" : "Nanoporous graphene as a desalination membrane : a computational study",
   "description" : null,
@@ -85,6 +86,8 @@
   } ],
   "conceptList" : null
 }, {
+=======
+>>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
   "id" : "10003231_234",
   "title" : "The role of intra-thalamic and thalamocortical circuits in action selection.",
   "description" : null,
@@ -644,6 +647,7 @@
   } ],
   "conceptList" : null
 }, {
+<<<<<<< HEAD
   "id" : "10009389_234",
   "title" : "Biologically Inspired Computation for Chemical Sensing",
   "description" : null,
@@ -687,6 +691,8 @@
   } ],
   "conceptList" : null
 }, {
+=======
+>>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
   "id" : "10029717_234",
   "title" : "Structure of hydrogen-dosed graphene deduced from low electron energy loss characteristics and density functional calculations",
   "description" : null,
@@ -730,6 +736,7 @@
   } ],
   "conceptList" : null
 }, {
+<<<<<<< HEAD
   "id" : "10022769_234",
   "title" : "Regulatory T cells and dendritic cells in transplantation tolerance: molecular markers and mechanisms",
   "description" : null,
@@ -773,6 +780,8 @@
   } ],
   "conceptList" : null
 }, {
+=======
+>>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
   "id" : "10129603_178",
   "title" : "Patterns of methylation heritability in a genome-wide analysis of four brain regions",
   "description" : null,
@@ -1590,6 +1599,7 @@
   } ],
   "conceptList" : null
 }, {
+<<<<<<< HEAD
   "id" : "10127391_178",
   "title" : "Millihertz quasi-periodic oscillations and thermonuclear bursts from Terzan 5: A showcase of burning regimes",
   "description" : null,
@@ -1633,6 +1643,8 @@
   } ],
   "conceptList" : null
 }, {
+=======
+>>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
   "id" : "27039789_645",
   "title" : "Biophysics",
   "description" : null,
@@ -1762,6 +1774,7 @@
   } ],
   "conceptList" : null
 }, {
+<<<<<<< HEAD
   "id" : "10006533_234",
   "title" : "BINGO: a single dish approach to 21cm intensity mapping",
   "description" : null,
@@ -1805,6 +1818,8 @@
   } ],
   "conceptList" : null
 }, {
+=======
+>>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
   "id" : "10019631_234",
   "title" : "Characterising the Innate and Adaptive Immune Response to Intestinal Helminth infection",
   "description" : null,
@@ -2235,6 +2250,7 @@
   } ],
   "conceptList" : null
 }, {
+<<<<<<< HEAD
   "id" : "10007985_234",
   "title" : "OGLE-2008-BLG-510: first automated real-time detection of a weak microlensing anomaly - brown dwarf or stellar binary?",
   "description" : null,
@@ -2278,6 +2294,8 @@
   } ],
   "conceptList" : null
 }, {
+=======
+>>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
   "id" : "10003596_234",
   "title" : "GFI1 and GFI1B control the loss of endothelial identity of hemogenic endothelium during hematopoietic commitment.",
   "description" : null,
@@ -2321,6 +2339,7 @@
   } ],
   "conceptList" : null
 }, {
+<<<<<<< HEAD
   "id" : "10127316_178",
   "title" : "Analysis of Substrate Access to Active Sites in Bacterial Multicomponent Monooxygenase Hydroxylases: X-Ray Crystal Structure of Xenon-Pressurized Phenol Hydroxylase from Pseudomonas Sp Ox1",
   "description" : null,
@@ -2364,6 +2383,8 @@
   } ],
   "conceptList" : null
 }, {
+=======
+>>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
   "id" : "10028844_234",
   "title" : "Stem cell regeneration of degenerated intervertebral discs: current status.",
   "description" : null,
@@ -2536,6 +2557,7 @@
   } ],
   "conceptList" : null
 }, {
+<<<<<<< HEAD
   "id" : "10026237_234",
   "title" : "Below-ground herbivory promotes soil nutrient transfer and root growth in grassland",
   "description" : null,
@@ -2622,6 +2644,8 @@
   } ],
   "conceptList" : null
 }, {
+=======
+>>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
   "id" : "10024793_234",
   "title" : "Caveolin-1 (P132L), a common breast cancer mutation, confers mammary cell invasiveness and defines a novel stem cell/metastasis-associated gene signature.",
   "description" : null,
@@ -2794,6 +2818,7 @@
   } ],
   "conceptList" : null
 }, {
+<<<<<<< HEAD
   "id" : "10127886_178",
   "title" : "High yield production of inorganic graphene-like materials (MoS₂, WS₂, BN) through liquid exfoliation testing key parameters",
   "description" : null,
@@ -2837,6 +2862,8 @@
   } ],
   "conceptList" : null
 }, {
+=======
+>>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
   "id" : "10018699_234",
   "title" : "Membrane nanotubes: dynamic long-distance connections between animal cells.",
   "description" : null,
@@ -2880,6 +2907,7 @@
   } ],
   "conceptList" : null
 }, {
+<<<<<<< HEAD
   "id" : "10028409_234",
   "title" : "The Pinning Potential at Single Flux Vortices Investigated Using Submicron Hall Probes",
   "description" : null,
@@ -2966,6 +2994,8 @@
   } ],
   "conceptList" : null
 }, {
+=======
+>>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
   "id" : "100224_102",
   "title" : "Electron-impact excitation of neutral boron using the R-matrix with pseudostates method",
   "description" : null,
