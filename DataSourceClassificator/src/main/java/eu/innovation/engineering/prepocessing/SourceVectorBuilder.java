@@ -31,7 +31,9 @@ public class SourceVectorBuilder {
     boolean fromSolr = true;
     boolean withCategories = false;
     SourceVectorBuilder sourceVectorBuilder = new SourceVectorBuilder();
+    //    sourceVectorBuilder.buildSourceVectors(PathConfigurator.rootFolder+"science/","science",withCategories,fromSolr);
     sourceVectorBuilder.buildSourceVectors(PathConfigurator.rootFolder+"science/","science",withCategories,fromSolr);
+
   }
 
 
@@ -42,13 +44,15 @@ public class SourceVectorBuilder {
    */
   public void buildSourceVectors (String path,String category,boolean withCategories,boolean fromSolr) throws Exception{
 
-    String trainingFile = path+"training.txt";
+    //    String trainingFile = path+"training.txt";
+    String trainingFile = "training.txt";
     String glossaryFile = path+"glossaries.json";
+    String sourcesFile = "sources.json";
     String pathWhereSave = path+"sourceVector.json";
 
     //prendo gli id dal file training.txt
     TxtDataReader dataReader = new TxtDataReader();
-    dataReader.setFileToReadSource(trainingFile);    
+    dataReader.setFileToReadSource(path + trainingFile);    
     List<String> sourcesIds = new ArrayList<>();
     sourcesIds.addAll(dataReader.getIds());
     System.out.println("Sources size "+sourcesIds.size());
@@ -58,14 +62,13 @@ public class SourceVectorBuilder {
       KeywordExtractor ke = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder, glossaryFile);
       dataBuilder.setKeywordExtractor(ke);
       if(withCategories)
-        sources = dataBuilder.buildDataset("training.txt", path, "../categories.txt", true);
+        sources = dataBuilder.buildDataset(trainingFile, path, "../categories.txt", true);
       else      
-        sources = dataBuilder.buildDataset("training.txt", path, "categories.txt", false);
-      DatasetBuilder.saveSources(sources, path+"sources.json");
+        sources = dataBuilder.buildDataset(trainingFile, path, "categories.txt", false);
+      DatasetBuilder.saveSources(sources, path+sourcesFile);
     }else{
-      sources = DatasetBuilder.loadSources(path+"sources.json");
+      sources = DatasetBuilder.loadSources(path+sourcesFile);
     }
-    pathWhereSave = path+"sourceVectors.json";
     saveSourceVectorList(pathWhereSave, createSourceVectorList(sources,category));
   }
 
