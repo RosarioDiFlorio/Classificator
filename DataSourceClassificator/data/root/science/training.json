@@ -38,7 +38,56 @@
   } ],
   "categoryList" : null,
   "conceptList" : null
+<<<<<<< HEAD
 }, {
+  "id" : "10127868_178",
+  "title" : "Nanoporous graphene as a desalination membrane : a computational study",
+  "description" : null,
+  "texts" : [ "Nanoporous graphene as a desalination membrane : a computational study", "Includes bibliographical references (p. 19-21).", null ],
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.10241638234956674,
+    "sentiment" : null,
+    "text" : "studyinclude"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.07256067575478897,
+    "sentiment" : null,
+    "text" : "bibliographical"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.08447909486371064,
+    "sentiment" : null,
+    "text" : "reference"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.10241638234956674,
+    "sentiment" : null,
+    "text" : "19-21"
+  } ],
+  "categoryList" : [ {
+    "label" : "science",
+    "score" : 1.0
+  } ],
+  "conceptList" : null
+}, {
+=======
+>>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
+=======
+}, {
+>>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
   "id" : "10003231_234",
   "title" : "The role of intra-thalamic and thalamocortical circuits in action selection.",
   "description" : "We previously proposed that the basal ganglia (BG) play a crucial role in action selection. Quantitative analysis and simulation of a computational model of the intrinsic BG demonstrated that its output was consistent with this proposition. Here we build on that model by embedding it into a wider circuit containing the motor thalamocortical loop and thalamic reticular nucleus (TRN). Simulation of this extended model showed that the additions gave five main results which are desirable in a selection/switching mechanism. First, low salience actions (i.e. those with low urgency) could be selected. Second, the range of salience values over which actions could be switched between was increased. Third, the contrast between the selected and non-selected actions was enhanced via improved differentiation of outputs from the BG. Fourth, transient increases in the salience of a non-selected action were prevented from interrupting the ongoing action, unless the transient was of sufficient magnitude. Finally, the selection of the ongoing action persisted when a new closely matched salience action became active. The first result was facilitated by the thalamocortical loop; the rest were dependent on the presence of the TRN. Thus, we conclude that the results are consistent with these structures having clearly defined functions in action selection.",
