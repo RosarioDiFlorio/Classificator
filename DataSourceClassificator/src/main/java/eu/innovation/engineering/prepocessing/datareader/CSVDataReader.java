@@ -28,7 +28,7 @@ import eu.innovation.engineering.util.preprocessing.Source;
 public class CSVDataReader {
   private static final int numKey = 4;
   private static final int limitSource = 100;
-  private static final String fileTestJson = PathConfigurator.rootFolder+"test.json";
+  private static final String fileTestJson = PathConfigurator.rootFolder+"science/test.json";
   private static boolean fromJson = false;
 
   public static void main(String[] args) throws Exception{
@@ -53,17 +53,17 @@ public class CSVDataReader {
    * @throws Exception
    */
   public static void mainToTest(String[] args) throws Exception{
-    String testFolderName=PathConfigurator.applicationFileFolder+"resultsRoot.csv";
+    String testFolderName=PathConfigurator.applicationFileFolder+"resultsScience.csv";
 
     float uThreshold = (float) 1.0;
     float lThreshold = (float) 0.7;
     int batchLine = 0;   
     boolean isCount =  false;   
-    boolean all = false;
+    boolean all = true;
 
     String batchCategory = "";
-    String categoryFolder = "";
-    String category = "science";
+    String categoryFolder = "science";
+    String category = "geology";
 
     KeywordExtractor kex = null;
     if(!isCount && !fromJson)
