@@ -142,3 +142,4 @@ Caused by: java.lang.ClassNotFoundException: org.apache.solr.client.solrj.SolrSe
 17:52:12,457 [                     main] ERROR [JAXRSUtils] [] No message body writer has been found for class eu.innovationengineering.word2vec.common.request.bean.VectorListRequestBean, ContentType: application/json
 18:01:46,209 [                     main] ERROR [JAXRSUtils] [] No message body writer has been found for class eu.innovationengineering.word2vec.common.request.bean.VectorListRequestBean, ContentType: application/json
 18:04:11,209 [                     main] ERROR [JAXRSUtils] [] No message body writer has been found for class eu.innovationengineering.word2vec.common.request.bean.VectorListRequestBean, ContentType: application/json
+17:15:17,562 [                     main] ERROR [JAXRSUtils] [] No message body writer has been found for class eu.innovationengineering.word2vec.common.request.bean.VectorListRequestBean, ContentType: application/json
