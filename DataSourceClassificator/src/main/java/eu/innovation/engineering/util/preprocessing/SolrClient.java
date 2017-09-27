@@ -35,7 +35,7 @@ public class SolrClient {
   public static void main(String[] args) throws Exception{
 
     KeywordExtractor ke = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
-    requestNTechincalPaper(0,10000,ke);
+    requestNTechincalPaper(0,5000,ke);
 
   }
 
@@ -137,6 +137,7 @@ public class SolrClient {
     String cursorMark="*";
     String url = "http://192.168.200.81:8080/solr4/technical_papers/select?q=*%3A*&sort=id+asc&fl=id%2Cdc_title%2Cdc_description&wt=json&indent=true&cursorMark=";
 
+    TextValidator textValidator = new TextValidator(Configurator.minDescriptionLength);
     int numSourceToSave = 0;
     JsonParser parserJson = new JsonParser();
 
@@ -178,15 +179,16 @@ public class SolrClient {
           List<String> toAnalyze = new ArrayList<String>();
           toAnalyze.add(source.getTitle()+description);
           try{
-          if(ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords)!=null && ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).size()>0)
-            if(ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0)!=null && !ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0).isEmpty()){
-              if(ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0).size()>0){
-                ArrayList<Keyword> keywordsList = (ArrayList<Keyword>) ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0);
-                source.setKeywordList(keywordsList);
-                sourceList.add(source); 
+            if(textValidator.analyzer(description))
+              if(ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords)!=null && ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).size()>0)
+                if(ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0)!=null && !ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0).isEmpty()){
+                  if(ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0).size()>0){
+                    ArrayList<Keyword> keywordsList = (ArrayList<Keyword>) ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0);
+                    source.setKeywordList(keywordsList);
+                    sourceList.add(source); 
+                  }
                 }
-              }
-            }
+          }
           catch(Exception ex){
             System.out.println("Vado in exception per un motivo sconosciuto");
           }

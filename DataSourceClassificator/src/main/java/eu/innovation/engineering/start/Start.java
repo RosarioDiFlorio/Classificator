@@ -39,8 +39,8 @@ public class Start {
   private static final boolean buildCSVTest = true;
 
   //Other
-  private static final String category = "science";
-  private static final int numFeatures = 50;
+  private static final String category = "";
+  private static final int numFeatures = 500;
 
   public static void main(String[] args) throws IOException{
     
