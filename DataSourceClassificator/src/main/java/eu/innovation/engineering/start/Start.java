@@ -27,7 +27,7 @@ public class Start {
   //**MENU**
   
   //Primo passo, creazione del file dizionaries.json
-  private static final boolean buildJsonDictionaries = true;
+  private static final boolean buildJsonDictionaries = false;
   
   //Secondo passo creare i file Json di train e test
   private static final boolean buildJsonTraining = false;
