@@ -238,6 +238,15 @@ public  class DatasetBuilder {
     List<Source> toReturn = mapper.readValue(new File(pathFile), new TypeReference<List<Source>>(){});
     return toReturn;
   }
+  
+  public static Map<String,Source> loadMapSources(String pathFileJson) throws JsonParseException, JsonMappingException, IOException{
+    Map<String,Source> mapSources = new HashMap<>();
+    List<Source> sources = loadSources(pathFileJson);
+    for(Source s: sources){
+      mapSources.put(s.getId(), s);
+    }
+    return mapSources;
+  }
 
 
 

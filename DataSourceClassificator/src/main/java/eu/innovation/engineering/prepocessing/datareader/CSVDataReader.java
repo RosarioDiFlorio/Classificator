@@ -20,6 +20,7 @@ import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 import eu.innovation.engineering.LSA.keywordExtractor.LSACosineKeywordExtraction;
 import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
+import eu.innovation.engineering.prepocessing.DatasetBuilder;
 import eu.innovation.engineering.util.preprocessing.Paper;
 import eu.innovation.engineering.util.preprocessing.SolrClient;
 import eu.innovation.engineering.util.preprocessing.Source;
@@ -27,18 +28,12 @@ import eu.innovation.engineering.util.preprocessing.Source;
 public class CSVDataReader {
   private static final int numKey = 4;
   private static final int limitSource = 100;
-
+  private static final String fileTestJson = PathConfigurator.rootFolder+"test.json";
+  private static boolean fromJson = true;
 
   public static void main(String[] args) throws Exception{
 
-    //createGenericDataset(PathConfigurator.applicationFileFolder+"datasetGeneric/chemistry/");
-    //mainToCreateDataset(args);
     mainToTest(args);
-
-    //TxtDataReader dataReader = new TxtDataReader();
-    //dataReader.categoriesWithIds(PathConfigurator.applicationFileFolder+"trainingDatasetMerged.txt");
-    //dataReader.checkCategory(PathConfigurator.applicationFileFolder+"trainingDatasetMerged.txt", Configurator.Categories.society.name(), true);
-
   }
 
   public static void mainToCreateDataset(String[] args) throws IOException{
@@ -58,20 +53,22 @@ public class CSVDataReader {
    * @throws Exception
    */
   public static void mainToTest(String[] args) throws Exception{
-    String testFolderName=PathConfigurator.applicationFileFolder+"resultsScience.csv";
-    
+    String testFolderName=PathConfigurator.applicationFileFolder+"resultsRoot.csv";
+
     float uThreshold = (float) 1.0;
     float lThreshold = (float) 0.7;
     int batchLine = 0;   
     boolean isCount =  false;   
     boolean all = true;
+
     String batchCategory = "";
-    String categoryFolder = "science";
+    String categoryFolder = "";
     String category = "geology";
+
     KeywordExtractor kex = null;
-    if(!isCount)
+    if(!isCount && !fromJson)
       kex = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder,PathConfigurator.rootFolder+"science/glossaries.json");
-    
+
     File f = new File(testFolderName);
     if(f.isDirectory()){
       System.out.println("FOLDER -> "+testFolderName);
@@ -90,7 +87,7 @@ public class CSVDataReader {
       formatResultsFile(f, kex, lThreshold, uThreshold, category, batchCategory, categoryFolder, isCount, batchLine, all);
     }
   }
-  
+
   /**
    * 
    * This function call the function read ResultClassifier and format
@@ -122,7 +119,7 @@ public class CSVDataReader {
         int countDocs = 0;
         category = categories.get(j);
         if(category.equals(batchCategory) || batchCategory.equals("")){
-          countDocs = readResultClassifier(fileToAnalyze,kex, lThreshold,uThreshold,category,isCount,batchLine);
+          countDocs = readResultClassifier(fileToAnalyze,kex, lThreshold,uThreshold,category,isCount,batchLine,fromJson);
           System.out.println("category -> "+category);
           System.out.println("Founded sources -> "+countDocs);
           System.out.println("Upper threshold -> "+uThreshold +"\nLower threshold -> "+lThreshold);
@@ -133,7 +130,7 @@ public class CSVDataReader {
         }
       }
     }else{
-      int countDocs = readResultClassifier(fileToAnalyze,kex, lThreshold,uThreshold,category,isCount,batchLine);
+      int countDocs = readResultClassifier(fileToAnalyze,kex, lThreshold,uThreshold,category,isCount,batchLine,fromJson);
       System.out.println("category -> "+category);
       System.out.println("Founded sources -> "+countDocs);
       System.out.println("Upper threshold -> "+uThreshold +"\nLower threshold -> "+lThreshold);
@@ -142,14 +139,13 @@ public class CSVDataReader {
     }
     System.out.println("Total sources found -> " +totalCount);
   }
-  
 
-  public static int readResultClassifier(File csvFile, KeywordExtractor kex, float lowThreshold,float upperThreshold,String category,boolean isCount,int batchLine) throws Exception{
+
+  public static int readResultClassifier(File csvFile, KeywordExtractor kex, float lowThreshold,float upperThreshold,String category,boolean isCount,int batchLine, boolean fromJson) throws Exception{
     Map<String, List<String>> dataMap = read(csvFile.getAbsolutePath());
-  
+
     List<String> ids = new ArrayList<>();
     ids.addAll(dataMap.keySet());
-    SolrClient solr = new SolrClient();
     PrintWriter p = new PrintWriter(new File(PathConfigurator.applicationTestFolder+category+"_"+csvFile.getName().replace(".csv", "")+".txt"));
     int count = 0;
     String idToInsert= "";
@@ -176,27 +172,40 @@ public class CSVDataReader {
       }   
     }
     System.out.println(count+" - "+category);
-    List<Source> sources = solr.getSourcesFromSolr(idList, Paper.class);
+    List<Source> sources  = new ArrayList<>();;
+    if(fromJson){
+      Map<String, Source> mapSources = DatasetBuilder.loadMapSources(fileTestJson);
+      for(String id: idList){
+        sources.add(mapSources.get(id));
+      }
+    } 
+   else
+      sources = SolrClient.getSourcesFromSolr(idList, Paper.class);
+
     int localcount = 0;
     for(Source s: sources){
-        idToInsert += s.getId()+" 1\n";
-        p.println(s.getId()+" - "+dataMap.get(s.getId()).get(0)+" - "+dataMap.get(s.getId()).get(1));
-        
+      idToInsert += s.getId()+" 1\n";
+      p.println(s.getId()+" - "+dataMap.get(s.getId()).get(0)+" - "+dataMap.get(s.getId()).get(1));
+
+      if(!fromJson){
         List<String> tmp = new ArrayList<String>();
         String strTmp = "";
         for(String str: s.getTexts()){
           strTmp += str;
         }
         tmp.add(strTmp);
-        
         p.println(kex.extractKeywordsFromTexts(tmp, numKey).stream().filter(l->l != null).flatMap(l->l.stream()).map(Keyword::getText).collect(Collectors.toList())+"\n");
-        localcount ++;
-        System.out.println(localcount+" - "+category);
-        p.println(s.getTitle());
-        p.println(s.getTexts().get(1));
-        p.println("-------------------------------------\n");      
+      }
+      else
+        p.println(s.getKeywordList().stream().map(Keyword::getText).collect(Collectors.toList()));
+        
+      localcount ++;
+      System.out.println(localcount+" - "+category);
+      p.println(s.getTitle());
+      p.println(s.getTexts().get(1));
+      p.println("-------------------------------------\n");      
     }
-  
+
     p.println("\n"+idToInsert);
     p.flush();
     p.close();
@@ -290,4 +299,10 @@ public class CSVDataReader {
     }
     return dataMap;
   }
+
+
+  public static void setSettings(boolean b){
+
+  }
+
 }

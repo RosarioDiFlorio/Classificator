@@ -175,7 +175,13 @@ public class SolrClient {
           System.out.println(id);
           Source source = new Source();
           source.setTitle(title);
+          source.setDescription(description);
           source.setId(id);
+          List<String> texts = new ArrayList<>();
+          texts.add(title);
+          texts.add(description);
+          source.setTexts(texts);
+          
           List<String> toAnalyze = new ArrayList<String>();
           toAnalyze.add(source.getTitle()+description);
           try{
