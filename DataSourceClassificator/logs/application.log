@@ -142,4 +142,8 @@ Caused by: java.lang.ClassNotFoundException: org.apache.solr.client.solrj.SolrSe
 17:52:12,457 [                     main] ERROR [JAXRSUtils] [] No message body writer has been found for class eu.innovationengineering.word2vec.common.request.bean.VectorListRequestBean, ContentType: application/json
 18:01:46,209 [                     main] ERROR [JAXRSUtils] [] No message body writer has been found for class eu.innovationengineering.word2vec.common.request.bean.VectorListRequestBean, ContentType: application/json
 18:04:11,209 [                     main] ERROR [JAXRSUtils] [] No message body writer has been found for class eu.innovationengineering.word2vec.common.request.bean.VectorListRequestBean, ContentType: application/json
+<<<<<<< HEAD
+17:15:17,562 [                     main] ERROR [JAXRSUtils] [] No message body writer has been found for class eu.innovationengineering.word2vec.common.request.bean.VectorListRequestBean, ContentType: application/json
+=======
 13:31:20,692 [                     main] ERROR [JAXRSUtils] [] Problem with reading the data, class eu.innovationengineering.word2vec.common.response.bean.VectorListResponseBean, ContentType: application/json.
+>>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
