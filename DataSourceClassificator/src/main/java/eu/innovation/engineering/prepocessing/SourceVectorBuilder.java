@@ -25,16 +25,16 @@ import eu.innovation.engineering.util.preprocessing.Source;
  */
 public class SourceVectorBuilder {
 
-  
-  
+
+
   public static void main(String[] args) throws Exception{
     boolean fromSolr = true;
     boolean withCategories = false;
     SourceVectorBuilder sourceVectorBuilder = new SourceVectorBuilder();
     sourceVectorBuilder.buildSourceVectors(PathConfigurator.rootFolder+"science/","science",withCategories,fromSolr);
   }
-  
-  
+
+
   /**
    * @param args
    * @throws Exception 
@@ -45,7 +45,7 @@ public class SourceVectorBuilder {
     String trainingFile = path+"training.txt";
     String glossaryFile = path+"glossaries.json";
     String pathWhereSave = path+"sourceVector.json";
-    
+
     //prendo gli id dal file training.txt
     TxtDataReader dataReader = new TxtDataReader();
     dataReader.setFileToReadSource(trainingFile);    
@@ -57,18 +57,18 @@ public class SourceVectorBuilder {
     if(fromSolr){   
       KeywordExtractor ke = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder, glossaryFile);
       dataBuilder.setKeywordExtractor(ke);
-      if(!withCategories){    
-        sources = dataBuilder.buildDataset("training.txt", path, "categories.txt", false);
-      }else      
+      if(withCategories)
         sources = dataBuilder.buildDataset("training.txt", path, "../categories.txt", true);
+      else      
+        sources = dataBuilder.buildDataset("training.txt", path, "categories.txt", false);
       DatasetBuilder.saveSources(sources, path+"sources.json");
     }else{
-      sources = DatasetBuilder.loadSources(path+"training.json");
+      sources = DatasetBuilder.loadSources(path+"sources.json");
     }
     pathWhereSave = path+"sourceVectors.json";
     saveSourceVectorList(pathWhereSave, createSourceVectorList(sources,category));
   }
-  
+
   /**
    * @param List<Source> sources
    * @return List<SourceVector> 
