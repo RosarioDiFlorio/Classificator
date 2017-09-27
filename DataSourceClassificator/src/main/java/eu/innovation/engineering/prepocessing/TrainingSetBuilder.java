@@ -14,6 +14,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 import com.ibm.watson.developer_cloud.natural_language_understanding.v1.model.CategoriesResult;
 
+import eu.innovation.engineering.config.Configurator;
 import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.prepocessing.featurextractor.CategoryVector;
 import eu.innovation.engineering.prepocessing.featurextractor.ClusteringKMeans;
@@ -21,6 +22,7 @@ import eu.innovation.engineering.prepocessing.featurextractor.FeatureExtractor;
 import eu.innovation.engineering.util.featurextractor.Item;
 import eu.innovation.engineering.util.featurextractor.SourceVector;
 import eu.innovation.engineering.util.preprocessing.Source;
+import eu.innovation.engineering.util.preprocessing.TextValidator;
 
 /**
  * Questa classe serve per generare il trainingSet per le categorie indicate
@@ -47,8 +49,8 @@ public class TrainingSetBuilder {
     clusterSubCategory(path+"sourceVectors.json",path+"vectorCategory.json", category, path);
 
   }
-  
-  
+
+
 
   public static void clusterSubCategory(String sourceFile, String categoryFile, String categoryChoose, String path) throws JsonParseException, JsonMappingException, IOException{
 
@@ -58,10 +60,11 @@ public class TrainingSetBuilder {
     //carico una lista di sourceVector, ovvero delle source che contengono anche il vettore (che rappresenta la concatenazione delle keywords)
     List<SourceVector> sourceList = SourceVectorBuilder.loadSourceVectorList(sourceFile);
 
-    
-    
+
+
     //creo una lista di item, per ogni source(item) mi calcolo la subcategory migliore 
     ArrayList<Item> items = new ArrayList<Item>(); 
+
 
     for(SourceVector source : sourceList){
       if(source.getCategory().contains(categoryChoose)){
@@ -90,32 +93,38 @@ public class TrainingSetBuilder {
       }
 
     }
-  
+
 
 
     //carcico il file che contiene i source con la cagetory scelta e tutte le info (title, id, keywords) faccio un merge con la lista di Item per cambiare la categoria (da category a subcategory)
     List<Source> source = DatasetBuilder.loadSources(path+"sources.json");
 
+    TextValidator textValidatorForDescription = new TextValidator(Configurator.minDescriptionLength);
+
     List<Source> newSource = new ArrayList<Source>();
     for(Item item : items){
       for(Source s : source){
-        if(s.getId().equals(item.getId())){
-            CategoriesResult category = new CategoriesResult();
-            category.setLabel(item.getBestFeature());
-            category.setScore(1.0);
-            ArrayList<CategoriesResult> categoryList = new ArrayList<CategoriesResult>();
-            categoryList.add(category);
-            s.setCategoryList(categoryList);
+        if(s.getId().equals(item.getId()) && textValidatorForDescription.analyzer(s.getDescription())){
+          CategoriesResult category = new CategoriesResult();
+          category.setLabel(item.getBestFeature());
+          category.setScore(1.0);
+          ArrayList<CategoriesResult> categoryList = new ArrayList<CategoriesResult>();
+          categoryList.add(category);
+          s.setCategoryList(categoryList);
           newSource.add(s);
         }
+        else{
+          if(!textValidatorForDescription.analyzer(s.getDescription()) && s.getId().equals(item.getId()))
+            System.out.println("PAPER ELIMINATO: "+s.getDescription()+"\n");
+          }
       }
     }
 
 
     //List<String> listCategories = TxtDataReader.getCategories(path+"categories.txt");
     //newSource=keywordFilterLSA(newSource, listCategories);
-    
-    DatasetBuilder.saveSources(newSource, path+"/training.json");
+
+    DatasetBuilder.saveSources(newSource, path+"training.json");
 
 
   }
@@ -154,18 +163,18 @@ public class TrainingSetBuilder {
           list = new ArrayList<String>();
           list.add(label);
           textList.add(list);
-          
+
           float[] vector = clustering.returnVectorsFromTextList(textList)[0];
           double vectorResult = FeatureExtractor.cosineSimilarity(vectorCategoryChoose, vector);
-          
+
           if(vectorResult>max){
             max=vectorResult;
           }
-          
+
           //System.out.println(label+" "+vectorResult);
 
         }
-        
+
         if(max<0.1){
           System.out.println("Rimossa. "+k.getText()+" "+max);
           it.remove();

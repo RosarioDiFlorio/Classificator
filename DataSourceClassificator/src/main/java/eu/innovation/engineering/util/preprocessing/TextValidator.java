@@ -25,18 +25,18 @@ public class TextValidator {
 
   public static void main(String[] args){
 
-    TextValidator tx = new TextValidator(40);
-    
+    TextValidator tx = new TextValidator(30);
+
     System.out.println(tx.analyzer("September 1, 2012 4 pages, 2 figures, to appear in the Proceedings of Moriond Cosmology 2012"));
 
   }
 
-  
-  
+
+
   private LanguageDetector languageDetector = null;
   private CleanUtilis cleaner = null;
   private int minSize;
-  
+
   public TextValidator(int num){
     this.languageDetector = new LanguageDetector();
     this.cleaner = new CleanUtilis();
@@ -50,8 +50,8 @@ public class TextValidator {
     text = text.toLowerCase();
     if(length(text)&&language(text))
       return true;
-    else
-      return false;
+    
+    return false;
 
   }
 
@@ -61,27 +61,24 @@ public class TextValidator {
     List<String> result = this.languageDetector.filterForLanguage(list, "en");
     if(result!=null && result.size()>0)
       if(result.get(0).equals(text))
-      return true;
+        return true;
 
     return false;
   }
 
   private boolean length(String text) {
     Set<String> stopWords = cleaner.getBlackList(PathConfigurator.keywordExtractorsFolder+"data/stopwords/stopwords_en.txt");
-    
-    
+
+
     ArrayList<String> wordInText = new ArrayList<>(Arrays.asList(text.toLowerCase().split(" ")));
-    
+
     for(String stopWord : stopWords){
-        wordInText.remove(stopWord);
+      wordInText.remove(stopWord);
     }
-    
-    
-    
-    System.out.println(wordInText.size());
+
     if(wordInText.size()>=this.minSize)
       return true;
-    
+
     return false;
   }
 

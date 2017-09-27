@@ -17,6 +17,7 @@ public class Configurator {
   public static final String fileDictionaries = "data/dataset2"; 
   public static final int solrQueryLimit = 100;
   public static final int numKeywords = 4;
+  public static final int minDescriptionLength = 30;
   
   public final static Set<String> getCategories() throws IOException{
     Set<String> categories = new HashSet<String>();

@@ -42,49 +42,6 @@
   } ],
   "conceptList" : null
 }, {
-  "id" : "10127868_178",
-  "title" : "Nanoporous graphene as a desalination membrane : a computational study",
-  "description" : "Includes bibliographical references (p. 19-21).",
-  "texts" : [ "Nanoporous graphene as a desalination membrane : a computational study", "Includes bibliographical references (p. 19-21).", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.07759117206603755,
-    "sentiment" : null,
-    "text" : "study"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.09642721185561215,
-    "sentiment" : null,
-    "text" : "include"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.08480562658941576,
-    "sentiment" : null,
-    "text" : "reference"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "19-21"
-  } ],
-  "categoryList" : [ {
-    "label" : "astronomy",
-    "score" : 1.0
-  } ],
-  "conceptList" : null
-}, {
   "id" : "10003231_234",
   "title" : "The role of intra-thalamic and thalamocortical circuits in action selection.",
   "description" : "We previously proposed that the basal ganglia (BG) play a crucial role in action selection. Quantitative analysis and simulation of a computational model of the intrinsic BG demonstrated that its output was consistent with this proposition. Here we build on that model by embedding it into a wider circuit containing the motor thalamocortical loop and thalamic reticular nucleus (TRN). Simulation of this extended model showed that the additions gave five main results which are desirable in a selection/switching mechanism. First, low salience actions (i.e. those with low urgency) could be selected. Second, the range of salience values over which actions could be switched between was increased. Third, the contrast between the selected and non-selected actions was enhanced via improved differentiation of outputs from the BG. Fourth, transient increases in the salience of a non-selected action were prevented from interrupting the ongoing action, unless the transient was of sufficient magnitude. Finally, the selection of the ongoing action persisted when a new closely matched salience action became active. The first result was facilitated by the thalamocortical loop; the rest were dependent on the presence of the TRN. Thus, we conclude that the results are consistent with these structures having clearly defined functions in action selection.",
@@ -644,49 +601,6 @@
   } ],
   "conceptList" : null
 }, {
-  "id" : "10009389_234",
-  "title" : "Biologically Inspired Computation for Chemical Sensing",
-  "description" : "S20111",
-  "texts" : [ "Biologically Inspired Computation for Chemical Sensing", "S20111", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.08782277035131136,
-    "sentiment" : null,
-    "text" : "inspire"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.058139969086153764,
-    "sentiment" : null,
-    "text" : "computation"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.073326556598859,
-    "sentiment" : null,
-    "text" : "sense"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "s20111"
-  } ],
-  "categoryList" : [ {
-    "label" : "mathematics",
-    "score" : 1.0
-  } ],
-  "conceptList" : null
-}, {
   "id" : "10029717_234",
   "title" : "Structure of hydrogen-dosed graphene deduced from low electron energy loss characteristics and density functional calculations",
   "description" : "We employed nanometer-scale spatially resolved electron energy loss spectroscopy to monitor the degree and localization of electronic passivation of graphene surfaces by using the pi-plasmon as an indicator of sp(2)-bonding. Upon hydrogenation, the pi-plasmon does not vanish, and a new feature at 7 eV occurs in the spectra. This behavior conforms to the theoretical electron energy loss spectra derived from density functional calculations for partial hydrogenation, with benzene rings assuming a corrugated structure. The spatial distribution of the spectral features and atomic resolution Z-contrast images indicate absence of any long-range ordering in the hydrogenated areas. (C) 2010 American Institute of Physics. {[}doi:10.1063/1.3526373]",
@@ -726,49 +640,6 @@
   } ],
   "categoryList" : [ {
     "label" : "physics",
-    "score" : 1.0
-  } ],
-  "conceptList" : null
-}, {
-  "id" : "10022769_234",
-  "title" : "Regulatory T cells and dendritic cells in transplantation tolerance: molecular markers and mechanisms",
-  "description" : "Journal Article Research Support, Non-U.S. Gov't Review Denmark",
-  "texts" : [ "Regulatory T cells and dendritic cells in transplantation tolerance: molecular markers and mechanisms", "Journal Article Research Support, Non-U.S. Gov't Review Denmark", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.08876854354919506,
-    "sentiment" : null,
-    "text" : "article"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.0957768952266741,
-    "sentiment" : null,
-    "text" : "support"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "non-u.s."
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.09453211475137996,
-    "sentiment" : null,
-    "text" : "review"
-  } ],
-  "categoryList" : [ {
-    "label" : "chemistry biology",
     "score" : 1.0
   } ],
   "conceptList" : null
@@ -1590,49 +1461,6 @@
   } ],
   "conceptList" : null
 }, {
-  "id" : "10127391_178",
-  "title" : "Millihertz quasi-periodic oscillations and thermonuclear bursts from Terzan 5: A showcase of burning regimes",
-  "description" : "Netherlands Organization for Scientific Research ((NWO) Rubicon Fellowship)",
-  "texts" : [ "Millihertz quasi-periodic oscillations and thermonuclear bursts from Terzan 5: A showcase of burning regimes", "Netherlands Organization for Scientific Research ((NWO) Rubicon Fellowship)", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "millihertz"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "quasi-periodic"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "terzan"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "nwo"
-  } ],
-  "categoryList" : [ {
-    "label" : "astronomy",
-    "score" : 1.0
-  } ],
-  "conceptList" : null
-}, {
   "id" : "27039789_645",
   "title" : "Biophysics",
   "description" : "There is an idiom that “biophysicist is who discusses about biology when meets physicist, talks about physics when meets biologist and says joke when meets another biophysicist”. This idiom points to multidisciplinary nature of biophysics but what really is the biophysics? And who is the biophysicist?  Biophysics was  defined as: \"that branch of knowledge that applies the principles of physics and chemistry and the methods of mathematical analysis and computer modeling to understand how the mechanisms of biological systems work” in homepage of Biophysical Society . Biophysics may be thought of as the central circle in a two-dimensional array of overlapping circles, which include physics, chemistry, physiology, and general biology. Two wings of Biophysics are Biology and physics. Organisms are made of biomaterials, which can be studied by physical laws, since physical principles and laws hold from microscopic level to macroscopic level. Biophysicist selects a part of biological problems that are pliable to interpret by physical principles and then formulate hypotheses that can be tested by experiment2. Historically, bioluminescence can be considered among the earliest biophysical phenomena. The modern biophysics appeared by discovering of molecular structure of myoglobin and deoxyribonucleic acid (DNA). There is no doubt that Biophysics as a multidisciplinary science covers wide spectrum of subjects as follows: Instrumental biophysics, Radiation Biophysics and radiobiology, Structural biology, Physiological biophysics, bio-cybernetics, Membrane Biophysics, Molecular biophysics, Bioenergetics, Mathematical and theoretical biophysics and Biophysical Chemistry. And the final question, do you still believe the above idiom about the biophysicist",
@@ -1758,49 +1586,6 @@
   } ],
   "categoryList" : [ {
     "label" : "physics",
-    "score" : 1.0
-  } ],
-  "conceptList" : null
-}, {
-  "id" : "10006533_234",
-  "title" : "BINGO: a single dish approach to 21cm intensity mapping",
-  "description" : "September 1, 2012 4 pages, 2 figures, to appear in the Proceedings of Moriond Cosmology 2012",
-  "texts" : [ "BINGO: a single dish approach to 21cm intensity mapping", "September 1, 2012 4 pages, 2 figures, to appear in the Proceedings of Moriond Cosmology 2012", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "21cm"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "2012"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.0893448787819493,
-    "sentiment" : null,
-    "text" : "proceedings"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "moriond"
-  } ],
-  "categoryList" : [ {
-    "label" : "astronomy",
     "score" : 1.0
   } ],
   "conceptList" : null
@@ -2235,49 +2020,6 @@
   } ],
   "conceptList" : null
 }, {
-  "id" : "10007985_234",
-  "title" : "OGLE-2008-BLG-510: first automated real-time detection of a weak microlensing anomaly - brown dwarf or stellar binary?",
-  "description" : "DOI: 10.1111/j.1365-2966.2012.21233.x; eprintid: arXiv:1203.1291",
-  "texts" : [ "OGLE-2008-BLG-510: first automated real-time detection of a weak microlensing anomaly - brown dwarf or stellar binary?", "DOI: 10.1111/j.1365-2966.2012.21233.x; eprintid: arXiv:1203.1291", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "ogle-2008-blg-510"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "real-time"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "doi"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "10.1111"
-  } ],
-  "categoryList" : [ {
-    "label" : "chemistry biology",
-    "score" : 1.0
-  } ],
-  "conceptList" : null
-}, {
   "id" : "10003596_234",
   "title" : "GFI1 and GFI1B control the loss of endothelial identity of hemogenic endothelium during hematopoietic commitment.",
   "description" : "Recent studies have established that during embryonic development, hematopoietic progenitors and stem cells are generated from hemogenic endothelium precursors through a process termed endothelial to hematopoietic transition (EHT). The transcription factor RUNX1 is essential for this process, but its main downstream effectors remain largely unknown. Here, we report the identification of Gfi1 and Gfi1b as direct targets of RUNX1 and critical regulators of EHT. GFI1 and GFI1B are able to trigger, in the absence of RUNX1, the down-regulation of endothelial markers and the formation of round cells, a morphologic change characteristic of EHT. Conversely, blood progenitors in Gfi1- and Gfi1b-deficient embryos maintain the expression of endothelial genes. Moreover, those cells are not released from the yolk sac and disseminated into embryonic tissues. Taken together, our findings demonstrate a critical and specific role of the GFI1 transcription factors in the first steps of the process leading to the generation of hematopoietic progenitors from hemogenic endothelium.",
@@ -2317,49 +2059,6 @@
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
-    "score" : 1.0
-  } ],
-  "conceptList" : null
-}, {
-  "id" : "10127316_178",
-  "title" : "Analysis of Substrate Access to Active Sites in Bacterial Multicomponent Monooxygenase Hydroxylases: X-Ray Crystal Structure of Xenon-Pressurized Phenol Hydroxylase from Pseudomonas Sp Ox1",
-  "description" : "National Institute of General Medical Sciences (U.S.) (Grant GM032134)",
-  "texts" : [ "Analysis of Substrate Access to Active Sites in Bacterial Multicomponent Monooxygenase Hydroxylases: X-Ray Crystal Structure of Xenon-Pressurized Phenol Hydroxylase from Pseudomonas Sp Ox1", "National Institute of General Medical Sciences (U.S.) (Grant GM032134)", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "monooxygenase"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "x-ray"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "xenon-pressurized"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "pseudomona"
-  } ],
-  "categoryList" : [ {
-    "label" : "physics",
     "score" : 1.0
   } ],
   "conceptList" : null
@@ -2529,92 +2228,6 @@
     "relevance" : 0.1810416336719335,
     "sentiment" : null,
     "text" : "light"
-  } ],
-  "categoryList" : [ {
-    "label" : "chemistry biology",
-    "score" : 1.0
-  } ],
-  "conceptList" : null
-}, {
-  "id" : "10026237_234",
-  "title" : "Below-ground herbivory promotes soil nutrient transfer and root growth in grassland",
-  "description" : "Bardgett, RD Denton, CS Cook, R",
-  "texts" : [ "Below-ground herbivory promotes soil nutrient transfer and root growth in grassland", "Bardgett, RD Denton, CS Cook, R", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "below-ground"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.0935779366147187,
-    "sentiment" : null,
-    "text" : "promote"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "bardgett"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "denton"
-  } ],
-  "categoryList" : [ {
-    "label" : "physics",
-    "score" : 1.0
-  } ],
-  "conceptList" : null
-}, {
-  "id" : "10028729_234",
-  "title" : "The non-genotoxic hepatocarcinogen nafenopin suppresses rodent hepatocyte apoptosis induced by TGFbeta1, DNA damage and Fas",
-  "description" : "Gill, J H James, N H Roberts, R A Dive, C Research Support, Non-U.S. Gov't England Carcinogenesis Carcinogenesis. 1998 Feb;19(2):299-304.",
-  "texts" : [ "The non-genotoxic hepatocarcinogen nafenopin suppresses rodent hepatocyte apoptosis induced by TGFbeta1, DNA damage and Fas", "Gill, J H James, N H Roberts, R A Dive, C Research Support, Non-U.S. Gov't England Carcinogenesis Carcinogenesis. 1998 Feb;19(2):299-304.", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "non-genotoxic"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "hepatocarcinogen"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "nafenopin"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "tgfbeta1"
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
@@ -2794,49 +2407,6 @@
   } ],
   "conceptList" : null
 }, {
-  "id" : "10127886_178",
-  "title" : "High yield production of inorganic graphene-like materials (MoS₂, WS₂, BN) through liquid exfoliation testing key parameters",
-  "description" : "Includes bibliographical references (p. 41).",
-  "texts" : [ "High yield production of inorganic graphene-like materials (MoS₂, WS₂, BN) through liquid exfoliation testing key parameters", "Includes bibliographical references (p. 41).", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.08781009110551474,
-    "sentiment" : null,
-    "text" : "high"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "graphene-like"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.08676357477532254,
-    "sentiment" : null,
-    "text" : "key"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.09538014807801337,
-    "sentiment" : null,
-    "text" : "include"
-  } ],
-  "categoryList" : [ {
-    "label" : "chemistry biology",
-    "score" : 1.0
-  } ],
-  "conceptList" : null
-}, {
   "id" : "10018699_234",
   "title" : "Membrane nanotubes: dynamic long-distance connections between animal cells.",
   "description" : "Membrane nanotubes are transient long-distance connections between cells that can facilitate intercellular communication (for example, by trafficking vesicles or transmitting calcium-mediated signals), but they can also contribute to pathologies (for example, by directing the spread of viruses). Recent data have revealed considerable heterogeneity in their structures, processes of formation and functional properties, in part dependent on the cell types involved. Despite recent progress in this young research field, further research is sorely needed.",
@@ -2873,92 +2443,6 @@
     "relevance" : 0.21871724176227086,
     "sentiment" : null,
     "text" : "cell"
-  } ],
-  "categoryList" : [ {
-    "label" : "chemistry biology",
-    "score" : 1.0
-  } ],
-  "conceptList" : null
-}, {
-  "id" : "10028409_234",
-  "title" : "The Pinning Potential at Single Flux Vortices Investigated Using Submicron Hall Probes",
-  "description" : "Part 2 Nc275 Times Cited:0 Cited References Count:5",
-  "texts" : [ "The Pinning Potential at Single Flux Vortices Investigated Using Submicron Hall Probes", "Part 2 Nc275 Times Cited:0 Cited References Count:5", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.08841959011733158,
-    "sentiment" : null,
-    "text" : "hall"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.08949016530025039,
-    "sentiment" : null,
-    "text" : "part"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "nc275"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.08546132807370799,
-    "sentiment" : null,
-    "text" : "count"
-  } ],
-  "categoryList" : [ {
-    "label" : "mathematics",
-    "score" : 1.0
-  } ],
-  "conceptList" : null
-}, {
-  "id" : "10018643_234",
-  "title" : "The shock response, simulation and microstructural determination of a model composite material",
-  "description" : "McDonald, Samuel Alan Millett, Jeremy C. F. Bourne, Neil K. Bennett, Keith Milne, Alec M. Withers, Philip J.",
-  "texts" : [ "The shock response, simulation and microstructural determination of a model composite material", "McDonald, Samuel Alan Millett, Jeremy C. F. Bourne, Neil K. Bennett, Keith Milne, Alec M. Withers, Philip J.", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "milne"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.0860966243822825,
-    "sentiment" : null,
-    "text" : "response"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.08684668003604079,
-    "sentiment" : null,
-    "text" : "determination"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "millett"
   } ],
   "categoryList" : [ {
     "label" : "chemistry biology",
