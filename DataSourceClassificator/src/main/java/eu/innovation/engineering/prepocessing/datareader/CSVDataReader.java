@@ -17,8 +17,8 @@ import java.util.stream.Collectors;
 
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
-import eu.innovation.engineering.LSA.keywordExtractor.LSACosineKeywordExtraction;
 import eu.innovation.engineering.config.PathConfigurator;
+import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 import eu.innovation.engineering.prepocessing.DatasetBuilder;
 import eu.innovation.engineering.util.preprocessing.Paper;
@@ -29,7 +29,7 @@ public class CSVDataReader {
   private static final int numKey = 4;
   private static final int limitSource = 100;
   private static final String fileTestJson = PathConfigurator.rootFolder+"test.json";
-  private static boolean fromJson = true;
+  private static boolean fromJson = false;
 
   public static void main(String[] args) throws Exception{
 
@@ -58,16 +58,19 @@ public class CSVDataReader {
     float uThreshold = (float) 1.0;
     float lThreshold = (float) 0.7;
     int batchLine = 0;   
-    boolean isCount =  false;   
-    boolean all = true;
+    boolean isCount =  true;   
+    boolean all = false;
 
     String batchCategory = "";
     String categoryFolder = "";
-    String category = "geology";
+    String category = "science";
 
+    
+    
     KeywordExtractor kex = null;
     if(!isCount && !fromJson)
-      kex = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder,PathConfigurator.rootFolder+"science/glossaries.json");
+      //kex = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder,PathConfigurator.rootFolder+"science/glossaries.json");
+      kex = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
 
     File f = new File(testFolderName);
     if(f.isDirectory()){

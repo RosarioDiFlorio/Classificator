@@ -93,6 +93,7 @@ public  class DatasetBuilder {
 
   public List<Source> addKeywords(ArrayList<Source> list) {
     ArrayList<Source> toRemove = new ArrayList<>();
+    int count = 0;
     for(Source p: list){
      
       StringBuilder strbuilder = new StringBuilder();
@@ -112,7 +113,11 @@ public  class DatasetBuilder {
         // TODO Auto-generated catch block
         e.printStackTrace();
       }
+      if(count%10==0)
+        System.out.println("building dataset -> "+(Math.round((count*100)/list.size()))+"%");
+      count++;
     }
+    System.out.println("building dataset -> "+(Math.round((count*100)/list.size()))+"%");
     for(Source p:toRemove){
       list.remove(p);
     }

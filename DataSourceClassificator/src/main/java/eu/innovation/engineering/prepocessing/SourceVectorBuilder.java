@@ -57,7 +57,7 @@ public class SourceVectorBuilder {
     if(fromSolr){   
       KeywordExtractor ke = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder, glossaryFile);
       dataBuilder.setKeywordExtractor(ke);
-      if(withCategories){    
+      if(!withCategories){    
         sources = dataBuilder.buildDataset("training.txt", path, "categories.txt", false);
       }else      
         sources = dataBuilder.buildDataset("training.txt", path, "../categories.txt", true);
