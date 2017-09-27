@@ -4,24 +4,19 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
 import eu.innovation.engineering.LSA.keywordExtractor.LSACosineKeywordExtraction;
-import eu.innovation.engineering.config.Configurator;
 import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 import eu.innovation.engineering.prepocessing.datareader.TxtDataReader;
 import eu.innovation.engineering.prepocessing.featurextractor.ClusteringKMeans;
 import eu.innovation.engineering.util.featurextractor.SourceVector;
-import eu.innovation.engineering.util.preprocessing.Paper;
-import eu.innovation.engineering.util.preprocessing.SolrClient;
 import eu.innovation.engineering.util.preprocessing.Source;
 
 /**
@@ -33,8 +28,10 @@ public class SourceVectorBuilder {
   
   
   public static void main(String[] args) throws Exception{
+    boolean fromSolr = true;
+    boolean withCategories = false;
     SourceVectorBuilder sourceVectorBuilder = new SourceVectorBuilder();
-    sourceVectorBuilder.buildSourceVectors(PathConfigurator.rootFolder+"science/","science",true,true);
+    sourceVectorBuilder.buildSourceVectors(PathConfigurator.rootFolder+"science/","science",withCategories,fromSolr);
   }
   
   
@@ -43,7 +40,7 @@ public class SourceVectorBuilder {
    * @throws Exception 
    * @throws s 
    */
-  public void buildSourceVectors (String path,String category,boolean withGlossaries,boolean fromSolr) throws Exception{
+  public void buildSourceVectors (String path,String category,boolean withCategories,boolean fromSolr) throws Exception{
 
     String trainingFile = path+"training.txt";
     String glossaryFile = path+"glossaries.json";
@@ -57,21 +54,13 @@ public class SourceVectorBuilder {
     System.out.println("Sources size "+sourcesIds.size());
     List<Source> sources = new ArrayList<>();
     DatasetBuilder dataBuilder = new DatasetBuilder();
-    if(fromSolr){    
-      if(withGlossaries){
-        KeywordExtractor ke = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder, glossaryFile);
-        sources = SolrClient.getSourcesFromSolr(sourcesIds, Paper.class);
-        int count = 1;
-        for(Source source : sources){
-          System.out.println("source "+count);
-          count++;
-          String titleAndDes = source.getTitle()+" "+source.getDescription();
-          List<String> toAnalyze = new ArrayList<>();
-          toAnalyze.add(titleAndDes);
-          source.setKeywordList((ArrayList<Keyword>) ke.extractKeywordsFromTexts(toAnalyze,Configurator.numKeywords).stream().flatMap(l->l.stream()).collect(Collectors.toList()));
-        }
+    if(fromSolr){   
+      KeywordExtractor ke = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder, glossaryFile);
+      dataBuilder.setKeywordExtractor(ke);
+      if(withCategories){    
+        sources = dataBuilder.buildDataset("training.txt", path, "categories.txt", false);
       }else      
-        sources = dataBuilder.buildDataset("training.txt", path, "categories.txt", true);
+        sources = dataBuilder.buildDataset("training.txt", path, "../categories.txt", true);
       DatasetBuilder.saveSources(sources, path+"sources.json");
     }else{
       sources = DatasetBuilder.loadSources(path+"training.json");

@@ -47,7 +47,7 @@ public class CSVDataReader {
     String  categoryFilter = "";
     String fileCsv = PathConfigurator.applicationFileFolder+"results.csv";
     String pathWhereSave = PathConfigurator.applicationFileFolder+"trainingDatasetFromCsv.txt";
-    createTxtTrainingFromCsvResults(fileCsv,lThreshold,uThreshold,pathWhereSave, categoryFilter);
+    createDocumentSetFromCsvResults(fileCsv,lThreshold,uThreshold,pathWhereSave, categoryFilter);
     TxtDataReader txtReader = new TxtDataReader();
     //txtReader.mergeTxtDataset(oldDataset, pathWhereSave, 70, PathConfigurator.applicationFileFolder+"trainingDatasetMerged.txt");
   }
@@ -58,27 +58,21 @@ public class CSVDataReader {
    * @throws Exception
    */
   public static void mainToTest(String[] args) throws Exception{
-    String testFolderName=PathConfigurator.applicationFileFolder+"resultScience.csv";
+    String testFolderName=PathConfigurator.applicationFileFolder+"resultsScience.csv";
     
     float uThreshold = (float) 1.0;
     float lThreshold = (float) 0.7;
     int batchLine = 0;   
     boolean isCount =  false;   
-    boolean all = false;
+    boolean all = true;
     String batchCategory = "";
     String categoryFolder = "science";
     String category = "geology";
-    
     KeywordExtractor kex = null;
     if(!isCount)
       kex = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder,PathConfigurator.rootFolder+"science/glossaries.json");
-
-      
-
     
-
     File f = new File(testFolderName);
-
     if(f.isDirectory()){
       System.out.println("FOLDER -> "+testFolderName);
       File[] list = f.listFiles();
@@ -209,7 +203,7 @@ public class CSVDataReader {
     return count;
   }
 
-  public static void createTxtTrainingFromCsvResults(String csvFile,float lowThreshold,float upperThreshold,String PathWhereSave,String categoryFilter) throws FileNotFoundException{
+  public static void createDocumentSetFromCsvResults(String csvFile,float lowThreshold,float upperThreshold,String PathWhereSave,String categoryFilter) throws FileNotFoundException{
     HashMap<String, List<String>> categoryMap = getCategoryMap(csvFile, lowThreshold, upperThreshold);
 
     PrintWriter p = new PrintWriter(new File(PathWhereSave.replace(".txt", categoryFilter+".txt")));
