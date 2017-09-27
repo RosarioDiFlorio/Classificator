@@ -36,58 +36,9 @@
     "sentiment" : null,
     "text" : "lambda"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
-<<<<<<< HEAD
-  "id" : "10127868_178",
-  "title" : "Nanoporous graphene as a desalination membrane : a computational study",
-  "description" : null,
-  "texts" : [ "Nanoporous graphene as a desalination membrane : a computational study", "Includes bibliographical references (p. 19-21).", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "studyinclude"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.07256067575478897,
-    "sentiment" : null,
-    "text" : "bibliographical"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.08447909486371064,
-    "sentiment" : null,
-    "text" : "reference"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "19-21"
-  } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
-  "conceptList" : null
-}, {
-=======
->>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
   "id" : "10003231_234",
   "title" : "The role of intra-thalamic and thalamocortical circuits in action selection.",
   "description" : null,
@@ -125,10 +76,7 @@
     "sentiment" : null,
     "text" : "quantitative"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10004176_234",
@@ -168,10 +116,7 @@
     "sentiment" : null,
     "text" : "liquid"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10003524_234",
@@ -211,10 +156,7 @@
     "sentiment" : null,
     "text" : "water"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "100465_102",
@@ -254,10 +196,7 @@
     "sentiment" : null,
     "text" : "professional"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "25791578_645",
@@ -297,10 +236,7 @@
     "sentiment" : null,
     "text" : "coefficient"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10024815_234",
@@ -340,10 +276,7 @@
     "sentiment" : null,
     "text" : "bioenergetic"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10128291_178",
@@ -383,10 +316,7 @@
     "sentiment" : null,
     "text" : "epitope"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10023476_234",
@@ -426,10 +356,7 @@
     "sentiment" : null,
     "text" : "sequencing"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10019960_234",
@@ -469,10 +396,7 @@
     "sentiment" : null,
     "text" : "design"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10005194_234",
@@ -512,10 +436,7 @@
     "sentiment" : null,
     "text" : "ion"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10029708_234",
@@ -555,10 +476,7 @@
     "sentiment" : null,
     "text" : "spectroscopy"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10008946_234",
@@ -598,10 +516,7 @@
     "sentiment" : null,
     "text" : "biomaterial"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10018314_234",
@@ -641,58 +556,9 @@
     "sentiment" : null,
     "text" : "bacterial"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
-<<<<<<< HEAD
-  "id" : "10009389_234",
-  "title" : "Biologically Inspired Computation for Chemical Sensing",
-  "description" : null,
-  "texts" : [ "Biologically Inspired Computation for Chemical Sensing", "S20111", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.05300122580319061,
-    "sentiment" : null,
-    "text" : "biologically"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.08740287535541102,
-    "sentiment" : null,
-    "text" : "inspire"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.05730116182425388,
-    "sentiment" : null,
-    "text" : "computation"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "sensings20111"
-  } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
-  "conceptList" : null
-}, {
-=======
->>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
   "id" : "10029717_234",
   "title" : "Structure of hydrogen-dosed graphene deduced from low electron energy loss characteristics and density functional calculations",
   "description" : null,
@@ -730,58 +596,9 @@
     "sentiment" : null,
     "text" : "nanometer-scale"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
-<<<<<<< HEAD
-  "id" : "10022769_234",
-  "title" : "Regulatory T cells and dendritic cells in transplantation tolerance: molecular markers and mechanisms",
-  "description" : null,
-  "texts" : [ "Regulatory T cells and dendritic cells in transplantation tolerance: molecular markers and mechanisms", "Journal Article Research Support, Non-U.S. Gov't Review Denmark", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "mechanismsjournal"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.09544190668767144,
-    "sentiment" : null,
-    "text" : "support"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "non-u.s."
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.09413960128389198,
-    "sentiment" : null,
-    "text" : "review"
-  } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
-  "conceptList" : null
-}, {
-=======
->>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
   "id" : "10129603_178",
   "title" : "Patterns of methylation heritability in a genome-wide analysis of four brain regions",
   "description" : null,
@@ -819,10 +636,7 @@
     "sentiment" : null,
     "text" : "phenotype"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "100679_108",
@@ -862,10 +676,7 @@
     "sentiment" : null,
     "text" : "spectroscopy"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10021734_234",
@@ -905,10 +716,7 @@
     "sentiment" : null,
     "text" : "redn"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "100641_108",
@@ -948,10 +756,7 @@
     "sentiment" : null,
     "text" : "diffusion"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "28952834_660",
@@ -991,10 +796,7 @@
     "sentiment" : null,
     "text" : "cell"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10127141_163",
@@ -1034,10 +836,7 @@
     "sentiment" : null,
     "text" : "axial"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10018323_234",
@@ -1077,10 +876,7 @@
     "sentiment" : null,
     "text" : "lung"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10018332_234",
@@ -1120,10 +916,7 @@
     "sentiment" : null,
     "text" : "infection"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10003239_234",
@@ -1163,10 +956,7 @@
     "sentiment" : null,
     "text" : "non-medical"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10020009_234",
@@ -1206,10 +996,7 @@
     "sentiment" : null,
     "text" : "welding"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "101009_108",
@@ -1249,10 +1036,7 @@
     "sentiment" : null,
     "text" : "nanotube"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10002302_234",
@@ -1292,10 +1076,7 @@
     "sentiment" : null,
     "text" : "biomarker"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10003268_234",
@@ -1335,10 +1116,7 @@
     "sentiment" : null,
     "text" : "telogen"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10010322_234",
@@ -1378,10 +1156,7 @@
     "sentiment" : null,
     "text" : "antibiotic"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10024687_234",
@@ -1421,10 +1196,7 @@
     "sentiment" : null,
     "text" : "engineering"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "100688_108",
@@ -1464,10 +1236,7 @@
     "sentiment" : null,
     "text" : "resin"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10003459_234",
@@ -1507,10 +1276,7 @@
     "sentiment" : null,
     "text" : "workflow"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "20442207_198",
@@ -1550,10 +1316,7 @@
     "sentiment" : null,
     "text" : "large"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "100785_108",
@@ -1593,58 +1356,9 @@
     "sentiment" : null,
     "text" : "u-238"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
-<<<<<<< HEAD
-  "id" : "10127391_178",
-  "title" : "Millihertz quasi-periodic oscillations and thermonuclear bursts from Terzan 5: A showcase of burning regimes",
-  "description" : null,
-  "texts" : [ "Millihertz quasi-periodic oscillations and thermonuclear bursts from Terzan 5: A showcase of burning regimes", "Netherlands Organization for Scientific Research ((NWO) Rubicon Fellowship)", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "millihertz"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "quasi-periodic"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "terzan"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "regimesnetherland"
-  } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
-  "conceptList" : null
-}, {
-=======
->>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
   "id" : "27039789_645",
   "title" : "Biophysics",
   "description" : null,
@@ -1682,10 +1396,7 @@
     "sentiment" : null,
     "text" : "physics"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10016813_234",
@@ -1725,10 +1436,7 @@
     "sentiment" : null,
     "text" : "gene"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10128759_178",
@@ -1768,58 +1476,9 @@
     "sentiment" : null,
     "text" : "detectora"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
-<<<<<<< HEAD
-  "id" : "10006533_234",
-  "title" : "BINGO: a single dish approach to 21cm intensity mapping",
-  "description" : null,
-  "texts" : [ "BINGO: a single dish approach to 21cm intensity mapping", "September 1, 2012 4 pages, 2 figures, to appear in the Proceedings of Moriond Cosmology 2012", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "21cm"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "mappingseptember"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "2012"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "moriond"
-  } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
-  "conceptList" : null
-}, {
-=======
->>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
   "id" : "10019631_234",
   "title" : "Characterising the Innate and Adaptive Immune Response to Intestinal Helminth infection",
   "description" : null,
@@ -1857,10 +1516,7 @@
     "sentiment" : null,
     "text" : "mammal"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "4869777_200",
@@ -1900,10 +1556,7 @@
     "sentiment" : null,
     "text" : "genome"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "26870793_645",
@@ -1943,10 +1596,7 @@
     "sentiment" : null,
     "text" : "region"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10017159_234",
@@ -1986,10 +1636,7 @@
     "sentiment" : null,
     "text" : "technique"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10008608_234",
@@ -2029,10 +1676,7 @@
     "sentiment" : null,
     "text" : "epidermis"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10005554_234",
@@ -2072,10 +1716,7 @@
     "sentiment" : null,
     "text" : "aspergillosis"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "4876079_200",
@@ -2115,10 +1756,7 @@
     "sentiment" : null,
     "text" : "molecule"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10587434_210",
@@ -2158,10 +1796,7 @@
     "sentiment" : null,
     "text" : "science"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "19748253_197",
@@ -2201,10 +1836,7 @@
     "sentiment" : null,
     "text" : "study"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "5181379_222",
@@ -2244,58 +1876,9 @@
     "sentiment" : null,
     "text" : "design"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
-<<<<<<< HEAD
-  "id" : "10007985_234",
-  "title" : "OGLE-2008-BLG-510: first automated real-time detection of a weak microlensing anomaly - brown dwarf or stellar binary?",
-  "description" : null,
-  "texts" : [ "OGLE-2008-BLG-510: first automated real-time detection of a weak microlensing anomaly - brown dwarf or stellar binary?", "DOI: 10.1111/j.1365-2966.2012.21233.x; eprintid: arXiv:1203.1291", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "ogle-2008-blg-510"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "real-time"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "binary?doi"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "10.1111"
-  } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
-  "conceptList" : null
-}, {
-=======
->>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
   "id" : "10003596_234",
   "title" : "GFI1 and GFI1B control the loss of endothelial identity of hemogenic endothelium during hematopoietic commitment.",
   "description" : null,
@@ -2333,58 +1916,9 @@
     "sentiment" : null,
     "text" : "hematopoietic"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
-<<<<<<< HEAD
-  "id" : "10127316_178",
-  "title" : "Analysis of Substrate Access to Active Sites in Bacterial Multicomponent Monooxygenase Hydroxylases: X-Ray Crystal Structure of Xenon-Pressurized Phenol Hydroxylase from Pseudomonas Sp Ox1",
-  "description" : null,
-  "texts" : [ "Analysis of Substrate Access to Active Sites in Bacterial Multicomponent Monooxygenase Hydroxylases: X-Ray Crystal Structure of Xenon-Pressurized Phenol Hydroxylase from Pseudomonas Sp Ox1", "National Institute of General Medical Sciences (U.S.) (Grant GM032134)", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "monooxygenase"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "x-ray"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "xenon-pressurized"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "pseudomona"
-  } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
-  "conceptList" : null
-}, {
-=======
->>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
   "id" : "10028844_234",
   "title" : "Stem cell regeneration of degenerated intervertebral discs: current status.",
   "description" : null,
@@ -2422,10 +1956,7 @@
     "sentiment" : null,
     "text" : "degeneration"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "101115_108",
@@ -2465,10 +1996,7 @@
     "sentiment" : null,
     "text" : "spatial"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "1633942_69",
@@ -2508,10 +2036,7 @@
     "sentiment" : null,
     "text" : "important"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10126995_163",
@@ -2551,101 +2076,9 @@
     "sentiment" : null,
     "text" : "light"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
-<<<<<<< HEAD
-  "id" : "10026237_234",
-  "title" : "Below-ground herbivory promotes soil nutrient transfer and root growth in grassland",
-  "description" : null,
-  "texts" : [ "Below-ground herbivory promotes soil nutrient transfer and root growth in grassland", "Bardgett, RD Denton, CS Cook, R", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "below-ground"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.09282078793841719,
-    "sentiment" : null,
-    "text" : "promote"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "grasslandbardgett"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "denton"
-  } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
-  "conceptList" : null
-}, {
-  "id" : "10028729_234",
-  "title" : "The non-genotoxic hepatocarcinogen nafenopin suppresses rodent hepatocyte apoptosis induced by TGFbeta1, DNA damage and Fas",
-  "description" : null,
-  "texts" : [ "The non-genotoxic hepatocarcinogen nafenopin suppresses rodent hepatocyte apoptosis induced by TGFbeta1, DNA damage and Fas", "Gill, J H James, N H Roberts, R A Dive, C Research Support, Non-U.S. Gov't England Carcinogenesis Carcinogenesis. 1998 Feb;19(2):299-304.", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "non-genotoxic"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "hepatocarcinogen"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "nafenopin"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "tgfbeta1"
-  } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
-  "conceptList" : null
-}, {
-=======
->>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
   "id" : "10024793_234",
   "title" : "Caveolin-1 (P132L), a common breast cancer mutation, confers mammary cell invasiveness and defines a novel stem cell/metastasis-associated gene signature.",
   "description" : null,
@@ -2683,10 +2116,7 @@
     "sentiment" : null,
     "text" : "signature.here"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10010331_234",
@@ -2726,10 +2156,7 @@
     "sentiment" : null,
     "text" : "ion"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10004102_234",
@@ -2769,10 +2196,7 @@
     "sentiment" : null,
     "text" : "oxidoreductase"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
   "id" : "10027448_234",
@@ -2812,58 +2236,9 @@
     "sentiment" : null,
     "text" : "reticulum"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
-<<<<<<< HEAD
-  "id" : "10127886_178",
-  "title" : "High yield production of inorganic graphene-like materials (MoS₂, WS₂, BN) through liquid exfoliation testing key parameters",
-  "description" : null,
-  "texts" : [ "High yield production of inorganic graphene-like materials (MoS₂, WS₂, BN) through liquid exfoliation testing key parameters", "Includes bibliographical references (p. 41).", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.08656873574006435,
-    "sentiment" : null,
-    "text" : "high"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "graphene-like"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.08545011839669575,
-    "sentiment" : null,
-    "text" : "key"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "parametersinclude"
-  } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
-  "conceptList" : null
-}, {
-=======
->>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
   "id" : "10018699_234",
   "title" : "Membrane nanotubes: dynamic long-distance connections between animal cells.",
   "description" : null,
@@ -2901,101 +2276,9 @@
     "sentiment" : null,
     "text" : "vesicle"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 }, {
-<<<<<<< HEAD
-  "id" : "10028409_234",
-  "title" : "The Pinning Potential at Single Flux Vortices Investigated Using Submicron Hall Probes",
-  "description" : null,
-  "texts" : [ "The Pinning Potential at Single Flux Vortices Investigated Using Submicron Hall Probes", "Part 2 Nc275 Times Cited:0 Cited References Count:5", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.08818291491350749,
-    "sentiment" : null,
-    "text" : "hall"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "probespart"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "nc275"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.08518418388091153,
-    "sentiment" : null,
-    "text" : "count"
-  } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
-  "conceptList" : null
-}, {
-  "id" : "10018643_234",
-  "title" : "The shock response, simulation and microstructural determination of a model composite material",
-  "description" : null,
-  "texts" : [ "The shock response, simulation and microstructural determination of a model composite material", "McDonald, Samuel Alan Millett, Jeremy C. F. Bourne, Neil K. Bennett, Keith Milne, Alec M. Withers, Philip J.", null ],
-  "keywordList" : [ {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "milne"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.08600866509184169,
-    "sentiment" : null,
-    "text" : "determination"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "materialmcdonald"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.10241638234956674,
-    "sentiment" : null,
-    "text" : "millett"
-  } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
-  "conceptList" : null
-}, {
-=======
->>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
   "id" : "100224_102",
   "title" : "Electron-impact excitation of neutral boron using the R-matrix with pseudostates method",
   "description" : null,
@@ -3033,9 +2316,6 @@
     "sentiment" : null,
     "text" : "methodwe"
   } ],
-  "categoryList" : [ {
-    "label" : "science",
-    "score" : 1.0
-  } ],
+  "categoryList" : null,
   "conceptList" : null
 } ]
