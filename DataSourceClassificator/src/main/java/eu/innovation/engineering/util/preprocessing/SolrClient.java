@@ -35,7 +35,8 @@ public class SolrClient {
   public static void main(String[] args) throws Exception{
 
     KeywordExtractor ke = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
-    requestNTechincalPaper(0,5000,ke);
+    String path = PathConfigurator.rootFolder;
+    requestNTechincalPaper(0,5000,ke,path);
 
   }
 
@@ -132,7 +133,7 @@ public class SolrClient {
 
 
 
-  public static void requestNTechincalPaper(int firstPaperToJump,int numSourceRequest, KeywordExtractor ke) throws Exception{
+  public static void requestNTechincalPaper(int firstPaperToJump,int numSourceRequest, KeywordExtractor ke, String path) throws Exception{
 
     String cursorMark="*";
     String url = "http://192.168.200.81:8080/solr4/technical_papers/select?q=*%3A*&sort=id+asc&fl=id%2Cdc_title%2Cdc_description&wt=json&indent=true&cursorMark=";
@@ -204,7 +205,7 @@ public class SolrClient {
 
     }
     ObjectMapper mapper = new ObjectMapper();
-    mapper.writerWithDefaultPrettyPrinter().writeValue(new File(PathConfigurator.trainingAndTestFolder+"test.json"), sourceList);
+    mapper.writerWithDefaultPrettyPrinter().writeValue(new File(path+"test.json"), sourceList);
 
     System.out.println(count);
   }
