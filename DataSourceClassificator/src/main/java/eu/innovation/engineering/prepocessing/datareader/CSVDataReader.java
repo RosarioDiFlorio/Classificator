@@ -55,11 +55,11 @@ public class CSVDataReader {
   public static void mainToTest(String[] args) throws Exception{
     String testFolderName=PathConfigurator.applicationFileFolder+"resultsScience.csv";
 
-    float uThreshold = (float) 0.7;
-    float lThreshold = (float) 0.0;
+    float uThreshold = (float) 1.0;
+    float lThreshold = (float) 0.7;
     int batchLine = 0;   
     boolean isCount =  false;   
-    boolean all = false;
+    boolean all = true;
 
     String batchCategory = "";
     String categoryFolder = "science";
