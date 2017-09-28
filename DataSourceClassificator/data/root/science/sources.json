@@ -8,7 +8,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.35357234648006974,
+    "relevance" : 0.34550022263568686,
     "sentiment" : null,
     "text" : "measurement"
   }, {
@@ -16,7 +16,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.225751571287315,
+    "relevance" : 0.22965702276808592,
     "sentiment" : null,
     "text" : "radiative"
   }, {
@@ -24,7 +24,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.19073391972215809,
+    "relevance" : 0.1942917371231388,
     "sentiment" : null,
     "text" : "proton"
   }, {
@@ -32,7 +32,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.18646610332582947,
+    "relevance" : 0.18610939130647391,
     "sentiment" : null,
     "text" : "lambda"
   } ],
@@ -48,7 +48,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20892167082658164,
+    "relevance" : 0.2129670792850989,
     "sentiment" : null,
     "text" : "thermal"
   }, {
@@ -56,7 +56,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22684229809622147,
+    "relevance" : 0.22758896770231873,
     "sentiment" : null,
     "text" : "spectroscopy"
   }, {
@@ -64,7 +64,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.28199398363234984,
+    "relevance" : 0.2819231197799069,
     "sentiment" : null,
     "text" : "extrasolar"
   }, {
@@ -72,7 +72,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.37267741805064214,
+    "relevance" : 0.3738698195032554,
     "sentiment" : null,
     "text" : "planet"
   } ],
@@ -88,7 +88,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.18605425347694793,
+    "relevance" : 0.17716676588600083,
     "sentiment" : null,
     "text" : "role"
   }, {
@@ -96,7 +96,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.784418251121612,
+    "relevance" : 0.7927651956571584,
     "sentiment" : null,
     "text" : "circuit"
   }, {
@@ -104,7 +104,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1832859941931178,
+    "relevance" : 0.18226666669991598,
     "sentiment" : null,
     "text" : "action"
   }, {
@@ -112,7 +112,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2003334362608139,
+    "relevance" : 0.19086708004585923,
     "sentiment" : null,
     "text" : "selection"
   } ],
@@ -128,7 +128,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.21019369718263708,
+    "relevance" : 0.21215853474338825,
     "sentiment" : null,
     "text" : "spectrometry"
   }, {
@@ -136,7 +136,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.17517704808563989,
+    "relevance" : 0.1714252331286742,
     "sentiment" : null,
     "text" : "measure"
   }, {
@@ -144,7 +144,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.16809073756568588,
+    "relevance" : 0.17005725136389432,
     "sentiment" : null,
     "text" : "liquid"
   }, {
@@ -152,7 +152,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.28305944371435865,
+    "relevance" : 0.29394141751984465,
     "sentiment" : null,
     "text" : "acid"
   } ],
@@ -168,7 +168,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.4063430769094282,
+    "relevance" : 0.40561710350352864,
     "sentiment" : null,
     "text" : "bacterium"
   }, {
@@ -176,7 +176,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2906690388436212,
+    "relevance" : 0.29480834106632064,
     "sentiment" : null,
     "text" : "arsenic"
   }, {
@@ -184,7 +184,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.19736984726885082,
+    "relevance" : 0.19368623859919581,
     "sentiment" : null,
     "text" : "delta"
   }, {
@@ -192,7 +192,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.4892136538526614,
+    "relevance" : 0.4945009991989762,
     "sentiment" : null,
     "text" : "sediment"
   } ],
@@ -208,7 +208,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.24691572480299617,
+    "relevance" : 0.2476272789809434,
     "sentiment" : null,
     "text" : "reconstruct"
   }, {
@@ -216,7 +216,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.30121269926979427,
+    "relevance" : 0.32078818590039326,
     "sentiment" : null,
     "text" : "ground"
   }, {
@@ -224,7 +224,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.6920694406931538,
+    "relevance" : 0.6833945133126731,
     "sentiment" : null,
     "text" : "theory"
   }, {
@@ -232,7 +232,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.18792070207387557,
+    "relevance" : 0.18321201893422695,
     "sentiment" : null,
     "text" : "comparison"
   } ],
@@ -248,7 +248,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.19291792161280719,
+    "relevance" : 0.19096089167722913,
     "sentiment" : null,
     "text" : "object"
   }, {
@@ -256,7 +256,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.29820012120414374,
+    "relevance" : 0.2937102502324862,
     "sentiment" : null,
     "text" : "space"
   }, {
@@ -264,7 +264,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22911977633650144,
+    "relevance" : 0.23459067581476906,
     "sentiment" : null,
     "text" : "outer"
   }, {
@@ -272,7 +272,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2158199419813071,
+    "relevance" : 0.21803249834928834,
     "sentiment" : null,
     "text" : "celestial"
   } ],
@@ -288,7 +288,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.299530882381452,
+    "relevance" : 0.29874781088999475,
     "sentiment" : null,
     "text" : "roughen"
   }, {
@@ -296,7 +296,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20827413997021876,
+    "relevance" : 0.20891276126794484,
     "sentiment" : null,
     "text" : "experimental"
   }, {
@@ -304,7 +304,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22540226419339265,
+    "relevance" : 0.23454486032603372,
     "sentiment" : null,
     "text" : "heat"
   }, {
@@ -312,7 +312,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.19462345629658245,
+    "relevance" : 0.19557096142485947,
     "sentiment" : null,
     "text" : "rib"
   } ],
@@ -368,7 +368,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.23172211377838642,
+    "relevance" : 0.23101979043710102,
     "sentiment" : null,
     "text" : "epitope"
   }, {
@@ -376,7 +376,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.19231006611831736,
+    "relevance" : 0.1935344000989343,
     "sentiment" : null,
     "text" : "immunogen"
   }, {
@@ -384,7 +384,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1560514601585078,
+    "relevance" : 0.15330514583121763,
     "sentiment" : null,
     "text" : "elicit"
   }, {
@@ -392,7 +392,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5460088552560642,
+    "relevance" : 0.5579993686123502,
     "sentiment" : null,
     "text" : "antibody"
   } ],
@@ -408,7 +408,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20180658418417646,
+    "relevance" : 0.20255746723545826,
     "sentiment" : null,
     "text" : "lunar"
   }, {
@@ -416,7 +416,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.4642370717823973,
+    "relevance" : 0.47773080211969576,
     "sentiment" : null,
     "text" : "observatory"
   }, {
@@ -424,7 +424,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.19242839350949342,
+    "relevance" : 0.1877854744644269,
     "sentiment" : null,
     "text" : "design"
   }, {
@@ -432,7 +432,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.23582823667753738,
+    "relevance" : 0.2413829605394583,
     "sentiment" : null,
     "text" : "solar"
   } ],
@@ -448,7 +448,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.8109372506810175,
+    "relevance" : 0.8140822796500762,
     "sentiment" : null,
     "text" : "aspergillus"
   }, {
@@ -456,7 +456,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.23871985875907553,
+    "relevance" : 0.22989539034363576,
     "sentiment" : null,
     "text" : "genome"
   }, {
@@ -464,7 +464,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.15424334842976795,
+    "relevance" : 0.1525247752102808,
     "sentiment" : null,
     "text" : "cloud"
   }, {
@@ -488,7 +488,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5361719558896125,
+    "relevance" : 0.5588762850196745,
     "sentiment" : null,
     "text" : "disturbance"
   }, {
@@ -496,7 +496,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.261275894368221,
+    "relevance" : 0.2593262577231817,
     "sentiment" : null,
     "text" : "nonlinear"
   }, {
@@ -504,7 +504,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.27954607931619213,
+    "relevance" : 0.27408766108369964,
     "sentiment" : null,
     "text" : "system"
   }, {
@@ -512,7 +512,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1694773487027883,
+    "relevance" : 0.16766693785755965,
     "sentiment" : null,
     "text" : "design"
   } ],
@@ -528,7 +528,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.40534251530800186,
+    "relevance" : 0.40579270747154766,
     "sentiment" : null,
     "text" : "adsorption"
   }, {
@@ -536,7 +536,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.16805074423387178,
+    "relevance" : 0.1686470881845447,
     "sentiment" : null,
     "text" : "calcite"
   }, {
@@ -544,7 +544,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2475208462115962,
+    "relevance" : 0.24968919696134634,
     "sentiment" : null,
     "text" : "surface"
   }, {
@@ -552,7 +552,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2549801035571165,
+    "relevance" : 0.25721444315406605,
     "sentiment" : null,
     "text" : "ion"
   } ],
@@ -568,7 +568,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.4048122744999394,
+    "relevance" : 0.40502672297769315,
     "sentiment" : null,
     "text" : "electron"
   }, {
@@ -576,7 +576,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.21280841679272794,
+    "relevance" : 0.21187213461725574,
     "sentiment" : null,
     "text" : "diffraction"
   }, {
@@ -584,7 +584,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.28023117122874963,
+    "relevance" : 0.2793215587585511,
     "sentiment" : null,
     "text" : "plasmon"
   }, {
@@ -592,7 +592,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20411513833666473,
+    "relevance" : 0.20557349001479186,
     "sentiment" : null,
     "text" : "nitride"
   } ],
@@ -608,7 +608,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.33431203449352803,
+    "relevance" : 0.3103178144864894,
     "sentiment" : null,
     "text" : "mathematical"
   }, {
@@ -616,7 +616,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2669577620548411,
+    "relevance" : 0.2557923665476979,
     "sentiment" : null,
     "text" : "theory"
   }, {
@@ -624,7 +624,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.24172799275737067,
+    "relevance" : 0.2493526602389064,
     "sentiment" : null,
     "text" : "tunneling"
   }, {
@@ -632,7 +632,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.43341665872860474,
+    "relevance" : 0.46537774277926336,
     "sentiment" : null,
     "text" : "temperature"
   } ],
@@ -648,7 +648,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2520669134374022,
+    "relevance" : 0.25350518027005403,
     "sentiment" : null,
     "text" : "immobilization"
   }, {
@@ -656,7 +656,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.38061266500297164,
+    "relevance" : 0.38453751498114297,
     "sentiment" : null,
     "text" : "peptide"
   }, {
@@ -664,7 +664,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.4040915477900428,
+    "relevance" : 0.41412016846788197,
     "sentiment" : null,
     "text" : "surface"
   }, {
@@ -672,7 +672,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20438006187657193,
+    "relevance" : 0.19951349622702413,
     "sentiment" : null,
     "text" : "system"
   } ],
@@ -688,15 +688,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.19014483423334044,
-    "sentiment" : null,
-    "text" : "innate"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.322773933539269,
+    "relevance" : 0.31740887910804944,
     "sentiment" : null,
     "text" : "rheostat"
   }, {
@@ -704,7 +696,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.19833388290805892,
+    "relevance" : 0.20181785478639452,
     "sentiment" : null,
     "text" : "lung"
   }, {
@@ -712,7 +704,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3793403966917178,
+    "relevance" : 0.18410371893625715,
+    "sentiment" : null,
+    "text" : "disease"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.39044044149173873,
     "sentiment" : null,
     "text" : "bacterial"
   } ],
@@ -768,7 +768,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.6520007214172395,
+    "relevance" : 0.6627518704975588,
     "sentiment" : null,
     "text" : "methylation"
   }, {
@@ -776,7 +776,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.18593882860980965,
+    "relevance" : 0.1834704757041194,
     "sentiment" : null,
     "text" : "heritability"
   }, {
@@ -784,7 +784,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1674230095100812,
+    "relevance" : 0.1667993731064462,
     "sentiment" : null,
     "text" : "brain"
   }, {
@@ -792,7 +792,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20680769285742423,
+    "relevance" : 0.20589122118134479,
     "sentiment" : null,
     "text" : "phenotype"
   } ],
@@ -808,7 +808,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.33787157328042694,
+    "relevance" : 0.34411440441531965,
     "sentiment" : null,
     "text" : "ultraviolet"
   }, {
@@ -816,7 +816,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.6619062346060982,
+    "relevance" : 0.6586046835501482,
     "sentiment" : null,
     "text" : "photoluminescence"
   }, {
@@ -824,7 +824,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.15605353523154308,
+    "relevance" : 0.157042193741175,
     "sentiment" : null,
     "text" : "emission"
   }, {
@@ -832,7 +832,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1798011724558971,
+    "relevance" : 0.17941642355931492,
     "sentiment" : null,
     "text" : "spectroscopy"
   } ],
@@ -888,7 +888,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.27733883510842383,
+    "relevance" : 0.28199426354247437,
     "sentiment" : null,
     "text" : "fluorine"
   }, {
@@ -896,7 +896,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.27430042374978125,
+    "relevance" : 0.27589454479828074,
     "sentiment" : null,
     "text" : "boron"
   }, {
@@ -904,15 +904,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.26166500095511436,
+    "relevance" : 0.2592695863747687,
     "sentiment" : null,
-    "text" : "diffusion"
+    "text" : "thermal"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2743730011846853,
+    "relevance" : 0.27158781977044094,
     "sentiment" : null,
     "text" : "silicon"
   } ],
@@ -928,7 +928,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.30283060250823524,
+    "relevance" : 0.2969120620316127,
     "sentiment" : null,
     "text" : "quantitative"
   }, {
@@ -936,7 +936,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.7028568859282893,
+    "relevance" : 0.7072896291237813,
     "sentiment" : null,
     "text" : "biology"
   }, {
@@ -944,7 +944,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1590869880245982,
+    "relevance" : 0.15867781632132727,
     "sentiment" : null,
     "text" : "science"
   }, {
@@ -952,7 +952,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.15107728543879229,
+    "relevance" : 0.15398309812384686,
     "sentiment" : null,
     "text" : "cell"
   } ],
@@ -968,7 +968,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3526227694276568,
+    "relevance" : 0.35599392187170376,
     "sentiment" : null,
     "text" : "seamount"
   }, {
@@ -976,7 +976,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.19427160169638585,
+    "relevance" : 0.19449967160723625,
     "sentiment" : null,
     "text" : "multibeam"
   }, {
@@ -984,7 +984,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.19598630338656786,
+    "relevance" : 0.19466324471713037,
     "sentiment" : null,
     "text" : "bathymetry"
   }, {
@@ -992,7 +992,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1812716142397382,
+    "relevance" : 0.18130955188417275,
     "sentiment" : null,
     "text" : "axial"
   } ],
@@ -1008,7 +1008,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.24451517946551315,
+    "relevance" : 0.24520828425611046,
     "sentiment" : null,
     "text" : "seismic"
   }, {
@@ -1016,7 +1016,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.18020886910616563,
+    "relevance" : 0.18146442517000078,
     "sentiment" : null,
     "text" : "infrasonic"
   }, {
@@ -1024,7 +1024,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3187401834505236,
+    "relevance" : 0.31943907551377776,
     "sentiment" : null,
     "text" : "fluid"
   }, {
@@ -1032,7 +1032,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2135572899229961,
+    "relevance" : 0.21403205259517055,
     "sentiment" : null,
     "text" : "oscillation"
   } ],
@@ -1048,7 +1048,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20124163237757992,
+    "relevance" : 0.19906947290299354,
     "sentiment" : null,
     "text" : "abundant"
   }, {
@@ -1056,7 +1056,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.24987104956949513,
+    "relevance" : 0.250364247915932,
     "sentiment" : null,
     "text" : "cell"
   }, {
@@ -1064,7 +1064,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.4705093196353211,
+    "relevance" : 0.4645176293027856,
     "sentiment" : null,
     "text" : "eosinophilic"
   }, {
@@ -1072,7 +1072,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.21615364416092797,
+    "relevance" : 0.2183696173897397,
     "sentiment" : null,
     "text" : "lung"
   } ],
@@ -1088,7 +1088,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.616451959852809,
+    "relevance" : 0.6147629761034374,
     "sentiment" : null,
     "text" : "immunopathology"
   }, {
@@ -1096,7 +1096,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3105612244202409,
+    "relevance" : 0.32015691455939616,
     "sentiment" : null,
     "text" : "lung"
   }, {
@@ -1104,7 +1104,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.21085157633389012,
+    "relevance" : 0.20743677644211178,
     "sentiment" : null,
     "text" : "viral"
   }, {
@@ -1112,7 +1112,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22323147900580909,
+    "relevance" : 0.22682010292601335,
     "sentiment" : null,
     "text" : "infection"
   } ],
@@ -1168,7 +1168,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3287757612863009,
+    "relevance" : 0.3350713500833546,
     "sentiment" : null,
     "text" : "friction"
   }, {
@@ -1176,7 +1176,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2362877588222118,
+    "relevance" : 0.23011904980261105,
     "sentiment" : null,
     "text" : "technique"
   }, {
@@ -1184,7 +1184,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.21519987400934099,
+    "relevance" : 0.21614284888957302,
     "sentiment" : null,
     "text" : "intermetallic"
   }, {
@@ -1192,7 +1192,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22327546101762247,
+    "relevance" : 0.2263761702069233,
     "sentiment" : null,
     "text" : "welding"
   } ],
@@ -1208,7 +1208,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.29250791151106015,
+    "relevance" : 0.2993740179223884,
     "sentiment" : null,
     "text" : "emission"
   }, {
@@ -1216,7 +1216,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2719759656958019,
+    "relevance" : 0.275887432841321,
     "sentiment" : null,
     "text" : "carbon"
   }, {
@@ -1224,7 +1224,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.19439980016592656,
+    "relevance" : 0.19409230744942452,
     "sentiment" : null,
     "text" : "electron"
   }, {
@@ -1232,7 +1232,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.19740921714454096,
+    "relevance" : 0.1978361836738896,
     "sentiment" : null,
     "text" : "nanotube"
   } ],
@@ -1248,7 +1248,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.17186948520495027,
+    "relevance" : 0.17080287229852653,
     "sentiment" : null,
     "text" : "biomarker"
   }, {
@@ -1256,7 +1256,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1743581314107317,
+    "relevance" : 0.1750178653251161,
     "sentiment" : null,
     "text" : "ocean"
   }, {
@@ -1264,7 +1264,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.18176734205086637,
+    "relevance" : 0.18002824173873572,
     "sentiment" : null,
     "text" : "transect"
   }, {
@@ -1272,7 +1272,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5507878398764189,
+    "relevance" : 0.5538281259767204,
     "sentiment" : null,
     "text" : "glycerol"
   } ],
@@ -1288,7 +1288,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2926720910749124,
+    "relevance" : 0.283634469273893,
     "sentiment" : null,
     "text" : "study"
   }, {
@@ -1296,7 +1296,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2666848389697619,
+    "relevance" : 0.2747502078513637,
     "sentiment" : null,
     "text" : "radon"
   }, {
@@ -1304,7 +1304,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22628911758017356,
+    "relevance" : 0.23238034705277705,
     "sentiment" : null,
     "text" : "volcano"
   }, {
@@ -1312,7 +1312,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.16691253135247375,
+    "relevance" : 0.16938207298179098,
     "sentiment" : null,
     "text" : "volcanic"
   } ],
@@ -1328,7 +1328,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3673459682140517,
+    "relevance" : 0.37767649354058996,
     "sentiment" : null,
     "text" : "prototypic"
   }, {
@@ -1336,7 +1336,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3667995007115771,
+    "relevance" : 0.3460135337873121,
     "sentiment" : null,
     "text" : "mathematical"
   }, {
@@ -1344,7 +1344,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.26305017531026453,
+    "relevance" : 0.2659813841537559,
     "sentiment" : null,
     "text" : "human"
   }, {
@@ -1352,7 +1352,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22064700900945988,
+    "relevance" : 0.22313267165554118,
     "sentiment" : null,
     "text" : "cycle"
   } ],
@@ -1368,7 +1368,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2415015268689396,
+    "relevance" : 0.2439770567204641,
     "sentiment" : null,
     "text" : "natural"
   }, {
@@ -1376,7 +1376,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.25541817107741593,
+    "relevance" : 0.25982620497251996,
     "sentiment" : null,
     "text" : "synthetic"
   }, {
@@ -1384,7 +1384,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.32761043345421614,
+    "relevance" : 0.3200419173647041,
     "sentiment" : null,
     "text" : "biology"
   }, {
@@ -1392,7 +1392,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2092519700089447,
+    "relevance" : 0.2155737087982853,
     "sentiment" : null,
     "text" : "antibiotic"
   } ],
@@ -1408,7 +1408,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.6600400572411826,
+    "relevance" : 0.6580807864538316,
     "sentiment" : null,
     "text" : "datum"
   }, {
@@ -1416,7 +1416,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22832455011853153,
+    "relevance" : 0.2301110025535148,
     "sentiment" : null,
     "text" : "stochastic"
   }, {
@@ -1424,7 +1424,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.19389326512202237,
+    "relevance" : 0.19375646233182542,
     "sentiment" : null,
     "text" : "science"
   }, {
@@ -1432,7 +1432,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1706040081059521,
+    "relevance" : 0.17117303553682872,
     "sentiment" : null,
     "text" : "engineering"
   } ],
@@ -1448,7 +1448,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2651379256434955,
+    "relevance" : 0.26981433517127923,
     "sentiment" : null,
     "text" : "liquid"
   }, {
@@ -1456,7 +1456,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.21765417677023224,
+    "relevance" : 0.21267080111778264,
     "sentiment" : null,
     "text" : "composite"
   }, {
@@ -1464,7 +1464,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.17239937203076694,
+    "relevance" : 0.1746700910435881,
     "sentiment" : null,
     "text" : "silica"
   }, {
@@ -1472,7 +1472,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.28259971940660544,
+    "relevance" : 0.2882198022878613,
     "sentiment" : null,
     "text" : "resin"
   } ],
@@ -1488,7 +1488,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.23258457980080682,
+    "relevance" : 0.23351429295302706,
     "sentiment" : null,
     "text" : "experiment"
   }, {
@@ -1496,7 +1496,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2974674642888151,
+    "relevance" : 0.3045216426214902,
     "sentiment" : null,
     "text" : "scientific"
   }, {
@@ -1504,7 +1504,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.34279393913935696,
+    "relevance" : 0.33905702733066184,
     "sentiment" : null,
     "text" : "workflow"
   }, {
@@ -1512,7 +1512,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.16246942388136248,
+    "relevance" : 0.16144910659996475,
     "sentiment" : null,
     "text" : "empirical"
   } ],
@@ -1528,7 +1528,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2202737657120974,
+    "relevance" : 0.2161474807667194,
     "sentiment" : null,
     "text" : "multivariate"
   }, {
@@ -1536,7 +1536,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.281148870053285,
+    "relevance" : 0.28717345932226357,
     "sentiment" : null,
     "text" : "calibration"
   }, {
@@ -1544,7 +1544,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.21357563785091266,
+    "relevance" : 0.21679425442062017,
     "sentiment" : null,
     "text" : "hominin"
   }, {
@@ -1552,7 +1552,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.23020547667096258,
+    "relevance" : 0.22643612890415993,
     "sentiment" : null,
     "text" : "large"
   } ],
@@ -1568,7 +1568,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.31829501295075646,
+    "relevance" : 0.3271717102943977,
     "sentiment" : null,
     "text" : "projectile"
   }, {
@@ -1576,7 +1576,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2399721443222107,
+    "relevance" : 0.2337317864261973,
     "sentiment" : null,
     "text" : "fragmentation"
   }, {
@@ -1584,7 +1584,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.29298635378141197,
+    "relevance" : 0.2931344691503291,
     "sentiment" : null,
     "text" : "isomeric"
   }, {
@@ -1592,7 +1592,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2043672259063279,
+    "relevance" : 0.20358920964038552,
     "sentiment" : null,
     "text" : "relativistic"
   } ],
@@ -1608,7 +1608,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.6827730287919253,
+    "relevance" : 0.6843985409944162,
     "sentiment" : null,
     "text" : "gaussian"
   }, {
@@ -1616,7 +1616,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.40767331612702506,
+    "relevance" : 0.41033413612217107,
     "sentiment" : null,
     "text" : "linear"
   }, {
@@ -1624,7 +1624,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.14144922961204065,
+    "relevance" : 0.14267164835448343,
     "sentiment" : null,
     "text" : "natural"
   }, {
@@ -1632,7 +1632,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.14998385978520345,
+    "relevance" : 0.14930546817234802,
     "sentiment" : null,
     "text" : "science"
   } ],
@@ -1648,7 +1648,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5572669964730915,
+    "relevance" : 0.5665722449735917,
     "sentiment" : null,
     "text" : "biophysicist"
   }, {
@@ -1656,7 +1656,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22027383946662693,
+    "relevance" : 0.21863897438190105,
     "sentiment" : null,
     "text" : "biology"
   }, {
@@ -1664,7 +1664,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20995837395740835,
+    "relevance" : 0.2114870989781878,
     "sentiment" : null,
     "text" : "physicist"
   }, {
@@ -1672,7 +1672,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2883086392533998,
+    "relevance" : 0.2849713550879765,
     "sentiment" : null,
     "text" : "physics"
   } ],
@@ -1688,7 +1688,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.7060603497994342,
+    "relevance" : 0.7108144465788166,
     "sentiment" : null,
     "text" : "microarray"
   }, {
@@ -1696,7 +1696,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.21961747748774935,
+    "relevance" : 0.2209639550034591,
     "sentiment" : null,
     "text" : "ecology"
   }, {
@@ -1704,7 +1704,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.15273484221464823,
+    "relevance" : 0.15168736457919446,
     "sentiment" : null,
     "text" : "amount"
   }, {
@@ -1712,7 +1712,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2123537343518173,
+    "relevance" : 0.21411301359496926,
     "sentiment" : null,
     "text" : "gene"
   } ],
@@ -1728,7 +1728,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.6000365749445092,
+    "relevance" : 0.6066524352090681,
     "sentiment" : null,
     "text" : "planet"
   }, {
@@ -1736,7 +1736,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.23427688485924253,
+    "relevance" : 0.23179794730622438,
     "sentiment" : null,
     "text" : "astrophysics"
   }, {
@@ -1744,7 +1744,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.17541473980200278,
+    "relevance" : 0.1753084356476936,
     "sentiment" : null,
     "text" : "detection"
   }, {
@@ -1752,7 +1752,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.19582745165583798,
+    "relevance" : 0.19815674247747472,
     "sentiment" : null,
     "text" : "energy"
   } ],
@@ -1768,7 +1768,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5952815060699149,
+    "relevance" : 0.5878162985364513,
     "sentiment" : null,
     "text" : "supersymmetric"
   }, {
@@ -1776,7 +1776,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.41922012356439353,
+    "relevance" : 0.42223064756823325,
     "sentiment" : null,
     "text" : "quark"
   }, {
@@ -1784,7 +1784,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.18160945812667223,
+    "relevance" : 0.18293162027044962,
     "sentiment" : null,
     "text" : "decay"
   }, {
@@ -1792,7 +1792,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.15510851812105242,
+    "relevance" : 0.1565367746527057,
     "sentiment" : null,
     "text" : "particle"
   } ],
@@ -1848,7 +1848,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.196285036245125,
+    "relevance" : 0.19420253568333173,
     "sentiment" : null,
     "text" : "geomorphology"
   }, {
@@ -1856,7 +1856,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.18625369891918747,
+    "relevance" : 0.18573178363190573,
     "sentiment" : null,
     "text" : "pyroclastic"
   }, {
@@ -1864,7 +1864,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.18418142887558542,
+    "relevance" : 0.18347866587681727,
     "sentiment" : null,
     "text" : "kimberlitic"
   }, {
@@ -1872,7 +1872,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.39241817605047186,
+    "relevance" : 0.4038161242588624,
     "sentiment" : null,
     "text" : "volcano"
   } ],
@@ -1928,7 +1928,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2422060599612164,
+    "relevance" : 0.2419440215298258,
     "sentiment" : null,
     "text" : "helminth"
   }, {
@@ -1936,7 +1936,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.23589203652807816,
+    "relevance" : 0.2421957426214454,
     "sentiment" : null,
     "text" : "infection"
   }, {
@@ -1944,7 +1944,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.18741197613155852,
+    "relevance" : 0.1900242147573306,
     "sentiment" : null,
     "text" : "parasite"
   }, {
@@ -1952,7 +1952,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.189145149112863,
+    "relevance" : 0.19268406005534572,
     "sentiment" : null,
     "text" : "mammal"
   } ],
@@ -1968,7 +1968,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3717500248807484,
+    "relevance" : 0.3776762198837261,
     "sentiment" : null,
     "text" : "mutant"
   }, {
@@ -1976,7 +1976,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1839626925015449,
+    "relevance" : 0.18258728114827655,
     "sentiment" : null,
     "text" : "dna"
   }, {
@@ -1984,7 +1984,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3269753544964523,
+    "relevance" : 0.32506458415259193,
     "sentiment" : null,
     "text" : "replication"
   }, {
@@ -1992,7 +1992,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.21288836000013794,
+    "relevance" : 0.21170229583022998,
     "sentiment" : null,
     "text" : "genome"
   } ],
@@ -2008,7 +2008,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5831850190248669,
+    "relevance" : 0.5830696602585489,
     "sentiment" : null,
     "text" : "asymptotic"
   }, {
@@ -2016,7 +2016,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1556555730717732,
+    "relevance" : 0.15798012171052583,
     "sentiment" : null,
     "text" : "wave"
   }, {
@@ -2024,7 +2024,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1885480782768572,
+    "relevance" : 0.18168317031445302,
     "sentiment" : null,
     "text" : "equation"
   }, {
@@ -2032,7 +2032,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.24347167167285722,
+    "relevance" : 0.23768566646662448,
     "sentiment" : null,
     "text" : "infinite"
   } ],
@@ -2088,7 +2088,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5379057205469236,
+    "relevance" : 0.5344225928246205,
     "sentiment" : null,
     "text" : "epidermal"
   }, {
@@ -2096,7 +2096,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.39035295931411323,
+    "relevance" : 0.3943784352335871,
     "sentiment" : null,
     "text" : "cytokine"
   }, {
@@ -2104,7 +2104,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.23425339665476252,
+    "relevance" : 0.23736491125600967,
     "sentiment" : null,
     "text" : "skin"
   }, {
@@ -2112,7 +2112,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.21129087348242453,
+    "relevance" : 0.20982867486751183,
     "sentiment" : null,
     "text" : "hazard"
   } ],
@@ -2168,7 +2168,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.26389623661797385,
+    "relevance" : 0.2538515938472624,
     "sentiment" : null,
     "text" : "universe"
   }, {
@@ -2176,7 +2176,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.7325922840558244,
+    "relevance" : 0.7394450632393098,
     "sentiment" : null,
     "text" : "pulsar"
   }, {
@@ -2184,7 +2184,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.16867536688587792,
+    "relevance" : 0.16748497275915253,
     "sentiment" : null,
     "text" : "modulation"
   }, {
@@ -2192,7 +2192,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1439007846383123,
+    "relevance" : 0.14456449135758664,
     "sentiment" : null,
     "text" : "energy"
   } ],
@@ -2208,7 +2208,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.7593164942641936,
+    "relevance" : 0.7627749579442453,
     "sentiment" : null,
     "text" : "electron"
   }, {
@@ -2216,7 +2216,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.15276597039519585,
+    "relevance" : 0.1527952300894947,
     "sentiment" : null,
     "text" : "scattering"
   }, {
@@ -2224,7 +2224,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.16747447940118138,
+    "relevance" : 0.16550464058664927,
     "sentiment" : null,
     "text" : "elastic"
   }, {
@@ -2232,7 +2232,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.23423100788531614,
+    "relevance" : 0.23592571204188295,
     "sentiment" : null,
     "text" : "molecule"
   } ],
@@ -2288,7 +2288,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.17802475620109298,
+    "relevance" : 0.174330128407978,
     "sentiment" : null,
     "text" : "precise"
   }, {
@@ -2296,7 +2296,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.44248233872472353,
+    "relevance" : 0.4402567368700136,
     "sentiment" : null,
     "text" : "gamma"
   }, {
@@ -2304,15 +2304,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.13886961419754634,
+    "relevance" : 0.13827908035489644,
     "sentiment" : null,
-    "text" : "timing"
+    "text" : "telescope"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5485313591952166,
+    "relevance" : 0.5639614277839573,
     "sentiment" : null,
     "text" : "pulsar"
   } ],
@@ -2328,7 +2328,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1391248928905472,
+    "relevance" : 0.13741473641475516,
     "sentiment" : null,
     "text" : "derive"
   }, {
@@ -2336,7 +2336,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.809207944997992,
+    "relevance" : 0.8108867427137489,
     "sentiment" : null,
     "text" : "biology"
   }, {
@@ -2344,7 +2344,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.16814326211527458,
+    "relevance" : 0.16766569382792929,
     "sentiment" : null,
     "text" : "design"
   }, {
@@ -2352,7 +2352,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1773708029685503,
+    "relevance" : 0.1765216374098469,
     "sentiment" : null,
     "text" : "science"
   } ],
@@ -2368,7 +2368,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.4395082816573408,
+    "relevance" : 0.4666625170247224,
     "sentiment" : null,
     "text" : "biological"
   }, {
@@ -2376,7 +2376,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3271290605782332,
+    "relevance" : 0.3122731629280274,
     "sentiment" : null,
     "text" : "principle"
   }, {
@@ -2384,7 +2384,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2256689727844744,
+    "relevance" : 0.22749853982657015,
     "sentiment" : null,
     "text" : "biology"
   }, {
@@ -2392,7 +2392,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1584557421379595,
+    "relevance" : 0.15909016940417336,
     "sentiment" : null,
     "text" : "study"
   } ],
@@ -2408,7 +2408,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.15165320012937994,
+    "relevance" : 0.15056765440205977,
     "sentiment" : null,
     "text" : "method"
   }, {
@@ -2416,7 +2416,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.8152548472617543,
+    "relevance" : 0.8171019999171651,
     "sentiment" : null,
     "text" : "biology"
   }, {
@@ -2424,7 +2424,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.12898039766141933,
+    "relevance" : 0.12791205661338173,
     "sentiment" : null,
     "text" : "persistence"
   }, {
@@ -2432,7 +2432,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.12351712649432567,
+    "relevance" : 0.1234131024616632,
     "sentiment" : null,
     "text" : "design"
   } ],
@@ -2448,7 +2448,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5028300261817223,
+    "relevance" : 0.5156587088329466,
     "sentiment" : null,
     "text" : "planetary"
   }, {
@@ -2456,7 +2456,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.29351739990066306,
+    "relevance" : 0.29370961477644286,
     "sentiment" : null,
     "text" : "astronomy"
   }, {
@@ -2464,7 +2464,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.18090805829429402,
+    "relevance" : 0.1791201714267282,
     "sentiment" : null,
     "text" : "space"
   }, {
@@ -2472,7 +2472,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2474920641700648,
+    "relevance" : 0.2392525339055398,
     "sentiment" : null,
     "text" : "method"
   } ],
@@ -2488,7 +2488,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.15057695244510982,
+    "relevance" : 0.1490047603326049,
     "sentiment" : null,
     "text" : "control"
   }, {
@@ -2496,7 +2496,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.4586963472051289,
+    "relevance" : 0.4607598205163221,
     "sentiment" : null,
     "text" : "endothelial"
   }, {
@@ -2504,7 +2504,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.37624858901175057,
+    "relevance" : 0.37456921766914186,
     "sentiment" : null,
     "text" : "endothelium"
   }, {
@@ -2512,7 +2512,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.4467104332024571,
+    "relevance" : 0.4540880043154145,
     "sentiment" : null,
     "text" : "hematopoietic"
   } ],
@@ -2528,7 +2528,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.18954790726153936,
+    "relevance" : 0.1887448554375224,
     "sentiment" : null,
     "text" : "experimental"
   }, {
@@ -2536,7 +2536,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2712828769567933,
+    "relevance" : 0.26750881841612556,
     "sentiment" : null,
     "text" : "petrology"
   }, {
@@ -2544,7 +2544,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.34627912030757635,
+    "relevance" : 0.35480685763765585,
     "sentiment" : null,
     "text" : "basalt"
   }, {
@@ -2552,7 +2552,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.17463863792559992,
+    "relevance" : 0.17508360191117506,
     "sentiment" : null,
     "text" : "interior"
   } ],
@@ -2568,7 +2568,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2739860638789001,
+    "relevance" : 0.28043031409285,
     "sentiment" : null,
     "text" : "cell"
   }, {
@@ -2576,7 +2576,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22173420567355456,
+    "relevance" : 0.2244319834066033,
     "sentiment" : null,
     "text" : "regeneration"
   }, {
@@ -2584,7 +2584,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5567730518373246,
+    "relevance" : 0.5561704901360306,
     "sentiment" : null,
     "text" : "intervertebral"
   }, {
@@ -2592,7 +2592,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.21510599235967387,
+    "relevance" : 0.21623495171736817,
     "sentiment" : null,
     "text" : "disc"
   } ],
@@ -2608,7 +2608,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.47811901313023125,
+    "relevance" : 0.4840575569139336,
     "sentiment" : null,
     "text" : "fluctuation"
   }, {
@@ -2616,7 +2616,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.23711898031087125,
+    "relevance" : 0.22711389398284193,
     "sentiment" : null,
     "text" : "subjective"
   }, {
@@ -2624,7 +2624,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2987828798756682,
+    "relevance" : 0.307550835392972,
     "sentiment" : null,
     "text" : "decay"
   }, {
@@ -2632,7 +2632,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.17830565959679678,
+    "relevance" : 0.177389238403722,
     "sentiment" : null,
     "text" : "spatial"
   } ],
@@ -2688,7 +2688,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.233651515572315,
+    "relevance" : 0.2351110618565435,
     "sentiment" : null,
     "text" : "geochemical"
   }, {
@@ -2696,7 +2696,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2799441813362875,
+    "relevance" : 0.2807838133848286,
     "sentiment" : null,
     "text" : "isotopic"
   }, {
@@ -2704,7 +2704,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.28282037057899734,
+    "relevance" : 0.2824104264562738,
     "sentiment" : null,
     "text" : "magmatism"
   }, {
@@ -2712,7 +2712,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.19742648564530424,
+    "relevance" : 0.19877180674271222,
     "sentiment" : null,
     "text" : "mount"
   } ],
@@ -2728,7 +2728,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1920399220879498,
+    "relevance" : 0.19221348822758327,
     "sentiment" : null,
     "text" : "luminescence"
   }, {
@@ -2736,7 +2736,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22818481549770514,
+    "relevance" : 0.23183977506439896,
     "sentiment" : null,
     "text" : "marine"
   }, {
@@ -2744,7 +2744,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.42725853926692303,
+    "relevance" : 0.43327766508627,
     "sentiment" : null,
     "text" : "bacterium"
   }, {
@@ -2752,7 +2752,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20396092956141365,
+    "relevance" : 0.20361033110358046,
     "sentiment" : null,
     "text" : "light"
   } ],
@@ -2768,7 +2768,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.26594176027789185,
+    "relevance" : 0.26691759102253876,
     "sentiment" : null,
     "text" : "mutation"
   }, {
@@ -2776,7 +2776,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.21069446704055989,
+    "relevance" : 0.21204387980485573,
     "sentiment" : null,
     "text" : "mammary"
   }, {
@@ -2784,7 +2784,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22315601417571485,
+    "relevance" : 0.22835141741537857,
     "sentiment" : null,
     "text" : "cell"
   }, {
@@ -2792,7 +2792,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.24919380279182785,
+    "relevance" : 0.2503788870205933,
     "sentiment" : null,
     "text" : "gene"
   } ],
@@ -2808,7 +2808,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3383092054944828,
+    "relevance" : 0.3347252093279772,
     "sentiment" : null,
     "text" : "vacuolar"
   }, {
@@ -2816,7 +2816,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.16074612027488333,
+    "relevance" : 0.16165385424731765,
     "sentiment" : null,
     "text" : "membrane"
   }, {
@@ -2824,7 +2824,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.16211801101694556,
+    "relevance" : 0.16188846527960826,
     "sentiment" : null,
     "text" : "proteolysis"
   }, {
@@ -2832,7 +2832,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2398646019943686,
+    "relevance" : 0.24277672098738923,
     "sentiment" : null,
     "text" : "ion"
   } ],
@@ -2848,7 +2848,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2546508835458247,
+    "relevance" : 0.24955144225188658,
     "sentiment" : null,
     "text" : "hyperbolic"
   }, {
@@ -2856,7 +2856,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2936110268286949,
+    "relevance" : 0.18770558546538108,
+    "sentiment" : null,
+    "text" : "interdisciplinary"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.2925877235772411,
     "sentiment" : null,
     "text" : "function"
   }, {
@@ -2864,17 +2872,9 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3011855021846207,
+    "relevance" : 0.3072668365262762,
     "sentiment" : null,
     "text" : "geometry"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.18574362816263057,
-    "sentiment" : null,
-    "text" : "mathematics"
   } ],
   "categoryList" : null,
   "conceptList" : null
@@ -2928,7 +2928,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3016085094167831,
+    "relevance" : 0.28986752179385933,
     "sentiment" : null,
     "text" : "mechanistic"
   }, {
@@ -2936,7 +2936,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1400860169045588,
+    "relevance" : 0.13824038190500237,
     "sentiment" : null,
     "text" : "reappraisal"
   }, {
@@ -2944,7 +2944,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.6668213843019526,
+    "relevance" : 0.6707339066391816,
     "sentiment" : null,
     "text" : "photochemistry"
   }, {
@@ -2952,7 +2952,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.32156942055421744,
+    "relevance" : 0.3317070164122936,
     "sentiment" : null,
     "text" : "enzyme"
   } ],
@@ -2968,7 +2968,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1846940554937968,
+    "relevance" : 0.18221927348668282,
     "sentiment" : null,
     "text" : "vieja"
   }, {
@@ -2976,7 +2976,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5049498181719159,
+    "relevance" : 0.5057297807386038,
     "sentiment" : null,
     "text" : "deformation"
   }, {
@@ -2984,7 +2984,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.25129748460750434,
+    "relevance" : 0.2561618371210396,
     "sentiment" : null,
     "text" : "island"
   }, {
@@ -2992,7 +2992,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.19165927156368273,
+    "relevance" : 0.19508189076741123,
     "sentiment" : null,
     "text" : "volcano"
   } ],
@@ -3008,7 +3008,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.25558063716299917,
+    "relevance" : 0.24824610825153104,
     "sentiment" : null,
     "text" : "life"
   }, {
@@ -3016,7 +3016,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2807076735354539,
+    "relevance" : 0.2898714354993539,
     "sentiment" : null,
     "text" : "earth"
   }, {
@@ -3024,7 +3024,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2657097971298287,
+    "relevance" : 0.2699394820091292,
     "sentiment" : null,
     "text" : "analogue"
   }, {
@@ -3032,7 +3032,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2793965926996559,
+    "relevance" : 0.2872988218167123,
     "sentiment" : null,
     "text" : "planet"
   } ],
@@ -3048,7 +3048,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.24099511883463165,
+    "relevance" : 0.23946987965333988,
     "sentiment" : null,
     "text" : "gradient"
   }, {
@@ -3056,7 +3056,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22446256227559663,
+    "relevance" : 0.22607621879533046,
     "sentiment" : null,
     "text" : "protein"
   }, {
@@ -3064,7 +3064,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2984421586387501,
+    "relevance" : 0.2980278321154982,
     "sentiment" : null,
     "text" : "dimeric"
   }, {
@@ -3072,7 +3072,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.24781851600587051,
+    "relevance" : 0.25104496778423285,
     "sentiment" : null,
     "text" : "thioredoxin"
   } ],
@@ -3088,7 +3088,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.4649497833672229,
+    "relevance" : 0.47076094586829226,
     "sentiment" : null,
     "text" : "membrane"
   }, {
@@ -3096,7 +3096,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5298186373543545,
+    "relevance" : 0.5319000457312479,
     "sentiment" : null,
     "text" : "nanotube"
   }, {
@@ -3104,7 +3104,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.19208046592425243,
+    "relevance" : 0.18601537234896454,
     "sentiment" : null,
     "text" : "dynamic"
   }, {
@@ -3112,7 +3112,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20631318587907255,
+    "relevance" : 0.2075442839123593,
     "sentiment" : null,
     "text" : "cell"
   } ],
@@ -3136,7 +3136,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1043714180852478,
+    "relevance" : 0.10439172629892701,
     "sentiment" : null,
     "text" : "month"
   }, {
@@ -3208,7 +3208,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.6359511975875396,
+    "relevance" : 0.6380901890478499,
     "sentiment" : null,
     "text" : "excitation"
   }, {
@@ -3216,7 +3216,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1477857467937571,
+    "relevance" : 0.14669792131274878,
     "sentiment" : null,
     "text" : "neutral"
   }, {
@@ -3224,7 +3224,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5310545466806145,
+    "relevance" : 0.5419484462744467,
     "sentiment" : null,
     "text" : "boron"
   }, {
@@ -3232,7 +3232,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.14516058503292179,
+    "relevance" : 0.14271692407738618,
     "sentiment" : null,
     "text" : "method"
   } ],
@@ -3248,7 +3248,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2047675500570636,
+    "relevance" : 0.20476210298625697,
     "sentiment" : null,
     "text" : "magmatism"
   }, {
@@ -3256,7 +3256,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5237440561394783,
+    "relevance" : 0.5307555369959179,
     "sentiment" : null,
     "text" : "subduction"
   }, {
@@ -3264,7 +3264,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.17471744164590863,
+    "relevance" : 0.17657426713420793,
     "sentiment" : null,
     "text" : "magma"
   }, {
@@ -3272,7 +3272,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.18151545509508954,
+    "relevance" : 0.18236502658224307,
     "sentiment" : null,
     "text" : "geochemical"
   } ],

@@ -38,10 +38,17 @@ public class TrainingSetBuilder {
 
   private static final String category = "science";
 
-  public static void main(String[] args) throws IOException { 
+  public static void main(String[] args) throws Exception { 
     String path = PathConfigurator.rootFolder + category;
     if(!category.equals(""))
       path = PathConfigurator.rootFolder + category +"/";
+    
+    boolean fromSolr = true;
+    boolean withCategories = false;
+    
+    SourceVectorBuilder sourceVectorBuilder = new SourceVectorBuilder();
+    //    sourceVectorBuilder.buildSourceVectors(PathConfigurator.rootFolder+"science/","science",withCategories,fromSolr);
+    sourceVectorBuilder.buildSourceVectors(path,category,withCategories,fromSolr);
 
     // SERVE PER GENERARE IL FILE CHE CONTIENE I VETTORI DELLE CATEGORIE
     CategoryVector.execute(path+"categories.txt",null,path);
