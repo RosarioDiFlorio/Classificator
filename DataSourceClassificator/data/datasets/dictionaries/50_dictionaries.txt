@@ -1,32 +1,49 @@
 Cluster 6
-AVG: 0.10241639
-Variance: 6.340905E-9
+    petrology -> 0.2561180016855579
+    geomorphology -> 0.199757515363856
+    solar -> 0.230191165912993
+    experimental -> 0.19128319209757288
+    pyroclastic -> 0.18005045737059117
+    volcanism -> 0.8524163823495667
+    interior -> 0.17193324620535977
+    observatory -> 0.49774375865670445
+    moon -> 0.18225158723106039
+    basalt -> 0.35668838109168644
+    volcano -> 0.40585203853084506
+    kimberlitic -> 0.18167302327445062
+    lunar -> 0.20322582537631984
+AVG: 0.2635271
+Variance: 0.18560798
 
 
 Cluster 7
-    disturbance -> 0.4237764007402985
-    nonlinear -> 0.3578852825343023
-AVG: 0.2895185
-Variance: 0.10397376
+AVG: 0.10241639
+Variance: 6.340905E-9
 
 
 Cluster 8
-    replication -> 0.3169735287306199
-    mutant -> 0.39543138644602494
-AVG: 0.2799971
-Variance: 0.08264939
+    linear -> 0.39195974316598736
+    radiative -> 0.23494583559571292
+    gaussian -> 0.6786103649246537
+    measurement -> 0.32537878277557886
+AVG: 0.29090998
+Variance: 0.16639142
 
 
 Cluster 9
-    gradient -> 0.3078293623053683
-    protein -> 0.34402452605773404
-AVG: 0.25119674
-Variance: 0.07588458
+    intermetallic -> 0.22222974531254586
+    excitation -> 0.6304672266046463
+    technique -> 0.24269433859203177
+    boron -> 0.5589052780964767
+    friction -> 0.3105016714353888
+AVG: 0.30848336
+Variance: 0.173631
 
 
 Cluster 12
-AVG: 0.10241639
-Variance: 6.340905E-9
+    month -> 0.10324181616504524
+AVG: 0.10262275
+Variance: 3.5742333E-4
 
 
 Cluster 11
@@ -35,193 +52,225 @@ Variance: 6.340905E-9
 
 
 Cluster 10
-    peptide -> 0.210499230439668
-    surface -> 0.5884136998865275
-AVG: 0.29484954
-Variance: 0.16984034
+    asymptotic -> 0.5676368200202149
+    infinite -> 0.23808465744098484
+AVG: 0.28753623
+Variance: 0.16405125
 
 
 Cluster 16
-AVG: 0.10241639
-Variance: 6.340905E-9
+    microarray -> 0.6989737612122068
+    ecology -> 0.24550769962723412
+    gene -> 0.2311763872189827
+AVG: 0.33074215
+Variance: 0.21588182
 
 
 Cluster 15
-    datum -> 0.6772143541462226
-    stochastic -> 0.23799227121878797
-AVG: 0.32385844
-Variance: 0.2053207
+AVG: 0.10241639
+Variance: 6.340905E-9
 
 
 Cluster 14
-    hair -> 0.20910383635188046
-    anagen -> 0.40598100779334273
-    human -> 0.22354322758833728
-AVG: 0.25332165
-Variance: 0.08990929
+    antibiotic -> 0.23493328381885498
+    synthetic -> 0.24015136092642336
+    biology -> 0.344987367474606
+    natural -> 0.353352176175443
+AVG: 0.21152477
+Variance: 0.103515804
 
 
 Cluster 13
-    intervertebral -> 0.6705247703843787
-    disc -> 0.24496715211649706
-AVG: 0.3122468
-Variance: 0.20936038
+    photoluminescence -> 0.6493857718961382
+    spectroscopy -> 0.39106483217635835
+    planet -> 0.43545894069876
+    ultraviolet -> 0.36097881744792937
+    extrasolar -> 0.2794763554066253
+AVG: 0.35338327
+Variance: 0.15275717
 
 
 Cluster 19
-    stromal -> 0.20924688752896026
-    cell -> 0.28079696980605606
-AVG: 0.21978585
-Variance: 0.03574938
+    adsorption -> 0.4006354649148546
+    surface -> 0.24788267682868093
+    ion -> 0.24707674331366342
+AVG: 0.26661035
+Variance: 0.08346515
 
 
 Cluster 18
-    intermetallic -> 0.2416446481303976
-    welding -> 0.2344882328918348
-    technique -> 0.26705552628570633
-AVG: 0.23699886
-Variance: 0.022178834
+    infection -> 0.5095676338966371
+    disease -> 0.4219894958407861
+    rheostat -> 0.26611685037786803
+    lung -> 0.7256568451046077
+    bacterial -> 0.42264068758696793
+    immunopathology -> 0.5998189857935101
+    aspergillus -> 0.8127463097960255
+    eosinophilic -> 0.45218522553017904
+AVG: 0.36311015
+Variance: 0.20418923
 
 
 Cluster 17
-    endothelium -> 0.25419888516146594
-    hematopoietic -> 0.6306687946681571
-    endothelial -> 0.30216346018810575
-    skin -> 0.33544952075860723
-    epidermal -> 0.23496764139322113
-AVG: 0.28839087
-Variance: 0.14135918
+    radon -> 0.2674106513862121
+    study -> 0.3055735235732605
+    volcano -> 0.23178083304577435
+AVG: 0.24315278
+Variance: 0.05070801
 
 
 Cluster 0
-    biophysicist -> 0.5718396337488704
-    physics -> 0.2525634434035898
-AVG: 0.3151477
-Variance: 0.14950624
+    bathymetry -> 0.1913844121919817
+    seamount -> 0.39133431686354486
+AVG: 0.23535624
+Variance: 0.09038509
 
 
 Cluster 1
-    aspergillosis -> 0.730020653637498
-AVG: 0.30758563
-Variance: 0.24425565
+    planet -> 0.9579937039650599
+    earth -> 0.2849137845673846
+    astrophysics -> 0.21863314441211756
+    analogue -> 0.24208646106343812
+    life -> 0.2901522148432272
+AVG: 0.3355367
+Variance: 0.25763628
 
 
 Cluster 2
-    experiment -> 0.24370677458558487
-    workflow -> 0.3322349371592199
-    scientific -> 0.3330129330967634
-AVG: 0.2674852
-Variance: 0.07140356
+AVG: 0.10241639
+Variance: 6.340905E-9
 
 
 Cluster 3
-    microarray -> 0.4495414361675573
-    gene -> 0.45661501931543136
-AVG: 0.3192388
-Variance: 0.13388859
+    biophysicist -> 0.5718396337488704
+    principle -> 0.2827958321127839
+    study -> 0.15951878657052304
+    biology -> 2.8633752454193244
+    method -> 0.14418974436974213
+    cell -> 0.1546306999430972
+    physicist -> 0.198574551409473
+    derive -> 0.13294912520204666
+    quantitative -> 0.2631154856707741
+    science -> 0.3251176038590803
+    physics -> 0.2525634434035898
+    design -> 0.27516293107470186
+    biological -> 0.5133754749386287
+    persistence -> 0.1262488922806274
+AVG: 0.4473898
+Variance: 0.6826873
 
 
 Cluster 4
-    photoluminescence -> 0.653672641437776
-    ultraviolet -> 0.36421230449380143
-AVG: 0.33813384
-Variance: 0.1992603
+    membrane -> 0.46266876696774056
+    nanotube -> 0.5022259281353845
+AVG: 0.34245777
+Variance: 0.14115484
 
 
 Cluster 5
-    bacterium -> 0.21290449776499004
-    marine -> 0.300603358134397
-AVG: 0.23157778
-Variance: 0.03994269
+    nitride -> 0.20361609580878576
+    diffraction -> 0.20785922197144918
+    scattering -> 0.1517154405134905
+    electron -> 1.167436654907609
+    elastic -> 0.16113650683075298
+    molecule -> 0.2555439276786611
+    plasmon -> 0.2829510645551818
+AVG: 0.25817493
+Variance: 0.2939819
 
 
 Cluster 41
-    lung -> 0.708553926202572
-    immunopathology -> 0.5210876521982771
-    eosinophilic -> 0.29800488863592245
-AVG: 0.33209068
-Variance: 0.189087
+    bacterium -> 0.9342377721260942
+    arsenic -> 0.2831510998317899
+    sediment -> 0.469140821483994
+    marine -> 0.2424088373541829
+AVG: 0.3552749
+Variance: 0.25416365
 
 
 Cluster 40
-    asymptotic -> 0.57955020984099
-    infinite -> 0.24160322631003722
-AVG: 0.29209533
-Variance: 0.1683847
+    peptide -> 0.43013945318138447
+    surface -> 0.39897395569390043
+AVG: 0.3175766
+Variance: 0.099281676
 
 
 Cluster 45
-AVG: 0.10241639
-Variance: 6.340905E-9
+    intervertebral -> 0.5217822894502272
+    cell -> 0.30634159022863505
+AVG: 0.3185549
+Variance: 0.12272679
 
 
 Cluster 44
-    biology -> 0.6230834397002092
-AVG: 0.28543535
-Variance: 0.19495209
-
-
-Cluster 43
-    genome -> 0.30242547825816013
-    aspergillus -> 0.7367090691219611
-AVG: 0.33827168
-Variance: 0.23757966
-
-
-Cluster 42
-    biology -> 0.7955771300382395
-AVG: 0.31663328
-Variance: 0.2765549
-
-
-Cluster 49
-    vacuolar -> 0.3597478073656728
-    adsorption -> 0.20178650475018578
-    ion -> 0.5638351361103628
-    calcite -> 0.19910502956689696
-AVG: 0.26314023
-Variance: 0.1376808
-
-
-Cluster 48
-    immune -> 0.22466890738297207
-    bacterial -> 0.22016971307945066
-    innate -> 0.2368528269473037
-AVG: 0.22113942
-Variance: 0.0121883
-
-
-Cluster 47
-    bathymetry -> 0.19198269629343745
-    seamount -> 0.3942045358044243
-AVG: 0.23646928
-Variance: 0.09140166
-
-
-Cluster 46
-    biology -> 0.8257983261755125
-AVG: 0.3041366
-Variance: 0.30131173
-
-
-Cluster 30
-    parasite -> 0.22440468942501135
-    mammal -> 0.22620732977401548
-    helminth -> 0.27358730582894863
-AVG: 0.22750692
-Variance: 0.031111967
-
-
-Cluster 34
 AVG: 0.10241639
 Variance: 6.340905E-9
 
 
+Cluster 43
+AVG: 0.10241639
+Variance: 6.340905E-9
+
+
+Cluster 42
+    island -> 0.28923541658153556
+    deformation -> 0.4562116720330002
+AVG: 0.28049463
+Variance: 0.109553464
+
+
+Cluster 49
+    seismic -> 0.23448880944454248
+    oscillation -> 0.21279030558510187
+    fluid -> 0.3120972675030229
+AVG: 0.23512869
+Variance: 0.04831803
+
+
+Cluster 48
+    circuit -> 0.7687380628818655
+AVG: 0.34288365
+Variance: 0.24596478
+
+
+Cluster 47
+    cytokine -> 0.41232757175267726
+    endothelium -> 0.3660663981430615
+    hematopoietic -> 0.4667946673354741
+    endothelial -> 0.46111797825516637
+    epidermal -> 0.5169749306651766
+AVG: 0.3520133
+Variance: 0.12876986
+
+
+Cluster 46
+    disturbance -> 0.5862034076512661
+    system -> 0.2673416823122048
+    nonlinear -> 0.24985862426133998
+AVG: 0.3165583
+Variance: 0.16063322
+
+
+Cluster 30
+    projectile -> 0.31318526982242034
+    fragmentation -> 0.24511237220377163
+    isomeric -> 0.29818462536900486
+AVG: 0.26388118
+Variance: 0.04517726
+
+
+Cluster 34
+    phenotype -> 0.21249617219710704
+    methylation -> 0.6611210251851721
+AVG: 0.3051362
+Variance: 0.20619778
+
+
 Cluster 33
-    heat -> 0.25195398188760715
-    roughen -> 0.33649607489793065
-AVG: 0.23940474
-Variance: 0.06303092
+    boron -> 0.2833835359850235
+    fluorine -> 0.2849026581280063
+AVG: 0.2721307
+Variance: 0.012152689
 
 
 Cluster 32
@@ -230,120 +279,143 @@ Variance: 6.340905E-9
 
 
 Cluster 31
-    membrane -> 0.19511971966699843
-    diffraction -> 0.22735852501569237
-    spectroscopy -> 0.21214323893290044
-    electron -> 1.2431041000299472
-    vesicle -> 0.193400913345128
-    molecule -> 0.2555439276786611
-    plasmon -> 0.32517358891158465
-    nanotube -> 0.5908008531196849
-AVG: 0.34011146
-Variance: 0.30875266
+    datum -> 0.6532200742110771
+    stochastic -> 0.2303829636693026
+AVG: 0.31384614
+Variance: 0.19712059
 
 
 Cluster 38
-    emission -> 0.3244014710105687
-    carbon -> 0.31680574935671335
-AVG: 0.26144582
-Variance: 0.05970895
+    replication -> 0.31419344388038206
+    genome -> 0.22502393720371472
+    mutation -> 0.28414821590928696
+    invasiveness -> 0.20738575678116128
+    gene -> 0.27004567094652654
+    cell -> 0.3293872747878921
+    mutant -> 0.3914274035977
+AVG: 0.22812742
+Variance: 0.09502986
 
 
 Cluster 37
-    hominin -> 0.2426018438933193
-    calibration -> 0.26416384406897836
-AVG: 0.2385276
-Variance: 0.017230038
+    subduction -> 0.525358861140771
+    isotopic -> 0.28843013047214816
+    magmatism -> 0.4970774159456876
+    geochemical -> 0.41648283058401453
+AVG: 0.34848776
+Variance: 0.13977888
 
 
 Cluster 36
-AVG: 0.10241639
-Variance: 6.340905E-9
+    temperature -> 0.47081810431532334
+    prototypic -> 0.36495329574822816
+    ground -> 0.32856184653963344
+    human -> 0.3026459108807711
+    theory -> 0.9416107151104595
+    mathematical -> 0.6351595095795197
+AVG: 0.39341158
+Variance: 0.22320774
 
 
 Cluster 35
-    radiative -> 0.24575195649875659
-    measurement -> 0.34729291894354963
-AVG: 0.24984792
-Variance: 0.059004772
+    modulation -> 0.16478176208020062
+    universe -> 0.2581963579531722
+    outer -> 0.22639178167460888
+    celestial -> 0.21339256931411205
+    precise -> 0.1712151841519009
+    space -> 0.29037749736667384
+    gamma -> 0.43316530945662657
+    object -> 0.18558034344559038
+    pulsar -> 1.3245175449884776
+AVG: 0.32280025
+Variance: 0.3267733
 
 
 Cluster 39
-    boron -> 0.3161088948702001
-    fluorine -> 0.31799889486557753
-AVG: 0.29903185
-Variance: 0.01815257
+    heat -> 0.2278941468219961
+    roughen -> 0.2931534892108072
+    experimental -> 0.22083747439480744
+AVG: 0.23499511
+Variance: 0.035337135
 
 
 Cluster 23
-    laboratory -> 0.22720222383569666
-    technique -> 0.21859773759694962
-    histological -> 0.256116226465858
-AVG: 0.22463791
-Variance: 0.02131948
+    decay -> 0.3195994001082756
+    fluctuation -> 0.5048630857937567
+AVG: 0.3048892
+Variance: 0.12658787
 
 
 Cluster 22
-    biology -> 0.504428359996457
-    design -> 0.2846032289321023
-    science -> 0.3733460833789314
-AVG: 0.33679754
-Variance: 0.117536806
+    experiment -> 0.2397400301777075
+    workflow -> 0.3246598765472918
+    scientific -> 0.3253756276858508
+AVG: 0.26239315
+Variance: 0.068707794
 
 
 Cluster 21
-    resin -> 0.30873728282205193
-    liquid -> 0.460778583479627
-    composite -> 0.20791139560987965
-    spectrometry -> 0.2293372538292769
-AVG: 0.24856988
-Variance: 0.09694989
+    acid -> 0.3046682501864826
+    resin -> 0.2930288954654665
+    liquid -> 0.43776363867146534
+AVG: 0.25634572
+Variance: 0.08896729
 
 
 Cluster 20
-    bacterium -> 0.23658189024893317
-    arsenic -> 0.4909533781068748
-AVG: 0.27150965
-Variance: 0.12884009
+    function -> 0.31334457756343614
+    geometry -> 0.28798584248663894
+AVG: 0.2570986
+Variance: 0.046347078
 
 
 Cluster 27
-    antibody -> 0.5892869280230055
-    epitope -> 0.23839581839759033
-AVG: 0.29335505
-Variance: 0.17344873
+    emission -> 0.29108091670848735
+    carbon -> 0.2848188269090385
+AVG: 0.24241658
+Variance: 0.04564003
 
 
 Cluster 26
-    phenotype -> 0.22162813628700062
-    methylation -> 0.6954998982011825
-AVG: 0.3184922
-Variance: 0.21843915
+    antibody -> 0.5727207578319884
+    dimeric -> 0.297812004647256
+    thioredoxin -> 0.2612970300706623
+    gradient -> 0.22430944285110804
+    ion -> 0.22387531958080759
+    glycerol -> 0.5500821404465819
+    vacuolar -> 0.3456800977380031
+    protein -> 0.2418325801004323
+    epitope -> 0.23367319750109367
+AVG: 0.25932154
+Variance: 0.12514508
 
 
 Cluster 25
-    principle -> 0.28488951035892
-    biology -> 0.24405315246599335
-    biological -> 0.518172198961802
-AVG: 0.3017661
-Variance: 0.13281484
+    hominin -> 0.23404903534695082
+    calibration -> 0.25375270643399395
+AVG: 0.23028539
+Variance: 0.015786663
 
 
 Cluster 24
-AVG: 0.10241639
-Variance: 6.340905E-9
+    mechanistic -> 0.2921243874617697
+    enzyme -> 0.3677478102633372
+    photochemistry -> 0.6478886570730732
+AVG: 0.36071816
+Variance: 0.18582226
 
 
 Cluster 29
-    decay -> 0.32181381864808845
-    fluctuation -> 0.5087823143669314
-AVG: 0.3067838
-Variance: 0.12791114
+    planetary -> 0.5302237854768062
+    supersymmetric -> 0.5960922074336195
+    quark -> 0.41052378763437586
+    astronomy -> 0.29394292940808836
+AVG: 0.3239477
+Variance: 0.15809305
 
 
 Cluster 28
-    glycerol -> 0.5917516393604987
-AVG: 0.27973378
-Variance: 0.18027818
+AVG: 0.10241639
+Variance: 6.340905E-9
 
 
