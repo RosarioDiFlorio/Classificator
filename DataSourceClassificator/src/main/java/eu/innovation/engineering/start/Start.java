@@ -40,7 +40,7 @@ public class Start {
 
   //Other
   private static final String category = "science";
-  private static final int numFeatures = 50;
+  private static final int numFeatures = 70;
 
   public static void main(String[] args) throws IOException{
     
