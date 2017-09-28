@@ -42,14 +42,17 @@ public class TrainingSetBuilder {
     String path = PathConfigurator.rootFolder + category;
     if(!category.equals(""))
       path = PathConfigurator.rootFolder + category +"/";
-    
+
     boolean fromSolr = true;
     boolean withCategories = false;
+    boolean withSourceVector = false;
     
-    SourceVectorBuilder sourceVectorBuilder = new SourceVectorBuilder();
-    //    sourceVectorBuilder.buildSourceVectors(PathConfigurator.rootFolder+"science/","science",withCategories,fromSolr);
-    sourceVectorBuilder.buildSourceVectors(path,category,withCategories,fromSolr);
-
+    if(withSourceVector){
+      SourceVectorBuilder sourceVectorBuilder = new SourceVectorBuilder();
+      //    sourceVectorBuilder.buildSourceVectors(PathConfigurator.rootFolder+"science/","science",withCategories,fromSolr);
+      sourceVectorBuilder.buildSourceVectors(path,category,withCategories,fromSolr);
+    }
+    
     // SERVE PER GENERARE IL FILE CHE CONTIENE I VETTORI DELLE CATEGORIE
     CategoryVector.execute(path+"categories.txt",null,path);
     // SERVE PER GENEARRE IL TRAINING.JSON CON LE SOTTOCATEGORIE DELLA CATEGORIA SCELTA
@@ -123,7 +126,7 @@ public class TrainingSetBuilder {
         else{
           if(!textValidatorForDescription.analyzer(s.getDescription()) && s.getId().equals(item.getId()))
             System.out.println("PAPER ELIMINATO: "+s.getDescription()+"\n");
-          }
+        }
       }
     }
 
