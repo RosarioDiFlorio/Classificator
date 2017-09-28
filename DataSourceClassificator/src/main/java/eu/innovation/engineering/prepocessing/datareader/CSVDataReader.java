@@ -55,15 +55,15 @@ public class CSVDataReader {
   public static void mainToTest(String[] args) throws Exception{
     String testFolderName=PathConfigurator.applicationFileFolder+"resultsScience.csv";
 
-    float uThreshold = (float) 1.0;
-    float lThreshold = (float) 0.7;
+    float uThreshold = (float) 0.7;
+    float lThreshold = (float) 0.0;
     int batchLine = 0;   
     boolean isCount =  false;   
-    boolean all = true;
+    boolean all = false;
 
     String batchCategory = "";
     String categoryFolder = "science";
-    String category = "geology";
+    String category = "mathematics";
 
     KeywordExtractor kex = null;
     if(!isCount && !fromJson)

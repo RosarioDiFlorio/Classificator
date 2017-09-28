@@ -48,7 +48,7 @@ public class SourceVectorBuilder {
     String trainingFile = "training.txt";
     String glossaryFile = path+"glossaries.json";
     String sourcesFile = "sources.json";
-    String pathWhereSave = path+"sourceVector.json";
+    String pathWhereSave = path+"sourceVectors.json";
 
     //prendo gli id dal file training.txt
     TxtDataReader dataReader = new TxtDataReader();
