@@ -79,8 +79,11 @@ public  class DatasetBuilder {
     if(withCategory)
       listSources = (ArrayList<Source>) addCategories(listSources);   
     listSources = (ArrayList<Source>) addKeywords(listSources);
+    
     String simpleName =  fileName.replaceAll("\\.[a-zA-Z]*", "");   
     this.mapper.writerWithDefaultPrettyPrinter().writeValue(new File(path+"/"+simpleName+".json"), this.listSources);
+   
+    
     return listSources;
 
   }

@@ -27,20 +27,20 @@ public class Start {
   //**MENU**
   
   //Primo passo, creazione del file dizionaries.json
-  private static final boolean buildJsonDictionaries = true;
+  private static final boolean buildJsonDictionaries = false;
   
   //Secondo passo creare i file Json di train e test
-  private static final boolean buildJsonTraining = true;
+  private static final boolean buildJsonTraining = false;
   private static final boolean buildJsonTest = true;
 
   //Terzo passo, decidere se predere i dizionari persistenti o creare altri, creare i csv
   private static final boolean loadDictionariesFromFile = true;
-  private static final boolean buildCSVTraining = true;
+  private static final boolean buildCSVTraining = false;
   private static final boolean buildCSVTest = true;
 
   //Other
   private static final String category = "science";
-  private static final int numFeatures = 70;
+  private static final int numFeatures = 30;
 
   public static void main(String[] args) throws IOException{
     
@@ -107,11 +107,12 @@ public class Start {
 
 
   public  void generateJsonFromTxt(String path, KeywordExtractor ke) throws IOException{
-    DatasetBuilder db = new DatasetBuilder(ke);
+    DatasetBuilder dbTraining = new DatasetBuilder(ke);
+    DatasetBuilder dbTest = new DatasetBuilder(ke);
     if(buildJsonTraining)
-      db.buildDataset("training.txt",path,"categories.txt",true);
+      dbTraining.buildDataset("training.txt",path,"categories.txt",true);
     if(buildJsonTest)
-      db.buildDataset("test.txt",path,"categories.txt",false);
+      dbTest.buildDataset("test.txt",path,"categories.txt",false);
   }
 
 }

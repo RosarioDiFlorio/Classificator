@@ -41,9 +41,10 @@ public class CSVBuilder {
     //System.out.println("CATEGORIE");
     //System.out.println(categories.toString());
 
-    DatasetBuilder setTraining = new DatasetBuilder();
-    setTraining.parseDatasetFromJson(path);
-    ArrayList<Source> trainingSet = setTraining.getSourceList();
+    DatasetBuilder setSource = new DatasetBuilder();
+    
+    setSource.parseDatasetFromJson(path);
+    ArrayList<Source> trainingSet = setSource.getSourceList();
     
 
     HashMap<String,ArrayList<Source>>trainingPapersForCategory=categoryListWithAssociatePapers(trainingSet,categories);
