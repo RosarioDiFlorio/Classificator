@@ -30,7 +30,7 @@ public class Start {
   private static final boolean buildJsonDictionaries = true;
   
   //Secondo passo creare i file Json di train e test
-  private static final boolean buildJsonTraining = false;
+  private static final boolean buildJsonTraining = true;
   private static final boolean buildJsonTest = true;
 
   //Terzo passo, decidere se predere i dizionari persistenti o creare altri, creare i csv
