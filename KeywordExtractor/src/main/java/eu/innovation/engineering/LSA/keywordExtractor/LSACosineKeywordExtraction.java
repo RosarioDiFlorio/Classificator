@@ -53,7 +53,6 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
   public LSACosineKeywordExtraction(String mainDir,String glossaryName) throws JsonParseException, JsonMappingException, IOException {
     setMainDirectory(mainDir);
     setStopWordPath(getMainDirectory() + stopWordPath);
-
     stopwords = CleanUtilis.getBlackList(getStopWordPath());
     lemmatizer = new Lemmatizer();
     nlpAnalyzer = new StanfordnlpAnalyzer();
