@@ -1,7 +1,2 @@
-<<<<<<< HEAD
-chemistry 
-biology
-=======
 biology
 chemistry
->>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git

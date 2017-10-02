@@ -28,8 +28,8 @@ import eu.innovation.engineering.util.preprocessing.Source;
 public class CSVDataReader {
   private static final int numKey = 4;
   private static final int limitSource = 100;
-  private static final String fileTestJson = PathConfigurator.rootFolder+"science/test.json";
-  private static boolean fromJson = false;
+  private static final String fileTestJson = PathConfigurator.rootFolder+"chemistry biology/test.json";
+  private static boolean fromJson = true;
 
   public static void main(String[] args) throws Exception{
 
@@ -53,7 +53,7 @@ public class CSVDataReader {
    * @throws Exception
    */
   public static void mainToTest(String[] args) throws Exception{
-    String testFolderName=PathConfigurator.applicationFileFolder+"resultsScienceBig.csv";
+    String testFolderName=PathConfigurator.applicationFileFolder+"resultsSubScience.csv";
 
     float uThreshold = (float) 1.0;
     float lThreshold = (float) 0.7;
@@ -62,7 +62,7 @@ public class CSVDataReader {
     boolean all = true;
 
     String batchCategory = "";
-    String categoryFolder = "science";
+    String categoryFolder = "chemistry biology";
     String category = "science";
 
     KeywordExtractor kex = null;
@@ -192,7 +192,7 @@ public class CSVDataReader {
         List<String> tmp = new ArrayList<String>();
         String strTmp = "";
         for(String str: s.getTexts()){
-          strTmp += str;
+          strTmp += str+" ";
         }
         tmp.add(strTmp);
         p.println(kex.extractKeywordsFromTexts(tmp, numKey).stream().filter(l->l != null).flatMap(l->l.stream()).map(Keyword::getText).collect(Collectors.toList())+"\n");
