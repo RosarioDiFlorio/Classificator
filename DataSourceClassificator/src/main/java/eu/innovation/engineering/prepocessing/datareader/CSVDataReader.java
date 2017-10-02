@@ -58,7 +58,7 @@ public class CSVDataReader {
     float uThreshold = (float) 1.0;
     float lThreshold = (float) 0.7;
     int batchLine = 0;   
-    boolean isCount =  true;   
+    boolean isCount =  false;   
     boolean all = true;
 
     String batchCategory = "";
