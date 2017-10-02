@@ -19,6 +19,7 @@ import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
 import eu.innovation.engineering.LSA.keywordExtractor.LSACosineKeywordExtraction;
 import eu.innovation.engineering.config.PathConfigurator;
+import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 import eu.innovation.engineering.prepocessing.DatasetBuilder;
 import eu.innovation.engineering.util.preprocessing.Paper;
@@ -28,8 +29,12 @@ import eu.innovation.engineering.util.preprocessing.Source;
 public class CSVDataReader {
   private static final int numKey = 4;
   private static final int limitSource = 100;
-  private static final String fileTestJson = PathConfigurator.rootFolder+"chemistry biology/test.json";
-  private static boolean fromJson = true;
+  private static String fileTestJson;
+  private static boolean fromJson;
+  private static float upperThreshold;
+  private static float lowThreshold;
+  private static String workingPath;
+  private static String categoryFolder;
 
   public static void main(String[] args) throws Exception{
 
@@ -37,12 +42,12 @@ public class CSVDataReader {
   }
 
   public static void mainToCreateDataset(String[] args) throws IOException{
-    float uThreshold = (float) 1.0;
-    float lThreshold = (float) 0.7;
+    float upperThreshold = (float) 1.0;
+    float lowThreshold = (float) 0.7;
     String  categoryFilter = "";
     String fileCsv = PathConfigurator.applicationFileFolder+"results.csv";
     String pathWhereSave = PathConfigurator.applicationFileFolder+"trainingDatasetFromCsv.txt";
-    createDocumentSetFromCsvResults(fileCsv,lThreshold,uThreshold,pathWhereSave, categoryFilter);
+    createDocumentSetFromCsvResults(fileCsv,lowThreshold,upperThreshold,pathWhereSave, categoryFilter);
     TxtDataReader txtReader = new TxtDataReader();
     //txtReader.mergeTxtDataset(oldDataset, pathWhereSave, 70, PathConfigurator.applicationFileFolder+"trainingDatasetMerged.txt");
   }
@@ -53,23 +58,30 @@ public class CSVDataReader {
    * @throws Exception
    */
   public static void mainToTest(String[] args) throws Exception{
-    String testFolderName=PathConfigurator.applicationFileFolder+"resultsSubScience.csv";
 
-    float uThreshold = (float) 1.0;
-    float lThreshold = (float) 0.7;
+    String testFolderName=PathConfigurator.applicationFileFolder+"resultsScienceBig.csv";
+    setCategoryFolder("science");
+    
+    String batchCategory = "";
+    String categoryFilter = "science";
+
+    setFromJson(true);
+    setFileTestJson(getWorkingPath()+"/test.json");   
+    setUpperThreshold((float) 1.0);
+    setLowThreshold((float) 0.7);
+
     int batchLine = 0;   
     boolean isCount =  false;   
-    boolean all = true;
+    boolean all = true;    
 
-    String batchCategory = "";
-    String categoryFolder = "chemistry biology";
-    String category = "science";
 
     KeywordExtractor kex = null;
-    if(!isCount && !fromJson)
-      kex = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder,PathConfigurator.rootFolder+"science/glossaries.json");
-      //kex = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
-
+    if(!isCount && !isFromJson()){
+      if(categoryFolder.equals(""))
+        kex = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
+      else
+        kex = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder,getWorkingPath()+"/glossaries.json");
+    }
     File f = new File(testFolderName);
     if(f.isDirectory()){
       System.out.println("FOLDER -> "+testFolderName);
@@ -79,13 +91,13 @@ public class CSVDataReader {
           int totalCount = 0;
           if(list[i].isFile() && list[i].getName().contains(".csv")){
             File fileToAnalyze = list[i];
-            formatResultsFile(fileToAnalyze, kex, lThreshold, uThreshold, category, batchCategory, categoryFolder, isCount, batchLine, all);
+            formatResultsFile(fileToAnalyze, kex,categoryFilter, batchCategory, isCount, batchLine, all);
           }
           System.out.println("-----------------------------------------------------\n");
         }
       }
     }else if(f.isFile()&&f.getName().contains(".csv")){
-      formatResultsFile(f, kex, lThreshold, uThreshold, category, batchCategory, categoryFolder, isCount, batchLine, all);
+      formatResultsFile(f, kex, categoryFilter, batchCategory, isCount, batchLine, all);
     }
   }
 
@@ -96,9 +108,7 @@ public class CSVDataReader {
    * to analyze in the deep the results.
    * @param fileToAnalyze
    * @param kex
-   * @param lThreshold
-   * @param uThreshold
-   * @param category
+   * @param categoryFilter
    * @param batchCategory
    * @param categoryFolder
    * @param isCount
@@ -106,24 +116,21 @@ public class CSVDataReader {
    * @param all
    * @throws Exception
    */
-  public static void formatResultsFile(File fileToAnalyze, KeywordExtractor kex, float lThreshold,float uThreshold,String category,String batchCategory,String categoryFolder,boolean isCount,int batchLine,boolean all) throws Exception{
+  public static void formatResultsFile(File fileToAnalyze, KeywordExtractor kex, String categoryFilter,String batchCategory,boolean isCount,int batchLine,boolean all) throws Exception{
     int totalCount = 0;
     System.out.println("FILE -> "+fileToAnalyze);
     if(all){
       List<String> categories = Collections.EMPTY_LIST;
-      if(category.length()<1)
-        categories = TxtDataReader.getCategories(PathConfigurator.rootFolder+"categories.txt");
-      else
-        categories = TxtDataReader.getCategories(PathConfigurator.rootFolder+categoryFolder+"/"+"categories.txt");  
+      categories = TxtDataReader.getCategories(getWorkingPath()+"categories.txt");
       System.out.println(categories);
       for(int j = 0; j<categories.size();j++){
         int countDocs = 0;
-        category = categories.get(j);
-        if(category.equals(batchCategory) || batchCategory.equals("")){
-          countDocs = readResultClassifier(fileToAnalyze,kex, lThreshold,uThreshold,category,isCount,batchLine,fromJson);
-          System.out.println("category -> "+category);
+        categoryFilter = categories.get(j);
+        if(categoryFilter.equals(batchCategory) || batchCategory.equals("")){
+          countDocs = readResultClassifier(fileToAnalyze,kex,categoryFilter,isCount,batchLine);
+          System.out.println("category -> "+categoryFilter);
           System.out.println("Founded sources -> "+countDocs);
-          System.out.println("Upper threshold -> "+uThreshold +"\nLower threshold -> "+lThreshold);
+          System.out.println("Upper threshold -> "+upperThreshold +"\nLower threshold -> "+lowThreshold);
           System.out.println("------------------------------------------------\n");
           totalCount += countDocs;
           batchCategory = "";
@@ -131,10 +138,10 @@ public class CSVDataReader {
         }
       }
     }else{
-      int countDocs = readResultClassifier(fileToAnalyze,kex, lThreshold,uThreshold,category,isCount,batchLine,fromJson);
-      System.out.println("category -> "+category);
+      int countDocs = readResultClassifier(fileToAnalyze,kex,categoryFilter,isCount,batchLine);
+      System.out.println("category -> "+categoryFilter);
       System.out.println("Founded sources -> "+countDocs);
-      System.out.println("Upper threshold -> "+uThreshold +"\nLower threshold -> "+lThreshold);
+      System.out.println("Upper threshold -> "+upperThreshold +"\nLower threshold -> "+lowThreshold);
       System.out.println("------------------------------------------------\n");
       totalCount += countDocs;
     }
@@ -142,7 +149,7 @@ public class CSVDataReader {
   }
 
 
-  public static int readResultClassifier(File csvFile, KeywordExtractor kex, float lowThreshold,float upperThreshold,String category,boolean isCount,int batchLine, boolean fromJson) throws Exception{
+  public static int readResultClassifier(File csvFile, KeywordExtractor kex, String category,boolean isCount,int batchLine) throws Exception{
     Map<String, List<String>> dataMap = read(csvFile.getAbsolutePath());
 
     List<String> ids = new ArrayList<>();
@@ -172,19 +179,26 @@ public class CSVDataReader {
         }
       }   
     }
-    System.out.println(count+" - "+category);
-    List<Source> sources  = new ArrayList<>();;
+    if(!isFromJson())
+      System.out.println(count+" - "+category);
+
+    List<Source> sources  = new ArrayList<>();
+
     if(fromJson){
-      Map<String, Source> mapSources = DatasetBuilder.loadMapSources(fileTestJson);
+      DatasetBuilder dataBuilder = new DatasetBuilder();
+      Map<String, Source> mapSources = dataBuilder.loadMapSources(getFileTestJson());
       for(String id: idList){
-        sources.add(mapSources.get(id));
+        if(mapSources.containsKey(id))
+          sources.add(mapSources.get(id));
       }
     } 
-   else
+    else
       sources = SolrClient.getSourcesFromSolr(idList, Paper.class);
+
 
     int localcount = 0;
     for(Source s: sources){
+
       idToInsert += s.getId()+" 1\n";
       p.println(s.getId()+" - "+dataMap.get(s.getId()).get(0)+" - "+dataMap.get(s.getId()).get(1));
 
@@ -199,9 +213,10 @@ public class CSVDataReader {
       }
       else
         p.println(s.getKeywordList().stream().map(Keyword::getText).collect(Collectors.toList()));
-        
+
       localcount ++;
-      System.out.println(localcount+" - "+category);
+      if(!isFromJson())
+        System.out.println(localcount+" - "+category);
       p.println(s.getTitle());
       p.println(s.getTexts().get(1));
       p.println("-------------------------------------\n");      
@@ -302,8 +317,59 @@ public class CSVDataReader {
   }
 
 
-  public static void setSettings(boolean b){
-
+  public static String getCategoryFolder() {
+    return categoryFolder;
   }
+
+  public static void setCategoryFolder(String categoryFolder) {
+    CSVDataReader.categoryFolder = categoryFolder;
+    if(categoryFolder.length()<1)
+      setWorkingPath(PathConfigurator.rootFolder);
+    else
+      setWorkingPath(PathConfigurator.rootFolder+categoryFolder+"/");
+  }
+
+  public static String getFileTestJson() {
+    return fileTestJson;
+  }
+
+  public static void setFileTestJson(String fileTestJson) {
+    CSVDataReader.fileTestJson = fileTestJson;
+  }
+
+  public static boolean isFromJson() {
+    return fromJson;
+  }
+
+  public static void setFromJson(boolean fromJson) {
+    CSVDataReader.fromJson = fromJson;
+  }
+
+
+  public static float getUpperThreshold() {
+    return upperThreshold;
+  }
+
+  public static void setUpperThreshold(float upperThreshold) {
+    CSVDataReader.upperThreshold = upperThreshold;
+  }
+
+  public static float getLowThreshold() {
+    return lowThreshold;
+  }
+
+  public static void setLowThreshold(float lowThreshold) {
+    CSVDataReader.lowThreshold = lowThreshold;
+  }
+
+  public static String getWorkingPath() {
+    return workingPath;
+  }
+
+  public static void setWorkingPath(String workingPath) {
+    CSVDataReader.workingPath = workingPath;
+  }
+
+
 
 }
