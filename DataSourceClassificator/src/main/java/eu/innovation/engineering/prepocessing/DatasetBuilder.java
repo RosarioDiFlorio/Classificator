@@ -237,7 +237,8 @@ public  class DatasetBuilder {
 
   public static List<Source> loadSources(String pathFile) throws JsonParseException, JsonMappingException, IOException{
     ObjectMapper mapper = new ObjectMapper();
-    List<Source> toReturn = mapper.readValue(new File(pathFile), new TypeReference<List<Source>>(){});
+    List<Source> toReturn = new ArrayList();
+    toReturn = mapper.readValue(new File(pathFile), new TypeReference<List<Source>>(){});
     return toReturn;
   }
   
