@@ -1,0 +1,990 @@
+[ {
+  "id" : "10004725_234",
+  "title" : "Properties and applications of polymer support fluids in geotechnical engineering",
+  "description" : "Synthetic polymer fluids have been used as an alternative to conventional bentoniteslurries for the excavation of foundation elements over the last two decades. Thus far their use has excited polarised views in the industry – some construction professionals avoid using them after hearing ‘horror stories’ about past failures whereas others believe that they are the future of support fluids because of the many benefits that they can offer. This situation has been found to be mainly due to a lack of understanding of what polymers really are and their properties. To address this issue, the various polymer products currently available in the market have been categorised based on their intended functions, and the fundamental properties of some of them have been characterised. The research showed that significant difference exists between polymers even of the same chemical family. Based on a series of rheological experiments, it was found that the properties of polymer fluids are highly dependent on the governing shear rate, time, and a range of site dependent factors. The research also showed that the current procedure for the interpretation of viscosity data is incorrect. After an analysis of the properties of currently available polymers, the latter part of the thesis describes a field trial carried out at a site in Stratford, East London. The aims of the trial were twofold: to compare the performance between piles constructed using bentonite and polymer fluids, and to assess the effect of extended pile bore open time for pile bores supported by polymers. From the results, it was found that the polymer piles showed much stiffer load–settlement response than the bentonite pile, and that a pile bore open time of up to 26 h had no adverse effect on the pile performance. The load test results have been carefully back-analysed using a range of methods. It was found that, compared to their bentonite counterparts, polymer fluids can improve the interface shearing resistance with Thanet Sand and the shear modulus of the Lambeth clay.",
+  "texts" : [ "Properties and applications of polymer support fluids in geotechnical engineering", "Synthetic polymer fluids have been used as an alternative to conventional bentoniteslurries for the excavation of foundation elements over the last two decades. Thus far their use has excited polarised views in the industry – some construction professionals avoid using them after hearing ‘horror stories’ about past failures whereas others believe that they are the future of support fluids because of the many benefits that they can offer. This situation has been found to be mainly due to a lack of understanding of what polymers really are and their properties. To address this issue, the various polymer products currently available in the market have been categorised based on their intended functions, and the fundamental properties of some of them have been characterised. The research showed that significant difference exists between polymers even of the same chemical family. Based on a series of rheological experiments, it was found that the properties of polymer fluids are highly dependent on the governing shear rate, time, and a range of site dependent factors. The research also showed that the current procedure for the interpretation of viscosity data is incorrect. After an analysis of the properties of currently available polymers, the latter part of the thesis describes a field trial carried out at a site in Stratford, East London. The aims of the trial were twofold: to compare the performance between piles constructed using bentonite and polymer fluids, and to assess the effect of extended pile bore open time for pile bores supported by polymers. From the results, it was found that the polymer piles showed much stiffer load–settlement response than the bentonite pile, and that a pile bore open time of up to 26 h had no adverse effect on the pile performance. The load test results have been carefully back-analysed using a range of methods. It was found that, compared to their bentonite counterparts, polymer fluids can improve the interface shearing resistance with Thanet Sand and the shear modulus of the Lambeth clay.", null ],
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.6622403799306897,
+    "sentiment" : null,
+    "text" : "polymer"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.35619835391380233,
+    "sentiment" : null,
+    "text" : "fluid"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.1622412020396234,
+    "sentiment" : null,
+    "text" : "synthetic"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.14293395190773472,
+    "sentiment" : null,
+    "text" : "conventional"
+  } ],
+  "categoryList" : [ {
+    "label" : "chemistry",
+    "score" : 1.0
+  } ],
+  "conceptList" : null
+}, {
+  "id" : "10009345_234",
+  "title" : "CDK inhibitors (p16/p19/p21) induce senescence and autophagy in cancer-associated fibroblasts, \"fueling\" tumor growth via paracrine interactions, without an increase in neo-angiogenesis.",
+  "description" : "Here, we investigated the compartment-specific role of cell cycle arrest and senescence in breast cancer tumor growth. For this purpose, we generated a number of hTERT-immortalized senescent fibroblast cell lines overexpressing CDK inhibitors, such as p16(INK4A), p19(ARF) or p21(WAF1/CIP1). Interestingly, all these senescent fibroblast cell lines showed evidence of increased susceptibility toward the induction of autophagy (either at baseline or after starvation), as well as significant mitochondrial dysfunction. Most importantly, these senescent fibroblasts also dramatically promoted tumor growth (up to ~2-fold), without any comparable increases in tumor angiogenesis. Conversely, we generated human breast cancer cells (MDA-MB-231 cells) overexpressing CDK inhibitors, namely p16(INK4A) or p21(WAF1/CIP1). Senescent MDA-MB-231 cells also showed increased expression of markers of cell cycle arrest and autophagy, including β-galactosidase, as predicted. Senescent MDA-MB-231 cells had retarded tumor growth, with up to a near 2-fold reduction in tumor volume. Thus, the effects of CDK inhibitors are compartment-specific and are related to their metabolic effects, which results in the induction of autophagy and mitochondrial dysfunction. Finally, induction of cell cycle arrest with specific inhibitors (PD0332991) or cellular stressors [hydrogen peroxide (H(2)O(2)) or starvation] indicated that the onset of autophagy and senescence are inextricably linked biological processes. The compartment-specific induction of senescence (and hence autophagy) may be a new therapeutic target that could be exploited for the successful treatment of human breast cancer patients.",
+  "texts" : [ "CDK inhibitors (p16/p19/p21) induce senescence and autophagy in cancer-associated fibroblasts, \"fueling\" tumor growth via paracrine interactions, without an increase in neo-angiogenesis.", "Here, we investigated the compartment-specific role of cell cycle arrest and senescence in breast cancer tumor growth. For this purpose, we generated a number of hTERT-immortalized senescent fibroblast cell lines overexpressing CDK inhibitors, such as p16(INK4A), p19(ARF) or p21(WAF1/CIP1). Interestingly, all these senescent fibroblast cell lines showed evidence of increased susceptibility toward the induction of autophagy (either at baseline or after starvation), as well as significant mitochondrial dysfunction. Most importantly, these senescent fibroblasts also dramatically promoted tumor growth (up to ~2-fold), without any comparable increases in tumor angiogenesis. Conversely, we generated human breast cancer cells (MDA-MB-231 cells) overexpressing CDK inhibitors, namely p16(INK4A) or p21(WAF1/CIP1). Senescent MDA-MB-231 cells also showed increased expression of markers of cell cycle arrest and autophagy, including β-galactosidase, as predicted. Senescent MDA-MB-231 cells had retarded tumor growth, with up to a near 2-fold reduction in tumor volume. Thus, the effects of CDK inhibitors are compartment-specific and are related to their metabolic effects, which results in the induction of autophagy and mitochondrial dysfunction. Finally, induction of cell cycle arrest with specific inhibitors (PD0332991) or cellular stressors [hydrogen peroxide (H(2)O(2)) or starvation] indicated that the onset of autophagy and senescence are inextricably linked biological processes. The compartment-specific induction of senescence (and hence autophagy) may be a new therapeutic target that could be exploited for the successful treatment of human breast cancer patients.", null ],
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.2251227502661045,
+    "sentiment" : null,
+    "text" : "senescence"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.24469793663973877,
+    "sentiment" : null,
+    "text" : "autophagy"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.2844277048534295,
+    "sentiment" : null,
+    "text" : "fibroblast"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.2714978959500379,
+    "sentiment" : null,
+    "text" : "paracrine"
+  } ],
+  "categoryList" : [ {
+    "label" : "biology",
+    "score" : 1.0
+  } ],
+  "conceptList" : null
+}, {
+  "id" : "100114_102",
+  "title" : "TiAIN based nanoscale multilayer coatings designed to adapt their tribological properties at elevated temperatures",
+  "description" : "<p>The addition of properly selected elements, coupled in nanoscale multilayer structures, can further enhance the properties of TiAlN coatings and bring new high performance. The incorporation of Y in the nanoscale pseudo-superlattice TiAlCrN/TiAlYN with typical period of 1.7 nm not only improves the oxidation resistance but also effectively reduces the coefficient of friction of the coating from 0.9 to 0.65 at temperatures in the range of 850–950 °C. The adaptation of the tribological properties occurs as a result of the preferential migration of the Y to the column boundaries. TiAlN/VN superlattice can achieve another self-adaptation process. During friction the coatings adapt themselves to the combined thermal and mechanical wear by the formation of highly lubricious vanadium-oxides due to high flash temperatures at the asperity contacts on the surface. The integrity of the bulk of the coating is retained, leading to exceptionally low, for superhard coatings, friction coefficient of 0.5 and a wear coefficient of 2 × 10−17 m3·N−1·m−1. The coatings have been deposited by the combined steered cathodic arc unbalanced magnetron sputtering method.</p>",
+  "texts" : [ "TiAIN based nanoscale multilayer coatings designed to adapt their tribological properties at elevated temperatures", "<p>The addition of properly selected elements, coupled in nanoscale multilayer structures, can further enhance the properties of TiAlN coatings and bring new high performance. The incorporation of Y in the nanoscale pseudo-superlattice TiAlCrN/TiAlYN with typical period of 1.7 nm not only improves the oxidation resistance but also effectively reduces the coefficient of friction of the coating from 0.9 to 0.65 at temperatures in the range of 850–950 °C. The adaptation of the tribological properties occurs as a result of the preferential migration of the Y to the column boundaries. TiAlN/VN superlattice can achieve another self-adaptation process. During friction the coatings adapt themselves to the combined thermal and mechanical wear by the formation of highly lubricious vanadium-oxides due to high flash temperatures at the asperity contacts on the surface. The integrity of the bulk of the coating is retained, leading to exceptionally low, for superhard coatings, friction coefficient of 0.5 and a wear coefficient of 2 × 10−17 m3·N−1·m−1. The coatings have been deposited by the combined steered cathodic arc unbalanced magnetron sputtering method.</p>", null ],
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.5103136969609905,
+    "sentiment" : null,
+    "text" : "nanoscale"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.271866477457424,
+    "sentiment" : null,
+    "text" : "multilayer"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.281886753546552,
+    "sentiment" : null,
+    "text" : "coating"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.20895407855792453,
+    "sentiment" : null,
+    "text" : "tribological"
+  } ],
+  "categoryList" : [ {
+    "label" : "chemistry",
+    "score" : 1.0
+  } ],
+  "conceptList" : null
+}, {
+  "id" : "10024784_234",
+  "title" : "Characterization of Chemical and Mechanical Properties of Polymer Based Nanocomposites",
+  "description" : "Characterization of Chemical and Mechanical Properties of Polymer Based NanocompositesThe University of ManchesterTamer Wafy Doctor of Philosophy17 January, 2013One of the most significant issues in nanocomposite performance is improving the dispersion of carbon nanotubes (CNTs) in thermosetting or thermoplastic polymers in order to gain good mechanical properties. Several studies have investigated the fabrication of nanocomposites based on carbon nanotubes and analysed properties, but there is still insufficient data on their structure-property relationships. This thesis has investigated the central importance of stress transfer Raman studies in epoxy composites reinforced with single-walled carbon nanotubes (SWCNTs), double-walled carbon nanotubes (DWCNTs) and multiwall carbon nanotubes (MWCNTs) to elucidate the reinforcing ability of the CNTs in an epoxy matrix. This project was undertaken to synthesise and characterize MWCNTs and determine the effect of different weight fractions of untreated MWCNTs on the stress transfer efficiency at the MWCNTS / epoxy interface and on the stiffness of the thermomechanical properties of the MWCNTS / epoxy composites. It was undertaken to assess the stress transfer efficiency at the CNT / epoxy interface and at the inter-walls of the CNTs with tensile deformation and with cyclic loading.Optimized conditions of the injection chemical vapour deposition method (CVD), such as long injection times were applied to produce MWCNTs with a high yield, high aspect ratio and well-defined G' Raman peak. The morphology and size of CNTs were observed by scanning electron microscopy (SEM) and transmission electron microscopy (TEM) while their thermal stability was examined by Thermogravimetric analysis (TGA). Both Raman spectroscopy and mechanical testing (static and dynamic) were utilized in this study. The Raman spectroscopy research consisted of following the G'-band frequency and linewidth as well as the intensity of radial breathing modes (RBMs) during tensile deformation. The stress-induced Raman shifts in the nanocomposites have been shown to be controlled by the number of carbon nanolayers. A theory has been developed to determine and simulate the stress transfer efficiency parameter, (k_i) for MWCNTs. Tensile tests and dynamic mechanical testing were used to assess the mechanical properties of the nanocomposites.The most obvious finding to be drawn from the present study is that the reinforcement of the epoxy resin with different loadings of MWCNTs is useful, but the best reinforcement was at low loadings of MWCNTs. One of the more significant findings to emerge from this study is that (k_i) between the inner walls of the DWCNTs and MWCNTs are quite similar (~0.7), which suggest that (k_i)  may be similar for all CVD MWCNTs and DWCNTs. The second major finding was that there were RBM intensity variations for the SWCNTs and DWCNTs in the hot-cured epoxy composites and that for the DWCNTs both the inner and outer nanotube walls are stressed during deformation",
+  "texts" : [ "Characterization of Chemical and Mechanical Properties of Polymer Based Nanocomposites", "Characterization of Chemical and Mechanical Properties of Polymer Based NanocompositesThe University of ManchesterTamer Wafy Doctor of Philosophy17 January, 2013One of the most significant issues in nanocomposite performance is improving the dispersion of carbon nanotubes (CNTs) in thermosetting or thermoplastic polymers in order to gain good mechanical properties. Several studies have investigated the fabrication of nanocomposites based on carbon nanotubes and analysed properties, but there is still insufficient data on their structure-property relationships. This thesis has investigated the central importance of stress transfer Raman studies in epoxy composites reinforced with single-walled carbon nanotubes (SWCNTs), double-walled carbon nanotubes (DWCNTs) and multiwall carbon nanotubes (MWCNTs) to elucidate the reinforcing ability of the CNTs in an epoxy matrix. This project was undertaken to synthesise and characterize MWCNTs and determine the effect of different weight fractions of untreated MWCNTs on the stress transfer efficiency at the MWCNTS / epoxy interface and on the stiffness of the thermomechanical properties of the MWCNTS / epoxy composites. It was undertaken to assess the stress transfer efficiency at the CNT / epoxy interface and at the inter-walls of the CNTs with tensile deformation and with cyclic loading.Optimized conditions of the injection chemical vapour deposition method (CVD), such as long injection times were applied to produce MWCNTs with a high yield, high aspect ratio and well-defined G' Raman peak. The morphology and size of CNTs were observed by scanning electron microscopy (SEM) and transmission electron microscopy (TEM) while their thermal stability was examined by Thermogravimetric analysis (TGA). Both Raman spectroscopy and mechanical testing (static and dynamic) were utilized in this study. The Raman spectroscopy research consisted of following the G'-band frequency and linewidth as well as the intensity of radial breathing modes (RBMs) during tensile deformation. The stress-induced Raman shifts in the nanocomposites have been shown to be controlled by the number of carbon nanolayers. A theory has been developed to determine and simulate the stress transfer efficiency parameter, (k_i) for MWCNTs. Tensile tests and dynamic mechanical testing were used to assess the mechanical properties of the nanocomposites.The most obvious finding to be drawn from the present study is that the reinforcement of the epoxy resin with different loadings of MWCNTs is useful, but the best reinforcement was at low loadings of MWCNTs. One of the more significant findings to emerge from this study is that (k_i) between the inner walls of the DWCNTs and MWCNTs are quite similar (~0.7), which suggest that (k_i)  may be similar for all CVD MWCNTs and DWCNTs. The second major finding was that there were RBM intensity variations for the SWCNTs and DWCNTs in the hot-cured epoxy composites and that for the DWCNTs both the inner and outer nanotube walls are stressed during deformation", null ],
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.2250030578958701,
+    "sentiment" : null,
+    "text" : "chemical"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.22510251945498355,
+    "sentiment" : null,
+    "text" : "mechanical"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.542550483408196,
+    "sentiment" : null,
+    "text" : "polymer"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.22483609142544125,
+    "sentiment" : null,
+    "text" : "nanocomposite"
+  } ],
+  "categoryList" : [ {
+    "label" : "chemistry",
+    "score" : 1.0
+  } ],
+  "conceptList" : null
+}, {
+  "id" : "10008192_234",
+  "title" : "The selective peptide reactivity of chemical respiratory allergens under competitive and non-competitive conditions.",
+  "description" : "It is well established that certain chemicals cause respiratory allergy. In common with contact allergens, chemicals that induce sensitization of the respiratory tract must form stable associations with host proteins to elicit an immune response. Measurement of the reactivity of chemical allergens to single nucleophilic peptides is increasingly well-described, and standardized assays have been developed for use in hazard assessment. This study employed standard and modified peptide reactivity assays to investigate the selectivity of chemical respiratory allergens for individual amino acids under competitive and non-competitive conditions. The reactivity of 20 known chemical respiratory sensitizers (including diisocyanates, anhydrides, and reactive dyes) were evaluated for reactivity towards individual peptides containing cysteine, lysine, histidine, arginine, or tyrosine. Respiratory allergens exhibited the common ability to deplete both lysine and cysteine peptides; however, reactivity for histidine, arginine, and tyrosine varied between chemicals, indicating differences in relative binding affinity toward each nucleophile. To evaluate amino acid selectivity for cysteine and lysine under competitive conditions a modified assay was used in which reaction mixtures contained different relative concentrations of the target peptides. Under these reaction conditions, the binding preferences of reference respiratory and contact allergens (dinitrochlorobenzene, dinitrofluorobenzene) were evaluated. Discrete patterns of reactivity were observed showing various levels of competitive selectivity between the two allergen classes.",
+  "texts" : [ "The selective peptide reactivity of chemical respiratory allergens under competitive and non-competitive conditions.", "It is well established that certain chemicals cause respiratory allergy. In common with contact allergens, chemicals that induce sensitization of the respiratory tract must form stable associations with host proteins to elicit an immune response. Measurement of the reactivity of chemical allergens to single nucleophilic peptides is increasingly well-described, and standardized assays have been developed for use in hazard assessment. This study employed standard and modified peptide reactivity assays to investigate the selectivity of chemical respiratory allergens for individual amino acids under competitive and non-competitive conditions. The reactivity of 20 known chemical respiratory sensitizers (including diisocyanates, anhydrides, and reactive dyes) were evaluated for reactivity towards individual peptides containing cysteine, lysine, histidine, arginine, or tyrosine. Respiratory allergens exhibited the common ability to deplete both lysine and cysteine peptides; however, reactivity for histidine, arginine, and tyrosine varied between chemicals, indicating differences in relative binding affinity toward each nucleophile. To evaluate amino acid selectivity for cysteine and lysine under competitive conditions a modified assay was used in which reaction mixtures contained different relative concentrations of the target peptides. Under these reaction conditions, the binding preferences of reference respiratory and contact allergens (dinitrochlorobenzene, dinitrofluorobenzene) were evaluated. Discrete patterns of reactivity were observed showing various levels of competitive selectivity between the two allergen classes.", null ],
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.37512147523299283,
+    "sentiment" : null,
+    "text" : "peptide"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.3661393305900607,
+    "sentiment" : null,
+    "text" : "reactivity"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.28245328639021716,
+    "sentiment" : null,
+    "text" : "chemical"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.2347373714220939,
+    "sentiment" : null,
+    "text" : "allergen"
+  } ],
+  "categoryList" : [ {
+    "label" : "chemistry",
+    "score" : 1.0
+  } ],
+  "conceptList" : null
+}, {
+  "id" : "10007485_234",
+  "title" : "Circulating tumour cells, their role in metastasis and their clinical utility in lung cancer.",
+  "description" : "Circulating tumour cells (CTCs) have attracted much recent interest in cancer research as a potential biomarker and as a means of studying the process of metastasis. It has long been understood that metastasis is a hallmark of malignancy, and conceptual theories on the basis of metastasis from the nineteenth century foretold the existence of a tumour \"seed\" which is capable of establishing discrete tumours in the \"soil\" of distant organs. This prescient \"seed and soil\" hypothesis accurately predicted the existence of CTCs; microscopic tumour fragments in the blood, at least some of which are capable of forming metastases. However, it is only in recent years that reliable, reproducible methods of CTC detection and analysis have been developed. To date, the majority of studies have employed the CellSearch™ system (Veridex LLC), which is an immunomagnetic purification method. Other promising techniques include microfluidic filters, isolation of tumour cells by size using microporous polycarbonate filters and flow cytometry-based approaches. While many challenges still exist, the detection of CTCs in blood is becoming increasingly feasible, giving rise to some tantalizing questions about the use of CTCs as a potential biomarker. CTC enumeration has been used to guide prognosis in patients with metastatic disease, and to act as a surrogate marker for disease response during therapy. Other possible uses for CTC detection include prognostication in early stage patients, identifying patients requiring adjuvant therapy, or in surveillance, for the detection of relapsing disease. Another exciting possible use for CTC detection assays is the molecular and genetic characterization of CTCs to act as a \"liquid biopsy\" representative of the primary tumour. Indeed it has already been demonstrated that it is possible to detect HER2, KRAS and EGFR mutation status in breast, colon and lung cancer CTCs respectively. In the course of this review, we shall discuss the biology of CTCs and their role in metastagenesis, the most commonly used techniques for their detection and the evidence to date of their clinical utility, with particular reference to lung cancer.",
+  "texts" : [ "Circulating tumour cells, their role in metastasis and their clinical utility in lung cancer.", "Circulating tumour cells (CTCs) have attracted much recent interest in cancer research as a potential biomarker and as a means of studying the process of metastasis. It has long been understood that metastasis is a hallmark of malignancy, and conceptual theories on the basis of metastasis from the nineteenth century foretold the existence of a tumour \"seed\" which is capable of establishing discrete tumours in the \"soil\" of distant organs. This prescient \"seed and soil\" hypothesis accurately predicted the existence of CTCs; microscopic tumour fragments in the blood, at least some of which are capable of forming metastases. However, it is only in recent years that reliable, reproducible methods of CTC detection and analysis have been developed. To date, the majority of studies have employed the CellSearch™ system (Veridex LLC), which is an immunomagnetic purification method. Other promising techniques include microfluidic filters, isolation of tumour cells by size using microporous polycarbonate filters and flow cytometry-based approaches. While many challenges still exist, the detection of CTCs in blood is becoming increasingly feasible, giving rise to some tantalizing questions about the use of CTCs as a potential biomarker. CTC enumeration has been used to guide prognosis in patients with metastatic disease, and to act as a surrogate marker for disease response during therapy. Other possible uses for CTC detection include prognostication in early stage patients, identifying patients requiring adjuvant therapy, or in surveillance, for the detection of relapsing disease. Another exciting possible use for CTC detection assays is the molecular and genetic characterization of CTCs to act as a \"liquid biopsy\" representative of the primary tumour. Indeed it has already been demonstrated that it is possible to detect HER2, KRAS and EGFR mutation status in breast, colon and lung cancer CTCs respectively. In the course of this review, we shall discuss the biology of CTCs and their role in metastagenesis, the most commonly used techniques for their detection and the evidence to date of their clinical utility, with particular reference to lung cancer.", null ],
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.3347798355864671,
+    "sentiment" : null,
+    "text" : "cell"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.45264720264103697,
+    "sentiment" : null,
+    "text" : "metastasis"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.21851302876518336,
+    "sentiment" : null,
+    "text" : "clinical"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.23873547764141512,
+    "sentiment" : null,
+    "text" : "lung"
+  } ],
+  "categoryList" : [ {
+    "label" : "biology",
+    "score" : 1.0
+  } ],
+  "conceptList" : null
+}, {
+  "id" : "10004102_234",
+  "title" : "Mechanistic reappraisal of early stage photochemistry in the light-driven enzyme protochlorophyllide oxidoreductase.",
+  "description" : "The light-driven enzyme protochlorophyllide oxidoreductase (POR) catalyzes the reduction of protochlorophyllide (Pchlide) to chlorophyllide (Chlide). This reaction is a key step in the biosynthesis of chlorophyll. Ultrafast photochemical processes within the Pchlide molecule are required for catalysis and previous studies have suggested that a short-lived excited-state species, known as I675*, is the first catalytic intermediate in the reaction and is essential for capturing excitation energy to drive subsequent hydride and proton transfers. The chemical nature of the I675* excited state species and its role in catalysis are not known. Here, we report time-resolved pump-probe spectroscopy measurements to study the involvement of the I675* intermediate in POR photochemistry. We show that I675* is not unique to the POR-catalyzed photoreduction of Pchlide as it is also formed in the absence of the POR enzyme. The I675* species is only produced in samples that contain both Pchlide substrate and Chlide product and its formation is dependent on the pump excitation wavelength. The rate of formation and the quantum yield is maximized in 50∶50 mixtures of the two pigments (Pchlide and Chlide) and is caused by direct energy transfer between Pchlide and neighboring Chlide molecules, which is inhibited in the polar solvent methanol. Consequently, we have re-evaluated the mechanism for early stage photochemistry in the light-driven reduction of Pchlide and propose that I675* represents an excited state species formed in Pchlide-Chlide dimers, possibly an excimer. Contrary to previous reports, we conclude that this excited state species has no direct mechanistic relevance to the POR-catalyzed reduction of Pchlide.",
+  "texts" : [ "Mechanistic reappraisal of early stage photochemistry in the light-driven enzyme protochlorophyllide oxidoreductase.", "The light-driven enzyme protochlorophyllide oxidoreductase (POR) catalyzes the reduction of protochlorophyllide (Pchlide) to chlorophyllide (Chlide). This reaction is a key step in the biosynthesis of chlorophyll. Ultrafast photochemical processes within the Pchlide molecule are required for catalysis and previous studies have suggested that a short-lived excited-state species, known as I675*, is the first catalytic intermediate in the reaction and is essential for capturing excitation energy to drive subsequent hydride and proton transfers. The chemical nature of the I675* excited state species and its role in catalysis are not known. Here, we report time-resolved pump-probe spectroscopy measurements to study the involvement of the I675* intermediate in POR photochemistry. We show that I675* is not unique to the POR-catalyzed photoreduction of Pchlide as it is also formed in the absence of the POR enzyme. The I675* species is only produced in samples that contain both Pchlide substrate and Chlide product and its formation is dependent on the pump excitation wavelength. The rate of formation and the quantum yield is maximized in 50∶50 mixtures of the two pigments (Pchlide and Chlide) and is caused by direct energy transfer between Pchlide and neighboring Chlide molecules, which is inhibited in the polar solvent methanol. Consequently, we have re-evaluated the mechanism for early stage photochemistry in the light-driven reduction of Pchlide and propose that I675* represents an excited state species formed in Pchlide-Chlide dimers, possibly an excimer. Contrary to previous reports, we conclude that this excited state species has no direct mechanistic relevance to the POR-catalyzed reduction of Pchlide.", null ],
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.2957428084131597,
+    "sentiment" : null,
+    "text" : "mechanistic"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.12523372961647727,
+    "sentiment" : null,
+    "text" : "stage"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.6076598843894331,
+    "sentiment" : null,
+    "text" : "photochemistry"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.4443388719137045,
+    "sentiment" : null,
+    "text" : "enzyme"
+  } ],
+  "categoryList" : [ {
+    "label" : "chemistry",
+    "score" : 1.0
+  } ],
+  "conceptList" : null
+}, {
+  "id" : "10018690_234",
+  "title" : "Boltzmann energy-based image analysis demonstrates that extracellular domain size differences explain protein segregation at immune synapses.",
+  "description" : "Immune synapses formed by T and NK cells both show segregation of the integrin ICAM1 from other proteins such as CD2 (T cell) or KIR (NK cell). However, the mechanism by which these proteins segregate remains unclear; one key hypothesis is a redistribution based on protein size. Simulations of this mechanism qualitatively reproduce observed segregation patterns, but only in certain parameter regimes. Verifying that these parameter constraints in fact hold has not been possible to date, this requiring a quantitative coupling of theory to experimental data. Here, we address this challenge, developing a new methodology for analysing and quantifying image data and its integration with biophysical models. Specifically we fit a binding kinetics model to 2 colour fluorescence data for cytoskeleton independent synapses (2 and 3D) and test whether the observed inverse correlation between fluorophores conforms to size dependent exclusion, and further, whether patterned states are predicted when model parameters are estimated on individual synapses. All synapses analysed satisfy these conditions demonstrating that the mechanisms of protein redistribution have identifiable signatures in their spatial patterns. We conclude that energy processes implicit in protein size based segregation can drive the patternation observed in individual synapses, at least for the specific examples tested, such that no additional processes need to be invoked. This implies that biophysical processes within the membrane interface have a crucial impact on cell:cell communication and cell signalling, governing protein interactions and protein aggregation.",
+  "texts" : [ "Boltzmann energy-based image analysis demonstrates that extracellular domain size differences explain protein segregation at immune synapses.", "Immune synapses formed by T and NK cells both show segregation of the integrin ICAM1 from other proteins such as CD2 (T cell) or KIR (NK cell). However, the mechanism by which these proteins segregate remains unclear; one key hypothesis is a redistribution based on protein size. Simulations of this mechanism qualitatively reproduce observed segregation patterns, but only in certain parameter regimes. Verifying that these parameter constraints in fact hold has not been possible to date, this requiring a quantitative coupling of theory to experimental data. Here, we address this challenge, developing a new methodology for analysing and quantifying image data and its integration with biophysical models. Specifically we fit a binding kinetics model to 2 colour fluorescence data for cytoskeleton independent synapses (2 and 3D) and test whether the observed inverse correlation between fluorophores conforms to size dependent exclusion, and further, whether patterned states are predicted when model parameters are estimated on individual synapses. All synapses analysed satisfy these conditions demonstrating that the mechanisms of protein redistribution have identifiable signatures in their spatial patterns. We conclude that energy processes implicit in protein size based segregation can drive the patternation observed in individual synapses, at least for the specific examples tested, such that no additional processes need to be invoked. This implies that biophysical processes within the membrane interface have a crucial impact on cell:cell communication and cell signalling, governing protein interactions and protein aggregation.", null ],
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.1673820968101431,
+    "sentiment" : null,
+    "text" : "analysis"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.45984261929596143,
+    "sentiment" : null,
+    "text" : "extracellular"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.487667835916534,
+    "sentiment" : null,
+    "text" : "protein"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.18543033995523733,
+    "sentiment" : null,
+    "text" : "immune"
+  } ],
+  "categoryList" : [ {
+    "label" : "biology",
+    "score" : 1.0
+  } ],
+  "conceptList" : null
+}, {
+  "id" : "10019679_234",
+  "title" : "The optimisation of facile substrates for surface enhanced Raman scattering through galvanic replacement of silver onto copper.",
+  "description" : "A fast and cost-effective approach for the synthesis of substrates used in surface enhanced Raman scattering (SERS) has been developed using galvanic displacement. Deposition of silver onto commercially available Cu foil has resulted in the formation of multiple hierarchical structures, whose morphology show dependence on deposition time and temperature. Analysis of the surface structure by scanning electron microscopy revealed that the more complex silver structures correlated well with increased deposition time and temperature. Using Rhodamine 6G (R6G) as a model Raman probe it was also possible to relate the substrate morphology directly with subsequent SERS intensity from the R6G analyte as well as the reproducibility across a total of 15 replicate Raman maps (20 × 20 pixels) consisting of 400 spectra at a R6G concentration of 10(-4) M. The substrate with the highest reproducibility was then used to explore the limit of detection and this compared very favourably with colloidal-based SERS assessments of the same analyte.",
+  "texts" : [ "The optimisation of facile substrates for surface enhanced Raman scattering through galvanic replacement of silver onto copper.", "A fast and cost-effective approach for the synthesis of substrates used in surface enhanced Raman scattering (SERS) has been developed using galvanic displacement. Deposition of silver onto commercially available Cu foil has resulted in the formation of multiple hierarchical structures, whose morphology show dependence on deposition time and temperature. Analysis of the surface structure by scanning electron microscopy revealed that the more complex silver structures correlated well with increased deposition time and temperature. Using Rhodamine 6G (R6G) as a model Raman probe it was also possible to relate the substrate morphology directly with subsequent SERS intensity from the R6G analyte as well as the reproducibility across a total of 15 replicate Raman maps (20 × 20 pixels) consisting of 400 spectra at a R6G concentration of 10(-4) M. The substrate with the highest reproducibility was then used to explore the limit of detection and this compared very favourably with colloidal-based SERS assessments of the same analyte.", null ],
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.4547302148186906,
+    "sentiment" : null,
+    "text" : "substrate"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.21163970074264576,
+    "sentiment" : null,
+    "text" : "surface"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.24001946115923012,
+    "sentiment" : null,
+    "text" : "raman"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.25856020038444677,
+    "sentiment" : null,
+    "text" : "galvanic"
+  } ],
+  "categoryList" : [ {
+    "label" : "chemistry",
+    "score" : 1.0
+  } ],
+  "conceptList" : null
+}, {
+  "id" : "10005312_234",
+  "title" : "Thermodynamics of Biomacromolecular Interactions in Aqueous Solutions",
+  "description" : "An understanding of the interactions between polyelectrolytes and proteins is vital to determine structure and functionality of materials constructed of these two components. Possible applications for the protein-polyelectrolyte composites are ranging from materials used to deliver drugs to the methods of protein stabilisation for storage of therapeutics, biosemsors, and encapsulation of medicines for triggered release. The binding of globular proteins to the polyelectrolyte chains can prevent undesired protein aggregation and may help to extend the shelf-life of the protein-containing food. The aim of this project is to study the mechanism of non-covalent binding between proteins and polyelectrolytes, responsiveness of the proteinpolyelectrolyte composites to external stimuli such as changing pH, presence of salt of different types and concentrations or influence of enzyme on the integrity of protein-polyelectrolyte multilayer film.Our study was focused on the effects of different mono- and multivalent salts on binding affinitybetween a negatively charged polyelectrolyte - poly(styrene sulfonate) PSS and bovine serumalbumin BSA or myoglobin. The complex formation between these polymers was examinedusing the static light scattering (SLS), turbidimetric and potentiometric titrations, differentialscanning calorimetry (DSC) and theoretical studies based on molecular dynamics simulations. We established that the inter- and intramolecular interactions between proteins and polyelectrolytes are primarily driven by the electrostatic forces at the conditions when thepolymers are in low ionic strength solutions and attractive or repulsive relations are based upon the charge density and its distribution. When proteins are interacting with polyelectrolytes in solutions of high ionic strength the electrostatic interactions are screened by the salt originated co-ions. In these conditions there is a competition between salting-out effect on proteins leading to protein aggregation or protein-polyelectrolyte complex formation, which can prevent undesired protein-protein association. The forces driving the attractive interactions at high ionic strength are of non-electrostatic origin, these are mainly hydrophobic forces. The computer simulation study shows that more flexible polyanionic chains are stronger binders to the positive patches on protein surface than these of a more rigid backbone. Also a total energy of binding depends on a sum of electrostatic and non-electrostatic energies.The formation of multilayers composed of a protein and a polyelectrolyte, where componentswere: poly-L-lysine – a positively charged homopolypeptide and polygalacturonic acid - apolysaccharide was examined using a quartz crystal microbalance with dissipation monitoring. A 10 and 11 layer film, deposited on the charged surface, exhibited the linear growth pattern for first 5 layers and exponential growth for a flowing 5 (or 6) layers. The influence of pectinase enzyme on digesting the polygalacturonic acid component of the multilayer was most effective for 1 AU/mL concentration of pectinase. After the enzyme was applied the multilayer film was fully disintegrated within the period of 20 minutes for pectinase at 1 AU/mL and the time of disintegration was extended to 120 minutes for pectinase at 0.1 AU/mL.Silk fibroin aqueous solutions were tested rheologically for their structural properties involvingthe existence of fibroin aggregates. We examined the process of ageing of fibroin solutions and solid-liquid transformations taking place within the fluid. The transitions between viscous and elastic behaviour of the fibroin’s semi-dilute solutions were initiated by strain, shear frequency and temperature. We highlighted that the irreversible change in secondary structure of the silk fibroin in aqueous solutions are taking place after the 48 hour period of time since the preparation of protein fluids. We recommend that further processing of silk fibroin such aselectrospinning should be completed within the 48 hour after dissolution.",
+  "texts" : [ "Thermodynamics of Biomacromolecular Interactions in Aqueous Solutions", "An understanding of the interactions between polyelectrolytes and proteins is vital to determine structure and functionality of materials constructed of these two components. Possible applications for the protein-polyelectrolyte composites are ranging from materials used to deliver drugs to the methods of protein stabilisation for storage of therapeutics, biosemsors, and encapsulation of medicines for triggered release. The binding of globular proteins to the polyelectrolyte chains can prevent undesired protein aggregation and may help to extend the shelf-life of the protein-containing food. The aim of this project is to study the mechanism of non-covalent binding between proteins and polyelectrolytes, responsiveness of the proteinpolyelectrolyte composites to external stimuli such as changing pH, presence of salt of different types and concentrations or influence of enzyme on the integrity of protein-polyelectrolyte multilayer film.Our study was focused on the effects of different mono- and multivalent salts on binding affinitybetween a negatively charged polyelectrolyte - poly(styrene sulfonate) PSS and bovine serumalbumin BSA or myoglobin. The complex formation between these polymers was examinedusing the static light scattering (SLS), turbidimetric and potentiometric titrations, differentialscanning calorimetry (DSC) and theoretical studies based on molecular dynamics simulations. We established that the inter- and intramolecular interactions between proteins and polyelectrolytes are primarily driven by the electrostatic forces at the conditions when thepolymers are in low ionic strength solutions and attractive or repulsive relations are based upon the charge density and its distribution. When proteins are interacting with polyelectrolytes in solutions of high ionic strength the electrostatic interactions are screened by the salt originated co-ions. In these conditions there is a competition between salting-out effect on proteins leading to protein aggregation or protein-polyelectrolyte complex formation, which can prevent undesired protein-protein association. The forces driving the attractive interactions at high ionic strength are of non-electrostatic origin, these are mainly hydrophobic forces. The computer simulation study shows that more flexible polyanionic chains are stronger binders to the positive patches on protein surface than these of a more rigid backbone. Also a total energy of binding depends on a sum of electrostatic and non-electrostatic energies.The formation of multilayers composed of a protein and a polyelectrolyte, where componentswere: poly-L-lysine – a positively charged homopolypeptide and polygalacturonic acid - apolysaccharide was examined using a quartz crystal microbalance with dissipation monitoring. A 10 and 11 layer film, deposited on the charged surface, exhibited the linear growth pattern for first 5 layers and exponential growth for a flowing 5 (or 6) layers. The influence of pectinase enzyme on digesting the polygalacturonic acid component of the multilayer was most effective for 1 AU/mL concentration of pectinase. After the enzyme was applied the multilayer film was fully disintegrated within the period of 20 minutes for pectinase at 1 AU/mL and the time of disintegration was extended to 120 minutes for pectinase at 0.1 AU/mL.Silk fibroin aqueous solutions were tested rheologically for their structural properties involvingthe existence of fibroin aggregates. We examined the process of ageing of fibroin solutions and solid-liquid transformations taking place within the fluid. The transitions between viscous and elastic behaviour of the fibroin’s semi-dilute solutions were initiated by strain, shear frequency and temperature. We highlighted that the irreversible change in secondary structure of the silk fibroin in aqueous solutions are taking place after the 48 hour period of time since the preparation of protein fluids. We recommend that further processing of silk fibroin such aselectrospinning should be completed within the 48 hour after dissolution.", null ],
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.23861653205508315,
+    "sentiment" : null,
+    "text" : "interaction"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.2423811115201594,
+    "sentiment" : null,
+    "text" : "aqueous"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.27841650597301026,
+    "sentiment" : null,
+    "text" : "polyelectrolyte"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.2743121983016171,
+    "sentiment" : null,
+    "text" : "protein"
+  } ],
+  "categoryList" : [ {
+    "label" : "chemistry",
+    "score" : 1.0
+  } ],
+  "conceptList" : null
+}, {
+  "id" : "10022590_234",
+  "title" : "Identification of fibrocytes from mesenchymal stem cells in keloid tissue: a potential source of abnormal fibroblasts in keloid scarring.",
+  "description" : "Abnormal fibroblasts have been implicated in keloid formation, a benign but fibroproliferative skin disorder. However, the exact source of these cells remains unknown. Fibrocytes are considered to be hybrid mesenchymal/hematopoietic cells, having been identified in various fibrotic disorders as the precursors of fibroblasts. Therefore, we hypothesized that a population of fibrocytes is present in keloid tissue as opposed to the mesenchymal stem cells (MSCs). We compared the proportion of MSCs in keloid versus bone marrow-derived cells and compared fibrocytes in keloid as opposed to normal scar tissue. We also investigated the propagation of fibrocytes in serum-supplemented versus serum-free media. Using multicolor fluorescence-activated cell analysis, we found distinct populations of MSCs (CD34(-)CD73(+)CD90(+)CD105(+)) that were different from CD45RO(+)25F9(+)MRP8/14(+) fibrocytes present in keloid tissue, while very few fibrocytes were observed in normal scar tissue. The proportion of keloid-derived cells in serum-free or serum-supplemented cultures expressing these fibrocyte markers was greater than from cultures derived from normal scar tissue (p < 0.05). We found that the proliferation of CD45(+)/Col1(+) keloid cells in vitro was greater in serum-free media compared to serum-supplemented media. This is the first study to have identified fibrocytes isolated from keloid tissue and normal scars, utilizing a specific set of markers for fibrocytes. This finding may aid our understanding of the origin of abnormal fibroblasts identified in keloid scarring. The identification of fibrocyte populations distinct from MSCs in keloid scar tissue could lead to novel targets for therapeutic intervention, treatment and prevention of recurrence.",
+  "texts" : [ "Identification of fibrocytes from mesenchymal stem cells in keloid tissue: a potential source of abnormal fibroblasts in keloid scarring.", "Abnormal fibroblasts have been implicated in keloid formation, a benign but fibroproliferative skin disorder. However, the exact source of these cells remains unknown. Fibrocytes are considered to be hybrid mesenchymal/hematopoietic cells, having been identified in various fibrotic disorders as the precursors of fibroblasts. Therefore, we hypothesized that a population of fibrocytes is present in keloid tissue as opposed to the mesenchymal stem cells (MSCs). We compared the proportion of MSCs in keloid versus bone marrow-derived cells and compared fibrocytes in keloid as opposed to normal scar tissue. We also investigated the propagation of fibrocytes in serum-supplemented versus serum-free media. Using multicolor fluorescence-activated cell analysis, we found distinct populations of MSCs (CD34(-)CD73(+)CD90(+)CD105(+)) that were different from CD45RO(+)25F9(+)MRP8/14(+) fibrocytes present in keloid tissue, while very few fibrocytes were observed in normal scar tissue. The proportion of keloid-derived cells in serum-free or serum-supplemented cultures expressing these fibrocyte markers was greater than from cultures derived from normal scar tissue (p < 0.05). We found that the proliferation of CD45(+)/Col1(+) keloid cells in vitro was greater in serum-free media compared to serum-supplemented media. This is the first study to have identified fibrocytes isolated from keloid tissue and normal scars, utilizing a specific set of markers for fibrocytes. This finding may aid our understanding of the origin of abnormal fibroblasts identified in keloid scarring. The identification of fibrocyte populations distinct from MSCs in keloid scar tissue could lead to novel targets for therapeutic intervention, treatment and prevention of recurrence.", null ],
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.2288882081453365,
+    "sentiment" : null,
+    "text" : "mesenchymal"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.5615323631373201,
+    "sentiment" : null,
+    "text" : "keloid"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.1906206221632839,
+    "sentiment" : null,
+    "text" : "tissue"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.2405001123787323,
+    "sentiment" : null,
+    "text" : "fibroblast"
+  } ],
+  "categoryList" : [ {
+    "label" : "biology",
+    "score" : 1.0
+  } ],
+  "conceptList" : null
+}, {
+  "id" : "10023476_234",
+  "title" : "Aspergillus genomes and the Aspergillus cloud.",
+  "description" : "Aspergillus Genomes is a public resource for viewing annotated genes predicted by various Aspergillus sequencing projects. It has arisen from the union of two significant resources: the Aspergillus/Aspergillosis website and the Central Aspergillus Data REpository (CADRE). The former has primarily served the medical community, providing information about Aspergillus and associated diseases to medics, patients and scientists; the latter has focused on the fungal genomic community, providing a central repository for sequences and annotation extracted from Aspergillus Genomes. By merging these databases, genomes benefit from extensive cross-linking with medical information to create a unique resource, spanning genomics and clinical aspects of the genus. Aspergillus Genomes is accessible from http://www.aspergillus-genomes.org.uk.",
+  "texts" : [ "Aspergillus genomes and the Aspergillus cloud.", "Aspergillus Genomes is a public resource for viewing annotated genes predicted by various Aspergillus sequencing projects. It has arisen from the union of two significant resources: the Aspergillus/Aspergillosis website and the Central Aspergillus Data REpository (CADRE). The former has primarily served the medical community, providing information about Aspergillus and associated diseases to medics, patients and scientists; the latter has focused on the fungal genomic community, providing a central repository for sequences and annotation extracted from Aspergillus Genomes. By merging these databases, genomes benefit from extensive cross-linking with medical information to create a unique resource, spanning genomics and clinical aspects of the genus. Aspergillus Genomes is accessible from http://www.aspergillus-genomes.org.uk.", null ],
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.8207313738322854,
+    "sentiment" : null,
+    "text" : "aspergillus"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.23532737866675058,
+    "sentiment" : null,
+    "text" : "genome"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.12591951087923564,
+    "sentiment" : null,
+    "text" : "cloud"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.10241638234956674,
+    "sentiment" : null,
+    "text" : "public"
+  } ],
+  "categoryList" : [ {
+    "label" : "biology",
+    "score" : 1.0
+  } ],
+  "conceptList" : null
+}, {
+  "id" : "10004173_234",
+  "title" : "The effect of photochemical ageing and initial precursor concentration on the composition and hygroscopic properties of beta-caryophyllene secondary organic aerosol",
+  "description" : "The effect of photochemical ageing and initial precursor concentration on the composition and hygroscopic properties of secondary organic aerosol (SOA) formed during the chamber photo-oxidation of beta-caryophyllene/NOx mixtures were investigated. Nucleation of beta-caryophyllene SOA particles occurred almost immediately after oxidation was initiated and led to the formation of fresh SOA with a relatively simpler composition than has been reported for monoterpenes. The SOA yield values ranged from 9.5-26.7\\% and 30.4-44.5\\% using a differential mobility particle sizer (DMPS) and an aerosol mass spectrometer (AMS) mass based measurements, respectively. A total of 20 compounds were identified in the SOA by LC-MS/MS, with the most abundant compounds identified as beta-caryophyllonic acid and beta-caryophyllinic acid/beta-nocaryophyllonic acid. The O:C and H:C elemental ratios of products identified in the condensed phase ranged from 0.20 to 1.00 and 1.00 to 2.00, with average values of 0.39 and 1.58, respectively. The increase in the O:C ratio was associated with a decrease in the saturation concentration of the identified compounds. The compounds identified in the lower initial concentration experiments were more oxidised compared to those that were found to be more abundant in the higher initial concentration experiments with average O:C ratios of 0.51 and 0.27, respectively. Photochemical ageing led to a more complex SOA composition with a larger contribution coming from lower molar mass, higher generation products, where both double bonds had been oxidised. This effect was more evident in the experiments conducted using the lower initial precursor concentration; a finding confirmed by the temporal behaviour of key organic mass fragment measured by an Aerosol Mass Spectrometer. Although the composition changed with both initial precursor concentration and ageing, this had no significant measurable effect on the hygroscopic properties of the SOA formed. The latter finding might have been influenced by the difference in pre-treatment of the semivolatile-containing particles prior to their measurements.",
+  "texts" : [ "The effect of photochemical ageing and initial precursor concentration on the composition and hygroscopic properties of beta-caryophyllene secondary organic aerosol", "The effect of photochemical ageing and initial precursor concentration on the composition and hygroscopic properties of secondary organic aerosol (SOA) formed during the chamber photo-oxidation of beta-caryophyllene/NOx mixtures were investigated. Nucleation of beta-caryophyllene SOA particles occurred almost immediately after oxidation was initiated and led to the formation of fresh SOA with a relatively simpler composition than has been reported for monoterpenes. The SOA yield values ranged from 9.5-26.7\\% and 30.4-44.5\\% using a differential mobility particle sizer (DMPS) and an aerosol mass spectrometer (AMS) mass based measurements, respectively. A total of 20 compounds were identified in the SOA by LC-MS/MS, with the most abundant compounds identified as beta-caryophyllonic acid and beta-caryophyllinic acid/beta-nocaryophyllonic acid. The O:C and H:C elemental ratios of products identified in the condensed phase ranged from 0.20 to 1.00 and 1.00 to 2.00, with average values of 0.39 and 1.58, respectively. The increase in the O:C ratio was associated with a decrease in the saturation concentration of the identified compounds. The compounds identified in the lower initial concentration experiments were more oxidised compared to those that were found to be more abundant in the higher initial concentration experiments with average O:C ratios of 0.51 and 0.27, respectively. Photochemical ageing led to a more complex SOA composition with a larger contribution coming from lower molar mass, higher generation products, where both double bonds had been oxidised. This effect was more evident in the experiments conducted using the lower initial precursor concentration; a finding confirmed by the temporal behaviour of key organic mass fragment measured by an Aerosol Mass Spectrometer. Although the composition changed with both initial precursor concentration and ageing, this had no significant measurable effect on the hygroscopic properties of the SOA formed. The latter finding might have been influenced by the difference in pre-treatment of the semivolatile-containing particles prior to their measurements.", null ],
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.29232494675987875,
+    "sentiment" : null,
+    "text" : "photochemical"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.35070992905959286,
+    "sentiment" : null,
+    "text" : "hygroscopic"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.18828288850920616,
+    "sentiment" : null,
+    "text" : "organic"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.23773197416946834,
+    "sentiment" : null,
+    "text" : "aerosol"
+  } ],
+  "categoryList" : [ {
+    "label" : "chemistry",
+    "score" : 1.0
+  } ],
+  "conceptList" : null
+}, {
+  "id" : "10024995_234",
+  "title" : "Klf4 reverts developmentally programmed restriction of ground state pluripotency.",
+  "description" : "Mouse embryonic stem (ES) cells derived from pluripotent early epiblast contribute functionally differentiated progeny to all foetal lineages of chimaeras. By contrast, epistem cell (EpiSC) lines from post-implantation epithelialised epiblast are unable to colonise the embryo even though they express the core pluripotency genes Oct4, Sox2 and Nanog. We examined interconversion between these two cell types. ES cells can readily become EpiSCs in response to growth factor cues. By contrast, EpiSCs do not change into ES cells. We exploited PiggyBac transposition to introduce a single reprogramming factor, Klf4, into EpiSCs. No effect was apparent in EpiSC culture conditions, but in ground state ES cell conditions a fraction of cells formed undifferentiated colonies. These EpiSC-derived induced pluripotent stem (Epi-iPS) cells activated expression of ES cell-specific transcripts including endogenous Klf4, and downregulated markers of lineage specification. X chromosome silencing in female cells, a feature of the EpiSC state, was erased in Epi-iPS cells. They produced high-contribution chimaeras that yielded germline transmission. These properties were maintained after Cre-mediated deletion of the Klf4 transgene, formally demonstrating complete and stable reprogramming of developmental phenotype. Thus, re-expression of Klf4 in an appropriate environment can regenerate the naïve ground state from EpiSCs. Reprogramming is dependent on suppression of extrinsic growth factor stimuli and proceeds to completion in less than 1% of cells. This substantiates the argument that EpiSCs are developmentally, epigenetically and functionally differentiated from ES cells. However, because a single transgene is the minimum requirement to attain the ground state, EpiSCs offer an attractive opportunity for screening for unknown components of the reprogramming process.",
+  "texts" : [ "Klf4 reverts developmentally programmed restriction of ground state pluripotency.", "Mouse embryonic stem (ES) cells derived from pluripotent early epiblast contribute functionally differentiated progeny to all foetal lineages of chimaeras. By contrast, epistem cell (EpiSC) lines from post-implantation epithelialised epiblast are unable to colonise the embryo even though they express the core pluripotency genes Oct4, Sox2 and Nanog. We examined interconversion between these two cell types. ES cells can readily become EpiSCs in response to growth factor cues. By contrast, EpiSCs do not change into ES cells. We exploited PiggyBac transposition to introduce a single reprogramming factor, Klf4, into EpiSCs. No effect was apparent in EpiSC culture conditions, but in ground state ES cell conditions a fraction of cells formed undifferentiated colonies. These EpiSC-derived induced pluripotent stem (Epi-iPS) cells activated expression of ES cell-specific transcripts including endogenous Klf4, and downregulated markers of lineage specification. X chromosome silencing in female cells, a feature of the EpiSC state, was erased in Epi-iPS cells. They produced high-contribution chimaeras that yielded germline transmission. These properties were maintained after Cre-mediated deletion of the Klf4 transgene, formally demonstrating complete and stable reprogramming of developmental phenotype. Thus, re-expression of Klf4 in an appropriate environment can regenerate the naïve ground state from EpiSCs. Reprogramming is dependent on suppression of extrinsic growth factor stimuli and proceeds to completion in less than 1% of cells. This substantiates the argument that EpiSCs are developmentally, epigenetically and functionally differentiated from ES cells. However, because a single transgene is the minimum requirement to attain the ground state, EpiSCs offer an attractive opportunity for screening for unknown components of the reprogramming process.", null ],
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.10241638234956674,
+    "sentiment" : null,
+    "text" : "klf4"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.10241638234956674,
+    "sentiment" : null,
+    "text" : "mouse"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.10241638234956674,
+    "sentiment" : null,
+    "text" : "embryonic"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.10241638234956674,
+    "sentiment" : null,
+    "text" : "stem"
+  } ],
+  "categoryList" : [ {
+    "label" : "biology",
+    "score" : 1.0
+  } ],
+  "conceptList" : null
+}, {
+  "id" : "10003291_234",
+  "title" : "Thyrotropin-releasing hormone selectively stimulates human hair follicle pigmentation.",
+  "description" : "In amphibians, thyrotropin-releasing hormone (TRH) stimulates skin melanophores by inducing secretion of α-melanocyte-stimulating hormone in the pituitary gland. However, it is unknown whether this tripeptide neurohormone exerts any direct effects on pigment cells, namely, on human melanocytes, under physiological conditions. Therefore, we have investigated whether TRH stimulates pigment production in organ-cultured human hair follicles (HFs), the epithelium of which expresses both TRH and its receptor, and/or in full-thickness human skin in situ. TRH stimulated melanin synthesis, tyrosinase transcription and activity, melanosome formation, melanocyte dendricity, gp100 immunoreactivity, and microphthalmia-associated transcription factor expression in human HFs in a pituitary gland-independent manner. TRH also stimulated proliferation, gp100 expression, tyrosinase activity, and dendricity of isolated human HF melanocytes. However, intraepidermal melanogenesis was unaffected. As TRH upregulated the intrafollicular production of \"pituitary\" neurohormones (proopiomelanocortin transcription and ACTH immunoreactivity) and as agouti-signaling protein counteracted TRH-induced HF pigmentation, these pigmentary TRH effects may be mediated in part by locally generated melanocortins and/or by MC-1 signaling. Our study introduces TRH as a novel, potent, selective, and evolutionarily highly conserved neuroendocrine factor controlling human pigmentation in situ. This physiologically relevant and melanocyte sub-population-specific neuroendocrine control of human pigmentation deserves clinical exploration, e.g., for preventing or reversing hair graying.",
+  "texts" : [ "Thyrotropin-releasing hormone selectively stimulates human hair follicle pigmentation.", "In amphibians, thyrotropin-releasing hormone (TRH) stimulates skin melanophores by inducing secretion of α-melanocyte-stimulating hormone in the pituitary gland. However, it is unknown whether this tripeptide neurohormone exerts any direct effects on pigment cells, namely, on human melanocytes, under physiological conditions. Therefore, we have investigated whether TRH stimulates pigment production in organ-cultured human hair follicles (HFs), the epithelium of which expresses both TRH and its receptor, and/or in full-thickness human skin in situ. TRH stimulated melanin synthesis, tyrosinase transcription and activity, melanosome formation, melanocyte dendricity, gp100 immunoreactivity, and microphthalmia-associated transcription factor expression in human HFs in a pituitary gland-independent manner. TRH also stimulated proliferation, gp100 expression, tyrosinase activity, and dendricity of isolated human HF melanocytes. However, intraepidermal melanogenesis was unaffected. As TRH upregulated the intrafollicular production of \"pituitary\" neurohormones (proopiomelanocortin transcription and ACTH immunoreactivity) and as agouti-signaling protein counteracted TRH-induced HF pigmentation, these pigmentary TRH effects may be mediated in part by locally generated melanocortins and/or by MC-1 signaling. Our study introduces TRH as a novel, potent, selective, and evolutionarily highly conserved neuroendocrine factor controlling human pigmentation in situ. This physiologically relevant and melanocyte sub-population-specific neuroendocrine control of human pigmentation deserves clinical exploration, e.g., for preventing or reversing hair graying.", null ],
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.34080308054161823,
+    "sentiment" : null,
+    "text" : "hormone"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.20791270554340585,
+    "sentiment" : null,
+    "text" : "human"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.31340464098794546,
+    "sentiment" : null,
+    "text" : "follicle"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.3232596573658153,
+    "sentiment" : null,
+    "text" : "pigmentation"
+  } ],
+  "categoryList" : [ {
+    "label" : "biology",
+    "score" : 1.0
+  } ],
+  "conceptList" : null
+}, {
+  "id" : "10003566_234",
+  "title" : "Cloning, characterization and disruption of a (p)ppGpp synthetase gene (relA) of Streptomyces coelicolor A3(2)",
+  "description" : "An internal segment of the (p)ppGpp synthetase gene, relA, of Streptomyces coelicolor A3(2) was amplified from genomic DNA using the polymerase chain reaction and used as a hybridization probe to isolate the complete gene from a cosmid library. relA lies downstream of a gene (apt) that apparently encodes adenine phosphoribosyltransferase and is transcribed from two promoters, relAp1 and relAp2, and by transcriptional readthrough from apt. While the level of relAp2 transcripts remained relatively constant, relAp1 activity apparently peaked during transition phase, following a decline in readthrough transcription from apt, Disruption of relA using an att- derivative of the temperate phage ???C31 abolished ppGpp synthesis on amino acid depletion. When grown on agar, the disruptants grew more slowly than a control lysogen made with an att- phage vector and gave smaller colonies that sporulated normally. The relA mutation had no consistent or marked effect on actinorhodin production in either liquid- or agar-grown cultures, indicating that elevated levels of (p)ppGpp are not essential for triggering the onset of antibiotic production.",
+  "texts" : [ "Cloning, characterization and disruption of a (p)ppGpp synthetase gene (relA) of Streptomyces coelicolor A3(2)", "An internal segment of the (p)ppGpp synthetase gene, relA, of Streptomyces coelicolor A3(2) was amplified from genomic DNA using the polymerase chain reaction and used as a hybridization probe to isolate the complete gene from a cosmid library. relA lies downstream of a gene (apt) that apparently encodes adenine phosphoribosyltransferase and is transcribed from two promoters, relAp1 and relAp2, and by transcriptional readthrough from apt. While the level of relAp2 transcripts remained relatively constant, relAp1 activity apparently peaked during transition phase, following a decline in readthrough transcription from apt, Disruption of relA using an att- derivative of the temperate phage ???C31 abolished ppGpp synthesis on amino acid depletion. When grown on agar, the disruptants grew more slowly than a control lysogen made with an att- phage vector and gave smaller colonies that sporulated normally. The relA mutation had no consistent or marked effect on actinorhodin production in either liquid- or agar-grown cultures, indicating that elevated levels of (p)ppGpp are not essential for triggering the onset of antibiotic production.", null ],
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.15351648568374077,
+    "sentiment" : null,
+    "text" : "hybridization"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.4301956007572369,
+    "sentiment" : null,
+    "text" : "synthetase"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.5704642543269689,
+    "sentiment" : null,
+    "text" : "gene"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.16011975060871714,
+    "sentiment" : null,
+    "text" : "polymerase"
+  } ],
+  "categoryList" : [ {
+    "label" : "biology",
+    "score" : 1.0
+  } ],
+  "conceptList" : null
+}, {
+  "id" : "10020001_234",
+  "title" : "Enantioselective DecarboxylativeProtonation of Malonic Acids UsingAryl Malonate Decarboxylase",
+  "description" : "The demand for new methods through which important enantiopure compounds can be produced is increasing within the chemical industry. In this regard, one group of interesting compounds are enantiopure carboxylic acids as traditional methods towards producing these compounds that rely on a process known as enantioselective decarboxylative protonation (EDP) are often insufficient due to a combination of factors including low yields, low enantioselectivities, the need for environmentally deleterious reaction conditions and high costs.Due to the shortcomings of these synthetic techniques, the application of biological systems is an alternative method that has come to the forefront of current research, which is because biological systems often boast a number of advantages over traditional chemical methods. Described within this thesis is one such biological method towards the production of enantiopure carboxylic acid compounds via EDP, a method that utilises the enzyme aryl malonate decarboxylase (AMDase). This research follows on from previous work detailing the mechanism this enzyme utilises toperform decarboxylation reactions and specifically looks into the substrate specificity that thisenzyme possesses. This work allows us to see how flexible this method is with regards to theproduction of a range of different carboxylic acid products, which is important as previous chemical methods are often limited by a lack of diversity. It also allows us to see how the kinetic parameters of the enzyme catalysed reactions change dependent on the identity of the substrate, allowing us to better justify the currently proposed mechanism and to better direct attempts to improve the enzyme through mutagenesis experiments. Indeed, several mutagenesis experiments have also been performed in an attempt to producevariants of the enzyme that would have either an increased enzyme scope or better reactivity with currently known substrates, and this work is also detailed within this thesis.",
+  "texts" : [ "Enantioselective DecarboxylativeProtonation of Malonic Acids UsingAryl Malonate Decarboxylase", "The demand for new methods through which important enantiopure compounds can be produced is increasing within the chemical industry. In this regard, one group of interesting compounds are enantiopure carboxylic acids as traditional methods towards producing these compounds that rely on a process known as enantioselective decarboxylative protonation (EDP) are often insufficient due to a combination of factors including low yields, low enantioselectivities, the need for environmentally deleterious reaction conditions and high costs.Due to the shortcomings of these synthetic techniques, the application of biological systems is an alternative method that has come to the forefront of current research, which is because biological systems often boast a number of advantages over traditional chemical methods. Described within this thesis is one such biological method towards the production of enantiopure carboxylic acid compounds via EDP, a method that utilises the enzyme aryl malonate decarboxylase (AMDase). This research follows on from previous work detailing the mechanism this enzyme utilises toperform decarboxylation reactions and specifically looks into the substrate specificity that thisenzyme possesses. This work allows us to see how flexible this method is with regards to theproduction of a range of different carboxylic acid products, which is important as previous chemical methods are often limited by a lack of diversity. It also allows us to see how the kinetic parameters of the enzyme catalysed reactions change dependent on the identity of the substrate, allowing us to better justify the currently proposed mechanism and to better direct attempts to improve the enzyme through mutagenesis experiments. Indeed, several mutagenesis experiments have also been performed in an attempt to producevariants of the enzyme that would have either an increased enzyme scope or better reactivity with currently known substrates, and this work is also detailed within this thesis.", null ],
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.3965895153288063,
+    "sentiment" : null,
+    "text" : "enantioselective"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.20179224586745104,
+    "sentiment" : null,
+    "text" : "acid"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.3401774067029182,
+    "sentiment" : null,
+    "text" : "decarboxylase"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.25211859745076554,
+    "sentiment" : null,
+    "text" : "chemical"
+  } ],
+  "categoryList" : [ {
+    "label" : "chemistry",
+    "score" : 1.0
+  } ],
+  "conceptList" : null
+}, {
+  "id" : "10024857_234",
+  "title" : "Hyccin, the molecule mutated in the leukodystrophy hypomyelination and congenital cataract (HCC), is a neuronal protein.",
+  "description" : "\"Hypomyelination and Congenital Cataract\", HCC (MIM #610532), is an autosomal recessive disorder characterized by congenital cataract and diffuse cerebral and peripheral hypomyelination. HCC is caused by deficiency of Hyccin, a protein whose biological role has not been clarified yet. Since the identification of the cell types expressing a protein of unknown function can contribute to define the physiological context in which the molecule is explicating its function, we analyzed the pattern of Hyccin expression in the central and peripheral nervous system (CNS and PNS). Using heterozygous mice expressing the b-galactosidase (LacZ) gene under control of the Hyccin gene regulatory elements, we show that the gene is primarily expressed in neuronal cells. Indeed, Hyccin-LacZ signal was identified in CA1 hippocampal pyramidal neurons, olfactory bulb, and cortical pyramidal neurons, while it did not colocalize with oligodendroglial or astrocytic markers. In the PNS, Hyccin was detectable only in axons isolated from newborn mice. In the brain, Hyccin transcript levels were higher in early postnatal development (postnatal days 2 and 10) and then declined in adult mice. In a model of active myelinogenesis, organotypic cultures of rat Schwann cells (SC)/Dorsal Root Ganglion (DRG) sensory neurons, Hyccin was detected along the neurites, while it was absent from SC. Intriguingly, the abundance of the molecule was upregulated at postnatal days 10 and 15, in the initial steps of myelinogenesis and then declined at 30 days when the process is complete. As Hyccin is primarily expressed in neurons and its mutation leads to hypomyelination in human patients, we suggest that the protein is involved in neuron-to-glia signalling to initiate or maintain myelination.",
+  "texts" : [ "Hyccin, the molecule mutated in the leukodystrophy hypomyelination and congenital cataract (HCC), is a neuronal protein.", "\"Hypomyelination and Congenital Cataract\", HCC (MIM #610532), is an autosomal recessive disorder characterized by congenital cataract and diffuse cerebral and peripheral hypomyelination. HCC is caused by deficiency of Hyccin, a protein whose biological role has not been clarified yet. Since the identification of the cell types expressing a protein of unknown function can contribute to define the physiological context in which the molecule is explicating its function, we analyzed the pattern of Hyccin expression in the central and peripheral nervous system (CNS and PNS). Using heterozygous mice expressing the b-galactosidase (LacZ) gene under control of the Hyccin gene regulatory elements, we show that the gene is primarily expressed in neuronal cells. Indeed, Hyccin-LacZ signal was identified in CA1 hippocampal pyramidal neurons, olfactory bulb, and cortical pyramidal neurons, while it did not colocalize with oligodendroglial or astrocytic markers. In the PNS, Hyccin was detectable only in axons isolated from newborn mice. In the brain, Hyccin transcript levels were higher in early postnatal development (postnatal days 2 and 10) and then declined in adult mice. In a model of active myelinogenesis, organotypic cultures of rat Schwann cells (SC)/Dorsal Root Ganglion (DRG) sensory neurons, Hyccin was detected along the neurites, while it was absent from SC. Intriguingly, the abundance of the molecule was upregulated at postnatal days 10 and 15, in the initial steps of myelinogenesis and then declined at 30 days when the process is complete. As Hyccin is primarily expressed in neurons and its mutation leads to hypomyelination in human patients, we suggest that the protein is involved in neuron-to-glia signalling to initiate or maintain myelination.", null ],
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.4200945541373171,
+    "sentiment" : null,
+    "text" : "molecule"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.20407786125683197,
+    "sentiment" : null,
+    "text" : "leukodystrophy"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.2704990561339956,
+    "sentiment" : null,
+    "text" : "neuronal"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.3750603862171624,
+    "sentiment" : null,
+    "text" : "protein"
+  } ],
+  "categoryList" : [ {
+    "label" : "chemistry",
+    "score" : 1.0
+  } ],
+  "conceptList" : null
+}, {
+  "id" : "10008187_234",
+  "title" : "Dendritic cells and the assessment in vitro of skin sensitizing potential.",
+  "description" : "It is now well established that dendritic cells (DC) play pivotal roles in the initiation and orchestration of adaptive immune responses, including cutaneous immune responses to chemical allergens that drive the acquisition of skin sensitization. It is not unexpected, therefore, that a large number, and wide variety, of proposed approaches for the identification of skin sensitizing chemicals in vitro are based upon the use of cultured DC or DC-like cells. The use of DC in this context is legitimate. However, with our rapidly increasing understanding of the diversity of cutaneous DC with respect to both phenotype and function, it is timely now to review briefly the potential limitations and interpretive difficulties that are associated with the use of DC-based assays. Among the important considerations are the fact that chemical-induced changes in the characteristics and function of cultured DC will not necessarily reflect accurately the events that that support the development of skin sensitization in vivo. In addition, most DC-based assays are predicated on a view that cutaneous DC have as their primary function the initiation of adaptive immune responses. However, it is now appreciated that cutaneous DC, and in particular epidermal Langerhans cells (LC), may also play important immunoregulatory roles that serve to limit and contain skin immune responses. Notwithstanding these considerations there is reason to believe that at least some in vitro DC-based assays are of value, and indeed some are currently the subject of a formal validation process. However, it is appropriate that such assays are configured and interpreted carefully, and with an appreciation of the complexity of DC biology.",
+  "texts" : [ "Dendritic cells and the assessment in vitro of skin sensitizing potential.", "It is now well established that dendritic cells (DC) play pivotal roles in the initiation and orchestration of adaptive immune responses, including cutaneous immune responses to chemical allergens that drive the acquisition of skin sensitization. It is not unexpected, therefore, that a large number, and wide variety, of proposed approaches for the identification of skin sensitizing chemicals in vitro are based upon the use of cultured DC or DC-like cells. The use of DC in this context is legitimate. However, with our rapidly increasing understanding of the diversity of cutaneous DC with respect to both phenotype and function, it is timely now to review briefly the potential limitations and interpretive difficulties that are associated with the use of DC-based assays. Among the important considerations are the fact that chemical-induced changes in the characteristics and function of cultured DC will not necessarily reflect accurately the events that that support the development of skin sensitization in vivo. In addition, most DC-based assays are predicated on a view that cutaneous DC have as their primary function the initiation of adaptive immune responses. However, it is now appreciated that cutaneous DC, and in particular epidermal Langerhans cells (LC), may also play important immunoregulatory roles that serve to limit and contain skin immune responses. Notwithstanding these considerations there is reason to believe that at least some in vitro DC-based assays are of value, and indeed some are currently the subject of a formal validation process. However, it is appropriate that such assays are configured and interpreted carefully, and with an appreciation of the complexity of DC biology.", null ],
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.4866770689975052,
+    "sentiment" : null,
+    "text" : "dendritic"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.26768943661207467,
+    "sentiment" : null,
+    "text" : "cell"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.38814682730531735,
+    "sentiment" : null,
+    "text" : "vitro"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.2194629227051389,
+    "sentiment" : null,
+    "text" : "skin"
+  } ],
+  "categoryList" : [ {
+    "label" : "biology",
+    "score" : 1.0
+  } ],
+  "conceptList" : null
+}, {
+  "id" : "10010317_234",
+  "title" : "System-wide molecular evidence for phenotypic buffering in Arabidopsis",
+  "description" : "We profiled 162 lines of Arabidopsis for variation in transcript, protein and metabolite abundance using mRNA microarrays, two-dimensional polyacrylamide gel electrophoresis, gas chromatography time-of-flight mass spectrometry, liquid chromatography quadrupole time-of-flight mass spectrometry, and proton nuclear magnetic resonance. We added all publicly available phenotypic data from the same lines and mapped quantitative trait loci (QTL) for 40,580 molecular and 139 phenotypic traits. We found six QTL hot spots with major, system-wide effects, suggesting there are six breakpoints in a system otherwise buffered against many of the 500,000 SNPs. ?? 2009 Nature America, Inc. All rights reserved.",
+  "texts" : [ "System-wide molecular evidence for phenotypic buffering in Arabidopsis", "We profiled 162 lines of Arabidopsis for variation in transcript, protein and metabolite abundance using mRNA microarrays, two-dimensional polyacrylamide gel electrophoresis, gas chromatography time-of-flight mass spectrometry, liquid chromatography quadrupole time-of-flight mass spectrometry, and proton nuclear magnetic resonance. We added all publicly available phenotypic data from the same lines and mapped quantitative trait loci (QTL) for 40,580 molecular and 139 phenotypic traits. We found six QTL hot spots with major, system-wide effects, suggesting there are six breakpoints in a system otherwise buffered against many of the 500,000 SNPs. ?? 2009 Nature America, Inc. All rights reserved.", null ],
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.15976732107417624,
+    "sentiment" : null,
+    "text" : "polyacrylamide"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.28173850070263007,
+    "sentiment" : null,
+    "text" : "arabidopsis"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.21488617393223786,
+    "sentiment" : null,
+    "text" : "chromatography"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.2502175930619268,
+    "sentiment" : null,
+    "text" : "spectrometry"
+  } ],
+  "categoryList" : [ {
+    "label" : "chemistry",
+    "score" : 1.0
+  } ],
+  "conceptList" : null
+}, {
+  "id" : "10019678_234",
+  "title" : "Rapid reagentless quantification of alginate biosynthesis in Pseudomonas fluorescens bacteria mutants using FT-IR spectroscopy coupled to multivariate partial least squares regression.",
+  "description" : "Alginate is an important medical and commercial product and currently is isolated from seaweeds. Certain microorganisms also produce alginate and these polymers have the potential to replace seaweed alginates in some applications, mainly because such production will allow much better and more reproducible control of critical qualitative polymer properties. The research conducted here presents the development of a new approach to this problem by analysing a transposon insertion mutant library constructed in an alginate-producing derivative of the Pseudomonas fluorescens strain SBW25. The procedure is based on the non-destructive and reagent-free method of Fourier transform infrared (FT-IR) spectroscopy which is used to generate a complex biochemical infrared fingerprint of the medium after bacterial growth. First, we investigate the potential differences caused by the growth media fructose and glycerol on the bacterial phenotype and alginate synthesis in 193 selected P. fluorescens mutants and show that clear phenotypic differences are observed in the infrared fingerprints. In order to quantify the level of the alginate we also report the construction and interpretation of multivariate partial least squares regression models which were able to quantify alginate levels successfully with typical normalized root-mean-square error in predictions of only approximately 14%. We have demonstrated that this high-throughput approach can be implemented in alginate screens and we believe that this FT-IR spectroscopic methodology, when combined with the most appropriate chemometrics, could easily be modified for the quantification of other valuable microbial products and play a valuable screening role for synthetic biology.",
+  "texts" : [ "Rapid reagentless quantification of alginate biosynthesis in Pseudomonas fluorescens bacteria mutants using FT-IR spectroscopy coupled to multivariate partial least squares regression.", "Alginate is an important medical and commercial product and currently is isolated from seaweeds. Certain microorganisms also produce alginate and these polymers have the potential to replace seaweed alginates in some applications, mainly because such production will allow much better and more reproducible control of critical qualitative polymer properties. The research conducted here presents the development of a new approach to this problem by analysing a transposon insertion mutant library constructed in an alginate-producing derivative of the Pseudomonas fluorescens strain SBW25. The procedure is based on the non-destructive and reagent-free method of Fourier transform infrared (FT-IR) spectroscopy which is used to generate a complex biochemical infrared fingerprint of the medium after bacterial growth. First, we investigate the potential differences caused by the growth media fructose and glycerol on the bacterial phenotype and alginate synthesis in 193 selected P. fluorescens mutants and show that clear phenotypic differences are observed in the infrared fingerprints. In order to quantify the level of the alginate we also report the construction and interpretation of multivariate partial least squares regression models which were able to quantify alginate levels successfully with typical normalized root-mean-square error in predictions of only approximately 14%. We have demonstrated that this high-throughput approach can be implemented in alginate screens and we believe that this FT-IR spectroscopic methodology, when combined with the most appropriate chemometrics, could easily be modified for the quantification of other valuable microbial products and play a valuable screening role for synthetic biology.", null ],
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.22271377590338964,
+    "sentiment" : null,
+    "text" : "alginate"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.27454010987853095,
+    "sentiment" : null,
+    "text" : "biosynthesis"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.23736393115427318,
+    "sentiment" : null,
+    "text" : "bacterium"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.2486332444171856,
+    "sentiment" : null,
+    "text" : "spectroscopy"
+  } ],
+  "categoryList" : [ {
+    "label" : "biology",
+    "score" : 1.0
+  } ],
+  "conceptList" : null
+}, {
+  "id" : "10021760_234",
+  "title" : "Using Intercalation to Simulate Irradiation Damage of Nuclear Graphite",
+  "description" : "This thesis uses a simulation technique to replicate certain aspects of the damage processes experienced by graphite moderators in nuclear reactors. The work investigates how changes to the structure of graphite crystals affect the properties of large polycrystalline components. A number of analytical techniques are used to develop a model to gain further insight into the changes in dimensions and strength experienced by graphitic components in a nuclear reactor.",
+  "texts" : [ "Using Intercalation to Simulate Irradiation Damage of Nuclear Graphite", "This thesis uses a simulation technique to replicate certain aspects of the damage processes experienced by graphite moderators in nuclear reactors. The work investigates how changes to the structure of graphite crystals affect the properties of large polycrystalline components. A number of analytical techniques are used to develop a model to gain further insight into the changes in dimensions and strength experienced by graphitic components in a nuclear reactor.", null ],
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.2618459869950468,
+    "sentiment" : null,
+    "text" : "intercalation"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.19517579114221456,
+    "sentiment" : null,
+    "text" : "irradiation"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.20748793567061397,
+    "sentiment" : null,
+    "text" : "nuclear"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.4415800811269656,
+    "sentiment" : null,
+    "text" : "graphite"
+  } ],
+  "categoryList" : [ {
+    "label" : "chemistry",
+    "score" : 1.0
+  } ],
+  "conceptList" : null
+}, {
+  "id" : "10007516_234",
+  "title" : "DNA methylation in circulating tumour DNA as a biomarker for cancer.",
+  "description" : "Free circulating DNA, which is thought to be derived from the primary tumour, can be detected in the blood of patients with cancer. Detection of genetic and epigenetic alteration in this tumour DNA offers a potential source of development of prognostic and predictive biomarkers for cancer. One such change is DNA methylation of the promotor region of tumour suppressor genes. This causes down regulation of tumour suppressor gene expression, a frequent event in carcinogenesis. Hypermethylation of the promotor region of a number of genes has been detected in many tumour types and more recently these changes have been detected in circulating tumour DNA. This review will summarise the literature detailing DNA methylation in circulating tumour DNA and discuss some of the current controversies and technical challenges facing its use as a potential biomarker for cancer.",
+  "texts" : [ "DNA methylation in circulating tumour DNA as a biomarker for cancer.", "Free circulating DNA, which is thought to be derived from the primary tumour, can be detected in the blood of patients with cancer. Detection of genetic and epigenetic alteration in this tumour DNA offers a potential source of development of prognostic and predictive biomarkers for cancer. One such change is DNA methylation of the promotor region of tumour suppressor genes. This causes down regulation of tumour suppressor gene expression, a frequent event in carcinogenesis. Hypermethylation of the promotor region of a number of genes has been detected in many tumour types and more recently these changes have been detected in circulating tumour DNA. This review will summarise the literature detailing DNA methylation in circulating tumour DNA and discuss some of the current controversies and technical challenges facing its use as a potential biomarker for cancer.", null ],
+  "keywordList" : [ {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.5862525831458542,
+    "sentiment" : null,
+    "text" : "dna"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.381492961202176,
+    "sentiment" : null,
+    "text" : "methylation"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.3216787876459015,
+    "sentiment" : null,
+    "text" : "biomarker"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.16407412465001214,
+    "sentiment" : null,
+    "text" : "cancer"
+  } ],
+  "categoryList" : [ {
+    "label" : "biology",
+    "score" : 1.0
+  } ],
+  "conceptList" : null
+} ]
