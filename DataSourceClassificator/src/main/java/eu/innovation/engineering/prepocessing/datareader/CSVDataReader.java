@@ -19,13 +19,16 @@ import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
 import eu.innovation.engineering.LSA.keywordExtractor.LSACosineKeywordExtraction;
 import eu.innovation.engineering.config.PathConfigurator;
-import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 import eu.innovation.engineering.prepocessing.DatasetBuilder;
 import eu.innovation.engineering.util.preprocessing.Paper;
 import eu.innovation.engineering.util.preprocessing.SolrClient;
 import eu.innovation.engineering.util.preprocessing.Source;
 
+/**
+ * @author Rosario
+ *
+ */
 public class CSVDataReader {
   private static final int numKey = 4;
   private static final int limitSource = 100;
@@ -35,12 +38,15 @@ public class CSVDataReader {
   private static float lowThreshold;
   private static String workingPath;
   private static String categoryFolder;
-
+  private static String csvPath;
+  
+  
+  
   public static void main(String[] args) throws Exception{
-
     mainToTest(args);
   }
 
+  
   public static void mainToCreateDataset(String[] args) throws IOException{
     float upperThreshold = (float) 1.0;
     float lowThreshold = (float) 0.7;
@@ -59,17 +65,15 @@ public class CSVDataReader {
    */
   public static void mainToTest(String[] args) throws Exception{
 
-    String testFolderName=PathConfigurator.applicationFileFolder+"resultsScienceBig.csv";
-    setCategoryFolder("science");
-    
-    String batchCategory = "";
-    String categoryFilter = "science";
-
-    setFromJson(true);
+    setCsvPath(PathConfigurator.applicationFileFolder+"resultsRoot.csv");
+    setCategoryFolder("");
+    setFromJson(false);
     setFileTestJson(getWorkingPath()+"/test.json");   
     setUpperThreshold((float) 1.0);
     setLowThreshold((float) 0.7);
-
+    
+    String batchCategory = "";
+    String categoryFilter = "";
     int batchLine = 0;   
     boolean isCount =  false;   
     boolean all = true;    
@@ -78,13 +82,13 @@ public class CSVDataReader {
     KeywordExtractor kex = null;
     if(!isCount && !isFromJson()){
       if(categoryFolder.equals(""))
-        kex = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
-      else
+//        kex = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
+//      else
         kex = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder,getWorkingPath()+"/glossaries.json");
     }
-    File f = new File(testFolderName);
+    File f = new File(csvPath);
     if(f.isDirectory()){
-      System.out.println("FOLDER -> "+testFolderName);
+      System.out.println("FOLDER -> "+csvPath);
       File[] list = f.listFiles();
       if(list.length>0){
         for(int i = 0; i<list.length;i++){
@@ -179,11 +183,10 @@ public class CSVDataReader {
         }
       }   
     }
+
     if(!isFromJson())
       System.out.println(count+" - "+category);
-
     List<Source> sources  = new ArrayList<>();
-
     if(fromJson){
       DatasetBuilder dataBuilder = new DatasetBuilder();
       Map<String, Source> mapSources = dataBuilder.loadMapSources(getFileTestJson());
@@ -368,6 +371,14 @@ public class CSVDataReader {
 
   public static void setWorkingPath(String workingPath) {
     CSVDataReader.workingPath = workingPath;
+  }
+
+  public static String getCsvPath() {
+    return csvPath;
+  }
+
+  public static void setCsvPath(String csvPath) {
+    CSVDataReader.csvPath = csvPath;
   }
 
 
