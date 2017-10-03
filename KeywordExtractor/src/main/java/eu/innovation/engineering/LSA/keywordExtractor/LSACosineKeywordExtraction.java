@@ -83,7 +83,7 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
   @Override
   public List<List<Keyword>> extractKeywordsFromTexts(List<String> toAnalyze, int numKeywordsToReturn) throws Exception {
     List<List<Keyword>> toReturn = new ArrayList<List<Keyword>>();
-    List<List<String>> textList = new ArrayList<>();
+   
 
     for(String text: toAnalyze){
       List<Keyword> keywordList = new ArrayList<Keyword>();

@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.core.JsonParseException;
@@ -14,15 +15,17 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 import eu.innovation.engineering.prepocessing.featurextractor.ClusteringKMeans;
 import eu.innovation.engineering.prepocessing.featurextractor.Dictionary;
+import eu.innovation.engineering.util.preprocessing.Source;
 
 public class DictionaryBuilder {
 
 
 
 
-  public  void initJsonDataset(String fileName, String path, KeywordExtractor ke, String categories) throws IOException{
+  public  List<Source> initJsonDataset(String fileName, String path, KeywordExtractor ke, String categories) throws IOException{
     DatasetBuilder db = new DatasetBuilder(ke);
-    db.buildDataset(fileName,path,categories, true);
+    List<Source> listSources = db.buildDataset(fileName,path,categories, true);
+    return listSources;
   }
 
   public  HashMap<String, Dictionary> build(String JsonPath,int kMeans,String path) throws IOException{
