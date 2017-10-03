@@ -12,6 +12,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
+
 import eu.innovation.engineering.LSA.keywordExtractor.LSACosineKeywordExtraction;
 import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
@@ -20,30 +22,31 @@ import eu.innovation.engineering.prepocessing.DatasetBuilder;
 import eu.innovation.engineering.prepocessing.DictionaryBuilder;
 import eu.innovation.engineering.prepocessing.datareader.TxtDataReader;
 import eu.innovation.engineering.prepocessing.featurextractor.Dictionary;
+import eu.innovation.engineering.util.preprocessing.Source;
 
 public class Start {
 
 
   //**MENU**
-  
+
   //Primo passo, creazione del file dizionaries.json
   private static final boolean buildJsonDictionaries = true;
-  
+
   //Secondo passo creare i file Json di train e test
-  private static final boolean buildJsonTraining = true;
-  private static final boolean buildJsonTest = true;
+  private static final boolean buildJsonTraining = false;
+  private static final boolean buildJsonTest = false;
 
   //Terzo passo, decidere se predere i dizionari persistenti o creare altri, creare i csv
-  private static final boolean loadDictionariesFromFile = true;
-  private static final boolean buildCSVTraining = true;
-  private static final boolean buildCSVTest = true;
+  private static final boolean loadDictionariesFromFile = false;
+  private static final boolean buildCSVTraining = false;
+  private static final boolean buildCSVTest = false;
 
   //Other
-  private static final String category = "chemistry biology";
+  private static final String category = "";
   private static final int numFeatures = 13;
 
-  public static void main(String[] args) throws IOException{
-    
+  public static void main(String[] args) throws Exception{
+
     Start start = new Start();
 
     String path = PathConfigurator.rootFolder + category;
@@ -51,12 +54,14 @@ public class Start {
       path = PathConfigurator.rootFolder + category +"/";
 
     int numLabels = TxtDataReader.getCategories(path+"categories.txt").size();
-    
+
     KeywordExtractor ke = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder,path+"glossaries.json");
-//    KeywordExtractor ke = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
+    //    KeywordExtractor ke = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
 
     //CREA IL FILE JSON DEI DIZIONARI
-    if(buildJsonDictionaries)
+    if(buildJsonDictionaries && category.equals(""))
+      start.createDictionariesWithAllGlossary(path);
+    else
       start.createDictionaries(path,ke);
     //CREA I FILE JSON DEL DATASET TXT PASSATO( lo lancio sul train, Il test in realtà lo genero con la classe SolrClient)
     start.generateJsonFromTxt(path,ke);
@@ -98,10 +103,33 @@ public class Start {
       pathToReadcategories ="../categories.txt";
     dictionaryBuilder.initJsonDataset("dictionariesSource.txt",path,ke,pathToReadcategories);
     String jsonPath = path+"dictionariesSource.json";
-    
+
     // CREAZIONE DEI DIZIONARI CON CLUSTERING
-    dictionaryBuilder.build(jsonPath, numFeatures,path);      
-    
+    dictionaryBuilder.build(jsonPath, numFeatures, path);      
+
+
+  }
+
+  public void createDictionariesWithAllGlossary(String path) throws Exception{
+
+    List<String> categories = TxtDataReader.getCategories(path+"categories.txt");
+    DictionaryBuilder dictionaryBuilder = new DictionaryBuilder();
+
+    KeywordExtractor ke = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder,path+categories.get(0)+".json");
+    List<Source> listSources = dictionaryBuilder.initJsonDataset("dictionariesSource.txt",path,ke,"");
+
+    for(Source source :listSources){
+      ArrayList<Keyword> keywordList = new ArrayList<Keyword>();
+      for(String category : categories){
+        ke = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder,path+category+".json");
+        List<String> toAnalyze = new ArrayList<String>();
+        toAnalyze.add(source.getTitle()+" "+source.getDescription());
+        keywordList.addAll(ke.extractKeywordsFromTexts(toAnalyze, 4).get(0));
+      }
+      for(Keyword keyword :keywordList){
+        System.out.println(keyword.getText()+" "+keyword.getRelevance());
+      }
+    }
 
   }
 
