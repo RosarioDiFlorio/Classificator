@@ -8,7 +8,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.17654655210996345,
+    "relevance" : 0.20978474856991125,
     "sentiment" : null,
     "text" : "detection"
   }, {
@@ -16,7 +16,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.4122211163864959,
+    "relevance" : 0.33949387016257104,
     "sentiment" : null,
     "text" : "protein"
   }, {
@@ -24,7 +24,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3873290302091992,
+    "relevance" : 0.31524768646170953,
     "sentiment" : null,
     "text" : "phosphorylation"
   }, {
@@ -32,7 +32,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3390951531301103,
+    "relevance" : 0.42319053649519855,
     "sentiment" : null,
     "text" : "spectrometry"
   } ],
@@ -48,7 +48,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.28417954120951094,
+    "relevance" : 0.27350010470030695,
     "sentiment" : null,
     "text" : "papillomavirus"
   }, {
@@ -56,15 +56,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22577689655230576,
-    "sentiment" : null,
-    "text" : "genotype"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.2100643820483452,
+    "relevance" : 0.21020022715603942,
     "sentiment" : null,
     "text" : "carcinoma"
   }, {
@@ -72,7 +64,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3595184644059515,
+    "relevance" : 0.21545796547057666,
+    "sentiment" : null,
+    "text" : "intrinsic"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.4904880937674712,
     "sentiment" : null,
     "text" : "radiosensitivity"
   } ],
@@ -88,15 +88,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.18339609293989362,
-    "sentiment" : null,
-    "text" : "autograft"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.24559594555305625,
+    "relevance" : 0.2934579963493965,
     "sentiment" : null,
     "text" : "chemical"
   }, {
@@ -104,7 +96,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2672842616596578,
+    "relevance" : 0.18515881722579847,
+    "sentiment" : null,
+    "text" : "modification"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.21582961929460975,
     "sentiment" : null,
     "text" : "nerve"
   }, {
@@ -112,7 +112,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2340470662063352,
+    "relevance" : 0.19270416855879852,
     "sentiment" : null,
     "text" : "tissue"
   } ],
@@ -128,7 +128,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5854728648102869,
+    "relevance" : 0.6750828246383934,
     "sentiment" : null,
     "text" : "proinflammatory"
   }, {
@@ -136,7 +136,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.27779896438430296,
+    "relevance" : 0.3208728405587624,
     "sentiment" : null,
     "text" : "antiviral"
   }, {
@@ -144,7 +144,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22545160210247212,
+    "relevance" : 0.16485758816101814,
     "sentiment" : null,
     "text" : "human"
   }, {
@@ -152,7 +152,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2971455554075847,
+    "relevance" : 0.22673019208984585,
     "sentiment" : null,
     "text" : "cell"
   } ],
@@ -168,7 +168,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2502422280647716,
+    "relevance" : 0.31032439303737747,
     "sentiment" : null,
     "text" : "function"
   }, {
@@ -176,7 +176,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.4026400384422388,
+    "relevance" : 0.412923893698517,
     "sentiment" : null,
     "text" : "differentiation"
   }, {
@@ -184,7 +184,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5741702471776096,
+    "relevance" : 0.4767627296022436,
     "sentiment" : null,
     "text" : "pigmentation"
   }, {
@@ -192,7 +192,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.19528811403337548,
+    "relevance" : 0.20095236131955474,
     "sentiment" : null,
     "text" : "hair"
   } ],
@@ -208,7 +208,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.6234883361781344,
+    "relevance" : 0.6704593477613914,
     "sentiment" : null,
     "text" : "cathepsin"
   }, {
@@ -216,7 +216,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.15971293294657857,
+    "relevance" : 0.14496644877763032,
+    "sentiment" : null,
+    "text" : "control"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.15383170668552304,
     "sentiment" : null,
     "text" : "persistence"
   }, {
@@ -224,15 +232,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.14699726511175337,
-    "sentiment" : null,
-    "text" : "memory"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.5756676774501148,
+    "relevance" : 0.5292363370071461,
     "sentiment" : null,
     "text" : "lymphocyte"
   } ],
@@ -248,7 +248,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.24060324564591912,
+    "relevance" : 0.213605639698089,
     "sentiment" : null,
     "text" : "contractile"
   }, {
@@ -256,7 +256,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.33451109094625164,
+    "relevance" : 0.29547983188902294,
     "sentiment" : null,
     "text" : "airway"
   }, {
@@ -264,15 +264,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1882260927022843,
+    "relevance" : 0.22745301461335338,
     "sentiment" : null,
-    "text" : "muscle"
+    "text" : "asm"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.19698220035988462,
+    "relevance" : 0.1760258145726349,
     "sentiment" : null,
     "text" : "tissue"
   } ],
@@ -288,7 +288,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2507045313585017,
+    "relevance" : 0.2655050179859929,
     "sentiment" : null,
     "text" : "metabolomic"
   }, {
@@ -296,7 +296,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22963809542385522,
+    "relevance" : 0.20965011987926896,
     "sentiment" : null,
     "text" : "metabolism"
   }, {
@@ -304,7 +304,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22822819124708654,
+    "relevance" : 0.21434097000265068,
     "sentiment" : null,
     "text" : "microbial"
   }, {
@@ -312,7 +312,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2180239083795995,
+    "relevance" : 0.2278945499476726,
     "sentiment" : null,
     "text" : "metabolite"
   } ],
@@ -328,7 +328,23 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2712507070843567,
+    "relevance" : 0.19818794285069102,
+    "sentiment" : null,
+    "text" : "abundant"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.20394980508984267,
+    "sentiment" : null,
+    "text" : "production"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.21719915065686435,
     "sentiment" : null,
     "text" : "cell"
   }, {
@@ -336,25 +352,9 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5255895566668011,
+    "relevance" : 0.584868936455201,
     "sentiment" : null,
     "text" : "eosinophilic"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.20818330742952273,
-    "sentiment" : null,
-    "text" : "lung"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.20842810742842444,
-    "sentiment" : null,
-    "text" : "disease"
   } ],
   "categoryList" : null,
   "conceptList" : null
@@ -368,23 +368,23 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20132115506682435,
+    "relevance" : 0.2323637183809557,
     "sentiment" : null,
-    "text" : "fetus"
+    "text" : "metabolome"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22472284622422345,
+    "relevance" : 0.1837524406104148,
     "sentiment" : null,
-    "text" : "human"
+    "text" : "placental"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.37029605192484705,
+    "relevance" : 0.35553112194333336,
     "sentiment" : null,
     "text" : "tissue"
   }, {
@@ -392,7 +392,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20062432208975028,
+    "relevance" : 0.21444663904203237,
     "sentiment" : null,
     "text" : "biochemical"
   } ],
@@ -408,7 +408,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.16901188022429858,
+    "relevance" : 0.18414956698212026,
     "sentiment" : null,
     "text" : "bioactive"
   }, {
@@ -416,7 +416,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1719291206713987,
+    "relevance" : 0.17211108770795963,
     "sentiment" : null,
     "text" : "biosynthesis"
   }, {
@@ -424,7 +424,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3337814295958141,
+    "relevance" : 0.3022577444825887,
     "sentiment" : null,
     "text" : "bacterial"
   }, {
@@ -432,7 +432,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2847069199546788,
+    "relevance" : 0.27171865259509276,
     "sentiment" : null,
     "text" : "fungal"
   } ],
@@ -448,7 +448,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5942858259878182,
+    "relevance" : 0.1848044536829917,
+    "sentiment" : null,
+    "text" : "enzymic"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.6322247706178716,
     "sentiment" : null,
     "text" : "polyketide"
   }, {
@@ -456,7 +464,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.19299147712205478,
+    "relevance" : 0.19679405585372844,
     "sentiment" : null,
     "text" : "synthase"
   }, {
@@ -464,15 +472,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.18968481886842725,
-    "sentiment" : null,
-    "text" : "enzyme"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.1954899484095739,
+    "relevance" : 0.18221660101074655,
     "sentiment" : null,
     "text" : "biosynthesis"
   } ],
@@ -488,7 +488,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3129865506134277,
+    "relevance" : 0.179525302417138,
+    "sentiment" : null,
+    "text" : "novel"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.31568447314286896,
     "sentiment" : null,
     "text" : "biomimetic"
   }, {
@@ -496,7 +504,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.23964516113408463,
+    "relevance" : 0.25744504275228874,
     "sentiment" : null,
     "text" : "adhesion"
   }, {
@@ -504,15 +512,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1854024492420056,
-    "sentiment" : null,
-    "text" : "flexor"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.3180415708785038,
+    "relevance" : 0.26681105949099304,
     "sentiment" : null,
     "text" : "vivo"
   } ],
@@ -568,7 +568,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3066554800757152,
+    "relevance" : 0.24432406687370473,
     "sentiment" : null,
     "text" : "cell"
   }, {
@@ -576,7 +576,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20714641489017743,
+    "relevance" : 0.2102282591198727,
     "sentiment" : null,
     "text" : "extracellular"
   }, {
@@ -584,7 +584,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.17433905878313816,
+    "relevance" : 0.20056375002100274,
     "sentiment" : null,
     "text" : "matrix"
   }, {
@@ -592,7 +592,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2263425043455155,
+    "relevance" : 0.216237281787658,
     "sentiment" : null,
     "text" : "molecule"
   } ],
@@ -608,7 +608,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20240671411640604,
+    "relevance" : 0.20369224965280247,
     "sentiment" : null,
     "text" : "autoimmune"
   }, {
@@ -616,7 +616,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.28099829499438433,
+    "relevance" : 0.25844675710397025,
     "sentiment" : null,
     "text" : "macrophage"
   }, {
@@ -624,7 +624,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22348430055631158,
+    "relevance" : 0.22597800172056193,
     "sentiment" : null,
     "text" : "polymorphism"
   }, {
@@ -632,9 +632,9 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.23118615532491427,
+    "relevance" : 0.18849236470849812,
     "sentiment" : null,
-    "text" : "gene"
+    "text" : "encode"
   } ],
   "categoryList" : null,
   "conceptList" : null
@@ -648,7 +648,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3332872158718949,
+    "relevance" : 0.21821596912375713,
     "sentiment" : null,
     "text" : "genome"
   }, {
@@ -656,7 +656,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.26353278424885074,
+    "relevance" : 0.30067709343611726,
     "sentiment" : null,
     "text" : "replication"
   }, {
@@ -664,17 +664,17 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2806575878753064,
+    "relevance" : 0.2793078954346979,
     "sentiment" : null,
-    "text" : "susceptibility"
+    "text" : "sclerosis"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2418414433535156,
+    "relevance" : 0.27665450275736214,
     "sentiment" : null,
-    "text" : "locus"
+    "text" : "susceptibility"
   } ],
   "categoryList" : null,
   "conceptList" : null
@@ -688,7 +688,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5477995951297594,
+    "relevance" : 0.48516936668689564,
     "sentiment" : null,
     "text" : "mutation"
   }, {
@@ -696,15 +696,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.19745697086064096,
+    "relevance" : 0.1943866437218949,
     "sentiment" : null,
-    "text" : "disorder"
+    "text" : "cause"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1961988413728608,
+    "relevance" : 0.20065787959743192,
     "sentiment" : null,
     "text" : "spinal"
   }, {
@@ -712,7 +712,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.40387986292592076,
+    "relevance" : 0.4151287295865624,
     "sentiment" : null,
     "text" : "meningioma"
   } ],
@@ -728,15 +728,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.17201761520659503,
+    "relevance" : 0.17646536141232994,
     "sentiment" : null,
-    "text" : "intestinal"
+    "text" : "adaptive"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2866101522492023,
+    "relevance" : 0.3887231268051955,
     "sentiment" : null,
     "text" : "helminth"
   }, {
@@ -744,7 +744,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2705555694937145,
+    "relevance" : 0.1983270157588103,
     "sentiment" : null,
     "text" : "infection"
   }, {
@@ -752,9 +752,9 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20235545320160614,
+    "relevance" : 0.2089944580694585,
     "sentiment" : null,
-    "text" : "parasite"
+    "text" : "abstract"
   } ],
   "categoryList" : null,
   "conceptList" : null
@@ -768,7 +768,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.28363889356925603,
+    "relevance" : 0.25253420856066566,
+    "sentiment" : null,
+    "text" : "matrix"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.3391417285297855,
     "sentiment" : null,
     "text" : "stromal"
   }, {
@@ -776,15 +784,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22322952259162537,
-    "sentiment" : null,
-    "text" : "autophagy"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.24268885409270224,
+    "relevance" : 0.23809143262814064,
     "sentiment" : null,
     "text" : "mitochondrial"
   }, {
@@ -792,7 +792,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2340719543636693,
+    "relevance" : 0.22222728755723214,
     "sentiment" : null,
     "text" : "metabolism"
   } ],
@@ -808,7 +808,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.27940674893316864,
+    "relevance" : 0.35012985596954144,
     "sentiment" : null,
     "text" : "chemical"
   }, {
@@ -816,15 +816,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2066973972317836,
-    "sentiment" : null,
-    "text" : "cellular"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.43419690331562066,
+    "relevance" : 0.3345552845335157,
     "sentiment" : null,
     "text" : "molecular"
   }, {
@@ -832,9 +824,17 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.19472344329844432,
+    "relevance" : 0.20477897717083626,
     "sentiment" : null,
-    "text" : "mechanism"
+    "text" : "novel"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.20434094098900646,
+    "sentiment" : null,
+    "text" : "predictive"
   } ],
   "categoryList" : null,
   "conceptList" : null
@@ -848,7 +848,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2311442159132785,
+    "relevance" : 0.15321662290781457,
+    "sentiment" : null,
+    "text" : "allergenicity"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.2364026159368881,
     "sentiment" : null,
     "text" : "recombinant"
   }, {
@@ -856,15 +864,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.17041699554414308,
-    "sentiment" : null,
-    "text" : "human"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.5371743678060517,
+    "relevance" : 0.6320597279159619,
     "sentiment" : null,
     "text" : "lactoferrin"
   }, {
@@ -872,7 +872,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3667995604696481,
+    "relevance" : 0.3341491843446818,
     "sentiment" : null,
     "text" : "glycosylation"
   } ],
@@ -888,7 +888,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.7644918033173279,
+    "relevance" : 0.7549938112100472,
     "sentiment" : null,
     "text" : "inhibitory"
   }, {
@@ -896,7 +896,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20621819150114828,
+    "relevance" : 0.27114043596347154,
     "sentiment" : null,
     "text" : "regulatory"
   }, {
@@ -904,7 +904,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.31116986023066767,
+    "relevance" : 0.2592625342293068,
     "sentiment" : null,
     "text" : "immune"
   }, {
@@ -928,7 +928,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.48726007502795327,
+    "relevance" : 0.5031992886057689,
     "sentiment" : null,
     "text" : "dye"
   }, {
@@ -936,7 +936,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2778558835762961,
+    "relevance" : 0.32255996919716484,
     "sentiment" : null,
     "text" : "reactive"
   }, {
@@ -944,15 +944,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1949991739390592,
+    "relevance" : 0.16808980405595408,
     "sentiment" : null,
-    "text" : "bacterial"
+    "text" : "fabric"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20300979897075688,
+    "relevance" : 0.21124896259214404,
     "sentiment" : null,
     "text" : "anaerobically"
   } ],
@@ -1008,7 +1008,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5098870518994157,
+    "relevance" : 0.5219460890884321,
     "sentiment" : null,
     "text" : "epidermal"
   }, {
@@ -1016,7 +1016,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5065683956625627,
+    "relevance" : 0.4674953212919596,
     "sentiment" : null,
     "text" : "cytokine"
   }, {
@@ -1024,7 +1024,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.23205890020554526,
+    "relevance" : 0.24373666127329857,
     "sentiment" : null,
     "text" : "skin"
   }, {
@@ -1032,7 +1032,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.17302120602697985,
+    "relevance" : 0.17477298521181633,
     "sentiment" : null,
     "text" : "sensitization"
   } ],
@@ -1048,15 +1048,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.21087426217963978,
+    "relevance" : 0.22230102912357025,
     "sentiment" : null,
-    "text" : "metabolic"
+    "text" : "quantification"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22349868565467917,
+    "relevance" : 0.21997261476676006,
     "sentiment" : null,
     "text" : "protozoan"
   }, {
@@ -1064,7 +1064,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.23770234264568824,
+    "relevance" : 0.21832586045235425,
     "sentiment" : null,
     "text" : "intracellular"
   }, {
@@ -1072,7 +1072,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2220665818335858,
+    "relevance" : 0.22375283700852056,
     "sentiment" : null,
     "text" : "metabolomic"
   } ],
@@ -1088,7 +1088,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1360427804371207,
+    "relevance" : 0.13600753893651635,
     "sentiment" : null,
     "text" : "importance"
   }, {
@@ -1096,7 +1096,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.677188474317685,
+    "relevance" : 0.6827028034175878,
     "sentiment" : null,
     "text" : "immunological"
   }, {
@@ -1104,7 +1104,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.6075608991628418,
+    "relevance" : 0.6000497380055057,
     "sentiment" : null,
     "text" : "synapse"
   }, {
@@ -1128,7 +1128,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3523097208830509,
+    "relevance" : 0.4532270186779825,
     "sentiment" : null,
     "text" : "hematopoietic"
   }, {
@@ -1136,15 +1136,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.21444008610130416,
-    "sentiment" : null,
-    "text" : "cell"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.26848156307831716,
+    "relevance" : 0.19993473333571793,
     "sentiment" : null,
     "text" : "gene"
   }, {
@@ -1152,9 +1144,17 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.21940232390755604,
+    "relevance" : 0.21087193481062078,
     "sentiment" : null,
-    "text" : "neuropathology"
+    "text" : "therapy"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.27269419343524903,
+    "sentiment" : null,
+    "text" : "mucopolysaccharidosis"
   } ],
   "categoryList" : null,
   "conceptList" : null
@@ -1168,7 +1168,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.39291927909776775,
+    "relevance" : 0.4184349953051856,
     "sentiment" : null,
     "text" : "serum"
   }, {
@@ -1176,7 +1176,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.4465551979896058,
+    "relevance" : 0.5710391279540042,
     "sentiment" : null,
     "text" : "parathyroid"
   }, {
@@ -1184,7 +1184,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3870564371134906,
+    "relevance" : 0.31052699038496223,
     "sentiment" : null,
     "text" : "hormone"
   }, {
@@ -1192,7 +1192,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.14342118454766184,
+    "relevance" : 0.13316911642952917,
     "sentiment" : null,
     "text" : "european"
   } ],
@@ -1208,7 +1208,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2665744540218726,
+    "relevance" : 0.28932681131109506,
     "sentiment" : null,
     "text" : "membrane"
   }, {
@@ -1216,7 +1216,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2583662935321699,
+    "relevance" : 0.2378705772587687,
     "sentiment" : null,
     "text" : "nanotube"
   }, {
@@ -1224,7 +1224,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2527395682096849,
+    "relevance" : 0.2251062652504881,
     "sentiment" : null,
     "text" : "macrophage"
   }, {
@@ -1232,7 +1232,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.30912013209241007,
+    "relevance" : 0.39821721978573543,
     "sentiment" : null,
     "text" : "vesicular"
   } ],
@@ -1248,7 +1248,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.26892142623907117,
+    "relevance" : 0.24960321972055272,
     "sentiment" : null,
     "text" : "protein"
   }, {
@@ -1256,7 +1256,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3209434957548465,
+    "relevance" : 0.37081624225420085,
     "sentiment" : null,
     "text" : "phagocytosis"
   }, {
@@ -1264,7 +1264,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2743678534614916,
+    "relevance" : 0.2617494700399551,
     "sentiment" : null,
     "text" : "intracellular"
   }, {
@@ -1272,9 +1272,9 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22627001268772556,
+    "relevance" : 0.24093203534386687,
     "sentiment" : null,
-    "text" : "neutrophil"
+    "text" : "candida"
   } ],
   "categoryList" : null,
   "conceptList" : null
@@ -1288,7 +1288,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.8085647206167718,
+    "relevance" : 0.8027164650760654,
     "sentiment" : null,
     "text" : "atelectasis"
   }, {
@@ -1296,7 +1296,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.25054309511514833,
+    "relevance" : 0.30299091690281793,
     "sentiment" : null,
     "text" : "classification"
   }, {
@@ -1304,17 +1304,17 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.13389555976367928,
+    "relevance" : 0.11483677364700096,
     "sentiment" : null,
-    "text" : "ear"
+    "text" : "proposal"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.12486946983155855,
+    "relevance" : 0.11769221953149389,
     "sentiment" : null,
-    "text" : "child"
+    "text" : "ear"
   } ],
   "categoryList" : null,
   "conceptList" : null
@@ -1328,15 +1328,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.23555286765178313,
-    "sentiment" : null,
-    "text" : "cellular"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.30068484078115243,
+    "relevance" : 0.21199482620976223,
     "sentiment" : null,
     "text" : "biology"
   }, {
@@ -1344,7 +1336,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22403601592662714,
+    "relevance" : 0.21942001547594397,
     "sentiment" : null,
     "text" : "flexor"
   }, {
@@ -1352,9 +1344,17 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.31929778982041307,
+    "relevance" : 0.443678380640039,
     "sentiment" : null,
     "text" : "adhesion"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.230537982276875,
+    "sentiment" : null,
+    "text" : "formation"
   } ],
   "categoryList" : null,
   "conceptList" : null
@@ -1368,7 +1368,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.16192117800366562,
+    "relevance" : 0.17293826086495478,
     "sentiment" : null,
     "text" : "intervertebral"
   }, {
@@ -1376,7 +1376,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.4708107933781179,
+    "relevance" : 0.5293935830266956,
     "sentiment" : null,
     "text" : "particle"
   }, {
@@ -1384,7 +1384,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.32731530266919906,
+    "relevance" : 0.24369618918348984,
     "sentiment" : null,
     "text" : "tissue"
   }, {
@@ -1392,7 +1392,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2650739738520226,
+    "relevance" : 0.2940226438375224,
     "sentiment" : null,
     "text" : "poly"
   } ],
@@ -1408,7 +1408,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1890374878376717,
+    "relevance" : 0.23870373302144493,
     "sentiment" : null,
     "text" : "deoxy"
   }, {
@@ -1416,7 +1416,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1829025799207511,
+    "relevance" : 0.20692601453782372,
     "sentiment" : null,
     "text" : "hydrolyze"
   }, {
@@ -1424,7 +1424,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.46389295509542083,
+    "relevance" : 0.5158245459931662,
     "sentiment" : null,
     "text" : "purine"
   }, {
@@ -1432,7 +1432,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.34583788889728484,
+    "relevance" : 0.23272594469035968,
     "sentiment" : null,
     "text" : "nucleotide"
   } ],
@@ -1448,7 +1448,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2543351081204598,
+    "relevance" : 0.2192893175516818,
     "sentiment" : null,
     "text" : "intestinal"
   }, {
@@ -1456,7 +1456,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5963412801755039,
+    "relevance" : 0.5535699371594068,
     "sentiment" : null,
     "text" : "microbiota"
   }, {
@@ -1464,7 +1464,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.24529533670025983,
+    "relevance" : 0.38413453138864423,
     "sentiment" : null,
     "text" : "functional"
   }, {
@@ -1472,7 +1472,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.21425265030734258,
+    "relevance" : 0.18984272368235344,
     "sentiment" : null,
     "text" : "bowel"
   } ],
@@ -1488,7 +1488,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.24004990221382672,
+    "relevance" : 0.23862213043997754,
     "sentiment" : null,
     "text" : "fluorescent"
   }, {
@@ -1496,7 +1496,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.424817526899958,
+    "relevance" : 0.3445643117460877,
     "sentiment" : null,
     "text" : "protein"
   }, {
@@ -1504,7 +1504,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3260909613748302,
+    "relevance" : 0.4514506956676008,
     "sentiment" : null,
     "text" : "intravital"
   }, {
@@ -1512,9 +1512,9 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22582397979030117,
+    "relevance" : 0.21282408090425325,
     "sentiment" : null,
-    "text" : "cell"
+    "text" : "imaging"
   } ],
   "categoryList" : null,
   "conceptList" : null
@@ -1528,7 +1528,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.13092746432591135,
+    "relevance" : 0.13000968521346956,
     "sentiment" : null,
     "text" : "role"
   }, {
@@ -1536,7 +1536,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.28825619053272117,
+    "relevance" : 0.3125078456969175,
     "sentiment" : null,
     "text" : "coupling"
   }, {
@@ -1544,7 +1544,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.7358529975944872,
+    "relevance" : 0.7077996388555532,
     "sentiment" : null,
     "text" : "fascin"
   }, {
@@ -1552,7 +1552,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.242946565954758,
+    "relevance" : 0.27846624585522506,
     "sentiment" : null,
     "text" : "formation"
   } ],
@@ -1568,7 +1568,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.12711157750486163,
+    "relevance" : 0.14292446772357703,
     "sentiment" : null,
     "text" : "control"
   }, {
@@ -1576,7 +1576,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.45090696171454125,
+    "relevance" : 0.36352609517754175,
     "sentiment" : null,
     "text" : "endothelial"
   }, {
@@ -1584,7 +1584,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3645941285875862,
+    "relevance" : 0.30761552270301995,
     "sentiment" : null,
     "text" : "endothelium"
   }, {
@@ -1592,7 +1592,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.527722023750294,
+    "relevance" : 0.6393817962795861,
     "sentiment" : null,
     "text" : "hematopoietic"
   } ],
@@ -1608,7 +1608,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3618133984084154,
+    "relevance" : 0.32630799812543054,
     "sentiment" : null,
     "text" : "molecular"
   }, {
@@ -1616,15 +1616,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.21015308527390458,
-    "sentiment" : null,
-    "text" : "tumor"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.27363137428282436,
+    "relevance" : 0.23820993759201442,
     "sentiment" : null,
     "text" : "microenvironment"
   }, {
@@ -1632,7 +1624,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.37033256135904924,
+    "relevance" : 0.17047112628714367,
+    "sentiment" : null,
+    "text" : "define"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.4423808098645948,
     "sentiment" : null,
     "text" : "stromal"
   } ],
@@ -1648,7 +1648,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.23607314193539114,
+    "relevance" : 0.20967691148755546,
     "sentiment" : null,
     "text" : "vitro"
   }, {
@@ -1656,7 +1656,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.642564024163268,
+    "relevance" : 0.6914991953436287,
     "sentiment" : null,
     "text" : "candida"
   }, {
@@ -1664,7 +1664,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.18863688943952217,
+    "relevance" : 0.20657101463849853,
     "sentiment" : null,
     "text" : "glabra"
   }, {
@@ -1672,7 +1672,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.18945755639705014,
+    "relevance" : 0.18109294860946384,
     "sentiment" : null,
     "text" : "antifungal"
   } ],
@@ -1688,7 +1688,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.26781778221613683,
+    "relevance" : 0.2695021832431129,
     "sentiment" : null,
     "text" : "airway"
   }, {
@@ -1696,7 +1696,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22523792659204184,
+    "relevance" : 0.20087379393836363,
     "sentiment" : null,
     "text" : "immune"
   }, {
@@ -1704,7 +1704,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5338606768581443,
+    "relevance" : 0.5788076534447948,
     "sentiment" : null,
     "text" : "homeostasis"
   }, {
@@ -1712,7 +1712,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.37184369204630424,
+    "relevance" : 0.36287691936625943,
     "sentiment" : null,
     "text" : "inflammation"
   } ],
@@ -1728,7 +1728,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3430718561461584,
+    "relevance" : 0.39794076424512725,
     "sentiment" : null,
     "text" : "imaging"
   }, {
@@ -1736,7 +1736,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2763347992867526,
+    "relevance" : 0.17238267209234198,
+    "sentiment" : null,
+    "text" : "technique"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.25521907686212686,
     "sentiment" : null,
     "text" : "cerebral"
   }, {
@@ -1744,17 +1752,9 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2478671283518441,
+    "relevance" : 0.24603766635135116,
     "sentiment" : null,
     "text" : "microvasculature"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.16990939648341796,
-    "sentiment" : null,
-    "text" : "brain"
   } ],
   "categoryList" : null,
   "conceptList" : null
@@ -1768,7 +1768,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1817248780331192,
+    "relevance" : 0.18357254307259213,
     "sentiment" : null,
     "text" : "biosynthesis"
   }, {
@@ -1776,7 +1776,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3959971882489237,
+    "relevance" : 0.4080814108177397,
     "sentiment" : null,
     "text" : "yeast"
   }, {
@@ -1784,7 +1784,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.24172406300758642,
+    "relevance" : 0.20379725656699754,
     "sentiment" : null,
     "text" : "cell"
   }, {
@@ -1792,7 +1792,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20458157926174947,
+    "relevance" : 0.2123192902174071,
     "sentiment" : null,
     "text" : "peroxisome"
   } ],
@@ -1808,7 +1808,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.37815965490235615,
+    "relevance" : 0.21869894389899802,
     "sentiment" : null,
     "text" : "genetic"
   }, {
@@ -1816,7 +1816,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.26563476043421497,
+    "relevance" : 0.3460209475789321,
     "sentiment" : null,
     "text" : "modifier"
   }, {
@@ -1824,17 +1824,17 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2413191491184984,
+    "relevance" : 0.22097629669976165,
     "sentiment" : null,
-    "text" : "formation"
+    "text" : "inclusion"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3003023184020829,
+    "relevance" : 0.2670100534233686,
     "sentiment" : null,
-    "text" : "brain"
+    "text" : "formation"
   } ],
   "categoryList" : null,
   "conceptList" : null
@@ -1848,7 +1848,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.23330802109327448,
+    "relevance" : 0.2601485500307673,
     "sentiment" : null,
     "text" : "imaging"
   }, {
@@ -1856,7 +1856,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.550694610354516,
+    "relevance" : 0.5146223754375742,
     "sentiment" : null,
     "text" : "intercellular"
   }, {
@@ -1864,17 +1864,17 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20236859719526407,
+    "relevance" : 0.2891243579953682,
     "sentiment" : null,
-    "text" : "immune"
+    "text" : "optical"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3206829729693321,
+    "relevance" : 0.22246209293684643,
     "sentiment" : null,
-    "text" : "optical"
+    "text" : "tweezers"
   } ],
   "categoryList" : null,
   "conceptList" : null
@@ -1888,7 +1888,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.36593261942749233,
+    "relevance" : 0.3608712614138996,
     "sentiment" : null,
     "text" : "vacuolar"
   }, {
@@ -1896,15 +1896,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.16173026627540016,
+    "relevance" : 0.15660945831925255,
     "sentiment" : null,
-    "text" : "molecule"
+    "text" : "cytosol"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.16934575376458644,
+    "relevance" : 0.17636606386786668,
     "sentiment" : null,
     "text" : "proteolysis"
   }, {
@@ -1912,7 +1912,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2110354187233957,
+    "relevance" : 0.23535346977535548,
     "sentiment" : null,
     "text" : "ion"
   } ],
@@ -1968,7 +1968,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20039476036982912,
+    "relevance" : 0.20675317707733687,
     "sentiment" : null,
     "text" : "metabolically"
   }, {
@@ -1976,7 +1976,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.4498879981674065,
+    "relevance" : 0.3001779775603184,
     "sentiment" : null,
     "text" : "tumor"
   }, {
@@ -1984,7 +1984,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.21718329514106927,
+    "relevance" : 0.2123802218168559,
     "sentiment" : null,
     "text" : "microenvironment"
   }, {
@@ -1992,7 +1992,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20065251444894822,
+    "relevance" : 0.2526330233264844,
     "sentiment" : null,
     "text" : "hydrogen"
   } ],
@@ -2008,7 +2008,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20029744818307033,
+    "relevance" : 0.17958088878552447,
     "sentiment" : null,
     "text" : "protein"
   }, {
@@ -2016,15 +2016,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.18767798142922681,
-    "sentiment" : null,
-    "text" : "organism"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.47738397458217363,
+    "relevance" : 0.5609596919931852,
     "sentiment" : null,
     "text" : "spectrometry"
   }, {
@@ -2032,7 +2024,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.17344724328252525,
+    "relevance" : 0.17807445940353922,
+    "sentiment" : null,
+    "text" : "ion"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.16461310643763083,
     "sentiment" : null,
     "text" : "proteome"
   } ],
@@ -2048,7 +2048,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5071675727533406,
+    "relevance" : 0.5984191217054529,
     "sentiment" : null,
     "text" : "membrane"
   }, {
@@ -2056,7 +2056,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.48524593353121986,
+    "relevance" : 0.459081103812199,
     "sentiment" : null,
     "text" : "nanotube"
   }, {
@@ -2064,7 +2064,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1942926028752504,
+    "relevance" : 0.17812572749523137,
     "sentiment" : null,
     "text" : "immune"
   }, {
@@ -2072,7 +2072,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.26254022141508915,
+    "relevance" : 0.22451564078142378,
     "sentiment" : null,
     "text" : "cell"
   } ],
@@ -2088,7 +2088,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5972541454035829,
+    "relevance" : 0.44346864546870746,
     "sentiment" : null,
     "text" : "vinculin"
   }, {
@@ -2096,7 +2096,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22088385580765918,
+    "relevance" : 0.23423725929509126,
     "sentiment" : null,
     "text" : "binding"
   }, {
@@ -2104,7 +2104,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.15863587134704238,
+    "relevance" : 0.15485668696040056,
     "sentiment" : null,
     "text" : "regulate"
   }, {
@@ -2112,7 +2112,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3939955007940117,
+    "relevance" : 0.487710651156823,
     "sentiment" : null,
     "text" : "adhesion"
   } ],
@@ -2128,7 +2128,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.17757221082306401,
+    "relevance" : 0.20214541822164922,
     "sentiment" : null,
     "text" : "synthase"
   }, {
@@ -2136,7 +2136,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.6406037907833564,
+    "relevance" : 0.4359416936355906,
     "sentiment" : null,
     "text" : "gene"
   }, {
@@ -2144,15 +2144,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.17571208808939026,
+    "relevance" : 0.19038628412171943,
     "sentiment" : null,
-    "text" : "cluster"
+    "text" : "uncharacterized"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1854486600326853,
+    "relevance" : 0.21770452642016924,
     "sentiment" : null,
     "text" : "polyketide"
   } ],
@@ -2168,7 +2168,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.23943088680217683,
+    "relevance" : 0.22442824478035495,
     "sentiment" : null,
     "text" : "clinically"
   }, {
@@ -2176,7 +2176,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.33761774925120835,
+    "relevance" : 0.2719325389421744,
     "sentiment" : null,
     "text" : "biologically"
   }, {
@@ -2184,7 +2184,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.46531851343564645,
+    "relevance" : 0.2654277235005694,
     "sentiment" : null,
     "text" : "gene"
   }, {
@@ -2192,7 +2192,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2207770707487629,
+    "relevance" : 0.2967239413116842,
     "sentiment" : null,
     "text" : "sample"
   } ],
@@ -2208,7 +2208,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.6878248946319859,
+    "relevance" : 0.7446702539073153,
     "sentiment" : null,
     "text" : "oncogenic"
   }, {
@@ -2216,7 +2216,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.11950959084575247,
+    "relevance" : 0.11252228909159107,
     "sentiment" : null,
     "text" : "cooperate"
   }, {
@@ -2224,7 +2224,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.4141031489245438,
+    "relevance" : 0.25590170571337056,
     "sentiment" : null,
     "text" : "tumor"
   }, {
@@ -2232,7 +2232,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.24426038629513142,
+    "relevance" : 0.2931203412635608,
     "sentiment" : null,
     "text" : "progression"
   } ],
@@ -2248,7 +2248,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.16291839381472079,
+    "relevance" : 0.17764423308728688,
     "sentiment" : null,
     "text" : "detection"
   }, {
@@ -2256,7 +2256,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.7538109908353423,
+    "relevance" : 0.7577807199168387,
     "sentiment" : null,
     "text" : "aspergillus"
   }, {
@@ -2264,17 +2264,17 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1664431084989776,
+    "relevance" : 0.18034842910341525,
     "sentiment" : null,
-    "text" : "lung"
+    "text" : "tissue"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22440786958344533,
+    "relevance" : 0.1761578414416745,
     "sentiment" : null,
-    "text" : "tissue"
+    "text" : "sample"
   } ],
   "categoryList" : null,
   "conceptList" : null
@@ -2288,15 +2288,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20860541993147952,
+    "relevance" : 0.21659306295686498,
     "sentiment" : null,
-    "text" : "locus"
+    "text" : "concentration"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.24204189052332298,
+    "relevance" : 0.21597678893657046,
     "sentiment" : null,
     "text" : "liver"
   }, {
@@ -2304,7 +2304,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.4653477654621873,
+    "relevance" : 0.45274042002980835,
     "sentiment" : null,
     "text" : "enzyme"
   }, {
@@ -2312,7 +2312,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.25920667631244315,
+    "relevance" : 0.2880884365508103,
     "sentiment" : null,
     "text" : "plasma"
   } ],
@@ -2328,15 +2328,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.21890817444064353,
+    "relevance" : 0.19914853165914048,
     "sentiment" : null,
-    "text" : "gene"
+    "text" : "linear"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.27040523966494145,
+    "relevance" : 0.2726964558690562,
     "sentiment" : null,
     "text" : "expression"
   }, {
@@ -2344,7 +2344,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22747450621907406,
+    "relevance" : 0.20061923670018922,
     "sentiment" : null,
     "text" : "physiological"
   }, {
@@ -2352,7 +2352,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.21130712058359474,
+    "relevance" : 0.22313414357677797,
     "sentiment" : null,
     "text" : "microarray"
   } ],
@@ -2368,15 +2368,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.15488473173674472,
+    "relevance" : 0.19054205345513686,
     "sentiment" : null,
-    "text" : "guideline"
+    "text" : "use"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1648870416842459,
+    "relevance" : 0.18231596144386242,
     "sentiment" : null,
     "text" : "interpretation"
   }, {
@@ -2384,7 +2384,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.4490162066261498,
+    "relevance" : 0.5533530010643888,
     "sentiment" : null,
     "text" : "assay"
   }, {
@@ -2392,7 +2392,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.6677714842290488,
+    "relevance" : 0.4551585747476219,
     "sentiment" : null,
     "text" : "autophagy"
   } ],
@@ -2448,7 +2448,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5299133934381335,
+    "relevance" : 0.45833400212393827,
     "sentiment" : null,
     "text" : "cell"
   }, {
@@ -2456,7 +2456,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3643428333350027,
+    "relevance" : 0.3784295472471002,
     "sentiment" : null,
     "text" : "pluripotency"
   }, {
@@ -2464,15 +2464,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.15621193238629139,
+    "relevance" : 0.17160614814966813,
     "sentiment" : null,
-    "text" : "pluripotent"
+    "text" : "regenerative"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.19464753118892925,
+    "relevance" : 0.2013436208803701,
     "sentiment" : null,
     "text" : "molecular"
   } ],
@@ -2528,15 +2528,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.21947405183473667,
-    "sentiment" : null,
-    "text" : "cell"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.2750864931969593,
+    "relevance" : 0.23306801737757826,
     "sentiment" : null,
     "text" : "synapse"
   }, {
@@ -2544,7 +2536,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.32116761131939475,
+    "relevance" : 0.20328113345244364,
+    "sentiment" : null,
+    "text" : "activation"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.31915075775136736,
     "sentiment" : null,
     "text" : "inhibitory"
   }, {
@@ -2552,7 +2552,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2993949546669509,
+    "relevance" : 0.2601695411265136,
     "sentiment" : null,
     "text" : "receptor"
   } ],
@@ -2568,15 +2568,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.16303704391382684,
+    "relevance" : 0.15690776659294553,
     "sentiment" : null,
-    "text" : "mammary"
+    "text" : "null"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2669214082259077,
+    "relevance" : 0.3067032780726239,
     "sentiment" : null,
     "text" : "stromal"
   }, {
@@ -2584,7 +2584,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.7332986619331991,
+    "relevance" : 0.733498933572621,
     "sentiment" : null,
     "text" : "fibroblast"
   }, {
@@ -2592,7 +2592,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.15957951756553113,
+    "relevance" : 0.16343306917779593,
     "sentiment" : null,
     "text" : "characteristic"
   } ],
@@ -2608,7 +2608,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.7366403039323658,
+    "relevance" : 0.6879941705650277,
     "sentiment" : null,
     "text" : "peptide"
   }, {
@@ -2616,7 +2616,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.17008128101760006,
+    "relevance" : 0.17820577260437748,
     "sentiment" : null,
     "text" : "liposome"
   }, {
@@ -2624,7 +2624,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1501628935653263,
+    "relevance" : 0.16491618506701966,
     "sentiment" : null,
     "text" : "delivery"
   }, {
@@ -2632,7 +2632,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.17688022733895153,
+    "relevance" : 0.16870239082411492,
     "sentiment" : null,
     "text" : "protein"
   } ],
@@ -2648,7 +2648,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.21497166303939846,
+    "relevance" : 0.19151783343261175,
     "sentiment" : null,
     "text" : "cell"
   }, {
@@ -2656,15 +2656,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20412409108951257,
+    "relevance" : 0.1998728005939565,
     "sentiment" : null,
-    "text" : "susceptibility"
+    "text" : "activation"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.31944272475794533,
+    "relevance" : 0.3124321894342208,
     "sentiment" : null,
     "text" : "bacterial"
   }, {
@@ -2672,7 +2672,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2715336224351486,
+    "relevance" : 0.31772722371839224,
     "sentiment" : null,
     "text" : "superinfection"
   } ],
@@ -2728,7 +2728,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.18284164786326695,
+    "relevance" : 0.18996713772105656,
     "sentiment" : null,
     "text" : "structural"
   }, {
@@ -2736,7 +2736,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.37679504561172517,
+    "relevance" : 0.2772699742547693,
     "sentiment" : null,
     "text" : "perturbation"
   }, {
@@ -2744,7 +2744,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.44722808348287957,
+    "relevance" : 0.6003746744185802,
     "sentiment" : null,
     "text" : "cystatin"
   }, {
@@ -2752,7 +2752,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.33729982666820874,
+    "relevance" : 0.2721944567004535,
     "sentiment" : null,
     "text" : "amyloid"
   } ],
@@ -2768,7 +2768,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3023656311518256,
+    "relevance" : 0.31005732999564684,
     "sentiment" : null,
     "text" : "hormone"
   }, {
@@ -2776,7 +2776,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.398325930197396,
+    "relevance" : 0.426629705795038,
     "sentiment" : null,
     "text" : "mitochondrial"
   }, {
@@ -2784,7 +2784,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2700482275160521,
+    "relevance" : 0.21998691414554117,
     "sentiment" : null,
     "text" : "biology"
   }, {
@@ -2792,7 +2792,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3111569068900991,
+    "relevance" : 0.3686115493430517,
     "sentiment" : null,
     "text" : "epidermis"
   } ],
@@ -2808,7 +2808,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.241821703002649,
+    "relevance" : 0.2980345045549977,
     "sentiment" : null,
     "text" : "assay"
   }, {
@@ -2816,7 +2816,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3102541347423204,
+    "relevance" : 0.2672343252624513,
     "sentiment" : null,
     "text" : "fungal"
   }, {
@@ -2824,7 +2824,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.34298725959841836,
+    "relevance" : 0.2503373547578161,
     "sentiment" : null,
     "text" : "antigen"
   }, {
@@ -2832,7 +2832,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1793415594942402,
+    "relevance" : 0.2163801940786811,
     "sentiment" : null,
     "text" : "sample"
   } ],
@@ -2848,15 +2848,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20995902383284404,
+    "relevance" : 0.2700471486657313,
     "sentiment" : null,
-    "text" : "research"
+    "text" : "product"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2636804647158998,
+    "relevance" : 0.32315442834442765,
     "sentiment" : null,
     "text" : "synthetic"
   }, {
@@ -2864,7 +2864,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.34917090585918553,
+    "relevance" : 0.2270172892944528,
     "sentiment" : null,
     "text" : "biology"
   }, {
@@ -2872,7 +2872,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2816183106617842,
+    "relevance" : 0.23413021779320237,
     "sentiment" : null,
     "text" : "antibiotic"
   } ],
@@ -2888,7 +2888,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3278429100630419,
+    "relevance" : 0.34594980175855167,
     "sentiment" : null,
     "text" : "fluid"
   }, {
@@ -2896,15 +2896,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1581907173980049,
-    "sentiment" : null,
-    "text" : "synthetic"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.6235402769351005,
+    "relevance" : 0.5596318316187916,
     "sentiment" : null,
     "text" : "polymer"
   }, {
@@ -2912,7 +2904,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.19158339432288196,
+    "relevance" : 0.16724416329662278,
+    "sentiment" : null,
+    "text" : "use"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.20399412799830013,
     "sentiment" : null,
     "text" : "xanthan"
   } ],
@@ -2928,7 +2928,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22822841402762084,
+    "relevance" : 0.1937957869990487,
     "sentiment" : null,
     "text" : "genetic"
   }, {
@@ -2936,7 +2936,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22335528937868548,
+    "relevance" : 0.29929495877536394,
+    "sentiment" : null,
+    "text" : "ablation"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.24670404610765717,
     "sentiment" : null,
     "text" : "differentially"
   }, {
@@ -2944,15 +2952,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22611683196251153,
-    "sentiment" : null,
-    "text" : "tumor"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.26496210223511085,
+    "relevance" : 0.23267041158584784,
     "sentiment" : null,
     "text" : "metastasis"
   } ],
@@ -2968,7 +2968,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2488969535702763,
+    "relevance" : 0.24112073124124145,
     "sentiment" : null,
     "text" : "mitochondrial"
   }, {
@@ -2976,7 +2976,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2446665407311423,
+    "relevance" : 0.28454055376463544,
     "sentiment" : null,
     "text" : "oxidative"
   }, {
@@ -2984,7 +2984,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2614894557063959,
+    "relevance" : 0.26429675538132225,
     "sentiment" : null,
     "text" : "fibroblast"
   }, {
@@ -2992,9 +2992,9 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.23414309606149947,
+    "relevance" : 0.24054112054674348,
     "sentiment" : null,
-    "text" : "cancer"
+    "text" : "lactate"
   } ],
   "categoryList" : null,
   "conceptList" : null
@@ -3008,7 +3008,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3922284883677192,
+    "relevance" : 0.6531165039222034,
     "sentiment" : null,
     "text" : "multifunctional"
   }, {
@@ -3016,7 +3016,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.582490171162822,
+    "relevance" : 0.3339488307438623,
     "sentiment" : null,
     "text" : "cell"
   }, {
@@ -3024,7 +3024,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2054258937594673,
+    "relevance" : 0.2360532550753906,
     "sentiment" : null,
     "text" : "growth"
   }, {
@@ -3032,7 +3032,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20193986727728502,
+    "relevance" : 0.16980628301833023,
     "sentiment" : null,
     "text" : "survival"
   } ],
@@ -3048,7 +3048,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.33027776978132395,
+    "relevance" : 0.24313490290412604,
     "sentiment" : null,
     "text" : "antigen"
   }, {
@@ -3056,7 +3056,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3122834165096048,
+    "relevance" : 0.35632761409526426,
     "sentiment" : null,
     "text" : "aspergillus"
   }, {
@@ -3064,7 +3064,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.28275069422604915,
+    "relevance" : 0.2980185939247819,
     "sentiment" : null,
     "text" : "serum"
   }, {
@@ -3072,7 +3072,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.23506296716636216,
+    "relevance" : 0.28666384980344595,
     "sentiment" : null,
     "text" : "assay"
   } ],
@@ -3128,7 +3128,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2570924231070074,
+    "relevance" : 0.3238392407588956,
     "sentiment" : null,
     "text" : "viscoelastic"
   }, {
@@ -3136,7 +3136,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1926622698156772,
+    "relevance" : 0.2217267347019093,
     "sentiment" : null,
     "text" : "resin"
   }, {
@@ -3144,7 +3144,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2609592196698303,
+    "relevance" : 0.20388354765252098,
     "sentiment" : null,
     "text" : "macroscopic"
   }, {
@@ -3152,7 +3152,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.23354998391936516,
+    "relevance" : 0.2514037767000745,
     "sentiment" : null,
     "text" : "nano"
   } ],
@@ -3168,7 +3168,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.25314146272001903,
+    "relevance" : 0.2318341352015067,
     "sentiment" : null,
     "text" : "dendritic"
   }, {
@@ -3176,7 +3176,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.25237732292675047,
+    "relevance" : 0.22843097024173203,
     "sentiment" : null,
     "text" : "ligand"
   }, {
@@ -3184,7 +3184,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3200226952905737,
+    "relevance" : 0.39595285078226083,
     "sentiment" : null,
     "text" : "costimulatory"
   }, {
@@ -3192,7 +3192,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2516267762728006,
+    "relevance" : 0.24674750424135983,
     "sentiment" : null,
     "text" : "vivo"
   } ],
@@ -3248,7 +3248,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5219032007501689,
+    "relevance" : 0.44943348097375174,
     "sentiment" : null,
     "text" : "metabolic"
   }, {
@@ -3256,7 +3256,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.6306997953163691,
+    "relevance" : 0.6103656139177722,
     "sentiment" : null,
     "text" : "molecular"
   }, {
@@ -3264,7 +3264,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.24136927105677164,
+    "relevance" : 0.32202324422710477,
     "sentiment" : null,
     "text" : "imaging"
   }, {
@@ -3288,7 +3288,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2500415389627622,
+    "relevance" : 0.20826414145772798,
     "sentiment" : null,
     "text" : "neutrophil"
   }, {
@@ -3296,7 +3296,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3728763649716219,
+    "relevance" : 0.4014420727195443,
     "sentiment" : null,
     "text" : "phagocytosis"
   }, {
@@ -3304,7 +3304,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.21358532985779155,
+    "relevance" : 0.25390351354823726,
     "sentiment" : null,
     "text" : "candida"
   }, {
@@ -3312,7 +3312,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2914193871120989,
+    "relevance" : 0.3177140421632394,
     "sentiment" : null,
     "text" : "synthase"
   } ],
@@ -3328,7 +3328,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2148820713156836,
+    "relevance" : 0.24939269783760076,
     "sentiment" : null,
     "text" : "phencyclidine"
   }, {
@@ -3336,15 +3336,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.21113609178844,
+    "relevance" : 0.17586647090204383,
     "sentiment" : null,
-    "text" : "brain"
+    "text" : "pcp"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.19607768286625632,
+    "relevance" : 0.17007425851632252,
     "sentiment" : null,
     "text" : "cognitive"
   }, {
@@ -3352,7 +3352,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.43766520364656053,
+    "relevance" : 0.5237378085650606,
     "sentiment" : null,
     "text" : "neurotrophic"
   } ],
@@ -3368,7 +3368,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2487802356461416,
+    "relevance" : 0.20210618503182304,
     "sentiment" : null,
     "text" : "peptide"
   }, {
@@ -3376,7 +3376,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.24079367557243375,
+    "relevance" : 0.27784437838144144,
     "sentiment" : null,
     "text" : "elution"
   }, {
@@ -3384,17 +3384,17 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.25527872363817705,
+    "relevance" : 0.28718344876431157,
     "sentiment" : null,
-    "text" : "experiment"
+    "text" : "precursor"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20774560705232492,
+    "relevance" : 0.2188935062094558,
     "sentiment" : null,
-    "text" : "proteomic"
+    "text" : "experiment"
   } ],
   "categoryList" : null,
   "conceptList" : null
@@ -3408,7 +3408,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.29726233093966026,
+    "relevance" : 0.39945028969450797,
     "sentiment" : null,
     "text" : "synthetic"
   }, {
@@ -3416,7 +3416,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.40664840544787195,
+    "relevance" : 0.26158391430092587,
     "sentiment" : null,
     "text" : "biology"
   }, {
@@ -3424,7 +3424,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2232542131890226,
+    "relevance" : 0.22365930903393838,
     "sentiment" : null,
     "text" : "microorganism"
   }, {
@@ -3432,7 +3432,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22313227647730083,
+    "relevance" : 0.21682269452098296,
     "sentiment" : null,
     "text" : "biosynthesis"
   } ],
@@ -3448,7 +3448,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2239891961561838,
+    "relevance" : 0.199720576715115,
     "sentiment" : null,
     "text" : "differentially"
   }, {
@@ -3456,7 +3456,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.49106018009329716,
+    "relevance" : 0.5498635005790338,
     "sentiment" : null,
     "text" : "supramolecular"
   }, {
@@ -3464,15 +3464,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.17726814159875193,
+    "relevance" : 0.18878727239184162,
     "sentiment" : null,
-    "text" : "activation"
+    "text" : "formation"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.25976534308058785,
+    "relevance" : 0.23387496533984165,
     "sentiment" : null,
     "text" : "conjugation"
   } ],
@@ -3528,7 +3528,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.17427000800925246,
+    "relevance" : 0.18437817261345402,
     "sentiment" : null,
     "text" : "solubilisation"
   }, {
@@ -3536,7 +3536,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3598391616825415,
+    "relevance" : 0.36887858176560673,
     "sentiment" : null,
     "text" : "surfactant"
   }, {
@@ -3544,7 +3544,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5749559109660941,
+    "relevance" : 0.5642333465542878,
     "sentiment" : null,
     "text" : "micelle"
   }, {
@@ -3552,7 +3552,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.170991389010329,
+    "relevance" : 0.1654737295051707,
     "sentiment" : null,
     "text" : "hydrophobic"
   } ],
@@ -3568,15 +3568,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22598819996341735,
+    "relevance" : 0.23439785131718027,
     "sentiment" : null,
-    "text" : "cell"
+    "text" : "differentiation"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.35987745075414324,
+    "relevance" : 0.3959220485298014,
     "sentiment" : null,
     "text" : "lymphoid"
   }, {
@@ -3584,7 +3584,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.26653506346509126,
+    "relevance" : 0.23807783693721418,
     "sentiment" : null,
     "text" : "tissue"
   }, {
@@ -3592,7 +3592,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3056317347153837,
+    "relevance" : 0.3388231484369235,
     "sentiment" : null,
     "text" : "vitro"
   } ],
@@ -3608,7 +3608,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.429456192482944,
+    "relevance" : 0.6061124289878649,
     "sentiment" : null,
     "text" : "antiinflammatory"
   }, {
@@ -3616,7 +3616,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3079825974548079,
+    "relevance" : 0.26024011061640573,
     "sentiment" : null,
     "text" : "inhibition"
   }, {
@@ -3624,7 +3624,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.4202865052436561,
+    "relevance" : 0.3007424366600787,
     "sentiment" : null,
     "text" : "macrophage"
   }, {
@@ -3632,7 +3632,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.19169955664738986,
+    "relevance" : 0.1978723802473254,
     "sentiment" : null,
     "text" : "activation"
   } ],
@@ -3648,7 +3648,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22214715718916983,
+    "relevance" : 0.19574607113248338,
     "sentiment" : null,
     "text" : "extracellular"
   }, {
@@ -3656,7 +3656,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2309146548607337,
+    "relevance" : 0.18780829618760697,
+    "sentiment" : null,
+    "text" : "matrix"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.23669778954301351,
     "sentiment" : null,
     "text" : "fibrillin"
   }, {
@@ -3664,15 +3672,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20112057749065543,
-    "sentiment" : null,
-    "text" : "protease"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.29505481040645987,
+    "relevance" : 0.3003094202744461,
     "sentiment" : null,
     "text" : "radiation"
   } ],
@@ -3688,7 +3688,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.4356761079607042,
+    "relevance" : 0.28041220510835163,
     "sentiment" : null,
     "text" : "cell"
   }, {
@@ -3696,7 +3696,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20706399434285783,
+    "relevance" : 0.29162929476574234,
     "sentiment" : null,
     "text" : "volume"
   }, {
@@ -3704,7 +3704,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.2741633695382019,
+    "relevance" : 0.34492624010535344,
     "sentiment" : null,
     "text" : "inflammasome"
   }, {
@@ -3712,7 +3712,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1954188131829756,
+    "relevance" : 0.2228535269059695,
     "sentiment" : null,
     "text" : "osmolarity"
   } ],
@@ -3728,7 +3728,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.21578769119914665,
+    "relevance" : 0.2002459296434249,
     "sentiment" : null,
     "text" : "characteristic"
   }, {
@@ -3736,7 +3736,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.33331571924556386,
+    "relevance" : 0.399094782024638,
     "sentiment" : null,
     "text" : "chemical"
   }, {
@@ -3744,7 +3744,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5543158219681599,
+    "relevance" : 0.5386814854593981,
     "sentiment" : null,
     "text" : "allergen"
   }, {
@@ -3752,7 +3752,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.19068933386636383,
+    "relevance" : 0.1699387873499183,
     "sentiment" : null,
     "text" : "protein"
   } ],
@@ -3768,7 +3768,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.26965290514230256,
+    "relevance" : 0.2820276980566834,
     "sentiment" : null,
     "text" : "chloride"
   }, {
@@ -3776,7 +3776,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.39114364251513917,
+    "relevance" : 0.3978541586024728,
     "sentiment" : null,
     "text" : "electrochemical"
   }, {
@@ -3784,7 +3784,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.18616585251170897,
+    "relevance" : 0.18567446272864407,
     "sentiment" : null,
     "text" : "corrosion"
   }, {
@@ -3792,7 +3792,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.17496232744275247,
+    "relevance" : 0.19123560735038003,
     "sentiment" : null,
     "text" : "aerated"
   } ],
@@ -3808,7 +3808,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.25368226340322775,
+    "relevance" : 0.2505883971371655,
     "sentiment" : null,
     "text" : "differentially"
   }, {
@@ -3816,7 +3816,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.28602393986257946,
+    "relevance" : 0.2289785537679887,
     "sentiment" : null,
     "text" : "follicle"
   }, {
@@ -3824,17 +3824,17 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.24553200784575557,
+    "relevance" : 0.45347132105252286,
     "sentiment" : null,
-    "text" : "cell"
+    "text" : "epidermal"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.4068894275593198,
+    "relevance" : 0.2144468478492214,
     "sentiment" : null,
-    "text" : "epidermal"
+    "text" : "regeneration"
   } ],
   "categoryList" : null,
   "conceptList" : null
@@ -3848,15 +3848,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20960371040290127,
+    "relevance" : 0.20634358598678781,
     "sentiment" : null,
-    "text" : "human"
+    "text" : "natural"
   }, {
     "totalTransactions" : null,
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.27069449852336247,
+    "relevance" : 0.2476889612147572,
     "sentiment" : null,
     "text" : "cell"
   }, {
@@ -3864,7 +3864,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.4783524280266732,
+    "relevance" : 0.48020338589252143,
     "sentiment" : null,
     "text" : "macrophage"
   }, {
@@ -3872,9 +3872,9 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.19629153443115321,
+    "relevance" : 0.1924497001296558,
     "sentiment" : null,
-    "text" : "immune"
+    "text" : "distinct"
   } ],
   "categoryList" : null,
   "conceptList" : null
@@ -3888,7 +3888,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.11216607069565898,
+    "relevance" : 0.1034912748754816,
     "sentiment" : null,
     "text" : "second"
   }, {
@@ -3896,7 +3896,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.31984103738123304,
+    "relevance" : 0.19279634212416852,
     "sentiment" : null,
     "text" : "gene"
   }, {
@@ -3904,7 +3904,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5307241780748564,
+    "relevance" : 0.6375555146057632,
     "sentiment" : null,
     "text" : "peroxisomal"
   }, {
@@ -3912,7 +3912,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.538258517783516,
+    "relevance" : 0.5795993870096487,
     "sentiment" : null,
     "text" : "reductase"
   } ],
@@ -3928,7 +3928,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.22230666304327568,
+    "relevance" : 0.24412857978874447,
     "sentiment" : null,
     "text" : "epithelial"
   }, {
@@ -3936,7 +3936,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.7279793029108819,
+    "relevance" : 0.6765734451908921,
     "sentiment" : null,
     "text" : "ovarian"
   }, {
@@ -3944,7 +3944,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.20525530550269183,
+    "relevance" : 0.19236543806020817,
     "sentiment" : null,
     "text" : "cancer"
   }, {
@@ -3952,9 +3952,9 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.1469094065375694,
+    "relevance" : 0.16371387137172733,
     "sentiment" : null,
-    "text" : "asymptomatic"
+    "text" : "collaborative"
   } ],
   "categoryList" : null,
   "conceptList" : null
@@ -3968,7 +3968,15 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.5089436759321223,
+    "relevance" : 0.16738956906410507,
+    "sentiment" : null,
+    "text" : "bacterium"
+  }, {
+    "totalTransactions" : null,
+    "language" : null,
+    "url" : null,
+    "knowledgeGraph" : null,
+    "relevance" : 0.5559290913967905,
     "sentiment" : null,
     "text" : "protein"
   }, {
@@ -3976,7 +3984,7 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.17325284599423024,
+    "relevance" : 0.1766323099535395,
     "sentiment" : null,
     "text" : "bacterial"
   }, {
@@ -3984,17 +3992,9 @@
     "language" : null,
     "url" : null,
     "knowledgeGraph" : null,
-    "relevance" : 0.3353595377825373,
+    "relevance" : 0.25562998896541456,
     "sentiment" : null,
     "text" : "gene"
-  }, {
-    "totalTransactions" : null,
-    "language" : null,
-    "url" : null,
-    "knowledgeGraph" : null,
-    "relevance" : 0.17700012536909138,
-    "sentiment" : null,
-    "text" : "organism"
   } ],
   "categoryList" : null,
   "conceptList" : null

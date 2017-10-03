@@ -27,20 +27,20 @@ public class Start {
   //**MENU**
   
   //Primo passo, creazione del file dizionaries.json
-  private static final boolean buildJsonDictionaries = false;
+  private static final boolean buildJsonDictionaries = true;
   
   //Secondo passo creare i file Json di train e test
-  private static final boolean buildJsonTraining = false;
+  private static final boolean buildJsonTraining = true;
   private static final boolean buildJsonTest = true;
 
   //Terzo passo, decidere se predere i dizionari persistenti o creare altri, creare i csv
   private static final boolean loadDictionariesFromFile = true;
-  private static final boolean buildCSVTraining = false;
+  private static final boolean buildCSVTraining = true;
   private static final boolean buildCSVTest = true;
 
   //Other
-  private static final String category = "science";
-  private static final int numFeatures = 30;
+  private static final String category = "chemistry biology";
+  private static final int numFeatures = 13;
 
   public static void main(String[] args) throws IOException{
     
