@@ -121,14 +121,16 @@ public class Start {
     for(Source source :listSources){
       ArrayList<Keyword> keywordList = new ArrayList<Keyword>();
       for(String category : categories){
-        ke = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder,path+category+".json");
+        ke = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder,path+"glossaries/"+category+".json");
         List<String> toAnalyze = new ArrayList<String>();
         toAnalyze.add(source.getTitle()+" "+source.getDescription());
         keywordList.addAll(ke.extractKeywordsFromTexts(toAnalyze, 4).get(0));
       }
+      System.out.println(source.getTitle()+"\n"+"------------------------------");
       for(Keyword keyword :keywordList){
         System.out.println(keyword.getText()+" "+keyword.getRelevance());
       }
+      System.out.println("-----------------------------\n\n");
     }
 
   }
