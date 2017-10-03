@@ -119,16 +119,24 @@ public class Start {
     List<Source> listSources = dictionaryBuilder.initJsonDataset("dictionariesSource.txt",path,ke,"");
 
     for(Source source :listSources){
+      HashMap<String,ArrayList<Keyword>>  resultsSource = new HashMap<String,ArrayList<Keyword>>();
       ArrayList<Keyword> keywordList = new ArrayList<Keyword>();
       for(String category : categories){
         ke = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder,path+"glossaries/"+category+".json");
         List<String> toAnalyze = new ArrayList<String>();
         toAnalyze.add(source.getTitle()+" "+source.getDescription());
-        keywordList.addAll(ke.extractKeywordsFromTexts(toAnalyze, 4).get(0));
+        ArrayList<Keyword> results = (ArrayList<Keyword>) ke.extractKeywordsFromTexts(toAnalyze, 4).get(0);
+        //keywordList.addAll(results);
+        resultsSource.put(category, results);
       }
       System.out.println(source.getTitle()+"\n"+"------------------------------");
-      for(Keyword keyword :keywordList){
-        System.out.println(keyword.getText()+" "+keyword.getRelevance());
+      for(String key : resultsSource.keySet()){
+        System.out.println("    "+key);
+        keywordList = resultsSource.get(key);
+        for(Keyword keyword :keywordList){
+          System.out.println("      "+keyword.getText()+" "+keyword.getRelevance());
+        }
+        System.out.println("\n");
       }
       System.out.println("-----------------------------\n\n");
     }
