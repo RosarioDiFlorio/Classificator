@@ -108,6 +108,8 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
   public  List<List<String>> createSentencesFromText(String document) throws LanguageException{
     List<List<String>> sentecesList = new ArrayList<List<String>>();
     List<String> senteces = nlpAnalyzer.detectSentences(document.toLowerCase(), ISO_639_1_LanguageCode.ENGLISH);
+    /*List<String> senteces = new ArrayList<>();
+    senteces.add(document.toLowerCase());*/
     for(String sentence: senteces)
     {
       sentecesList.add(cleanAndSplitSentence(sentence, lemmatizer));
@@ -124,7 +126,7 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
    * @return The list of words for a sentence.
    */
   private  List<String> cleanAndSplitSentence(String sentence, Lemmatizer lemmatizer){
-    //sentence = sentence.replaceAll("[.!?\\\\/|<>\'\"+;%$#@&\\^\\(\\),-]\\*", "");
+    //sentence = sentence.replaceAll("(\\.-/#\\^)", " ");
     List<String> textLemmatized = lemmatizer.lemmatize(sentence);
     Iterator<String> it = textLemmatized.iterator();
     while(it.hasNext()){

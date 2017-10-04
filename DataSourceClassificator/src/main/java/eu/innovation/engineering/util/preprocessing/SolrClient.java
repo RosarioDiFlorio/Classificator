@@ -17,6 +17,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
+import eu.innovation.engineering.LSA.keywordExtractor.LSACosineKeywordExtraction;
 import eu.innovation.engineering.config.Configurator;
 import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
@@ -33,10 +34,10 @@ public class SolrClient {
 
 
   public static void main(String[] args) throws Exception{
-
-    KeywordExtractor ke = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
+    KeywordExtractor ke = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder, PathConfigurator.rootFolder+"glossaries.json");
+    //KeywordExtractor ke = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
     String path = PathConfigurator.rootFolder;
-    requestNTechincalPaper(0,5000,ke,path);
+    requestNTechincalPaper(0,3000,ke,path);
 
   }
 
@@ -164,7 +165,8 @@ public class SolrClient {
         System.out.println(results);
         break;
       }
-
+      if(numSourceToSave % 30 == 0)
+        System.out.println(((numSourceToSave*100)/numSourceRequest)+"%");
       for(int i=0; i<results.size();i++){
         JsonElement sourceElement = results.get(i);
         JsonObject sourceObject = sourceElement.getAsJsonObject();
@@ -173,7 +175,7 @@ public class SolrClient {
           description = sourceObject.get("dc_description").getAsString();
           String title = sourceObject.get("dc_title").getAsString();
           String id = sourceObject.get("id").getAsString();
-          System.out.println(id);
+          //System.out.println(id);
           Source source = new Source();
           source.setTitle(title);
           source.setDescription(description);
@@ -182,7 +184,7 @@ public class SolrClient {
           texts.add(title);
           texts.add(description);
           source.setTexts(texts);
-          
+
           List<String> toAnalyze = new ArrayList<String>();
           toAnalyze.add(source.getTitle()+description);
           try{
@@ -200,6 +202,10 @@ public class SolrClient {
             System.out.println("Vado in exception per un motivo sconosciuto");
           }
         }
+      }
+      if(numSourceToSave%60 == 0){
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.writerWithDefaultPrettyPrinter().writeValue(new File(path+"test.json"), sourceList);
       }
       cursorMark = parserJson.parse(response.toString()).getAsJsonObject().get("nextCursorMark").getAsString();
 

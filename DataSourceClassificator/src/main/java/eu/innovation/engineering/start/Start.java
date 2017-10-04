@@ -27,16 +27,16 @@ public class Start {
   //**MENU**
 
   //Primo passo, creazione del file dizionaries.json
-  private static final boolean buildJsonDictionaries = true;
+  private static final boolean buildJsonDictionaries = false;
 
   //Secondo passo creare i file Json di train e test
   private static final boolean buildJsonTraining = false;
   private static final boolean buildJsonTest = false;
 
   //Terzo passo, decidere se predere i dizionari persistenti o creare altri, creare i csv
-  private static final boolean loadDictionariesFromFile = false;
-  private static final boolean buildCSVTraining = false;
-  private static final boolean buildCSVTest = false;
+  private static final boolean loadDictionariesFromFile = true;
+  private static final boolean buildCSVTraining = true;
+  private static final boolean buildCSVTest = true;
 
   //Other
   private static final String category = "";
