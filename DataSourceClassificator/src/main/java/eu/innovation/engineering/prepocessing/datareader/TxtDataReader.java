@@ -157,6 +157,7 @@ public class TxtDataReader implements DataReader {
  
   public static List<String> getCategories(String pathFileCategories) throws IOException{
     List<String> categories = new ArrayList<>();
+    System.out.println(pathFileCategories);
     FileReader fr = new FileReader(pathFileCategories);
     BufferedReader bufferedReader = new BufferedReader(fr);
     String line = bufferedReader.readLine();

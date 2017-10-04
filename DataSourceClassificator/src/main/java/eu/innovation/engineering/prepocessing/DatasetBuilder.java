@@ -74,7 +74,7 @@ public  class DatasetBuilder {
    */
   public List<Source>  buildDataset(String fileName, String path, String category,boolean withCategory) throws IOException{  
     dataReader = new TxtDataReader(category,fileName,path);
-    List<String> listIdPaper = new ArrayList<>(dataReader.getIds());  
+    List<String> listIdPaper = new ArrayList<>(dataReader.getIds()); 
     listSources.addAll(solrClient.getSourcesFromSolr(listIdPaper,Paper.class));
     if(withCategory)
       listSources = (ArrayList<Source>) addCategories(listSources);   
