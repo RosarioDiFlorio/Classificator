@@ -12,8 +12,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import eu.innovation.engineering.LSA.keywordExtractor.LSACosineKeywordExtraction;
 import eu.innovation.engineering.config.PathConfigurator;
-import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 import eu.innovation.engineering.prepocessing.CSVBuilder;
 import eu.innovation.engineering.prepocessing.DatasetBuilder;
@@ -54,8 +54,8 @@ public class Start {
 
     int numLabels = TxtDataReader.getCategories(path+"categories.txt").size();
 
-    //KeywordExtractor ke = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder,path+"glossaries.json");
-    KeywordExtractor ke = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
+    KeywordExtractor ke = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder,path+"glossaries.json");
+    //KeywordExtractor ke = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
 
     //CREA IL FILE JSON DEI DIZIONARI
     /*if(buildJsonDictionaries && category.equals("")){
