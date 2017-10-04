@@ -30,7 +30,7 @@ import eu.innovation.engineering.util.preprocessing.Source;
  *
  */
 public class CSVDataReader {
-  private static final int numKey = 4;
+  private static final int numKey = 10;
   private static final int limitSource = 100;
   private static String fileTestJson;
   private static boolean fromJson;
@@ -73,10 +73,10 @@ public class CSVDataReader {
     setLowThreshold((float) 0.7);
     
     String batchCategory = "";
-    String categoryFilter = "";
+    String categoryFilter = "art and entertainment";
     int batchLine = 0;   
     boolean isCount =  false;   
-    boolean all = true;    
+    boolean all = false;    
 
 
     KeywordExtractor kex = null;
@@ -208,9 +208,12 @@ public class CSVDataReader {
       if(!fromJson){
         List<String> tmp = new ArrayList<String>();
         String strTmp = "";
+
         for(String str: s.getTexts()){
-          strTmp += str+" ";
+          strTmp += str+".\n";
         }
+        
+//        strTmp = s.getDescription();
         tmp.add(strTmp);
         p.println(kex.extractKeywordsFromTexts(tmp, numKey).stream().filter(l->l != null).flatMap(l->l.stream()).map(Keyword::getText).collect(Collectors.toList())+"\n");
       }

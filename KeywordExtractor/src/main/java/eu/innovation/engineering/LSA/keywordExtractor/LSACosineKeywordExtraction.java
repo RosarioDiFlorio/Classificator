@@ -146,7 +146,8 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
    */
   public  MatrixRepresentation buildMatrixA(List<List<String>> sentences,float[][] toCompareVectors) throws IOException{
     List<String> wordList = new ArrayList<String>();
-
+    
+    
     //crea la lista di word
     List<List<String>> textList = new ArrayList<>();
     for(List<String> sentence : sentences){
