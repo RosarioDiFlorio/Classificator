@@ -73,9 +73,9 @@ public class CSVDataReader {
     setLowThreshold((float) 0.7);
     
     String batchCategory = "";
-    String categoryFilter = "art and entertainment";
+    String categoryFilter = "science";
     int batchLine = 0;   
-    boolean isCount =  false;   
+    boolean isCount =  true;   
     boolean all = false;    
 
 

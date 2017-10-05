@@ -37,10 +37,10 @@ public class Test {
   
   public static void main2(String[] args) throws JsonParseException, JsonMappingException, IOException{
     
-    String workingPath = PathConfigurator.rootFolder+"chemistry biology"+"/";
+    String workingPath = PathConfigurator.rootFolder+"";
     String glossaryName = workingPath+"glossaries.json";
     
-    List<Source> sources = DatasetBuilder.loadSources(workingPath+"test.json"); 
+    List<Source> sources = DatasetBuilder.loadSources(workingPath+"training.json"); 
     Set<String> keywordSet = new HashSet<String>();
     sources.stream().map(s->s.getKeywordList().stream().map(k->k.getText()).collect(Collectors.toList())).forEach(keywordSet::addAll);
        

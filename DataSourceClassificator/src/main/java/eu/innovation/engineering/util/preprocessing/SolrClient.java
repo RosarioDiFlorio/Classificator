@@ -7,7 +7,9 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
@@ -22,6 +24,7 @@ import eu.innovation.engineering.config.Configurator;
 import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
+import eu.innovation.engineering.prepocessing.DatasetBuilder;
 
 /**
  * Questa classe serve per generare i dataset Json di test, facendo query da Solr per prendere N source
@@ -37,7 +40,7 @@ public class SolrClient {
     KeywordExtractor ke = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder, PathConfigurator.rootFolder+"glossaries.json");
     //KeywordExtractor ke = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
     String path = PathConfigurator.rootFolder;
-    requestNTechincalPaper(0,3000,ke,path);
+    requestNTechincalPaper(0,3000,ke,path,false);
 
   }
 
@@ -134,7 +137,7 @@ public class SolrClient {
 
 
 
-  public static void requestNTechincalPaper(int firstPaperToJump,int numSourceRequest, KeywordExtractor ke, String path) throws Exception{
+  public static void requestNTechincalPaper(int firstPaperToJump,int numSourceRequest, KeywordExtractor ke, String path,boolean bacthTest) throws Exception{
 
     String cursorMark="*";
     String url = "http://192.168.200.81:8080/solr4/technical_papers/select?q=*%3A*&sort=id+asc&fl=id%2Cdc_title%2Cdc_description&wt=json&indent=true&cursorMark=";
@@ -154,7 +157,14 @@ public class SolrClient {
       paperJumped+=10;
       cursorMark = parserJson.parse(response.toString()).getAsJsonObject().get("nextCursorMark").getAsString();
     }
-
+   
+    //nel caso di problemi ed errori non previsti ricarico il lavoro fatto precedentemente.
+   
+    Map<String, Source> sourcesAlredyDone = new HashMap<String, Source>();
+    if(bacthTest){
+      sourcesAlredyDone  = DatasetBuilder.loadMapSources(path+"test.json");
+    }
+    
     //prendo i paper
     while (numSourceToSave<numSourceRequest){
       numSourceToSave+=10;
@@ -175,6 +185,21 @@ public class SolrClient {
           description = sourceObject.get("dc_description").getAsString();
           String title = sourceObject.get("dc_title").getAsString();
           String id = sourceObject.get("id").getAsString();
+          
+          //codice per il recupero del lavoro già effettuato.
+          if(bacthTest){
+            System.out.println("#######WARNING########\nRecovery of the previos job\tVariable bacth is setted->"+bacthTest);
+            if(sourcesAlredyDone.containsKey(id)){
+              sourceList.add(sourcesAlredyDone.get(id));
+              sourcesAlredyDone.remove(id);           
+              if(sourcesAlredyDone.isEmpty()){
+                bacthTest = false;
+                System.out.println("########WARNING######\nRecovery completed\tVariable bacth is setted->"+bacthTest);
+              }
+              continue;
+            }
+          }
+          
           //System.out.println(id);
           Source source = new Source();
           source.setTitle(title);
@@ -203,7 +228,7 @@ public class SolrClient {
           }
         }
       }
-      if(numSourceToSave%60 == 0){
+      if(numSourceToSave%60 == 0 && sourcesAlredyDone.isEmpty()){
         ObjectMapper mapper = new ObjectMapper();
         mapper.writerWithDefaultPrettyPrinter().writeValue(new File(path+"test.json"), sourceList);
       }

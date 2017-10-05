@@ -41,7 +41,7 @@ public class Start {
   //Other
   private static final String category = "";
 
-  private static final int numFeatures = 500;
+  private static final int numFeatures = 200;
 
 
   public static void main(String[] args) throws Exception{
