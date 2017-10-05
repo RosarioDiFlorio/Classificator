@@ -19,7 +19,6 @@ import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 import eu.innovation.engineering.LSA.keywordExtractor.LSACosineKeywordExtraction;
 import eu.innovation.engineering.LSA.keywordExtractor.LSAKeywordExtractor;
 import eu.innovation.engineering.config.PathConfigurator;
-import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 import eu.innovation.engineering.prepocessing.DatasetBuilder;
 import eu.innovation.engineering.prepocessing.featurextractor.ClusteringKMeans;
@@ -31,8 +30,12 @@ import eu.innovation.engineering.util.preprocessing.Source;
 public class Test {
 
 
+  public static void main(String[] args) throws Exception{
+    main1(args);
+  }
   
-  public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException{
+  
+  public static void main2(String[] args) throws JsonParseException, JsonMappingException, IOException{
     
     String workingPath = PathConfigurator.rootFolder+"chemistry biology"+"/";
     String glossaryName = workingPath+"glossaries.json";
@@ -103,8 +106,8 @@ public class Test {
     System.out.println(DatasetBuilder.loadSources(PathConfigurator.applicationFileFolder+"dictionariesCategory/science/trainingScience.json").size());
      */
     KeywordExtractor lsaKe = new LSAKeywordExtractor(PathConfigurator.keywordExtractorsFolder);
-    KeywordExtractor innKe = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
-    LSACosineKeywordExtraction lsaCosKe = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder,PathConfigurator.applicationFileFolder+"glossaries.json");
+
+    LSACosineKeywordExtraction lsaCosKe = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder,PathConfigurator.rootFolder+"glossaries.json");
 
 
 
@@ -112,23 +115,21 @@ public class Test {
 
 
     SolrClient solrClient = new SolrClient();
-    String id="10127141_163";
-//    String id2 ="10028729_234";
-//    String id3 = "10026237_234";
+    String id="10016979_234";
 
 
 
     List<String> ids = new ArrayList<>();
     ids.add(id);
-//    ids.add(id3);
-//    ids.add(id2);
+
     List<Source> sources = solrClient.getSourcesFromSolr(ids, Paper.class);
     
    long totalTime = 0;
     for(Source source: sources){
       long startTime = 0;
+      
       String description = source.getTitle()+" "+source.getTexts().get(1);
-      String fullText = source.getTexts().get(2);
+//      String fullText = source.getTexts().get(2);
 
       List<String> toAnalyze = new ArrayList<>();
 
@@ -147,7 +148,8 @@ public class Test {
       System.out.println("LSACosine finished -> " + (System.currentTimeMillis() - startTime));
       
       System.out.println("ID -> "+source.getId());
-      System.out.println("Title ->"+source.getTitle()+"\n");  
+      System.out.println("Title -> "+source.getTitle()+"\n");  
+      System.out.println("DESCRIPTION-> "+source.getDescription());
       //      System.out.println("INNEN ->"+innResults.get(0));
       //    System.out.println("LSA ->"+lsaResults.get(0));
       System.out.println("LSACosine -> "+lsaCosResults.get(0));
