@@ -23,26 +23,23 @@ public class TxtDataReader implements DataReader {
   private static String fileToReadSource = "";
   private static String fileToReadCategory = "";
 
+
   public static void main(String[] args) throws Exception{
-    TxtDataReader reader = new TxtDataReader("trainingAndTestTogether.txt", PathConfigurator.trainingAndTestFolder,"");
-
-    String pathFile1 = PathConfigurator.trainingAndTestFolder+"trainingAndTestTogether.txt";
-    String pathFile2 = PathConfigurator.trainingAndTestFolder+"trainingDatasetFromCsvResult.txt";
-    String pathWhereSave = PathConfigurator.trainingAndTestFolder+"trainingDatasetMerged.txt";
-    int limitSource = 70;
-    reader.mergeTxtDataset(pathFile1, pathFile2, limitSource, pathWhereSave, "categories.txt");
-  }
-
-  public TxtDataReader(){
-    
+    TxtDataReader datareader = new TxtDataReader();
+    datareader.checkCategory(PathConfigurator.rootFolder+"trainingMerged.txt", PathConfigurator.rootFolder+"categories.txt", "food and drink");
   }
   
+  
+  public TxtDataReader(){
+
+  }
+
   public TxtDataReader(String category, String filename, String path) {
     this.fileToReadSource = path + filename;
     this.fileToReadCategory = path + category;
   }
 
-  
+
 
 
   /**
@@ -65,34 +62,39 @@ public class TxtDataReader implements DataReader {
     return idPapers;
   }
   
+  public Set<String> getIds(String filePath) throws IOException {
+    setFileToReadSource(filePath);
+    return getIds();
+  }
 
-  public void mergeTxtDataset(String pathFile1, String pathFile2,int limitSource, String pathWhereSave, String pathCategories) throws IOException{
-    
-    Map<String, HashMap<String, String>> mapFile1 = categoriesWithIds(pathFile1,pathCategories);
-    System.out.println(pathFile1);
 
-    Map<String, HashMap<String, String>> mapFile2 = categoriesWithIds(pathFile2,pathCategories);
-    System.out.println(pathFile2);
+  public void mergeTxtDataset(String pathOldSet, String pathNewSet, String pathWhereSave, int limitSource, String pathCategories) throws IOException{
+    System.out.println("##############\nMerging Set 1 -> "+pathOldSet+" AND Set 2 -> "+pathNewSet+"\n############");
+    Map<String, HashMap<String, String>> mapFileOld = categoriesWithIds(pathOldSet,pathCategories);
+    Map<String, HashMap<String, String>> mapFileNew = categoriesWithIds(pathNewSet,pathCategories);
+
+    Set<String> allCategories = new HashSet<>();
+    allCategories.addAll(mapFileOld.keySet());
+    allCategories.addAll(mapFileNew.keySet());
+
     PrintWriter p = new PrintWriter(new File(pathWhereSave));
-    for(String cf1: mapFile1.keySet()){
-      p.println(cf1);
-      Set<String> ids2 = new HashSet<>();
-      Set<String> ids1 = new HashSet<>(mapFile1.get(cf1).keySet());
+    for(String category: allCategories){
+      p.println(category);
+      Set<String> ids = new HashSet<>();
       
-      if(mapFile2.keySet().contains(cf1)) {
-        ids2 = new HashSet<>(mapFile2.get(cf1).keySet());
-      }
-      ids1.addAll(ids2);
-      
+      if(mapFileOld.containsKey(category))
+        ids.addAll(mapFileOld.get(category).keySet());
+      if(mapFileNew.containsKey(category))
+        ids.addAll(mapFileNew.get(category).keySet());
+
       int countSource = 0;
-      for(String id: ids1){       
+      for(String id: ids){       
         if (countSource>= limitSource) {
           break;
         }
         countSource++;
         p.println(id+" 1");
       }
-      
       p.println();
       p.flush();
     }
@@ -100,17 +102,23 @@ public class TxtDataReader implements DataReader {
   }
 
 
-  public void checkCategory(String pathFile,String category,boolean withTexts,String pathCategories) throws Exception{
+  public void checkCategory(String pathFile,String pathCategories,String categoryFilter) throws Exception{
     SolrClient solr = new SolrClient();
 
     List<String> ids = new ArrayList<>();
-    ids.addAll(categoriesWithIds(pathFile,pathCategories).get("/"+category.replace("_", " ")).keySet());
+    ids.addAll(categoriesWithIds(pathFile,pathCategories).get(categoryFilter).keySet());
     List<Source> sources = solr.getSourcesFromSolr(ids, Paper.class);      
 
+    PrintWriter p = new PrintWriter(new File(PathConfigurator.applicationFileFolder+"checkedCategory"));
+    p.println("###########################\n"+categoryFilter.toUpperCase()+"\n##########################\n");
     for(Source src: sources){
-
+        p.println(src.getId());
+        p.println(src.getTitle()+"\n");
+        p.println(src.getDescription());
+        p.println("------------------------------------------\n");
+        p.flush();
     }
-
+    p.close();
   }
 
   /**
@@ -120,17 +128,13 @@ public class TxtDataReader implements DataReader {
    */
   @Override
   public Map<String, HashMap<String, String>> categoriesWithIds(String pathFileSource, String pathFileCategories) throws IOException {
-
-    
+    System.out.println("sources path -> "+pathFileSource);
     FileReader reader = new FileReader(pathFileSource);
-
     BufferedReader bufferedReader = new BufferedReader(reader);
     String line = bufferedReader.readLine();
-
     List<String> categories = getCategories(pathFileCategories);
     HashMap<String,HashMap<String,String>> categoryPapers = new HashMap<>();
     HashMap<String,String> paperIntoCurrentCategory = null;
-
     String currentCategory="";
     while(line!=null){
       if(categories.contains(line)){
@@ -139,7 +143,7 @@ public class TxtDataReader implements DataReader {
       }
       else{
         String split[] = line.split(" ");
-        
+
         if(split!=null && split.length>1){
           paperIntoCurrentCategory.put(split[0], split[1]);
         }
@@ -151,13 +155,15 @@ public class TxtDataReader implements DataReader {
     for(String category : categoryPapers.keySet()){
       System.out.println(category+" "+categoryPapers.get(category).size());
     }
+    System.out.println("-------------------------------------\n");
     bufferedReader.close();
     return categoryPapers;
   }
- 
+  
+
   public static List<String> getCategories(String pathFileCategories) throws IOException{
     List<String> categories = new ArrayList<>();
-    System.out.println(pathFileCategories);
+    System.out.println("categories path -> "+pathFileCategories);
     FileReader fr = new FileReader(pathFileCategories);
     BufferedReader bufferedReader = new BufferedReader(fr);
     String line = bufferedReader.readLine();
@@ -177,12 +183,12 @@ public class TxtDataReader implements DataReader {
   public void setFileToReadSource(String fileToRead) {
     this.fileToReadSource =  fileToRead;
   }
-  
+
   public  String getFileToReadCategory() {
     return fileToReadCategory;
   }
 
-  
+
   public  void setFileToReadCategory(String fileToReadCategory) {
     TxtDataReader.fileToReadCategory = fileToReadCategory;
   }

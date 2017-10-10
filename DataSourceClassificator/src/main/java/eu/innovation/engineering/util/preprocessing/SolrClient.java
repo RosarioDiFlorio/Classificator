@@ -19,7 +19,6 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
-import eu.innovation.engineering.LSA.keywordExtractor.LSACosineKeywordExtraction;
 import eu.innovation.engineering.config.Configurator;
 import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
@@ -37,10 +36,10 @@ public class SolrClient {
 
 
   public static void main(String[] args) throws Exception{
-    KeywordExtractor ke = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder, PathConfigurator.rootFolder+"glossaries.json");
-    //KeywordExtractor ke = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
+    //KeywordExtractor ke = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder, PathConfigurator.rootFolder+"glossaries.json");
+    KeywordExtractor ke = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
     String path = PathConfigurator.rootFolder;
-    requestNTechincalPaper(0,3000,ke,path,false);
+    requestNTechincalPaper(0,1000000,ke,path,false,false);
 
   }
 
@@ -137,7 +136,7 @@ public class SolrClient {
 
 
 
-  public static void requestNTechincalPaper(int firstPaperToJump,int numSourceRequest, KeywordExtractor ke, String path,boolean bacthTest) throws Exception{
+  public static void requestNTechincalPaper(int firstPaperToJump,int numSourceRequest, KeywordExtractor ke, String path,boolean bacthTest,boolean withKeyword) throws Exception{
 
     String cursorMark="*";
     String url = "http://192.168.200.81:8080/solr4/technical_papers/select?q=*%3A*&sort=id+asc&fl=id%2Cdc_title%2Cdc_description&wt=json&indent=true&cursorMark=";
@@ -157,14 +156,14 @@ public class SolrClient {
       paperJumped+=10;
       cursorMark = parserJson.parse(response.toString()).getAsJsonObject().get("nextCursorMark").getAsString();
     }
-   
+
     //nel caso di problemi ed errori non previsti ricarico il lavoro fatto precedentemente.
-   
+
     Map<String, Source> sourcesAlredyDone = new HashMap<String, Source>();
     if(bacthTest){
       sourcesAlredyDone  = DatasetBuilder.loadMapSources(path+"test.json");
     }
-    
+
     //prendo i paper
     while (numSourceToSave<numSourceRequest){
       numSourceToSave+=10;
@@ -185,7 +184,7 @@ public class SolrClient {
           description = sourceObject.get("dc_description").getAsString();
           String title = sourceObject.get("dc_title").getAsString();
           String id = sourceObject.get("id").getAsString();
-          
+
           //codice per il recupero del lavoro già effettuato.
           if(bacthTest){
             System.out.println("#######WARNING########\nRecovery of the previos job\tVariable bacth is setted->"+bacthTest);
@@ -199,33 +198,36 @@ public class SolrClient {
               continue;
             }
           }
-          
+
           //System.out.println(id);
           Source source = new Source();
           source.setTitle(title);
           source.setDescription(description);
           source.setId(id);
-          List<String> texts = new ArrayList<>();
-          texts.add(title);
-          texts.add(description);
-          source.setTexts(texts);
 
-          List<String> toAnalyze = new ArrayList<String>();
-          toAnalyze.add(source.getTitle()+description);
-          try{
-            if(textValidator.analyzer(description))
-              if(ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords)!=null && ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).size()>0)
-                if(ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0)!=null && !ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0).isEmpty()){
-                  if(ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0).size()>0){
-                    ArrayList<Keyword> keywordsList = (ArrayList<Keyword>) ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0);
-                    source.setKeywordList(keywordsList);
-                    sourceList.add(source); 
+          if(withKeyword){
+            List<String> texts = new ArrayList<>();
+            texts.add(title);
+            texts.add(description);
+            source.setTexts(texts);
+            List<String> toAnalyze = new ArrayList<String>();
+            toAnalyze.add(source.getTitle()+description);
+            try{
+              if(textValidator.analyzer(description))
+                if(ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords)!=null && ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).size()>0)
+                  if(ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0)!=null && !ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0).isEmpty()){
+                    if(ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0).size()>0){
+                      ArrayList<Keyword> keywordsList = (ArrayList<Keyword>) ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0);
+                      source.setKeywordList(keywordsList);
+                      sourceList.add(source); 
+                    }
                   }
-                }
-          }
-          catch(Exception ex){
-            System.out.println("Vado in exception per un motivo sconosciuto");
-          }
+            }
+            catch(Exception ex){
+              System.out.println("Vado in exception per un motivo sconosciuto");
+            }
+          }else if(textValidator.analyzer(description))
+            sourceList.add(source);
         }
       }
       if(numSourceToSave%60 == 0 && sourcesAlredyDone.isEmpty()){
