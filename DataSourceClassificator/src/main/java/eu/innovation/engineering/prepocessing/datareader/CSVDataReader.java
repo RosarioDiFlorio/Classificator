@@ -19,6 +19,7 @@ import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
 import eu.innovation.engineering.LSA.keywordExtractor.LSACosineKeywordExtraction;
 import eu.innovation.engineering.config.PathConfigurator;
+import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 import eu.innovation.engineering.prepocessing.DatasetBuilder;
 import eu.innovation.engineering.util.preprocessing.Paper;
@@ -31,28 +32,29 @@ import eu.innovation.engineering.util.preprocessing.Source;
  */
 public class CSVDataReader {
   private static final int numKey = 10;
-  private static final int limitSource = 100;
+  private static final int limitSource = 500;
   private static String fileTestJson;
   private static boolean fromJson;
+  private static boolean withKeyword;
   private static float upperThreshold;
   private static float lowThreshold;
   private static String workingPath;
   private static String categoryFolder;
   private static String csvPath;
-  
-  
-  
+
+
+
   public static void main(String[] args) throws Exception{
     mainToTest(args);
   }
 
-  
+
   public static void mainToCreateDataset(String[] args) throws IOException{
     float upperThreshold = (float) 1.0;
     float lowThreshold = (float) 0.7;
     String  categoryFilter = "";
-    String fileCsv = PathConfigurator.applicationFileFolder+"results.csv";
-    String pathWhereSave = PathConfigurator.applicationFileFolder+"trainingDatasetFromCsv.txt";
+    String fileCsv = PathConfigurator.applicationFileFolder+"resultsBig.csv";
+    String pathWhereSave = PathConfigurator.rootFolder+"trainingResultsBig.txt";
     createDocumentSetFromCsvResults(fileCsv,lowThreshold,upperThreshold,pathWhereSave, categoryFilter);
     TxtDataReader txtReader = new TxtDataReader();
     //txtReader.mergeTxtDataset(oldDataset, pathWhereSave, 70, PathConfigurator.applicationFileFolder+"trainingDatasetMerged.txt");
@@ -65,25 +67,27 @@ public class CSVDataReader {
    */
   public static void mainToTest(String[] args) throws Exception{
 
-    setCsvPath(PathConfigurator.applicationFileFolder+"resultsRoot.csv");
+    setCsvPath(PathConfigurator.applicationFileFolder+"resultsBagWord.csv");
     setCategoryFolder("");
     setFromJson(false);
     setFileTestJson(getWorkingPath()+"/test.json");   
     setUpperThreshold((float) 1.0);
     setLowThreshold((float) 0.7);
-    
+    setWithKeyword(false);
+
     String batchCategory = "";
     String categoryFilter = "science";
     int batchLine = 0;   
     boolean isCount =  true;   
-    boolean all = false;    
+    boolean all = true;
+
 
 
     KeywordExtractor kex = null;
-    if(!isCount && !isFromJson()){
+    if(!isCount && !isFromJson() || withKeyword){
       if(categoryFolder.equals(""))
-//        kex = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
-//      else
+        kex = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
+      else
         kex = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder,getWorkingPath()+"/glossaries.json");
     }
     File f = new File(csvPath);
@@ -212,13 +216,14 @@ public class CSVDataReader {
         for(String str: s.getTexts()){
           strTmp += str+".\n";
         }
-        
-//        strTmp = s.getDescription();
+
+        //        strTmp = s.getDescription();
         tmp.add(strTmp);
         p.println(kex.extractKeywordsFromTexts(tmp, numKey).stream().filter(l->l != null).flatMap(l->l.stream()).map(Keyword::getText).collect(Collectors.toList())+"\n");
       }
       else
-        p.println(s.getKeywordList().stream().map(Keyword::getText).collect(Collectors.toList()));
+        if(withKeyword)
+          p.println(s.getKeywordList().stream().map(Keyword::getText).collect(Collectors.toList()));
 
       localcount ++;
       if(!isFromJson())
@@ -241,7 +246,7 @@ public class CSVDataReader {
     if(categoryFilter.equals("")){
       for(String category: categoryMap.keySet()){
         int countSource = 0;
-        p.println("/"+category.replace("_", " "));
+        p.println(category.replace("_", " "));
         for(String id: categoryMap.get(category)){ 
           if(countSource >= limitSource)
             break;
@@ -382,6 +387,16 @@ public class CSVDataReader {
 
   public static void setCsvPath(String csvPath) {
     CSVDataReader.csvPath = csvPath;
+  }
+
+
+  public static boolean isWithKeyword() {
+    return withKeyword;
+  }
+
+
+  public static void setWithKeyword(boolean withKeyword) {
+    CSVDataReader.withKeyword = withKeyword;
   }
 
 

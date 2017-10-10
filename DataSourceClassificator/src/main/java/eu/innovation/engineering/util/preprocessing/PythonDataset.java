@@ -16,9 +16,9 @@ public class PythonDataset {
   
   public static void main(String[] args) throws IOException{
     
-    String pathSources = PathConfigurator.applicationFileFolder+"trainSmall.txt";
+    String pathSources = PathConfigurator.rootFolder+"trainingResultsBig.txt";
     String pathCategories = PathConfigurator.rootFolder+"categories.txt";
-    createDataset("smallTrain",pathSources,pathCategories);
+    createDataset("bigTrainDataset",pathSources,pathCategories);
   }
   
   public static void createDataset(String folderName,String sourcesFile,String categoryFiles) throws IOException{
