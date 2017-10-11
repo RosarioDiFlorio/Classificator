@@ -16,9 +16,17 @@ public class PythonDataset {
   
   public static void main(String[] args) throws IOException{
     
+<<<<<<< HEAD
     String pathSources = PathConfigurator.rootFolder+"outputResultsRoot.txt";
+=======
+    String pathSources = PathConfigurator.rootFolder+"trainingResultsBig.txt";
+>>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
     String pathCategories = PathConfigurator.rootFolder+"categories.txt";
+<<<<<<< HEAD
     createDataset("BigDatasetTrain",pathSources,pathCategories);
+=======
+    createDataset("bigTrainDataset",pathSources,pathCategories);
+>>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
   }
   
   public static void createDataset(String folderName,String sourcesFile,String categoryFiles) throws IOException{
