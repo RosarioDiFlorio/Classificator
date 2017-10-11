@@ -32,11 +32,8 @@ import eu.innovation.engineering.util.preprocessing.Source;
  */
 public class CSVDataReader {
   private static final int numKey = 10;
-<<<<<<< HEAD
-  private static final int limitSource = 200;
-=======
+
   private static final int limitSource = 500;
->>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
   private static String fileTestJson;
   private static boolean fromJson;
   private static boolean withKeyword;
@@ -57,13 +54,9 @@ public class CSVDataReader {
     float upperThreshold = (float) 1.0;
     float lowThreshold = (float) 0.98;
     String  categoryFilter = "";
-<<<<<<< HEAD
-    String fileCsv = PathConfigurator.rootFolder+"resultsRoot.csv";
-    String pathWhereSave = PathConfigurator.rootFolder+"outputResultsRoot.txt";
-=======
+
     String fileCsv = PathConfigurator.applicationFileFolder+"resultsBig.csv";
     String pathWhereSave = PathConfigurator.rootFolder+"trainingResultsBig.txt";
->>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
     createDocumentSetFromCsvResults(fileCsv,lowThreshold,upperThreshold,pathWhereSave, categoryFilter);
     TxtDataReader txtReader = new TxtDataReader();
     

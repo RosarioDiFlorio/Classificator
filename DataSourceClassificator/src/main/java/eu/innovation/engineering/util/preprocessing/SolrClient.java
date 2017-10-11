@@ -39,11 +39,8 @@ public class SolrClient {
     //KeywordExtractor ke = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder, PathConfigurator.rootFolder+"glossaries.json");
     KeywordExtractor ke = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
     String path = PathConfigurator.rootFolder;
-<<<<<<< HEAD
-    requestNTechincalPaper(0,20000,ke,path,false);
-=======
+
     requestNTechincalPaper(0,1000000,ke,path,false,false);
->>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
 
   }
 
