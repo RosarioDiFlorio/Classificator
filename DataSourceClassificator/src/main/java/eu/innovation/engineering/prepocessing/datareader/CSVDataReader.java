@@ -31,7 +31,7 @@ import eu.innovation.engineering.util.preprocessing.Source;
  */
 public class CSVDataReader {
   private static final int numKey = 10;
-  private static final int limitSource = 100;
+  private static final int limitSource = 200;
   private static String fileTestJson;
   private static boolean fromJson;
   private static float upperThreshold;
@@ -43,19 +43,20 @@ public class CSVDataReader {
   
   
   public static void main(String[] args) throws Exception{
-    mainToTest(args);
+    mainToCreateDataset(args);
   }
 
   
   public static void mainToCreateDataset(String[] args) throws IOException{
     float upperThreshold = (float) 1.0;
-    float lowThreshold = (float) 0.7;
+    float lowThreshold = (float) 0.98;
     String  categoryFilter = "";
-    String fileCsv = PathConfigurator.applicationFileFolder+"results.csv";
-    String pathWhereSave = PathConfigurator.applicationFileFolder+"trainingDatasetFromCsv.txt";
+    String fileCsv = PathConfigurator.rootFolder+"resultsRoot.csv";
+    String pathWhereSave = PathConfigurator.rootFolder+"outputResultsRoot.txt";
     createDocumentSetFromCsvResults(fileCsv,lowThreshold,upperThreshold,pathWhereSave, categoryFilter);
     TxtDataReader txtReader = new TxtDataReader();
-    //txtReader.mergeTxtDataset(oldDataset, pathWhereSave, 70, PathConfigurator.applicationFileFolder+"trainingDatasetMerged.txt");
+    
+    //txtReader.mergeTxtDataset(PathConfigurator.applicationFileFolder+"outputResultsRoot.txt", pathWhereSave, 1000, PathConfigurator.rootFolder+"training.txt", PathConfigurator.rootFolder+"categories.txt");
   }
 
   /**
@@ -241,7 +242,7 @@ public class CSVDataReader {
     if(categoryFilter.equals("")){
       for(String category: categoryMap.keySet()){
         int countSource = 0;
-        p.println("/"+category.replace("_", " "));
+        p.println(category.replace("_", " "));
         for(String id: categoryMap.get(category)){ 
           if(countSource >= limitSource)
             break;

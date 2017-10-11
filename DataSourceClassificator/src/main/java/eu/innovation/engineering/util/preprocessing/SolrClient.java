@@ -19,7 +19,6 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
 
-import eu.innovation.engineering.LSA.keywordExtractor.LSACosineKeywordExtraction;
 import eu.innovation.engineering.config.Configurator;
 import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
@@ -37,10 +36,10 @@ public class SolrClient {
 
 
   public static void main(String[] args) throws Exception{
-    KeywordExtractor ke = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder, PathConfigurator.rootFolder+"glossaries.json");
-    //KeywordExtractor ke = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
+    //KeywordExtractor ke = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder, PathConfigurator.rootFolder+"glossaries.json");
+    KeywordExtractor ke = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
     String path = PathConfigurator.rootFolder;
-    requestNTechincalPaper(0,3000,ke,path,false);
+    requestNTechincalPaper(0,20000,ke,path,false);
 
   }
 
