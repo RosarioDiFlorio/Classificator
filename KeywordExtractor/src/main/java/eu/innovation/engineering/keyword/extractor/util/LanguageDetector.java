@@ -33,14 +33,20 @@ public class LanguageDetector {
     return toReturn;
   }
 
-  public boolean isValidLanguage(String text,String langFilter) throws Exception{
-    List<String> langRes = languageDetector.getLanguages(text);
-    if(!langRes.isEmpty()){
-      if(langRes.get(0).equals(langFilter)){
-        return true;
+  public boolean isValidLanguage(String text,String langFilter){
+    try{
+      List<String> langRes = languageDetector.getLanguages(text);
+      if(!langRes.isEmpty()){
+        if(langRes.get(0).equals(langFilter)){
+          return true;
+        }
       }
+      return false;
+    }
+    catch (Exception e) {
+      // TODO: handle exception
+      e.printStackTrace();
     }
     return false;
-  }  
-
+  }
 }
