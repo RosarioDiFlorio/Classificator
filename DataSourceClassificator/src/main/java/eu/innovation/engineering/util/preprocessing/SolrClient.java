@@ -40,7 +40,7 @@ public class SolrClient {
     //KeywordExtractor ke = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder, PathConfigurator.rootFolder+"glossaries.json");
     KeywordExtractor ke = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
     String path = PathConfigurator.rootFolder;
-    requestNTechincalPaper(0,1000000,ke,path,true,false,1000);
+
 
   }
 

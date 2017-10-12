@@ -32,6 +32,7 @@ import eu.innovation.engineering.util.preprocessing.Source;
  */
 public class CSVDataReader {
   private static final int numKey = 10;
+
   private static final int limitSource = 500;
   private static String fileTestJson;
   private static boolean fromJson;
@@ -45,20 +46,26 @@ public class CSVDataReader {
 
 
   public static void main(String[] args) throws Exception{
+<<<<<<< HEAD
     mainToTest(args);
     //mainToCreateDataset(args);
+=======
+    mainToCreateDataset(args);
+>>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
   }
 
 
   public static void mainToCreateDataset(String[] args) throws IOException{
     float upperThreshold = (float) 1.0;
+
     float lowThreshold = (float) 0.9;
     String  categoryFilter = "science";
     String fileCsv = PathConfigurator.applicationResultFolder+"resultsFullWiki.csv";
     String pathWhereSave = PathConfigurator.rootFolder+"testScience_FullWiki.txt";
     createDocumentSetFromCsvResults(fileCsv,lowThreshold,upperThreshold,pathWhereSave, categoryFilter);
     TxtDataReader txtReader = new TxtDataReader();
-    //txtReader.mergeTxtDataset(oldDataset, pathWhereSave, 70, PathConfigurator.applicationFileFolder+"trainingDatasetMerged.txt");
+    
+    //txtReader.mergeTxtDataset(PathConfigurator.applicationFileFolder+"outputResultsRoot.txt", pathWhereSave, 1000, PathConfigurator.rootFolder+"training.txt", PathConfigurator.rootFolder+"categories.txt");
   }
 
   /**
