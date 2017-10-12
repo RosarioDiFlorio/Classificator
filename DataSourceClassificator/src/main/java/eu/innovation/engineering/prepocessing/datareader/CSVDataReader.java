@@ -46,12 +46,9 @@ public class CSVDataReader {
 
 
   public static void main(String[] args) throws Exception{
-<<<<<<< HEAD
     mainToTest(args);
     //mainToCreateDataset(args);
-=======
-    mainToCreateDataset(args);
->>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
+
   }
 
 
