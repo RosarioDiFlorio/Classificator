@@ -239,6 +239,7 @@ public  class DatasetBuilder {
     ObjectMapper mapper = new ObjectMapper();
     List<Source> toReturn = new ArrayList();
     toReturn = mapper.readValue(new File(pathFile), new TypeReference<List<Source>>(){});
+    System.out.println("Sources loaded from -> "+pathFile);
     return toReturn;
   }
   

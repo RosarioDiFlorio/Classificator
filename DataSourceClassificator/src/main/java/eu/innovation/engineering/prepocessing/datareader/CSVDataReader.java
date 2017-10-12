@@ -46,17 +46,18 @@ public class CSVDataReader {
 
 
   public static void main(String[] args) throws Exception{
+
     mainToCreateDataset(args);
   }
 
 
   public static void mainToCreateDataset(String[] args) throws IOException{
     float upperThreshold = (float) 1.0;
-    float lowThreshold = (float) 0.98;
-    String  categoryFilter = "";
 
-    String fileCsv = PathConfigurator.applicationFileFolder+"resultsBig.csv";
-    String pathWhereSave = PathConfigurator.rootFolder+"trainingResultsBig.txt";
+    float lowThreshold = (float) 0.9;
+    String  categoryFilter = "science";
+    String fileCsv = PathConfigurator.applicationResultFolder+"resultsFullWiki.csv";
+    String pathWhereSave = PathConfigurator.rootFolder+"testScience_FullWiki.txt";
     createDocumentSetFromCsvResults(fileCsv,lowThreshold,upperThreshold,pathWhereSave, categoryFilter);
     TxtDataReader txtReader = new TxtDataReader();
     
@@ -70,8 +71,8 @@ public class CSVDataReader {
    */
   public static void mainToTest(String[] args) throws Exception{
 
-    setCsvPath(PathConfigurator.applicationFileFolder+"resultsBagWord.csv");
-    setCategoryFolder("");
+    setCsvPath(PathConfigurator.applicationResultFolder+"resultsSubChemistry2.csv");
+    setCategoryFolder("chemistry biology");
     setFromJson(false);
     setFileTestJson(getWorkingPath()+"/test.json");   
     setUpperThreshold((float) 1.0);
@@ -81,7 +82,7 @@ public class CSVDataReader {
     String batchCategory = "";
     String categoryFilter = "science";
     int batchLine = 0;   
-    boolean isCount =  true;   
+    boolean isCount =  false;   
     boolean all = true;
 
 
@@ -159,6 +160,9 @@ public class CSVDataReader {
     System.out.println("Total sources found -> " +totalCount);
   }
 
+  public static boolean isNumeric(String s) {  
+    return s.matches("[-+]?\\d*\\.?\\d+");  
+  } 
 
   public static int readResultClassifier(File csvFile, KeywordExtractor kex, String category,boolean isCount,int batchLine) throws Exception{
     Map<String, List<String>> dataMap = read(csvFile.getAbsolutePath());
@@ -172,13 +176,14 @@ public class CSVDataReader {
     for(String id: dataMap.keySet()){
       float probs = 0;
       try{
-        probs = Float.parseFloat(dataMap.get(id).get(0));
+        if(isNumeric(dataMap.get(id).get(0)))
+          probs = Float.parseFloat(dataMap.get(id).get(0));
       }catch (Exception e) {
         e.printStackTrace();
         continue;
       }
       if((probs <= upperThreshold) && (probs >= lowThreshold) ){       
-        if(dataMap.get(id).get(1).replace("_", " ").equals(category)|| category.equals("")){
+        if(dataMap.get(id).get(1).replace("_", " ").replace(".", " ").equals(category)|| category.equals("")){
           if(count < batchLine || isCount){
             count++;
             p.println(id+" 1");
@@ -191,7 +196,7 @@ public class CSVDataReader {
       }   
     }
 
-    if(!isFromJson())
+    if(!isFromJson() && withKeyword)
       System.out.println(count+" - "+category);
     List<Source> sources  = new ArrayList<>();
     if(fromJson){
@@ -222,14 +227,15 @@ public class CSVDataReader {
 
         //        strTmp = s.getDescription();
         tmp.add(strTmp);
-        p.println(kex.extractKeywordsFromTexts(tmp, numKey).stream().filter(l->l != null).flatMap(l->l.stream()).map(Keyword::getText).collect(Collectors.toList())+"\n");
+        if(withKeyword)
+          p.println(kex.extractKeywordsFromTexts(tmp, numKey).stream().filter(l->l != null).flatMap(l->l.stream()).map(Keyword::getText).collect(Collectors.toList())+"\n");
       }
       else
         if(withKeyword)
           p.println(s.getKeywordList().stream().map(Keyword::getText).collect(Collectors.toList()));
 
       localcount ++;
-      if(!isFromJson())
+      if(!isFromJson() && withKeyword)
         System.out.println(localcount+" - "+category);
       p.println(s.getTitle());
       p.println(s.getTexts().get(1));
@@ -249,7 +255,7 @@ public class CSVDataReader {
     if(categoryFilter.equals("")){
       for(String category: categoryMap.keySet()){
         int countSource = 0;
-        p.println(category.replace("_", " "));
+        p.println(category.replace("_", " ").replace(".", " "));
         for(String id: categoryMap.get(category)){ 
           if(countSource >= limitSource)
             break;
