@@ -11,7 +11,7 @@ public class PathConfigurator {
   public static final String dictionariesFolder = "data/datasets/dictionaries/";
   public static final String keywordExtractorsFolder = "../KeywordExtractor/";
   public static final String pyCSVFolder ="data/datasets/python/csv/";
-  public static final String pyFolder = "data/datasets/python/";
+  public static final String pyFolder = "datasetPy/";
   public static final String applicationTestFolder= applicationFileFolder+"test/";
   public static final String applicationResultFolder = applicationFileFolder+"results/";
   public static final String categories = "data/application/dictionariesCategory/";

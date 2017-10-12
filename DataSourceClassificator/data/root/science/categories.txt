@@ -3,3 +3,5 @@ geology
 mathematics
 physics
 astronomy
+biology
+chemistry

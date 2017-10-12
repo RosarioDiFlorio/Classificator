@@ -7,10 +7,11 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
+import java.util.Set;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
@@ -39,7 +40,7 @@ public class SolrClient {
     //KeywordExtractor ke = new LSACosineKeywordExtraction(PathConfigurator.keywordExtractorsFolder, PathConfigurator.rootFolder+"glossaries.json");
     KeywordExtractor ke = new InnenExtractor(PathConfigurator.keywordExtractorsFolder);
     String path = PathConfigurator.rootFolder;
-    requestNTechincalPaper(0,1000000,ke,path,false,false);
+    requestNTechincalPaper(0,1000000,ke,path,true,false,1000);
 
   }
 
@@ -136,10 +137,10 @@ public class SolrClient {
 
 
 
-  public static void requestNTechincalPaper(int firstPaperToJump,int numSourceRequest, KeywordExtractor ke, String path,boolean bacthTest,boolean withKeyword) throws Exception{
+  public static void requestNTechincalPaper(int firstPaperToJump,int numSourceRequest, KeywordExtractor ke, String path,boolean bacthTest,boolean withKeyword,int rowInterval) throws Exception{
 
     String cursorMark="*";
-    String url = "http://192.168.200.81:8080/solr4/technical_papers/select?q=*%3A*&sort=id+asc&fl=id%2Cdc_title%2Cdc_description&wt=json&indent=true&cursorMark=";
+    String url = "http://192.168.200.81:8080/solr4/technical_papers/select?q=*%3A*&rows="+rowInterval+"&sort=id+asc&fl=id%2Cdc_title%2Cdc_description&wt=json&indent=true&cursorMark=";
 
     TextValidator textValidator = new TextValidator(Configurator.minDescriptionLength);
     int numSourceToSave = 0;
@@ -149,6 +150,10 @@ public class SolrClient {
     int count = 0;
     ArrayList<Source> sourceList = new ArrayList<Source>();
 
+
+
+    //nel caso di problemi ed errori non previsti ricarico il lavoro fatto precedentemente.
+
     //Salto i primi paper
     int paperJumped =0;
     while(paperJumped<firstPaperToJump){
@@ -157,16 +162,21 @@ public class SolrClient {
       cursorMark = parserJson.parse(response.toString()).getAsJsonObject().get("nextCursorMark").getAsString();
     }
 
-    //nel caso di problemi ed errori non previsti ricarico il lavoro fatto precedentemente.
-
-    Map<String, Source> sourcesAlredyDone = new HashMap<String, Source>();
+    Set<String> sourcesAlredyDone = new HashSet();
     if(bacthTest){
-      sourcesAlredyDone  = DatasetBuilder.loadMapSources(path+"test.json");
+      System.out.println("########WARNING######\nRecovery is running\tVariable bacth is setted->"+bacthTest);
+      sourcesAlredyDone  = DatasetBuilder.loadMapSources(path+"test.json").keySet();
+      sourceList = (ArrayList<Source>) DatasetBuilder.loadSources(path+"test.json");
+      numSourceToSave = sourceList.size();
+      ObjectMapper mapper = new ObjectMapper();
+      cursorMark = mapper.readValue(new File("logs/lastCM.json"), new TypeReference<String>() {});
+      System.out.println(((numSourceToSave*100)/numSourceRequest)+"% -> "+numSourceToSave+"/"+numSourceRequest);    
     }
+
 
     //prendo i paper
     while (numSourceToSave<numSourceRequest){
-      numSourceToSave+=10;
+      
       StringBuffer response = requestSOLR(url+cursorMark);
       JsonArray results = parserJson.parse(response.toString()).getAsJsonObject().get("response").getAsJsonObject().get("docs").getAsJsonArray();
       count+=10;
@@ -174,30 +184,23 @@ public class SolrClient {
         System.out.println(results);
         break;
       }
-      if(numSourceToSave % 30 == 0)
-        System.out.println(((numSourceToSave*100)/numSourceRequest)+"%");
+      if(numSourceToSave % 10 == 0 && numSourceToSave!= sourcesAlredyDone.size())
+        System.out.println(((numSourceToSave*100)/numSourceRequest)+"% -> "+numSourceToSave+"/"+numSourceRequest);    
+      
       for(int i=0; i<results.size();i++){
-        JsonElement sourceElement = results.get(i);
-        JsonObject sourceObject = sourceElement.getAsJsonObject();
+        JsonObject sourceObject = results.get(i).getAsJsonObject();
+
         String description;
+        
         if(sourceObject!=null && sourceObject.get("dc_description")!=null){
+          String id = sourceObject.get("id").getAsString();
+          
+          if(sourcesAlredyDone.contains(id))
+            continue; 
+          
+
           description = sourceObject.get("dc_description").getAsString();
           String title = sourceObject.get("dc_title").getAsString();
-          String id = sourceObject.get("id").getAsString();
-
-          //codice per il recupero del lavoro già effettuato.
-          if(bacthTest){
-            System.out.println("#######WARNING########\nRecovery of the previos job\tVariable bacth is setted->"+bacthTest);
-            if(sourcesAlredyDone.containsKey(id)){
-              sourceList.add(sourcesAlredyDone.get(id));
-              sourcesAlredyDone.remove(id);           
-              if(sourcesAlredyDone.isEmpty()){
-                bacthTest = false;
-                System.out.println("########WARNING######\nRecovery completed\tVariable bacth is setted->"+bacthTest);
-              }
-              continue;
-            }
-          }
 
           //System.out.println(id);
           Source source = new Source();
@@ -219,27 +222,34 @@ public class SolrClient {
                     if(ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0).size()>0){
                       ArrayList<Keyword> keywordsList = (ArrayList<Keyword>) ke.extractKeywordsFromTexts(toAnalyze, Configurator.numKeywords).get(0);
                       source.setKeywordList(keywordsList);
-                      sourceList.add(source); 
+                      sourceList.add(source);
+                      numSourceToSave++;
                     }
                   }
             }
             catch(Exception ex){
               System.out.println("Vado in exception per un motivo sconosciuto");
+              
             }
-          }else if(textValidator.analyzer(description))
+          }else if(textValidator.analyzer(description)){
             sourceList.add(source);
+            numSourceToSave++;
+          }
         }
       }
-      if(numSourceToSave%60 == 0 && sourcesAlredyDone.isEmpty()){
-        ObjectMapper mapper = new ObjectMapper();
-        mapper.writerWithDefaultPrettyPrinter().writeValue(new File(path+"test.json"), sourceList);
-      }
+      ObjectMapper mapper = new ObjectMapper();
+
+        if(numSourceToSave%10 ==0 && sourceList.size() > sourcesAlredyDone.size()){ 
+          mapper.writerWithDefaultPrettyPrinter().writeValue(new File(path+"test.json"), sourceList);
+          mapper.writerWithDefaultPrettyPrinter().writeValue(new File("logs/lastCM.json"),cursorMark);
+        } 
+
       cursorMark = parserJson.parse(response.toString()).getAsJsonObject().get("nextCursorMark").getAsString();
+      
 
     }
     ObjectMapper mapper = new ObjectMapper();
     mapper.writerWithDefaultPrettyPrinter().writeValue(new File(path+"test.json"), sourceList);
-
     System.out.println(count);
   }
 
@@ -277,14 +287,12 @@ public class SolrClient {
     List<String> idSources = balanceQuery(list);
 
     for(String id : idSources){
-
       if(Paper.class.isAssignableFrom(c)){
         String queryProduzione = remoteAddress+"/technical_papers/get?ids="+id+"&fl=id,dc_title,dc_description";
         StringBuffer responseProduzione = requestSOLR(queryProduzione);
         if(responseProduzione != null){
           resultsProduzione.add(parserJson.parse(responseProduzione.toString()).getAsJsonObject().get("response").getAsJsonObject().get("docs").getAsJsonArray());
         }
-
       }else if(Patent.class.isAssignableFrom(c)){
         //nuova query per i patent
       }

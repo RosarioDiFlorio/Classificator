@@ -31,7 +31,9 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
+import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.keyword.extractor.util.LanguageDetector;
+
 
 
 
@@ -43,6 +45,7 @@ import eu.innovation.engineering.keyword.extractor.util.LanguageDetector;
 public class WikipediaMiner {
 
   private static final int  levelLimit = 0;
+  private static Map<String,CategoryInfo> catTree = new HashMap<>();
 
   /**
    * Example Main to create datasets from wikipedia and create glossaries.
@@ -57,11 +60,20 @@ public class WikipediaMiner {
     String title = "Glossary_of_chemistry_terms";
 
 
-    String pathWhereSave = "art.and.entertainment";
+    
 
 
-    String categoryPathFile = "categories.txt";
-    List<String> categories = getCategoryList(categoryPathFile);
+    String categoryPathFile = PathConfigurator.applicationFileFolder+"wikiCategories.txt";
+    List<String> categories = new ArrayList<String>();
+        //getCategoryList(categoryPathFile);
+    /*
+     * nuclear chemistry
+Inorganic chemistry
+Organic chemistry
+Biochemistry
+     */
+    String pathWhereSave = PathConfigurator.pyFolder+"biochemistry";
+    categories.add("Biochemistry");
     buildDatasets(categories, pathWhereSave,true,true);
 
     /*
@@ -328,6 +340,98 @@ public class WikipediaMiner {
     Set<String>idPages =  response.get("query").getAsJsonObject().get("pages").getAsJsonObject().entrySet().stream().map(e->e.getKey().toString()).collect(Collectors.toSet());
     return idPages;
   }
+  
+  
+private static void categoriesTree(String category,CategoryInfo nodeInfo, int level) throws IOException{
+    
+    if(level>3){
+      ObjectMapper mapper = new ObjectMapper();
+      mapper.writerWithDefaultPrettyPrinter().writeValue(new File("categoryTree.json"), catTree);
+      return;
+    }
+    System.out.println("level-> "+level);
+    
+    JsonObject response = new JsonObject();
+    //if root
+    if(category.equals("Main_topic_classifications")){
+      
+      String subCategoriesURL ="https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtype=subcat&cmtitle=Category:"+category+"&cmnamespace=14&cmprop=ids&cmlimit=500&format=json";
+      response = getJsonResponse(subCategoriesURL);
+      JsonArray subCategories = new JsonArray();
+      subCategories = response.get("query").getAsJsonObject().get("categorymembers").getAsJsonArray();
+
+      if(subCategories.size()>0){
+        Set<String> childRoot = new HashSet<>();
+
+        for(JsonElement jel: subCategories){   
+          String idSubCategory = jel.getAsJsonObject().get("pageid").getAsString();
+          childRoot.add(idSubCategory);
+          nodeInfo.setChildSet(childRoot);
+
+          CategoryInfo childInfo = new CategoryInfo();
+          Set<String> parents = new HashSet<>();
+          parents.add("root");
+          childInfo.setParentSet(parents);
+          catTree.put(idSubCategory, childInfo);  
+        }
+        catTree.put("root", nodeInfo);
+
+        for(String idSubCategory:childRoot){
+          categoriesTree(idSubCategory, catTree.get(idSubCategory), level+1);
+        }
+      }
+    }else{
+      String subCategoriesURL ="https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtype=subcat&cmpageid="+category+"&cmnamespace=14&cmprop=ids&cmlimit=500&format=json";
+      response = getJsonResponse(subCategoriesURL);
+      JsonArray subCategories = new JsonArray();
+      subCategories = response.get("query").getAsJsonObject().get("categorymembers").getAsJsonArray();
+      Set<String> childsNode = new HashSet<>();
+      if(subCategories.size()>0){ 
+        for(JsonElement jel: subCategories){       
+          String idSubCategory = jel.getAsJsonObject().get("pageid").getAsString();
+          childsNode.add(idSubCategory);
+          if(catTree.containsKey(idSubCategory)){
+            if(!catTree.get(idSubCategory).getParentSet().contains(nodeInfo.getParentSet())){
+              CategoryInfo infoTmp = catTree.get(idSubCategory);
+              Set<String> parentTmp = infoTmp.getParentSet();
+              if(level == 1)
+                parentTmp.add("root");
+              else{
+                parentTmp.addAll(catTree.get(category).getParentSet());
+                parentTmp.remove("root");
+              }
+              infoTmp.setParentSet(parentTmp);
+              catTree.replace(idSubCategory, infoTmp);
+            }
+          }
+          else{
+            CategoryInfo childInfo = new CategoryInfo();
+            Set<String> parents = new HashSet<>();
+            if(level == 1){
+              parents.add(category);
+              childInfo.setParentSet(parents);
+            }else{
+              childInfo.setParentSet(catTree.get(category).getParentSet());
+            }
+            catTree.put(idSubCategory, childInfo);
+          }      
+        }
+        nodeInfo.setChildSet(childsNode);
+        catTree.replace(category, nodeInfo);
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.writerWithDefaultPrettyPrinter().writeValue(new File("categoryTree.json"), catTree);
+        
+        for(String idSubCategory:childsNode){
+          categoriesTree(idSubCategory, catTree.get(idSubCategory), level+1);
+        }
+        
+      }
+
+    }
+
+
+  }
+  
 
 
   /**

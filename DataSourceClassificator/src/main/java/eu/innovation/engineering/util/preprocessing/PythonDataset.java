@@ -9,25 +9,30 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import eu.innovation.engineering.config.PathConfigurator;
+import eu.innovation.engineering.prepocessing.DatasetBuilder;
 import eu.innovation.engineering.prepocessing.datareader.TxtDataReader;
 
 public class PythonDataset {
 
-  
+
   public static void main(String[] args) throws IOException{
-    
-    String pathSources = PathConfigurator.rootFolder+"trainingResultsBig.txt";
-    String pathCategories = PathConfigurator.rootFolder+"categories.txt";
-    createDataset("bigTrainDataset",pathSources,pathCategories);
+
+    String pathSources = PathConfigurator.datasetFolder+"TestChemistry_FullWiki.txt";
+    String pathCategories = PathConfigurator.rootFolder+"science/"+"categories.txt";
+    fromTxtFile(PathConfigurator.pyFolder+"testChemistry_fullwiki",pathSources,pathCategories);
+
+    String dataseFolderPath = PathConfigurator.pyFolder+"test_Solr_10k";
+    String jsonFile = PathConfigurator.pyFolder+"test.json";
+    int limitTexts = 10000;
+    boolean multiLabeled = false;
+    //fromJsonFile(dataseFolderPath, jsonFile, pathCategories, limitTexts, multiLabeled);
   }
-  
-  public static void createDataset(String folderName,String sourcesFile,String categoryFiles) throws IOException{
- 
+
+  public static void fromTxtFile(String folderName,String sourcesFile,String categoryFiles) throws IOException{
     TxtDataReader txtDataReader = new TxtDataReader();
     Map<String, HashMap<String, String>> categoryMap = txtDataReader.categoriesWithIds(sourcesFile, categoryFiles);
-    
-    boolean success = new File(folderName).mkdir();
-  
+
+    boolean success = new File(folderName).mkdir();  
     for(String category: categoryMap.keySet()){
       String folderCategory = folderName+"/"+category.replace(" ", ".");
       success = new File(folderCategory).mkdir();
@@ -41,15 +46,40 @@ public class PythonDataset {
         p.println(s.getDescription());
         p.flush();
         p.close();
-      }
-      
-      
+      } 
     }
-    
-    
-  
+
   }
-  
-  
-  
+
+  public static void fromJsonFile(String folderName,String sourcesFile,String categoryFiles,int limitTexts,boolean multiLabeled) throws IOException{
+    List<String> categories = TxtDataReader.getCategories(categoryFiles);
+    List<Source> sources = DatasetBuilder.loadSources(sourcesFile);
+    System.out.println("Sources avaiable -> "+sources.size());
+
+    boolean success = new File(folderName).mkdir();
+    for(String category : categories){
+      String subFolderPath = folderName+"/"+category.replace(" ",".");
+      success = new File(subFolderPath).mkdir();
+    }
+
+    int count = 0;
+    for(Source s: sources){
+      if(count >= limitTexts)
+        break;
+      String subFolderPath = "";
+      if(multiLabeled)
+        subFolderPath = folderName+"/"+s.getCategoryList().get(0).getLabel().replace(" ",".");
+      else
+        subFolderPath = folderName+"/"+categories.get(0).replace(" ", ".");
+      PrintWriter p = new PrintWriter(new File(subFolderPath+"/"+s.getId()));
+      p.println(s.getTitle());
+      p.println(s.getDescription());
+      p.flush();
+      p.close();
+      count++;
+    }   
+  }
+
+
+
 }
