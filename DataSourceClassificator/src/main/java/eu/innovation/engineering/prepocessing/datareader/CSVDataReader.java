@@ -45,9 +45,11 @@ public class CSVDataReader {
 
 
 
-  public static void main(String[] args) throws Exception{
 
-    mainToCreateDataset(args);
+  public static void main(String[] args) throws Exception{
+    mainToTest(args);
+    //mainToCreateDataset(args);
+
   }
 
 
