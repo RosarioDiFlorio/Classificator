@@ -52,20 +52,20 @@ public class WikipediaMiner {
    * @param args
    * @throws IOException
    */
-  public static void main(String[] args) throws IOException{
-    
+  public static void main2(String[] args) throws IOException{
+
     /*
      * CREATION OF THE DATASETS FROM WIKIPEDIA
      */
     String title = "Glossary_of_chemistry_terms";
 
 
-    
+
 
 
     String categoryPathFile = PathConfigurator.applicationFileFolder+"wikiCategories.txt";
     List<String> categories = new ArrayList<String>();
-        //getCategoryList(categoryPathFile);
+    //getCategoryList(categoryPathFile);
     /*
      * nuclear chemistry
 Inorganic chemistry
@@ -93,13 +93,21 @@ Biochemistry
       glossariesToMerge.add(pathFolder+glossaries[i].getName());
     }
     saveGlossary(mergeGlossaries(glossariesToMerge), "food.json");
-    */
+     */
 
 
     //glossariesToMerge.add("science.json");
     //glossariesToMerge.add("mathematics.json");
     //saveGlossary(mergeGlossaries(glossariesToMerge), "glossaries.json");
   }
+
+  public static void main(String[] args) throws IOException{
+    String path ="WikipediaData/Wikipediacategories.json";
+    loadJsonWikipediaCategories(path);
+    
+
+  }
+
 
 
   /**
@@ -164,7 +172,7 @@ Biochemistry
     return jOb;
   }
 
-  
+
   /**
    *Extract the content (intro) from a set of pages.
    * @param idPages
@@ -340,21 +348,21 @@ Biochemistry
     Set<String>idPages =  response.get("query").getAsJsonObject().get("pages").getAsJsonObject().entrySet().stream().map(e->e.getKey().toString()).collect(Collectors.toSet());
     return idPages;
   }
-  
-  
-private static void categoriesTree(String category,CategoryInfo nodeInfo, int level) throws IOException{
-    
+
+
+  private static void categoriesTree(String category,CategoryInfo nodeInfo, int level) throws IOException{
+
     if(level>3){
       ObjectMapper mapper = new ObjectMapper();
       mapper.writerWithDefaultPrettyPrinter().writeValue(new File("categoryTree.json"), catTree);
       return;
     }
     System.out.println("level-> "+level);
-    
+
     JsonObject response = new JsonObject();
     //if root
     if(category.equals("Main_topic_classifications")){
-      
+
       String subCategoriesURL ="https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtype=subcat&cmtitle=Category:"+category+"&cmnamespace=14&cmprop=ids&cmlimit=500&format=json";
       response = getJsonResponse(subCategoriesURL);
       JsonArray subCategories = new JsonArray();
@@ -420,18 +428,18 @@ private static void categoriesTree(String category,CategoryInfo nodeInfo, int le
         catTree.replace(category, nodeInfo);
         ObjectMapper mapper = new ObjectMapper();
         mapper.writerWithDefaultPrettyPrinter().writeValue(new File("categoryTree.json"), catTree);
-        
+
         for(String idSubCategory:childsNode){
           categoriesTree(idSubCategory, catTree.get(idSubCategory), level+1);
         }
-        
+
       }
 
     }
 
 
   }
-  
+
 
 
   /**
@@ -550,6 +558,50 @@ private static void categoriesTree(String category,CategoryInfo nodeInfo, int le
       line= br.readLine();
     }
     return categoryList;
+  }
+
+  /**
+   * Return a parent category list from input categories 
+   * @param categoriesToSearch category used to search parent category
+   * @return parent category list
+   */
+
+  public static List<String> getParentCategoryList(List<String> categoriesToSearch, Map<String,CategoryInfo> categoryList){
+    
+    for(String category : categoriesToSearch){
+      
+      //String nameCategory = categoryList.get(category).get;
+      
+      Set<String> parentCategoryList = categoryList.get(category).getParentSet();
+      
+      
+    }
+    
+
+    return null;
+
+  }
+
+
+/**
+ * to read json file and return object readed.
+ * @param path file to read
+ * @return Map<String,CategoryInfo>
+ * @throws JsonParseException
+ * @throws JsonMappingException
+ * @throws IOException
+ */
+  public static Map<String,CategoryInfo> loadJsonWikipediaCategories(String path) throws JsonParseException, JsonMappingException, IOException{
+    ObjectMapper mapper = new ObjectMapper();
+
+    //JSON from file to Object
+    Map<String,CategoryInfo> obj = mapper.readValue(new File(path),  new TypeReference<Map<String,CategoryInfo>>() {});
+
+    System.out.println(obj.size());
+
+    return obj;
+
+
   }
 
 
