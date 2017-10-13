@@ -349,94 +349,81 @@ Biochemistry
     return idPages;
   }
 
+  
+  
+  private static void categoriesTree(String category,String parent, int level) throws IOException{
 
-  private static void categoriesTree(String category,CategoryInfo nodeInfo, int level) throws IOException{
-
-    if(level>3){
-      ObjectMapper mapper = new ObjectMapper();
-      mapper.writerWithDefaultPrettyPrinter().writeValue(new File("categoryTree.json"), catTree);
+    if(level>levelLimit){
       return;
     }
     System.out.println("level-> "+level);
 
     JsonObject response = new JsonObject();
+    CategoryInfo nodeInfo = new CategoryInfo();
+    Set<String> childsNode = new HashSet<>();
+
     //if root
     if(category.equals("Main_topic_classifications")){
-
       String subCategoriesURL ="https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtype=subcat&cmtitle=Category:"+category+"&cmnamespace=14&cmprop=ids&cmlimit=500&format=json";
       response = getJsonResponse(subCategoriesURL);
       JsonArray subCategories = new JsonArray();
       subCategories = response.get("query").getAsJsonObject().get("categorymembers").getAsJsonArray();
 
       if(subCategories.size()>0){
-        Set<String> childRoot = new HashSet<>();
-
         for(JsonElement jel: subCategories){   
           String idSubCategory = jel.getAsJsonObject().get("pageid").getAsString();
-          childRoot.add(idSubCategory);
-          nodeInfo.setChildSet(childRoot);
-
-          CategoryInfo childInfo = new CategoryInfo();
-          Set<String> parents = new HashSet<>();
-          parents.add("root");
-          childInfo.setParentSet(parents);
-          catTree.put(idSubCategory, childInfo);  
+          childsNode.add(idSubCategory);
         }
+        nodeInfo.setChildSet(childsNode);
+        nodeInfo.setName("Category:Main_topic_classifications");
         catTree.put("root", nodeInfo);
 
-        for(String idSubCategory:childRoot){
-          categoriesTree(idSubCategory, catTree.get(idSubCategory), level+1);
+        for(String idSubCategory:childsNode){
+          categoriesTree(idSubCategory, "root", level+1);
         }
       }
     }else{
+      JsonObject pageInfo = getPageInfoById(category);
+      nodeInfo.setName(pageInfo.get("title").getAsString());
       String subCategoriesURL ="https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtype=subcat&cmpageid="+category+"&cmnamespace=14&cmprop=ids&cmlimit=500&format=json";
       response = getJsonResponse(subCategoriesURL);
       JsonArray subCategories = new JsonArray();
       subCategories = response.get("query").getAsJsonObject().get("categorymembers").getAsJsonArray();
-      Set<String> childsNode = new HashSet<>();
-      if(subCategories.size()>0){ 
+     if(subCategories.size()>0){ 
         for(JsonElement jel: subCategories){       
           String idSubCategory = jel.getAsJsonObject().get("pageid").getAsString();
-          childsNode.add(idSubCategory);
-          if(catTree.containsKey(idSubCategory)){
-            if(!catTree.get(idSubCategory).getParentSet().contains(nodeInfo.getParentSet())){
-              CategoryInfo infoTmp = catTree.get(idSubCategory);
-              Set<String> parentTmp = infoTmp.getParentSet();
-              if(level == 1)
-                parentTmp.add("root");
-              else{
-                parentTmp.addAll(catTree.get(category).getParentSet());
-                parentTmp.remove("root");
-              }
-              infoTmp.setParentSet(parentTmp);
-              catTree.replace(idSubCategory, infoTmp);
-            }
-          }
-          else{
-            CategoryInfo childInfo = new CategoryInfo();
-            Set<String> parents = new HashSet<>();
-            if(level == 1){
-              parents.add(category);
-              childInfo.setParentSet(parents);
-            }else{
-              childInfo.setParentSet(catTree.get(category).getParentSet());
-            }
-            catTree.put(idSubCategory, childInfo);
-          }      
+          childsNode.add(idSubCategory);     
         }
-        nodeInfo.setChildSet(childsNode);
+      }
+      nodeInfo.setChildSet(childsNode);
+
+      if(catTree.containsKey(category)){
+        Set<String> parentSet = catTree.get(category).getParentSet();
+        if(!parentSet.contains(parent) && !childsNode.contains(parent)){
+          parentSet.add(parent);
+        }
+        nodeInfo.setParentSet(parentSet);
         catTree.replace(category, nodeInfo);
-        ObjectMapper mapper = new ObjectMapper();
-        mapper.writerWithDefaultPrettyPrinter().writeValue(new File("categoryTree.json"), catTree);
 
-        for(String idSubCategory:childsNode){
-          categoriesTree(idSubCategory, catTree.get(idSubCategory), level+1);
-        }
-
+      }else{
+        Set<String> parentSet = new HashSet<>();
+        if(!childsNode.contains(parent))
+          parentSet.add(parent);
+        nodeInfo.setParentSet(parentSet);
+        catTree.put(category, nodeInfo);
       }
 
-    }
+      if(level ==1)
+        parent = category;
 
+      for(String idSubCategory:childsNode){
+        categoriesTree(idSubCategory, parent, level+1);
+      }
+
+      ObjectMapper mapper = new ObjectMapper();
+      mapper.writerWithDefaultPrettyPrinter().writeValue(new File("categoryTree.json"), catTree);
+
+    }
 
   }
 
