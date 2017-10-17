@@ -18,7 +18,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ForkJoinPool;
+import java.util.concurrent.Future;
 import java.util.concurrent.RecursiveTask;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -45,8 +48,12 @@ import eu.innovation.engineering.keyword.extractor.util.LanguageDetector;
  * @author Rosario Di Florio (RosarioUbuntu)
  *
  */
-public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>>  {
+public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements Callable<List<CategoryInfo>>  {
 
+  /**
+   * 
+   */
+  private static final long serialVersionUID = 1L;
   private static final int  levelLimit = 1;
   private static Map<String,CategoryInfo> catTree = new HashMap<>();
   private List<String> idCategories;
@@ -168,7 +175,7 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>>  {
 
   }
 
-  public static void main(String[] args) throws IOException{
+  public static void main(String[] args) throws IOException, InterruptedException, ExecutionException{
 
     ArrayList<String> list = new ArrayList<>();
     list.add("Category:Main_topic_classifications");
@@ -189,21 +196,20 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>>  {
         
         list = new ArrayList<>();
         list.add(cat.getId());
-        miner = new WikipediaMiner(list,0, 5, cat.getId());
+        miner = new WikipediaMiner(list,0, 3, cat.getId());
         minerTasks.add(miner);
-        result2=pool.invoke(miner);
-        
-        for(CategoryInfo category : result2){
-          writer.write(category.getId()+","+category.getName()+","+category.getParentSet()+"\n");
-          
-        }
-        writer.flush();
-        
-        //result2.stream().map(c -> c.getName()+" "+c.getParentSet()).forEach(System.out::println);
       }  
     }
     
-    //List<Future<T>> response = pool.invokeAll((Collection<? extends Callable<T>>) minerTasks);
+    List<Future<List<CategoryInfo>>> response = pool.invokeAll(minerTasks);
+    
+    for(Future<List<CategoryInfo>> f: response ){
+      List<CategoryInfo> currentList = f.get();
+      for(CategoryInfo c : currentList){
+        writer.write(c.getId()+","+c.getName()+","+c.getParentSet());
+        writer.flush();
+      }
+    }
     
     
     writer.close();
@@ -799,6 +805,13 @@ Biochemistry
     return obj;
 
 
+  }
+
+
+  @Override
+  public List<CategoryInfo> call() throws Exception {
+    return this.compute();
+   
   }
 
 
