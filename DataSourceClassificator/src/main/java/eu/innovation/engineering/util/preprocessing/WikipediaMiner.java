@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
@@ -17,6 +18,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.concurrent.ForkJoinPool;
+import java.util.concurrent.RecursiveTask;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -42,10 +45,177 @@ import eu.innovation.engineering.keyword.extractor.util.LanguageDetector;
  * @author Rosario Di Florio (RosarioUbuntu)
  *
  */
-public class WikipediaMiner {
+public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>>  {
 
-  private static final int  levelLimit = 0;
+  private static final int  levelLimit = 1;
   private static Map<String,CategoryInfo> catTree = new HashMap<>();
+  private List<String> idCategories;
+  private List<CategoryInfo> categories;
+  private String parent;
+  private int level;
+  private String root;
+  private int maxLevel;
+
+
+  public WikipediaMiner(List<String> idSubCategoriesLeft, int level, int maxLevel, String root){
+    this.parent=parent;
+    this.idCategories=idSubCategoriesLeft;
+    this.level=level;
+    this.root = root;
+    this.maxLevel=maxLevel;
+  }
+
+
+  @Override
+  protected List<CategoryInfo> compute() {
+    ArrayList<CategoryInfo> toReturn = new ArrayList<CategoryInfo>();
+
+    if(level>0){
+      for(String currentCategory : idCategories){
+        try {
+          JsonObject wikipediaQuery = getPageInfoById(currentCategory);
+          CategoryInfo currentInfo = new CategoryInfo();
+          currentInfo.setId(currentCategory);
+          currentInfo.setName(wikipediaQuery.get("title").getAsString());
+
+          toReturn.add(currentInfo);
+
+        }
+        catch (IOException e) {
+          // TODO Auto-generated catch block
+          e.printStackTrace();
+        }
+      }
+    }
+    else{
+      CategoryInfo currentInfo = new CategoryInfo();
+      currentInfo.setId("root");
+      currentInfo.setName("root");
+      toReturn.add(currentInfo);
+    }
+
+    //CUTOFF
+    if(level == maxLevel){
+      
+      return toReturn;
+    }
+    // divido il problema in sottoproblemi
+    else{
+      String levelKey = "";
+      if(root.equals("root"))
+        levelKey = "&cmtitle=";
+      else{
+        levelKey = "&cmpageid=";
+      }
+      ArrayList<String> idSubCategories = new ArrayList<String>();
+      for(String currentCategory : idCategories){
+        String subCategoriesURL ="https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtype=subcat"+levelKey+currentCategory+"&cmnamespace=14&cmprop=ids&cmlimit=500&format=json";
+
+        try {
+          JsonObject response = new JsonObject();
+          response = getJsonResponse(subCategoriesURL);
+          JsonArray subCategories = new JsonArray();
+          subCategories = response.get("query").getAsJsonObject().get("categorymembers").getAsJsonArray();
+          ArrayList<String> childsNode = new ArrayList<String>();
+          if(subCategories.size()>0){ 
+            for(JsonElement jel: subCategories){       
+              String idSubCategory = jel.getAsJsonObject().get("pageid").getAsString();
+              childsNode.add(idSubCategory);  
+
+            }
+            idSubCategories.addAll(childsNode);
+          }
+        }
+        catch (IOException e) {
+          // TODO Auto-generated catch block
+          e.printStackTrace();
+        } 
+      }
+
+
+
+
+      int size = idSubCategories.size();
+      List<String> idSubCategoriesLeft = idSubCategories.subList(0, size/2);
+      List<String> idSubCategoriesRight = idSubCategories.subList((size/2)+1, size);
+
+      List<CategoryInfo> leftResult = new ArrayList<>();
+      List<CategoryInfo> rightResult =  new ArrayList<>();
+
+      WikipediaMiner leftJob = new WikipediaMiner(idSubCategoriesLeft, level+1,maxLevel,root);
+      WikipediaMiner rightJob = new WikipediaMiner(idSubCategoriesRight, level+1,maxLevel,root);
+      leftJob.fork();
+
+      rightResult =  rightJob.compute();
+      leftResult =  leftJob.join();
+
+      toReturn.addAll(leftResult);
+      toReturn.addAll(rightResult);
+
+      // se sono il livello 0, prima di tornare l'array, setto a tutte le categorie il parent
+      if(level==0){
+        HashSet<String> hashSetRoot = new HashSet<String>();
+        hashSetRoot.add(root);
+        for(CategoryInfo currentCategory : toReturn){
+          currentCategory.setParentSet(hashSetRoot);
+        }
+      }
+
+
+      return toReturn;
+    }
+
+
+  }
+
+  public static void main(String[] args) throws IOException{
+
+    ArrayList<String> list = new ArrayList<>();
+    list.add("Category:Main_topic_classifications");
+
+    ForkJoinPool pool = new ForkJoinPool();
+    WikipediaMiner miner = new WikipediaMiner(list,0, 1, "root");
+    List<CategoryInfo> result1 = pool.invoke(miner);
+    result1.stream().map(c -> c.getId()).forEach(System.out::println);
+    List<CategoryInfo> result2 = new ArrayList<>();
+    List<WikipediaMiner> minerTasks = new ArrayList<WikipediaMiner>();
+    
+    FileWriter writer = new FileWriter("categoriesWikiedia.txt");
+    writer.write("id,name,parent\n");
+    
+    for(CategoryInfo cat : result1){
+      System.out.println(cat.getName());
+      if(!cat.getId().equals("root")){
+        
+        list = new ArrayList<>();
+        list.add(cat.getId());
+        miner = new WikipediaMiner(list,0, 5, cat.getId());
+        minerTasks.add(miner);
+        result2=pool.invoke(miner);
+        
+        for(CategoryInfo category : result2){
+          writer.write(category.getId()+","+category.getName()+","+category.getParentSet()+"\n");
+          
+        }
+        writer.flush();
+        
+        //result2.stream().map(c -> c.getName()+" "+c.getParentSet()).forEach(System.out::println);
+      }  
+    }
+    
+    //List<Future<T>> response = pool.invokeAll((Collection<? extends Callable<T>>) minerTasks);
+    
+    
+    writer.close();
+    
+    System.out.println(result2.size());
+    
+
+  }
+
+
+
+
 
   /**
    * Example Main to create datasets from wikipedia and create glossaries.
@@ -101,12 +271,15 @@ Biochemistry
     //saveGlossary(mergeGlossaries(glossariesToMerge), "glossaries.json");
   }
 
-  public static void main(String[] args) throws IOException{
+  public static void mainLuigi(String[] args) throws IOException{
     String path ="WikipediaData/Wikipediacategories.json";
-    loadJsonWikipediaCategories(path);
-    
-
+    Map<String, CategoryInfo> categoryList = loadJsonWikipediaCategories(path);
+    //System.out.println(categoryList);
+    Set<String> listId = getCategoryIdByIdSource("6788582");    
+    getParentCategoryList(listId,categoryList);
   }
+
+
 
 
 
@@ -349,8 +522,8 @@ Biochemistry
     return idPages;
   }
 
-  
-  
+
+
   private static void categoriesTree(String category,String parent, int level) throws IOException{
 
     if(level>levelLimit){
@@ -389,7 +562,7 @@ Biochemistry
       response = getJsonResponse(subCategoriesURL);
       JsonArray subCategories = new JsonArray();
       subCategories = response.get("query").getAsJsonObject().get("categorymembers").getAsJsonArray();
-     if(subCategories.size()>0){ 
+      if(subCategories.size()>0){ 
         for(JsonElement jel: subCategories){       
           String idSubCategory = jel.getAsJsonObject().get("pageid").getAsString();
           childsNode.add(idSubCategory);     
@@ -553,43 +726,86 @@ Biochemistry
    * @return parent category list
    */
 
-  public static List<String> getParentCategoryList(List<String> categoriesToSearch, Map<String,CategoryInfo> categoryList){
-    
-    for(String category : categoriesToSearch){
-      
-      //String nameCategory = categoryList.get(category).get;
-      
-      Set<String> parentCategoryList = categoryList.get(category).getParentSet();
-      
-      
-    }
-    
+  public static Set<String> getParentCategoryList(Set<String> categoriesToSearch, Map<String,CategoryInfo> categoryList){
 
-    return null;
+    Set<String> parentCategoryList = new HashSet<String>();
+
+    for(String category : categoriesToSearch){
+
+      System.out.println("----------------------------------------------------------");
+      if(categoryList.get(category)!=null){
+        System.out.println(categoryList.get(category).getName()+" "+category);
+        Set<String> parentCurrentCategoryList = categoryList.get(category).getParentSet();
+        parentCategoryList.addAll(parentCurrentCategoryList);
+        for(String superCategory: parentCurrentCategoryList){
+          System.out.println("    "+categoryList.get(superCategory).getName()+" "+superCategory);
+        }
+      }
+      else{
+        System.out.println(category+" there isn't into json file");
+      }
+    }
+
+
+    return parentCategoryList;
 
   }
 
+  /**
+   * 
+   * @param id
+   * @return
+   * @throws IOException 
+   */
+  public static Set<String> getCategoryIdByIdSource(String id) throws IOException{
 
-/**
- * to read json file and return object readed.
- * @param path file to read
- * @return Map<String,CategoryInfo>
- * @throws JsonParseException
- * @throws JsonMappingException
- * @throws IOException
- */
+    Set<String> idList = new HashSet<String>();
+    //https://en.wikipedia.org/w/api.php?action=query&indexpageids=&titles=Category:Collecting&format=json
+    String query = "https://en.wikipedia.org/w/api.php?action=query&prop=categories&pageids="+id+"&format=json";
+    JsonObject response = getJsonResponse(query);
+
+    JsonArray category = response.get("query").getAsJsonObject().get("pages").getAsJsonObject().get(id).getAsJsonObject().get("categories").getAsJsonArray();
+
+    for(JsonElement obj : category){
+      //String nameCategory = obj.getAsString();
+      JsonObject newObj = obj.getAsJsonObject();
+      String nameCategory = newObj.get("title").getAsString();
+      String query2="https://en.wikipedia.org/w/api.php?action=query&indexpageids=&titles="+nameCategory.replace(" ", "%20")+"&format=json";
+      response = getJsonResponse(query2);
+      idList.add(response.get("query").getAsJsonObject().get("pageids").getAsString());
+
+    }
+
+    return idList;
+  }
+
+
+
+
+  /**
+   * to read json file and return object readed.
+   * @param path file to read
+   * @return Map<String,CategoryInfo>
+   * @throws JsonParseException
+   * @throws JsonMappingException
+   * @throws IOException
+   */
   public static Map<String,CategoryInfo> loadJsonWikipediaCategories(String path) throws JsonParseException, JsonMappingException, IOException{
     ObjectMapper mapper = new ObjectMapper();
 
     //JSON from file to Object
     Map<String,CategoryInfo> obj = mapper.readValue(new File(path),  new TypeReference<Map<String,CategoryInfo>>() {});
 
-    System.out.println(obj.size());
-
     return obj;
 
 
   }
+
+
+
+
+
+
 
 
 
