@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
@@ -96,14 +95,14 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
     }
     else{
       CategoryInfo currentInfo = new CategoryInfo();
-      currentInfo.setId("root");
-      currentInfo.setName("root");
+      currentInfo.setId(root);
+      currentInfo.setName(root);
       toReturn.add(currentInfo);
     }
 
     //CUTOFF
     if(level == maxLevel){
-      
+
       return toReturn;
     }
     // divido il problema in sottoproblemi
@@ -175,7 +174,16 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
 
   }
 
-  public static void main(String[] args) throws IOException, InterruptedException, ExecutionException{
+  public static void main(String args[]) throws IOException, InterruptedException, ExecutionException{
+
+    createMapCategoriesWikipedia();
+    //mainTocreateMap();
+
+  }
+
+
+
+  public static void createMapCategoriesWikipedia() throws IOException, InterruptedException, ExecutionException{
 
     ArrayList<String> list = new ArrayList<>();
     list.add("Category:Main_topic_classifications");
@@ -186,36 +194,130 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
     result1.stream().map(c -> c.getId()).forEach(System.out::println);
     List<CategoryInfo> result2 = new ArrayList<>();
     List<WikipediaMiner> minerTasks = new ArrayList<WikipediaMiner>();
-    
-    FileWriter writer = new FileWriter("categoriesWikiedia.txt");
-    writer.write("id,name,parent\n");
-    
+
+
     for(CategoryInfo cat : result1){
       System.out.println(cat.getName());
       if(!cat.getId().equals("root")){
-        
+
         list = new ArrayList<>();
         list.add(cat.getId());
-        miner = new WikipediaMiner(list,0, 3, cat.getId());
+        miner = new WikipediaMiner(list,0, 2, cat.getId());
         minerTasks.add(miner);
       }  
     }
-    
+
     List<Future<List<CategoryInfo>>> response = pool.invokeAll(minerTasks);
-    
+    List<CategoryInfo> categoryList = new ArrayList<CategoryInfo>();
     for(Future<List<CategoryInfo>> f: response ){
       List<CategoryInfo> currentList = f.get();
       for(CategoryInfo c : currentList){
-        writer.write(c.getId()+","+c.getName()+","+c.getParentSet());
-        writer.flush();
+        categoryList.add(c);
       }
     }
     
-    
-    writer.close();
-    
-    System.out.println(result2.size());
-    
+
+    Map<String, CategoryInfo> map = createMapCategory(categoryList);
+
+    System.out.println(map.size());
+
+    for(String key : map.keySet()){
+      if(map.get(key).getParentSet().size()>1){
+        System.out.println(map.get(key).getName() +" -> "+map.get(key).getParentSet());
+        for(String parent :map.get(key).getParentSet()){
+          JsonObject pageInfo = getPageInfoById(parent);
+          String parentName = pageInfo.get("title").getAsString();
+          System.out.print("     "+parentName);
+        }
+        System.out.println();
+      }
+    }
+   
+
+
+
+  }
+
+
+  public static void mainTocreateMap() throws IOException{
+
+    readerCategoryWikipediaFromFileTXT("categoriesWikiedia.csv");
+
+  }
+
+
+  public static void readerCategoryWikipediaFromFileTXT(String path) throws IOException{
+
+    FileReader reader = new FileReader(path);
+    BufferedReader br = new BufferedReader(reader);
+
+    //leggo la prima riga
+    String line = br.readLine();
+    //leggo la seconda riga per saltare l'intestazione del csv
+    line = br.readLine();
+    List<CategoryInfo> categoryList = new ArrayList<CategoryInfo>();
+    while(line!=null){
+      String[] lineSplitted = line.split(",");
+      CategoryInfo category = new CategoryInfo();
+      category.setId(lineSplitted[0]);
+      category.setName(lineSplitted[1]);
+      Set<String> parent = new HashSet<String>();
+      parent.add(lineSplitted[2].replace("[","").replace("]",""));
+      category.setParentSet(parent);
+      categoryList.add(category);
+      line = br.readLine();
+    }
+
+    System.out.println(categoryList.size());
+
+    Map<String, CategoryInfo> map = createMapCategory(categoryList);
+
+    System.out.println(map.size());
+
+    for(String key : map.keySet()){
+      if(map.get(key).getParentSet().size()>1){
+        System.out.println(map.get(key).getName() +" -> "+map.get(key).getParentSet());
+        for(String parent :map.get(key).getParentSet()){
+          JsonObject pageInfo = getPageInfoById(parent);
+          String parentName = pageInfo.get("title").getAsString();
+          System.out.print("     "+parentName);
+        }
+        System.out.println();
+      }
+    }
+
+
+  }
+
+
+
+  public static Map<String, CategoryInfo> createMapCategory(List<CategoryInfo> categoryList){
+
+    Map<String,CategoryInfo> mapToReturn = new HashMap<String,CategoryInfo>();
+
+    for(CategoryInfo c: categoryList){
+
+
+      //se contiene già la categoria
+      if(mapToReturn.containsKey(c.getId())){
+        Set<String> currentParents = c.getParentSet(); 
+        //per ogni parent della categoria corrente
+        for(String parent:currentParents){
+          //se il parent corrente della categoria corrente non c'è nella categoria che già è presente in mappa
+          if(!mapToReturn.get(c.getId()).getParentSet().contains(parent)){
+            Set<String> toAdd = mapToReturn.get(c.getId()).getParentSet();
+            toAdd.add(parent);
+            mapToReturn.get(c.getId()).setParentSet(toAdd);
+          }
+        }
+      }
+      else{
+        mapToReturn.put(c.getId(), c);
+      }
+
+    }
+
+    return mapToReturn;
 
   }
 
@@ -811,7 +913,7 @@ Biochemistry
   @Override
   public List<CategoryInfo> call() throws Exception {
     return this.compute();
-   
+
   }
 
 
