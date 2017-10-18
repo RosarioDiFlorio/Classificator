@@ -202,7 +202,7 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
 
         list = new ArrayList<>();
         list.add(cat.getId());
-        miner = new WikipediaMiner(list,0, 2, cat.getId());
+        miner = new WikipediaMiner(list,0, 1, cat.getId());
         minerTasks.add(miner);
       }  
     }
@@ -219,7 +219,15 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
 
     Map<String, CategoryInfo> map = createMapCategory(categoryList);
 
-    System.out.println(map.size());
+    
+    for(String key: map.keySet()){
+      
+      System.out.println("id:"+key+" name:"+map.get(key).getName()+" parents:"+map.get(key).getParentSet());
+      
+    }
+    
+    
+    /*System.out.println(map.size());
 
     for(String key : map.keySet()){
       if(map.get(key).getParentSet().size()>1){
@@ -231,7 +239,7 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
         }
         System.out.println();
       }
-    }
+    }*/
    
 
 
