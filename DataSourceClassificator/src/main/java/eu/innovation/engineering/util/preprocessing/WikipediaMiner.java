@@ -191,13 +191,13 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
     ForkJoinPool pool = new ForkJoinPool();
     WikipediaMiner miner = new WikipediaMiner(list,0, 1, "root");
     List<CategoryInfo> result1 = pool.invoke(miner);
-    result1.stream().map(c -> c.getId()).forEach(System.out::println);
+    //result1.stream().map(c -> c.getId()).forEach(System.out::println);
     List<CategoryInfo> result2 = new ArrayList<>();
     List<WikipediaMiner> minerTasks = new ArrayList<WikipediaMiner>();
 
 
     for(CategoryInfo cat : result1){
-      System.out.println(cat.getName());
+      System.out.println("id:"+cat.getId()+" name:"+cat.getName()+" parentList:"+cat.getParentSet());
       if(!cat.getId().equals("root")){
 
         list = new ArrayList<>();
@@ -206,7 +206,8 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
         minerTasks.add(miner);
       }  
     }
-
+    System.out.println("--------------------------------------------------------------------------------");
+    
     List<Future<List<CategoryInfo>>> response = pool.invokeAll(minerTasks);
     List<CategoryInfo> categoryList = new ArrayList<CategoryInfo>();
     for(Future<List<CategoryInfo>> f: response ){
