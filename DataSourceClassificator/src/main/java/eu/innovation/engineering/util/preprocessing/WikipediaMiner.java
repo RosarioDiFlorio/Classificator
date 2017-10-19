@@ -443,39 +443,14 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
     //query for subcategories.
     //https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category:Foods&cmnamespace=14&cmprop=ids&cmlimit=500&format=json
     if(recursive && level <= levelLimit){
-      
-      
-      
-      String subCategoriesURL ="https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtype=subcat&cmtitle=Category:"+category+"&cmnamespace=14&cmprop=ids&cmlimit=500&format=json";
-      response = getJsonResponse(subCategoriesURL);
-      JsonArray subCategories = new JsonArray();
-      subCategories = response.get("query").getAsJsonObject().get("categorymembers").getAsJsonArray();
-
-      if(subCategories.size()>0){
-        for(JsonElement jel: subCategories){
-          String idSubCategory = jel.getAsJsonObject().get("pageid").getAsString();
-          JsonObject infoSubCategory = getPageInfoById(idSubCategory);
-          String subCategoryName = infoSubCategory.get("title").getAsString().replace("Category:", "").replace(" ","_");
-          ids = requestIdsOfCategory(subCategoryName,ids,recursive,level + 1);
+      Set<String> idSubCategories = getIdsMemberByType(category, "subcat", 14);
+      if(idSubCategories.size()>0){
+        for(String idSubCategory: idSubCategories){
+          ids = requestIdsOfCategory(idSubCategory,ids,recursive,level + 1);
         }
       }
     }
-    //System.out.println(ids.size());
-    //https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmpageid=36812606&cmnamespace=14&cmprop=ids&cmlimit=500&format=json
-
-    String targetURL = "https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtype=page&cmtitle=Category:"+category+"&cmnamespace=0&cmprop=ids&cmlimit=500&format=json";
-    response = getJsonResponse(targetURL);
-    JsonArray results = new JsonArray();
-    results = response.get("query").getAsJsonObject().get("categorymembers").getAsJsonArray();
-
-    if(results.size()>0){
-      for(JsonElement jel: results){
-        ids.add(jel.getAsJsonObject().get("pageid").getAsString());
-      }
-      System.out.println("Requesting Ids "+category +" level -> "+level +" number of pages -> "+results.size());
-
-    }
-
+    ids.addAll(getIdsMemberByType(category, "page", 0));
     return ids;
   }
 
