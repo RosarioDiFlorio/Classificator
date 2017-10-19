@@ -7,8 +7,19 @@ public class CategoryInfo {
   private Set<String> childSet;
   private String name;
   private String id;
+  private int level;
   
   
+  
+  public int getLevel() {
+    return level;
+  }
+
+  
+  public void setLevel(int level) {
+    this.level = level;
+  }
+
   public String getId() {
     return id;
   }
