@@ -34,7 +34,7 @@ public class JsonPersister {
    * @param object
    * @return
    */
-  private static <E> boolean saveObject(String pathWhereSave,E object){
+  public static <E> boolean saveObject(String pathWhereSave,E object){
     try {
       ObjectMapper mapper = new ObjectMapper();
       mapper.writerWithDefaultPrettyPrinter().writeValue(new File(pathWhereSave), object);
@@ -53,7 +53,7 @@ public class JsonPersister {
    * @param pathWhereLoad
    * @return
    */
-  private static <E> E loadObject(String pathWhereLoad){  
+  public static <E> E loadObject(String pathWhereLoad){  
     try {
       ObjectMapper mapper = new ObjectMapper();
       E toReturn = mapper.readValue(new File(pathWhereLoad), new TypeReference<E>() {});
