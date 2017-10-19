@@ -203,41 +203,30 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
 
   public static void main(String args[]) throws IOException, InterruptedException, ExecutionException{
 
-    createMapCategoriesWikipedia();
-    //mainTocreateMap();
+    List<String> listId = new ArrayList<String>();
+    listId.add("696763");
+    createMapCategoriesWikipedia(listId,"mapEducation");
 
   }
 
 
 
-  public static void createMapCategoriesWikipedia() throws IOException, InterruptedException, ExecutionException{
-
-    ArrayList<String> list = new ArrayList<>();
-    list.add("691182");
-
-    
+  public static void createMapCategoriesWikipedia(List<String> idList, String nameFile) throws IOException, InterruptedException, ExecutionException{
     ForkJoinPool pool = new ForkJoinPool();
-    WikipediaMiner miner = new WikipediaMiner(list,0, 4, "691182");
-    List<CategoryInfo> result1 = pool.invoke(miner);
-    //result1.stream().map(c -> c.getId()).forEach(System.out::println);
-    List<CategoryInfo> result2 = new ArrayList<>();
-    List<WikipediaMiner> minerTasks = new ArrayList<WikipediaMiner>();
-    minerTasks.add(miner);
-
-    /*for(CategoryInfo cat : result1){
-      System.out.println("id:"+cat.getId()+" name:"+cat.getName()+" parentList:"+cat.getParentSet());
-      if(!cat.getId().equals("root")){
-
-        list = new ArrayList<>();
-        list.add(cat.getId());
-        miner = new WikipediaMiner(list,0, 3, cat.getId());
-        minerTasks.add(miner);
-      }  
-    }*/
-    System.out.println("--------------------------------------------------------------------------------");
-
-    List<Future<List<CategoryInfo>>> response = pool.invokeAll(minerTasks);
     List<CategoryInfo> categoryList = new ArrayList<CategoryInfo>();
+    List<WikipediaMiner>minerList = new ArrayList<WikipediaMiner>();
+    
+    //per ogni id creo un miner
+    for(String id:idList){
+      ArrayList<String> list = new ArrayList<>();
+      WikipediaMiner miner = new WikipediaMiner(list,0, 4, id);
+      minerList.add(miner);
+    }
+    
+    //lancio i miners
+    List<Future<List<CategoryInfo>>> response = pool.invokeAll(minerList);
+    
+    //aggiungo le categorie ottenute ad una lista di categorie
     for(Future<List<CategoryInfo>> f: response ){
       List<CategoryInfo> currentList = f.get();
       for(CategoryInfo c : currentList){
@@ -245,33 +234,13 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
       }
     }
 
-
+    //creo la mappa basandomi sulla lista delle categorie
     Map<String, CategoryInfo> map = createMapCategory(categoryList);
-    JsonPersister.saveObject("mapScience.json", map);
+    JsonPersister.saveObject(nameFile+".json", map);
 
     for(String key: map.keySet()){
-
       System.out.println("id:"+key+" name:"+map.get(key).getName()+" parents:"+map.get(key).getParentSet());
-
     }
-
-
-    /*System.out.println(map.size());
-
-    for(String key : map.keySet()){
-      if(map.get(key).getParentSet().size()>1){
-        System.out.println(map.get(key).getName() +" -> "+map.get(key).getParentSet());
-        for(String parent :map.get(key).getParentSet()){
-          JsonObject pageInfo = getPageInfoById(parent);
-          String parentName = pageInfo.get("title").getAsString();
-          System.out.print("     "+parentName);
-        }
-        System.out.println();
-      }
-    }*/
-
-
-
 
   }
 
@@ -308,8 +277,8 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
     System.out.println(categoryList.size());
 
     Map<String, CategoryInfo> map = createMapCategory(categoryList);
-    
-    
+
+
     System.out.println(map.size());
 
     for(String key : map.keySet()){
