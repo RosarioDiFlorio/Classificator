@@ -197,8 +197,9 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
   public static void main(String args[]) throws IOException, InterruptedException, ExecutionException{
 
     List<String> listId = new ArrayList<String>();
-    listId.add("696763");
-    createMapCategoriesWikipedia(listId,"mapEducation");
+    listId.add("4892515");
+    listId.add("693016");
+    createMapCategoriesWikipedia(listId,"mapArt&Entertainment");
 
   }
 
@@ -214,6 +215,7 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
     //per ogni id creo un miner
     for(String id:idList){
       ArrayList<String> list = new ArrayList<>();
+      list.add(id);
       WikipediaMiner miner = new WikipediaMiner(list,0, 4, id);
       minerList.add(miner);
     }
