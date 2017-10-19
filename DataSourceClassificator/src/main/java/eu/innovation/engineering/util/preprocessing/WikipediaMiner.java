@@ -315,9 +315,9 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
 
     for(String category : categories){
       if(txtFolder)
-        saveContentFolder(getContentPages(requestIdsOfCategory(category,new HashSet<String>(),recursive,0)), pathWhereSave);
+        saveContentFolder(getContentPages(requestIdsPagesOfCategory(category,new HashSet<String>(),recursive,0)), pathWhereSave);
       else
-        saveContentPages(getContentPages(requestIdsOfCategory(category,new HashSet<String>(),recursive,0)), pathWhereSave);
+        saveContentPages(getContentPages(requestIdsPagesOfCategory(category,new HashSet<String>(),recursive,0)), pathWhereSave);
     }
   }
 
@@ -438,7 +438,7 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
    * @return
    * @throws IOException
    */
-  private static Set<String> requestIdsOfCategory(String category,Set<String> ids,boolean recursive,int level) throws IOException { 
+  private static Set<String> requestIdsPagesOfCategory(String category,Set<String> ids,boolean recursive,int level) throws IOException { 
     JsonObject response = new JsonObject();
     //query for subcategories.
     //https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category:Foods&cmnamespace=14&cmprop=ids&cmlimit=500&format=json
@@ -446,7 +446,7 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
       Set<String> idSubCategories = getIdsMemberByType(category, "subcat", 14);
       if(idSubCategories.size()>0){
         for(String idSubCategory: idSubCategories){
-          ids = requestIdsOfCategory(idSubCategory,ids,recursive,level + 1);
+          ids = requestIdsPagesOfCategory(idSubCategory,ids,recursive,level + 1);
         }
       }
     }
