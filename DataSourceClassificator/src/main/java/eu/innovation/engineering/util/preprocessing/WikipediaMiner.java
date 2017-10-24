@@ -185,6 +185,7 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
 
     buildDatasetMultilabel("data/multiLabel");
 
+
   }
 
 
@@ -236,7 +237,7 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
     for(String id:idList){
       ArrayList<String> list = new ArrayList<>();
       list.add(id);
-      WikipediaMiner miner = new WikipediaMiner(list,0, 4, id);
+      WikipediaMiner miner = new WikipediaMiner(list,0, 3, id);
       minerList.add(miner);
     }
 
