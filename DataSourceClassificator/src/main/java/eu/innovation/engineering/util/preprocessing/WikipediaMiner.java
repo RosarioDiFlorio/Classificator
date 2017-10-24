@@ -33,11 +33,8 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
+import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.keyword.extractor.util.LanguageDetector;
-
-
-
-
 
 /**
  * @author Rosario Di Florio (RosarioUbuntu)
@@ -173,25 +170,10 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
           currentCategory.setParentSet(hashSetRoot);
         }
       }
-
-
       return toReturn;
     }
 
 
-  }
-
-  private static boolean isNumeric(String str)  
-  {  
-    try  
-    {  
-      double d = Double.parseDouble(str);  
-    }  
-    catch(NumberFormatException nfe)  
-    {  
-      return false;  
-    }  
-    return true;  
   }
 
   public static void main(String args[]) throws IOException, InterruptedException, ExecutionException{
@@ -199,10 +181,48 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
     List<String> listId = new ArrayList<String>();
     listId.add("4892515");
     listId.add("693016");
-    createMapCategoriesWikipedia(listId,"mapArt&Entertainment");
+    //createMapCategoriesWikipedia(listId,"mapArt&Entertainment");
+
+    buildDatasetMultilabel("data/multiLabel");
 
   }
 
+
+  public static void buildDatasetMultilabel(String pathDataset) throws IOException{
+    Map<String, Map<String, CategoryInfo>> map = getMapCategories(PathConfigurator.wikipediaFolder);
+
+
+    boolean success = new File("data/multiLabel").mkdir();
+
+    for(String keyMap: map.keySet()){
+      success = new File(pathDataset+"/"+keyMap.replace("map", "")).mkdir();
+    }
+
+    Map<String,Set<String>> docCategoryMap = new HashMap<>();
+    for(String cat : getCategoryList("wikipedia_categories.txt")){
+      System.out.println("Category -> "+cat);
+      Set<String> list = requestIdsPagesOfCategory(cat, new HashSet<String>(), true, 0, 0);
+      System.out.println("number of document -> "+list.size());
+      for(String  id:list){
+        Set<String> rootCategories = getRootBelongCategories(map, getBelongCategories(id));
+        if(!rootCategories.isEmpty())
+          docCategoryMap.put(id, rootCategories);
+        if(rootCategories.size()==1){
+          Set<String> idPage = new HashSet<>();
+          idPage.add(id);
+          Map<String, String> content = getContentPages(idPage);
+
+          for(String category: rootCategories){
+            PrintWriter p = new PrintWriter(new File(pathDataset+"/"+category.replace("map", "")+"/"+id));
+            p.println(content.get(id));
+            p.flush();
+            p.close();
+          }
+        }
+      }
+      JsonPersister.saveObject("docCategoryMap.json", docCategoryMap);
+    }
+  }
 
 
 
@@ -211,7 +231,7 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
     ForkJoinPool pool = new ForkJoinPool();
     List<CategoryInfo> categoryList = new ArrayList<CategoryInfo>();
     List<WikipediaMiner>minerList = new ArrayList<WikipediaMiner>();
-    
+
     //per ogni id creo un miner
     for(String id:idList){
       ArrayList<String> list = new ArrayList<>();
@@ -219,10 +239,10 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
       WikipediaMiner miner = new WikipediaMiner(list,0, 4, id);
       minerList.add(miner);
     }
-    
+
     //lancio i miners
     List<Future<List<CategoryInfo>>> response = pool.invokeAll(minerList);
-    
+
     //aggiungo le categorie ottenute ad una lista di categorie
     for(Future<List<CategoryInfo>> f: response ){
       List<CategoryInfo> currentList = f.get();
@@ -286,31 +306,158 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
 
     for(String category : categories){
       if(txtFolder)
-        saveContentFolder(getContentPages(requestIdsPagesOfCategory(category,new HashSet<String>(),recursive,0)), pathWhereSave);
+        saveContentFolder(getContentPages(requestIdsPagesOfCategory(category,new HashSet<String>(),recursive,0,3)), pathWhereSave);
       else
-        saveContentPages(getContentPages(requestIdsPagesOfCategory(category,new HashSet<String>(),recursive,0)), pathWhereSave);
+        saveContentPages(getContentPages(requestIdsPagesOfCategory(category,new HashSet<String>(),recursive,0,3)), pathWhereSave);
     }
   }
 
   /**
-   * Execute a single http request to wikipedia and return the response in json format.
-   * @param targetURL
+   * Execute a query using the title.
+   * @param title
    * @return
    * @throws IOException
    */
-  private static  JsonObject getJsonResponse(String targetURL) throws IOException{
-    final String USER_AGENT = "Mozilla/5.0";
-    URL url = new URL(targetURL);
-    //System.out.println(url);
-    HttpURLConnection con = (HttpURLConnection) url.openConnection();
-    con.setDoOutput(true);
-    con.setRequestMethod("GET");
-    con.setRequestProperty("User-Agent", USER_AGENT);
-    Scanner in = new Scanner(
-        new InputStreamReader(con.getInputStream()));  
-    JsonParser parser = new JsonParser();
-    JsonObject jOb = parser.parse(in.nextLine()).getAsJsonObject();
-    return jOb;
+  public static Set<String> queryWithTitle(String title) throws IOException{
+    String targetURL = "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&titles="+title+"&format=json";
+    JsonObject response = getJsonResponse(targetURL);
+    Set<String>idPages =  response.get("query").getAsJsonObject().get("pages").getAsJsonObject().entrySet().stream().map(e->e.getKey().toString()).collect(Collectors.toSet());
+    return idPages;
+  }
+
+
+  public static Set<String> getIdsMemberByType(String queryKey, String typePages,int nameSpace) throws IOException{
+    Set<String> toReturn = new HashSet<>();
+
+    String queryKeyType = "";
+    if(isNumeric(queryKey)){
+      queryKeyType = "&cmpageid=";
+    }else{
+      queryKeyType = "&cmtitle=";
+    }
+
+
+    String targetURL = "https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtype="+typePages+queryKeyType+queryKey+"&cmnamespace="+nameSpace+"&cmprop=ids&cmlimit=500&format=json";
+    //System.out.println(targetURL);
+    JsonObject response = getJsonResponse(targetURL);
+    JsonArray results = new JsonArray();
+    results = response.get("query").getAsJsonObject().get("categorymembers").getAsJsonArray();
+    if(results.size()>0){
+      for(JsonElement jel: results){
+        toReturn.add(jel.getAsJsonObject().get("pageid").getAsString());
+      }
+    }
+    return toReturn;
+  }
+
+
+  /**
+   * Extract info from a certain page.
+   * @param pageids
+   * @return
+   * @throws IOException
+   */
+  public static JsonObject getPageInfoById(String pageids) throws IOException{
+    JsonObject toReturn = new JsonObject();
+    String query = "https://en.wikipedia.org/w/api.php?action=query&prop=info&pageids="+pageids+"&format=json";
+    JsonObject response = getJsonResponse(query);
+    toReturn = response.get("query").getAsJsonObject().get("pages").getAsJsonObject().get(pageids).getAsJsonObject();
+    return toReturn;
+  }
+
+
+
+  /**
+   * Return a list of category read from a file.
+   * @param pathFile
+   * @return
+   * @throws IOException
+   */
+  public static List<String> getCategoryList(String pathFile) throws IOException{
+    FileReader reader = new FileReader(pathFile);
+    BufferedReader br = new BufferedReader(reader);
+    ArrayList<String> categoryList = new ArrayList<String>();
+    String line = br.readLine();
+    while(line!=null){
+      categoryList.add(line);
+      line= br.readLine();
+    }
+    return categoryList;
+  }
+
+
+  /**
+   * Given a list of id of generic categories , return a list with the roots categories.
+   * @param categoriesMap
+   * @param idBelongCategories
+   * @return
+   */
+  public static Set<String> getRootBelongCategories(Map<String,Map<String,CategoryInfo>> categoriesMap,Set<String> idBelongCategories){
+    Set<String> toReturn = new HashSet<>();  
+    for(String rootCategory : categoriesMap.keySet()){ 
+      for(String idCategory: idBelongCategories){
+        if(categoriesMap.get(rootCategory).containsKey(idCategory))
+          toReturn.add(rootCategory);
+      }  
+    } 
+    return toReturn;
+
+
+  }
+
+  /**
+   * 
+   * @param id
+   * @return
+   * @throws IOException 
+   */
+  public static Set<String> getBelongCategories(String queryKey) throws IOException{
+    Set<String> idList = new HashSet<String>();
+
+    String queryKeyType = "";
+    if(isNumeric(queryKey)){
+      queryKeyType = "&pageids=";
+    }else{
+      queryKeyType = "&titles=";
+    }
+
+
+    //https://en.wikipedia.org/w/api.php?action=query&prop=categories&clshow=!hidden&cldir=ascending&titles=Category:Science
+    String query = "https://en.wikipedia.org/w/api.php?action=query&prop=categories&indexpageids=&clshow=!hidden&cldir=ascending"+queryKeyType+queryKey+"&format=json";
+    JsonObject response = getJsonResponse(query);
+    String id = response.get("query").getAsJsonObject().get("pageids").getAsJsonArray().get(0).getAsString();
+    JsonArray category = response.get("query").getAsJsonObject().get("pages").getAsJsonObject().get(id).getAsJsonObject().get("categories").getAsJsonArray();
+
+    for(JsonElement obj : category){
+      JsonObject newObj = obj.getAsJsonObject();
+      String nameCategory = newObj.get("title").getAsString(); 
+      idList.add(getIdPage(nameCategory));
+    }
+    return idList;
+  }
+
+
+
+  public static String getIdPage(String queryKey) throws IOException{
+    String id = "";
+
+    String queryKeyType = "";
+    if(isNumeric(queryKey)){
+      queryKeyType = "&pageids=";
+    }else{
+      queryKeyType = "&titles=";
+    }
+    String targetURL="https://en.wikipedia.org/w/api.php?action=query&indexpageids="+queryKeyType+queryKey.replace(" ", "_")+"&format=json";
+    JsonObject response = getJsonResponse(targetURL);
+    id = response.get("query").getAsJsonObject().get("pageids").getAsJsonArray().get(0).getAsString();  
+    return id;
+  }
+
+
+  @Override
+  public List<CategoryInfo> call() throws Exception {
+    return this.compute();
+
   }
 
 
@@ -341,18 +488,85 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
     return contentPagesMap;
   }
 
+
   /**
-   * Save the dataset in json format.
-   * @param contents
-   * @param pathWhereSave
-   * @throws JsonGenerationException
+   * Check if a word is valid.
+   * @param detector
+   * @param word
+   * @param languageFilter
+   * @return
+   */
+  private static boolean  isValidWord(LanguageDetector detector, String word,String languageFilter){
+    word = word.replaceAll("[0-9]*", "");
+    if(word.length()<=2)
+      return false;
+    return detector.isValidLanguage(word, languageFilter);   
+  }
+
+
+  /**
+   * Load the dataset from a json file.
+   * @param pathWhereLoad
+   * @return
+   * @throws JsonParseException
    * @throws JsonMappingException
    * @throws IOException
    */
-  private static void saveContentPages(Map<String,String> contents, String pathWhereSave) throws JsonGenerationException, JsonMappingException, IOException{
+  private static Map<String, String> loadContentPages(String pathWhereLoad) throws JsonParseException, JsonMappingException, IOException{
     ObjectMapper mapper = new ObjectMapper();
-    mapper.writerWithDefaultPrettyPrinter().writeValue(new File(pathWhereSave), contents);
+    Map<String,String> contents = mapper.readValue(new File(pathWhereLoad), new TypeReference<Map<String,String>>(){});
+    return contents;
   }
+
+
+  /**
+   * Execute a single http request to wikipedia and return the response in json format.
+   * @param targetURL
+   * @return
+   * @throws IOException
+   */
+  private static  JsonObject getJsonResponse(String targetURL) throws IOException{
+    final String USER_AGENT = "Mozilla/5.0";
+    URL url = new URL(targetURL);
+    //System.out.println(url);
+    HttpURLConnection con = (HttpURLConnection) url.openConnection();
+    con.setDoOutput(true);
+    con.setRequestMethod("GET");
+    con.setRequestProperty("User-Agent", USER_AGENT);
+    Scanner in = new Scanner(
+        new InputStreamReader(con.getInputStream()));  
+    JsonParser parser = new JsonParser();
+    JsonObject jOb = parser.parse(in.nextLine()).getAsJsonObject();
+    return jOb;
+  }
+
+
+  /**
+   * For a certain category request the id of all its pages.
+   * If recursive is setted true, the function is called for each subcategory of the selected category.
+   * @param category specify the selected category.
+   * @param ids a set of pages ids.
+   * @param recursive specify if the fuction have to be recursive.
+   * @param level specify the max level of deepen 
+   * @return
+   * @throws IOException
+   */
+  private static Set<String> requestIdsPagesOfCategory(String category,Set<String> ids,boolean recursive,int level,int levelmax) throws IOException { 
+    JsonObject response = new JsonObject();
+    //query for subcategories.
+    //https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category:Foods&cmnamespace=14&cmprop=ids&cmlimit=500&format=json
+    if(recursive && level <= levelmax){
+      Set<String> idSubCategories = getIdsMemberByType(category, "subcat", 14);
+      if(idSubCategories.size()>0){
+        for(String idSubCategory: idSubCategories){
+          ids = requestIdsPagesOfCategory(idSubCategory,ids,recursive,level + 1,levelmax);
+        }
+      }
+    }
+    ids.addAll(getIdsMemberByType(category, "page", 0));
+    return ids;
+  }
+
 
   /**
    * Save a dataset into a folders structure.
@@ -371,188 +585,44 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
   }
 
 
+  private static boolean isNumeric(String str)  
+  {  
+    try  
+    {  
+      double d = Double.parseDouble(str);  
+    }  
+    catch(NumberFormatException nfe)  
+    {  
+      return false;  
+    }  
+    return true;  
+  }
+
+
   /**
-   * Load the dataset from a json file.
-   * @param pathWhereLoad
-   * @return
-   * @throws JsonParseException
+   * Save the dataset in json format.
+   * @param contents
+   * @param pathWhereSave
+   * @throws JsonGenerationException
    * @throws JsonMappingException
    * @throws IOException
    */
-  private static Map<String, String> loadContentPages(String pathWhereLoad) throws JsonParseException, JsonMappingException, IOException{
+  private static void saveContentPages(Map<String,String> contents, String pathWhereSave) throws JsonGenerationException, JsonMappingException, IOException{
     ObjectMapper mapper = new ObjectMapper();
-    Map<String,String> contents = mapper.readValue(new File(pathWhereLoad), new TypeReference<Map<String,String>>(){});
-    return contents;
-  }
-
-  /**
-   * Execute a query using the title.
-   * @param title
-   * @return
-   * @throws IOException
-   */
-  public static Set<String> queryWithTitle(String title) throws IOException{
-    String targetURL = "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&titles="+title+"&format=json";
-    JsonObject response = getJsonResponse(targetURL);
-    Set<String>idPages =  response.get("query").getAsJsonObject().get("pages").getAsJsonObject().entrySet().stream().map(e->e.getKey().toString()).collect(Collectors.toSet());
-    return idPages;
+    mapper.writerWithDefaultPrettyPrinter().writeValue(new File(pathWhereSave), contents);
   }
 
 
-  /**
-   * For a certain category request the id of all its pages.
-   * If recursive is setted true, the function is called for each subcategory of the selected category.
-   * @param category specify the selected category.
-   * @param ids a set of pages ids.
-   * @param recursive specify if the fuction have to be recursive.
-   * @param level specify the max level of deepen 
-   * @return
-   * @throws IOException
-   */
-  private static Set<String> requestIdsPagesOfCategory(String category,Set<String> ids,boolean recursive,int level) throws IOException { 
-    JsonObject response = new JsonObject();
-    //query for subcategories.
-    //https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category:Foods&cmnamespace=14&cmprop=ids&cmlimit=500&format=json
-    if(recursive && level <= levelLimit){
-      Set<String> idSubCategories = getIdsMemberByType(category, "subcat", 14);
-      if(idSubCategories.size()>0){
-        for(String idSubCategory: idSubCategories){
-          ids = requestIdsPagesOfCategory(idSubCategory,ids,recursive,level + 1);
-        }
-      }
-    }
-    ids.addAll(getIdsMemberByType(category, "page", 0));
-    return ids;
-  }
-
-
-
-  public static Set<String> getIdsMemberByType(String queryKey, String typePages,int nameSpace) throws IOException{
-    Set<String> toReturn = new HashSet<>();
-    
-    String queryKeyType = "";
-    if(isNumeric(queryKeyType)){
-      queryKeyType = "&cmpageid=";
-    }else{
-      queryKeyType = "&cmtitle=";
-    }
-    
-    String targetURL = "https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtype="+typePages+queryKeyType+queryKey+"&cmnamespace="+nameSpace+"&cmprop=ids&cmlimit=500&format=json";
-    JsonObject response = getJsonResponse(targetURL);
-    JsonArray results = new JsonArray();
-    results = response.get("query").getAsJsonObject().get("categorymembers").getAsJsonArray();
-    if(results.size()>0){
-      for(JsonElement jel: results){
-        toReturn.add(jel.getAsJsonObject().get("pageid").getAsString());
-      }
+  public static  Map<String,Map<String,CategoryInfo>> getMapCategories(String pathFolder){
+    Map<String,Map<String,CategoryInfo>> toReturn = new HashMap<>();
+    File f = new File(pathFolder);
+    if(f.isDirectory()){
+      for(File file: f.listFiles()){
+        Map<String,CategoryInfo> map = JsonPersister.loadObject(pathFolder+file.getName());
+        toReturn.put(file.getName().replace(".json", ""), map);
+      }  
     }
     return toReturn;
-  }
-
-
-  /**
-   * Extract info from a certain page.
-   * @param pageids
-   * @return
-   * @throws IOException
-   */
-  public static JsonObject getPageInfoById(String pageids) throws IOException{
-    JsonObject toReturn = new JsonObject();
-    String query = "https://en.wikipedia.org/w/api.php?action=query&prop=info&pageids="+pageids+"&format=json";
-    JsonObject response = getJsonResponse(query);
-    toReturn = response.get("query").getAsJsonObject().get("pages").getAsJsonObject().get(pageids).getAsJsonObject();
-    return toReturn;
-  }
-
-
-
-  /**
-   * Check if a word is valid.
-   * @param detector
-   * @param word
-   * @param languageFilter
-   * @return
-   */
-  private static boolean  isValidWord(LanguageDetector detector, String word,String languageFilter){
-    word = word.replaceAll("[0-9]*", "");
-    if(word.length()<=2)
-      return false;
-    return detector.isValidLanguage(word, languageFilter);   
-  }
-
-  /**
-   * Return a list of category read from a file.
-   * @param pathFile
-   * @return
-   * @throws IOException
-   */
-  public static List<String> getCategoryList(String pathFile) throws IOException{
-    FileReader reader = new FileReader(pathFile);
-    BufferedReader br = new BufferedReader(reader);
-    ArrayList<String> categoryList = new ArrayList<String>();
-    String line = br.readLine();
-    while(line!=null){
-      categoryList.add(line);
-      line= br.readLine();
-    }
-    return categoryList;
-  }
-
-
-
-  /**
-   * 
-   * @param id
-   * @return
-   * @throws IOException 
-   */
-  public static Set<String> getBelongCategories(String queryKey) throws IOException{
-    Set<String> idList = new HashSet<String>();
-    
-    String queryKeyType = "";
-    if(isNumeric(queryKeyType)){
-      queryKeyType = "&pageids=";
-    }else{
-      queryKeyType = "&titles=";
-    }
-    
-    
-    //https://en.wikipedia.org/w/api.php?action=query&prop=categories&clshow=!hidden&cldir=ascending&titles=Category:Science
-    String query = "https://en.wikipedia.org/w/api.php?action=query&prop=categories&indexpageids=&clshow=!hidden&cldir=ascending"+queryKeyType+queryKey+"&format=json";
-    JsonObject response = getJsonResponse(query);
-    String id = response.get("query").getAsJsonObject().get("pageids").getAsJsonArray().get(0).getAsString();
-    JsonArray category = response.get("query").getAsJsonObject().get("pages").getAsJsonObject().get(id).getAsJsonObject().get("categories").getAsJsonArray();
-    
-    for(JsonElement obj : category){
-      JsonObject newObj = obj.getAsJsonObject();
-      String nameCategory = newObj.get("title").getAsString();  
-      idList.add(getIdPage(nameCategory));
-    }
-    return idList;
-  }
-  
-  
-  
-  public static String getIdPage(String queryKey) throws IOException{
-    String id = "";
-    
-    String queryKeyType = "";
-    if(isNumeric(queryKeyType)){
-      queryKeyType = "&pageids=";
-    }else{
-      queryKeyType = "&titles=";
-    }
-    String targetURL="https://en.wikipedia.org/w/api.php?action=query&indexpageids="+queryKeyType+queryKey+"&format=json";
-    JsonObject response = getJsonResponse(targetURL);
-    id = response.get("query").getAsJsonObject().get("pageids").getAsJsonArray().get(0).getAsString();  
-    return id;
-  }
-
-
-  @Override
-  public List<CategoryInfo> call() throws Exception {
-    return this.compute();
-
   }
 
 
