@@ -1,4 +1,4 @@
-package eu.innovation.engineering.util.preprocessing;
+package eu.innovation.engineering.wikipedia;
 
 import java.util.Set;
 

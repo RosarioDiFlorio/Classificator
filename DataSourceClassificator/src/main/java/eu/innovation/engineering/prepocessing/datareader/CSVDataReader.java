@@ -9,10 +9,13 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
@@ -22,6 +25,7 @@ import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
 import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 import eu.innovation.engineering.prepocessing.DatasetBuilder;
+import eu.innovation.engineering.util.preprocessing.JsonPersister;
 import eu.innovation.engineering.util.preprocessing.Paper;
 import eu.innovation.engineering.util.preprocessing.SolrClient;
 import eu.innovation.engineering.util.preprocessing.Source;
@@ -47,9 +51,57 @@ public class CSVDataReader {
 
 
   public static void main(String[] args) throws Exception{
-    mainToTest(args);
+    //mainToTest(args);
     //mainToCreateDataset(args);
+    evaluateMultiLabelCsv("data/results/testMultiL_2610_1319/result.csv");
+  }
 
+  public static void evaluateMultiLabelCsv(String filecsv){
+    Map<String, List<String>> mapCsv = read(filecsv,true);
+    Map<String, Double> mapScores = new HashMap<>();
+    double averageScore = 0;
+    double doubles = 0;
+    double ones = 0;
+    double zeros = 0;
+    for(String key:mapCsv.keySet()){
+      List<String> data = mapCsv.get(key);
+      Set<String> trueLabels = new HashSet<>(Arrays.asList(data.get(data.size()-1).split("\\|")));
+
+      Set<String> calculatedLabels = new HashSet<>();    
+      for(int i=1;i<=5;i= i+2){
+        calculatedLabels.add(data.get(i));
+      }
+
+
+      Set<String> tmp = new HashSet<>();
+      tmp.addAll(trueLabels);
+      tmp.retainAll(calculatedLabels);
+      double score = 0;
+      if(tmp.size() ==trueLabels.size()){
+        score =1;
+        doubles++;    
+      }else if(tmp.size() == trueLabels.size()/2){
+        score = 0.5;
+        ones++;
+      }else
+        zeros++;
+
+      averageScore += score;
+      mapScores.put(key, score);
+    }
+
+
+
+    averageScore  = (averageScore/mapScores.size());
+    double doublesPerc = ((doubles*100)/mapScores.size());
+    double onesPerc = ((ones*100)/mapScores.size());
+    double zerosPerc = ((zeros*100)/mapScores.size());
+
+    System.out.println("maxScore -> "+doublesPerc+"%, number ->"+doubles);
+    System.out.println("halfScore -> "+onesPerc+"% number ->"+ones);
+    System.out.println("noScore -> "+zerosPerc+"% number ->"+zeros);
+    System.out.println("total -> "+(doublesPerc+onesPerc+zerosPerc)+"% number -> "+mapScores.size());
+    JsonPersister.saveObject("data/mapScores_multiL.json", mapScores);
   }
 
 
@@ -62,7 +114,7 @@ public class CSVDataReader {
     String pathWhereSave = PathConfigurator.rootFolder+"testScience_FullWiki.txt";
     createDocumentSetFromCsvResults(fileCsv,lowThreshold,upperThreshold,pathWhereSave, categoryFilter);
     TxtDataReader txtReader = new TxtDataReader();
-    
+
     //txtReader.mergeTxtDataset(PathConfigurator.applicationFileFolder+"outputResultsRoot.txt", pathWhereSave, 1000, PathConfigurator.rootFolder+"training.txt", PathConfigurator.rootFolder+"categories.txt");
   }
 
@@ -167,7 +219,7 @@ public class CSVDataReader {
   } 
 
   public static int readResultClassifier(File csvFile, KeywordExtractor kex, String category,boolean isCount,int batchLine) throws Exception{
-    Map<String, List<String>> dataMap = read(csvFile.getAbsolutePath());
+    Map<String, List<String>> dataMap = read(csvFile.getAbsolutePath(),false);
 
     List<String> ids = new ArrayList<>();
     ids.addAll(dataMap.keySet());
@@ -283,7 +335,7 @@ public class CSVDataReader {
   }
 
   public static HashMap<String, List<String>> getCategoryMap(String csvFile, float lowThreshold,float upperThreshold){
-    Map<String, List<String>> dataMap = read(csvFile);
+    Map<String, List<String>> dataMap = read(csvFile,false);
     HashMap<String, List<String>> categoryMap = new HashMap<>();
     float probs = 0;
     for(String id : dataMap.keySet()){
@@ -310,27 +362,33 @@ public class CSVDataReader {
     return categoryMap;
   }
 
+
+
+
+
   /**
    * The basic function that read the the csv file.
    * @param csvFile
    * @return
    */
-  public static Map<String,List<String>> read(String csvFile) {
+  public static Map<String,List<String>> read(String csvFile,boolean labeled) {
     String line = "";
     String cvsSplitBy = ",";
     Map<String, List<String>> dataMap = new HashMap<>();
     try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
+      if(labeled)
+        line = br.readLine();
       while ((line = br.readLine()) != null) {
         // use comma as separator
         String[] csvData = line.split(cvsSplitBy); 
         List<String> data = new ArrayList<>();
         for(int i =1;i<csvData.length;i++){
           data.add(csvData[i].trim());
-
         }
         String key = csvData[0].trim();
         dataMap.put(key, data);
       }
+
       return dataMap;
     } catch (IOException e) {
       e.printStackTrace();

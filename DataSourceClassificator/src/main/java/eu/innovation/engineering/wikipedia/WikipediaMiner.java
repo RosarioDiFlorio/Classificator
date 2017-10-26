@@ -1,4 +1,4 @@
-package eu.innovation.engineering.util.preprocessing;
+package eu.innovation.engineering.wikipedia;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -35,6 +35,7 @@ import com.google.gson.JsonParser;
 
 import eu.innovation.engineering.config.PathConfigurator;
 import eu.innovation.engineering.keyword.extractor.util.LanguageDetector;
+import eu.innovation.engineering.util.preprocessing.JsonPersister;
 
 /**
  * @author Rosario Di Florio (RosarioUbuntu)
@@ -54,6 +55,7 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
   private int level;
   private String root;
   private int maxLevel;
+  private static ObjectMapper mapper = new ObjectMapper();
 
 
   public WikipediaMiner(List<String> idSubCategoriesLeft, int level, int maxLevel, String root){
@@ -183,46 +185,105 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
     listId.add("693016");
     //createMapCategoriesWikipedia(listId,"mapArt&Entertainment");
 
-    buildDatasetMultilabel("data/multiLabel");
+
+
+    //buildDatasetMultilabel("data/multiLabel",map,1);
+
+
+    Map<String, Map<String, CategoryInfo>> catMap = getMapCategories(PathConfigurator.wikipediaFolder);
+    int count = 0;
+    Set<String> categories = new HashSet<String>();
+    for(String rootCat: catMap.keySet()){
+      for(String subCat: catMap.get(rootCat).keySet()){
+        CategoryInfo doc = catMap.get(rootCat).get(subCat);
+        if(catMap.get(rootCat).get(subCat).getLevel() == 2){
+          count++;
+          categories.add(catMap.get(rootCat).get(subCat).getName().replace(" ","_"));
+          System.out.println(rootCat+" -> "+catMap.get(rootCat).get(subCat).getName().replace(" ","_"));
+        }
+        if(count == 2){
+          count = 0;
+          break;
+        }
+      }
+    }
+  
+      
+   
+    Set<String> alreadyWritten = mapper.readValue(new File("data/idused.json"), new TypeReference<Set<String>>() {});
+    
+    //buildDatasetMultilabel("data/Test_noRepetition", categories, catMap,alreadyWritten , 2, true);
+    
+    
+    //da usare come batch 
+    
+    ObjectMapper mapper = new ObjectMapper();
+    Map<String,Set<DocumentInfo>> docMap = mapper.readValue(new File("datasetMap.json"), new TypeReference<Map<String,Set<DocumentInfo>>>() {});  
+    writeDocumentMap("data/Test_multilabel", docMap,alreadyWritten,true, 2);
+     
+    //buildDatasets(getCategoryList("wikipedia_categories.txt"), "data/singleLabel", true, true);
 
 
   }
 
 
-  public static void buildDatasetMultilabel(String pathDataset) throws IOException{
-    Map<String, Map<String, CategoryInfo>> map = getMapCategories(PathConfigurator.wikipediaFolder);
+  private static void writeDocumentMap(String pathDataset,Map<String,Set<DocumentInfo>> datasetMap, Set<String> alreadyWritten, boolean multiLabel,int maxLabels) throws FileNotFoundException{   
+    for(String wikiCat: datasetMap.keySet()){
+      System.out.println("Wikipedia Category -> "+wikiCat+" documents -> "+datasetMap.get(wikiCat).size());
+      for(DocumentInfo doc: datasetMap.get(wikiCat)){
+        if(multiLabel){                 
+          if(doc.getRootCategories().size()==maxLabels && !doc.getRootCategories().isEmpty()){
+            for(String category: doc.getRootCategories()){
+              PrintWriter p = new PrintWriter(new File(pathDataset+"/"+category.replace("map", "")+"/"+doc.getId()));
+              p.println(doc.getTitle()+"\n"+doc.getText());
+              p.flush();
+              p.close();
 
-
-    boolean success = new File("data/multiLabel").mkdir();
-
-    for(String keyMap: map.keySet()){
-      success = new File(pathDataset+"/"+keyMap.replace("map", "")).mkdir();
-    }
-
-    Map<String,Set<String>> docCategoryMap = new HashMap<>();
-    for(String cat : getCategoryList("wikipedia_categories.txt")){
-      System.out.println("Category -> "+cat);
-      Set<String> list = requestIdsPagesOfCategory(cat, new HashSet<String>(), true, 0, 0);
-      System.out.println("number of document -> "+list.size());
-      for(String  id:list){
-        Set<String> rootCategories = getRootBelongCategories(map, getBelongCategories(id));
-        if(!rootCategories.isEmpty())
-          docCategoryMap.put(id, rootCategories);
-        if(rootCategories.size()==1){
-          Set<String> idPage = new HashSet<>();
-          idPage.add(id);
-          Map<String, String> content = getContentPages(idPage);
-
-          for(String category: rootCategories){
-            PrintWriter p = new PrintWriter(new File(pathDataset+"/"+category.replace("map", "")+"/"+id));
-            p.println(content.get(id));
+            }
+          }
+        }else{
+          if(!alreadyWritten.contains(doc.getId())){
+            alreadyWritten.add(doc.getId());
+            PrintWriter p = new PrintWriter(new File(pathDataset+"/"+wikiCat.replace("Category:", "")+"/"+doc.getId()));
+            p.println(doc.getTitle()+"\n"+doc.getText());
             p.flush();
             p.close();
-          }
+          }       
         }
       }
-      JsonPersister.saveObject("docCategoryMap.json", docCategoryMap);
+      JsonPersister.saveObject(pathDataset+"/"+"idused.json", alreadyWritten);
     }
+    
+  }
+
+
+  private static String buildStructureFolder(Set<String> nameFolders,String pathFolder){
+    boolean success = new File(pathFolder).mkdir();
+    for(String keyMap: nameFolders){
+      success = new File(pathFolder+"/"+keyMap.replace("Category:", "")).mkdir();
+    }
+    return pathFolder;
+  }
+
+
+
+  public static void buildDatasetMultilabel(String pathDataset,Set<String> categories, Map<String, Map<String, CategoryInfo>> map,Set<String> blackList, int maxLabels,boolean multiLabel) throws IOException, InterruptedException, ExecutionException{
+    ForkJoinPool pool = new ForkJoinPool();
+    List<DatasetTask> datasetTasks = new ArrayList<>();
+    for(String cat : categories){
+
+      DatasetTask task = new DatasetTask(cat, map, 0, multiLabel,true);
+      datasetTasks.add(task);
+
+    }
+    List<Future<Map<String, Set<DocumentInfo>>>> result = pool.invokeAll(datasetTasks);
+    Map<String,Set<DocumentInfo>> datasetMap = new HashMap<>();
+    for(Future<Map<String, Set<DocumentInfo>>> future : result){
+      datasetMap.putAll(future.get());
+    }
+
+    JsonPersister.saveObject("datasetMap.json", datasetMap);
+    writeDocumentMap(pathDataset, datasetMap,blackList,multiLabel, maxLabels);
   }
 
 
@@ -304,10 +365,15 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
    * @throws IOException
    */
   public static void buildDatasets(List<String> categories,String pathWhereSave,boolean txtFolder,boolean recursive) throws IOException{
-
+    Set<String> alreadyWritten = new HashSet<>();
     for(String category : categories){
-      if(txtFolder)
-        saveContentFolder(getContentPages(requestIdsPagesOfCategory(category,new HashSet<String>(),recursive,0,3)), pathWhereSave);
+      System.out.println(category);
+      if(txtFolder){
+        Set<String> idspages = requestIdsPagesOfCategory(category,alreadyWritten,recursive,0,2);
+        idspages.removeAll(alreadyWritten);
+        alreadyWritten.addAll(saveContentFolder(getContentPages(idspages), pathWhereSave));
+
+      }
       else
         saveContentPages(getContentPages(requestIdsPagesOfCategory(category,new HashSet<String>(),recursive,0,3)), pathWhereSave);
     }
@@ -468,9 +534,9 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
    * @return
    * @throws IOException
    */
-  public static Map<String, String> getContentPages(Set<String> idPages) throws IOException{
+  public static Map<String, DocumentInfo> getContentPages(Set<String> idPages) throws IOException{
     System.out.println("Extracting content from -> "+idPages.size()+" documents");
-    Map<String,String> contentPagesMap = new HashMap<>();
+    Map<String,DocumentInfo> contentPagesMap = new HashMap<>();
     String targetURL = "";
     JsonObject response = new JsonObject();
     int count = 0;
@@ -479,12 +545,17 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
       response = getJsonResponse(targetURL);       
       String title = response.get("query").getAsJsonObject().get("pages").getAsJsonObject().get(id).getAsJsonObject().get("title").getAsString();
       String content = response.get("query").getAsJsonObject().get("pages").getAsJsonObject().get(id).getAsJsonObject().get("extract").getAsString();
-      contentPagesMap.put(id, title+"\n"+content);
+      DocumentInfo docInfo = new DocumentInfo();
+      docInfo.setId(id);
+      docInfo.setText(content);
+      docInfo.setTitle(title);
+      contentPagesMap.put(id, docInfo);
       count++;
-      if(count % 10 ==0){
-        int percentage = (count*100)/idPages.size();
-        System.out.println(percentage+"%");
-      }
+      /*
+    if(count % 10 ==0){
+      int percentage = (count*100)/idPages.size();
+      System.out.println(percentage+"%");
+    }*/
     }
     return contentPagesMap;
   }
@@ -552,7 +623,7 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
    * @return
    * @throws IOException
    */
-  private static Set<String> requestIdsPagesOfCategory(String category,Set<String> ids,boolean recursive,int level,int levelmax) throws IOException { 
+  public static Set<String> requestIdsPagesOfCategory(String category,Set<String> ids,boolean recursive,int level,int levelmax) throws IOException { 
     JsonObject response = new JsonObject();
     //query for subcategories.
     //https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category:Foods&cmnamespace=14&cmprop=ids&cmlimit=500&format=json
@@ -575,18 +646,19 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
    * @param pathWhereSave
    * @throws FileNotFoundException
    */
-  private static void saveContentFolder(Map<String,String> contents, String pathWhereSave) throws FileNotFoundException{
+  private static Set<String> saveContentFolder(Map<String,DocumentInfo> contents, String pathWhereSave) throws FileNotFoundException{
     boolean success = new File(pathWhereSave).mkdir();  
     for(String documentId: contents.keySet()){
       PrintWriter p = new PrintWriter(new File(pathWhereSave+"/"+documentId));
-      p.println(contents.get(documentId));
+      p.println(contents.get(documentId).getTitle()+"\n"+contents.get(documentId).getText());
       p.flush();
       p.close();
     }
+    return contents.keySet();
   }
 
 
-  private static boolean isNumeric(String str)  
+  public static boolean isNumeric(String str)  
   {  
     try  
     {  
@@ -608,19 +680,19 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
    * @throws JsonMappingException
    * @throws IOException
    */
-  private static void saveContentPages(Map<String,String> contents, String pathWhereSave) throws JsonGenerationException, JsonMappingException, IOException{
+  private static void saveContentPages(Map<String,DocumentInfo> contents, String pathWhereSave) throws JsonGenerationException, JsonMappingException, IOException{
     ObjectMapper mapper = new ObjectMapper();
     mapper.writerWithDefaultPrettyPrinter().writeValue(new File(pathWhereSave), contents);
   }
 
 
-  public static  Map<String,Map<String,CategoryInfo>> getMapCategories(String pathFolder){
+  public static  Map<String,Map<String,CategoryInfo>> getMapCategories(String pathFolder) throws JsonParseException, JsonMappingException, IOException{
     Map<String,Map<String,CategoryInfo>> toReturn = new HashMap<>();
     File f = new File(pathFolder);
     if(f.isDirectory()){
       for(File file: f.listFiles()){
-        Map<String,CategoryInfo> map = JsonPersister.loadObject(pathFolder+file.getName());
-        toReturn.put(file.getName().replace(".json", ""), map);
+        Map<String,CategoryInfo> map =mapper.readValue(new File(pathFolder+file.getName()), new TypeReference<Map<String,CategoryInfo>>() {});
+        toReturn.put(file.getName().replace(".json", "").replace("map",""), map);
       }  
     }
     return toReturn;
