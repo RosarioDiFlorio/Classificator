@@ -349,7 +349,7 @@ public class WikipediaMiner implements WikiRequest{
   public DatasetResponse buildDataset(DatasetRequest request) {
     DatasetResponse response = new DatasetResponse();
     try {
-      buildDataset("/volume/data/dataset", request.getCategories(), new HashSet<String>(), 0, false);
+      buildDataset("/var/lib/jetty/data/dataset", request.getCategories(), new HashSet<String>(), 0, false);
       response.setStatus(200);
     }
     catch (Exception e) {
