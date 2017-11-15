@@ -20,6 +20,9 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.Future;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -29,9 +32,10 @@ import com.google.gson.JsonParser;
  * @author Rosario Di Florio (RosarioUbuntu)
  *
  */
-public class WikipediaMiner{
+public class WikipediaMiner implements WikiRequest{
   private static final long serialVersionUID = 1L;
 
+  private static final Logger logger = LoggerFactory.getLogger(WikipediaMiner.class);
 
   /**
    * @param args
@@ -338,5 +342,23 @@ public class WikipediaMiner{
       return false;  
     }  
     return true;  
+  }
+
+
+  @Override
+  public DatasetResponse buildDataset(DatasetRequest request) {
+    DatasetResponse response = new DatasetResponse();
+    try {
+      buildDataset("/volume/data/dataset", request.getCategories(), new HashSet<String>(), 0, false);
+      response.setStatus(200);
+    }
+    catch (Exception e) {
+      logger.error("An error occurred while generating dataset", e);
+      response.setStatus(500);
+      response.setMessage(e.getClass().getCanonicalName() + ": " + e.getMessage());
+    }
+    
+    return response;
+    
   }
 }
