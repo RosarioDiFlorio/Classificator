@@ -53,7 +53,7 @@ public class CSVDataReader {
   public static void main(String[] args) throws Exception{
     //mainToTest(args);
     //mainToCreateDataset(args);
-    evaluateMultiLabelCsv("data/results/testMultiL_2610_1319/result.csv");
+    evaluateMultiLabelCsv("data/results/testSingleL_2610_1322/result.csv");
   }
 
   public static void evaluateMultiLabelCsv(String filecsv){
