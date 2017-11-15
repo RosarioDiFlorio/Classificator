@@ -348,8 +348,10 @@ public class WikipediaMiner implements WikiRequest{
   @Override
   public DatasetResponse buildDataset(DatasetRequest request) {
     DatasetResponse response = new DatasetResponse();
+    String levelPathFolder = "/var/lib/jetty/data/"+request.getCurrentLevel();
+    boolean success = new File(levelPathFolder).mkdir();
     try {
-      buildDataset("/var/lib/jetty/data/dataset", request.getCategories(), new HashSet<String>(), 0, false);
+      buildDataset(levelPathFolder+"/dataset_"+request.getName(), request.getCategories(), new HashSet<String>(), request.getMaxLevel(), request.isRecursive());
       response.setStatus(200);
     }
     catch (Exception e) {
