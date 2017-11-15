@@ -29,7 +29,7 @@ import com.google.gson.JsonParser;
  * @author Rosario Di Florio (RosarioUbuntu)
  *
  */
-public class WikipediaMiner {
+public class WikipediaMiner{
   private static final long serialVersionUID = 1L;
 
 
