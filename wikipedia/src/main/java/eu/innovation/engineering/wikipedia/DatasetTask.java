@@ -12,8 +12,6 @@ public class DatasetTask extends RecursiveTask<Map<String,Set<DocumentInfo>>> im
 
   private String category;
   private int maxLevel;
-
-  private boolean withRootCategories;
   private boolean recursive;
 
 
