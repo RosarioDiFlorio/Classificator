@@ -19,36 +19,18 @@ import java.util.Set;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.Future;
-import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-
-
-
 
 /**
  * @author Rosario Di Florio (RosarioUbuntu)
  *
  */
 public class WikipediaMiner {
-
-  /**
-   * 
-   */
   private static final long serialVersionUID = 1L;
-  private static ObjectMapper mapper = new ObjectMapper();
-
-
-  public WikipediaMiner(){
-    
-  }
 
 
   /**
@@ -60,8 +42,8 @@ public class WikipediaMiner {
   public static void main(String args[]) throws IOException, InterruptedException, ExecutionException{
     Set<String> categories = getCategoryList("categories.txt");
     Set<String> alreadyWritten = new HashSet<String>();
-    String pathDataset = "data/dataset";
-    buildDataset("data/dataset", categories,alreadyWritten);
+    String pathDataset = "volume/dataset";
+    buildDataset("data/dataset", categories,alreadyWritten,0,false);
   }
 
 
@@ -83,8 +65,7 @@ public class WikipediaMiner {
             p.close();
           }             
       }
-    }
-    
+    }  
   }
 
 
@@ -111,7 +92,7 @@ public class WikipediaMiner {
    * @throws InterruptedException
    * @throws ExecutionException
    */
-  public static void buildDataset(String pathDataset,Set<String> categories,Set<String> blackList) throws IOException, InterruptedException, ExecutionException{
+  public static void buildDataset(String pathDataset,Set<String> categories,Set<String> blackList,int maxLevel,boolean recursive) throws IOException, InterruptedException, ExecutionException{
     //costruisco la struttura delle cartelle.
     buildStructureFolder(categories, pathDataset);
     
@@ -119,7 +100,7 @@ public class WikipediaMiner {
     List<DatasetTask> datasetTasks = new ArrayList<>();
     
     for(String cat : categories){
-      DatasetTask task = new DatasetTask(cat, 0,false);
+      DatasetTask task = new DatasetTask(cat, maxLevel,recursive);
       datasetTasks.add(task);
     }
     
@@ -131,21 +112,13 @@ public class WikipediaMiner {
     writeDocumentMap(pathDataset, datasetMap,blackList);
   }
 
-
   /**
-   * Execute a query using the title.
-   * @param title
+   * @param queryKey
+   * @param typePages
+   * @param nameSpace
    * @return
    * @throws IOException
    */
-  public static Set<String> queryWithTitle(String title) throws IOException{
-    String targetURL = "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&titles="+title+"&format=json";
-    JsonObject response = getJsonResponse(targetURL);
-    Set<String>idPages =  response.get("query").getAsJsonObject().get("pages").getAsJsonObject().entrySet().stream().map(e->e.getKey().toString()).collect(Collectors.toSet());
-    return idPages;
-  }
-
-
   public static Set<String> getIdsMemberByType(String queryKey, String typePages,int nameSpace) throws IOException{
     Set<String> toReturn = new HashSet<>();
 
@@ -238,6 +211,11 @@ public class WikipediaMiner {
 
 
 
+  /**
+   * @param queryKey
+   * @return
+   * @throws IOException
+   */
   public static String getIdPage(String queryKey) throws IOException{
     String id = "";
 
@@ -277,31 +255,8 @@ public class WikipediaMiner {
       docInfo.setTitle(title);
       contentPagesMap.put(id, docInfo);
       count++;
-      /*
-    if(count % 10 ==0){
-      int percentage = (count*100)/idPages.size();
-      System.out.println(percentage+"%");
-    }*/
     }
     return contentPagesMap;
-  }
-
-
- 
-
-
-  /**
-   * Load the dataset from a json file.
-   * @param pathWhereLoad
-   * @return
-   * @throws JsonParseException
-   * @throws JsonMappingException
-   * @throws IOException
-   */
-  private static Map<String, String> loadContentPages(String pathWhereLoad) throws JsonParseException, JsonMappingException, IOException{
-    ObjectMapper mapper = new ObjectMapper();
-    Map<String,String> contents = mapper.readValue(new File(pathWhereLoad), new TypeReference<Map<String,String>>(){});
-    return contents;
   }
 
 
