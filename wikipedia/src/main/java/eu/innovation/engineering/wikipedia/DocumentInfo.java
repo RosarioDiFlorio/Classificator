@@ -2,6 +2,10 @@ package eu.innovation.engineering.wikipedia;
 
 import java.util.Set;
 
+/**
+ * @author Rosario Di Florio (RosarioUbuntu)
+ *
+ */
 public class DocumentInfo {
   private String id;
   private String title;

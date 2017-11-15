@@ -8,6 +8,10 @@ import java.util.Set;
 import java.util.concurrent.Callable;
 import java.util.concurrent.RecursiveTask;
 
+/**
+ * @author Rosario Di Florio (RosarioUbuntu)
+ *
+ */
 public class DatasetTask extends RecursiveTask<Map<String,Set<DocumentInfo>>> implements Callable<Map<String,Set<DocumentInfo>>> {
 
   private String category;
@@ -15,6 +19,11 @@ public class DatasetTask extends RecursiveTask<Map<String,Set<DocumentInfo>>> im
   private boolean recursive;
 
 
+  /**
+   * @param category
+   * @param maxLevel
+   * @param recursive
+   */
   public DatasetTask(String category,int maxLevel,boolean recursive){
     this.category = category;
     this.maxLevel = maxLevel;
