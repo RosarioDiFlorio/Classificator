@@ -212,7 +212,7 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
    
     Set<String> alreadyWritten = mapper.readValue(new File("data/idused.json"), new TypeReference<Set<String>>() {});
     
-    //buildDatasetMultilabel("data/Test_noRepetition", categories, catMap,alreadyWritten , 2, true);
+    buildDatasetMultilabel("data/Test_noRepetition", categories, catMap,alreadyWritten , 2, true);
     
     
     //da usare come batch 
@@ -221,7 +221,7 @@ public class WikipediaMiner extends RecursiveTask<List<CategoryInfo>> implements
     Map<String,Set<DocumentInfo>> docMap = mapper.readValue(new File("datasetMap.json"), new TypeReference<Map<String,Set<DocumentInfo>>>() {});  
     writeDocumentMap("data/Test_multilabel", docMap,alreadyWritten,true, 2);
      
-    //buildDatasets(getCategoryList("wikipedia_categories.txt"), "data/singleLabel", true, true);
+    //buildDatasets(getCategoryList("wikipedia_categories.txt"), "data/dataset", true, true);
 
 
   }
