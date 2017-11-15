@@ -43,23 +43,11 @@ public class WikipediaMiner {
    * 
    */
   private static final long serialVersionUID = 1L;
-  private static final int  levelLimit = 1;
-
-  private List<String> idCategories;
-
-  private String parent;
-  private int level;
-  private String root;
-  private int maxLevel;
   private static ObjectMapper mapper = new ObjectMapper();
 
 
-  public WikipediaMiner(List<String> idSubCategoriesLeft, int level, int maxLevel, String root){
-    this.parent=parent;
-    this.idCategories=idSubCategoriesLeft;
-    this.level=level;
-    this.root = root;
-    this.maxLevel=maxLevel;
+  public WikipediaMiner(){
+    
   }
 
 
@@ -107,7 +95,7 @@ public class WikipediaMiner {
     List<DatasetTask> datasetTasks = new ArrayList<>();
     
     for(String cat : categories){
-      DatasetTask task = new DatasetTask(cat, 0,true);
+      DatasetTask task = new DatasetTask(cat, 0,false);
       datasetTasks.add(task);
     }
     
