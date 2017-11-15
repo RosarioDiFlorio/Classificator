@@ -51,18 +51,26 @@ public class WikipediaMiner {
   }
 
 
+  /**
+   * @param args
+   * @throws IOException
+   * @throws InterruptedException
+   * @throws ExecutionException
+   */
   public static void main(String args[]) throws IOException, InterruptedException, ExecutionException{
-
     Set<String> categories = getCategoryList("categories.txt");
-    
-    //Set<String> alreadyWritten = mapper.readValue(new File("data/idused.json"), new TypeReference<Set<String>>() {});
     Set<String> alreadyWritten = new HashSet<String>();
     String pathDataset = "data/dataset";
-    buildStructureFolder(categories, pathDataset);
     buildDataset("data/dataset", categories,alreadyWritten);
   }
 
 
+  /**
+   * @param pathDataset
+   * @param datasetMap
+   * @param alreadyWritten
+   * @throws FileNotFoundException
+   */
   private static void writeDocumentMap(String pathDataset,Map<String,Set<DocumentInfo>> datasetMap, Set<String> alreadyWritten) throws FileNotFoundException{   
     for(String wikiCat: datasetMap.keySet()){
       System.out.println("Wikipedia Category -> "+wikiCat+" documents -> "+datasetMap.get(wikiCat).size());
@@ -80,6 +88,11 @@ public class WikipediaMiner {
   }
 
 
+  /**
+   * @param nameFolders
+   * @param pathFolder
+   * @return
+   */
   private static String buildStructureFolder(Set<String> nameFolders,String pathFolder){
     boolean success = new File(pathFolder).mkdir();
     for(String keyMap: nameFolders){
@@ -90,7 +103,18 @@ public class WikipediaMiner {
 
 
 
+  /**
+   * @param pathDataset
+   * @param categories
+   * @param blackList
+   * @throws IOException
+   * @throws InterruptedException
+   * @throws ExecutionException
+   */
   public static void buildDataset(String pathDataset,Set<String> categories,Set<String> blackList) throws IOException, InterruptedException, ExecutionException{
+    //costruisco la struttura delle cartelle.
+    buildStructureFolder(categories, pathDataset);
+    
     ForkJoinPool pool = new ForkJoinPool();
     List<DatasetTask> datasetTasks = new ArrayList<>();
     
