@@ -23,6 +23,7 @@ import java.util.concurrent.Future;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -61,13 +62,13 @@ public class WikipediaMiner implements WikiRequest{
     for(String wikiCat: datasetMap.keySet()){
       System.out.println("Wikipedia Category -> "+wikiCat+" documents -> "+datasetMap.get(wikiCat).size());
       for(DocumentInfo doc: datasetMap.get(wikiCat)){
-          if(!alreadyWritten.contains(doc.getId())){
-            alreadyWritten.add(doc.getId());
-            PrintWriter p = new PrintWriter(new File(pathDataset+"/"+wikiCat.replace("Category:", "")+"/"+doc.getId()));
-            p.println(doc.getTitle()+"\n"+doc.getText());
-            p.flush();
-            p.close();
-          }             
+        if(!alreadyWritten.contains(doc.getId())){
+          alreadyWritten.add(doc.getId());
+          PrintWriter p = new PrintWriter(new File(pathDataset+"/"+wikiCat.replace("Category:", "")+"/"+doc.getId()));
+          p.println(doc.getTitle()+"\n"+doc.getText());
+          p.flush();
+          p.close();
+        }             
       }
     }  
   }
@@ -99,15 +100,15 @@ public class WikipediaMiner implements WikiRequest{
   public static void buildDataset(String pathDataset,Set<String> categories,Set<String> blackList,int maxLevel,boolean recursive) throws IOException, InterruptedException, ExecutionException{
     //costruisco la struttura delle cartelle.
     buildStructureFolder(categories, pathDataset);
-    
+
     ForkJoinPool pool = new ForkJoinPool();
     List<DatasetTask> datasetTasks = new ArrayList<>();
-    
+
     for(String cat : categories){
       DatasetTask task = new DatasetTask(cat, maxLevel,recursive);
       datasetTasks.add(task);
     }
-    
+
     List<Future<Map<String, Set<DocumentInfo>>>> result = pool.invokeAll(datasetTasks);
     Map<String,Set<DocumentInfo>> datasetMap = new HashMap<>();
     for(Future<Map<String, Set<DocumentInfo>>> future : result){
@@ -348,8 +349,19 @@ public class WikipediaMiner implements WikiRequest{
   @Override
   public DatasetResponse buildDataset(DatasetRequest request) {
     DatasetResponse response = new DatasetResponse();
+    String levelPathFolder = "/var/lib/jetty/data/"+request.getCurrentLevel();
+    boolean success = new File(levelPathFolder).mkdir();
+    Set<String> categories = request.getCategories();
     try {
-      buildDataset("/var/lib/jetty/data/dataset", request.getCategories(), new HashSet<String>(), 0, false);
+      Set<String> tosave = new HashSet<String>();
+      for(String c: categories){
+        tosave.add(c.replace("Category:", "").toLowerCase());
+      }
+      ObjectMapper mapper = new ObjectMapper();
+      mapper.writerWithDefaultPrettyPrinter().writeValue(new File(levelPathFolder+"/categories_"+request.getName()+".json"), tosave);
+
+      String pathFolder = levelPathFolder+"/dataset_"+request.getName();
+      buildDataset(pathFolder, request.getCategories(), new HashSet<String>(), request.getMaxLevel(), request.isRecursive());
       response.setStatus(200);
     }
     catch (Exception e) {
@@ -357,8 +369,8 @@ public class WikipediaMiner implements WikiRequest{
       response.setStatus(500);
       response.setMessage(e.getClass().getCanonicalName() + ": " + e.getMessage());
     }
-    
+
     return response;
-    
+
   }
 }
