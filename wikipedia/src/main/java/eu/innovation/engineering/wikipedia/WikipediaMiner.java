@@ -9,6 +9,9 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -20,9 +23,11 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.Future;
 
+import org.apache.commons.text.similarity.LevenshteinDistance;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -45,10 +50,44 @@ public class WikipediaMiner implements WikiRequest{
    * @throws ExecutionException
    */
   public static void main(String args[]) throws IOException, InterruptedException, ExecutionException{
+    ObjectMapper mapper = new ObjectMapper();
+    Map<String,Set<String>> mapTax = mapper.readValue(new File("map_tax2.json"), new TypeReference<Map<String,Set<String>>>() {});
+
     Set<String> categories = getCategoryList("categories.txt");
     Set<String> alreadyWritten = new HashSet<String>();
-    String pathDataset = "volume/dataset";
-    buildDataset("data/dataset", categories,alreadyWritten,0,false);
+
+    Map<String,Set<DocumentInfo>> datasetMap = new HashMap<>();
+    buildStructureFolder(mapTax.keySet(), "data/dataset_root/");
+    for(String c:mapTax.keySet()){
+      String pathDataset = "data/dataset/"+c;
+      buildStructureFolder(mapTax.get(c), pathDataset);
+      writeDocumentMap(pathDataset, buildDataset(mapTax.get(c),1,true), alreadyWritten);
+      //mergeFolders("data/dataset/"+c+"/","data/dataset_root/"+c+"/");
+    }
+
+
+
+  }
+
+
+  private static void mergeFolders(String pathSource,String pathTarget) throws IOException{
+    File dir = new File(pathSource);
+    List<File> toMove = new ArrayList<File>();
+    if(dir.isDirectory()){
+      File[] subDirs = dir.listFiles();
+
+      for(File f:subDirs){
+        if(f.isDirectory()){
+          File target = new File(pathTarget);
+          for(File doc:f.listFiles()){
+
+            Files.copy(doc.toPath(), Paths.get(pathTarget+doc.getName()), StandardCopyOption.REPLACE_EXISTING);
+          }           
+        }
+      }
+
+
+    }
   }
 
 
@@ -97,9 +136,8 @@ public class WikipediaMiner implements WikiRequest{
    * @throws InterruptedException
    * @throws ExecutionException
    */
-  public static void buildDataset(String pathDataset,Set<String> categories,Set<String> blackList,int maxLevel,boolean recursive) throws IOException, InterruptedException, ExecutionException{
-    //costruisco la struttura delle cartelle.
-    buildStructureFolder(categories, pathDataset);
+  public static Map<String,Set<DocumentInfo>> buildDataset(Set<String> categories,int maxLevel,boolean recursive) throws IOException, InterruptedException, ExecutionException{
+
 
     ForkJoinPool pool = new ForkJoinPool();
     List<DatasetTask> datasetTasks = new ArrayList<>();
@@ -114,7 +152,8 @@ public class WikipediaMiner implements WikiRequest{
     for(Future<Map<String, Set<DocumentInfo>>> future : result){
       datasetMap.putAll(future.get());
     }
-    writeDocumentMap(pathDataset, datasetMap,blackList);
+    return datasetMap;
+
   }
 
   /**
@@ -201,7 +240,7 @@ public class WikipediaMiner implements WikiRequest{
       queryKeyType = "&titles=";
     }
     //https://en.wikipedia.org/w/api.php?action=query&prop=categories&clshow=!hidden&cldir=ascending&titles=Category:Science
-    String query = "https://en.wikipedia.org/w/api.php?action=query&prop=categories&indexpageids=&clshow=!hidden&cldir=ascending"+queryKeyType+queryKey+"&format=json";
+    String query = "https://en.wikipedia.org/w/api.php?action=query&prop=categories&redirects&indexpageids=&clshow=!hidden&cldir=ascending"+queryKeyType+queryKey+"&format=json";
     JsonObject response = getJsonResponse(query);
     String id = response.get("query").getAsJsonObject().get("pageids").getAsJsonArray().get(0).getAsString();
     JsonArray category = response.get("query").getAsJsonObject().get("pages").getAsJsonObject().get(id).getAsJsonObject().get("categories").getAsJsonArray();
@@ -262,6 +301,64 @@ public class WikipediaMiner implements WikiRequest{
       count++;
     }
     return contentPagesMap;
+  }
+
+  public static List<String> searchWiki(String keySearch) throws IOException{
+    String query = "https://en.wikipedia.org/w/api.php?action=query&list=search&redirects&srnamespace=0&srwhat=text&utf8=&srsearch="+keySearch.replace(" ", "_")+"&format=json";
+    JsonObject response = getJsonResponse(query);
+    List<String> pages= new ArrayList<>();
+    JsonArray pagesJson = response.get("query").getAsJsonObject().get("search").getAsJsonArray();
+    if(pagesJson.size()!=0){
+      for(int i = 0;i<pagesJson.size();i++){
+        pages.add(response.get("query").getAsJsonObject().get("search").getAsJsonArray().get(i).getAsJsonObject().get("title").getAsString());
+      }
+    }
+    return pages;
+  }
+
+  public static String getCategory(String queryKey,String toCompare) throws IOException{
+
+    String queryKeyType = "";
+    if(queryKey!= null){
+      if(queryKey.contains(" "))
+        queryKey = queryKey.replace(" ", "_");
+      if(isNumeric(queryKey)){
+        queryKeyType = "&pageids=";
+      }else{
+        queryKeyType = "&titles=";
+      }
+      //https://en.wikipedia.org/w/api.php?action=query&prop=categories&clshow=!hidden&cldir=ascending&titles=Category:Science
+      String query = "https://en.wikipedia.org/w/api.php?action=query&prop=categories&redirects&indexpageids=&clshow=!hidden&cldir=ascending"+queryKeyType+queryKey+"&format=json";
+      JsonObject response = getJsonResponse(query);
+      String id = response.get("query").getAsJsonObject().get("pageids").getAsJsonArray().get(0).getAsString();
+      JsonArray category = response.get("query").getAsJsonObject().get("pages").getAsJsonObject().get(id).getAsJsonObject().get("categories").getAsJsonArray();
+      LevenshteinDistance lDis = new LevenshteinDistance();
+      String nameCategory = "";
+      double min = 200;
+      for(int i=0;i<category.size();i++){
+        String tmpName = category.get(i).getAsJsonObject().get("title").getAsString();
+        String left = tmpName.replace("Category:", "").toLowerCase();
+        String right = queryKey.replace("_", " ").toLowerCase();
+        String hint = toCompare.replace("_", " ").toLowerCase();
+        double distance = 0;
+        double distanceRight = lDis.apply(left,right);
+        double distanceHint = lDis.apply(left,hint);
+        System.out.println(left+" - "+right+" = "+distanceRight);
+        System.out.println(left+" - "+hint+" = "+distanceHint);
+        if(distanceRight< distanceHint)
+          distance = distanceRight;
+        else
+          distance = distanceHint;
+        
+        if(distance <= min){
+          nameCategory = tmpName;
+          min = distance;
+        }
+        
+      }
+      return nameCategory;
+    }else
+      return null;
   }
 
 
@@ -352,16 +449,19 @@ public class WikipediaMiner implements WikiRequest{
     String levelPathFolder = "/var/lib/jetty/data/"+request.getCurrentLevel();
     boolean success = new File(levelPathFolder).mkdir();
     Set<String> categories = request.getCategories();
+    Set<String> tosave = new HashSet<>();
+    for(String c: categories){
+      tosave.add(c.replace("Category:", "").toLowerCase());
+    }
     try {
-      Set<String> tosave = new HashSet<String>();
-      for(String c: categories){
-        tosave.add(c.replace("Category:", "").toLowerCase());
-      }
+
       ObjectMapper mapper = new ObjectMapper();
       mapper.writerWithDefaultPrettyPrinter().writeValue(new File(levelPathFolder+"/categories_"+request.getName()+".json"), tosave);
 
       String pathFolder = levelPathFolder+"/dataset_"+request.getName();
-      buildDataset(pathFolder, request.getCategories(), new HashSet<String>(), request.getMaxLevel(), request.isRecursive());
+      buildStructureFolder(categories, pathFolder);
+      Map<String, Set<DocumentInfo>> datasetMap = buildDataset(request.getCategories(),request.getMaxLevel(), request.isRecursive());
+      writeDocumentMap(pathFolder, datasetMap, new HashSet<String>());
       response.setStatus(200);
     }
     catch (Exception e) {
