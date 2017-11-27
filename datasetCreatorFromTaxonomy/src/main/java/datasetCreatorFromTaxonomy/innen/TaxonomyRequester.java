@@ -1,9 +1,10 @@
 package datasetCreatorFromTaxonomy.innen;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.util.Scanner;
 
 import org.slf4j.Logger;
@@ -13,6 +14,11 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
+/**
+ *
+ * @author Luigi Lomasto
+ * @description this class use rest methods of Taxonomy Manager REST Services WADL (http://taxonomies.innovationengineering.eu/services/#N66454) to query taxonomy
+ */
 
 public class TaxonomyRequester
 {
@@ -21,16 +27,27 @@ public class TaxonomyRequester
 	private String taxonomyUri;
 
 
-	public TaxonomyRequester(String uri){
-		this.taxonomyUri = uri;
+	public TaxonomyRequester(String uri) throws UnsupportedEncodingException{
+		this.taxonomyUri = encoder(uri);
 	} 
 
+	/**
+	 * Returns encoded string
+	 * @param toEncode
+	 * @return
+	 * @throws UnsupportedEncodingException 
+	 */
+	public String encoder(String toEncode) throws UnsupportedEncodingException{
+		return URLEncoder.encode(toEncode,"UTF-8");		
+	}
+	
 	/**
 	 * Returns the list of concepts defined in the specified taxonomy
 	 * @throws IOException 
 	 */
 	public JsonArray returnConceptsList () throws IOException{
 		String targetURL="http://taxonomies.innovationengineering.eu/services/rest/taxonomy/concepts?scheme-uri="+this.taxonomyUri;
+		logger.info(targetURL);
 		return sendRequestForJsonArrayResponse(targetURL);
 	}
 
@@ -41,6 +58,7 @@ public class TaxonomyRequester
 	 */
 	public JsonArray returnTopConceptsList () throws IOException{
 		String targetURL="http://taxonomies.innovationengineering.eu/services/rest/taxonomy/concepts/top?scheme-uri="+this.taxonomyUri;
+		logger.info(targetURL);
 		return sendRequestForJsonArrayResponse(targetURL);
 	}
 
@@ -52,6 +70,7 @@ public class TaxonomyRequester
 	 */
 	public JsonArray returnLeafList () throws IOException{
 		String targetURL="http://taxonomies.innovationengineering.eu/services/rest/taxonomy/concepts/leaf?scheme-uri="+this.taxonomyUri;
+		logger.info(targetURL);
 		return sendRequestForJsonArrayResponse(targetURL);
 	}
 
@@ -62,7 +81,9 @@ public class TaxonomyRequester
 	 * @throws IOException
 	 */
 	public JsonObject returnConceptByURI(String conceptURI) throws IOException{
-		String targetURL = "http://taxonomies.innovationengineering.eu/services/rest/taxonomy/concepts/concept?scheme-uri="+this.taxonomyUri+"&concept-uri="+conceptURI;
+		
+		String targetURL = "http://taxonomies.innovationengineering.eu/services/rest/taxonomy/concepts/concept?scheme-uri="+this.taxonomyUri+"&concept-uri="+encoder(conceptURI);
+		logger.info(targetURL);
 		return sendRequestForJsonObjectResponse(targetURL);
 	}
 
@@ -73,6 +94,7 @@ public class TaxonomyRequester
 	 */
 	public JsonArray returnConceptsFromLevel(int level) throws IOException{
 		String targetURL = "http://taxonomies.innovationengineering.eu/services/rest/taxonomy/concepts/level/"+level+"?scheme-uri="+taxonomyUri;
+		logger.info(targetURL);
 		return sendRequestForJsonArrayResponse(targetURL);
 	}
 
@@ -81,30 +103,31 @@ public class TaxonomyRequester
 
 	/**
 	 * Returns the list of concepts defined in the specified taxonomy and corresponding to the search criteria set
-	 * @param parentUri
-	 * @param ancestorUri
-	 * @param childUri
-	 * @param descendentUri
-	 * @param level
-	 * @param condition
-	 * @return JsonArray concepts
+	 * @param parentUri @description(Optional)
+	 * @param ancestorUri @description(Optional)
+	 * @param childUri @description(Optional)
+	 * @param descendentUri @description(Optional)
+	 * @param level @description(Optional)
+	 * @param condition @description(Optional)
+	 * @return JsonArray concepts @description concepts list with features required
 	 * @throws IOException 
 	 */
 	public JsonArray returnConceptsSearch(String parentUri,String ancestorUri, String childUri,String descendentUri, int level, String condition) throws IOException{
 		String targetURL = "http://taxonomies.innovationengineering.eu/services/rest/taxonomy/concepts/search?scheme-uri="+taxonomyUri;
 		if(parentUri!=null)
-			targetURL+="&parent-uri="+parentUri;
+			targetURL+="&parent-uri="+encoder(parentUri);
 		if(ancestorUri!=null)
-			targetURL+="&ancestor-uri="+ancestorUri;
+			targetURL+="&ancestor-uri="+encoder(ancestorUri);
 		if(childUri!=null)
-			targetURL+="&child-uri="+childUri;
+			targetURL+="&child-uri="+encoder(childUri);
 		if(descendentUri!=null)
-			targetURL+="&descendent-uri="+descendentUri;
+			targetURL+="&descendent-uri="+encoder(descendentUri);
 		if(level>=0)
 			targetURL+="&level="+level;
 		if(condition!=null)
-			targetURL+="condition="+condition;
-		logger.debug(targetURL);
+			targetURL+="condition="+encoder(condition);
+		
+		logger.info(targetURL);
 		return sendRequestForJsonArrayResponse(targetURL);
 
 	}
@@ -165,12 +188,7 @@ public class TaxonomyRequester
 	}
 
 
-	public static void main(String[] args) throws IOException{
-		TaxonomyRequester requester = new TaxonomyRequester("http://www.wheesbee.eu/taxonomy");
-
-		JsonArray response = requester.returnConceptsSearch(null, null, null, null, 1, null);
-		System.out.println(response);
-	}
+	
 
 
 
