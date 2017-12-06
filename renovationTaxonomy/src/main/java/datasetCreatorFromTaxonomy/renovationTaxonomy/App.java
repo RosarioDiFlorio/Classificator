@@ -10,13 +10,10 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.concurrent.BrokenBarrierException;
 
-import com.hp.hpl.jena.graph.Node;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Property;
-import com.hp.hpl.jena.rdf.model.RDFNode;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
@@ -31,6 +28,10 @@ import com.hp.hpl.jena.util.FileManager;
 public class App 
 {
 
+
+  
+  
+  
 	public static void main(String [] args) throws IOException{
 		final String  inputFileName = "wheesbee_taxonomy_general_1.0.skos.rdf";
 		Model model = ModelFactory.createDefaultModel();
@@ -174,6 +175,21 @@ public class App
 		
 		return model;
 	}
+	
+	
+	
+    public static Model addExactMatch(Model model, StmtIterator statementList, String id,String extactMatch){
+      while(statementList.hasNext()){
+        Statement stm = statementList.next();
+        if(stm.getSubject().getLocalName().equals(id)){
+          Resource exactMatchRes = new ResourceImpl(extactMatch);
+          Property exactMatchProp = new PropertyImpl("http://www.w3.org/2004/02/skos/core#exactMatch");
+          Statement exactMatchStm = new StatementImpl(stm.getSubject(), exactMatchProp, exactMatchRes);
+          model.add(exactMatchStm);
+        }
+      }
+      return model;      
+    }
 
 
 
