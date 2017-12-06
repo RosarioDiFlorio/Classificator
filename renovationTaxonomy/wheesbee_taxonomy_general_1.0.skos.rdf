@@ -21,7 +21,6 @@
         <skos:hasTopConcept rdf:resource="http://www.wheesbee.eu/taxonomy#100150" />
         <skos:hasTopConcept rdf:resource="http://www.wheesbee.eu/taxonomy#100146" />
         <skos:hasTopConcept rdf:resource="http://www.wheesbee.eu/taxonomy#100158" />
-        <skos:hasTopConcept rdf:resource="http://www.wheesbee.eu/taxonomy#100157" />
         <skos:hasTopConcept rdf:resource="http://www.wheesbee.eu/taxonomy#100160" />
         <skos:hasTopConcept rdf:resource="http://www.wheesbee.eu/taxonomy#100151" />
         <skos:hasTopConcept rdf:resource="http://www.wheesbee.eu/taxonomy#100155" />
@@ -18295,7 +18294,6 @@
     <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#100157">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
         <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy" />
-        <skos:topConceptOf rdf:resource="http://www.wheesbee.eu/taxonomy" />
         <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/100157" />
         <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#100253" />
         <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#100254" />
