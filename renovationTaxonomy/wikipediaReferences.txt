@@ -1,0 +1,217 @@
+law,en.wikipedia.org/wiki/Category:Law
+economics,economic policy,en.wikipedia.org/wiki/Category:Economic_policy
+economics,economic conditions,en.wikipedia.org/wiki/Category:Economic_history
+economics,economic cycle,en.wikipedia.org/wiki/Category:Business_cycle_theories
+economics,economic development,en.wikipedia.org/wiki/Category:Economic_development
+economics,economic structure,economic sector,en.wikipedia.org/wiki/Category:Economic_sectors
+economics,economic structure,economic system,en.wikipedia.org/wiki/Category:Economic_systems
+economics,economic analysis,econometrics,en.wikipedia.org/wiki/Category:Econometrics
+economics,economic analysis,economic indicator,en.wikipedia.org/wiki/Category:Economic_indicators
+economics,economic analysis,economic value,en.wikipedia.org/wiki/Category:Theory_of_value_(economics)
+economics,economic analysis,impact study,en.wikipedia.org/wiki/Category:Evaluation_methods
+economics,economic analysis,macroeconomics,en.wikipedia.org/wiki/Category:Macroeconomics
+economics,economic analysis,microeconomics,en.wikipedia.org/wiki/Category:Microeconomics
+economics,economic analysis,forecasting,en.wikipedia.org/wiki/Category:Economic_forecasting
+economics,economic analysis,statistics,en.wikipedia.org/wiki/Category:Mathematical_and_quantitative_methods_(economics)
+trade,supply and demand,en.wikipedia.org/wiki/Category:Demand
+trade,trading operation,en.wikipedia.org/wiki/Category:International_trade
+trade,trade policy,en.wikipedia.org/wiki/Category:Transfer_tax
+trade,international trade,en.wikipedia.org/wiki/Category:International_trade
+trade,consumer,en.wikipedia.org/wiki/Category:Consumer
+trade,consumption,en.wikipedia.org/wiki/Category:Consumption
+trade,goods and services,en.wikipedia.org/wiki/Category:Goods_(economics)
+trade,marketing,en.wikipedia.org/wiki/Category:Marketing
+trade,distributive trades,en.wikipedia.org/wiki/Category:Distribution_(business)‎
+finance,monetary relations,en.wikipedia.org/wiki/Category:Financial_economics‎
+finance,monetary economics,en.wikipedia.org/wiki/Category:Monetary_economics
+finance,financial institutions and credit,banking,en.wikipedia.org/wiki/Category:Banking
+finance,financial institutions and credit,credit,en.wikipedia.org/wiki/Category:Credit
+finance,financial institutions and credit,financial services,en.wikipedia.org/wiki/Category:Financial_services‎
+finance,free movement of capital,capital movement,en.wikipedia.org/wiki/Category:International_factor_movements
+finance,free movement of capital,financial market,en.wikipedia.org/wiki/Category:Financial_markets
+finance,free movement of capital,financial legislation,en.wikipedia.org/wiki/Category:Financial_regulation
+finance,free movement of capital,financial policy,en.wikipedia.org/wiki/Category:Fiscal_policy
+finance,financing and investment,en.wikipedia.org/wiki/Category:Investment
+finance,insurance,en.wikipedia.org/wiki/Category:Insurance
+finance,public finance and budget policy,public debt,en.wikipedia.org/wiki/Category:Government_debt
+finance,public finance and budget policy,public finance,en.wikipedia.org/wiki/Category:Government_finances
+finance,budget,en.wikipedia.org/wiki/Category:Budgets
+finance,taxation,en.wikipedia.org/wiki/Category:Tax
+finance,prices,en.wikipedia.org/wiki/Category:Pricing
+finance,market prices,en.wikipedia.org/wiki/Category:Market_(economics)
+social questions,family,en.wikipedia.org/wiki/Category:Family
+social questions,artificial reproduction,en.wikipedia.org/wiki/Category:Human_reproduction
+social questions,migration,en.wikipedia.org/wiki/Category:Human_migration
+social questions,demography and population,demography,en.wikipedia.org/wiki/Category:Demographics
+social questions,demography and population,geographical distribution of the population,en.wikipedia.org/wiki/Category:Human_geography
+social questions,demography and population,population dynamics,en.wikipedia.org/wiki/Category:Social_dynamics
+social questions,social framework,social analysis,opinion poll,en.wikipedia.org/wiki/Category:Public_opinion
+social questions,social framework,social analysis,social impact,en.wikipedia.org/wiki/Category:Influence_(social_and_political)
+social questions,social framework,social analysis,social indicator,en.wikipedia.org/wiki/Category:Community_building
+social questions,social framework,social analysis,social survey,en.wikipedia.org/wiki/Category:Social_statistics_data
+social questions,social framework,social situation,en.wikipedia.org/wiki/Category:Social_issues
+social questions,social framework,social structure,en.wikipedia.org/wiki/Category:Social_systems
+social questions,social affairs,leisure,en.wikipedia.org/wiki/Category:Quality_of_life
+social questions,social affairs,social life,en.wikipedia.org/wiki/Category:Interpersonal_relationships
+social questions,social affairs,social policy,en.wikipedia.org/wiki/Category:Social_policy
+social questions,culture and religion,arts,artistic profession,en.wikipedia.org/wiki/Category:Art_stubs
+social questions,culture and religion,arts,fine arts,en.wikipedia.org/wiki/Category:Aesthetics
+social questions,culture and religion,arts,literary profession,en.wikipedia.org/wiki/Category:Writers
+social questions,culture and religion,arts,literature,en.wikipedia.org/wiki/Category:Literature
+social questions,culture and religion,arts,music,en.wikipedia.org/wiki/Category:Music
+social questions,culture and religion,arts,performing arts,en.wikipedia.org/wiki/Category:Performing_arts
+social questions,culture and religion,arts,popular art,en.wikipedia.org/wiki/Category:Art_movements
+social questions,culture and religion,arts,visual arts,en.wikipedia.org/wiki/Category:Visual_arts
+social questions,culture and religion,cultural policy,en.wikipedia.org/wiki/Category:Cultural_policy
+social questions,culture and religion,culture,acculturation,en.wikipedia.org/wiki/Category:Majority%E2%80%93minority_relations
+social questions,culture and religion,culture,civilisation,en.wikipedia.org/wiki/Category:Civilizations
+social questions,culture and religion,culture,cultural difference,en.wikipedia.org/wiki/Category:Multiculturalism
+social questions,culture and religion,culture,cultural identity,en.wikipedia.org/wiki/Category:Identity_politics
+social questions,culture and religion,culture,cultural pluralism,en.wikipedia.org/wiki/Category:Pluralism_(philosophy)
+social questions,culture and religion,culture,cultural movement,en.wikipedia.org/wiki/Category:Social_movements
+social questions,culture and religion,culture,popular culture,en.wikipedia.org/wiki/Category:Popular_culture
+social questions,social,culture and religion,religion,en.wikipedia.org/wiki/Category:Religious_faiths,_traditions,_and_movements
+social questions,social protection,social security,en.wikipedia.org/wiki/Category:Social_security
+social questions,social protection,welfare,en.wikipedia.org/wiki/Category:Welfare
+social questions,health,health care profession,en.wikipedia.org/wiki/Category:Healthcare_occupations
+social questions,health,health policy,en.wikipedia.org/wiki/Category:Health_policy
+social questions,construction and town planning,construction policy,en.wikipedia.org/wiki/Category:Real_estate_terminology
+social questions,construction and town planning,habitat,en.wikipedia.org/wiki/Category:Human_habitats
+social questions,construction and town planning,housing,en.wikipedia.org/wiki/Category:Housing
+social questions,construction and town planning,property leasing,en.wikipedia.org/wiki/Category:Property_law
+social questions,construction and town planning,town planning,en.wikipedia.org/wiki/Category:Urban_planning
+education and communications,education,en.wikipedia.org/wiki/Category:Education
+education and communications,teaching,en.wikipedia.org/wiki/Category:Teaching
+education and communications,organisation of teaching,en.wikipedia.org/wiki/Category:Schools
+education and communications,documentation,en.wikipedia.org/wiki/Category:Documents
+education and communications,communications,audiovisual equipment,en.wikipedia.org/wiki/Category:Multimedia
+education and communications,communications,communications industry,en.wikipedia.org/wiki/Category:Media_industry
+education and communications,communications,communications policy,en.wikipedia.org/wiki/Category:Communication
+education and communications,communications,communications systems,en.wikipedia.org/wiki/Category:Telecommunications_systems
+education and communications,communications,means of communication,en.wikipedia.org/wiki/Category:Mass_media
+education and communications,information and information processing,en.wikipedia.org/wiki/Category:Information
+science,natural and applied sciences,applied sciences,agronomy,en.wikipedia.org/wiki/Category:Agronomy
+science,natural and applied sciences,applied sciences,cybernetics,en.wikipedia.org/wiki/Category:Cybernetics
+science,natural and applied sciences,applied sciences,electrotechnology,en.wikipedia.org/wiki/Category:Electromagnetism
+science,natural and applied sciences,applied sciences,information science,en.wikipedia.org/wiki/Category:Information_science
+science,natural and applied sciences,applied sciences,metrology,en.wikipedia.org/wiki/Category:Metrology
+science,natural and applied sciences,applied sciences,mathematics,en.wikipedia.org/wiki/Category:Mathematics
+science,natural and applied sciences,applied sciences,military science,en.wikipedia.org/wiki/Category:Military_science
+science,natural and applied sciences,applied sciences,sport science,en.wikipedia.org/wiki/Category:Sports_science 
+science,natural and applied sciences,earth sciences,geography,en.wikipedia.org/wiki/Category:Geography
+science,natural and applied sciences,earth sciences,geology,en.wikipedia.org/wiki/Category:Geology
+science,natural and applied sciences,earth sciences,geomorphology,en.wikipedia.org/wiki/Category:Geomorphology
+science,natural and applied sciences,earth sciences,hydrology,en.wikipedia.org/wiki/Category:Hydrology
+science,natural and applied sciences,earth sciences,meteorology,en.wikipedia.org/wiki/Category:Meteorology
+science,natural and applied sciences,earth sciences,oceanography,en.wikipedia.org/wiki/Category:Oceanography
+science,natural and applied sciences,earth sciences,soil science,en.wikipedia.org/wiki/Category:Soil_science
+science,natural and applied sciences,earth sciences,paleontology,en.wikipedia.org/wiki/Category:Paleontology
+science,natural and applied sciences,earth sciences,speleology,en.wikipedia.org/wiki/Category:Speleology
+science,natural and applied sciences,earth sciences,glaciology,en.wikipedia.org/wiki/Category:Glaciology
+science,natural and applied sciences,earth sciences,cartography,en.wikipedia.org/wiki/Category:Cartography
+science,natural and applied sciences,life sciences,biology,en.wikipedia.org/wiki/Category:Biology
+science,natural and applied sciences,life sciences,ecology,en.wikipedia.org/wiki/Category:Ecology
+science,natural and applied sciences,life sciences,parasitology,en.wikipedia.org/wiki/Category:Parasitology
+science,natural and applied sciences,life sciences,pharmacology,en.wikipedia.org/wiki/Category:Pharmacology
+science,natural and applied sciences,physical sciences,acoustics,en.wikipedia.org/wiki/Category:Acoustics
+science,natural and applied sciences,physical sciences,aerodynamics,en.wikipedia.org/wiki/Category:Aerodynamics
+science,natural and applied sciences,physical sciences,chemistry,en.wikipedia.org/wiki/Category:Chemistry
+science,natural and applied sciences,physical sciences,electronics,en.wikipedia.org/wiki/Category:Electronics
+science,natural and applied sciences,physical sciences,ionising radiation,en.wikipedia.org/wiki/Category:Radioactivity
+science,natural and applied sciences,physical sciences,laser physics,en.wikipedia.org/wiki/Category:Photonics
+science,natural and applied sciences,physical sciences,nuclear physics,en.wikipedia.org/wiki/Category:Nuclear_physics
+science,natural and applied sciences,physical sciences,optics,en.wikipedia.org/wiki/Category:Optics
+science,natural and applied sciences,physical sciences,plasma physics,en.wikipedia.org/wiki/Category:Plasma_physics
+science,natural and applied sciences,physical sciences,spectrometry,en.wikipedia.org/wiki/Category:Spectroscopy
+science,natural and applied sciences,physical sciences,thermodynamics,en.wikipedia.org/wiki/Category:Thermodynamics
+science,natural and applied sciences,space science,astronautics,en.wikipedia.org/wiki/Category:Astronautics
+science,natural and applied sciences,space science,astronomy,en.wikipedia.org/wiki/Category:Astronomy
+science,medical science,anatomy,en.wikipedia.org/wiki/Category:Anatomy
+science,medical science,epidemiology,en.wikipedia.org/wiki/Category:Epidemiology
+science,medical science,immunology,en.wikipedia.org/wiki/Category:Immunology
+science,medical science,medical research,en.wikipedia.org/wiki/Category:Medical_research
+science,medical science,medicine,en.wikipedia.org/wiki/Category:Medicine
+science,medical science,surgery,en.wikipedia.org/wiki/Category:Surgery
+science,medical science,therapeutics,en.wikipedia.org/wiki/Category:Medical_treatments
+science,medical science,toxicology,en.wikipedia.org/wiki/Category:Toxicology
+science,medical science,nutrition,en.wikipedia.org/wiki/Category:Food_science
+science,medical science,illness,en.wikipedia.org/wiki/Category:Diseases_and_disorders
+science,humanities,behavioural sciences,criminology,en.wikipedia.org/wiki/Category:Criminology
+science,humanities,behavioural sciences,psychoanalysis,en.wikipedia.org/wiki/Category:Psychoanalysis
+science,humanities,behavioural sciences,psychology,en.wikipedia.org/wiki/Category:Psychology
+science,humanities,behavioural sciences,cognitive science,en.wikipedia.org/wiki/Category:Cognitive_science
+science,humanities,social sciences,archaeology,en.wikipedia.org/wiki/Category:Archaeology
+science,humanities,social sciences,history,en.wikipedia.org/wiki/Category:History
+science,humanities,social sciences,linguistics,en.wikipedia.org/wiki/Category:Linguistics
+science,humanities,social sciences,philosophy,en.wikipedia.org/wiki/Category:Philosophy
+science,humanities,social sciences,political science,en.wikipedia.org/wiki/Category:Politics
+science,humanities,social sciences,social and cultural anthropology,en.wikipedia.org/wiki/Category:Cultural_anthropology
+science,humanities,social sciences,sociology,en.wikipedia.org/wiki/Category:Sociology
+transport,transport policy,Traffic regulations,en.wikipedia.org/wiki/Category:Traffic_law
+transport,transport policy,Transport regulations,en.wikipedia.org/wiki/Category:Transport_law
+transport,land transport,en.wikipedia.org/wiki/Category:Land_transport
+transport,maritime and inland waterway transport,en.wikipedia.org/wiki/Category:Water_transport
+transport,air and space transport,en.wikipedia.org/wiki/Category:International_air_transport
+environment,environmental policy,climate change policy,en.wikipedia.org/wiki/Category:Climate_change_policy
+environment,environmental policy,water policy,en.wikipedia.org/wiki/Category:Water_resource_policy
+environment,natural environment,climate,en.wikipedia.org/wiki/Category:Climate_change_and_society
+environment,natural environment,wildlife,en.wikipedia.org/wiki/Category:Wildlife
+environment,natural environment,physical environment,atmosphere,en.wikipedia.org/wiki/Category:Atmosphere
+environment,natural environment,physical environment,ecosystem,en.wikipedia.org/wiki/Category:Ecosystems
+agriculture forestry and fisheries,agricultural policy,en.wikipedia.org/wiki/Category:Agricultural_policy
+agriculture forestry and fisheries,agricultural structures and production,en.wikipedia.org/wiki/Category:Agricultural_production
+agriculture forestry and fisheries,farming systems,en.wikipedia.org/wiki/Category:Farms
+agriculture forestry and fisheries,forestry,en.wikipedia.org/wiki/Category:Forestry
+agriculture forestry and fisheries,fisheries,aquaculture,en.wikipedia.org/wiki/Category:Aquaculture
+agriculture forestry and fisheries,fisheries,fisheries policy,en.wikipedia.org/wiki/Category:Fisheries_law
+agriculture forestry and fisheries,agri-foodstuffs,animal product,en.wikipedia.org/wiki/Category:Animal_products
+agriculture forestry and fisheries,agri-foodstuffs,beverages and sugar,en.wikipedia.org/wiki/Category:Sugar
+agriculture forestry and fisheries,agri-foodstuffs,beverages and sugar,en.wikipedia.org/wiki/Category:Drinks
+agriculture forestry and fisheries,agri-foodstuffs,plant product,en.wikipedia.org/wiki/Category:Plant_products
+production technology and research,production,en.wikipedia.org/wiki/Category:Production_and_manufacturing
+production technology and research,technology and technical regulations,technical regulations,en.wikipedia.org/wiki/Category:Regulation_of_technologies
+production technology and research,technology and technical regulations,technology,digital technology,en.wikipedia.org/wiki/Category:Digital_technology
+production technology and research,technology and technical regulations,technology,nanotechnology,en.wikipedia.org/wiki/Category:Nanotechnology
+production technology and research,technology and technical regulations,technology,technological change,en.wikipedia.org/wiki/Category:Technological_change
+production technology and research,technology and technical regulations,technology,technology assessment,en.wikipedia.org/wiki/Category:Technology_assessment
+production technology and research,technology and technical regulations,technology,technology transfer,en.wikipedia.org/wiki/Category:Technology_transfer
+production technology and research,production,research and intellectual property,intellectual property,en.wikipedia.org/wiki/Category:Intellectual_property_law
+production technology and research,production,research and intellectual property,research,en.wikipedia.org/wiki/Category:Research
+production technology and research,production,research and intellectual property,space policy,en.wikipedia.org/wiki/Category:Space_policy
+energy,energy policy,en.wikipedia.org/wiki/Category:Energy_policy‎
+energy,soft energy,geothermal energy,en.wikipedia.org/wiki/Category:Geothermal_energy
+energy,soft energy,bioenergy,en.wikipedia.org/wiki/Category:Bioenergy
+energy,soft energy,hydraulic energy,en.wikipedia.org/wiki/Category:Water_power
+energy,soft energy,renewable energy,en.wikipedia.org/wiki/Category:Renewable_energy
+energy,soft energy,solar energy,en.wikipedia.org/wiki/Category:Solar_energy
+energy,soft energy,wind energy,en.wikipedia.org/wiki/Category:Wind_power
+industry,industrial structures and policy,industrial policy,en.wikipedia.org/wiki/Category:Industrial_policy
+industry,industrial structures and policy,industrial production,en.wikipedia.org/wiki/Category:Production_and_manufacturing
+industry,industrial structures and policy,industrial structures,en.wikipedia.org/wiki/Category:Industrial_organization
+industry,industrial structures and policy,technical profession,en.wikipedia.org/wiki/Category:Professional_titles_and_certifications
+industry,chemical industry,en.wikipedia.org/wiki/Category:Chemical_industry
+industry,metal industries,iron and steel industry,en.wikipedia.org/wiki/Category:Iron_and_steel_mills
+industry,metal industries,metallurgical industry,en.wikipedia.org/wiki/Category:Metallurgical_industry_by_country
+industry,metal industries,metals,en.wikipedia.org/wiki/Category:Metals
+industry,mechanical engineering,en.wikipedia.org/wiki/Category:Mechanical_engineering
+industry,electronics and electrical engineering,en.wikipedia.org/wiki/Category:Electronics_industry
+industry,building and public works,building industry,en.wikipedia.org/wiki/Category:Building
+industry,building and public works,public works,civil engineering,en.wikipedia.org/wiki/Category:Civil_engineering
+industry,building and public works,public works,drainage,en.wikipedia.org/wiki/Category:Drainage
+industry,building and public works,public works,dredging,en.wikipedia.org/wiki/Category:Dredgers
+industry,building and public works,public works,hydraulic works,en.wikipedia.org/wiki/Category:Hydraulics
+industry,building and public works,public works,road building,en.wikipedia.org/wiki/Category:Buildings_and_structures_by_road
+industry,wood industry,en.wikipedia.org/wiki/Category:Wood_products
+industry,leather and textile industries,leather industry,en.wikipedia.org/wiki/Category:Leather_Industry
+industry,leather and textile industries,textile industry,en.wikipedia.org/wiki/Category:Textile_industry
+technology and data processing,computer system,computer network,en.wikipedia.org/wiki/Category:Computer_networks
+technology and data processing,computer system,information technology applications,en.wikipedia.org/wiki/Category:Information_technology
+technology and data processing,computer system,systems interconnection,en.wikipedia.org/wiki/Category:Network_architecture
+technology and data processing,data processing,coding,en.wikipedia.org/wiki/Category:Computer_programming
+technology and data processing,data processing,database,en.wikipedia.org/wiki/Category:Databases
+technology and data processing,data processing,data recording,en.wikipedia.org/wiki/Category:Recording_devices
+technology and data processing,data processing,information storage,en.wikipedia.org/wiki/Category:Storage_media
+technology and data processing,data processing,personal data,en.wikipedia.org/wiki/Category:Privacy
+technology and data processing,data processing,data retrieval,en.wikipedia.org/wiki/Category:Information_retrieval
+technology and data processing,information technology industry,computer equipment,en.wikipedia.org/wiki/Category:Computer_hardware
+technology and data processing,information technology industry,software,en.wikipedia.org/wiki/Category:Software

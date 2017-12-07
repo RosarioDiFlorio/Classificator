@@ -27,6 +27,7 @@
         <skos:hasTopConcept rdf:resource="http://www.wheesbee.eu/taxonomy#100148" />
         <skos:hasTopConcept rdf:resource="http://www.wheesbee.eu/taxonomy#100159" />
         <skos:hasTopConcept rdf:resource="http://www.wheesbee.eu/taxonomy#100154" />
+        <skos:hasTopConcept rdf:resource="http://www.wheesbee.eu/taxonomy#100223" />
     </rdf:Description>
     <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#100147">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
@@ -12133,7 +12134,6 @@
         <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#100220" />
         <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#100221" />
         <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#100222" />
-        <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#100223" />
         <skos:prefLabel xml:lang="it">istruzione e comunicazione</skos:prefLabel>
         <skos:prefLabel xml:lang="en">education and communications</skos:prefLabel>
     </rdf:Description>
@@ -14562,10 +14562,10 @@
         <skos:prefLabel xml:lang="en">information industry</skos:prefLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#100223">
+    	<skos:topConceptOf rdf:resource="http://www.wheesbee.eu/taxonomy"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
         <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy" />
         <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/100223" />
-        <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#100150" />
         <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#1405" />
         <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#1426" />
         <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#3028" />
