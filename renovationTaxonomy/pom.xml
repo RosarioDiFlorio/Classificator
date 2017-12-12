@@ -27,6 +27,11 @@
             <version>2.6.4</version>
         </dependency>
         <dependency>
+            <groupId>eu.innovationengineering</groupId>
+            <version>1.0.0-SNAPSHOT</version>
+            <artifactId>taxonomy-utilities-commons</artifactId>
+        </dependency>
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>3.8.1</version>
