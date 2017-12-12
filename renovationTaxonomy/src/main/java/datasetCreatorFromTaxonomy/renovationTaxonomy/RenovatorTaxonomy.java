@@ -27,13 +27,9 @@ import com.hp.hpl.jena.util.FileManager;
 
 
 
-public class App 
+public class RenovatorTaxonomy 
 {
 
-
-  
-  
-  
 	public static void main(String [] args) throws IOException{
 		final String  inputFileName = "wheesbee_taxonomy_general_1.0.skos.rdf";
 		Model model = ModelFactory.createDefaultModel();
@@ -43,8 +39,6 @@ public class App
 		}
 		model.read(new InputStreamReader(in), "");
 		in.close();
-
-
 
 		
 		System.out.println("Starting change dependency... ");
@@ -109,7 +103,9 @@ public class App
 				// Per i concetti creiamo gli statement exactMatch
 				if(statement.getPredicate().getLocalName().equals("prefLabel") && statement.getObject().toString().contains("@en") && (statement.getObject().toString().replace("@en", "").equals(category))){
 					if(statement.getObject().toString().replace("@en", "").equals(category)){
-						ResourceImpl object = new ResourceImpl("https://en.wikipedia.org/wiki/Category:"+wikipediaCategory[1]);
+						//ResourceImpl object = new ResourceImpl("https://en.wikipedia.org/wiki/Category:"+wikipediaCategory[1]);
+						System.out.println("https://"+splitted[splitted.length-1]);
+						ResourceImpl object = new ResourceImpl("https://"+splitted[splitted.length-1]);
 						PropertyImpl property = null;
 						if(statement.getObject().toString().replace("@en", "").equals(wikipediaCategory[1].replaceAll("_", " ").toLowerCase())){
 							property = new PropertyImpl("http://www.w3.org/2004/02/skos/core#exactMatch");
