@@ -30,7 +30,25 @@ import com.hp.hpl.jena.rdf.model.impl.StatementImpl;
 import com.hp.hpl.jena.util.FileManager;
 
 import eu.innovationengineering.taxonomy.commons.utils.TranslateUtils;
-
+/**
+ * Questa classe funziona con i file csv aventi uno specifico formato
+ * devono essere formati secondo questa forma
+ * dal radice alle foglie.
+ * --------------------GOOD-----------------------------------------------
+ * materials, electrical conductors
+ * materials, electrical conductors, electrodes
+ * materials, electrical conductors, electrodes, Anode
+ * materials, electrical conductors, electrodes, Auxiliary electrode
+ * --------------------------------------------------------------------
+ * 
+ * -------------------BAD FORMAT--------------------------------
+ * materials, electrical conductors, electrodes, Auxiliary electrode
+ *  materials, electrical conductors, electrodes, Anode
+ *  materials, electrical conductors, electrodes
+ *  materials, electrical conductors
+ * @author Rosario
+ *
+ */
 public class TaxonomyImporterCsv {
 
   public static void main(String[] args) throws FileNotFoundException, IOException, ParserConfigurationException, SAXException{
