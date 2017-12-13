@@ -4,10 +4,6 @@ import java.io.IOException;
 
 import com.google.gson.JsonArray;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
-
 /**
  * Unit test for simple App.
  */
@@ -15,12 +11,10 @@ public class AppTest
 {
 
 	public static void main(String[] args) throws IOException{
-		TaxonomyRequester requester = new TaxonomyRequester("http://www.wheesbee.eu/taxonomy");
-		
+		TaxonomyRequester requester = new TaxonomyRequester("http://www.wheesbee.eu/taxonomy");	
 		//JsonObject response = requester.returnConceptByURI("http://www.wheesbee.eu/taxonomy#100147");
 		JsonArray response = requester.returnConceptsSearch(null, null, "http://www.wheesbee.eu/taxonomy#100147", null, -1, null);
-		System.out.println(response);
-		
+		System.out.println(response);		
 	}
 	
 }
