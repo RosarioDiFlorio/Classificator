@@ -15,3 +15,5 @@ http://www.wheesbee.eu/taxonomy#3307,http://www.wheesbee.eu/taxonomy#100149
 http://www.wheesbee.eu/taxonomy#100157,http://www.wheesbee.eu/taxonomy#100156
 http://www.wheesbee.eu/taxonomy#744,http://www.wheesbee.eu/taxonomy#100159
 http://www.wheesbee.eu/taxonomy#1362,http://www.wheesbee.eu/taxonomy#100160
+http://www.wheesbee.eu/taxonomy#3193,http://www.wheesbee.eu/taxonomy#100147
+http://www.wheesbee.eu/taxonomy#1268,http://www.wheesbee.eu/taxonomy#5881

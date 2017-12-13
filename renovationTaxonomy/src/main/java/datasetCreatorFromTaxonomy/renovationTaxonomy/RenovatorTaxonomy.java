@@ -40,7 +40,7 @@ public class RenovatorTaxonomy
 		model.read(new InputStreamReader(in), "");
 		in.close();
 
-		
+
 		System.out.println("Starting change dependency... ");
 		//PER CAMBIARE I BROADER ED I NARROWER
 		model = changeProperty(model);
@@ -59,12 +59,12 @@ public class RenovatorTaxonomy
 		//DUMP DELLA TASSONOMIA
 		FileWriter writer = new FileWriter("newWheesbee.rdf");
 		model.write(writer);
-		
+
 
 
 	}
-	
-	
+
+
 	public static Model deleteConcept(Model model) throws IOException{
 		BufferedReader br2 = new BufferedReader(new FileReader("categoriesToRemove.txt"));
 		String readed2 = br2.readLine();
@@ -74,7 +74,7 @@ public class RenovatorTaxonomy
 			model = delete(model,resourceList);
 			readed2 = br2.readLine();
 		}
-		
+
 		return model;
 	}
 
@@ -201,6 +201,8 @@ public class RenovatorTaxonomy
 			String []components= readed.split(",");
 			idToChange.add(components[0]);
 			while(statementList.hasNext()){
+				if(statement!=null && statement.getPredicate().getLocalName().contains("prefLabel"))
+					System.out.println(statement);
 				statement = statementList.next();
 				if(statement.getSubject().getNameSpace().equals(components[0]) && statement.getPredicate().getLocalName().equals("broader")){
 					added=true;					
@@ -256,21 +258,21 @@ public class RenovatorTaxonomy
 
 		return model;
 	}
-	
-	
-	
-    public static Model addExactMatch(Model model, StmtIterator statementList, String id,String extactMatch){
-      while(statementList.hasNext()){
-        Statement stm = statementList.next();
-        if(stm.getSubject().getLocalName().equals(id)){
-          Resource exactMatchRes = new ResourceImpl(extactMatch);
-          Property exactMatchProp = new PropertyImpl("http://www.w3.org/2004/02/skos/core#exactMatch");
-          Statement exactMatchStm = new StatementImpl(stm.getSubject(), exactMatchProp, exactMatchRes);
-          model.add(exactMatchStm);
-        }
-      }
-      return model;      
-    }
+
+
+
+	public static Model addExactMatch(Model model, StmtIterator statementList, String id,String extactMatch){
+		while(statementList.hasNext()){
+			Statement stm = statementList.next();
+			if(stm.getSubject().getLocalName().equals(id)){
+				Resource exactMatchRes = new ResourceImpl(extactMatch);
+				Property exactMatchProp = new PropertyImpl("http://www.w3.org/2004/02/skos/core#exactMatch");
+				Statement exactMatchStm = new StatementImpl(stm.getSubject(), exactMatchProp, exactMatchRes);
+				model.add(exactMatchStm);
+			}
+		}
+		return model;      
+	}
 
 
 
