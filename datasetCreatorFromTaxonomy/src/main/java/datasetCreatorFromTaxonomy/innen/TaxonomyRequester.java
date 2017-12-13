@@ -125,7 +125,7 @@ public class TaxonomyRequester
 		if(level>=0)
 			targetURL+="&level="+level;
 		if(condition!=null)
-			targetURL+="condition="+encoder(condition);
+			targetURL+="&search-condition="+encoder(condition+"@en");
 		
 		logger.info(targetURL);
 		return sendRequestForJsonArrayResponse(targetURL);

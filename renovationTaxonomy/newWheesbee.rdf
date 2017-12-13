@@ -48,16 +48,6 @@
     <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#3477">
-    <skos:altLabel xml:lang="it">assicurazione contro gli incidenti</skos:altLabel>
-    <skos:prefLabel xml:lang="en">indemnity insurance</skos:prefLabel>
-    <skos:prefLabel xml:lang="it">assicurazione danni</skos:prefLabel>
-    <skos:altLabel xml:lang="en">non-life insurance</skos:altLabel>
-    <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#3151"/>
-    <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/3477"/>
-    <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#100159">
     <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#744"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -83,7 +73,6 @@
   <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#100147">
     <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#100194"/>
     <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#2128"/>
-    <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#145"/>
     <skos:topConceptOf rdf:resource="http://www.wheesbee.eu/taxonomy"/>
     <skos:prefLabel xml:lang="en">trade</skos:prefLabel>
     <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#100191"/>
@@ -92,6 +81,7 @@
     <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/100147"/>
     <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#100196"/>
     <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#614"/>
+    <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#3193"/>
     <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#139"/>
     <skos:prefLabel xml:lang="it">scambi economici e commerciali</skos:prefLabel>
     <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
@@ -120,16 +110,6 @@
     <skos:scopeNote xml:lang="it">Studia le relazioni con l'ambiente soprattutto fisico e geografico.</skos:scopeNote>
     <skos:prefLabel xml:lang="en">ecology</skos:prefLabel>
     <skos:scopeNote xml:lang="en">Study of relations with the environment, mainly physical or geographical.</skos:scopeNote>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#2906">
-    <skos:scopeNote xml:lang="en">Arrangement under which an insurer passes on to other parties all or part of a risk he has assumed; this is not double insurance but a means of spreading large risks.</skos:scopeNote>
-    <skos:scopeNote xml:lang="it">Operazione attraverso cui un'impresa assicuratrice riduce il suo margine di rischio, stipulando a sua volta un contratto di assicurazione con un'altra impresa.</skos:scopeNote>
-    <skos:prefLabel xml:lang="en">reinsurance</skos:prefLabel>
-    <skos:prefLabel xml:lang="it">riassicurazione</skos:prefLabel>
-    <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#3151"/>
-    <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/2906"/>
-    <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#3085">
@@ -241,16 +221,6 @@
     <skos:prefLabel xml:lang="en">space policy</skos:prefLabel>
     <skos:prefLabel xml:lang="it">politica spaziale</skos:prefLabel>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#3723">
-    <skos:altLabel xml:lang="en">life insurance</skos:altLabel>
-    <skos:altLabel xml:lang="it">assicurazione diretta sulla vita</skos:altLabel>
-    <skos:prefLabel xml:lang="en">life assurance</skos:prefLabel>
-    <skos:prefLabel xml:lang="it">assicurazione sulla vita</skos:prefLabel>
-    <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#3151"/>
-    <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/3723"/>
-    <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#3941">
     <skos:prefLabel xml:lang="it">scienze biologiche</skos:prefLabel>
     <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#100224"/>
@@ -346,15 +316,6 @@
     <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#3222">
-    <skos:altLabel xml:lang="it">copertura dei rischi d'incidente</skos:altLabel>
-    <skos:prefLabel xml:lang="en">personal accident insurance</skos:prefLabel>
-    <skos:prefLabel xml:lang="it">assicurazione contro gli infortuni</skos:prefLabel>
-    <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#3151"/>
-    <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/3222"/>
-    <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#100245">
     <skos:exactMatch rdf:resource="https://en.wikipedia.org/wiki/Category:Agricultural_policy"/>
     <skos:prefLabel xml:lang="en">agricultural policy</skos:prefLabel>
@@ -382,15 +343,6 @@
     <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#549">
-    <skos:prefLabel xml:lang="en">insurance law</skos:prefLabel>
-    <skos:prefLabel xml:lang="it">diritto assicurativo</skos:prefLabel>
-    <skos:altLabel xml:lang="it">diritto delle assicurazioni</skos:altLabel>
-    <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#3151"/>
-    <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/549"/>
-    <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#2720">
     <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -399,6 +351,16 @@
     <skos:prefLabel xml:lang="it">produzione industriale</skos:prefLabel>
     <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/2720"/>
     <skos:prefLabel xml:lang="en">industrial production</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#3193">
+    <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#100147"/>
+    <skos:altLabel xml:lang="it">bene economico</skos:altLabel>
+    <skos:prefLabel xml:lang="en">goods and services</skos:prefLabel>
+    <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/3193"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
+    <skos:majorMatch rdf:resource="https://en.wikipedia.org/wiki/Category:Goods_(economics)"/>
+    <skos:prefLabel xml:lang="it">beni e servizi</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#5383">
     <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
@@ -410,17 +372,6 @@
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#4415"/>
     <skos:altLabel xml:lang="it">sviluppo tecnologico</skos:altLabel>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#34">
-    <skos:related rdf:resource="http://www.wheesbee.eu/taxonomy#8469"/>
-    <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#3151"/>
-    <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/34"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
-    <skos:altLabel xml:lang="it">società d'assicurazioni</skos:altLabel>
-    <skos:prefLabel xml:lang="it">compagnia d'assicurazioni</skos:prefLabel>
-    <skos:altLabel xml:lang="en">insurance undertaking</skos:altLabel>
-    <skos:prefLabel xml:lang="en">insurance company</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#307">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -555,16 +506,6 @@
     <skos:prefLabel xml:lang="en">animal product</skos:prefLabel>
     <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#100157"/>
     <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/100254"/>
-    <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#165">
-    <skos:altLabel xml:lang="it">polizza assicurativa</skos:altLabel>
-    <skos:prefLabel xml:lang="en">insurance contract</skos:prefLabel>
-    <skos:prefLabel xml:lang="it">contratto assicurativo</skos:prefLabel>
-    <skos:altLabel xml:lang="en">insurance policy</skos:altLabel>
-    <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#3151"/>
-    <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/165"/>
     <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
@@ -744,17 +685,6 @@
     <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#100188"/>
     <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
     <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/4006"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#3244">
-    <skos:scopeNote xml:lang="en">Joint coverage of a large risk by a number of insurers under a single contract, each insurer being liable for a portion of any claims.</skos:scopeNote>
-    <skos:scopeNote xml:lang="it">Assicurazione di uno stesso rischio, particolarmente elevato, da parte di più assicuratori, ciascuno dei quali prende a suo carico una quota parte del rischio assicurato.</skos:scopeNote>
-    <skos:altLabel xml:lang="it">coassicurazione indiretta</skos:altLabel>
-    <skos:prefLabel xml:lang="en">co-insurance</skos:prefLabel>
-    <skos:prefLabel xml:lang="it">coassicurazione</skos:prefLabel>
-    <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#3151"/>
-    <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/3244"/>
-    <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#1370">
     <skos:prefLabel xml:lang="en">communications industry</skos:prefLabel>
@@ -982,6 +912,15 @@
     <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/3150"/>
     <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
     <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#100243"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#100209">
+    <skos:majorMatch rdf:resource="https://en.wikipedia.org/wiki/Category:Human_migration"/>
+    <skos:prefLabel xml:lang="en">migration</skos:prefLabel>
+    <skos:prefLabel xml:lang="it">migrazione</skos:prefLabel>
+    <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#100149"/>
+    <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/100209"/>
+    <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#2476">
@@ -1252,7 +1191,6 @@
     <skos:majorMatch rdf:resource="https://en.wikipedia.org/wiki/Category:Financial_services‎"/>
     <skos:prefLabel xml:lang="it">servizi finanziari</skos:prefLabel>
     <skos:prefLabel xml:lang="en">financial services</skos:prefLabel>
-    <skos:related rdf:resource="http://www.wheesbee.eu/taxonomy#34"/>
     <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#100200"/>
     <skos:related rdf:resource="http://www.wheesbee.eu/taxonomy#2149"/>
   </rdf:Description>
@@ -1306,16 +1244,6 @@
     <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#2914"/>
     <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#4185"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#145">
-    <skos:scopeNote xml:lang="it">Indica quanto è acquistato dai consumatori per soddisfare direttamente il proprio fabbisogno.</skos:scopeNote>
-    <skos:prefLabel xml:lang="en">final consumption</skos:prefLabel>
-    <skos:prefLabel xml:lang="it">consumo finale</skos:prefLabel>
-    <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#100147"/>
-    <skos:scopeNote xml:lang="en">Final consumption represents the value of the goods and services used for the direct satisfaction of human needs.</skos:scopeNote>
-    <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/145"/>
-    <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#4205">
     <skos:exactMatch rdf:resource="https://en.wikipedia.org/wiki/Category:Sociology"/>
     <skos:prefLabel xml:lang="it">sociologia</skos:prefLabel>
@@ -1324,15 +1252,6 @@
     <skos:related rdf:resource="http://www.wheesbee.eu/taxonomy#4706"/>
     <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#3956"/>
     <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/4205"/>
-    <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#3673">
-    <skos:altLabel xml:lang="en">public liability insurance</skos:altLabel>
-    <skos:prefLabel xml:lang="en">third-party insurance</skos:prefLabel>
-    <skos:prefLabel xml:lang="it">assicurazione responsabilità civile</skos:prefLabel>
-    <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#3151"/>
-    <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/3673"/>
     <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
@@ -1391,7 +1310,6 @@
     <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#100237"/>
     <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/3160"/>
     <skos:prefLabel xml:lang="it">regolamentazione dei trasporti</skos:prefLabel>
-    <skos:related rdf:resource="http://www.wheesbee.eu/taxonomy#3706"/>
     <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
     <skos:prefLabel xml:lang="en">transport regulations</skos:prefLabel>
   </rdf:Description>
@@ -1459,14 +1377,6 @@
     <skos:altLabel xml:lang="en">stability and convergence programmes</skos:altLabel>
     <skos:altLabel xml:lang="it">programma di stabilità o di convergenza</skos:altLabel>
     <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/6340"/>
-    <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#3599">
-    <skos:prefLabel xml:lang="en">private insurance</skos:prefLabel>
-    <skos:prefLabel xml:lang="it">assicurazione privata</skos:prefLabel>
-    <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#3151"/>
-    <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/3599"/>
     <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
@@ -1757,16 +1667,6 @@
     <skos:exactMatch rdf:resource="https://en.wikipedia.org/wiki/Category:Linguistics"/>
     <skos:prefLabel xml:lang="en">linguistics</skos:prefLabel>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#3590">
-    <skos:altLabel xml:lang="it">sensale di assicurazioni</skos:altLabel>
-    <skos:prefLabel xml:lang="en">insurance occupation</skos:prefLabel>
-    <skos:prefLabel xml:lang="it">professioni del settore assicurativo</skos:prefLabel>
-    <skos:altLabel xml:lang="en">insurer</skos:altLabel>
-    <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#3151"/>
-    <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/3590"/>
-    <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#139">
     <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#100147"/>
     <skos:altLabel xml:lang="it">sottoconsumo</skos:altLabel>
@@ -1802,6 +1702,16 @@
     <skos:prefLabel xml:lang="it">applicazione dell'informatica</skos:prefLabel>
     <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#5922"/>
     <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/5441"/>
+    <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#6030">
+    <skos:altLabel xml:lang="en">data retrieval</skos:altLabel>
+    <skos:altLabel xml:lang="it">ricerca dei dati</skos:altLabel>
+    <skos:prefLabel xml:lang="en">data collection</skos:prefLabel>
+    <skos:prefLabel xml:lang="it">raccolta dei dati</skos:prefLabel>
+    <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#4488"/>
+    <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/6030"/>
     <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
@@ -1857,14 +1767,6 @@
     <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#3630">
-    <skos:prefLabel xml:lang="en">public insurance</skos:prefLabel>
-    <skos:prefLabel xml:lang="it">assicurazione pubblica</skos:prefLabel>
-    <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#3151"/>
-    <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/3630"/>
-    <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#685">
     <skos:prefLabel xml:lang="it">agronomia</skos:prefLabel>
     <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
@@ -1880,15 +1782,6 @@
     <skos:prefLabel xml:lang="it">istruzione</skos:prefLabel>
     <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#100150"/>
     <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/100217"/>
-    <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#3274">
-    <skos:altLabel xml:lang="it">assicurazione contro le calamità agricole</skos:altLabel>
-    <skos:prefLabel xml:lang="en">agricultural insurance</skos:prefLabel>
-    <skos:prefLabel xml:lang="it">assicurazione agricola</skos:prefLabel>
-    <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#3151"/>
-    <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/3274"/>
     <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
@@ -1916,16 +1809,6 @@
     <skos:prefLabel xml:lang="it">movimento culturale</skos:prefLabel>
     <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#317"/>
     <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/7374"/>
-    <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#5355">
-    <skos:altLabel xml:lang="en">data centre</skos:altLabel>
-    <skos:altLabel xml:lang="it">centro informatico</skos:altLabel>
-    <skos:prefLabel xml:lang="en">computer centre</skos:prefLabel>
-    <skos:prefLabel xml:lang="it">centro di calcolo</skos:prefLabel>
-    <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#5922"/>
-    <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/5355"/>
     <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
@@ -1960,6 +1843,17 @@
     <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
     <skos:scopeNote xml:lang="it">Da utilizzare per documenti generali, altrimenti impiegare dei descrittori più specifici.</skos:scopeNote>
     <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/6140"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#1268">
+    <skos:prefLabel xml:lang="en">nutrition</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
+    <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#5881"/>
+    <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/1268"/>
+    <skos:altLabel xml:lang="it">regime alimentare</skos:altLabel>
+    <skos:majorMatch rdf:resource="https://en.wikipedia.org/wiki/Category:Food_science"/>
+    <skos:altLabel xml:lang="en">food</skos:altLabel>
+    <skos:prefLabel xml:lang="it">nutrizione</skos:prefLabel>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#100270">
     <skos:prefLabel xml:lang="en">iron, steel and other metal industries</skos:prefLabel>
@@ -2192,8 +2086,8 @@
     <skos:prefLabel xml:lang="en">computer system</skos:prefLabel>
     <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/5922"/>
     <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#5441"/>
-    <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#5355"/>
     <skos:altLabel xml:lang="en">data-processing system</skos:altLabel>
+    <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#5684"/>
     <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#5862"/>
     <skos:prefLabel xml:lang="it">sistema informatico</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -2207,30 +2101,12 @@
     <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/100198"/>
     <skos:majorMatch rdf:resource="https://en.wikipedia.org/wiki/Category:Financial_economics‎"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#3567">
-    <skos:prefLabel xml:lang="en">compulsory insurance</skos:prefLabel>
-    <skos:prefLabel xml:lang="it">assicurazione obbligatoria</skos:prefLabel>
-    <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#3151"/>
-    <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/3567"/>
-    <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#100203">
     <skos:exactMatch rdf:resource="https://en.wikipedia.org/wiki/Category:Insurance"/>
-    <skos:prefLabel xml:lang="en">insurance</skos:prefLabel>
     <skos:prefLabel xml:lang="it">assicurazioni</skos:prefLabel>
-    <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#3151"/>
+    <skos:prefLabel xml:lang="en">insurance</skos:prefLabel>
     <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#100148"/>
     <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/100203"/>
-    <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#3187">
-    <skos:prefLabel xml:lang="en">export credit insurance</skos:prefLabel>
-    <skos:prefLabel xml:lang="it">assicurazione all'esportazione</skos:prefLabel>
-    <skos:altLabel xml:lang="en">export credit guarantee</skos:altLabel>
-    <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#3151"/>
-    <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/3187"/>
     <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
@@ -2262,34 +2138,6 @@
     <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/138"/>
     <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#3151">
-    <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#3274"/>
-    <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#3243"/>
-    <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#3673"/>
-    <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#3187"/>
-    <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#3244"/>
-    <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#100203"/>
-    <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#3590"/>
-    <skos:prefLabel xml:lang="en">insurance</skos:prefLabel>
-    <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#3599"/>
-    <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#2906"/>
-    <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#3567"/>
-    <skos:exactMatch rdf:resource="https://en.wikipedia.org/wiki/Category:Insurance"/>
-    <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#3242"/>
-    <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#165"/>
-    <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#3222"/>
-    <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#549"/>
-    <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
-    <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#3630"/>
-    <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#3706"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/3151"/>
-    <skos:prefLabel xml:lang="it">assicurazione</skos:prefLabel>
-    <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#34"/>
-    <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#3723"/>
-    <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#3373"/>
-    <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#3477"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#833">
     <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
@@ -2364,16 +2212,6 @@
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="it">politica sanitaria</skos:prefLabel>
     <skos:altLabel xml:lang="en">health protection</skos:altLabel>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#3706">
-    <skos:altLabel xml:lang="it">assicurazione per il trasporto terrestre</skos:altLabel>
-    <skos:prefLabel xml:lang="en">transport insurance</skos:prefLabel>
-    <skos:prefLabel xml:lang="it">assicurazione trasporto</skos:prefLabel>
-    <skos:related rdf:resource="http://www.wheesbee.eu/taxonomy#3160"/>
-    <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#3151"/>
-    <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/3706"/>
-    <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#4097">
     <skos:majorMatch rdf:resource="https://en.wikipedia.org/wiki/Category:Pluralism_(philosophy)"/>
@@ -2504,14 +2342,6 @@
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:altLabel xml:lang="it">sistema ecologico</skos:altLabel>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#3243">
-    <skos:prefLabel xml:lang="en">personal insurance</skos:prefLabel>
-    <skos:prefLabel xml:lang="it">assicurazione di persone</skos:prefLabel>
-    <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#3151"/>
-    <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/3243"/>
-    <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#100200">
     <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#8469"/>
     <skos:prefLabel xml:lang="it">istituti finanziari e di credito</skos:prefLabel>
@@ -2557,6 +2387,7 @@
     <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#2923"/>
     <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#838"/>
     <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
+    <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#1268"/>
     <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/5881"/>
     <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#1304"/>
     <skos:prefLabel xml:lang="it">scienze mediche</skos:prefLabel>
@@ -2694,15 +2525,6 @@
     <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#3242">
-    <skos:altLabel xml:lang="it">assicurazione di cose e beni</skos:altLabel>
-    <skos:prefLabel xml:lang="en">property insurance</skos:prefLabel>
-    <skos:prefLabel xml:lang="it">assicurazione di beni</skos:prefLabel>
-    <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#3151"/>
-    <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/3242"/>
-    <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#1380">
     <skos:prefLabel xml:lang="en">education grant</skos:prefLabel>
     <skos:prefLabel xml:lang="it">assegno scolastico</skos:prefLabel>
@@ -2746,6 +2568,7 @@
     <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/4488"/>
     <skos:altLabel xml:lang="en">electronic data processing</skos:altLabel>
     <skos:altLabel xml:lang="it">trattamento elettronico dei dati</skos:altLabel>
+    <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#6030"/>
     <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#4821"/>
@@ -2790,14 +2613,6 @@
     <skos:majorMatch rdf:resource="https://en.wikipedia.org/wiki/Category:Government_finances"/>
     <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/1018"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#100210">
-    <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#100149"/>
-    <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/100210"/>
-    <skos:prefLabel xml:lang="it">demografia e popolazione</skos:prefLabel>
-    <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:prefLabel xml:lang="en">demography and population</skos:prefLabel>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#892">
     <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#3956"/>
     <skos:altLabel xml:lang="it">antropologia socio-culturale</skos:altLabel>
@@ -2829,8 +2644,8 @@
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#100149">
-    <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#100210"/>
     <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#100214"/>
+    <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#100209"/>
     <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
     <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#100212"/>
     <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/100149"/>
@@ -2983,15 +2798,6 @@
     <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/3131"/>
     <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#100237"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#3373">
-    <skos:prefLabel xml:lang="en">credit insurance</skos:prefLabel>
-    <skos:prefLabel xml:lang="it">assicurazione crediti</skos:prefLabel>
-    <skos:altLabel xml:lang="it">assicurazione sul credito</skos:altLabel>
-    <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#3151"/>
-    <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/3373"/>
-    <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#923">
     <skos:exactMatch rdf:resource="https://en.wikipedia.org/wiki/Category:Technology_assessment"/>
     <skos:altLabel xml:lang="it">valutazione delle tecnologie</skos:altLabel>
@@ -3028,6 +2834,17 @@
     <skos:prefLabel xml:lang="it">epidemiologia</skos:prefLabel>
     <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#5881"/>
     <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/838"/>
+    <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#5684">
+    <skos:majorMatch rdf:resource="https://en.wikipedia.org/wiki/Category:Network_architecture"/>
+    <skos:altLabel xml:lang="en">open systems interconnection</skos:altLabel>
+    <skos:altLabel xml:lang="it">interconnessione di sistemi aperti</skos:altLabel>
+    <skos:prefLabel xml:lang="en">systems interconnection</skos:prefLabel>
+    <skos:prefLabel xml:lang="it">interconnessione di sistemi</skos:prefLabel>
+    <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#5922"/>
+    <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/5684"/>
     <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
