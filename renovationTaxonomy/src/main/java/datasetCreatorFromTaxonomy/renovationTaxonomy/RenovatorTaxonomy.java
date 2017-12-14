@@ -201,8 +201,6 @@ public class RenovatorTaxonomy
 			String []components= readed.split(",");
 			idToChange.add(components[0]);
 			while(statementList.hasNext()){
-				if(statement!=null && statement.getPredicate().getLocalName().contains("prefLabel"))
-					System.out.println(statement);
 				statement = statementList.next();
 				if(statement.getSubject().getNameSpace().equals(components[0]) && statement.getPredicate().getLocalName().equals("broader")){
 					added=true;					
