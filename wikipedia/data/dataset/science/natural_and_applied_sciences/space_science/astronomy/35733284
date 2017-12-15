@@ -1,0 +1,185 @@
+The chirp mass of a compact binary star system with component masses 
+  
+    
+      
+        
+          m
+          
+            1
+          
+        
+      
+    
+    {\displaystyle m_{1}}
+   and 
+  
+    
+      
+        
+          m
+          
+            2
+          
+        
+      
+    
+    {\displaystyle m_{2}}
+   is given by 
+  
+    
+      
+        
+          
+            M
+          
+        
+        =
+        
+          
+            
+              (
+              
+                m
+                
+                  1
+                
+              
+              
+                m
+                
+                  2
+                
+              
+              
+                )
+                
+                  3
+                  
+                    /
+                  
+                  5
+                
+              
+            
+            
+              (
+              
+                m
+                
+                  1
+                
+              
+              +
+              
+                m
+                
+                  2
+                
+              
+              
+                )
+                
+                  1
+                  
+                    /
+                  
+                  5
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\mathcal {M}}={\frac {(m_{1}m_{2})^{3/5}}{(m_{1}+m_{2})^{1/5}}}}
+  . In general relativity, the chirp mass determines the leading-order amplitude and frequency evolution of the gravitational-wave signal emitted by the binary during its inspiral. To lowest order in a post-Newtonian expansion, the evolution of the waveform’s phase depends only on the chirp mass:
+
+where 
+  
+    
+      
+        c
+      
+    
+    {\displaystyle c}
+  , 
+  
+    
+      
+        G
+      
+    
+    {\displaystyle G}
+  , 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+   and 
+  
+    
+      
+        
+          
+            
+              f
+              ˙
+            
+          
+        
+      
+    
+    {\displaystyle {\dot {f}}}
+   are the speed of light, Newton's gravitational constant, the observed gravitational wave frequency (twice the orbital frequency) and the first time derivative of 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  , respectively. Accordingly, in gravitational-wave astronomy, the chirp mass can be accurately measured by detectors from frequency and gravitational strain of gravitational wave.
+Rewrite equation (1) to obtain the frequency evolution of gravitational waves from a coalescing binary:
+
+Integrating equation (2) with respect to time gives:
+
+where C is the constant of integration. Furthermore, on identifying 
+  
+    
+      
+        x
+        ≡
+        t
+      
+    
+    {\displaystyle x\equiv t}
+   and 
+  
+    
+      
+        y
+        ≡
+        
+          
+            3
+            8
+          
+        
+        
+          f
+          
+            −
+            8
+            
+              /
+            
+            3
+          
+        
+      
+    
+    {\displaystyle y\equiv {\frac {3}{8}}f^{-8/3}}
+  , the chirp mass can be calculated from the slope of the line fitted through the data points (x, y).

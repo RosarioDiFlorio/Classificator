@@ -1,0 +1,7 @@
+In cognitive psychology and decision science, conservatism or conservatism bias is a bias in human information processing, which refers to the tendency to revise one's belief insufficiently when presented with new evidence. This bias describes human belief revision in which persons over-weigh the prior distribution (base rate) and under-weigh new sample evidence when compared to Bayesian belief-revision.
+According to the theory, "opinion change is very orderly, and usually proportional to the numbers of Bayes' theorem – but it is insufficient in amount". In other words, persons update their prior beliefs as new evidence becomes available, but they do so more slowly than they would if they used Bayes' theorem.
+This bias was discussed by Ward Edwards in 1968, who reported on experiments like the following one:
+
+There are two bookbags, one containing 700 red and 300 blue chips, the other containing 300 red and 700 blue. Take one of the bags. Now, you sample, randomly, with replacement after each chip. In 12 samples, you get 8 reds and 4 blues. what is the probability that this is the predominantly red bag?
+
+Most subjects chose an answer around .7. The correct answer according to Bayes' theorem is closer to .97. Edwards suggested that people updated beliefs conservatively, in accordance with Bayes' theorem more slowly. They updated from .5 incorrectly according to an observed bias in several experiments.

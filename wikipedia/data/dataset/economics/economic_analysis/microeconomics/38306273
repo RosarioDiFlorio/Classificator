@@ -1,0 +1,13 @@
+Mean field game theory is the study of strategic decision making in very large populations of small interacting agents. This class of problems was considered in the economics literature by Boyan Jovanovic and Robert W. Rosenthal, in the engineering literature by Peter E. Caines and his co-workers and independently and around the same time by mathematician Jean-Michel Lasry and Pierre-Louis Lions.
+Use of the term 'mean field' is inspired by mean field theory in physics which considers the behaviour of systems of large numbers of particles where individual particles have negligible impact upon the system.
+In continuous time a mean field game is typically composed by a Hamilton-Jacobi-Bellman equation that describes the optimal control problem of an individual and a Fokker-Planck-Kolmogorov-forward equation that describes the dynamics of the aggregate distribution of agents. Under fairly general assumptions it can be proved that a class of mean field games is the limit as 
+  
+    
+      
+        N
+        →
+        ∞
+      
+    
+    {\displaystyle N\rightarrow \infty }
+   of a N-player Nash equilibrium.

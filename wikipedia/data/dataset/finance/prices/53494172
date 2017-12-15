@@ -1,0 +1,188 @@
+The Price of Anarchy (PoA) is a concept in game theory and mechanism design that measures how the social welfare of a system degrades due to selfish behavior of its agents. It has been studied extensively in various contexts, particularly in auctions.
+In an auction, there are one or more items and one or more agents with different valuations for the items. The items have to be divided among the agents. It is desired that the social welfare - the sum of values of all agents - be as high as possible.
+One approach to maximizing the social welfare is designing a truthful mechanism. In such a mechanism, each agent is incentivized to report his true valuations to the items. Then, the auctioneer can calculate and implement an allocation that maximizes the sum of values. An example to such a mechanism is the VCG auction.
+In practice, however, it is not always feasible to use truthful mechanisms. The VCG mechanism, for example, might be too complicated for the participants to understand, might take too long for the auctioneer to compute, and might have other disadvantages. In practice, non-truthful mechanisms are often used, and it is interesting to calculate how much social welfare is lost by this non-truthfulness.
+It is often assumed that, in a non-truthful auction, the participants play an equilibrium strategy, such as a Nash equilibrium. The price-of-anarchy of the auction is defined as the ratio between the optimal social welfare and the social welfare in the worst equilibrium:
+
+  
+    
+      
+        P
+        o
+        A
+        =
+        
+          
+            
+              
+                max
+                
+                  s
+                  ∈
+                  A
+                  l
+                  l
+                  o
+                  c
+                  a
+                  t
+                  i
+                  o
+                  n
+                  s
+                
+              
+              W
+              e
+              l
+              f
+              (
+              s
+              )
+            
+            
+              
+                min
+                
+                  s
+                  ∈
+                  E
+                  q
+                  u
+                  i
+                  l
+                  i
+                  b
+                  r
+                  i
+                  u
+                  m
+                  A
+                  l
+                  l
+                  o
+                  c
+                  a
+                  t
+                  i
+                  o
+                  n
+                  s
+                
+              
+              W
+              e
+              l
+              f
+              (
+              s
+              )
+            
+          
+        
+      
+    
+    {\displaystyle PoA={\frac {\max _{s\in Allocations}Welf(s)}{\min _{s\in EquilibriumAllocations}Welf(s)}}}
+  
+A related notion is the Price of Stability (PoS) which measures the ratio between the optimal social welfare and the social welfare in the best equilibrium:
+
+  
+    
+      
+        P
+        o
+        S
+        =
+        
+          
+            
+              
+                max
+                
+                  s
+                  ∈
+                  A
+                  l
+                  l
+                  o
+                  c
+                  a
+                  t
+                  i
+                  o
+                  n
+                  s
+                
+              
+              W
+              e
+              l
+              f
+              (
+              s
+              )
+            
+            
+              
+                max
+                
+                  s
+                  ∈
+                  E
+                  q
+                  u
+                  i
+                  l
+                  i
+                  b
+                  r
+                  i
+                  u
+                  m
+                  A
+                  l
+                  l
+                  o
+                  c
+                  a
+                  t
+                  i
+                  o
+                  n
+                  s
+                
+              
+              W
+              e
+              l
+              f
+              (
+              s
+              )
+            
+          
+        
+      
+    
+    {\displaystyle PoS={\frac {\max _{s\in Allocations}Welf(s)}{\max _{s\in EquilibriumAllocations}Welf(s)}}}
+  
+Obviously 
+  
+    
+      
+        1
+        ≤
+        P
+        o
+        S
+        ≤
+        P
+        o
+        A
+        ≤
+        ∞
+      
+    
+    {\displaystyle 1\leq PoS\leq PoA\leq \infty }
+  .
+When there is complete information (each agent knows the valuations of all other agents), the common equilibrium type is Nash equilibrium - either pure or mixed. When there is incomplete information, the common equilibrium type is Bayes-Nash equilibrium. In the latter case, it is common to speak of the Bayesian price of anarchy, or BPoA.

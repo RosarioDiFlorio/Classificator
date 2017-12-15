@@ -1,0 +1,3 @@
+A state variable is one of the set of variables that are used to describe the mathematical "state" of a dynamical system. Intuitively, the state of a system describes enough about the system to determine its future behaviour in the absence of any external forces affecting the system. Models that consist of coupled first-order differential equations are said to be in state-variable form.
+
+

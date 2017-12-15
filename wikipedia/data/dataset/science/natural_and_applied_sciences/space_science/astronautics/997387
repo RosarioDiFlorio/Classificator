@@ -1,0 +1,235 @@
+In the gravitational two-body problem, the specific orbital energy 
+  
+    
+      
+        ϵ
+        
+        
+      
+    
+    {\displaystyle \epsilon \,\!}
+   (or vis-viva energy) of two orbiting bodies is the constant sum of their mutual potential energy (
+  
+    
+      
+        
+          ϵ
+          
+            p
+          
+        
+        
+        
+      
+    
+    {\displaystyle \epsilon _{p}\,\!}
+  ) and their total kinetic energy (
+  
+    
+      
+        
+          ϵ
+          
+            k
+          
+        
+        
+        
+      
+    
+    {\displaystyle \epsilon _{k}\,\!}
+  ), divided by the reduced mass. According to the orbital energy conservation equation (also referred to as vis-viva equation), it does not vary with time:
+
+  
+    
+      
+        ϵ
+        =
+        
+          ϵ
+          
+            k
+          
+        
+        +
+        
+          ϵ
+          
+            p
+          
+        
+        
+      
+    
+    {\displaystyle \epsilon =\epsilon _{k}+\epsilon _{p}\!}
+  
+
+  
+    
+      
+        ϵ
+        =
+        
+          
+            
+              v
+              
+                2
+              
+            
+            
+              2
+            
+          
+        
+        −
+        
+          
+            μ
+            
+              r
+            
+          
+        
+        =
+        −
+        
+          
+            1
+            
+              2
+            
+          
+        
+        
+          
+            
+              μ
+              
+                2
+              
+            
+            
+              
+                h
+                
+                  2
+                
+              
+            
+          
+        
+        
+          (
+          1
+          −
+          
+            e
+            
+              2
+            
+          
+          )
+        
+        =
+        −
+        
+          
+            μ
+            
+              2
+              a
+            
+          
+        
+      
+    
+    {\displaystyle \epsilon ={v^{2} \over {2}}-{\mu  \over {r}}=-{1 \over {2}}{\mu ^{2} \over {h^{2}}}\left(1-e^{2}\right)=-{\frac {\mu }{2a}}}
+  
+where
+
+  
+    
+      
+        v
+        
+        
+      
+    
+    {\displaystyle v\,\!}
+   is the relative orbital speed;
+
+  
+    
+      
+        r
+        
+        
+      
+    
+    {\displaystyle r\,\!}
+   is the orbital distance between the bodies;
+
+  
+    
+      
+        μ
+        =
+        
+          G
+        
+        (
+        
+          m
+          
+            1
+          
+        
+        +
+        
+          m
+          
+            2
+          
+        
+        )
+        
+        
+      
+    
+    {\displaystyle \mu ={G}(m_{1}+m_{2})\,\!}
+   is the sum of the standard gravitational parameters of the bodies;
+
+  
+    
+      
+        h
+        
+        
+      
+    
+    {\displaystyle h\,\!}
+   is the specific relative angular momentum in the sense of relative angular momentum divided by the reduced mass;
+
+  
+    
+      
+        e
+        
+        
+      
+    
+    {\displaystyle e\,\!}
+   is the orbital eccentricity;
+
+  
+    
+      
+        a
+        
+        
+      
+    
+    {\displaystyle a\,\!}
+   is the semi-major axis.
+It is expressed in J/kg = m2·s−2 or MJ/kg = km2·s−2. For an elliptic orbit the specific orbital energy is the negative of the additional energy required to accelerate a mass of one kilogram to escape velocity (parabolic orbit). For a hyperbolic orbit, it is equal to the excess energy compared to that of a parabolic orbit. In this case the specific orbital energy is also referred to as characteristic energy.

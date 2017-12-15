@@ -1,0 +1,74 @@
+A thermal reservoir, a short-form of thermal energy reservoir, or thermal bath is a thermodynamic system with a heat capacity that is large enough that when it is in thermal contact with another system of interest or its environment, its temperature remains effectively constant. It is an effectively infinite pool of thermal energy at a given, constant temperature. The temperature of the reservoir does not change when heat is added or extracted because of the infinite heat capacity. As it can act as a source and sink of heat, it is often also referred to as a heat reservoir or heat bath.
+Lakes, oceans and rivers often serve as thermal reservoirs in geophysical processes, such as the weather. In atmospheric science, large air masses in the atmosphere often function as thermal reservoirs.
+The microcanonical partition sum 
+  
+    
+      
+        Z
+        (
+        E
+        )
+      
+    
+    {\displaystyle Z(E)}
+   of a heat bath of temperature 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+   has the property
+
+  
+    
+      
+        Z
+        (
+        E
+        +
+        Δ
+        E
+        )
+        =
+        Z
+        (
+        E
+        )
+        
+          e
+          
+            Δ
+            E
+            
+              /
+            
+            
+              k
+              
+                B
+              
+            
+            T
+          
+        
+        ,
+      
+    
+    {\displaystyle Z(E+\Delta E)=Z(E)e^{\Delta E/k_{B}T},}
+  
+where 
+  
+    
+      
+        
+          k
+          
+            B
+          
+        
+      
+    
+    {\displaystyle k_{B}}
+   is Boltzmann's constant. It thus changes by the same factor when a given amount of energy is added. The exponential factor in this expression can be identified with the reciprocal of the Boltzmann factor.

@@ -1,0 +1,11 @@
+Instruments (formerly Xray) is an application performance analyzer and visualizer, integrated in Xcode 3.0 and later versions of Xcode. It is built on top of the DTrace tracing framework from OpenSolaris, which was ported to Mac OS X v10.5 and which is available in all following versions of macOS.
+Instruments shows a time line displaying any event occurring in the application, such as CPU activity variation, memory allocation, and network and file activity, together with graphs and statistics. Group of events are monitored via customizable "instruments", which have the ability to record user generated events and replay (emulate) them exactly as many times as needed, so a developer can see the effect of code changes without actually doing the repetitive work. The Instrument Builder feature allows the creation of custom analysis instruments.
+Built-in instruments can track
+User events, such as keyboard keys pressed and mouse moves and clicks with exact time.
+CPU activity of processes and threads.
+Memory allocation and release, garbage collection and memory leaks.
+File reads, writes, locks.
+Network activity and traffic.
+Graphics and inner workings of OpenGL.
+Energy diagnostics and "dead" objects.
+UI automation and Core animation.

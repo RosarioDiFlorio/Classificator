@@ -1,0 +1,35 @@
+There are many methods for sub-Doppler laser cooling of atoms to low temperatures. Among these, gray molasses is particularly efficient for atoms with poorly-resolved hyperfine structure, such as the isotopes of potassium and lithium. It combines the effects of Sisyphus cooling with a velocity-selective dark state, which prevents scattering of light by already-cold atoms.
+Gray molasses relies on the presence of bright states, in which the atom interacts with the laser light, and dark states, which can be created either by using circularly polarized light on an 
+  
+    
+      
+        F
+        →
+        
+          F
+          ′
+        
+        =
+        F
+      
+    
+    {\displaystyle F\rightarrow F'=F}
+   or 
+  
+    
+      
+        F
+        →
+        
+          F
+          ′
+        
+        =
+        F
+        −
+        1
+      
+    
+    {\displaystyle F\rightarrow F'=F-1}
+   transition or EIT-like coherent dark states. A spatially varying light shift of the bright states allows moving atoms to undergo a Sisyphus-like cooling effect. From here, atoms can be optically pumped to dark states. The coupling between the dark and bright states is engineered so that the coldest atoms are trapped in dark states but hot atoms return to the Sisyphus cooling cycle.
+Historically, gray molasses was introduced with atomic species such as rubidium and cesium on the D2 line, but has more recently been used to enable efficient cooling of potassium and lithium using the D1 line. Avoiding the need of a separate laser system, D2-line gray molasses cooling has also been demonstrated in 40K.

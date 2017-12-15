@@ -1,0 +1,5 @@
+A rank abundance curve or Whittaker plot is a chart used by ecologists to display relative species abundance, a component of biodiversity. It can also be used to visualize species richness and species evenness. It overcomes the shortcomings of biodiversity indices that cannot display the relative role different variables played in their calculation.
+
+The curve is a 2D chart with relative abundance on the Y-axis and the abundance rank on the X-axis.
+X-axis: The abundance rank. The most abundant species is given rank 1, the second most abundant is 2 and so on.
+Y-axis: The relative abundance. Usually measured on a log scale, this is a measure of a species abundance (e.g., the number of individuals) relative to the abundance of other species.

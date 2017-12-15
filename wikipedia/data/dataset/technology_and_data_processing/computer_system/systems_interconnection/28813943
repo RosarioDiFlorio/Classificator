@@ -1,0 +1,3 @@
+The Interface for Metadata Access Points (IF-MAP) is an open specification for a client/server protocol developed by the Trusted Computing Group (TCG) as one of the core protocols of the Trusted Network Connect (TNC) open architecture.
+IF-MAP provides a common interface between the Metadata Access Point (MAP), a database server acting as a clearinghouse for information about security events and objects, and other elements of the TNC architecture.[1]
+The IF-MAP protocol defines a publish/subscribe/search mechanism with a set of identifiers and data types.

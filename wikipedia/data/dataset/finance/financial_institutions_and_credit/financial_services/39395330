@@ -1,0 +1,6 @@
+Electronic Bank Account Management (abbreviated as eBAM) represents the automation, through software, of the following activities between banks and their corporate customers:
+Opening bank accounts
+Maintaining bank accounts such as changing account signatories or spending limits
+Closing bank accounts
+Generating reports as required by law or regulation
+The technology that is commonly used to implement eBAM automation is defined by SWIFT and the ISO 20022 Standard for Financial Services Messaging.

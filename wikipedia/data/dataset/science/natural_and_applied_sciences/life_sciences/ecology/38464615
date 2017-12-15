@@ -1,0 +1,6 @@
+The unseen species problem is a statistical statement of a problem that arises in ecology and other fields. Given a sample from a population, where each individual in the sample is classified by kind or species, the problem is to answer these related questions:
+How many species are there in the population, including "unseen species" that do not appear in the sample?
+For each species, seen or unseen, what is the prevalence in the population; that is, what fraction of the population belongs to each species?
+If additional samples are collected from the same species, how many more species do we expect to discover? The answer to this question might be expressed in the form of a species discovery curve.
+How many additional samples are needed to achieve a desired level of coverage (fraction of species observed)?
+Solutions to these problems are usually based on the assumption that each member of the population is equally likely to appear in the sample.

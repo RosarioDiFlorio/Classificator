@@ -1,0 +1,4 @@
+A capacitance multiplier is designed to make a capacitor function like a capacitor that is much larger. This can be achieved in at least two ways.
+An active circuit, using a device such as a transistor or operational amplifier
+A passive circuit, using autotransformers. These are typically used for calibration standards. The General Radio / IET labs 1417 is one such example.
+Capacitor multipliers make low-frequency filter and long-duration timing circuits possible that would be impractical with actual capacitors. Another application is in DC power supplies where very low ripple voltage (under load) is of paramount importance, such as in class-A amplifiers.

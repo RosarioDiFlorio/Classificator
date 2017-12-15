@@ -1,0 +1,1100 @@
+Denote a binary response index model as: 
+  
+    
+      
+        P
+        [
+        
+          Y
+          
+            i
+          
+        
+        =
+        1
+        ∣
+        
+          X
+          
+            i
+          
+        
+        ]
+        =
+        G
+        (
+        
+          X
+          
+            i
+          
+        
+        β
+        )
+      
+    
+    {\displaystyle P[Y_{i}=1\mid X_{i}]=G(X_{i}\beta )}
+  , 
+  
+    
+      
+        [
+        
+          Y
+          
+            i
+          
+        
+        =
+        0
+        ∣
+        
+          X
+          
+            i
+          
+        
+        ]
+        =
+        1
+        −
+        G
+        (
+        
+          X
+          
+            i
+          
+          ′
+        
+        β
+        )
+      
+    
+    {\displaystyle [Y_{i}=0\mid X_{i}]=1-G(X_{i}'\beta )}
+   where 
+  
+    
+      
+        
+          X
+          
+            i
+          
+        
+        ∈
+        
+          R
+          
+            N
+          
+        
+      
+    
+    {\displaystyle X_{i}\in R^{N}}
+  . This type of model is applied in many economic contexts, especially in modelling the choice-making behavior. For instance, 
+  
+    
+      
+        
+          Y
+          
+            i
+          
+        
+      
+    
+    {\displaystyle Y_{i}}
+   here denotes whether consumer 
+  
+    
+      
+        i
+      
+    
+    {\displaystyle i}
+   chooses to purchase a certain kind of chocolate, and 
+  
+    
+      
+        
+          X
+          
+            i
+          
+        
+      
+    
+    {\displaystyle X_{i}}
+   includes many variables characterizing the features of consumer 
+  
+    
+      
+        i
+      
+    
+    {\displaystyle i}
+   . Through function 
+  
+    
+      
+        G
+        (
+        ⋅
+        )
+      
+    
+    {\displaystyle G(\cdot )}
+   , the probability of choosing to purchase is determined.
+Now, suppose its maximum likelihood estimator (MLE) 
+  
+    
+      
+        
+          
+            
+              
+                β
+                ^
+              
+            
+          
+          
+            u
+          
+        
+      
+    
+    {\displaystyle {\hat {\beta }}_{u}}
+   has an asymptotic distribution as 
+  
+    
+      
+        
+          
+            n
+          
+        
+        (
+        
+          
+            
+              
+                β
+                ^
+              
+            
+          
+          
+            u
+          
+        
+        −
+        β
+        )
+        
+          
+            →
+            
+              d
+            
+          
+        
+        N
+        (
+        0
+        ,
+        V
+        )
+      
+    
+    {\displaystyle {\sqrt {n}}({\hat {\beta }}_{u}-\beta ){\xrightarrow {d}}N(0,V)}
+   and there is a feasible consistent estimator for the asymptotic variance 
+  
+    
+      
+        V
+      
+    
+    {\displaystyle V}
+   denoted as 
+  
+    
+      
+        
+          
+            
+              V
+              ^
+            
+          
+        
+      
+    
+    {\displaystyle {\hat {V}}}
+   . Usually, there are two different types of hypothesis needed to be tested in binary response index model.
+The first type is testing the multiple exclusion restrictions, namely, testing 
+  
+    
+      
+        
+          β
+          
+            2
+          
+        
+        =
+        0
+        w
+        i
+        t
+        h
+        =
+        [
+        
+          β
+          
+            1
+          
+        
+        ;
+        
+          β
+          
+            2
+          
+        
+        ]
+        w
+        h
+        e
+        r
+        e
+        
+          β
+          
+            2
+          
+        
+        ∈
+        
+          R
+          
+            Q
+          
+        
+      
+    
+    {\displaystyle \beta _{2}=0with=[\beta _{1};\beta _{2}]where\beta _{2}\in R^{Q}}
+  . If the unrestricted MLE can be easily computed, it is convenient to use the Wald test  whose test statistic is constructed as:
+
+  
+    
+      
+        (
+        D
+        
+          
+            
+              
+                β
+                ^
+              
+            
+          
+          
+            u
+          
+        
+        
+          )
+          
+            T
+          
+        
+        (
+        D
+        
+          
+            
+              V
+              ^
+            
+          
+        
+        
+          D
+          
+            T
+          
+        
+        
+          /
+        
+        n
+        
+          )
+          
+            −
+            1
+          
+        
+        (
+        D
+        
+          
+            
+              
+                β
+                ^
+              
+            
+          
+          
+            u
+          
+        
+        )
+        
+          
+            →
+            
+              d
+            
+          
+        
+        
+          X
+          
+            Q
+          
+          
+            2
+          
+        
+      
+    
+    {\displaystyle (D{\hat {\beta }}_{u})^{T}(D{\hat {V}}D^{T}/n)^{-1}(D{\hat {\beta }}_{u}){\xrightarrow {d}}X_{Q}^{2}}
+  
+Where D is a diagonal matrix with the last Q diagonal entries as 0 and others as 1. If the restricted MLE can be easily computed, it is more convenient to use the Score test (LM test). Denote the maximum likelihood estimator under the restricted model as 
+  
+    
+      
+        (
+        
+          
+            
+              
+                β
+                ^
+              
+            
+          
+          
+            r
+          
+        
+        )
+      
+    
+    {\displaystyle ({\hat {\beta }}_{r})}
+   and define 
+  
+    
+      
+        
+          
+            
+              
+                u
+                ^
+              
+            
+          
+          
+            i
+          
+        
+        ≡
+        
+          Y
+          
+            i
+          
+        
+        −
+        G
+        (
+        
+          X
+          
+            i
+          
+          ′
+        
+        
+          
+            
+              
+                β
+                ^
+              
+            
+          
+          
+            r
+          
+        
+        )
+        ,
+        
+          
+            
+              
+                G
+                ^
+              
+            
+          
+          
+            i
+          
+        
+        ≡
+        G
+        (
+        
+          X
+          
+            i
+          
+          ′
+        
+        
+          
+            
+              
+                β
+                ^
+              
+            
+          
+          
+            r
+          
+        
+        )
+      
+    
+    {\displaystyle {\hat {u}}_{i}\equiv Y_{i}-G(X_{i}'{\hat {\beta }}_{r}),{\hat {G}}_{i}\equiv G(X_{i}'{\hat {\beta }}_{r})}
+   and 
+  
+    
+      
+        
+          
+            
+              
+                g
+                ^
+              
+            
+          
+          
+            i
+          
+        
+        ≡
+        g
+        (
+        
+          X
+          
+            i
+          
+          ′
+        
+        
+          
+            
+              
+                β
+                ^
+              
+            
+          
+          
+            r
+          
+        
+      
+    
+    {\displaystyle {\hat {g}}_{i}\equiv g(X_{i}'{\hat {\beta }}_{r}}
+  , where 
+  
+    
+      
+        g
+        (
+        ⋅
+        )
+        =
+        
+          G
+          ′
+        
+        (
+        ⋅
+        )
+      
+    
+    {\displaystyle g(\cdot )=G'(\cdot )}
+  . Then run the OLS regression 
+  
+    
+      
+        
+          
+            
+              
+                
+                  
+                    u
+                    ^
+                  
+                
+              
+              
+                i
+              
+            
+            
+              (
+              
+                
+                  
+                    
+                      G
+                      ^
+                    
+                  
+                
+                
+                  i
+                
+              
+              (
+              1
+              −
+              
+                
+                  
+                    
+                      G
+                      ^
+                    
+                  
+                
+                
+                  i
+                
+              
+              )
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {{\hat {u}}_{i}}{\sqrt {({\hat {G}}_{i}(1-{\hat {G}}_{i})}}}}
+   on 
+  
+    
+      
+        
+          
+            
+              
+                
+                  
+                    g
+                    ^
+                  
+                
+              
+              
+                i
+              
+            
+            
+              (
+              
+                
+                  
+                    
+                      G
+                      ^
+                    
+                  
+                
+                
+                  i
+                
+              
+              (
+              1
+              −
+              
+                
+                  
+                    
+                      G
+                      ^
+                    
+                  
+                
+                
+                  i
+                
+              
+              )
+            
+          
+        
+        
+          X
+          
+            1
+            i
+          
+          ′
+        
+        ,
+        
+          
+            
+              
+                
+                  
+                    g
+                    ^
+                  
+                
+              
+              
+                i
+              
+            
+            
+              (
+              
+                
+                  
+                    
+                      G
+                      ^
+                    
+                  
+                
+                
+                  i
+                
+              
+              (
+              1
+              −
+              
+                
+                  
+                    
+                      G
+                      ^
+                    
+                  
+                
+                
+                  i
+                
+              
+              )
+            
+          
+        
+        
+          X
+          
+            2
+            i
+          
+          ′
+        
+      
+    
+    {\displaystyle {\frac {{\hat {g}}_{i}}{\sqrt {({\hat {G}}_{i}(1-{\hat {G}}_{i})}}}X_{1i}',{\frac {{\hat {g}}_{i}}{\sqrt {({\hat {G}}_{i}(1-{\hat {G}}_{i})}}}X_{2i}'}
+  , where 
+  
+    
+      
+        
+          X
+          
+            i
+          
+        
+        =
+        [
+        
+          X
+          
+            1
+            i
+          
+        
+        ;
+        
+          X
+          
+            2
+            i
+          
+        
+        ]
+      
+    
+    {\displaystyle X_{i}=[X_{1i};X_{2i}]}
+   and 
+  
+    
+      
+        
+          X
+          
+            2
+            i
+          
+        
+        ε
+        
+          R
+          
+            Q
+          
+        
+      
+    
+    {\displaystyle X_{2i}\varepsilon R^{Q}}
+  . The LM statistic is equal to the explained sum of squares from this regression  and it is asymptotically distributed as 
+  
+    
+      
+        
+          X
+          
+            Q
+          
+          
+            2
+          
+        
+      
+    
+    {\displaystyle X_{Q}^{2}}
+  . If the MLE can be computed easily under both of the restricted and unrestricted models, Likelihood-ratio test is also a choice: let 
+  
+    
+      
+        
+          L
+          
+            u
+          
+        
+      
+    
+    {\displaystyle L_{u}}
+   denote the value of the log-likelihood function under the unrestricted model and let 
+  
+    
+      
+        
+          L
+          
+            r
+          
+        
+      
+    
+    {\displaystyle L_{r}}
+   denote the value under the restricted model, then 
+  
+    
+      
+        2
+        (
+        
+          L
+          
+            u
+          
+        
+        −
+        
+          L
+          
+            r
+          
+        
+        )
+      
+    
+    {\displaystyle 2(L_{u}-L_{r})}
+   has an asymptotic 
+  
+    
+      
+        
+          X
+          
+            Q
+          
+          
+            2
+          
+        
+      
+    
+    {\displaystyle X_{Q}^{2}}
+   distribution.
+The second type is testing a nonlinear hypothesis about 
+  
+    
+      
+        β
+      
+    
+    {\displaystyle \beta }
+  , which can be represented as 
+  
+    
+      
+        
+          H
+          
+            0
+          
+        
+        :
+        c
+        (
+        β
+        )
+        =
+        0
+      
+    
+    {\displaystyle H_{0}:c(\beta )=0}
+   where 
+  
+    
+      
+        c
+        (
+        β
+        )
+      
+    
+    {\displaystyle c(\beta )}
+   is a Q×1 vector of possibly nonlinear functions satisfying the differentiability and rank requirements. In most of the cases, it is not easy or even feasible to compute the MLE under the restricted model when 
+  
+    
+      
+        c
+        (
+        β
+        )
+      
+    
+    {\displaystyle c(\beta )}
+   include some complicated nonlinear functions. Hence, Wald test is usually used to deal with this problem. The test statistic is constructed as:
+
+  
+    
+      
+        c
+        (
+        
+          
+            
+              
+                β
+                ^
+              
+            
+          
+          
+            u
+          
+          ′
+        
+        )
+        [
+        
+          ∇
+          
+            β
+          
+        
+        c
+        (
+        
+          
+            
+              
+                β
+                ^
+              
+            
+          
+          
+            u
+          
+        
+        )
+        
+          
+            
+              V
+              ^
+            
+          
+        
+        
+          ∇
+          
+            β
+          
+        
+        c
+        (
+        
+          
+            
+              
+                β
+                ^
+              
+            
+          
+          
+            u
+          
+        
+        
+          )
+          ′
+        
+        
+          ]
+          
+            −
+            1
+          
+        
+        c
+        (
+        
+          
+            
+              
+                β
+                ^
+              
+            
+          
+          
+            u
+          
+        
+        )
+        
+          
+            →
+            
+              d
+            
+          
+        
+        
+          X
+          
+            Q
+          
+          
+            2
+          
+        
+      
+    
+    {\displaystyle c({\hat {\beta }}_{u}')[\nabla _{\beta }c({\hat {\beta }}_{u}){\hat {V}}\nabla _{\beta }c({\hat {\beta }}_{u})']^{-1}c({\hat {\beta }}_{u}){\xrightarrow {d}}X_{Q}^{2}}
+  
+where 
+  
+    
+      
+        
+          ∇
+          
+            β
+          
+        
+        c
+        (
+        
+          
+            
+              
+                β
+                ^
+              
+            
+          
+          
+            u
+          
+        
+        )
+      
+    
+    {\displaystyle \nabla _{\beta }c({\hat {\beta }}_{u})}
+   is the Q×N Jacobian of 
+  
+    
+      
+        c
+        (
+        β
+        )
+      
+    
+    {\displaystyle c(\beta )}
+   evaluated at 
+  
+    
+      
+        
+          
+            
+              
+                β
+                ^
+              
+            
+          
+          
+            u
+          
+        
+      
+    
+    {\displaystyle {\hat {\beta }}_{u}}
+  .
+For the tests with very general and complicated alternatives, the formula of the test statistics might not have the exactly same representation as above. But we can still derive the formulas as well as its asymptotic distribution by Delta Method  and implement Wald test, Score test or Likelihood-ratio test. Which test should be used is determined by the relative computation difficulty of the MLE under restricted and unrestricted models.

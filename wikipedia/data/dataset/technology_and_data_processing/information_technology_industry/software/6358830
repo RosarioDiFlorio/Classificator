@@ -1,0 +1,5 @@
+Vault is a commercial, proprietary version control system by SourceGear LLC which markets its product as a replacement for Microsoft's Visual Source Safe.
+Vault uses Microsoft SQL Server as a back end database and provides atomic commits to the version control system.
+The tool is built on top of Microsoft .NET.
+Fortress, originally an application lifecycle management (ALM) product marketed separately for use with Vault, was later merged into Vault releases.
+Third party products have been designed to be integrated with Vault such as OnTime, FogBugz, TeamCity, and SmartBear CodeCollaborator.

@@ -1,0 +1,15 @@
+In thermodynamics and solid state physics, the Debye model is a method developed by Peter Debye in 1912 for estimating the phonon contribution to the specific heat (heat capacity) in a solid. It treats the vibrations of the atomic lattice (heat) as phonons in a box, in contrast to the Einstein model, which treats the solid as many individual, non-interacting quantum harmonic oscillators. The Debye model correctly predicts the low temperature dependence of the heat capacity, which is proportional to 
+  
+    
+      
+        
+          T
+          
+            3
+          
+        
+      
+    
+    {\displaystyle T^{3}}
+   – the Debye T3 law. Just like the Einstein model, it also recovers the Dulong–Petit law at high temperatures. But due to simplifying assumptions, its accuracy suffers at intermediate temperatures.
+See M. Shubin and T. Sunada  for a rigorous treatment of the Debye model.

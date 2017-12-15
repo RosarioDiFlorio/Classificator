@@ -1,0 +1,10 @@
+HSPF (Heating Seasonal Performance Factor) is a term used in the heating and cooling industry. HSPF is specifically used to measure the efficiency of air source heat pumps.
+The efficiency of air conditioners is often rated by the HSPF as defined by the Air Conditioning, Heating, and Refrigeration Institute in its standard 210/240 Performance Rating of Unitary Air-Conditioning and Air-Source Heat Pump Equipment.
+The higher the HSPF rating of a unit, the more energy efficient it is. HSPF is a ratio of BTU heat output over the heating season to watt-hours of electricity used. It has units of BTU/watt-hr.
+Depending on the system, an HSPF ≥ 8 can be considered high efficiency and worthy of a US Energy Tax Credit.
+The HSPF is related to the non-dimensional Coefficient of Performance (COP) for a heat pump, which measures the ratio of heat energy delivered to electrical energy supplied, independently of the units used to measure energy. The HSPF can be converted to a seasonally-averaged COP by converting both the BTU heat output and the electrical input to a common energy unit (e.g. joules). Since 1 BTU = 1055.056 J, and 1 watt-hour = 3600 J, the seasonally-averaged COP is given by:
+Avg COP = Heat transferred / electrical energy supplied = (HSPF * 1055.056 J/BTU) / (3600 J/watt-hour) = 0.29307111 HSPF.
+Thus, a system which delivers an HSPF of 7.7 will transfer 2.25 times as much heat as electricity consumed over a season. In Europe the term Seasonal Performance Factor ("SPF") is used to mean the same as the average COP over the heating season. Thus a system which transfers 2.25 times as much heat as the electricity consumed is said to have an SPF of 2.25. A well designed ground source heat pump installation should achieve an SPF of 3.5, or over 5 if linked to a solar-assisted thermal bank.
+Example: For a heat pump delivering 120,000,000 BTU during the season, when consuming 15,000 kWh, the HSPF can be calculated as :
+HSPF = 120000000 (BTU) / (1000) / 15000 (kWh)) =
+HSPF = 8

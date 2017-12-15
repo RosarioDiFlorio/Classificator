@@ -1,0 +1,9 @@
+DataBlitz is a general purpose main memory database management system, developed by Lucent Bell Labs Research from 1993 to 1995. It replaced various home-grown database products used throughout Lucent beginning in 1997.
+It was originally named "Dali", and provided recovery and concurrency control features. Later, Dali was renamed as "DataBlitz".
+DataBlitz provides a platform for building high-performance shared memory applications that can survive failures or organize large amounts of data with features suited to many applications.
+Applications for DataBlitz include:
+Switching and call routing in telecommunications
+Real-time billing
+High-performance Web servers
+Financial trading applications
+Data caching

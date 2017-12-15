@@ -1,0 +1,97 @@
+In mathematics, the no-wandering-domain theorem is a result on dynamical systems, proven by Dennis Sullivan in 1985.
+The theorem states that a rational map f : Ĉ → Ĉ with deg(f) ≥ 2 does not have a wandering domain, where Ĉ denotes the Riemann sphere. More precisely, for every component U in the Fatou set of f, the sequence
+
+  
+    
+      
+        U
+        ,
+        f
+        (
+        U
+        )
+        ,
+        f
+        (
+        f
+        (
+        U
+        )
+        )
+        ,
+        …
+        ,
+        
+          f
+          
+            n
+          
+        
+        (
+        U
+        )
+        ,
+        …
+      
+    
+    {\displaystyle U,f(U),f(f(U)),\dots ,f^{n}(U),\dots }
+  
+will eventually become periodic. Here, f n denotes the n-fold iteration of f, that is,
+
+  
+    
+      
+        
+          f
+          
+            n
+          
+        
+        =
+        
+          
+            
+              
+                f
+                ∘
+                f
+                ∘
+                ⋯
+                ∘
+                f
+              
+              ⏟
+            
+          
+          
+            n
+          
+        
+        .
+      
+    
+    {\displaystyle f^{n}=\underbrace {f\circ f\circ \cdots \circ f} _{n}.}
+  
+
+The theorem does not hold for arbitrary maps; for example, the transcendental map 
+  
+    
+      
+        f
+        (
+        z
+        )
+        =
+        z
+        +
+        2
+        π
+        sin
+        ⁡
+        (
+        z
+        )
+      
+    
+    {\displaystyle f(z)=z+2\pi \sin(z)}
+   has wandering domains. However, the result can be generalized to many situations where the functions naturally belong to a finite-dimensional parameter space, most notably to transcendental entire and meromorphic functions with a finite number of singular values.

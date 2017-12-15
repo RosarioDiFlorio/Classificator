@@ -1,0 +1,8 @@
+The Palestine grid was the geographic coordinate system used in Mandatory Palestine.
+The system was chosen by the Survey Department of the Government of Palestine in 1922. The projection used was the Cassini-Soldner projection. The central meridian (the line of longitude along which there is no local distortion) was chosen as that passing through a marker on the hill of Mar Elias Monastery south of Jerusalem. The false origin (zero point) of the grid was placed 100 km to the south and west of the Ali el-Muntar hill that overlooks Gaza city. The unit length for the grid was the kilometre; the British units were not even considered.
+At the time the grid was established, there was no intention of mapping the lower reaches of the Negev Desert, but this did not remain true. The fact that those southern regions would have negative north-south coordinate then became a source of confusion, which was solved by adding 1000 to the northern coordinate in that case. For some military purposes, 1000 was added to the north-south coordinates of all locations, so that they then ranged uniformly from about 900 to about 1300.
+
+During World War II, a Military Palestine Grid was used that was similar to the Palestine Grid but used the transverse Mercator projection. The difference between the two projections was only a few meters.
+After the establishment of the State of Israel, the Palestine grid continued to be used under the name of the Israel Grid or the ICS grid, now called the "Old Israeli Grid", with 1000km added to the northing component to make the north-south range continuous. It was replaced by the Israeli Transverse Mercator grid in 1994. The Palestine grid is still commonly used to specify locations in the historical and archaeological literature.
+
+

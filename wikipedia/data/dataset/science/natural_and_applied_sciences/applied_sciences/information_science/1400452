@@ -1,0 +1,19 @@
+Gesture recognition is a topic in computer science and language technology with the goal of interpreting human gestures via mathematical algorithms. Gestures can originate from any bodily motion or state but commonly originate from the face or hand. Current focuses in the field include emotion recognition from face and hand gesture recognition. Users can use simple gestures to control or interact with devices without physically touching them. Many approaches have been made using cameras and computer vision algorithms to interpret sign language. However, the identification and recognition of posture, gait, proxemics, and human behaviors is also the subject of gesture recognition techniques. Gesture recognition can be seen as a way for computers to begin to understand human body language, thus building a richer bridge between machines and humans than primitive text user interfaces or even GUIs (graphical user interfaces), which still limit the majority of input to keyboard and mouse.
+Gesture recognition enables humans to communicate with the machine (HMI) and interact naturally without any mechanical devices. Using the concept of gesture recognition, it is possible to point a finger at the computer screen so that the cursor will move accordingly. This could make conventional input devices such as mouse, keyboards and even touch-screens redundant.
+Gesture Recognition Features:
+More accurate
+High stability
+Time saving to unlock a device
+The major application areas of gesture recognition in the current scenario are:
+Automotive sector
+Consumer electronics sector
+Transit sector
+Gaming sector
+To unlock smartphones
+Defence
+Home automation
+Sign language interpretation
+Gesture recognition technology has been considered to be the highly successful technology as it saves time to unlock any device.
+Gesture recognition can be conducted with techniques from computer vision and image processing.
+The literature includes ongoing work in the computer vision field on capturing gestures or more general human pose and movements by cameras connected to a computer.
+Gesture recognition and pen computing: Pen computing reduces the hardware impact of a system and also increases the range of physical world objects usable for control beyond traditional digital objects like keyboards and mice. Such implementations could enable a new range of hardware that does not require monitors. This idea may lead to the creation of holographic display. The term gesture recognition has been used to refer more narrowly to non-text-input handwriting symbols, such as inking on a graphics tablet, multi-touch gestures, and mouse gesture recognition. This is computer interaction through the drawing of symbols with a pointing device cursor. (see Pen computing)

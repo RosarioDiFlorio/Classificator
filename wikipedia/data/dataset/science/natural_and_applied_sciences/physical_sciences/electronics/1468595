@@ -1,0 +1,3 @@
+Multiple-valued current mode logic (MVCML) or current mode multiple-valued logic (CM-MVL) is a method of representing electronic logic levels in analog CMOS circuits. In MVCML, logic levels are represented by multiples of a base current, Ibase, set to a certain value, x. Thus, level 0 is associated with the value of null, level 1 is associated with Ibase = x, level 2 is represented by Ibase = 2x, and so on.
+
+

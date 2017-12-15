@@ -1,0 +1,4 @@
+In geometry, chamfering or edge-truncation is a topological operator that modifies one polyhedron into another. It is similar to expansion, moving faces apart and outward, but also maintain the original vertices. For polyhedra, this operation adds a new hexagonal face in place of each original edge.
+In Conway polyhedron notation it is represented by the letter c. A polyhedron with e edges will have a chamfered form containing 2e new vertices, 3e new edges, and e new hexagonal faces.
+
+

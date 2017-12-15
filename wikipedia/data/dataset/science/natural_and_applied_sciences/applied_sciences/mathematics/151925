@@ -1,0 +1,73 @@
+Del, or nabla, is an operator used in mathematics, in particular in vector calculus, as a vector differential operator, usually represented by the nabla symbol ∇. When applied to a function defined on a one-dimensional domain, it denotes its standard derivative as defined in calculus. When applied to a field (a function defined on a multi-dimensional domain), del may denote the gradient (locally steepest slope) of a scalar field (or sometimes of a vector field, as in the Navier–Stokes equations), the divergence of a vector field, or the curl (rotation) of a vector field, depending on the way it is applied.
+Strictly speaking, del is not a specific operator, but rather a convenient mathematical notation for those three operators, that makes many equations easier to write and remember. The del symbol can be interpreted as a vector of partial derivative operators, and its three possible meanings—gradient, divergence, and curl—can be formally viewed as the product with a scalar, a dot product, and a cross product, respectively, of the del "operator" with the field. These formal products do not necessarily commute with other operators or products. These three uses, detailed below, are summarized as:
+Gradient: 
+  
+    
+      
+        grad
+        ⁡
+        f
+        =
+        ∇
+        f
+      
+    
+    {\displaystyle \operatorname {grad} f=\nabla f}
+  
+Divergence: 
+  
+    
+      
+        div
+        ⁡
+        
+          
+            
+              v
+              →
+            
+          
+        
+        =
+        ∇
+        ⋅
+        
+          
+            
+              v
+              →
+            
+          
+        
+      
+    
+    {\displaystyle \operatorname {div} {\vec {v}}=\nabla \cdot {\vec {v}}}
+  
+Curl: 
+  
+    
+      
+        curl
+        ⁡
+        
+          
+            
+              v
+              →
+            
+          
+        
+        =
+        ∇
+        ×
+        
+          
+            
+              v
+              →
+            
+          
+        
+      
+    
+    {\displaystyle \operatorname {curl} {\vec {v}}=\nabla \times {\vec {v}}}

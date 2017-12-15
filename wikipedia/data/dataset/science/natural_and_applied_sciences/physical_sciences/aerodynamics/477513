@@ -1,0 +1,17 @@
+In fluid mechanics, Helmholtz's theorems, named after Hermann von Helmholtz, describe the three-dimensional motion of fluid in the vicinity of vortex filaments. These theorems apply to inviscid flows and flows where the influence of viscous forces are small and can be ignored.
+Helmholtz’s three theorems are as follows:Helmholtz’s first theorem:
+The strength of a vortex filament is constant along its length.
+Helmholtz’s second theorem:
+A vortex filament cannot end in a fluid; it must extend to the boundaries of the fluid or form a closed path.
+Helmholtz’s third theorem:
+In the absence of rotational external forces, a fluid that is initially irrotational remains irrotational.
+Helmholtz’s theorems apply to inviscid flows. In observations of vortices in real fluids the strength of the vortices always decays gradually due to the dissipative effect of viscous forces.
+Alternative expressions of the three theorems are as follows:
+1. The strength of a vortex tube does not vary with time. 2. Fluid elements lying on a vortex line at some instant continue to lie on that vortex line. More simply, vortex lines move with the fluid. Also vortex lines and tubes must appear as a closed loop, extend to infinity or start/end at solid boundaries.
+3. Fluid elements initially free of vorticity remain free of vorticity.
+Helmholtz’s theorems have application in understanding:
+Generation of lift on an airfoil
+Starting vortex
+Horseshoe vortex
+Wingtip vortices.
+Helmholtz’s theorems are now generally proven with reference to Kelvin's circulation theorem. However the Helmholtz's theorems were published in 1858, nine years before the 1867 publication of Kelvin's theorem. There was much communication between the two men on the subject of vortex lines, with many references to the application of their theorems to the study of smoke rings.

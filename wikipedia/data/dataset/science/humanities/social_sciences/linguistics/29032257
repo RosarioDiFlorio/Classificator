@@ -1,0 +1,4 @@
+Truecasing is the problem in natural language processing (NLP) of determining the proper capitalization of words where such information is unavailable. This commonly comes up due to the standard practice (in English and many other languages) of automatically capitalizing the first word of a sentence. It can also arise in badly cased or noncased text (for example, all-lowercase or all-uppercase text messages). Truecasing aids in many other NLP tasks, such as named entity recognition, machine translation and Automatic Content Extraction.
+Truecasing is unnecessary in languages whose scripts do not have a distinction between uppercase and lowercase letters. This includes all languages not written in the Latin, Greek, Cyrillic or Armenian alphabets, such as Japanese, Chinese, Thai, Hebrew, Arabic, Hindi, Georgian, etc.
+
+

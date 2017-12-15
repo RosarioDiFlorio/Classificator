@@ -1,0 +1,5 @@
+GRC Envelop is a risk management and audit management software tool. It enables process control managers, auditors and risk managers to document and manage their work. The entire tool is web based and is built using the Python / Django_(web_framework). The idea behind GRC Envelop is to help risk managers and auditors with a standard work flow and framework to help capture the process details within an organisation. This tool is mainly used for internal and external audits focused on financial, IT, HR and sales processes within firms.
+Since, this tool has an open source license, it has been listed on a few sites    
+Throughout GRC Envelop, the fundamental data structure is as follows:
+Processes → Objectives → Risks → Controls → Tests → Findings → Actions
+Processes are the basic starting point for the entire tool. Objectives, risks and controls are the most important part that this tool intends to handle. Sometimes this part is also referred to as the risk control matrix in some organisations.

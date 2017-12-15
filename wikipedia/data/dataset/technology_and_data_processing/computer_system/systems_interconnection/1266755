@@ -1,0 +1,7 @@
+Intelligent Peripheral Interface (IPI) was a server-centric storage interface used in the 1980s and early 1990s with an ISO-9318 standard.
+The idea behind IPI is that the disk drives themselves are as simple as possible, containing only the lowest level control circuitry, while the IPI interface card encapsulates most of the disk control complexity. The IPI interface card, as a central point of control, is thus theoretically able to best coordinate accesses to the connected disks, as it "knows" more about the states of the connected disks than would, say, a SCSI interface.
+An IPI-2 bus could provide a data transfer rate in the vicinity of 6 MB/s.
+In practice, the theoretical advantages of IPI over SCSI were often not realized, as they only materialized when several disks were connected to the interface, which could then easily become a bandwidth bottleneck.
+IPI systems were often shipped by Sun Microsystems on original sun4 architecture servers, but the above limitation and reliability problems made them unpopular with customers, and the technology basically disappeared by the second half of the 1990s.
+
+

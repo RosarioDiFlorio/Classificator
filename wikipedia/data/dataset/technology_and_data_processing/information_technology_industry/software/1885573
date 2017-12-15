@@ -1,0 +1,3 @@
+Apache HiveMind is an Inversion of Control (IOC) software project of the Apache Software Foundation written in Java. It takes the form of a services and configuration microkernel.
+In HiveMind, a service is an implementation of a Java interface. Unlike other service-oriented architectures (SOAs), HiveMind is explicit about combining Java code within a single JVM.
+The HiveMind project, formerly a top-level Apache project, was retired 22 April 2009, ending its life in the Apache Attic repository. Its successor is considered to be Tapestry IOC Tapestry IOC, a Guice-like IoC container for Java EE Model-view-controller web applications. (Tapestry's requirement for IoC was the reason HiveMind was conceived in the first place.)

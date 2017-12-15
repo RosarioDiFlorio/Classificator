@@ -1,0 +1,173 @@
+The Mandel Q parameter measures the departure of the occupation number distribution from Poissonian statistics. It was introduced in quantum optics by L. Mandel. It is a convenient way to characterize non-classical states with negative values indicating a sub-Poissonian statistics, which have no classical analog. It is defined as the normalized variance of the boson distribution:
+
+  
+    
+      
+        Q
+        =
+        
+          
+            
+              
+                ⟨
+                (
+                Δ
+                
+                  
+                    
+                      n
+                      ^
+                    
+                  
+                
+                
+                  )
+                  
+                    2
+                  
+                
+                ⟩
+              
+              −
+              ⟨
+              
+                
+                  
+                    n
+                    ^
+                  
+                
+              
+              ⟩
+            
+            
+              ⟨
+              
+                
+                  
+                    n
+                    ^
+                  
+                
+              
+              ⟩
+            
+          
+        
+        =
+        
+          
+            
+              ⟨
+              
+                
+                  
+                    
+                      n
+                      ^
+                    
+                  
+                
+                
+                  (
+                  2
+                  )
+                
+              
+              ⟩
+              −
+              ⟨
+              
+                
+                  
+                    n
+                    ^
+                  
+                
+              
+              
+                ⟩
+                
+                  2
+                
+              
+            
+            
+              ⟨
+              
+                
+                  
+                    n
+                    ^
+                  
+                
+              
+              ⟩
+            
+          
+        
+        −
+        1
+        =
+        ⟨
+        
+          
+            
+              n
+              ^
+            
+          
+        
+        ⟩
+        
+          (
+          
+            g
+            
+              (
+              2
+              )
+            
+          
+          (
+          0
+          )
+          −
+          1
+          )
+        
+      
+    
+    {\displaystyle Q={\frac {\left\langle (\Delta {\hat {n}})^{2}\right\rangle -\langle {\hat {n}}\rangle }{\langle {\hat {n}}\rangle }}={\frac {\langle {\hat {n}}^{(2)}\rangle -\langle {\hat {n}}\rangle ^{2}}{\langle {\hat {n}}\rangle }}-1=\langle {\hat {n}}\rangle \left(g^{(2)}(0)-1\right)}
+  
+where 
+  
+    
+      
+        
+          
+            
+              n
+              ^
+            
+          
+        
+      
+    
+    {\displaystyle {\hat {n}}}
+   is the photon number operator and 
+  
+    
+      
+        
+          g
+          
+            (
+            2
+            )
+          
+        
+      
+    
+    {\displaystyle g^{(2)}}
+   is the normalized second-order correlation function as defined by Glauber.

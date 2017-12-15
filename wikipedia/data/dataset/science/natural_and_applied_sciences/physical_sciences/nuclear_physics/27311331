@@ -1,0 +1,550 @@
+The six-factor formula is used in nuclear engineering to determine the multiplication of a nuclear chain reaction in a non-infinite medium. The formula is
+
+  
+    
+      
+        k
+        =
+        η
+        f
+        p
+        ε
+        
+          P
+          
+            F
+            N
+            L
+          
+        
+        
+          P
+          
+            T
+            N
+            L
+          
+        
+      
+    
+    {\displaystyle k=\eta fp\varepsilon P_{FNL}P_{TNL}}
+  
+The symbols are defined as:
+
+  
+    
+      
+        ν
+      
+    
+    {\displaystyle \nu }
+  , 
+  
+    
+      
+        
+          ν
+          
+            f
+          
+        
+      
+    
+    {\displaystyle \nu _{f}}
+   and 
+  
+    
+      
+        
+          ν
+          
+            t
+          
+        
+      
+    
+    {\displaystyle \nu _{t}}
+   are the average number of neutrons produced per fission in the medium (2.43 for Uranium-235).
+
+  
+    
+      
+        
+          σ
+          
+            f
+          
+          
+            F
+          
+        
+      
+    
+    {\displaystyle \sigma _{f}^{F}}
+   and 
+  
+    
+      
+        
+          σ
+          
+            a
+          
+          
+            F
+          
+        
+      
+    
+    {\displaystyle \sigma _{a}^{F}}
+   are the microscopic fission and absorption cross sections for fuel, respectively.
+
+  
+    
+      
+        
+          Σ
+          
+            a
+          
+          
+            F
+          
+        
+      
+    
+    {\displaystyle \Sigma _{a}^{F}}
+   and 
+  
+    
+      
+        
+          Σ
+          
+            a
+          
+        
+      
+    
+    {\displaystyle \Sigma _{a}}
+   are the macroscopic absorption cross sections in fuel and in total, respectively.
+
+  
+    
+      
+        
+          N
+          
+            i
+          
+        
+      
+    
+    {\displaystyle N_{i}}
+   is the number density of atoms of a specific nuclide.
+
+  
+    
+      
+        
+          I
+          
+            r
+            ,
+            A
+            ,
+            i
+          
+        
+      
+    
+    {\displaystyle I_{r,A,i}}
+   is the resonance integral for absorption of a specific nuclide.
+
+  
+    
+      
+        
+          I
+          
+            r
+            ,
+            A
+            ,
+            i
+          
+        
+        =
+        
+          ∫
+          
+            
+              E
+              
+                t
+                h
+              
+            
+          
+          
+            
+              E
+              
+                0
+              
+            
+          
+        
+        d
+        
+          E
+          ′
+        
+        
+          
+            
+              Σ
+              
+                p
+              
+              
+                m
+                o
+                d
+              
+            
+            
+              
+                Σ
+                
+                  t
+                
+              
+              (
+              
+                E
+                ′
+              
+              )
+            
+          
+        
+        
+          
+            
+              
+                σ
+                
+                  a
+                
+                
+                  i
+                
+              
+              (
+              
+                E
+                ′
+              
+              )
+            
+            
+              E
+              ′
+            
+          
+        
+      
+    
+    {\displaystyle I_{r,A,i}=\int _{E_{th}}^{E_{0}}dE'{\frac {\Sigma _{p}^{mod}}{\Sigma _{t}(E')}}{\frac {\sigma _{a}^{i}(E')}{E'}}}
+  .
+
+  
+    
+      
+        
+          
+            ξ
+            ¯
+          
+        
+      
+    
+    {\displaystyle {\overline {\xi }}}
+   is the average lethargy gain per scattering event.
+Lethargy is defined as decrease in neutron energy.
+
+  
+    
+      
+        
+          u
+          
+            f
+          
+        
+      
+    
+    {\displaystyle u_{f}}
+   (fast utilization) is the probability that a fast neutron is absorbed in fuel.
+
+  
+    
+      
+        
+          P
+          
+            F
+            A
+            F
+          
+        
+      
+    
+    {\displaystyle P_{FAF}}
+   is the probability that a fast neutron absorption in fuel causes fission.
+
+  
+    
+      
+        
+          P
+          
+            T
+            A
+            F
+          
+        
+      
+    
+    {\displaystyle P_{TAF}}
+   is the probability that a thermal neutron absorption in fuel causes fission.
+
+  
+    
+      
+        
+          
+            
+              B
+              
+                g
+              
+            
+          
+          
+            2
+          
+        
+      
+    
+    {\displaystyle {B_{g}}^{2}}
+   is the geometric buckling.
+
+  
+    
+      
+        
+          
+            
+              L
+              
+                t
+                h
+              
+            
+          
+          
+            2
+          
+        
+      
+    
+    {\displaystyle {L_{th}}^{2}}
+   is the diffusion length of thermal neutrons.
+
+  
+    
+      
+        
+          
+            
+              L
+              
+                t
+                h
+              
+            
+          
+          
+            2
+          
+        
+        =
+        
+          
+            D
+            
+              Σ
+              
+                a
+                ,
+                t
+                h
+              
+            
+          
+        
+      
+    
+    {\displaystyle {L_{th}}^{2}={\frac {D}{\Sigma _{a,th}}}}
+  .
+
+  
+    
+      
+        
+          τ
+          
+            t
+            h
+          
+        
+      
+    
+    {\displaystyle \tau _{th}}
+   is the age to thermal.
+
+  
+    
+      
+        τ
+        =
+        
+          ∫
+          
+            
+              E
+              
+                t
+                h
+              
+            
+          
+          
+            
+              E
+              ′
+            
+          
+        
+        d
+        
+          E
+          ″
+        
+        
+          
+            1
+            
+              E
+              ″
+            
+          
+        
+        
+          
+            
+              D
+              (
+              
+                E
+                ″
+              
+              )
+            
+            
+              
+                
+                  ξ
+                  ¯
+                
+              
+              
+                [
+                D
+                (
+                
+                  E
+                  ″
+                
+                )
+                
+                  
+                    
+                      B
+                      
+                        g
+                      
+                    
+                  
+                  
+                    2
+                  
+                
+                +
+                
+                  Σ
+                  
+                    t
+                  
+                
+                (
+                
+                  E
+                  ′
+                
+                )
+                ]
+              
+            
+          
+        
+      
+    
+    {\displaystyle \tau =\int _{E_{th}}^{E'}dE''{\frac {1}{E''}}{\frac {D(E'')}{{\overline {\xi }}\left[D(E''){B_{g}}^{2}+\Sigma _{t}(E')\right]}}}
+  .
+
+  
+    
+      
+        
+          τ
+          
+            t
+            h
+          
+        
+      
+    
+    {\displaystyle \tau _{th}}
+   is the evaluation of 
+  
+    
+      
+        τ
+      
+    
+    {\displaystyle \tau }
+   where 
+  
+    
+      
+        
+          E
+          ′
+        
+      
+    
+    {\displaystyle E'}
+   is the energy of the neutron at birth.

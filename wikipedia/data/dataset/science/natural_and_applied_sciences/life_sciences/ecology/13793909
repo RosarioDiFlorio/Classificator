@@ -1,0 +1,38 @@
+Like the Penman equation, the Penman–Monteith equation (after Howard Penman and John Monteith) approximates net evapotranspiration (ET), requiring as input daily mean temperature, wind speed, relative humidity and solar radiation. Other than radiation, these parameter are implicit in the derivation of 
+  
+    
+      
+        Δ
+      
+    
+    {\displaystyle \Delta }
+  , 
+  
+    
+      
+        
+          c
+          
+            p
+          
+        
+      
+    
+    {\displaystyle c_{p}}
+  , and 
+  
+    
+      
+        
+          δ
+          
+            q
+          
+        
+      
+    
+    {\displaystyle \delta _{q}}
+  , if not conductances below.
+The United Nations Food and Agriculture Organization (FAO) standard methods for modeling evapotranspiration use a Penman–Monteith equation. The standard methods of the American Society of Civil Engineers modify that Penman–Monteith equation for use with an hourly time step. The SWAT model is one of many GIS-integrated hydrologic models estimating ET using Penman–Monteith equations.
+Evapotranspiration contributions are very significant in a watershed's water balance, yet are often not emphasized in results because the precision of this component is often weak relative to more directly measured phenomena, e.g. rain and stream flow. In addition to weather uncertainties, the Penman–Monteith equation is sensitive to vegetation specific parameters, e.g. stomatal resistance or conductance. Gaps in knowledge of such are filled by educated assumptions, until more specific data accumulates.
+Various forms of crop coefficients (Kc) account for differences between specific vegetation modeled and a reference evapotranspiration (RET or ET0) standard. Stress coefficients (Ks) account for reductions in ET due to environmental stress (e.g. soil saturation reduces root-zone O2, low soil moisture induces wilt, air pollution effects, and salinity). Models of native vegetation cannot assume crop management to avoid recurring stress.

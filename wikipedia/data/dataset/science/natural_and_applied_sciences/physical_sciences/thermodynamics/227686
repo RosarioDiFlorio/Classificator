@@ -1,0 +1,103 @@
+The Lennard-Jones potential (also termed the L-J potential, 6-12 potential, or 12-6 potential) is a mathematically simple model that approximates the interaction between a pair of neutral atoms or molecules. A form of this interatomic potential was first proposed in 1924 by John Lennard-Jones. The most common expressions of the L-J potential are
+
+  
+    
+      
+        
+          V
+          
+            LJ
+          
+        
+        =
+        4
+        ε
+        
+          [
+          
+            
+              (
+              
+                
+                  σ
+                  r
+                
+              
+              )
+            
+            
+              12
+            
+          
+          −
+          
+            
+              (
+              
+                
+                  σ
+                  r
+                
+              
+              )
+            
+            
+              6
+            
+          
+          ]
+        
+        =
+        ε
+        
+          [
+          
+            
+              (
+              
+                
+                  
+                    r
+                    
+                      m
+                    
+                  
+                  r
+                
+              
+              )
+            
+            
+              12
+            
+          
+          −
+          2
+          
+            
+              (
+              
+                
+                  
+                    r
+                    
+                      m
+                    
+                  
+                  r
+                
+              
+              )
+            
+            
+              6
+            
+          
+          ]
+        
+        ,
+      
+    
+    {\displaystyle V_{\text{LJ}}=4\varepsilon \left[\left({\frac {\sigma }{r}}\right)^{12}-\left({\frac {\sigma }{r}}\right)^{6}\right]=\varepsilon \left[\left({\frac {r_{\text{m}}}{r}}\right)^{12}-2\left({\frac {r_{\text{m}}}{r}}\right)^{6}\right],}
+  
+where ε is the depth of the potential well, σ is the finite distance at which the inter-particle potential is zero, r is the distance between the particles, and rm is the distance at which the potential reaches its minimum. At rm, the potential function has the value −ε. The distances are related as rm = 21/6σ ≈ 1.122σ. These parameters can be fitted to reproduce experimental data or accurate quantum chemistry calculations. Due to its computational simplicity, the Lennard-Jones potential is used extensively in computer simulations even though more accurate potentials exist.

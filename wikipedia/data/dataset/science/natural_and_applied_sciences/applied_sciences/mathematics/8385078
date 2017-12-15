@@ -1,0 +1,144 @@
+One of the main tools for determining the existence of (or non-existence of) chaos in a perturbed Hamiltonian system is Melnikov theory. In this theory, the distance between the stable and unstable manifolds of the perturbed system is calculated up to the first-order term. Consider a smooth dynamical system 
+  
+    
+      
+        
+          
+            
+              x
+              ¨
+            
+          
+        
+        =
+        f
+        (
+        x
+        )
+        +
+        ϵ
+        g
+        (
+        t
+        )
+      
+    
+    {\displaystyle {\ddot {x}}=f(x)+\epsilon g(t)}
+  , with 
+  
+    
+      
+        ϵ
+        ≥
+        0
+      
+    
+    {\displaystyle \epsilon \geq 0}
+   and 
+  
+    
+      
+        g
+        (
+        t
+        )
+      
+    
+    {\displaystyle g(t)}
+   periodic with period 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+  . Suppose for 
+  
+    
+      
+        ϵ
+        =
+        0
+      
+    
+    {\displaystyle \epsilon =0}
+   the system has a hyperbolic fixed point x0 and a homoclinic orbit 
+  
+    
+      
+        ϕ
+        (
+        t
+        )
+      
+    
+    {\displaystyle \phi (t)}
+   corresponding to this fixed point. Then for sufficiently small 
+  
+    
+      
+        ϵ
+        ≠
+        0
+      
+    
+    {\displaystyle \epsilon \neq 0}
+   there exists a T-periodic hyperbolic solution. The stable and unstable manifolds of this periodic solution intersect transversally. The distance between these manifolds measured along a direction that is perpendicular to the unperturbed homoclinc orbit 
+  
+    
+      
+        ϕ
+        (
+        t
+        )
+      
+    
+    {\displaystyle \phi (t)}
+   is called the Melnikov distance. If 
+  
+    
+      
+        d
+        (
+        t
+        )
+      
+    
+    {\displaystyle d(t)}
+   denotes this distance, then 
+  
+    
+      
+        d
+        (
+        t
+        )
+        =
+        ϵ
+        (
+        M
+        (
+        t
+        )
+        +
+        O
+        (
+        ϵ
+        )
+        )
+      
+    
+    {\displaystyle d(t)=\epsilon (M(t)+O(\epsilon ))}
+  . The function 
+  
+    
+      
+        M
+        (
+        t
+        )
+      
+    
+    {\displaystyle M(t)}
+   is called the Melnikov function.

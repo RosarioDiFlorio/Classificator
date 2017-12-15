@@ -1,0 +1,77 @@
+The Lerner index, formalized in 1934 by Abba Lerner, describes a firm's market power. It is defined by:
+
+  
+    
+      
+        L
+        =
+        
+          
+            
+              P
+              −
+              M
+              C
+            
+            P
+          
+        
+      
+    
+    {\displaystyle L={\frac {P-MC}{P}}}
+  
+where P is the market price set by the firm and MC is the firm's marginal cost. The index ranges from a high of 1 to a low of 0, with higher numbers implying greater market power. For a perfectly competitive firm (where P=MC), L=0; such a firm has no market power. When MC=0, Lerner's index is equal to unity, indicating the presence of monopoly power.
+The main problem with this measure, however, is that it is almost impossible to gather the necessary information on prices and particularly costs.
+The Lerner Index is equivalent to the negative inverse of the formula 
+  
+    
+      
+        
+          E
+          
+            d
+          
+        
+      
+    
+    {\displaystyle E_{d}}
+   for price elasticity of demand facing the firm, when the chosen price, P, is that which maximizes profits available because of the existence of market power.
+
+  
+    
+      
+        L
+        =
+        
+          
+            
+              −
+              1
+            
+            
+              E
+              
+                d
+              
+            
+          
+        
+      
+    
+    {\displaystyle L={\frac {-1}{E_{d}}}}
+  
+(Here, 
+  
+    
+      
+        
+          E
+          
+            d
+          
+        
+      
+    
+    {\displaystyle E_{d}}
+   is an expression of the firm's demand curve, not the market demand curve.)
+The Lerner index describes the relationship between elasticity and price margins for a profit-maximizing firm; it can never be greater than one. If the Lerner index can't be greater than one, then the absolute value of elasticity of demand can never be less than one (the elasticity can never be greater than −1). The interpretation of this mathematical relationship is that a firm which is maximizing profits will never operate along the inelastic portion of its demand curve.

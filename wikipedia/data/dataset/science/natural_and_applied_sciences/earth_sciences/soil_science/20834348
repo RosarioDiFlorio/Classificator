@@ -1,0 +1,65 @@
+The Sodium adsorption ratio (SAR) is an irrigation water quality parameter used in the management of sodium-affected soils. It is an indicator of the suitability of water for use in agricultural irrigation, as determined from the concentrations of the main alkaline and earth alkaline cations present in the water. It is also a standard diagnostic parameter for the sodicity hazard of a soil, as determined from analysis of pore water extracted from the soil.
+The formula for calculating the sodium adsorption ratio (SAR) is:
+
+  
+    
+      
+        
+          SAR
+        
+        =
+        
+          
+            
+              N
+              
+                a
+                
+                  +
+                
+              
+            
+            
+              
+                
+                  
+                    1
+                    2
+                  
+                
+              
+              (
+              
+                C
+                
+                  a
+                  
+                    2
+                    +
+                  
+                
+                +
+                M
+                
+                  g
+                  
+                    2
+                    +
+                  
+                
+              
+              )
+            
+          
+        
+      
+    
+    {\displaystyle {\text{SAR}}={\frac {Na^{+}}{\sqrt {{\tfrac {1}{2}}({Ca^{2+}+Mg^{2+}})}}}}
+  
+where sodium, calcium, and magnesium concentrations are expressed in milliequivalents/liter.
+SAR allows to assess the state of flocculation or of dispersion of clay aggregates in a soil. Sodium and potassium ions facilitate the dispersion of clay particles while calcium and magnesium promote their flocculation. The behaviour of clay aggregates influences the soil structure and affects the permeability of the soil whose directly depends the water infiltration rate. It is important to accurately know the nature and the concentrations of cations at which the flocculation occurs: critical flocculation concentration (CFC). The SAR parameter is also used to determine the stability of colloids in suspension in water.
+Although SAR is only one factor in determining the suitability of water for irrigation, in general, the higher the sodium adsorption ratio, the less suitable the water is for irrigation. Irrigation using water with high sodium adsorption ratio may require soil amendments to prevent long-term damage to the soil.
+If irrigation water with a high SAR is applied to a soil for years, the sodium in the water can displace the calcium and magnesium in the soil. This will cause a decrease in the ability of the soil to form stable aggregates and a loss of soil structure and tilth. This will also lead to a decrease in infiltration and permeability of the soil to water, leading to problems with crop production. Sandy soils will have less problems, but fine-textured soils will have severe problems if SAR is greater than 9. When SAR is less than 3, there will not be a problem.
+The concept of SAR addresses only the effects of sodium on the stability of soil aggregates. However, high K and Mg concentrations have also negative effects on soil permeability. The effect of potassium can be similarly treated by means of the potassium adsorption ratio (PAR). To take into account simultaneously all major cations present in water, a new irrigation water quality parameter was defined: the cation ratio of structural stability (CROSS), a generalization of SAR.
+
+

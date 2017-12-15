@@ -1,0 +1,2 @@
+The Breidbart Index, developed by Seth Breidbart, is the most significant cancel index in Usenet.
+A cancel index measures the dissemination intensity of substantively identical articles. If the index exceeds a threshold the articles are called newsgroup spam. They can then be removed using third party cancel controls.

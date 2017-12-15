@@ -1,0 +1,4 @@
+Artificial Life is a free and open sourced Java framework created to simulate Life. It is a multi-agents framework where each agent runs its own Thread.
+The agents are split into two different categories: the services and the processes. The services deliver services to other agents and the processes execute specific tasks.
+The agents are organized in a tree structure called Instance. Within an Instance, the services and the processes are grouped together and unlimited groups can be defined. Each node of the Instance tree can have a collection of views used to monitor the activity of the node or interact with the node. The definition of Java classes used within the Instance (i.e. processes, services or views) is defined in the Instance Model.
+In order to avoid dead locking, Artificial Life implements a messaging system, a method invocation mechanism based on the messaging system and an event mechanism also based on the messaging system.

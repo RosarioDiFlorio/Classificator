@@ -1,0 +1,136 @@
+The Standard hydrogen electrode (abbreviated SHE), is a redox electrode which forms the basis of the thermodynamic scale of oxidation-reduction potentials. Its absolute electrode potential is estimated to be 4.44 ± 0.02 V at 25 °C, but to form a basis for comparison with all other electrode reactions, hydrogen's standard electrode potential (E0) is declared to be zero volts at all temperatures. Potentials of any other electrodes are compared with that of the standard hydrogen electrode at the same temperature.
+Hydrogen electrode is based on the redox half cell:
+2 H+(aq) + 2 e− → H2(g)
+This redox reaction occurs at a platinized platinum electrode. The electrode is dipped in an acidic solution and pure hydrogen gas is bubbled through it. The concentration of both the reduced form and oxidised form is maintained at unity. That implies that the pressure of hydrogen gas is 1 bar (100 kPa) and the activity of hydrogen ions in the solution is unity. The activity of hydrogen ions is their effective concentration, which is equal to the formal concentration times the activity coefficient. These unit-less activity coefficients are close to 1.00 for very dilute water solutions, but usually lower for more concentrated solutions. The Nernst equation should be written as:
+
+  
+    
+      
+        E
+        =
+        
+          
+            
+              R
+              T
+            
+            F
+          
+        
+        ln
+        ⁡
+        
+          
+            
+              a
+              
+                
+                  
+                    H
+                    
+                      +
+                    
+                  
+                
+              
+            
+            
+              
+                p
+                
+                  
+                    
+                      H
+                      
+                        2
+                      
+                    
+                  
+                
+              
+              
+                /
+              
+              
+                p
+                
+                  0
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle E={RT \over F}\ln {\frac {a_{\mathrm {H^{+}} }}{\sqrt {p_{\mathrm {H_{2}} }/p^{0}}}}}
+  
+
+  
+    
+      
+        E
+        =
+        −
+        
+          
+            
+              2.303
+              R
+              T
+            
+            F
+          
+        
+        
+          p
+          H
+        
+        −
+        
+          
+            
+              R
+              T
+            
+            
+              2
+              F
+            
+          
+        
+        ln
+        ⁡
+        
+          
+            
+              p
+              
+                
+                  
+                    H
+                    
+                      2
+                    
+                  
+                
+              
+            
+            
+              p
+              
+                0
+              
+            
+          
+        
+      
+    
+    {\displaystyle E=-{2.303RT \over F}\mathrm {pH} -{RT \over 2F}\ln {\frac {p_{\mathrm {H_{2}} }}{p^{0}}}}
+  
+where:
+aH+ is the activity of the hydrogen ions, aH+ = fH+CH+ / C0
+pH2 is the partial pressure of the hydrogen gas, in pascals, Pa
+R is the universal gas constant
+T is the temperature, in kelvins
+F is the Faraday constant (the charge per mole of electrons), equal to 9.6485309 × 104 C mol−1
+p0 is the standard pressure, 105 Pa

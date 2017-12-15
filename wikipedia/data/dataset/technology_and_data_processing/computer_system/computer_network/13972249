@@ -1,0 +1,2 @@
+MC-LAG, or Multi-Chassis Link Aggregation Group, is a type of link aggregation group (LAG) with constituent ports that terminate on separate chassis, primarily for the purpose of providing redundancy in the event one of the chassis fails. The IEEE 802.1AX-2008 industry standard for link aggregation does not mention MC-LAG, but does not preclude it. Its implementation varies by vendor; notably, the protocol existing between the chassis is proprietary.
+In 2012 the IEEE created a standardized alternative to MC-LAG in IEEE 802.1aq (Shortest Path Bridging).

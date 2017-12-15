@@ -1,0 +1,3 @@
+OCRopus is a free document analysis and optical character recognition (OCR) system released under the Apache License, Version 2.0 with a very modular design through the use of plugins. These plugins allow OCRopus to swap out components easily.
+OCRopus is currently developed under the lead of Thomas Breuel from the German Research Centre for Artificial Intelligence in Kaiserslautern, Germany and is sponsored by Google.
+OCRopus is developed for Linux; however, users have reported success with OCRopus on Mac OS X. An application called TakOCR has been developed that installs OCRopus on Mac OS X and provides a simple droplet interface.

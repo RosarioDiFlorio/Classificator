@@ -1,0 +1,884 @@
+In mathematics, the angle condition is a constraint that is satisfied by the locus of points in the s-plane on which closed-loop poles of a system reside. In combination with the magnitude condition, these two mathematical expressions fully determine the root locus.
+Let the characteristic equation of a system be 
+  
+    
+      
+        1
+        +
+        
+          
+            G
+          
+        
+        (
+        s
+        )
+        =
+        0
+      
+    
+    {\displaystyle 1+{\textbf {G}}(s)=0}
+  , where 
+  
+    
+      
+        
+          
+            G
+          
+        
+        (
+        s
+        )
+        =
+        
+          
+            
+              
+                
+                  P
+                
+              
+              (
+              s
+              )
+            
+            
+              
+                
+                  Q
+                
+              
+              (
+              s
+              )
+            
+          
+        
+      
+    
+    {\displaystyle {\textbf {G}}(s)={\frac {{\textbf {P}}(s)}{{\textbf {Q}}(s)}}}
+  . Rewriting the equation in polar form is useful.
+
+  
+    
+      
+        
+          e
+          
+            j
+            2
+            π
+          
+        
+        +
+        
+          
+            G
+          
+        
+        (
+        s
+        )
+        =
+        0
+      
+    
+    {\displaystyle e^{j2\pi }+{\textbf {G}}(s)=0}
+  
+
+  
+    
+      
+        
+          
+            G
+          
+        
+        (
+        s
+        )
+        =
+        −
+        1
+        =
+        
+          e
+          
+            j
+            (
+            π
+            +
+            2
+            k
+            π
+            )
+          
+        
+      
+    
+    {\displaystyle {\textbf {G}}(s)=-1=e^{j(\pi +2k\pi )}}
+  
+where 
+  
+    
+      
+        k
+        =
+        0
+        ,
+        1
+        ,
+        2
+        ,
+        …
+      
+    
+    {\displaystyle k=0,1,2,\ldots }
+   are the only solutions to this equation. Rewriting 
+  
+    
+      
+        
+          
+            G
+          
+        
+        (
+        s
+        )
+      
+    
+    {\displaystyle {\textbf {G}}(s)}
+   in factored form,
+
+  
+    
+      
+        
+          
+            G
+          
+        
+        (
+        s
+        )
+        =
+        
+          
+            
+              
+                
+                  P
+                
+              
+              (
+              s
+              )
+            
+            
+              
+                
+                  Q
+                
+              
+              (
+              s
+              )
+            
+          
+        
+        =
+        K
+        
+          
+            
+              (
+              s
+              −
+              
+                a
+                
+                  1
+                
+              
+              )
+              (
+              s
+              −
+              
+                a
+                
+                  2
+                
+              
+              )
+              ⋯
+              (
+              s
+              −
+              
+                a
+                
+                  n
+                
+              
+              )
+            
+            
+              (
+              s
+              −
+              
+                b
+                
+                  1
+                
+              
+              )
+              (
+              s
+              −
+              
+                b
+                
+                  2
+                
+              
+              )
+              ⋯
+              (
+              s
+              −
+              
+                b
+                
+                  m
+                
+              
+              )
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle {\textbf {G}}(s)={\frac {{\textbf {P}}(s)}{{\textbf {Q}}(s)}}=K{\frac {(s-a_{1})(s-a_{2})\cdots (s-a_{n})}{(s-b_{1})(s-b_{2})\cdots (s-b_{m})}},}
+  
+and representing each factor 
+  
+    
+      
+        (
+        s
+        −
+        
+          a
+          
+            p
+          
+        
+        )
+      
+    
+    {\displaystyle (s-a_{p})}
+   and 
+  
+    
+      
+        (
+        s
+        −
+        
+          b
+          
+            q
+          
+        
+        )
+      
+    
+    {\displaystyle (s-b_{q})}
+   by their vector equivalents, 
+  
+    
+      
+        
+          A
+          
+            p
+          
+        
+        
+          e
+          
+            j
+            
+              θ
+              
+                p
+              
+            
+          
+        
+      
+    
+    {\displaystyle A_{p}e^{j\theta _{p}}}
+   and 
+  
+    
+      
+        
+          B
+          
+            q
+          
+        
+        
+          e
+          
+            j
+            
+              φ
+              
+                q
+              
+            
+          
+        
+      
+    
+    {\displaystyle B_{q}e^{j\varphi _{q}}}
+  , respectively, 
+  
+    
+      
+        
+          
+            G
+          
+        
+        (
+        s
+        )
+      
+    
+    {\displaystyle {\textbf {G}}(s)}
+   may be rewritten.
+
+  
+    
+      
+        
+          
+            G
+          
+        
+        (
+        s
+        )
+        =
+        K
+        
+          
+            
+              
+                A
+                
+                  1
+                
+              
+              
+                A
+                
+                  2
+                
+              
+              ⋯
+              
+                A
+                
+                  n
+                
+              
+              
+                e
+                
+                  j
+                  (
+                  
+                    θ
+                    
+                      1
+                    
+                  
+                  +
+                  
+                    θ
+                    
+                      2
+                    
+                  
+                  +
+                  ⋯
+                  +
+                  
+                    θ
+                    
+                      n
+                    
+                  
+                  )
+                
+              
+            
+            
+              
+                B
+                
+                  1
+                
+              
+              
+                B
+                
+                  2
+                
+              
+              ⋯
+              
+                B
+                
+                  m
+                
+              
+              
+                e
+                
+                  j
+                  (
+                  
+                    φ
+                    
+                      1
+                    
+                  
+                  +
+                  
+                    φ
+                    
+                      2
+                    
+                  
+                  +
+                  ⋯
+                  +
+                  
+                    φ
+                    
+                      m
+                    
+                  
+                  )
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\textbf {G}}(s)=K{\frac {A_{1}A_{2}\cdots A_{n}e^{j(\theta _{1}+\theta _{2}+\cdots +\theta _{n})}}{B_{1}B_{2}\cdots B_{m}e^{j(\varphi _{1}+\varphi _{2}+\cdots +\varphi _{m})}}}}
+  
+Simplifying the characteristic equation,
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  e
+                  
+                    j
+                    (
+                    π
+                    +
+                    2
+                    k
+                    π
+                    )
+                  
+                
+              
+              
+                
+                =
+                K
+                
+                  
+                    
+                      
+                        A
+                        
+                          1
+                        
+                      
+                      
+                        A
+                        
+                          2
+                        
+                      
+                      ⋯
+                      
+                        A
+                        
+                          n
+                        
+                      
+                      
+                        e
+                        
+                          j
+                          (
+                          
+                            θ
+                            
+                              1
+                            
+                          
+                          +
+                          
+                            θ
+                            
+                              2
+                            
+                          
+                          +
+                          ⋯
+                          +
+                          
+                            θ
+                            
+                              n
+                            
+                          
+                          )
+                        
+                      
+                    
+                    
+                      
+                        B
+                        
+                          1
+                        
+                      
+                      
+                        B
+                        
+                          2
+                        
+                      
+                      ⋯
+                      
+                        B
+                        
+                          m
+                        
+                      
+                      
+                        e
+                        
+                          j
+                          (
+                          
+                            φ
+                            
+                              1
+                            
+                          
+                          +
+                          
+                            φ
+                            
+                              2
+                            
+                          
+                          +
+                          ⋯
+                          +
+                          
+                            φ
+                            
+                              m
+                            
+                          
+                          )
+                        
+                      
+                    
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                K
+                
+                  
+                    
+                      
+                        A
+                        
+                          1
+                        
+                      
+                      
+                        A
+                        
+                          2
+                        
+                      
+                      ⋯
+                      
+                        A
+                        
+                          n
+                        
+                      
+                    
+                    
+                      
+                        B
+                        
+                          1
+                        
+                      
+                      
+                        B
+                        
+                          2
+                        
+                      
+                      ⋯
+                      
+                        B
+                        
+                          m
+                        
+                      
+                    
+                  
+                
+                
+                  e
+                  
+                    j
+                    (
+                    
+                      θ
+                      
+                        1
+                      
+                    
+                    +
+                    
+                      θ
+                      
+                        2
+                      
+                    
+                    +
+                    ⋯
+                    +
+                    
+                      θ
+                      
+                        n
+                      
+                    
+                    −
+                    (
+                    
+                      φ
+                      
+                        1
+                      
+                    
+                    +
+                    
+                      φ
+                      
+                        2
+                      
+                    
+                    +
+                    ⋯
+                    +
+                    
+                      φ
+                      
+                        m
+                      
+                    
+                    )
+                    )
+                  
+                
+                ,
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}e^{j(\pi +2k\pi )}&=K{\frac {A_{1}A_{2}\cdots A_{n}e^{j(\theta _{1}+\theta _{2}+\cdots +\theta _{n})}}{B_{1}B_{2}\cdots B_{m}e^{j(\varphi _{1}+\varphi _{2}+\cdots +\varphi _{m})}}}\\[6pt]&=K{\frac {A_{1}A_{2}\cdots A_{n}}{B_{1}B_{2}\cdots B_{m}}}e^{j(\theta _{1}+\theta _{2}+\cdots +\theta _{n}-(\varphi _{1}+\varphi _{2}+\cdots +\varphi _{m}))},\end{aligned}}}
+  
+from which we derive the angle condition:
+
+  
+    
+      
+        π
+        +
+        2
+        k
+        π
+        =
+        
+          θ
+          
+            1
+          
+        
+        +
+        
+          θ
+          
+            2
+          
+        
+        +
+        ⋯
+        +
+        
+          θ
+          
+            n
+          
+        
+        −
+        (
+        
+          φ
+          
+            1
+          
+        
+        +
+        
+          φ
+          
+            2
+          
+        
+        +
+        ⋯
+        +
+        
+          φ
+          
+            m
+          
+        
+        )
+      
+    
+    {\displaystyle \pi +2k\pi =\theta _{1}+\theta _{2}+\cdots +\theta _{n}-(\varphi _{1}+\varphi _{2}+\cdots +\varphi _{m})}
+  
+for 
+  
+    
+      
+        k
+        =
+        0
+        ,
+        1
+        ,
+        2
+        ,
+        …
+      
+    
+    {\displaystyle k=0,1,2,\ldots }
+  ,
+
+  
+    
+      
+        
+          θ
+          
+            1
+          
+        
+        ,
+        
+          θ
+          
+            2
+          
+        
+        ,
+        …
+        ,
+        
+          θ
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \theta _{1},\theta _{2},\ldots ,\theta _{n}}
+  
+are the angles of poles 1 to n, and
+
+  
+    
+      
+        
+          φ
+          
+            1
+          
+        
+        ,
+        
+          φ
+          
+            2
+          
+        
+        ,
+        …
+        ,
+        
+          φ
+          
+            m
+          
+        
+      
+    
+    {\displaystyle \varphi _{1},\varphi _{2},\ldots ,\varphi _{m}}
+  
+are the angles of zeros 1 to m.
+The magnitude condition is derived similarly.

@@ -1,0 +1,4 @@
+MarineTraffic is an open, community-based project, which provides real-time information on the movements of ships and the current location of ships in harbours and ports. A database of information on the vessels includes, for example, details of the location where they were built and dimensions of the vessels, gross tonnage and International Maritime Organisation (IMO) number. Users can submit photographs of the vessels which other users can rate.
+Vessel locations are shown on the chinese Google Maps background, (ditu.google.cn) using the Google Maps API, Nautical Charts and OpenStreetMap
+The basic MarineTraffic service can be used without cost; more advanced functions are available subject to payment.
+The site has six million unique visitors on a monthly basis. In April 2015, the service had 600 000 registered users.

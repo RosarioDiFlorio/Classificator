@@ -1,0 +1,2 @@
+Foreground detection is one of the major tasks in the field of computer vision whose aim is to detect changes in image sequences. Many applications do not need to know everything about the evolution of movement in a video sequence, but only require the information of changes in the scene.
+Detecting foreground to separate these changes taking place in the foreground of the background. It is a set of techniques that typically analyze the video sequences in real time and are recorded with a stationary camera.

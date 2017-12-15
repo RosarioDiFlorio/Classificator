@@ -1,0 +1,7 @@
+High-speed transceiver logic or HSTL is a technology-independent standard for signaling between integrated circuits. The nominal signaling range is 0 V to 1.5 V, though variations are allowed, and signals may be single-ended or differential. It is designed for operation beyond 180 MHz.
+The following classes are defined by standard EIA/JESD8-6 from EIA/JEDEC:
+Class I (unterminated, or symmetrically parallel terminated)
+Class II (series terminated)
+Class III (asymmetrically parallel terminated)
+Class IV (asymmetrically double parallel terminated)
+Note: Symmetric parallel termination means that the termination resistor at the load is connected to half the output buffer's supply voltage. Double parallel termination means that parallel termination resistors are fitted at both ends of the transmission line.

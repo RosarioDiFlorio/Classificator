@@ -1,0 +1,8 @@
+Preference-rank translation is a mathematical technique used by marketers to convert stated preferences into purchase probabilities, that is, into an estimate of actual buying behaviour. It takes survey data on consumers’ preferences and converts it into actual purchase probabilities.
+A survey might ask a question using a ranking scale such as :
+A marketing researcher will re-specify the numerical values during codification. 1 will become 5, 2 will become 4, 4 will become 2, 5 will become 1, and 3 will remain the same. In this way greater values will correspond with greater preference.
+Next, the researcher uses a data reduction technique like factor analysis to obtain aggregate scores. To convert these aggregate rankings into purchase probabilities, each category (in this case, each product) will be weighted with a translation coefficient. These weights are predefined.
+A typical weighting scheme is:
+The weighting schemes vary depending on the variables being measured.
+The following chart illustrates the procedure:
+Other purchase intention/rating translations include logit analysis and the intent scale translation.

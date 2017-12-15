@@ -1,0 +1,17 @@
+The following table lists the various Web Template Engines used in Web template systems and a brief rundown of their features. The content here is a work in progress.
+LEGEND:
+Engine (implementation) = engine name
+Languages = implementation language of the engine (not the template script language)
+License = Software license agreement
+Platform = Computing platform
+Variables = script language power to use variables
+Functions = script language power to use functions
+Includes = script language power include external files
+Conditional inclusion = script language power to conditional includes
+Looping = script language power to do loops (for, while) or recursion
+Evaluation (language) = script language power to do "eval command" (to the implementation language)
+Assignment = set names and references to sub-templates (?)
+Errors and exceptions = engine output script errors.
+i18n = Internationalization and localization feature
+Natural templates = the template can be a document as valid as the final result, the engine syntax doesn't break the document's structure
+Inheritance = Supports the ability to inherit a layout from a parent template, separately overriding arbitrary sections of the parent template's content.

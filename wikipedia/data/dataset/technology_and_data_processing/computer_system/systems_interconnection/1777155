@@ -1,0 +1,13 @@
+SPI-4.2 is a version of the System Packet Interface published by the Optical Internetworking Forum. It was designed to be used in systems that support OC-192 SONET interfaces and is sometimes used in 10 Gigabit Ethernet based systems.
+SPI-4 is an interface for packet and cell transfer between a physical layer (PHY) device and a link layer device, for aggregate bandwidths of OC-192 Asynchronous Transfer Mode(ATM) and Packet over SONET/SDH (POS), as well as 10 Gigabit Ethernet applications.
+SPI-4 has two types of transfers—Data when the RCTL signal is deasserted; Control when the RCTL signal is asserted. The transmit and receive data paths include, respectively, (TDCLK, TDAT[15:0],TCTL) and (RDCLK, RDAT[15:0], RCTL). The transmit and receive FIFO status channels include (TSCLK, TSTAT[1:0]) and (RSCLK, RSTAT[1:0]) respectively.
+A typical application of SPI-4.2 is to connect a framer device to a network processor. It has been widely adopted by the high speed networking marketplace.
+The interface consists of (per direction):
+sixteen LVDS pairs for the data path
+one LVDS pair for control
+one LVDS pair for clock at half of the data rate
+two FIFO status lines running at 1/8 of the data rate
+one status clock
+The clocking is source-synchronous and operates around 700 MHz. Implementations of SPI-4.2 have been produced which allow somewhat higher clock rates. This is important when overhead bytes are added to incoming packets.
+PMC-Sierra made the original OIF contribution for SPI-4.2. That contribution was based on the PL-4 specification that was developed by PMC-Sierra in conjunction with the SATURN Development Group.
+The physical layer of SPI-4.2 is very similar to the HyperTransport 1.x interface, although the logical layers are very different.

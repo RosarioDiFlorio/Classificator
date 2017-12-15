@@ -1,0 +1,3 @@
+PSOLA (Pitch Synchronous Overlap and Add) is a digital signal processing technique used for speech processing and more specifically speech synthesis. It can be used to modify the pitch and duration of a speech signal. It was invented around 1986.
+PSOLA works by dividing the speech waveform in small overlapping segments. To change the pitch of the signal, the segments are moved further apart (to decrease the pitch) or closer together (to increase the pitch). To change the duration of the signal, the segments are then repeated multiple times (to increase the duration) or some are eliminated (to decrease the duration). The segments are then combined using the overlap add technique.
+PSOLA can be used to change the prosody of a speech signal.

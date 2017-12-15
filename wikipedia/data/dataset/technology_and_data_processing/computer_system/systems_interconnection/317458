@@ -1,0 +1,3 @@
+In distributed computing, an object request broker (ORB) is a middleware which allows program calls to be made from one computer to another via a computer network, providing location transparency through remote procedure calls. ORBs promote interoperability of distributed object systems, enabling such systems to be built by piecing together objects from different vendors, while different parts communicate with each other via the ORB.
+
+

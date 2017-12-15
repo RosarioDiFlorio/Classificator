@@ -1,0 +1,9 @@
+Port Aggregation Protocol (PAgP) is a Cisco Systems proprietary networking protocol, which is used for the automated, logical aggregation of Ethernet switch ports, known as an ether channel. The PAgP is proprietary to Cisco Systems. A similar protocol known as LACP— released by the IEEE and known as 802.3ad or 802.1ax recently — is an industry standard and is not tied to a specific vendor.
+PAgP can be configured on a Cisco switch to operate in three different modes.
+auto - passive negotiation of the channel
+desirable - active negotiation of the channel
+on - no protocols are used: it assumes the other side has enabled link aggregation
+On Cisco network devices running CatOS, a single switch module may only be configured to run in either LACP or PAgP modes. Cisco devices that run IOS (native and/or non-hybrid mode boxes) support individual port configuration for LACP and are not restricted to per module settings as with CatOS.
+PAgP messages are always sent to the well known Cisco multicast address 01-00-0C-CC-CC-CC with protocol type code 0X0104. PAgP uses the same multicast group MAC address of CDP.
+
+

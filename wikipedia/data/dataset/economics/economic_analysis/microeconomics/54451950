@@ -1,0 +1,1 @@
+Multi-Prob Cut is a heuristic used in Alpha–beta pruning search. It is of particular interest in games such as Othello and Draughts in which the null-move heuristic would be problematic as it is quite often an advantage to pass.

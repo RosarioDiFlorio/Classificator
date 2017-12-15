@@ -1,0 +1,122 @@
+IT risk management is the application of risk management methods to information technology in order to manage IT risk, i.e.:
+The business risk associated with the use, ownership, operation, involvement, influence and adoption of IT within an enterprise or organization
+IT risk management can be considered a component of a wider enterprise risk management system.
+The establishment, maintenance and continuous update of an Information security management system (ISMS) provide a strong indication that a company is using a systematic approach for the identification, assessment and management of information security risks.
+Different methodologies have been proposed to manage IT risks, each of them divided into processes and steps.
+According to the Risk IT framework, this encompasses not only the negative impact of operations and service delivery which can bring destruction or reduction of the value of the organization, but also the benefit enabling risk associated to missing opportunities to use technology to enable or enhance business or the IT project management for aspects like overspending or late delivery with adverse business impact.
+Because risk is strictly tied to uncertainty, decision theory should be applied to manage risk as a science, i.e. rationally making choices under uncertainty.
+Generally speaking, risk is the product of likelihood times impact (Risk = Likelihood * Impact).
+The measure of an IT risk can be determined as a product of threat, vulnerability and asset values:
+
+  
+    
+      
+        R
+        i
+        s
+        k
+        =
+        T
+        h
+        r
+        e
+        a
+        t
+        ∗
+        V
+        u
+        l
+        n
+        e
+        r
+        a
+        b
+        i
+        l
+        i
+        t
+        y
+        ∗
+        A
+        s
+        s
+        e
+        t
+      
+    
+    {\displaystyle Risk=Threat*Vulnerability*Asset}
+  
+A more current Risk management framework for IT Risk would be the TIK framework:
+
+  
+    
+      
+        R
+        i
+        s
+        k
+        =
+        (
+        (
+        V
+        u
+        l
+        n
+        e
+        r
+        a
+        b
+        i
+        l
+        i
+        t
+        y
+        ∗
+        T
+        h
+        r
+        e
+        a
+        t
+        )
+        
+          /
+        
+        C
+        o
+        u
+        n
+        t
+        e
+        r
+        M
+        e
+        a
+        s
+        u
+        r
+        e
+        )
+        ∗
+        A
+        s
+        s
+        e
+        t
+        V
+        a
+        l
+        u
+        e
+        a
+        t
+        R
+        i
+        s
+        k
+      
+    
+    {\displaystyle Risk=((Vulnerability*Threat)/CounterMeasure)*AssetValueatRisk}
+  
+
+

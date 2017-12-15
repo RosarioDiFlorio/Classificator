@@ -1,0 +1,6 @@
+Penultimate hop popping (PHP) is a function performed by certain routers in an MPLS enabled network. It refers to the process whereby the outermost label of an MPLS tagged packet is removed by a Label Switch Router (LSR) before the packet is passed to an adjacent Label Edge Router (LER).
+The process is important in a Layer 3 MPLS VPN (RFC 2547) environment as it reduces the load on the LER. If this process didn't happen, the LER would have to perform at least 2 label lookups:
+The outer label, identifying that the packet was destined to have its label stripped on this router.
+The inner label, to identify which Virtual Routing and Forwarding (VRF) instance to use for the subsequent IP routing lookup.
+In a large network this can result in the CPU load on the LER reaching unacceptable levels. By having PHP for an LER done on the LSRs connected to it, the load is effectively distributed among its neighbour routers.
+PHP functionality is achieved by the LER advertising a label with a value of 3 to its neighbours. This label is defined as implicit-null and informs the neighbouring LSR(s) to perform PHP.

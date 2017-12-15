@@ -1,0 +1,1 @@
+binkp is a protocol for transferring FidoNet or WWIVNet mail over reliable connections. It is typically used to deliver mail over the internet, instead of point-to-point connections between modems.

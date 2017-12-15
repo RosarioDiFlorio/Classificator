@@ -1,0 +1,5 @@
+Transactional Synchronization Extensions (TSX-NI) is an extension to the x86 instruction set architecture (ISA) that adds hardware transactional memory support, speeding up execution of multi-threaded software through lock elision. According to different benchmarks, TSX can provide around 40% faster applications execution in specific workloads, and 4–5 times more database transactions per second (TPS).
+TSX was documented by Intel in February 2012, and debuted in June 2013 on selected Intel microprocessors based on the Haswell microarchitecture. Haswell processors below 45xx as well as R-series and K-series (with unlocked multiplier) SKUs do not support TSX. In August 2014, Intel announced a bug in the TSX implementation on current steppings of Haswell, Haswell-E, Haswell-EP and early Broadwell CPUs, which resulted in disabling the TSX feature on affected CPUs via a microcode update.
+Support for TSX emulation is provided as part of the Intel Software Development Emulator. There is also experimental support for TSX emulation in a QEMU fork.
+
+

@@ -1,0 +1,2 @@
+The Simplecortex is a development board which can host shields designed for the Arduino, since it has compliant headers, pin-out and spacing. However, the board itself is not Arduino-compatible, i.e. it doesn't use the Arduino IDE and is not source code compatible.
+It has an onboard debugger and an ARM Cortex M3 microcontroller from NXP. It uses an Eclipse-based programming environment. The Simplecortex is made as a school project and the hardware is open source under the CC-BY-SA 3.0 License.

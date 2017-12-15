@@ -1,0 +1,6 @@
+Precise Point Positioning (PPP) is a Global Navigation Satellite System (GNSS) positioning method to calculate very precise positions up to few centimeter level using a single (GNSS) receiver in a dynamic and global reference framework like International Terrestrial Reference System (ITRS). PPP methods are different from (DGNSS) positioning methods which differentiate errors using one or more reference stations with known positions. PPP approach combines precise clocks and orbits calculated from a global network to calculate a precise position with a single receiver which can be double or single frequency.
+Historically precise positioning was associated with surveying and geodesy.
+With the advent of Global Navigation Satellite Systems (GNSS) such as the Global Positioning System (GPS) precise positioning has been incorporated into production processes in mining, agriculture and construction. The main application has been in machine guidance and machine automation which require high levels of precision.
+Precise positioning is also increasingly used in the fields of robotics and autonomous navigation.
+
+

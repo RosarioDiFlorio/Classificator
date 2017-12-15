@@ -1,0 +1,1 @@
+The Scottish Rugby Academy provides Scotland's up and coming rugby stars a dedicated focused routeway for development into the professional game. Entry is restricted to Scottish qualified students and both male and female entrants are accepted into 4 regional academies. The 2015-16 season sees the first year of the academy.

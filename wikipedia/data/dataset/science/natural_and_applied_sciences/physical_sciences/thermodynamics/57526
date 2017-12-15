@@ -1,0 +1,139 @@
+The Péclet number (Pe) is a class of dimensionless numbers relevant in the study of transport phenomena in a continuum. It is named after the French physicist Jean Claude Eugène Péclet. It is defined to be the ratio of the rate of advection of a physical quantity by the flow to the rate of diffusion of the same quantity driven by an appropriate gradient. In the context of species or mass transfer, the Péclet number is the product of the Reynolds number and the Schmidt number. In the context of the thermal fluids, the thermal Peclet number is equivalent to the product of the Reynolds number and the Prandtl number.
+The Péclet number is defined as:
+
+  
+    
+      
+        
+          P
+          e
+        
+        =
+        
+          
+            
+              advective transport rate
+              diffusive transport rate
+            
+          
+        
+      
+    
+    {\displaystyle \mathrm {Pe} ={\dfrac {\mbox{advective transport rate}}{\mbox{diffusive transport rate}}}}
+  
+For mass transfer, it is defined as:
+
+  
+    
+      
+        
+          
+            P
+            e
+          
+          
+            L
+          
+        
+        =
+        
+          
+            
+              L
+              u
+            
+            D
+          
+        
+        =
+        
+          
+            R
+            e
+          
+          
+            L
+          
+        
+        
+        
+          S
+          c
+        
+      
+    
+    {\displaystyle \mathrm {Pe} _{L}={\frac {Lu}{D}}=\mathrm {Re} _{L}\,\mathrm {Sc} }
+  
+For heat transfer, the Péclet number is defined as:
+
+  
+    
+      
+        
+          
+            P
+            e
+          
+          
+            L
+          
+        
+        =
+        
+          
+            
+              L
+              u
+            
+            α
+          
+        
+        =
+        
+          
+            R
+            e
+          
+          
+            L
+          
+        
+        
+        
+          P
+          r
+        
+        .
+      
+    
+    {\displaystyle \mathrm {Pe} _{L}={\frac {Lu}{\alpha }}=\mathrm {Re} _{L}\,\mathrm {Pr} .}
+  
+where L is the characteristic length, u the local flow velocity, D the mass diffusion coefficient, and α the thermal diffusivity,
+
+  
+    
+      
+        α
+        =
+        
+          
+            k
+            
+              ρ
+              
+                c
+                
+                  p
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle \alpha ={\frac {k}{\rho c_{p}}}}
+  
+where k is the thermal conductivity, ρ the density, and cp the heat capacity.
+In engineering applications the Péclet number is often very large. In such situations, the dependency of the flow upon downstream locations is diminished, and variables in the flow tend to become 'one-way' properties. Thus, when modelling certain situations with high Péclet numbers, simpler computational models can be adopted.
+A flow will often have different Péclet numbers for heat and mass. This can lead to the phenomenon of double diffusive convection.
+In the context of particulate motion the Péclet number has also been called Brenner number, with symbol Br, in honour of Howard Brenner.

@@ -1,0 +1,2 @@
+In cryptography, format-transforming encryption (FTE) refers to encryption where the format of the input plaintext and output ciphertext are configurable. Descriptions of formats can vary, but are typically compact set descriptors, such as a regular expression.
+Format-transforming encryption is closely related to, and a generalization of, format-preserving encryption.

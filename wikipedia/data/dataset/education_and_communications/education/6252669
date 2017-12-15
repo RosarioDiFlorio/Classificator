@@ -1,0 +1,4 @@
+In statistics, a central composite design is an experimental design, useful in response surface methodology, for building a second order (quadratic) model for the response variable without needing to use a complete three-level factorial experiment.
+After the designed experiment is performed, linear regression is used, sometimes iteratively, to obtain results. Coded variables are often used when constructing this design.
+
+

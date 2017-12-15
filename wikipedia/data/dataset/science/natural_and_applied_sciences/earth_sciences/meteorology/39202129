@@ -1,0 +1,4 @@
+The Navy Global Environmental Model (NAVGEM) is a global numerical weather prediction computer simulation run by the United States Navy's Fleet Numerical Meteorology and Oceanography Center. This mathematical model is run four times a day and produces weather forecasts. Along with the NWS's Global Forecast System, which runs out to 16 days, the ECMWF's Integrated Forecast System (IFS) and the CMC's Global Environmental Multiscale Model (GEM), both of which run out 10 days, and the UK Met Office's Unified Model, which runs out to 6 days, it is one of five synoptic scale medium-range models in general use.
+The NAVGEM became operational in February 2013, replacing the NOGAPS. It uses the same forecast range as the NOGAPS did (three-hour intervals out 180 hours) but also uses a refurbished dynamic core and improvements to the physics simulations compared to its predecessor.
+
+Official Website: http://www.usno.navy.mil/FNMOC

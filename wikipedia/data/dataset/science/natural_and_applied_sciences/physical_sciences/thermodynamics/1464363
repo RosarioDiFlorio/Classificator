@@ -1,0 +1,64 @@
+The heat transfer coefficient or film coefficient, or film effectiveness, in thermodynamics and in mechanics is the proportionality constant between the heat flux and the thermodynamic driving force for the flow of heat (i.e., the temperature difference, ΔT):
+The overall heat transfer by combined Modes is usually expressed on terms of an overall conductance or overall heat transfer coefficient 'U'.
+Heat transfer, Q=UA(T2-T1).
+
+  
+    
+      
+        h
+        =
+        
+          
+            q
+            
+              Δ
+              T
+            
+          
+        
+      
+    
+    {\displaystyle h={\frac {q}{\Delta T}}}
+  
+where:
+q: amount of heat transferred (heat flux), W/m2 i.e., thermal power per unit area, q = d
+  
+    
+      
+        
+          
+            
+              Q
+              ˙
+            
+          
+        
+      
+    
+    {\displaystyle {\dot {Q}}}
+  /dA
+h: heat transfer coefficient, W/(m2•K)
+ΔT: difference in temperature between the solid surface and surrounding fluid area, K.
+It is used in calculating the heat transfer, typically by convection or phase transition between a fluid and a solid. The heat transfer coefficient has SI units in watts per squared meter kelvin: W/(m2K).
+The heat transfer coefficient is the reciprocal of thermal insulance. This is used for building materials (R-value) and for clothing insulation.
+There are numerous methods for calculating the heat transfer coefficient in different heat transfer modes, different fluids, flow regimes, and under different thermohydraulic conditions. Often it can be estimated by dividing the thermal conductivity of the convection fluid by a length scale. The heat transfer coefficient is often calculated from the Nusselt number (a dimensionless number). There are also online calculators available specifically for heat transfer fluid applications. Experimental assessment of the heat transfer coefficient poses some challenges especially when small fluxes are to be measured (e.g. 
+  
+    
+      
+        <
+        0.2
+        W
+        
+          /
+        
+        c
+        
+          m
+          
+            2
+          
+        
+      
+    
+    {\displaystyle <0.2W/cm^{2}}
+  ).

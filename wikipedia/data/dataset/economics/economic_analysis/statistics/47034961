@@ -1,0 +1,1 @@
+In statistics The optimistic knowledge gradient is a new approximation policy proposed by Xi Chen, Qihang Lin and Dengyong Zhou in 2013. This policy is created to solve the challenge of computationally intractable of large size of optimal computing budget allocation problem in binary/multi-class crowd labeling where each label from the crowd has a certain cost.

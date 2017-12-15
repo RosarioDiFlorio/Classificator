@@ -1,0 +1,5 @@
+A disk enclosure is a specialized casing designed to hold and power disk drives while providing a mechanism to allow them to communicate to one or more separate computers.
+Drive enclosures provide power to the drives therein and convert the data sent across their native data bus into a format usable by an external connection on the computer to which it is connected. In some cases, the conversion is as trivial as carrying a signal between different connector types. In others, it is complicated enough to require a separate embedded system to retransmit data over connector and signal of a different standard.
+Factory-assembled external hard disk drives, external DVD-ROM drives, and others consist of a storage device in a disk enclosures.
+
+

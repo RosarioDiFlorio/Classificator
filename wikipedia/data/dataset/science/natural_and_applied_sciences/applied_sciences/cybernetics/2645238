@@ -1,0 +1,4 @@
+Central pattern generators (CPGs) are biological neural networks that produce rhythmic patterned outputs without sensory feedback. A CPG could be crudely analogized to the pendulum of a clock, generating a repeating signal at a constant frequency in order to coordinate rhythmic motions. CPGs have been shown to produce rhythmic outputs resembling normal "rhythmic motor pattern production" even in isolation from motor and sensory feedback from limbs and other muscle targets. To be classified as a rhythmic generator, a CPG requires:
+"two or more processes that interact such that each process sequentially increases and decreases, and
+that, as a result of this interaction, the system repeatedly returns to its starting condition.
+CPGs have been found in practically all vertebrate species investigated, including human.

@@ -1,0 +1,8 @@
+Contact dynamics deals with the motion of multibody systems subjected to unilateral contacts and friction. Such systems are omnipresent in many multibody dynamics applications. Consider for example
+Contacts between wheels and ground in vehicle dynamics
+Squealing of brakes due to friction induced oscillations
+Motion of many particles, spheres which fall in a funnel, mixing processes (granular media)
+Clockworks
+Walking machines
+Arbitrary machines with limit stops, friction.
+In the following it is discussed how such mechanical systems with unilateral contacts and friction can be modeled and how the time evolution of such systems can be obtained by numerical integration. In addition, some examples are given.

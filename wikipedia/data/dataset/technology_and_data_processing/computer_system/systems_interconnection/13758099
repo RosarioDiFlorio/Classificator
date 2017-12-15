@@ -1,0 +1,8 @@
+MIMIC Simulator is a product suite from Gambit Communications  consisting of simulation software in the network and systems management space.
+The MIMIC Simulator Suite has several components related to simulation of managed networks and data centers.
+MIMIC SNMP simulator solves a classical simulation problem: network management software typically manages large networks. Traditionally, in order to set up such networks for the purposes of software development, software testing or training, physical equipment had to be separately purchased and assembled in laboratories. To reduce the expense, most of the network can be simulated (e.g. see ).
+The principle behind SNMP simulation is that the SNMP protocol is an interface that can be simulated. SNMP requests carry data values for MIB objects, which can be shaped at will by the simulator, thus representing any device which has an SNMP interface. In contrast to network simulation, where the entire network is modelled within a computer, this type of empirical simulation is visible on the network, and one can communicate with the simulator over the network.
+The concept can be extended to other protocols such as for cable modems, CLI such as Cisco IOS (see ) or TL1, or IPMI.
+MIMIC IOS Simulator allows simulating the CLI protocol as encountered with Cisco IOS, JUNOS, TL/1. The low-end MIMIC Virtual Lab products   can be used for training for Cisco CCNA.
+MIMIC IPMI Simulator simulates the IPMI RMCP via LAN interface for high-end servers.
+MIMIC Web Simulator handles HTTP / SOAP / XML / WSDL interfaces for management via Web services.

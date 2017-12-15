@@ -1,0 +1,85 @@
+A NOON state is a quantum-mechanical many-body entangled state:
+
+  
+    
+      
+        
+          |
+        
+        
+          ψ
+          
+            NOON
+          
+        
+        ⟩
+        =
+        
+          
+            
+              
+                |
+              
+              N
+              
+                ⟩
+                
+                  a
+                
+              
+              
+                |
+              
+              0
+              
+                ⟩
+                
+                  b
+                
+              
+              +
+              
+                e
+                
+                  i
+                  N
+                  θ
+                
+              
+              
+                |
+              
+              
+                0
+              
+              
+                ⟩
+                
+                  a
+                
+              
+              
+                |
+              
+              
+                N
+              
+              
+                ⟩
+                
+                  b
+                
+              
+            
+            
+              2
+            
+          
+        
+        ,
+        
+      
+    
+    {\displaystyle |\psi _{\text{NOON}}\rangle ={\frac {|N\rangle _{a}|0\rangle _{b}+e^{iN\theta }|{0}\rangle _{a}|{N}\rangle _{b}}{\sqrt {2}}},\,}
+  
+which represents a superposition of N particles in mode a with zero particles in mode b, and vice versa. Usually, the particles are photons, but in principle any bosonic field can support NOON states.

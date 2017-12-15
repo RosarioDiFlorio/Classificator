@@ -1,0 +1,146 @@
+In mathematics, a jumping line or exceptional line of a vector bundle over projective space is a projective line in projective space where the vector bundle has exceptional behavior, in other words the structure of its restriction to the line "jumps". Jumping lines were introduced by R. L. E. Schwarzenberger (1961). The jumping lines of a vector bundle form a proper closed subset of the Grassmannian of all lines of projective space.
+The Birkhoff–Grothendieck theorem classifies the n-dimensional vector bundles over a projective line as corresponding to unordered n-tuples of integers. This phenomenon cannot be generalized to higher dimensional projective spaces, namely, one cannot decompose an arbitrary bundle in terms of a Whitney sum of powers of the Tautological bundle, or in fact of line bundles in general. Still one can gain information of this type by using the following method. Given a bundle on 
+  
+    
+      
+        
+          
+            C
+            P
+          
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \mathbb {CP} ^{n}}
+  , 
+  
+    
+      
+        
+          
+            E
+          
+        
+      
+    
+    {\displaystyle {\mathcal {E}}}
+  , we may take a line 
+  
+    
+      
+        L
+      
+    
+    {\displaystyle L}
+   in 
+  
+    
+      
+        
+          
+            C
+            P
+          
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \mathbb {CP} ^{n}}
+  , or equivalently, a 2-dimensional subspace of 
+  
+    
+      
+        
+          
+            C
+          
+          
+            n
+            +
+            1
+          
+        
+      
+    
+    {\displaystyle \mathbb {C} ^{n+1}}
+  . This forms a variety equivalent to 
+  
+    
+      
+        
+          
+            C
+            P
+          
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \mathbb {CP} ^{1}}
+   embedded in 
+  
+    
+      
+        
+          
+            C
+            P
+          
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \mathbb {CP} ^{n}}
+  , so we can the restriction of 
+  
+    
+      
+        
+          
+            
+              E
+            
+          
+          
+            L
+          
+        
+      
+    
+    {\displaystyle {\mathcal {E}}_{L}}
+   to 
+  
+    
+      
+        L
+      
+    
+    {\displaystyle L}
+  , and it will decompose by the Birkhoff–Grothendieck theorem as a sum of powers of the Tautological bundle. It can be shown that the unique tuple of integers specified by this splitting is the same for a 'generic' choice of line. More technically, there is a non-empty, open sub-variety of the Grassmannian of lines in 
+  
+    
+      
+        
+          
+            C
+            P
+          
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \mathbb {CP} ^{n}}
+  , with decomposition of the same type. Lines such that the decomposition differs from this generic type are called 'Jumping Lines'. One should note that if the bundle is generically trivial along lines, then the Jumping lines are precisely the lines such that the restriction is nontrivial.
+
+

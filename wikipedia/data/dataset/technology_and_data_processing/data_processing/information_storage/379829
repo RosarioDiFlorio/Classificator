@@ -1,0 +1,18 @@
+The White Book refers to a standard of compact disc that stores not only sound but also still pictures and motion video. It was released in 1993 by Sony, Philips, Matsushita, and JVC. These discs, most commonly found in Asia, are usually called "Video CDs" (VCD). In some ways, VCD can be thought of as the successor to the Laserdisc and the predecessor to DVD. Note that Video CD should not be confused with CD Video which was an earlier and entirely different format.
+Several extensions to the White Book were published in later years: VCD 2.0 in 1995, VCD-Internet in 1997, and Super Video CD (SVCD) in 1998. The standard is not freely available and must be licensed from Philips.
+The White Book also defines the more general CD-i Bridge format (also called CD-Bridge or simply "bridge discs"), which are CD-ROM XA discs with an additional Green Book CD-i specific application program. The CD-ROM XA information in bridge discs can be obtained through CD-ROM drives, while CD-i players can use the CD-i program to read bridge discs as well (hence the "bridge" status between CD-ROMs and CD-i discs). Bridge discs must conform to both the CD-ROM XA and Green Book CD-i specifications. VCDs and SVCDs fall under the category of bridge discs, as do Photo CDs and Karaoke CDs.
+The following is a summary of the specifications for VCDs and SVCDs. For more details, see Video CD and Super Video CD.
+File system: ISO 9660-compliant
+Format: Mode 2, Form 2/XA
+Maximum Length: Usually 74 minutes
+Audio Format
+Format: MPEG-1 Audio Layer II
+Bit rate: 224 kilobits per second
+Sample rate: 44,100 Hz
+Number of Channels: 2 (stereo)
+
+Video Format
+Format: MPEG-1 Part 2 (VCD), H.262/MPEG-2 Part 2 (SVCD)
+Resolution: 352×240 pixel for NTSC video, 352×288 pixel for PAL video (VCD); 480×480 pixel for NTSC video, 480×576 for PAL video (SVCD)
+Frame rate: 29.97 Hz (NTSC), 25 Hz (PAL)
+Bit rate: About 1.13 Mbit/s

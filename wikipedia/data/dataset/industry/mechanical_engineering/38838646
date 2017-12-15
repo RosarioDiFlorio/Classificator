@@ -1,0 +1,339 @@
+In mathematics, an autonomous system is a dynamic equation on a smooth manifold. A non-autonomous system is a dynamic equation on a smooth fiber bundle 
+  
+    
+      
+        Q
+        →
+        
+          R
+        
+      
+    
+    {\displaystyle Q\to \mathbb {R} }
+   over 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  . For instance, this is the case of non-autonomous mechanics.
+An r-order differential equation on a fiber bundle 
+  
+    
+      
+        Q
+        →
+        
+          R
+        
+      
+    
+    {\displaystyle Q\to \mathbb {R} }
+   is represented by a closed subbundle of a jet bundle 
+  
+    
+      
+        
+          J
+          
+            r
+          
+        
+        Q
+      
+    
+    {\displaystyle J^{r}Q}
+   of 
+  
+    
+      
+        Q
+        →
+        
+          R
+        
+      
+    
+    {\displaystyle Q\to \mathbb {R} }
+  . A dynamic equation on 
+  
+    
+      
+        Q
+        →
+        
+          R
+        
+      
+    
+    {\displaystyle Q\to \mathbb {R} }
+   is a differential equation which is algebraically solved for a higher-order derivatives.
+In particular, a first-order dynamic equation on a fiber bundle 
+  
+    
+      
+        Q
+        →
+        
+          R
+        
+      
+    
+    {\displaystyle Q\to \mathbb {R} }
+   is a kernel of the covariant differential of some connection 
+  
+    
+      
+        Γ
+      
+    
+    {\displaystyle \Gamma }
+   on 
+  
+    
+      
+        Q
+        →
+        
+          R
+        
+      
+    
+    {\displaystyle Q\to \mathbb {R} }
+  . Given bundle coordinates 
+  
+    
+      
+        (
+        t
+        ,
+        
+          q
+          
+            i
+          
+        
+        )
+      
+    
+    {\displaystyle (t,q^{i})}
+   on 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+   and the adapted coordinates 
+  
+    
+      
+        (
+        t
+        ,
+        
+          q
+          
+            i
+          
+        
+        ,
+        
+          q
+          
+            t
+          
+          
+            i
+          
+        
+        )
+      
+    
+    {\displaystyle (t,q^{i},q_{t}^{i})}
+   on a first-order jet manifold 
+  
+    
+      
+        
+          J
+          
+            1
+          
+        
+        Q
+      
+    
+    {\displaystyle J^{1}Q}
+  , a first-order dynamic equation reads
+
+  
+    
+      
+        
+          q
+          
+            t
+          
+          
+            i
+          
+        
+        =
+        Γ
+        (
+        t
+        ,
+        
+          q
+          
+            i
+          
+        
+        )
+        .
+      
+    
+    {\displaystyle q_{t}^{i}=\Gamma (t,q^{i}).}
+  
+For instance, this is the case of Hamiltonian non-autonomous mechanics.
+A second-order dynamic equation
+
+  
+    
+      
+        
+          q
+          
+            t
+            t
+          
+          
+            i
+          
+        
+        =
+        
+          ξ
+          
+            i
+          
+        
+        (
+        t
+        ,
+        
+          q
+          
+            j
+          
+        
+        ,
+        
+          q
+          
+            t
+          
+          
+            j
+          
+        
+        )
+      
+    
+    {\displaystyle q_{tt}^{i}=\xi ^{i}(t,q^{j},q_{t}^{j})}
+  
+on 
+  
+    
+      
+        Q
+        →
+        
+          R
+        
+      
+    
+    {\displaystyle Q\to \mathbb {R} }
+   is defined as a holonomic connection 
+  
+    
+      
+        ξ
+      
+    
+    {\displaystyle \xi }
+   on a jet bundle 
+  
+    
+      
+        
+          J
+          
+            1
+          
+        
+        Q
+        →
+        
+          R
+        
+      
+    
+    {\displaystyle J^{1}Q\to \mathbb {R} }
+  . This equation also is represented by a connection on an affine jet bundle 
+  
+    
+      
+        
+          J
+          
+            1
+          
+        
+        Q
+        →
+        Q
+      
+    
+    {\displaystyle J^{1}Q\to Q}
+  . Due to the canonical imbedding 
+  
+    
+      
+        
+          J
+          
+            1
+          
+        
+        Q
+        →
+        T
+        Q
+      
+    
+    {\displaystyle J^{1}Q\to TQ}
+  , it is equivalent to a geodesic equation on the tangent bundle 
+  
+    
+      
+        T
+        Q
+      
+    
+    {\displaystyle TQ}
+   of 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  . A free motion equation in non-autonomous mechanics exemplifies a second-order non-autonomous dynamic equation.

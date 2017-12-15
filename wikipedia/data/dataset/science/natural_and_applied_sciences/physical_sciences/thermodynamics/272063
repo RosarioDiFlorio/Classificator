@@ -1,0 +1,3 @@
+In thermodynamics, a component is a chemically-independent constituent of a system. The number of components represents the minimum number of independent species necessary to define the composition of all phases of the system.
+Calculating the number of components in a system is necessary, for example, when applying Gibbs' phase rule in determination of the number of degrees of freedom of a system.
+The number of components is equal to the number of distinct chemical species (constituents), minus the number of chemical reactions between them, minus the number of any constraints (like charge neutrality or balance of molar quantities).

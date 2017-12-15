@@ -1,0 +1,3 @@
+CEA-936-A (USB Carkit Specification) is a CEA standard to allow the use of a mini-USB connector for UART and analog audio signals. It is intended to allow connection of a mobile phone to analog hands-free car kits, chargers, and other RS-232 devices.
+From the mobile phone side, the USB D- wire is used as either the USB D- signal, the UART Transmit data signal, the left stereo speaker audio channel, or the mono speaker audio channel, and the USB D+ wire is used as either the USB D+ signal, the UART Receive data signal, the right stereo speaker audio channel, or the mono microphone audio channel.
+carkit specification also finds optional support in ULPI specification for off chip USB Physical layer ICs.

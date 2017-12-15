@@ -1,0 +1,4 @@
+A piconet is an ad hoc network that links a wireless user group of devices using Bluetooth technology protocols. A piconet consists of two or more devices occupying the same physical channel (synchronized to a common clock and hopping sequence). It allows one master device to interconnect with up to seven active slave devices. Up to 255 further slave devices can be inactive, or parked, which the master device can bring into active status at any time, but an active station must go into parked first.
+Some examples of piconets include a cell phone connected to a computer, a laptop and a Bluetooth-enabled digital camera, or several PDAs that are connected to each other.
+
+

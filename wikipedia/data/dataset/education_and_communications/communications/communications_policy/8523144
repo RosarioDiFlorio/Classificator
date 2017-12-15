@@ -1,0 +1,2 @@
+Conditional text is content within a document that is meant to appear in some renditions of the document, but not other renditions.
+For example, a writer can produce Macintosh and Windows versions of the same software manual by marking Macintosh-specific content as "Macintosh only" and Windows-specific content as "Windows only." Everything that is not marked for one platform or the other, appears in the manuals for both platforms.

@@ -1,0 +1,16 @@
+SECU-3 is an internal combustion engine control unit. Open source project (drawings, schematic diagrams, source code etc. are open). Anyone can take part in the project and can access all information without registration.
+Device controls the ignition, fuel injection and various other actuators of the internal combustion engine (ICE) and vehicle. In particular, it is capable of controlling the carburetor's choke using a stepper motor (auto choke), thus controlling RPM when engine is warming up. Manages AFR on the carburetor (like AXTEC AFR systems), idle cut off and power valve on carburetor, electric fuel pump, stepper gas valve with oxygen sensor loopback etc. Unique opportunities for reassigning the I/O functions. Smooth speed control of the cooling fan motor. The ability to edit the main settings and maps in real time (when engine is running) and switching between 2 or 4 sets of maps. And other features and functions (see below).
+Currently, there are five modifications of the unit:
+SECU-3. The first version of the unit developed in 2007, controls ignition, cooling fan and some other functions. In the latest software releases, support for this unit has stopped. History of the SECU-3 versions with photos is here
+SECU-3T. It can control the ignition and fuel injection. It does not contain built-in power drivers for ignition coils, fuel injectors and idling air control (IAC) valve. It is necessary to use external drivers.
+SECU-3L. It designed for ignition control only and it can be viewed as a lightweight version of the SECU-3T unit. It contains built-in drivers for ignition coils and manifold absolute pressure (MAP) sensor. It is fully software compatible with SECU-3T unit.
+SECU-3 Micro. Very simple and budgetary ignition controller unit in small plastic enclosure. Has only few inputs and outputs and doesn't contain built-in power drivers for ignition coils. It is the simplest SECU-3 unit.
+SECU-3i. Full-featured, complete engine management system in metallic enclosure with integrated power drivers (for ignition coils, injectors, IAC actuator etc.), extended number of I/O and Bluetooth. The latest author's development. This unit has two boards design.
+Device performed on the 8-bit AVR microcontroller ATMega644, with 64kB memory (ROM), 4kB random access memory (RAM), and operates at a clock frequency of 20 MHz. It includes analog and digital inputs, chip for preprocessing signal from the knock sensor (KS) (except SECU-3 Lite and Micro units), a signal conditioner for reference VR sensor (except SECU-3 Micro unit), a signal conditioner for the crankshaft position (CKP) sensor, interface with a computer and outputs for actuators control.
+Structural diagram of the system with SECU-3T unit:
+
+Structural diagram of the system with SECU-3L unit is shown on the following picture:
+
+Structural diagram of the system with SECU-3 Micro unit:
+
+Example of wiring diagram of the SECU-3T unit for controlling of simultaneous or semi-sequential fuel injection on the 4-cylinder engine is shown on the picture below. Hi-z injectors and stepper IAC valve are used. On the right side of picture we can see external connector functions which should be remapped to specified values. It is done in the SECU-3 Manager software.

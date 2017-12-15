@@ -1,0 +1,9 @@
+The Index to Marine & Lacustrine Geological Samples is a collaboration between twenty institutions and agencies that operate geological sample repositories. The purpose of the database is to help researchers locate sea floor and lakebed cores, grabs, dredges, and drill samples in their collections.
+
+Sample material is available from participating institutions.
+Data include basic collection and storage information. Lithology, texture, age, principal investigator, province, weathering/metamorphism, glass remarks, and descriptive comments are included for some samples. Links are provided to related data and information at the institutions and at NGDC.
+Data are coded by individual institutions, several of which receive funding from the US National Science Foundation. For more information see the NSF Division of Ocean Sciences Data and Sample Policy.
+The Index is endorsed by the Intergovernmental Oceanographic Commission, Committee on International Oceanographic Data and Information Exchange (IODE-XIV.2).
+The index is maintained by the National Geophysical Data Center (NGDC) and collocated World Data Center for Marine Geology & Geophysics, Boulder, Colorado. NGDC is part of the National Environmental Satellite, Data and Information Service of the National Oceanic & Atmospheric Administration, U. S. Department of Commerce.
+Searches and data downloads are available via a JSP and an ArcIMS interface. Data selections can be downloaded in tab-delimited or shapefile form, depending on the interface used. Both WMS and WFS interfaces are also available.
+The Index was created in 1977 in response to a meeting of Curators of Marine Geological Samples, sponsored by the U.S. National Science Foundation. The Curators' group continues to meet every 2–3 years.

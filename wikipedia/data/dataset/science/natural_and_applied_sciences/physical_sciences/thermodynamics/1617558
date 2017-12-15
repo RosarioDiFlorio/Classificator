@@ -1,0 +1,8 @@
+In thermodynamics, Bridgman's thermodynamic equations are a basic set of thermodynamic equations, derived using a method of generating a large number of thermodynamic identities involving a number of thermodynamic quantities. The equations are named after the American physicist Percy Williams Bridgman. (See also the exact differential article for general differential relationships).
+The extensive variables of the system are fundamental. Only the entropy S , the volume V  and the four most common thermodynamic potentials will be considered. The four most common thermodynamic potentials are:
+
+The first derivatives of the internal energy with respect to its (extensive) natural variables S  and V  yields the intensive parameters of the system - The pressure P  and the temperature T . For a simple system in which the particle numbers are constant, the second derivatives of the thermodynamic potentials can all be expressed in terms of only three material properties
+
+Bridgman's equations are a series of relationships between all of the above quantities.
+
+

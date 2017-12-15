@@ -1,0 +1,4 @@
+Ahmia is a clearnet search engine for Tor's hidden services created by Juha Nurmi.
+Developed during the 2014 Google Summer of Code with support from the Tor Project, the open source search engine was initially built in Django and PostgreSQL. The site filters out child pornography.
+The service partners with GlobaLeaks's submissions and Tor2web statistics for hidden service discovery and as of July 2015 has indexed about 5000 sites.
+In July 2015 the site published a list of hundreds fraudulent onion links of major dark web pages including DuckDuckGo.

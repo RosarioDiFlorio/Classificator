@@ -1,0 +1,7 @@
+LBCAST (lateral buried charge accumulator and sensing transistor array) is a type of photo sensor which the manufacturer claims is simpler and thus smaller and faster than CMOS sensors. It was developed over ten years by Nikon, in parallel with other manufacturer's development of CMOS, and resulted in shipping product in 2003.
+Both CMOS and LBCAST technologies branched from researchers discussions of "amplifying sensors" as a way to develop an imaging sensor with lower power requirements than the already-existing CCD sensor technology, for use in portable devices such as DSLR cameras.
+From the Nikon Website:
+"In July 2003, Nikon introduced LBCAST- a completely new type of image sensor, different from CCD and CMOS, that is a high-speed, power-efficient, low-noise device to be installed in Nikon's flagship camera, the D2Hs."
+"... Compared with conventional sensors, it saves more power and achieves less dark noise. (Dark noise is a phenomenon in which randomly spaced bright pixels appear in images due to the heat from the image device during shooting). Also, LBCAST increases image processing speed and improves sensitivity, contrast and color reproduction."
+
+

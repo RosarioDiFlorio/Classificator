@@ -1,0 +1,3 @@
+The constant altitude plan position indicator, better known as CAPPI, is a radar display which gives a horizontal cross-section of data at constant altitude. It has been developed by McGill University in Montreal by the Stormy Weather Group to circumvent some problems with the PPI:
+Altitude changing with distance to the radar.
+Ground echoes problems near the radar.

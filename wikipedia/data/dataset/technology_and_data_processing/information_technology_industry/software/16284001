@@ -1,0 +1,1 @@
+A signed overpunch is a code used to store the sign of a number by changing the last digit. It is used in COBOL, especially when using EBCDIC. Its purpose is to save a character that would otherwise be used by the sign digit. The code is derived from the Hollerith Punched Card Code, where both a digit and a sign can be entered in the same card column.

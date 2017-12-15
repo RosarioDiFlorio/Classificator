@@ -1,0 +1,12 @@
+A fishery is an area with an associated fish or aquatic population which is harvested for its commercial or recreational value. Fisheries can be wild or farmed. Population dynamics describes the ways in which a given population grows and shrinks over time, as controlled by birth, death, and migration. It is the basis for understanding changing fishery patterns and issues such as habitat destruction, predation and optimal harvesting rates. The population dynamics of fisheries is used by fisheries scientists to determine sustainable yields.
+The basic accounting relation for population dynamics is the BIDE (Birth, Immigration, Death, Emigration) model, shown as:
+N1 = N0 + B − D + I − E
+where N1 is the number of individuals at time 1, N0 is the number of individuals at time 0, B is the number of individuals born, D the number that died, I the number that immigrated, and E the number that emigrated between time 0 and time 1. While immigration and emigration can be present in wild fisheries, they are usually not measured.
+A fishery population is affected by three dynamic rate functions:
+Birth rate or recruitment. Recruitment means reaching a certain size or reproductive stage. With fisheries, recruitment usually refers to the age a fish can be caught and counted in nets.
+Growth rate. This measures the growth of individuals in size and length. This is important in fisheries where the population is often measured in terms of biomass.
+Mortality. This includes harvest mortality and natural mortality. Natural mortality includes non-human predation, disease and old age.
+If these rates are measured over different time intervals, the harvestable surplus of a fishery can be determined. The harvestable surplus is the number of individuals that can be harvested from the population without affecting long term stability (average population size). The harvest within the harvestable surplus is called compensatory mortality, where the harvest deaths are substituting for the deaths that would otherwise occur naturally. Harvest beyond that is additive mortality, harvest in addition to all the animals that would have died naturally.
+Care is needed when applying population dynamics to real world fisheries. Over-simplistic modelling of fisheries has resulted in the collapse of key stocks.
+
+

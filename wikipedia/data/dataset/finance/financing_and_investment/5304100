@@ -1,0 +1,6 @@
+In options trading, a box spread is a combination of positions that has a certain (i.e. riskless) payoff, considered to be simply "delta neutral interest rate position". For example, a bull spread constructed from calls (e.g. long a 50 call, short a 60 call) combined with a bear spread constructed from puts (e.g. long a 60 put, short a 50 put) has a constant payoff of the difference in exercise prices (e.g. 10) assuming that the underlying stock does not go ex-dividend before the expiration of the options. If the underlying asset has a dividend of x, then the settled value of the box will be 10+x. Under the no-arbitrage assumption, the net premium paid out to acquire this position should be equal to the present value of the payoff.
+They are often called "alligator spreads" because the commissions eat up all your profit due to the large number of trades required for most box spreads.
+The box-spread usually combines two pairs of options; its name derives from the fact that the prices for these options form a rectangular box in two columns of a quotation.
+A similar trading strategy specific to futures trading is also known as a box or double butterfly spread.
+
+

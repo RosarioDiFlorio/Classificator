@@ -1,0 +1,69 @@
+The von Mises yield criterion  (also known as the Maximum Distortion Energy Theory of Failure) suggests that yielding of a ductile material begins when the second deviatoric stress invariant 
+  
+    
+      
+        
+          J
+          
+            2
+          
+        
+      
+    
+    {\displaystyle J_{2}}
+   reaches a critical value. It is part of plasticity theory that applies best to ductile materials, such as some metals. Prior to yield, material response can be assumed to be of a nonlinear elastic, viscoelastic or linear elastic behavior.
+In materials science and engineering the von Mises yield criterion can be also formulated in terms of the von Mises stress or equivalent tensile stress, 
+  
+    
+      
+        
+          σ
+          
+            v
+          
+        
+      
+    
+    {\displaystyle \sigma _{v}}
+  . This is a scalar value of stress that can be computed from the Cauchy stress tensor. In this case, a material is said to start yielding when the von Mises stress reaches a value known as yield strength, 
+  
+    
+      
+        
+          σ
+          
+            y
+          
+        
+      
+    
+    {\displaystyle \sigma _{y}}
+  . The von Mises stress is used to predict yielding of materials under complex loading from the results of uniaxial tensile tests. The von Mises stress satisfies the property where two stress states with equal distortion energy have an equal von Mises stress.
+Because the von Mises yield criterion is independent of the first stress invariant, 
+  
+    
+      
+        
+          I
+          
+            1
+          
+        
+      
+    
+    {\displaystyle I_{1}}
+  , it is applicable for the analysis of plastic deformation for ductile materials such as metals, as onset of yield for these materials does not depend on the hydrostatic component of the stress tensor.
+Although it has been believed it was formulated by James Clerk Maxwell in 1865, Maxwell only described the general conditions in a letter to William Thomson (Lord Kelvin). Richard Edler von Mises rigorously formulated it in(1913). Tytus Maksymilian Huber (1904), in a paper in Polish, anticipated to some extent this criterion, nevertheless relied on the total strain energy, not on second deviatoric stress invariant 
+  
+    
+      
+        
+          J
+          
+            2
+          
+        
+      
+    
+    {\displaystyle J_{2}}
+   or distortion strain energy. Heinrich Hencky formulated the same criterion as von Mises independently in (1924). For the above reasons this criterion is also referred to as the Maxwell–Huber–Hencky–von Mises theory.

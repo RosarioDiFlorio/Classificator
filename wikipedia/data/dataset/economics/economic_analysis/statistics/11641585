@@ -1,0 +1,5 @@
+In Bayesian statistics, a hyperparameter is a parameter of a prior distribution; the term is used to distinguish them from parameters of the model for the underlying system under analysis.
+For example, if one is using a beta distribution to model the distribution of the parameter p of a Bernoulli distribution, then:
+p is a parameter of the underlying system (Bernoulli distribution), and
+α and β are parameters of the prior distribution (beta distribution), hence hyperparameters.
+One may take a single value for a given hyperparameter, or one can iterate and take a probability distribution on the hyperparameter itself, called a hyperprior.

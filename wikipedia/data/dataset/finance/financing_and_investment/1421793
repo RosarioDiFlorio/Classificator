@@ -1,0 +1,2 @@
+With regard to futures contracts as well as other financial instruments, slippage is the difference between where the computer signaled the entry and exit for a trade and where actual clients, with actual money, entered and exited the market using the computer’s signals. Market-impacted, liquidity, and frictional costs may also contribute.
+Algorithmic trading is often used to reduce slippage, and algorithms can be backtested on past data to see the effects of slippage, but it’s impossible to eliminate entirely.

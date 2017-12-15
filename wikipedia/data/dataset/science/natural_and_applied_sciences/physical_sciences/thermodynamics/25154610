@@ -1,0 +1,95 @@
+The method of sorption calorimetry is designed for studies of hydration of complex organic and biological materials. It has been applied for studies of surfactants, lipids, DNA, nanomaterials and other substances. A sorption calorimetric experiment is performed at isothermal regime, but different temperatures can be studied in separate experiments.
+In a sorption calorimetric experiment, a two-chamber calorimetric cell is inserted into a double-twin microcalorimeter. Water evaporates, diffuses through the tube connecting two chambers of the calorimetric cell and is absorbed by the studied substance.
+
+The amount of evaporated water is calculated from the thermal power registered in the vaporisation chamber:
+
+  
+    
+      
+        
+          n
+          
+            w
+          
+        
+        =
+        
+          
+            
+              ∫
+              
+                
+                  P
+                  
+                    v
+                    a
+                    p
+                  
+                
+                d
+                t
+              
+            
+            
+              H
+              
+                w
+              
+              
+                v
+                a
+                p
+              
+            
+          
+        
+      
+    
+    {\displaystyle n_{w}={\frac {\int {P^{vap}dt}}{H_{w}^{vap}}}}
+  
+From the same data, the activity of water in the sample can also be calculated:
+
+  
+    
+      
+        
+          a
+          
+            w
+          
+        
+        =
+        1
+        −
+        
+          
+            
+              P
+              
+                v
+                a
+                p
+              
+            
+            
+              P
+              
+                m
+                a
+                x
+              
+              
+                v
+                a
+                p
+              
+            
+          
+        
+      
+    
+    {\displaystyle a_{w}=1-{\frac {P^{vap}}{P_{max}^{vap}}}}
+  
+
+From the thermal powers registered in the two chambers one can calculate the partial molar enthalpy of mixing of water. During the sorption experiment the water content in the sample increases until it reaches a value high enough to make the process of diffusion of water vapor between the chambers very slow. Then the sorption experiment can be stopped.
+For studies of hydration at very high relative humidities, a special modification of the method of sorption calorimetry – the desorption calorimetric method  – was developed. A desorption experiment starts with a fully hydrated sample which is placed in the sample chamber (the top chamber in the figure). In the bottom chamber a salt solution is injected. During the desorption experiment the sample is being slowly dehydrated and the salt solution takes up the water evaporated from the sample.

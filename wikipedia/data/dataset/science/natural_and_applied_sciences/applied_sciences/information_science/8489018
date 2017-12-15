@@ -1,0 +1,10 @@
+The region connection calculus (RCC) is intended to serve for qualitative spatial representation and reasoning. RCC abstractly describes regions (in Euclidean space, or in a topological space) by their possible relations to each other. RCC8 consists of 8 basic relations that are possible between two regions:
+disconnected (DC)
+externally connected (EC)
+equal (EQ)
+partially overlapping (PO)
+tangential proper part (TPP)
+tangential proper part inverse (TPPi)
+non-tangential proper part (NTPP)
+non-tangential proper part inverse (NTPPi)
+From these basic relations, combinations can be built. For example, proper part (PP) is the union of TPP and NTPP.

@@ -1,0 +1,1 @@
+Magma is a distributed file system based on a distributed hash table, written in C, compatible with Linux and BSD kernels using FUSE.

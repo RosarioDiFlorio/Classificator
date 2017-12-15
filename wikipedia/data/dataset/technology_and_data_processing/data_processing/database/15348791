@@ -1,0 +1,6 @@
+Transaction data are data describing an event (the change as a result of a transaction) and is usually described with verbs. Transaction data always has a time dimension, a numerical value and refers to one or more objects (i.e. the reference data).
+Typical transactions are:
+Financial: orders, invoices, payments
+Work: Plans, activity records
+Logistics: Deliveries, storage records, travel records, etc.
+Typical transaction processing systems (systems generating transactions) are SAP and Oracle Financials.

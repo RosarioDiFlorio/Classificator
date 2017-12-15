@@ -1,0 +1,7 @@
+In computing, the Distributed Computing Environment (DCE) software system was developed in the early 1990s from the work of the Open Software Foundation (OSF), a consortium (founded in 1988) that included Apollo Computer (part of Hewlett-Packard from 1989), IBM, Digital Equipment Corporation, and others. The DCE supplies a framework and a toolkit for developing client/server applications. The framework includes:
+a remote procedure call (RPC) mechanism known as DCE/RPC
+a naming (directory) service
+a time service
+an authentication service
+a distributed file system (DFS) known as DCE/DFS
+DCE represented a big step in the direction of standardisation of architectures, which had previously been manufacturer-dependent. Like the OSI model, DCE has not seen much success in practical implementation; however, its underlying concepts have had more substantial influence over subsequent efforts.

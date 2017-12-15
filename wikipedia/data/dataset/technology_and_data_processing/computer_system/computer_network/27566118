@@ -1,0 +1,2 @@
+VisAD is a Java component library for interactive and collaborative visualization and analysis of numerical data. It combines a flexible data model and distributed objects (via Java RMI) to support sharing of data, visualizations and user interfaces between different data sources, different computers and different scientific disciplines. It is licensed under the GNU LGPL.
+VisAD is the basis of the Integrated Data Viewer, McIDAS V and other systems.

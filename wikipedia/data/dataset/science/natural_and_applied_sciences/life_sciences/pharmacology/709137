@@ -1,0 +1,14 @@
+Cytochromes P450 (CYPs) are proteins of the superfamily containing heme as a cofactor and, therefore, are hemoproteins. CYPs use a variety of small and large molecules as substrates in enzymatic reactions. They are, in general, the terminal oxidase enzymes in electron transfer chains, broadly categorized as P450-containing systems. The term "P450" is derived from the spectrophotometric peak at the wavelength of the absorption maximum of the enzyme (450 nm) when it is in the reduced state and complexed with carbon monoxide.
+CYP enzymes have been identified in all kingdoms of life: animals, plants, fungi, protists, bacteria, archaea, and even in viruses. However, they are not omnipresent; for example, they have not been found in Escherichia coli. More than 50,000 distinct CYP proteins are known.
+Most CYPs require a protein partner to deliver one or more electrons to reduce the iron (and eventually molecular oxygen). Based on the nature of the electron transfer proteins, CYPs can be classified into several groups:
+Microsomal P450 systems, in which electrons are transferred from NADPH via cytochrome P450 reductase (variously CPR, POR, or CYPOR). Cytochrome b5 (cyb5) can also contribute reducing power to this system after being reduced by cytochrome b5 reductase (CYB5R).
+Mitochondrial P450 systems, which employ adrenodoxin reductase and adrenodoxin to transfer electrons from NADPH to P450.
+Bacterial P450 systems, which employ a ferredoxin reductase and a ferredoxin to transfer electrons to P450.
+CYB5R/cyb5/P450 systems, in which both electrons required by the CYP come from cytochrome b5.
+FMN/Fd/P450 systems, originally found in Rhodococcus species, in which a FMN-domain-containing reductase is fused to the CYP.
+P450 only systems, which do not require external reducing power. Notable ones include thromboxane synthase (CYP5), prostacyclin synthase (CYP8), and CYP74A (allene oxide synthase).
+The most common reaction catalyzed by cytochromes P450 is a monooxygenase reaction, e.g., insertion of one atom of oxygen into the aliphatic position of an organic substrate (RH) while the other oxygen atom is reduced to water:
+
+RH + O2 + NADPH + H+ → ROH + H2O + NADP+
+
+Many hydroxylation reactions (insertion of hydroxyl groups) use CYP enzymes.

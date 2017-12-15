@@ -1,0 +1,56 @@
+The Manning formula is also known as the Gauckler–Manning formula, or Gauckler–Manning–Strickler formula in Europe. In the United States, in practice, it is very frequently called simply Manning's equation. The Manning formula is an empirical formula estimating the average velocity of a liquid flowing in a conduit that does not completely enclose the liquid, i.e., open channel flow. However, this equation is also used for calculation of flow variables in case of flow in partially full conduits, as they also possess a free surface like that of open channel flow. All flow in so-called open channels is driven by gravity. It was first presented by the French engineer Philippe Gauckler in 1867, and later re-developed by the Irish engineer Robert Manning in 1890.
+The Gauckler–Manning formula states:
+
+  
+    
+      
+        V
+        =
+        
+          
+            k
+            n
+          
+        
+        
+          
+            
+              R
+              
+                h
+              
+            
+          
+          
+            2
+            
+              /
+            
+            3
+          
+        
+        
+        
+          S
+          
+            1
+            
+              /
+            
+            2
+          
+        
+      
+    
+    {\displaystyle V={\frac {k}{n}}{R_{h}}^{2/3}\,S^{1/2}}
+  
+where:
+V is the cross-sectional average velocity (L/T; ft/s, m/s);
+n is the Gauckler–Manning coefficient. Units for values of n are often left off, however it is not dimensionless, having units of: (T/[L1/3]; s/[ft1/3]; s/[m1/3]).
+Rh is the hydraulic radius (L; ft, m);
+S is the slope of the hydraulic grade line or the linear hydraulic head loss (L/L), which is the same as the channel bed slope when the water depth is constant. (S = hf/L).
+k is a conversion factor between SI and English units. It can be left off, as long as you make sure to note and correct the units in your "n" term. If you leave "n" in the traditional SI units, k is just the dimensional analysis to convert to English. k=1 for SI units, and k=1.49 for English units. (Note: (1 m)1/3/s = (3.2808399 ft) 1/3/s = 1.4859 ft1/3/s)
+NOTE: Ks strickler = 1/n manning. The coefficient Ks strickler varies from 20 (rough stone and rough surface) to 80 m1/3/s (smooth concrete and cast iron).
+The discharge formula, Q = A V, can be used to manipulate Gauckler–Manning's equation by substitution for V. Solving for Q then allows an estimate of the volumetric flow rate (discharge) without knowing the limiting or actual flow velocity.
+The Gauckler–Manning formula is used to estimate the average velocity of water flowing in an open channel in locations where it is not practical to construct a weir or flume to measure flow with greater accuracy. The friction coefficients across weirs and orifices are less subjective than n along a natural (earthen, stone or vegetated) channel reach. Cross sectional area, as well as n', will likely vary along a natural channel. Accordingly, more error is expected in estimating the average velocity by assuming a Manning's n, than by direct sampling (i.e., with a current flowmeter), or measuring it across weirs, flumes or orifices. Manning's equation is also commonly used as part of a numerical step method, such as the standard step method, for delineating the free surface profile of water flowing in an open channel.
+The formula can be obtained by use of dimensional analysis. Recently this formula was derived theoretically using the phenomenological theory of turbulence.

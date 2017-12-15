@@ -1,0 +1,5 @@
+Fisheye is a revision-control browser and search engine owned by Atlassian, Inc. Although Fisheye is a commercial product, it is freely available to open source projects and non-profit institutions. In addition to the advanced search and diff capabilities, it provides:
+the notion of changelog and changesets - even if the underlying version control system (such as CVS) does not support this
+direct, resource-based URLs down to line-number level
+monitoring and user-level notifications via e-mail or RSS
+However, it lacks some basic capabilities that exist in other revision-control browsers (e.g. Trac, Redmine) such as being able to compare different revisions of a folder or compare two folders (such as branches and tags). This is widely seen as a critical omission and vastly reduces Fisheye's usefulness as a tool for managing the software release process.

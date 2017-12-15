@@ -1,0 +1,9 @@
+Compositional pattern-producing networks (CPPNs) are a variation of artificial neural networks (ANNs) that have an architecture whose evolution is guided by genetic algorithms.
+While ANNs often contain only sigmoid functions and sometimes Gaussian functions, CPPNs can include both types of functions and many others. The choice of functions for the canonical set can be biased toward specific types of patterns and regularities. For example, periodic functions such as sine produce segmented patterns with repetitions, while symmetric functions such as Gaussian produce symmetric patterns. Linear functions can be employed to produce linear or fractal-like patterns. Thus, the architect of a CPPN-based genetic art system can bias the types of patterns it generates by deciding the set of canonical functions to include.
+Furthermore, unlike typical ANNs, CPPNs are applied across the entire space of possible inputs so that they can represent a complete image. Since they are compositions of functions, CPPNs in effect encode images at infinite resolution and can be sampled for a particular display at whatever resolution is optimal.
+CPPNs can be evolved through neuroevolution techniques such as neuroevolution of augmenting topologies (called CPPN-NEAT).
+CPPNs have been shown to be a very powerful encoding when evolving the following:
+Neural networks, via the HyperNEAT algorithm,
+2D images, on "PicBreeder.org",
+3D objects, on "EndlessForms.com",
+Robot morphologies Rigid Robots Soft Robots.

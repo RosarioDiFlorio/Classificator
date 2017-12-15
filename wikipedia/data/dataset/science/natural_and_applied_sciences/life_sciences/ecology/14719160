@@ -1,0 +1,12 @@
+Plymouth Routines In Multivariate Ecological Research (PRIMER) is a statistical package that is a collection of specialist univariate, multivariate, and graphical routines for analyzing species sampling data for community ecology. Types of data analyzed are typically species abundance, biomass, presence/absence, and percent area cover, among others. It is primarily used in the scientific community for ecological and environmental studies.
+Multivariate routines include:
+grouping (CLUSTER)
+sorting (MDS)
+principal component identification (PCA)
+hypothesis testing (ANOSIM)
+sample discrimination (SIMPER)
+trend correlation (BEST)
+comparisons (RELATE)
+diversity, dominance, and distribution calculating
+Permutational multivariate analysis of variance (PERMANOVA)
+Routines can be resource intensive due to their non-parametric and permutation-based nature. Programmed in the VB.Net environment.

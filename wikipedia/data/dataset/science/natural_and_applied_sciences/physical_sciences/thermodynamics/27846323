@@ -1,0 +1,36 @@
+The moist static energy is a thermodynamic variable that describes the state of an air parcel, and is similar to the equivalent potential temperature. The moist static energy is a combination of a parcel's enthalpy due to an air parcel's internal energy and energy required to make room for it, its potential energy due to its height above the surface, and the latent energy due to water vapor present in the air parcel. It is a useful variable for researching the atmosphere because, like several other similar variables, it is approximately conserved during adiabatic ascent and descent.
+The moist static energy, S, can be described mathematically as:
+
+  
+    
+      
+        S
+        =
+        
+          C
+          
+            p
+          
+        
+        ⋅
+        T
+        +
+        g
+        ⋅
+        z
+        +
+        
+          L
+          
+            v
+          
+        
+        ⋅
+        q
+      
+    
+    {\displaystyle S=C_{p}\cdot T+g\cdot z+L_{v}\cdot q}
+  
+
+where Cp is the specific heat at constant pressure, T is the absolute air temperature, g is the gravitational constant, z is the height above the surface, Lv is the latent heat of vaporization, and q is water vapor specific humidity. Note that many texts use mixing ratio r in place of specific humidity q because these values tend to be close (within a few percent) under normal atmospheric conditions, but this is an approximation and not strictly correct.
+Through the study of moist static energy profiles, Herbert Riehl and Joanne Malkus determined in 1958 that hot towers, small cores of convection approximately 5 kilometres (3.1 mi) wide that extend from the planetary boundary layer to the tropopause, were the primary mechanism that transported energy out of the tropics to the middle latitudes. More recently, idealized model simulations of the tropics indicate that the moist static energy budget is dominated by advection, with shallow inflow in the lowest 2 kilometres (6,600 ft) of the atmosphere with outflow concentrated about 10 kilometres (33,000 ft) above the surface. Moist static energy has also been used to study the Madden–Julian oscillation (MJO). As with the tropics as a whole, the budget of moist static energy in the MJO is dominated by advection, but also is influenced by the wind-driven component of the surface latent heat flux. The relationship between the advection component and the latent heat component influence the timing of the MJO.

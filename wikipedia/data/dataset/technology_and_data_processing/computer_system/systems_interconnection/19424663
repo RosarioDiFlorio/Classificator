@@ -1,0 +1,5 @@
+In mobile-telephone technology, the UniPro protocol stack follows the architecture of the classical OSI Reference Model. In UniPro, the OSI Physical Layer is split into two sublayers: Layer 1 (the actual physical layer) and Layer 1.5 (the PHY Adapter layer) which abstracts from differences between alternative Layer 1 technologies. The actual physical layer is a separate specification as the various PHY options are reused in other MIPI Alliance specifications.
+The UniPro specification itself covers Layers 1.5, 2, 3, 4 and the DME (Device Management Entity). The Application Layer (LA) is out of scope because different uses of UniPro will require different LA protocols. The Physical Layer (L1) is covered in separate MIPI specifications in order to allow the PHY to be reused by other (less generic) protocols if needed.
+OSI Layers 5 (Session) and 6 (Presentation) are, where applicable, counted as part of the Application Layer.
+
+

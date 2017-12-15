@@ -1,0 +1,5 @@
+The HART Communication Protocol (Highway Addressable Remote Transducer) is a hybrid analog+digital industrial automation protocol. Its most notable advantage is that it can communicate over legacy 4–20 mA analog instrumentation current loops, sharing the pair of wires used by the analog only host systems.
+According to Emerson, due to the huge installed base of 4–20 mA systems throughout the world, the HART Protocol is one of the most popular industrial protocols today. HART protocol has made a good transition protocol for users who wished to use the legacy 4–20 mA signals, but wanted to implement a "smart" protocol.
+The protocol was developed by Rosemount Inc., built off the Bell 202 early communications standard in the mid-1980s as a proprietary digital communication protocol for their smart field instruments. Soon it evolved into HART and in 1986 it was made an open protocol. Since then, the capabilities of the protocol have been enhanced by successive revisions to the specification.
+
+

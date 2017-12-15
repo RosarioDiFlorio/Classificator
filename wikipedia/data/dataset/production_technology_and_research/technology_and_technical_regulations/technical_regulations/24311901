@@ -1,0 +1,11 @@
+Microsoft v. TomTom, Inc. was a court case brought by Microsoft against TomTom in 2009. According to Microsoft, TomTom was violating Microsoft's software patents on the FAT32 file system.
+TomTom's navigation products use the Linux kernel, and according to Microsoft, TomTom violated two patents related to legacy compatibility features in the FAT32 file system. On 19 March TomTom filed a countersuit alleging Microsoft is infringing three of its patents. TomTom accused Microsoft’s Streets and Trips products of infringing four patents in TomTom’s vehicle navigation software.
+According to Microsoft, the reason for accusing TomTom of patent infringement was that other companies that utilize Microsoft patents have bought licenses from Microsoft.
+Microsoft issued the following statement:
+
+We have an established intellectual property licensing program, and the patents involved in this case, relating to innovations in car navigation technology and other computing functionality, have been licensed by many others. In situations such as this, when a reasonable business agreement cannot be reached, we have no choice but to pursue legal action to protect our innovations and our partners who license them. Other companies that utilize Microsoft patents have licensed and we are asking TomTom to do the same.
+TomTom is a highly respected and important company. We remain open to quickly resolving this situation with them through an IP licensing agreement.
+
+On March 2009, TomTom settled the patent dispute by purchasing licenses from Microsoft to use the FAT32 file system. TomTom has joined the Open Invention Network, an intellectual property sharing organization for innovators using Linux.
+
+Although the settlement has ended the conflict between Microsoft and TomTom, questions still remain about the implications for FAT in the broader Linux ecosystem

@@ -1,0 +1,2 @@
+The fill factor of an image sensor array is the ratio of a pixel's light sensitive area to its total area. For pixels without microlenses, the fill factor is the ratio of photodiode area to total pixel area, but the use of microlenses increases the effective fill factor, often to nearly 100%, by converging light from the whole pixel area into the photodiode.
+Another case that reduces the fill factor of an image is, to add additional memory beside each pixel, to achieve global shutter effect on CMOS sensor.

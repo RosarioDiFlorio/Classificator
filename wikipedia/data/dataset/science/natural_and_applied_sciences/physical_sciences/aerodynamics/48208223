@@ -1,0 +1,5 @@
+Experience Curiosity is an interactive web application developed by NASA's Jet Propulsion Laboratory to celebrate the third anniversary of the Curiosity rover landing on Mars. This 3D serious game makes it possible to operate the rover, control its cameras and the robotic arm and reproduces some of the prominent events of the Mars Science Laboratory mission. The application was presented at the beginning of the WebGL section at SIGGRAPH 2015.
+According to Brian Kumanchik, the lead and art director behind the project, the development team used exclusively open-source software including Blender and GIMP for creating 3D content, particularly due to public accessibility of open source formats. The Blend4Web framework was chosen as a 3D engine which is integrated with Blender, includes a physics engine and provides rendering in mobile browsers.
+Experience Curiosity won the Webby Award as the best "Government & Civil Innovation" website of 2016. The 5-word speech at the award ceremony was Rockin' and Rovin' on Mars, voiced by NASA's representative Brian Kumanchik.
+
+

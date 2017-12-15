@@ -1,0 +1,3 @@
+ISAAC (indirection, shift, accumulate, add, and count) is a cryptographically secure pseudorandom number generator and a stream cipher designed by Robert J. Jenkins Jr. in 1993. The reference implementation source code was dedicated to the public domain.
+
+

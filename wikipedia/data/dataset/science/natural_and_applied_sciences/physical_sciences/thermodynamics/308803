@@ -1,0 +1,59 @@
+Carnot's theorem, developed in 1824 by Nicolas Léonard Sadi Carnot, also called Carnot's rule, is a principle that specifies limits on the maximum efficiency any heat engine can obtain. The efficiency of a Carnot engine depends solely on the difference between the hot and cold temperature reservoirs.
+Carnot's theorem states:
+All heat engines between two heat reservoirs are less efficient than a Carnot heat engine operating between the same reservoirs.
+Every Carnot heat engine between a pair of heat reservoirs is equally efficient, regardless of the working substance employed or the operation details.
+The formula for this maximum efficiency is
+
+  
+    
+      
+        
+          η
+          
+            max
+          
+        
+        =
+        
+          η
+          
+            Carnot
+          
+        
+        =
+        1
+        −
+        
+          
+            
+              T
+              
+                
+                  C
+                
+              
+            
+            
+              T
+              
+                
+                  H
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle \eta _{\text{max}}=\eta _{\text{Carnot}}=1-{\frac {T_{\mathrm {C} }}{T_{\mathrm {H} }}}}
+  
+where TC is the absolute temperature of the cold reservoir, TH is the absolute temperature of the hot reservoir, and the efficiency 
+  
+    
+      
+        η
+      
+    
+    {\displaystyle \eta }
+   is the ratio of the work done by the engine to the heat drawn out of the hot reservoir.
+Based on modern thermodynamics, Carnot's theorem is a result of the second law of thermodynamics. Historically, it was based on contemporary caloric theory and preceded the establishment of the second law.

@@ -1,0 +1,160 @@
+Corrected speed is the speed a component would rotate at if the inlet temperature corresponded to ambient conditions at sea level, on a standard day (i.e. 288.15 K).
+Corrected speed 
+  
+    
+      
+        N
+        
+          /
+        
+        
+          
+            θ
+          
+        
+      
+    
+    {\displaystyle N/{\sqrt {\theta }}}
+   can be calculated as follows:
+
+  
+    
+      
+        N
+        
+          /
+        
+        
+          
+            θ
+          
+        
+        =
+        N
+        
+          /
+        
+        
+          
+            T
+            
+              /
+            
+            288.15
+          
+        
+        .
+      
+    
+    {\displaystyle N/{\sqrt {\theta }}=N/{\sqrt {T/288.15}}.}
+  
+Corrected speed is often abbreviated to 
+  
+    
+      
+        
+          N
+          
+            c
+          
+        
+      
+    
+    {\displaystyle N_{c}}
+   or 
+  
+    
+      
+        
+          N
+          
+            r
+          
+        
+      
+    
+    {\displaystyle N_{r}}
+   (for referred speed).
+So-called non-dimensional speed 
+  
+    
+      
+        N
+        
+          /
+        
+        
+          
+            T
+          
+        
+      
+    
+    {\displaystyle N/{\sqrt {T}}}
+   is proportional to corrected speed:
+
+  
+    
+      
+        N
+        
+          /
+        
+        
+          
+            T
+          
+        
+        =
+        (
+        N
+        
+          /
+        
+        
+          
+            θ
+          
+        
+        )
+        
+          /
+        
+        
+          
+            288.15
+          
+        
+      
+    
+    {\displaystyle N/{\sqrt {T}}=(N/{\sqrt {\theta }})/{\sqrt {288.15}}}
+  
+Nomenclature:
+
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+   – stagnation (or total) temperature (in kelvins),
+
+  
+    
+      
+        N
+      
+    
+    {\displaystyle N}
+   – real shaft speed,
+
+  
+    
+      
+        θ
+      
+    
+    {\displaystyle \theta }
+   – referred temperature.
+In relative form, corrected speed, referred speed and non-dimensional speed are all measures of peripheral Mach number.

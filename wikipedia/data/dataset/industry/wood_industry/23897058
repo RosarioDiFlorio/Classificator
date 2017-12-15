@@ -1,0 +1,37 @@
+See also h-index.
+H-factor is a kinetic model for the rate of delignification in kraft pulping. It is a single variable model combining temperature (T) and time (t) and assuming that the deligification is one single reaction.
+
+  
+    
+      
+        H
+        =
+        
+          ∫
+          
+            0
+          
+          
+            t
+          
+        
+        exp
+        ⁡
+        
+          (
+          43.2
+          −
+          16115
+          
+            /
+          
+          T
+          )
+        
+        
+        d
+        t
+        
+      
+    
+    {\displaystyle H=\int _{0}^{t}\exp \left(43.2-16115/T\right)\,dt\,}

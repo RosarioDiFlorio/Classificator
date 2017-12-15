@@ -1,0 +1,4 @@
+The Internet uses the Domain Name System (DNS) to associate numeric computer IP addresses with human readable names. The top level of the domain name hierarchy, the DNS root, contains the top-level domains that appear as the suffixes of all Internet domain names. The most widely used (and first) DNS root is administered by the Internet Corporation for Assigned Names and Numbers (ICANN). In addition, several organizations operate alternative DNS roots, often referred to as alt roots. These alternative domain name systems operate their own root nameservers and commonly administer their own specific name spaces consisting of custom top-level domains.
+The Internet Architecture Board (IAB) has spoken out strongly against alternate roots in RFC 2826.
+
+

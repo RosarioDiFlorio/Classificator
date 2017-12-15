@@ -1,0 +1,2 @@
+The ISO 15926 is a standard for data integration, sharing, exchange, and hand-over between computer systems.
+The title, "Industrial automation systems and integration—Integration of life-cycle data for process plants including oil and gas production facilities", is regarded too narrow by the present ISO 15926 developers. Having developed a generic data model and Reference Data Library for process plants, it turned out that this subject is already so wide, that actually any state information may be modelled with it.

@@ -1,0 +1,1 @@
+A remote collision, in CSMA/CD computer networks, is a collision that occurs when a frame having length less than minimum length and with an incorrect frame check sequence, is transmitted. This frame causes a collision at the remote end which will not be detected by the transmitter.

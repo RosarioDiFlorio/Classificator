@@ -1,0 +1,10 @@
+A physical symbol system (also called a formal system) takes physical patterns (symbols), combining them into structures (expressions) and manipulating them (using processes) to produce new expressions.
+The physical symbol system hypothesis (PSSH) is a position in the philosophy of artificial intelligence formulated by Allen Newell and Herbert A. Simon. They wrote:
+
+"A physical symbol system has the necessary and sufficient means for general intelligent action."
+
+This claim implies both that human thinking is a kind of symbol manipulation (because a symbol system is necessary for intelligence) and that machines can be intelligent (because a symbol system is sufficient for intelligence).
+The idea has philosophical roots in Hobbes (who claimed reasoning was "nothing more than reckoning"), Leibniz (who attempted to create a logical calculus of all human ideas), Hume (who thought perception could be reduced to "atomic impressions") and even Kant (who analyzed all experience as controlled by formal rules). The latest version is called the computational theory of mind, associated with philosophers Hilary Putnam and Jerry Fodor.
+The hypothesis has been criticized strongly by various parties, but is a core part of AI research. A common critical view is that the hypothesis seems appropriate for higher-level intelligence such as playing chess, but less appropriate for commonplace intelligence such as vision. A distinction is usually made between the kind of high level symbols that directly correspond with objects in the world, such as <dog> and <tail> and the more complex "symbols" that are present in a machine like a neural network.
+
+

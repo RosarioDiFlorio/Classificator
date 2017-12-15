@@ -1,0 +1,1 @@
+In econometrics, truncated dependent variables are variables for which observations cannot be made for certain values in some range. Regression models with such dependent variables require special care that properly recognizes the truncated nature of the variable. Estimation of such truncated regression model can be done in parametric   or semi- and non-parametric frameworks.

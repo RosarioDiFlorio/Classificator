@@ -1,0 +1,8 @@
+Psiphon is an open-source Internet censorship circumvention tool that uses a combination of secure communication and obfuscation technologies (VPN, SSH, and HTTP Proxy). Psiphon is a centrally managed, geographically diverse network of thousands of proxy servers, using a performance-oriented, single hop architecture.
+Psiphon is specifically designed to support users in countries considered to be "enemies of the Internet". The codebase is developed and maintained by Psiphon, Inc. which operates systems and technologies designed to assist Internet users to securely bypass the content-filtering systems used by governments to impose censorship of the Internet.
+The original concept for Psiphon (1.0) was developed by the Citizen Lab at the University of Toronto, building upon previous generations of web proxy software systems, such as the "Safe Web" and "Anonymizer" systems.
+In 2007 Psiphon, Inc. was established as an independent Ontario corporation that develops advanced censorship circumvention systems and technologies. Psiphon, Inc. and the Citizen Lab at the Munk School of Global Affairs, University of Toronto occasionally collaborate on research projects, through the Psi-Lab partnership.
+Psiphon currently consists of three separate but related open source software projects:
+3.X – A cloud based run-time tunneling system.
+2.X – A cloud-based secure proxy system.
+1.X – The original home based server software (released by the Citizen Lab in 2004, rewritten and launched in 2006). Psiphon 1.X is no longer supported by Psiphon, Inc. or the Citizen Lab.

@@ -1,0 +1,2 @@
+iWARP (Internet Wide-area RDMA Protocol)  is a computer networking protocol that implements remote direct memory access (RDMA) for efficient data transfer over Internet Protocol networks.
+Because iWARP is layered on IETF-standard congestion-aware protocols such as TCP and SCTP, it makes few requirements on the network, and can be successfully deployed in a broad range of environments.

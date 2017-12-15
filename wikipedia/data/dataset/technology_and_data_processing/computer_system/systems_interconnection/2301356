@@ -1,0 +1,1 @@
+In computing, a Parallel Sysplex is a cluster of IBM mainframes acting together as a single system image with z/OS. Used for disaster recovery, Parallel Sysplex combines data sharing and parallel computing to allow a cluster of up to 32 systems to share a workload for high performance and high availability.

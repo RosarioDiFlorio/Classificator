@@ -1,0 +1,16 @@
+A method stub or simply stub in software development is a piece of code used to stand in for some other programming functionality. A stub may simulate the behavior of existing code (such as a procedure on a remote machine) or be a temporary substitute for yet-to-be-developed code. Stubs are therefore most useful in porting, distributed computing as well as general software development and testing.
+An example of a stub in pseudocode might be as follows:
+
+   BEGIN
+       Temperature = ThermometerRead(Outside)
+       IF Temperature > 40 THEN
+            PRINT "It's HOT!"
+       END IF
+   END
+
+   BEGIN ThermometerRead(Source insideOrOutside)
+        RETURN 28
+   END ThermometerRead
+
+The above pseudocode utilises the function ThermometerRead, which returns a temperature. While ThermometerRead would be intended to read some hardware device, this function currently does not contain the necessary code. So ThermometerRead does not, in essence, simulate any process, yet it does return a legal value, allowing the main program to be at least partially tested. Also note that although it accepts the parameter of type Source, which determines whether inside or outside temperature is needed, it does not use the actual value passed (argument insideOrOutside) by the caller in its logic.
+A stub  is a routine that doesn't actually do anything other than declaring itself and the parameters it accepts and returning something that is usually the values expected in one of the "happy scenarios" for the caller. Stubs are used commonly as placeholders for implementation of a known interface, where the interface is finalized/known but the implementation is not yet known/finalized. The stub contains just enough code to allow it to be compiled and linked with the rest of the program. In RMI nomenclature, a stub communicates on the server-side with a skeleton.

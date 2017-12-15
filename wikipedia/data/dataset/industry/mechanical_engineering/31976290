@@ -1,0 +1,3 @@
+Smoothed finite element methods (S-FEM) are a particular class of numerical simulation algorithms for the simulation of physical phenomena. It was developed by combining meshfree methods with the finite element method. S-FEM are applicable to solid mechanics as well as fluid dynamics problems, although so far they have mainly been applied to the former.
+
+

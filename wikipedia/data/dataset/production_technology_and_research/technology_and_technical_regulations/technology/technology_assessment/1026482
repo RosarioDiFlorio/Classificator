@@ -1,0 +1,14 @@
+IEEE 802.10 is a former standard for security functions that could be used in both local area networks and metropolitan area networks based on IEEE 802 protocols.
+802.10 specifies security association management and key management, as well as access control, data confidentiality and data integrity.
+The IEEE 802.10 standards were withdrawn in January 2004 and this working group of the IEEE 802 is not currently active. Security for wireless networks was standardized in 802.11i.
+The Cisco Inter-Switch Link (ISL) protocol for supporting VLANs on Ethernet and similar LAN technologies was based on IEEE 802.10; in this application 802.10 has largely been replaced by IEEE 802.1Q.
+The standard being developed has 8 parts:
+a. Model, including security management
+b. Secure Data Exchange (SDE) protocol
+c. Key Management
+d. - has now been incorporated in 'a' -
+e. SDE Over Ethernet 2.0
+f. SDE Sublayer Management
+g. SDE Security Labels
+h. SDE PICS Conformance.
+Parts b, e, f, g, and h are incorporated in IEEE Standard 802.10-1998.

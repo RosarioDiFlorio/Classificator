@@ -1,0 +1,5 @@
+Linearizers are electronic circuits which improve the non-linear behaviour of amplifiers to increase efficiency and maximum output power.
+Creating circuits with the inverted behaviour to the amplifier is one way to implement this concept. These circuits counteract the non-linearities of the amplifier and minimize the distiortion of the signal. This increases linear operating range up to the saturation (maximum output power) of the amplifier. Linearized amplifiers have a significantly higher efficiency with improved signal quality. There are different concepts to linearize an amplifier, including pre- and post-distortion and feedback linearization. Most commonly used is pre-distortion linearization.
+The function performed by the linearizer in relation to the amplifier is very similar to that of eyeglasses in relation to the eye. The eye distorts the image seen; the glasses pre-distort the image. When these two distortions are combined, the result is a clear image. For the nearsighted, the glasses must pre-distort the image one way. For the farsighted, the image must be pre-distorted in the opposite way.
+
+

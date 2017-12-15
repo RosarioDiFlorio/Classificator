@@ -1,0 +1,136 @@
+The Boyle temperature is formally defined as the temperature for which the second virial coefficient, becomes zero. It is at this temperature that the attractive forces and the repulsive forces acting on the gas particles balance out.
+Where a and b are van der Waals parameters.
+
+  
+    
+      
+        p
+        =
+        R
+        T
+        
+          (
+          
+            
+              1
+              
+                V
+                
+                  m
+                
+              
+            
+          
+          +
+          
+            
+              
+                
+                  B
+                  
+                    2
+                  
+                
+                (
+                T
+                )
+              
+              
+                V
+                
+                  m
+                
+                
+                  2
+                
+              
+            
+          
+          +
+          …
+          )
+        
+      
+    
+    {\displaystyle p=RT\left({\frac {1}{V_{m}}}+{\frac {B_{2}(T)}{V_{m}^{2}}}+\dots \right)}
+  
+This is the virial equation of state and describes a real gas. The Boyle temperature is formally defined as the temperature for which the second virial coefficient, 
+  
+    
+      
+        
+          B
+          
+            2
+          
+        
+        (
+        T
+        )
+      
+    
+    {\displaystyle B_{2}(T)}
+   becomes zero. It is at this temperature that the attractive forces and the repulsive forces acting on the gas particles balance out. Since higher order virial coefficients are generally much smaller than the second coefficient, the gas tends to behave as an ideal gas over a wider range of pressures when the temperature reaches the Boyle temperature (or when 
+  
+    
+      
+        c
+        =
+        
+          
+            1
+            
+              V
+              
+                m
+              
+            
+          
+        
+      
+    
+    {\displaystyle c={\frac {1}{V_{m}}}}
+   or p are minimized).
+In any case, when the pressures are low, the second virial coefficient will be the only relevant one because the remaining concern terms of higher order on the pressure. We then have
+
+  
+    
+      
+        
+          
+            
+              
+                d
+              
+              Z
+            
+            
+              
+                d
+              
+              p
+            
+          
+        
+        =
+        0
+        
+        
+          if 
+        
+        p
+        =
+        0
+      
+    
+    {\displaystyle {\frac {\mathrm {d} Z}{\mathrm {d} p}}=0\qquad {\mbox{if }}p=0}
+  
+where 
+  
+    
+      
+        Z
+      
+    
+    {\displaystyle Z}
+   is the compressibility factor

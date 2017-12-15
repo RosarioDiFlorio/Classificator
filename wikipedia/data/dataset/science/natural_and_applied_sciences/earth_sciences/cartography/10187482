@@ -1,0 +1,4 @@
+Terrain rendering covers a variety of methods of depicting real-world or imaginary world surfaces. Most common terrain rendering is the depiction of Earth's surface.
+It is used in various applications to give an observer a frame of reference. It is also often used in combination with rendering of non-terrain objects, such as trees, buildings, rivers, etc.
+There are two major modes of terrain rendering: top-down and perspective rendering. Top-down terrain rendering has been known for centuries in the way of cartographic maps. Perspective terrain rendering has also been known for quite some time. However, only with the advent of computers and computer graphics perspective rendering has become mainstream.
+Perspective terrain rendering is described in this article.

@@ -1,0 +1,3 @@
+To an embedded anchor: This is a redirect from a topic that does not have its own page to an anchored part of a page on the subject.
+An {{anchor|(anchor name)}} template, a <span id="(anchor name)"> element, or an |id=(anchor name) parameter might be installed at the beginning of a paragraph, in or near a section header or within a table. The anchor might also be an old section header that has been edited and is anchored within or near the new header to prevent broken internal and external links.
+Even though section headers of the general form ==(Header name)== are themselves a type of anchor, use {{R to section}} instead.

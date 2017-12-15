@@ -1,0 +1,43 @@
+In economics, the Leontief production function or fixed proportions production function is a production function that implies the factors of production will be used in fixed (technologically pre-determined) proportions, as there is no substitutability between factors. It was named after Wassily Leontief and represents a limiting case of the constant elasticity of substitution production function.
+For the simple case of a good that is produced with two inputs, the function is of the form
+
+  
+    
+      
+        q
+        =
+        
+          Min
+        
+        
+          (
+          
+            
+              
+                z
+                
+                  1
+                
+              
+              a
+            
+          
+          ,
+          
+            
+              
+                z
+                
+                  2
+                
+              
+              b
+            
+          
+          )
+        
+      
+    
+    {\displaystyle q={\text{Min}}\left({\frac {z_{1}}{a}},{\frac {z_{2}}{b}}\right)}
+  
+where q is the quantity of output produced, z1 and z2 are the utilised quantities of input 1 and input 2 respectively, and a and b are technologically determined constants.

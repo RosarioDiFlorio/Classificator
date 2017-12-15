@@ -1,0 +1,4 @@
+A local collision, in CSMA/CD computer networks, is a collision that occurs at the NIC as opposed to on the wire.
+On UTP cable a local collision is detected on the local segment only when a station detects a signal on the RX pair at the same time it is sending on the TX pair.
+Since the two signals are on different pairs there is no characteristic change in the signal. Collisions are only recognized on UTP when the station is operating in half-duplex. The only functional difference between half and full-duplex operation in this regard is whether or not the transmit and receive pairs are permitted to be used simultaneously.
+A NIC cannot detect a local collisions without attempting to send information.

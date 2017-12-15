@@ -1,0 +1,5 @@
+In mathematics, the mex of a subset of a well-ordered set is the smallest value from the whole set that does not belong to the subset. That is, it is the minimum value of the complement set. The name "mex" is shorthand for "minimum excluded" value.
+Beyond sets, subclasses of well-ordered classes have minimum excluded values. Minimum excluded values of subclasses of the ordinal numbers are used in combinatorial game theory to assign nim-values to impartial games. According to the Sprague–Grundy theorem, the nim-value of a game position is the minimum excluded value of the class of values of the positions that can be reached in a single move from the given position.
+Minimum excluded values are also used in graph theory, in greedy coloring algorithms. These algorithms typically choose an ordering of the vertices of a graph and choose a numbering of the available vertex colors. They then consider the vertices in order, for each vertex choosing its color to be the minimum excluded value of the set of colors already assigned to its neighbors.
+
+

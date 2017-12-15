@@ -1,0 +1,12 @@
+Hybrid intelligent system denotes a software system which employs, in parallel, a combination of methods and techniques from artificial intelligence subfields as:
+Neuro-fuzzy systems
+hybrid connectionist-symbolic models
+Fuzzy expert systems
+Connectionist expert systems
+Evolutionary neural networks
+Genetic fuzzy systems
+Rough fuzzy hybridization
+Reinforcement learning with fuzzy, neural, or evolutionary methods as well as symbolic reasoning methods.
+From the cognitive science perspective, every natural intelligent system is hybrid because it performs mental operations on both the symbolic and subsymbolic levels. For the past few years there has been an increasing discussion of the importance of A.I. Systems Integration. Based on notions that there have already been created simple and specific AI systems (such as systems for computer vision, speech synthesis, etc., or software that employs some of the models mentioned above) and now is the time for integration to create broad AI systems. Proponents of this approach are researchers such as Marvin Minsky, Ron Sun, Aaron Sloman, and Michael A. Arbib.
+An example hybrid is a hierarchical control system in which the lowest, reactive layers are sub-symbolic. The higher layers, having relaxed time constraints, are capable of reasoning from an abstract world model and performing planning.
+Intelligent systems usually rely on hybrid reasoning systems, which include induction, deduction, abduction and reasoning by analogy

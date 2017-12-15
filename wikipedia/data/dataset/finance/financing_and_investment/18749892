@@ -1,0 +1,83 @@
+The T-model is a formula that states the returns earned by holders of a company's stock in terms of accounting variables obtainable from its financial statements. Specifically, it says that:
+
+  
+    
+      
+        (
+        1
+        )
+        
+          
+            T
+          
+        
+        =
+        
+          
+            g
+          
+        
+        +
+        
+          
+            
+              
+                
+                  R
+                
+              
+              O
+              E
+              −
+              
+                
+                  g
+                
+              
+            
+            
+              
+                
+                  P
+                
+              
+              B
+            
+          
+        
+        +
+        
+          
+            
+              Δ
+              P
+              B
+            
+            
+              P
+              B
+            
+          
+        
+        
+          
+            (
+          
+        
+        1
+        +
+        g
+        )
+      
+    
+    {\displaystyle (1){\mathit {T}}={\mathit {g}}+{\frac {{\mathit {R}}OE-{\mathit {g}}}{{\mathit {P}}B}}+{\frac {\Delta PB}{PB}}{\mathit {(}}1+g)}
+  
+where T = total return from the stock over a period (appreciation + "distribution yield" — see below);
+g = the growth rate of the company's book value during the period;
+PB = the ratio of price / book value at the beginning of the period.
+ROE = the company's return on equity, i.e. earnings during the period / book value;
+The T-model connects fundamentals with investment return, allowing an analyst to make projections of financial performance and turn those projections into an expected return that can be used in investment selection.
+When ex post values for growth, price/book, etc. are plugged in, the T-Model gives a close approximation of actually realized stock returns. Unlike some proposed valuation formulas, it has the advantage of being correct in a mathematical sense (see derivation); however, this by no means guarantees that it will be a successful stock-picking tool.
+Still, it has advantages over commonly used fundamental valuation techniques such as price–earnings or the simplified dividend discount model: it is mathematically complete, and each connection between company fundamentals and stock performance is explicit, so that the user can see where simplifying assumptions have been made.
+Some of the practical difficulties involved with financial forecasts stem from the many vicissitudes possible in the calculation of earnings, the numerator in the ROE term. With an eye toward making forecasting more robust, in 2003 Estep published a version of the T-Model driven by cash items: cash flow, gross assets and total liabilities.
+Note that all fundamental valuation methods differ from economic models such as the capital asset pricing model and its various descendants; financial models attempt to forecast return from a company's expected future financial performance, whereas CAPM-type models regard expected return as the sum of a risk-free rate plus a premium for exposure to return variability.

@@ -1,0 +1,10 @@
+Speech Transmission Index (STI) is a measure of speech transmission quality. The absolute measurement of speech intelligibility is a complex science. The STI measures some physical characteristics of a transmission channel (a room, electro-acoustic equipment, telephone line, etc.), and expresses the ability of the channel to carry across the characteristics of a speech signal. STI is a well-established objective measurement predictor of how the characteristics of the transmission channel affect speech intelligibility.
+The influence that a transmission channel has on speech intelligibility is dependent on:
+the speech level
+frequency response of the channel
+non-linear distortions
+background noise level
+quality of the sound reproduction equipment
+echos (reflections with delay > 100ms)
+the reverberation time
+psychoacoustic effects (masking effects)

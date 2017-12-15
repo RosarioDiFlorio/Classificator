@@ -1,0 +1,6 @@
+An isodesmic reaction is a chemical reaction in which the type of chemical bonds broken in the reactant are the same as the type of bonds formed in the reaction product. This type of reaction is often used as a hypothetical reaction in thermochemistry.
+An example of an isodesmic reaction is
+CH3− + CH3X → CH4 + CH2X− (1)
+X = F, Cl, Br, I
+Equation 1 describes the deprotonation of a methyl halide by a methyl anion. The energy change associated with this exothermic reaction which can be calculated in silico increases going from fluorine to chlorine to bromine and iodine making the CH2I− anion the most stable and least basic of all the halides. Although this reaction is isodesmic the energy change in this example also depends on the difference in bond energy of the C-X bond in the base and conjugate acid. In other cases, the difference may be due to steric strain. This difference is small in fluorine but large in iodine (in favor of the anion) and therefore the energy trend is as described despite the fact that C-F bonds are stronger than C-I bonds.
+The related term homodesmotic reaction also takes into account orbital hybridization and in addition there is no change in the number of carbon to hydrogen bonds.

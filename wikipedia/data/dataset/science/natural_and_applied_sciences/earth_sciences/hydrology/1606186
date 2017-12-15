@@ -1,0 +1,22 @@
+The hydraulic retention time (HRT), also known as hydraulic residence time or t (tau), is a measure of the average length of time that a compound (ex. water) remains in a storage unit (ex. lake, pond, ocean).
+Hydraulic retention time is the volume of the storage unit divided by the influent flowrate:
+
+  
+    
+      
+        
+          HRT
+        
+        =
+        
+          
+            Volume of aeration tank
+            influent flowrate
+          
+        
+      
+    
+    {\displaystyle {\text{HRT}}={\frac {\text{Volume of aeration tank}}{\text{influent flowrate}}}}
+  
+where using SI Units Volume is in [m3] and Influent flowrate is in [m3/s]. HRT is usually expressed in hours (or sometimes days). A good rule of thumb is to view it as the amount of theoretical time it would take for a unit of the given compound to travel entirely through a system (ex. storage tank).
+Calculate HRT

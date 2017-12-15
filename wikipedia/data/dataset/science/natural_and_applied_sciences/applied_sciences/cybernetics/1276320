@@ -1,0 +1,4 @@
+In control theory, a proper transfer function is a transfer function in which the degree of the numerator does not exceed the degree of the denominator.
+A strictly proper transfer function is a transfer function where the degree of the numerator is less than the degree of the denominator.
+
+The difference between the degree of the denominator (number of poles) and degree of the numerator (number of zeros) is the relative degree of the transfer function.

@@ -1,0 +1,157 @@
+The entropy of fusion is the increase in entropy when melting a substance. This is almost always positive since the degree of disorder increases in the transition from an organized crystalline solid to the disorganized structure of a liquid; the only known exception is helium. It is denoted as 
+  
+    
+      
+        Δ
+        
+          S
+          
+            fus
+          
+        
+      
+    
+    {\displaystyle \Delta S_{\text{fus}}}
+   and normally expressed in J mol−1 K−1
+A natural process such as a phase transition will occur when the associated change in the Gibbs free energy is negative.
+
+  
+    
+      
+        Δ
+        
+          G
+          
+            fus
+          
+        
+        =
+        Δ
+        
+          H
+          
+            fus
+          
+        
+        −
+        T
+        ×
+        Δ
+        
+          S
+          
+            fus
+          
+        
+        <
+        0
+      
+    
+    {\displaystyle \Delta G_{\text{fus}}=\Delta H_{\text{fus}}-T\times \Delta S_{\text{fus}}<0}
+  , where 
+  
+    
+      
+        Δ
+        
+          H
+          
+            fus
+          
+        
+      
+    
+    {\displaystyle \Delta H_{\text{fus}}}
+   is the enthalpy or heat of fusion.
+Since this is a thermodynamic equation, the symbol T refers to the absolute thermodynamic temperature, measured in kelvins (K).
+Equilibrium occurs when the temperature is equal to the melting point 
+  
+    
+      
+        T
+        =
+        
+          T
+          
+            f
+          
+        
+      
+    
+    {\displaystyle T=T_{f}}
+   so that
+
+  
+    
+      
+        Δ
+        
+          G
+          
+            fus
+          
+        
+        =
+        Δ
+        
+          H
+          
+            fus
+          
+        
+        −
+        
+          T
+          
+            f
+          
+        
+        ×
+        Δ
+        
+          S
+          
+            fus
+          
+        
+        =
+        0
+      
+    
+    {\displaystyle \Delta G_{\text{fus}}=\Delta H_{\text{fus}}-T_{f}\times \Delta S_{\text{fus}}=0}
+  ,
+and the entropy of fusion is the heat of fusion divided by the melting point.
+
+  
+    
+      
+        Δ
+        
+          S
+          
+            fus
+          
+        
+        =
+        
+          
+            
+              Δ
+              
+                H
+                
+                  fus
+                
+              
+            
+            
+              T
+              
+                f
+              
+            
+          
+        
+      
+    
+    {\displaystyle \Delta S_{\text{fus}}={\frac {\Delta H_{\text{fus}}}{T_{f}}}}

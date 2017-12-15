@@ -1,0 +1,291 @@
+Electric dipole transition is the dominant effect of an interaction of an electron in an atom with the electromagnetic field.
+Following, consider an electron in an atom with quantum Hamiltonian 
+  
+    
+      
+        
+          H
+          
+            0
+          
+        
+      
+    
+    {\displaystyle H_{0}}
+  , interacting with a plane electromagnetic wave
+
+  
+    
+      
+        
+          
+            E
+          
+        
+        (
+        
+          
+            r
+          
+        
+        ,
+        t
+        )
+        =
+        
+          E
+          
+            0
+          
+        
+        
+          
+            
+              
+                z
+              
+              ^
+            
+          
+        
+        cos
+        ⁡
+        (
+        k
+        y
+        −
+        ω
+        t
+        )
+        ,
+         
+         
+         
+        
+          
+            B
+          
+        
+        (
+        
+          
+            r
+          
+        
+        ,
+        t
+        )
+        =
+        
+          B
+          
+            0
+          
+        
+        
+          
+            
+              
+                x
+              
+              ^
+            
+          
+        
+        cos
+        ⁡
+        (
+        k
+        y
+        −
+        ω
+        t
+        )
+        .
+      
+    
+    {\displaystyle {\mathbf {E} }({\mathbf {r} },t)=E_{0}{\hat {\mathbf {z} }}\cos(ky-\omega t),\ \ \ {\mathbf {B} }({\mathbf {r} },t)=B_{0}{\hat {\mathbf {x} }}\cos(ky-\omega t).}
+  
+Write the Hamiltonian of the electron in this electromagnetic field as
+
+  
+    
+      
+        H
+        (
+        t
+        )
+         
+        =
+         
+        
+          H
+          
+            0
+          
+        
+        +
+        W
+        (
+        t
+        )
+        .
+      
+    
+    {\displaystyle H(t)\ =\ H_{0}+W(t).}
+  
+Treating this system by means of time-dependent perturbation theory, one finds that the most likely transitions of the electron from one state to the other occur due to the summand of 
+  
+    
+      
+        W
+        (
+        t
+        )
+      
+    
+    {\displaystyle W(t)}
+   written as
+
+  
+    
+      
+        
+          W
+          
+            D
+            E
+          
+        
+        (
+        t
+        )
+        =
+        
+          
+            
+              q
+              
+                E
+                
+                  0
+                
+              
+            
+            
+              m
+              ω
+            
+          
+        
+        
+          p
+          
+            z
+          
+        
+        sin
+        ⁡
+        ω
+        t
+        .
+        
+      
+    
+    {\displaystyle W_{DE}(t)={\frac {qE_{0}}{m\omega }}p_{z}\sin \omega t.\,}
+  
+Electric dipole transitions are the transitions between energy levels in the system with the Hamiltonian 
+  
+    
+      
+        
+          H
+          
+            0
+          
+        
+        +
+        
+          W
+          
+            D
+            E
+          
+        
+        (
+        t
+        )
+      
+    
+    {\displaystyle H_{0}+W_{DE}(t)}
+  .
+Between certain electron states the electric dipole transition rate may be zero due to one or more selection rules, particularly the angular momentum selection rule. In such a case, the transition is termed electric dipole forbidden, and the transitions between such levels must be approximated by higher-order transitions.
+The next order summand in 
+  
+    
+      
+        W
+        (
+        t
+        )
+      
+    
+    {\displaystyle W(t)}
+   is written as
+
+  
+    
+      
+        
+          W
+          
+            D
+            M
+          
+        
+        (
+        t
+        )
+        =
+        
+          
+            q
+            
+              2
+              m
+            
+          
+        
+        (
+        
+          L
+          
+            x
+          
+        
+        +
+        2
+        
+          S
+          
+            x
+          
+        
+        )
+        
+          B
+          
+            0
+          
+        
+        cos
+        ⁡
+        ω
+        t
+        
+      
+    
+    {\displaystyle W_{DM}(t)={\frac {q}{2m}}(L_{x}+2S_{x})B_{0}\cos \omega t\,}
+  
+and describes magnetic dipole transitions.
+Even smaller contributions to transition rates are given by higher electric and magnetic multipole transitions.

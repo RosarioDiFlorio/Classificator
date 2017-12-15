@@ -1,0 +1,1 @@
+Maatkit was a toolkit for development and administration of open-source databases. Most of Maatkit’s functionality was designed for MySQL, but it also supported PostgreSQL and other databases. It has been discontinued and merged into the Percona Toolkit as of 2011.

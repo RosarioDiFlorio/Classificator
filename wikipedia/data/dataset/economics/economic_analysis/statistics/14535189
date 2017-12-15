@@ -1,0 +1,11 @@
+Fisher's inequality, is a necessary condition for the existence of a balanced incomplete block design, that is, a system of subsets that satisfy certain prescribed conditions in combinatorial mathematics. Outlined by Ronald Fisher, a population geneticist and statistician, who was concerned with the design of experiments; studying the differences among several different varieties of plants, under each of a number of different growing conditions, called blocks.
+Let:
+v be the number of varieties of plants;
+b be the number of blocks.
+To be a balanced incomplete block design it is required that:
+k different varieties are in each block, 1 ≤ k < v; no variety occurs twice in any one block;
+any two varieties occur together in exactly λ blocks;
+each variety occurs in exactly r blocks.
+Fisher's inequality states simply that
+
+b ≥ v.

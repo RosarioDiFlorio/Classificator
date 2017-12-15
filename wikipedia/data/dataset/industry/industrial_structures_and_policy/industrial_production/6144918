@@ -1,0 +1,3 @@
+Producer's risk is the probability that a good product will be rejected as a bad product by the consumer. Or rejecting the lot of satisfactory quality is a risk faced by any producer, the probability of rejecting a lot under the sampling inspection plan is called Producer's risk.
+When the acceptance reliability level (ARL) is pi0, we can define the producer's risk as: P(Test is Failed|pi0)
+It calculates the probability of loss from (1) rejecting a batch which, in fact, should have been accepted, or (2) accepting a batch that, in fact, will be rejected by the customer. As in Hypothesis testing when a null hypothesis is rejected when it is true. It is also called Type I error or Alfa error.

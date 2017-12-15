@@ -1,0 +1,1 @@
+Datomic is a distributed database and implementation of Datalog. It has ACID transactions, joins, and a logical query language, Datalog.

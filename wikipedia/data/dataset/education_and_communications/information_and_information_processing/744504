@@ -1,0 +1,3 @@
+A circular reference is a series of references where the last object references the first, resulting in a closed loop.
+
+

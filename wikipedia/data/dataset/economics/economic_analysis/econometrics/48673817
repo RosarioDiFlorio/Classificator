@@ -1,0 +1,10 @@
+In a linear panel data setting, it can be desirable to estimate the magnitude of the Fixed Effects, as they provide measures of the unobserved components. For instance, in wage equation regressions, Fixed Effects capture ability measures that are constant over time, such as motivation. Chamberlain's approach to unobserved effects models is a way of estimating the linear unobserved effects, under Fixed Effect (rather than Random Effects) assumptions, in the following unobserved effects model
+yit = xitb + ci + uit (1)
+where ci is the unobserved effect and xit contains only time-varying explanatory variables. Rather than differencing out the unobserved effect ci, Chamberlain proposed to replace it with the linear projection of it onto the explanatory variables in all time periods. Specifically, this leads to the following equation
+ci = d + xi1 λ1 + xi2 λ2 + ... + xiT λT + ei (2)
+where the conditional distribution of ci given xit is unspecified, as is standard in Fixed Effects models. Combining equations (1) and (2) then gives rise to the following model.
+yit = d + xi1 λ1 + ... + xit (b+λt ) + ... + xiT λTb + ei + uit (3)
+An important advantage of this approach is the computational requirement. Chamberlain uses minimum distance estimation, but a GMM approach would be another valid way of estimating this model. The latter approach also gives rise to a larger number of instruments than moment conditions, which leads to useful overidentifying restrictions that can be used to test the strict exogeneity restrictions imposed by many static Fixed Effects models.
+Similar approaches have been proposed to model the unobserved effect. For instance, Mundlak follows a very similar approach, but rather projects the unobserved effect ci onto the average of all xit across all T time periods, more specifically 
+ci = d + xiλ + ei (4)
+It can be shown that the Chamberlain method is a generalization of Mundlak's model. The Chamberlain method has been popular in empirical work, ranging from studies trying to estimate the causal returns to union members  to studies investigating growth convergence.

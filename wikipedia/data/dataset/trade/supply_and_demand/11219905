@@ -1,0 +1,5 @@
+Loan Life Coverage Ratio LLCR is a ratio commonly used in project finance. The ratio is defined as: Net Present Value of Cashflow Available for Debt Service ("CFADS") / Outstanding Debt in the period. Financial modelling of LLCR is now a standard metric calculated in a project finance model and has been standardized to a large extent but always needs to be aligned with local practice of the financiers as described in the transaction term sheet.
+NPV(CFADS) is measured only up until the maturity of the debt tranche.
+The ratio is one of the aspects used for estimates of the credit quality of a project from a lender's perspective.
+Related ratios are: Project Life Coverage Ratio (PLCR) and Reserve Life Coverage Ratio (RLCR).
+The ratio usually is in a range from 1.25 for highly geared infrastructure investment to 2.5 or higher in an investments with more insecure income, such as oil and gas transactions.

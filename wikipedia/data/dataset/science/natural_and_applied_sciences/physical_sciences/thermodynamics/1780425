@@ -1,0 +1,106 @@
+The Clausius–Clapeyron relation, named after Rudolf Clausius and Benoît Paul Émile Clapeyron, is a way of characterizing a discontinuous phase transition between two phases of matter of a single constituent. On a pressure–temperature (P–T) diagram, the line separating the two phases is known as the coexistence curve. The Clausius–Clapeyron relation gives the slope of the tangents to this curve. Mathematically,
+
+  
+    
+      
+        
+          
+            
+              
+                d
+              
+              P
+            
+            
+              
+                d
+              
+              T
+            
+          
+        
+        =
+        
+          
+            L
+            
+              T
+              
+              Δ
+              v
+            
+          
+        
+        =
+        
+          
+            
+              Δ
+              s
+            
+            
+              Δ
+              v
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle {\frac {\mathrm {d} P}{\mathrm {d} T}}={\frac {L}{T\,\Delta v}}={\frac {\Delta s}{\Delta v}},}
+  
+where 
+  
+    
+      
+        
+          d
+        
+        P
+        
+          /
+        
+        
+          d
+        
+        T
+      
+    
+    {\displaystyle \mathrm {d} P/\mathrm {d} T}
+   is the slope of the tangent to the coexistence curve at any point, 
+  
+    
+      
+        L
+      
+    
+    {\displaystyle L}
+   is the specific latent heat, 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+   is the temperature, 
+  
+    
+      
+        Δ
+        v
+      
+    
+    {\displaystyle \Delta v}
+   is the specific volume change of the phase transition, and 
+  
+    
+      
+        Δ
+        s
+      
+    
+    {\displaystyle \Delta s}
+   is the specific entropy change of the phase transition.
+
+

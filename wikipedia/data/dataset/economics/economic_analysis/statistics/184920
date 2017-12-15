@@ -1,0 +1,7 @@
+In queueing theory, a discipline within the mathematical theory of probability, Little's result, theorem, lemma, law or formula is a theorem by John Little which states that the long-term average number L of customers in a stationary system is equal to the long-term average effective arrival rate λ multiplied by the average time W that a customer spends in the system. Expressed algebraically the law is
+
+ L = λW.
+
+Although it looks intuitively easy, it is quite a remarkable result, as the relationship is "not influenced by the arrival process distribution, the service distribution, the service order, or practically anything else."
+The result applies to any system, and particularly, it applies to systems within systems. So in a bank, the customer line might be one subsystem, and each of the tellers another subsystem, and Little's result could be applied to each one, as well as the whole thing. The only requirements are that the system be stable and non-preemptive; this rules out transition states such as initial startup or shutdown.
+In some cases it is possible not only to mathematically relate the average number in the system to the average wait but even to relate the entire probability distribution (and moments) of the number in the system to the wait.

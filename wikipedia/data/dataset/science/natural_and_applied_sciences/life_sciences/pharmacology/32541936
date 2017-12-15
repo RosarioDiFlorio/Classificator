@@ -1,0 +1,6 @@
+Ligand efficiency is a measurement of the binding energy per atom of a ligand to its binding partner, such as a receptor or enzyme.
+Ligand efficiency is used in drug discovery research programs to assist in narrowing focus to lead compounds with optimal combinations of physicochemical properties and pharmacological properties.
+Mathematically, ligand efficiency (LE) can be defined as the ratio of Gibbs free energy (ΔG) to the number of non-hydrogen atoms of the compound:
+LE = (ΔG)/N
+where ΔG = -RTlnKi and N is the number of non-hydrogen atoms. It can be transformed to the equation:
+LE = 1.4(-logIC50)/N

@@ -1,0 +1,60 @@
+A temperature coefficient describes the relative change of a physical property that is associated with a given change in temperature. For a property R that changes by dR when the temperature changes by dT, the temperature coefficient α is defined by
+
+  
+    
+      
+        
+          
+            
+              d
+              R
+            
+            R
+          
+        
+        =
+        α
+        
+        d
+        T
+        .
+      
+    
+    {\displaystyle {\frac {dR}{R}}=\alpha \,dT.}
+  
+Here α has the dimension of an inverse temperature and can be expressed e.g. in 1/K or K−1.
+If the temperature coefficient itself does not vary too much with temperature, a linear approximation can be used to determine the value R of a property at a temperature T, given its value R0 at a reference temperature T0:
+
+  
+    
+      
+        R
+        (
+        T
+        )
+        =
+        R
+        (
+        
+          T
+          
+            0
+          
+        
+        )
+        (
+        1
+        +
+        α
+        Δ
+        T
+        )
+        ,
+      
+    
+    {\displaystyle R(T)=R(T_{0})(1+\alpha \Delta T),}
+  
+where ΔT is the difference between T and T0. For strongly temperature-dependent α, this approximation is only useful for small temperature differences ΔT.
+Temperature coefficients are specified for various applications, including electric and magnetic properties of materials as well as reactivity. The temperature coefficient of most of the reactions lies between - 2 & 3
+
+

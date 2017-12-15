@@ -1,0 +1,1 @@
+In a very generic sense, the term transactions per second refers to the number of atomic actions performed by certain entity per second. In a more restricted view, the term is usually used by DBMS vendor and user community to refer to the number of database transactions performed per second.

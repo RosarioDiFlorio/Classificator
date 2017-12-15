@@ -1,0 +1,6 @@
+The state postulate is a term used in thermodynamics that defines the given number of properties to a thermodynamic system in a state of equilibrium. The state postulate allows a finite number of properties to be specified in order to fully describe a state of thermodynamic equilibrium. Once the state postulate is given the other unspecified properties must assume certain values.
+The state postulate says:
+A system is considered to be a simple compressible one in the absence of certain effects which are uncommon in many engineering applications. These are electromagnetic and gravitational fields, surface tension, and motion. For such a system, only two independent intensive variables are sufficient to derive all the others by use of an equation of state. In the case of a more complex system, additional variables must be measured in order to solve for the complete state. For example, if gravitation is significant then an elevation may be required.
+Two properties are considered independent if one can be varied while the other is held constant. For example, temperature and specific volume are always independent. However, temperature and pressure are independent only for a single-phase system; for a multiphase system (such as a mixture of gas and liquid) this is not the case. (e.g., boiling point (temperature) depends on elevation (ambient pressure)).
+
+

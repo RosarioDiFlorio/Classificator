@@ -1,0 +1,6 @@
+In statistics, the theory of minimum norm quadratic unbiased estimation (MINQUE) was developed by C.R. Rao. Its application was originally to the problem of heteroscedasticity and the estimation of variance components in random effects models.
+The theory involves three stages:
+
+defining a general class of potential estimators as quadratic functions of the observed data, where the estimators relate to a vector of model parameters;
+specifying certain constraints on the desired properties of the estimators, such as unbiasedness;
+choosing the optimal estimator by minimising a "norm" which measures the size of the covariance matrix of the estimators.

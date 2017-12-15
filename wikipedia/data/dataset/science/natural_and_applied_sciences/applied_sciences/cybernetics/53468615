@@ -1,0 +1,3 @@
+Generalized regression neural network (GRNN) is a variation to radial basis neural networks. GRNN was suggested by D.F. Specht in 1991.
+GRNN can be used for regression, prediction, and classification. GRNN can also be a good solution for online dynamical systems.
+GRNN represents an improved technique in the neural networks based on the nonparametric regression. The idea is that every training sample will represents a mean to a radial basis neuron.

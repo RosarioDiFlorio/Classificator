@@ -1,0 +1,4 @@
+The term quantum efficiency (QE) may apply to incident photon to converted electron (IPCE) ratio, of a photosensitive device or it may refer to the TMR effect of a Magnetic Tunnel Junction.
+This article deals with the term as a measurement of a device's electrical sensitivity to light. In a charge-coupled device (CCD) it is the percentage of photons hitting the device's photoreactive surface that produce charge carriers. It is measured in electrons per photon or amps per watt. Since the energy of a photon is inversely proportional to its wavelength, QE is often measured over a range of different wavelengths to characterize a device's efficiency at each photon energy level. The QE for photons with energy below the band gap is zero. Photographic film typically has a QE of much less than 10%, while CCDs can have a QE of well over 90% at some wavelengths.
+
+

@@ -1,0 +1,124 @@
+Nuclear transparency is the ratio of cross-sections for exclusive processes from the nuclei to those of the nucleons.
+If the nuclear cross-section is denoted as 
+  
+    
+      
+        
+          σ
+          
+            N
+          
+        
+      
+    
+    {\displaystyle \sigma _{N}}
+   and free nucleon cross-section as 
+  
+    
+      
+        
+          σ
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \sigma _{0}}
+   then nuclear transparency can be defined as
+  
+    
+      
+        T
+        =
+        
+          σ
+          
+            N
+          
+        
+        
+          /
+        
+        A
+        
+          σ
+          
+            0
+          
+        
+      
+    
+    {\displaystyle T=\sigma _{N}/A\sigma _{0}}
+  , where 
+  
+    
+      
+        
+          σ
+          
+            N
+          
+        
+      
+    
+    {\displaystyle \sigma _{N}}
+   can be parameterized in terms of 
+  
+    
+      
+        
+          σ
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \sigma _{0}}
+   as 
+  
+    
+      
+        
+          σ
+          
+            N
+          
+        
+        =
+        
+          A
+          
+            α
+          
+        
+        
+          σ
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \sigma _{N}=A^{\alpha }\sigma _{0}}
+  .
+Therefore, transparency can be expressed as 
+  
+    
+      
+        T
+        =
+        
+          A
+          
+            α
+            −
+            1
+          
+        
+      
+    
+    {\displaystyle T=A^{\alpha -1}}
+  .
+Here nucleon cross-section can be thought of as hydrogen cross-section and nuclei cross-section can be as for other targets.

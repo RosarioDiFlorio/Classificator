@@ -1,0 +1,4 @@
+Active networking is a communication pattern that allows packets flowing through a telecommunications network to dynamically modify the operation of the network.
+Active network architecture is composed of execution environments (similar to a unix shell that can execute active packets), a node operating system capable of supporting one or more execution environments. It also consists of active hardware, capable of routing or switching as well as executing code within active packets. This differs from the traditional network architecture which seeks robustness and stability by attempting to remove complexity and the ability to change its fundamental operation from underlying network components. Network processors are one means of implementing active networking concepts. Active networks have also been implemented as overlay networks.
+
+

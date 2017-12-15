@@ -1,0 +1,1 @@
+Mixmaster is a Type II anonymous remailer which sends messages in fixed-size packets and reorders them, preventing anyone watching the messages go in and out of remailers from tracing them. It is an implementation of a Chaumian Mix network

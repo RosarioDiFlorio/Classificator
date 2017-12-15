@@ -1,0 +1,6 @@
+A keyboard buffer is a section of computer memory used to hold keystrokes before they are processed.
+Keyboard buffers have long been used in command-line processing. As a user enters a command, they see it echoed on their terminal and can edit it before it is processed by the computer.
+In time-sharing systems, the location of the buffer depends on whether communications is full-duplex or half-duplex. In full-duplex systems, keystrokes are transmitted one by one. As the main computer receives each keystroke, it ordinarily appends the character which it represents to the end of the keyboard buffer. The exception is control characters, such as "delete" or "backspace" which correct typing mistakes by deleting the character at the end of the buffer.
+In half-duplex systems, keystrokes are echoed locally on a computer terminal. The user can see the command line on his terminal and edit it before it is transmitted to the main computer. Thus the buffer is local.
+On some early home computers, to minimize the necessary hardware, a CPU interrupt checked the keyboard's switches for key presses multiple times each second, and recorded the key presses in a keyboard buffer for the operating system or application software to read.
+On some systems, by pressing too many keys at once, the keyboard buffer overflows and will emit a beep from the computer's internal speaker.

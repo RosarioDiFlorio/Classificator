@@ -1,0 +1,64 @@
+Conditional short-circuit current is defined as the value of the alternating current (a.c) component of a prospective current, which a switch without integral short-circuit protection, but protected by a suitable short circuit protective device (SCPD) in series, can withstand for the operating time of the current under specified test conditions. It may be understood to be the RMS value of the maximum permissible current over a specified time interval (t0,t1) and operating conditions. The IEC definition is critiqued to be open to interpretation.
+
+  
+    
+      
+        I
+        =
+        
+          
+            
+              
+                1
+                
+                  
+                    t
+                    
+                      1
+                    
+                  
+                  −
+                  
+                    t
+                    
+                      0
+                    
+                  
+                
+              
+            
+            
+              ∫
+              
+                
+                  t
+                  
+                    0
+                  
+                
+              
+              
+                
+                  t
+                  
+                    1
+                  
+                
+              
+            
+            
+              i
+              
+                2
+              
+            
+            (
+            t
+            )
+            d
+            t
+          
+        
+      
+    
+    {\displaystyle I={\sqrt {{\frac {1}{t_{1}-t_{0}}}\int _{t_{0}}^{t_{1}}i^{2}(t)dt}}}

@@ -1,0 +1,5 @@
+MICTOR is an acronym for Matched Impedance ConnecTOR, a product line of vertical board to board connectors. Produced by TE Connectivity, they are attached to printed circuit boards using surface-mount technology. They can be used for probing boards.
+MICTOR are used in HP and Tektronix logic analyzers.
+Connectors can be used even for very-high frequency applications, up to 100-ps rise time.
+Some of Mictor signals can be used for JTAG, e.g. in FPGA debugging variants of the connector. Along with JTAG, Mictor connectors can also carry hardware trace signals like ARM CoreSight ETM (Embedded Trace Macrocell) or PTM (Program Trace Macrocell). 
+Minimal variant of MICTOR consists of 38 signal positions; larger variants are designed up to 266 signals (with 38 increments). Connector is usually surface mounted.

@@ -1,0 +1,48 @@
+Rifleman's rule is a "rule of thumb" that allows a rifleman to accurately fire a rifle that has been calibrated for horizontal targets at uphill or downhill targets. The rule says that only the horizontal range should be considered when adjusting a sight or performing hold-over in order to account for bullet drop. Typically, the range of an elevated target is considered in terms of the slant range, incorporating both the horizontal distance and the elevation distance (possibly negative, i.e. downhill), as when a rangefinder is used to determine the distance to target. The slant range is not compatible with standard ballistics tables for estimating bullet drop.
+The Rifleman's rule provides an estimate of the horizontal range for engaging a target at a known slant range (the uphill or downhill distance from the rifle). For a bullet to strike a target at a slant range of 
+  
+    
+      
+        
+          R
+          
+            S
+          
+        
+      
+    
+    {\displaystyle R_{S}}
+   and an incline of 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  , the rifle sight must be adjusted as if the shooter were aiming at a horizontal target at a range of 
+  
+    
+      
+        
+          R
+          
+            H
+          
+        
+        =
+        
+          R
+          
+            S
+          
+        
+        cos
+        ⁡
+        (
+        α
+        )
+      
+    
+    {\displaystyle R_{H}=R_{S}\cos(\alpha )}
+  . Figure 1 illustrates the shooting scenario. The rule holds for inclined and declined shooting (all angles measured with respect to horizontal). Very precise computer modeling and empirical evidence suggests that the rule does appear to work with reasonable accuracy in air and with both bullets and arrows.

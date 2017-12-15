@@ -1,0 +1,11 @@
+ArduPilot is a professional grade open source, unmanned vehicle Autopilot Software Suite, capable of controlling autonomous:
+Multirotor drones
+Fixed-wing and VTOL model aircraft
+Model helicopters
+Ground rovers
+Model boats
+Model submarines
+Antenna trackers
+ArduPilot is one of the most advanced, full-featured and reliable autopilot software available, used by a wide variety of both professionals and amateurs, and has been developed by a team of diverse professional engineers and computer scientists.
+It is the only autopilot platform capable of controlling all the types of vehicles listed above, and is an award-winning platform that won the 2012, 2014, and 2016 UAV Outback Challenge as well as the 2016 IMAV competition.
+In addition to hobbyists, ArduPilot is used by a large number of leading drone industry companies around the world. The project is a collaborative software development effort, creating a commercial-grade, feature-rich and freely available source code implementation. It is jointly managed by a group of volunteers located around the world, using the Internet (discourse based forum, gitter channel) to communicate, plan, develop and support it. The development team meets weekly in an open chat meeting open to all, using Mumble. In addition, hundreds of users contribute ideas, code, and documentation to the project. ArduPilot is licensed GPL Version 3, and is free to download and use.

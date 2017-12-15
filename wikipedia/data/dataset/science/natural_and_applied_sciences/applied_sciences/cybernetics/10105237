@@ -1,0 +1,21 @@
+In mathematics, in the field of control theory, a Sylvester equation is a matrix equation of the form:
+
+  
+    
+      
+        A
+        X
+        +
+        X
+        B
+        =
+        C
+        .
+      
+    
+    {\displaystyle AX+XB=C.}
+  
+Then given matrices A,B, and C, the problem is to find the possible matrices X that obey this equation. All matrices are assumed to have coefficients in the complex numbers. For the equation to make sense, the matrices must have appropriate sizes, for example they could all be square matrices of the same size. But more generally, A and B must be square matrices of sizes n and m respectively, and then X and C both have n rows and m columns.
+A Sylvester equation has a unique solution for X exactly when there are no common eigenvalues of A and -B. More generally, the equation AX+XB=C has been considered as an equation of bounded operators on a (possibly infinite-dimensional) Banach space. In this case, the condition for the uniqueness of a solution X is almost the same: There exists a unique solution X exactly when the spectra of A and -B are disjoint.
+
+

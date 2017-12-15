@@ -1,0 +1,1 @@
+The term "disk-to-disk", or "D2D", generally refers to disk-to-disk backup. With D2D, a computer hard disk is backed up to another hard disk rather than to a tape or floppy. D2D is often confused with virtual tape, but differs in that it enables multiple backup and recovery operations to simultaneously access the disk directly by using a true file system.

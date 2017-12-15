@@ -1,0 +1,5 @@
+The Minimum intrusion Grid (commonly MiG) is an effort to design and develop a modern grid computing system that has minimal requirements for usage yet still maintains a security for all participants in the system.
+MiG currently covers three separate projects:
+MiGrid is a project to develop the software itself.
+MiGrid is a development grid, usually running the latest MiGrid software.
+Grid.dk is the national Danish grid, slated to run the MiGrid software, mixed with other Grid middelware, such as NorduGrid.

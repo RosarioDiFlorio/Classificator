@@ -1,0 +1,5 @@
+Aircraft Meteorological Data Relay (AMDAR) is a program initiated by the World Meteorological Organization. AMDAR is used to collect meteorological data worldwide by using commercial aircraft.
+Data is collected by the aircraft navigation systems and the onboard standard temperature and static pressure probes. The data is then preprocessed before linking them down to the ground either via VHF communication (ACARS) or via satellite link ASDAR.
+A detailed description is given in the AMDAR Reference Manual (WMO-No 958) available from the World Meteorological Organization, Geneva, Switzerland.
+
+

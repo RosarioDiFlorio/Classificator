@@ -1,0 +1,36 @@
+The lever rule is a tool used to determine mole fraction of each phase of a binary equilibrium phase diagram. It is used to determine the percent of liquid and solid phases for a given binary composition and temperature that is between the liquidus and solidus line.
+In an alloy with two phases, α and β, which themselves contain two elements, A and B, the lever rule states that the weight percentage of the α phase is
+
+  
+    
+      
+        
+          X
+          
+            α
+          
+        
+        =
+        
+          
+            
+              c
+              −
+              b
+            
+            
+              a
+              −
+              b
+            
+          
+        
+      
+    
+    {\displaystyle X_{\alpha }={\frac {c-b}{a-b}}}
+  
+where
+a is the weight percentage of element B in the α phase
+b is the weight percentage of element B in the β phase
+c is the weight percentage of element B in the entire alloy
+all at some fixed temperature.

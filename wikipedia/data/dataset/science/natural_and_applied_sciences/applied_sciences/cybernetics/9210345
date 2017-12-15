@@ -1,0 +1,37 @@
+Gaussian adaptation (GA) (also referred to as normal or natural adaptation and sometimes abbreviated as NA) is an evolutionary algorithm designed for the maximization of manufacturing yield due to statistical deviation of component values of signal processing systems. In short, GA is a stochastic adaptive process where a number of samples of an n-dimensional vector x[xT = (x1, x2, ..., xn)] are taken from a multivariate Gaussian distribution, N(m, M), having mean m and moment matrix M. The samples are tested for fail or pass. The first- and second-order moments of the Gaussian restricted to the pass samples are m* and M*.
+The outcome of x as a pass sample is determined by a function s(x), 0 < s(x) < q ≤ 1, such that s(x) is the probability that x will be selected as a pass sample. The average probability of finding pass samples (yield) is
+
+  
+    
+      
+        P
+        (
+        m
+        )
+        =
+        ∫
+        s
+        (
+        x
+        )
+        N
+        (
+        x
+        −
+        m
+        )
+        
+        d
+        x
+      
+    
+    {\displaystyle P(m)=\int s(x)N(x-m)\,dx}
+  
+Then the theorem of GA states:
+
+For any s(x) and for any value of P < q, there always exist a Gaussian p. d. f. [ probability density function ] that is adapted for maximum dispersion. The necessary conditions for a local optimum are m = m* and M proportional to M*. The dual problem is also solved: P is maximized while keeping the dispersion constant (Kjellström, 1991).
+
+Proofs of the theorem may be found in the papers by Kjellström, 1970, and Kjellström & Taxén, 1981.
+Since dispersion is defined as the exponential of entropy/disorder/average information it immediately follows that the theorem is valid also for those concepts. Altogether, this means that Gaussian adaptation may carry out a simultaneous maximisation of yield and average information (without any need for the yield or the average information to be defined as criterion functions).
+The theorem is valid for all regions of acceptability and all Gaussian distributions. It may be used by cyclic repetition of random variation and selection (like the natural evolution). In every cycle a sufficiently large number of Gaussian distributed points are sampled and tested for membership in the region of acceptability. The centre of gravity of the Gaussian, m, is then moved to the centre of gravity of the approved (selected) points, m*. Thus, the process converges to a state of equilibrium fulfilling the theorem. A solution is always approximate because the centre of gravity is always determined for a limited number of points.
+It was used for the first time in 1969 as a pure optimization algorithm making the regions of acceptability smaller and smaller (in analogy to simulated annealing, Kirkpatrick 1983). Since 1970 it has been used for both ordinary optimization and yield maximization.

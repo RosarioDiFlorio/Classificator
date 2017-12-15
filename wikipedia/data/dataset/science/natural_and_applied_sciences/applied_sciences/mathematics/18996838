@@ -1,0 +1,66 @@
+Gregory Maxwell "Max" Kelly (5 June 1930 – 26 January 2007), mathematician, founded the thriving Australian school of category theory.
+A native of Australia, Kelly obtained his Ph.D. at Cambridge University in homological algebra in 1957, publishing his first paper in that area in 1959, Single-space axioms for homology theory. He taught in the Pure Mathematics department at Sydney University from 1957 to 1966, rising from lecturer to reader. During 1963–1965 he was a visiting fellow at Tulane University and the University of Illinois, where with Samuel Eilenberg he formalized and developed the notion of an enriched category based on intuitions then in the air about making the homsets of a category just as abstract as the objects themselves.
+He subsequently developed the notion in considerably more detail in his 1982 monograph Basic Concepts of Enriched Category Theory (henceforth appreviated BCECT). Let 
+  
+    
+      
+        
+          
+            V
+          
+        
+      
+    
+    {\displaystyle {\cal {V}}}
+   be a monoidal category, and denote by 
+  
+    
+      
+        
+          
+            V
+          
+        
+      
+    
+    {\displaystyle {\cal {V}}}
+  -Cat the category of 
+  
+    
+      
+        
+          
+            V
+          
+        
+      
+    
+    {\displaystyle {\cal {V}}}
+  -enriched categories. Among other things, Kelly showed that 
+  
+    
+      
+        
+          
+            V
+          
+        
+      
+    
+    {\displaystyle {\cal {V}}}
+  -Cat has all weighted limits and colimits even when 
+  
+    
+      
+        
+          
+            V
+          
+        
+      
+    
+    {\displaystyle {\cal {V}}}
+   does not have all ordinary limits and colimits. He also developed the enriched counterparts of Kan extensions, density of the Yoneda embedding, and essentially algebraic theories. The explicitly foundational role of the category Set in his treatment is noteworthy in view of the folk intuition that enriched categories liberate category theory from the last vestiges of Set as the codomain of the ordinary external hom-functor.
+In 1967 Kelly was appointed Professor of Pure Mathematics at the University of New South Wales. In 1972 he was elected a Fellow of the Australian Academy of Science. He returned to the University of Sydney in 1973, serving as Professor of Mathematics until his retirement in 1994. In 2001 he was awarded the Australian government's Centenary Medal. He continued to participate in the department as Professorial Fellow and Professor Emeritus until his death at age 76 on 26 January 2007.
+Kelly worked on many other aspects of category theory besides enriched categories, both individually and in a number of fruitful collaborations. His Ph.D. student Ross Street is himself a noted category theorist and early contributor to the Australian category theory school.
+The following annotated list of papers includes several papers not by Kelly which cover closely related work.

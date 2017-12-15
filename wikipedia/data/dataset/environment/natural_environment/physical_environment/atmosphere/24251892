@@ -1,0 +1,9 @@
+A weather window occurs when weather forecasts indicate that a given set of marine operations or offshore construction activities can be performed within their maximum limits for wave height, wind speeds etc.
+Critical elements for offshore operations are use of time and expected weather. Planning of marine operations should be based on an operation’s reference period defined as:
+
+Operation reference period (TR) = Estimated time of operation + Estimated unforeseen time
+
+If unforeseen time has not been identified, the operation reference period is normally set at twice the estimated operation time. Marine operations with a reference period less than 72 hours can be defined as weather-limited operations. These operations can be planned independently of statistical data and based only on weather forecasts.
+For weather-limited operations, critical factors such as forces, movements and acceleration shall be calculated in a rather worse weather condition (design criterion) than the weather in which it is planned to perform the operation (operational criterion). This is due to the unreliability of weather forecasts. The longer the planned operation lasts, the greater the difference between the operational criterion and the design criterion.
+The relationship between the operational criterion and the design criterion is defined as the "alpha factor". The variations in the alpha factor also take account of the fact that it is harder to estimate the wave height for small sea conditions than for larger sea conditions. As an example, operation planned to take 20 hours with a design criterion of significant wave height (Hs) 2.5m will yield an operational criterion of 2.5 * 0.71 = 1.8m. The maximum wave is about 1.86 times Hs (depending on the period).
+Examples of alpha factors from the DNV Rules for Marine Operations, Part 1, Chapter 2, Planning of operations:

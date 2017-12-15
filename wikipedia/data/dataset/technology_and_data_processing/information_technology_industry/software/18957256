@@ -1,0 +1,36 @@
+BATCH ENHANCER (or BE) (or BE.EXE,) is an applet or free-standing utility packaged with Norton Utilities (NU) to graphically enhance the presentation of batch files (Batch files are like a script, a series of commands executed at once, automatically by the computer itself). Batch Enhancer allows the use of colours, square graphics, delays, beeps, a little more complex decision parameters than the usual batch file programming, easier to create user-choice menus, and other functions.
+BE is unusual in Norton's suite of utilities in that it was not designed to primarily be launched by NU itself, but be used like another (DOS) command/function to simplify the writing of executable BATCH files, or make them more powerful, such as for creating colorful and animated DOS screens that were typically just plain blue & cyan.
+For examples, usage syntaxes and examples from BE itself:
+
+    BE command(parameters)
+          or
+    BE filespec
+Commands available:
+      ASK   BEEP  BOX   CLS  DELAY  PRINTCHAR  ROWCOL
+      SA    WINDOW
+
+For more help on a specific command type:
+      BE command ?
+
+BE BEEP  [switches]
+  or
+BE BEEP  [filespec]
+
+Switches
+    /Dn  Duration of the tone in n/18 seconds
+    /FnSound a tone of frequency n
+    /Rn  Repeat the tone n times
+    /Wn  Wait between tones n/18 seconds
+PLAY A LITTLE TUNE.
+be beep /F392 /D4;
+be beep /F392 /D1;
+be beep /F523 /D15;
+
+BE BOX Usage:  BE BOX top left bottom right [color]
+
+BE window 0,0,24,79 bright yellow on blue explode
+BE window 4,11,20,68 bright yellow on green explode shadow
+
+Usage:  BE DELAY ticks (1 tick = 1/18 second)
+
+So if the line: "BE DELAY 18" was run from inside a BATCH (.BAT) file, it would pause for one second before moving to the next instruction. At modern (2013) computer speeds, many batch files run so fast they are invisible, this delay would allow the user to see the DOS window and that it ran. BE.EXE from Norton Utilities 4.50 is 22,426 bytes in size, dated 10-16-88.

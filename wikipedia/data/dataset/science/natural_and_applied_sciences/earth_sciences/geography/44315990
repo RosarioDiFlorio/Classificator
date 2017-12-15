@@ -1,0 +1,8 @@
+Ortho3D
+True 3D city reconstruction created automatically from multi-angle stereoscopic vertical and oblique aerial and/or street photographs, thanks to very robust photogrammetric dense matching software based on strong GPU computing.
+Workflow :
+image matching, keypoints extraction
+bundle adjustment
+dense matching, point cloud extraction
+point cloud cleaning
+3D Meshing

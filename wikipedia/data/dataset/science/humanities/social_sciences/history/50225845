@@ -1,0 +1,121 @@
+A weighted catenary is a catenary curve, but of a special form. A "regular" catenary has the equation
+
+  
+    
+      
+        y
+        =
+        a
+        
+        cosh
+        ⁡
+        
+          (
+          
+            
+              x
+              a
+            
+          
+          )
+        
+        =
+        
+          
+            
+              a
+              
+                (
+                
+                  e
+                  
+                    
+                      x
+                      a
+                    
+                  
+                
+                +
+                
+                  e
+                  
+                    −
+                    
+                      
+                        x
+                        a
+                      
+                    
+                  
+                
+                )
+              
+            
+            2
+          
+        
+      
+    
+    {\displaystyle y=a\,\cosh \left({\frac {x}{a}}\right)={\frac {a\left(e^{\frac {x}{a}}+e^{-{\frac {x}{a}}}\right)}{2}}}
+  
+for a given value of a. A weighted catenary has the equation
+
+  
+    
+      
+        y
+        =
+        b
+        
+        cosh
+        ⁡
+        
+          (
+          
+            
+              x
+              a
+            
+          
+          )
+        
+        =
+        
+          
+            
+              b
+              
+                (
+                
+                  e
+                  
+                    
+                      x
+                      a
+                    
+                  
+                
+                +
+                
+                  e
+                  
+                    −
+                    
+                      
+                        x
+                        a
+                      
+                    
+                  
+                
+                )
+              
+            
+            2
+          
+        
+      
+    
+    {\displaystyle y=b\,\cosh \left({\frac {x}{a}}\right)={\frac {b\left(e^{\frac {x}{a}}+e^{-{\frac {x}{a}}}\right)}{2}}}
+  
+and now two constants enter: a and b.

@@ -1,0 +1,3 @@
+A permission-driven user interface (PDUI) is a user interface in which the appearance or non-appearance of menu items or functions is driven by the access permissions granted to a user.
+Users can see very different user interfaces in the same system based on their permissions levels.
+The system is intended to improve the user experience by removing items that are unavailable to the user. A user who sees functions that are unavailable for use may become frustrated. It also provides an enhancement to security by hiding functional items from unauthorized persons.

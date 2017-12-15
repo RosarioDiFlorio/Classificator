@@ -1,0 +1,6 @@
+In mathematics, two variables are proportional if there is always a constant ratio between them. The constant is called the coefficient of proportionality or proportionality constant.
+If one variable is always the product of the other variable and a constant, the two are said to be directly proportional. x and y are directly proportional if the ratio y/x is constant.
+If the product of the two variables is always a constant, the two are said to be inversely proportional. x and y are inversely proportional if the product xy is constant.
+To express the statement "y is directly proportional to x" mathematically, we write an equation y = cx, where c is the proportionality constant. Symbolically, this is written as y ∝ x.
+To express the statement "y is inversely proportional to x" mathematically, we write an equation y = c/x. We can equivalently write "y is directly proportional to 1/x".
+An equality of two ratios is called a proportion. An example is a/c = b/d where no term is zero.

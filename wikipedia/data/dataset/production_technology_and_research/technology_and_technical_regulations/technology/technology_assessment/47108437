@@ -1,0 +1,4 @@
+Predix is General Electric's software platform for the collection and analysis of data from industrial machines. General Electric plans to support the growing industrial internet of things with cloud servers and an app store. GE is a member of the Industrial Internet Consortium which works to aid the development and use of industrial internet technologies.
+Predix as a cloud-based PaaS (platform as a service) is claimed to enable industrial-scale analytics for asset performance management (APM) and operations optimization by providing a standard way to connect machines, data, and people. GE expects Predix software to do for factories and plants what Apple's iOS did for cell phones. Built on Cloud Foundry open source technology, Predix provides a microservices based delivery model with a distributed architecture (cloud, and on-machine).
+
+

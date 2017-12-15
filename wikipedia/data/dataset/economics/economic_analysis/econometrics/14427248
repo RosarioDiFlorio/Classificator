@@ -1,0 +1,39 @@
+The Sargan–Hansen test or Sargan's 
+  
+    
+      
+        J
+      
+    
+    {\displaystyle J}
+   test is a statistical test used for testing over-identifying restrictions in a statistical model. It was proposed by John Denis Sargan in 1958, and several variants were derived by him in 1975. Lars Peter Hansen re-worked through the derivations and showed that it can be extended to general non-linear GMM in a time series context.
+The Sargan test is based on the assumption that model parameters are identified via a priori restrictions on the coefficients, and tests the validity of over-identifying restrictions. The test statistic can be computed from residuals from instrumental variables regression by constructing a quadratic form based on the cross-product of the residuals and exogenous variables. Under the null hypothesis that the over-identifying restrictions are valid, the statistic is asymptotically distributed as a chi-square variable with 
+  
+    
+      
+        (
+        m
+        −
+        k
+        )
+      
+    
+    {\displaystyle (m-k)}
+   degrees of freedom (where 
+  
+    
+      
+        m
+      
+    
+    {\displaystyle m}
+   is the number of instruments and 
+  
+    
+      
+        k
+      
+    
+    {\displaystyle k}
+   is the number of endogenous variables).
+This version of the Sargan statistic was developed for models estimated using instrumental variables from ordinary time series or cross-sectional data. When longitudinal ("panel data") data are available, it is possible to extend such statistics for testing exogeneity hypotheses for subsets of explanatory variables. Testing of over-identifying assumptions is less important in longitudinal applications because realizations of time varying explanatory variables in different time periods are potential instruments, i.e., over-identifying restrictions are automatically built into models estimated using longitudinal data.

@@ -1,0 +1,23 @@
+In laser science, the beam parameter product (BPP) is the product of a laser beam's divergence angle (half-angle) and the radius of the beam at its narrowest point (the beam waist). The BPP quantifies the quality of a laser beam, and how well it can be focused to a small spot.
+A Gaussian beam has the lowest possible BPP, 
+  
+    
+      
+        λ
+        
+          /
+        
+        π
+      
+    
+    {\displaystyle \lambda /\pi }
+  , where 
+  
+    
+      
+        λ
+      
+    
+    {\displaystyle \lambda }
+   is the wavelength of the light. The ratio of the BPP of an actual beam to that of an ideal Gaussian beam at the same wavelength is denoted M2 ("M squared"). This parameter is a wavelength-independent measure of beam quality.
+The quality of a beam is important for many applications. In fiber-optic communications beams with an M2 close to 1 are required for coupling to single-mode optical fiber. Laser machine shops care a lot about the M2 parameter of their lasers because the beams will focus to an area that is M2 times larger than that of a Gaussian beam with the same wavelength and D4σ waist width; in other words, the fluence scales as 1/M2. The rule of thumb is that M2 increases as the laser power increases. It is difficult to obtain excellent beam quality and high average power (100 W to kWs) due to thermal lensing in the laser gain medium.

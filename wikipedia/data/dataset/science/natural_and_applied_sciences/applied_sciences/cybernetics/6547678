@@ -1,0 +1,5 @@
+Dual control theory is a branch of control theory that deals with the control of systems whose characteristics are initially unknown. It is called dual because in controlling such a system the controller's objectives are twofold:
+(1) Action: To control the system as well as possible based on current system knowledge
+(2) Investigation: To experiment with the system so as to learn about its behavior and control it better in the future.
+These two objectives may be partly in conflict.
+Dual control theory was developed by Alexander Aronovich Fel'dbaum in 1960. He showed that in principle the optimal solution can be found by dynamic programming, but this is often impractical; as a result a number of methods for designing sub-optimal dual controllers have been devised.

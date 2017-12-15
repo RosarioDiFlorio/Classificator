@@ -1,0 +1,46 @@
+In probability theory Wald's martingale, named after Abraham Wald and more commonly known as the geometric Brownian motion, is a stochastic process of the form
+
+  
+    
+      
+        
+          {
+          exp
+          ⁡
+          
+            (
+            λ
+            
+              W
+              
+                t
+              
+            
+            −
+            
+              
+                1
+                2
+              
+            
+            
+              λ
+              
+                2
+              
+            
+            t
+            )
+          
+          ,
+          t
+          ≥
+          0
+          }
+        
+      
+    
+    {\displaystyle \left\{\exp \left(\lambda W_{t}-{\frac {1}{2}}\lambda ^{2}t\right),t\geq 0\right\}}
+  
+
+for any real value λ where Wt is a Wiener process. The process is a martingale.

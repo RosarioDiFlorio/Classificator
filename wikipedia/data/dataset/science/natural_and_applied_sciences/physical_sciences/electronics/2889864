@@ -1,0 +1,10 @@
+In communications and electronics, especially in telecommunications, interference is anything which modifies, or disrupts a signal as it travels along a channel between a source and a receiver. The term typically refers to the addition of unwanted signals to a useful signal. Common examples are:
+Electromagnetic interference (EMI)
+Co-channel interference (CCI), also known as crosstalk
+Adjacent-channel interference (ACI)
+Intersymbol interference (ISI)
+Inter-carrier interference (ICI), caused by doppler shift in OFDM modulation (multitone modulation).
+Common-mode interference (CMI)
+Conducted interference
+Interference is typically but not always distinguished from noise, for example white thermal noise.
+Radio resource management aims at reducing and controlling the co-channel and adjacent-channel interference.

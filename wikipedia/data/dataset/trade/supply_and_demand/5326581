@@ -1,0 +1,105 @@
+A demand set is a model of the most-preferred bundle of goods an agent can afford. The set is a function of the preference relation for this agent, the prices of goods, and the agent's endowment.
+Assuming the agent cannot have a negative quantity of any good, the demand set can be characterized this way:
+Define 
+  
+    
+      
+        L
+      
+    
+    {\displaystyle L}
+   as the number of goods the agent might receive an allocation of. An allocation to the agent is an element of the space 
+  
+    
+      
+        R
+        +
+        l
+      
+    
+    {\displaystyle R+l}
+  ; that is, the space of nonnegative real vectors of dimension 
+  
+    
+      
+        L
+      
+    
+    {\displaystyle L}
+  .
+Define 
+  
+    
+      
+        >
+        p
+      
+    
+    {\displaystyle >p}
+   as a weak preference relation over goods; that is, 
+  
+    
+      
+        x
+        >
+        p
+        
+          x
+          ′
+        
+      
+    
+    {\displaystyle x>px'}
+   states that the allocation vector 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+   is weakly preferred to 
+  
+    
+      
+        
+          x
+          ′
+        
+      
+    
+    {\displaystyle x'}
+  .
+Let 
+  
+    
+      
+        e
+      
+    
+    {\displaystyle e}
+   be a vector representing the quantities of the agent's endowment of each possible good, and 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+   be a vector of prices for those goods. Let 
+  
+    
+      
+        D
+        (
+        >
+        p
+        ,
+        p
+        ,
+        e
+        )
+      
+    
+    {\displaystyle D(>p,p,e)}
+   denote the demand set. Then: D(>p,p,e) = {x: px <= pe and x >p x' for all affordable bundles x'.

@@ -1,0 +1,5 @@
+BBeB (for Broad Band eBook) is a proprietary eBook file format developed by Sony and Canon. Although initially designed for the Sony Librié, it is also supported by other Sony e-book readers.
+BBeB files have the following extensions: LRS and LRF or LRX.
+LRS files are XML files that can be edited and follow the BBeB Xylog XML specification. They represent the source code of each BBeB eBook. LRF (unencrypted) and LRX (encrypted for DRM purposes) files are compiled/compressed versions of LRS files that are actually used by eBook readers.
+While the LRS format is openly available to the public, the LRF and LRX formats are not and remain proprietary. The conversion (compilation) from LRS to LRF can be done with a special tool, XylogParser.dll, also freely available to the public.
+As of July 2010, the Sony ebook store states that they are no longer using the BBeB format, and have converted all books to the EPUB format.

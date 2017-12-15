@@ -1,0 +1,7 @@
+Oracle TopLink is mapping and persistence framework for Java (programming language) developers. TopLink is produced by Oracle and is a part of Oracle's OracleAS, WebLogic, and OC4J servers. It is an object-persistence and object-transformation framework. TopLink provides development tools and run-time functionalities that ease the development process and help increase functionality. Persistent object-oriented data is stored in relational databases which helps build high-performance applications. Storing data in either XML (Extensible Markup Language) or relational databases is made possible by transforming it from object-oriented data.
+A rich user-interface is possible on TopLink with the help of TopLink Mapping Workbench. This Mapping Workbench makes it possible to carry out the following with ease.
+Graphical mapping of an object model to data model.
+Generation of data model from its object model and vice versa.
+Auto-mapping of any existing data models and object models.
+Oracle's JDeveloper IDE provides easy integration of these functionalities provided by the Mapping Workbench.
+With the use of TopLink, users can stay more focused on their primary cause and let TopLink handle the integration of persistence and object transformation into their application. Designing, implementing and deploying process is accelerated as TopLink supports a variety of data sources and formats such as Relational database, Object-relational database, Enterprise information system (EIS), XML and many others.

@@ -1,0 +1,596 @@
+In mathematics, Voigt notation or Voigt form in multilinear algebra is a way to represent a symmetric tensor by reducing its order. There are a few variants and associated names for this idea: Mandel notation, Mandel–Voigt notation and Nye notation are others found. Kelvin notation is a revival by Helbig of old ideas of Lord Kelvin. The differences here lie in certain weights attached to the selected entries of the tensor. Nomenclature may vary according to what is traditional in the field of application.
+For example, a 2×2 symmetric tensor X has only three distinct elements, the two on the diagonal and the other being off-diagonal. Thus it can be expressed as the vector
+
+  
+    
+      
+        ⟨
+        
+          x
+          
+            11
+          
+        
+        ,
+        
+          x
+          
+            22
+          
+        
+        ,
+        
+          x
+          
+            12
+          
+        
+        ⟩
+      
+    
+    {\displaystyle \langle x_{11},x_{22},x_{12}\rangle }
+  .
+As another example:
+The stress tensor (in matrix notation) is given as
+
+  
+    
+      
+        
+          σ
+        
+        =
+        
+          [
+          
+            
+              
+                
+                  
+                    σ
+                    
+                      x
+                      x
+                    
+                  
+                
+                
+                  
+                    σ
+                    
+                      x
+                      y
+                    
+                  
+                
+                
+                  
+                    σ
+                    
+                      x
+                      z
+                    
+                  
+                
+              
+              
+                
+                  
+                    σ
+                    
+                      y
+                      x
+                    
+                  
+                
+                
+                  
+                    σ
+                    
+                      y
+                      y
+                    
+                  
+                
+                
+                  
+                    σ
+                    
+                      y
+                      z
+                    
+                  
+                
+              
+              
+                
+                  
+                    σ
+                    
+                      z
+                      x
+                    
+                  
+                
+                
+                  
+                    σ
+                    
+                      z
+                      y
+                    
+                  
+                
+                
+                  
+                    σ
+                    
+                      z
+                      z
+                    
+                  
+                
+              
+            
+          
+          ]
+        
+        .
+      
+    
+    {\displaystyle {\boldsymbol {\sigma }}=\left[{\begin{matrix}\sigma _{xx}&\sigma _{xy}&\sigma _{xz}\\\sigma _{yx}&\sigma _{yy}&\sigma _{yz}\\\sigma _{zx}&\sigma _{zy}&\sigma _{zz}\end{matrix}}\right].}
+  
+In Voigt notation it is simplified to a 6-dimensional vector:
+
+  
+    
+      
+        
+          
+            
+              σ
+              ~
+            
+          
+        
+        =
+        (
+        
+          σ
+          
+            x
+            x
+          
+        
+        ,
+        
+          σ
+          
+            y
+            y
+          
+        
+        ,
+        
+          σ
+          
+            z
+            z
+          
+        
+        ,
+        
+          σ
+          
+            y
+            z
+          
+        
+        ,
+        
+          σ
+          
+            x
+            z
+          
+        
+        ,
+        
+          σ
+          
+            x
+            y
+          
+        
+        )
+        ≡
+        (
+        
+          σ
+          
+            1
+          
+        
+        ,
+        
+          σ
+          
+            2
+          
+        
+        ,
+        
+          σ
+          
+            3
+          
+        
+        ,
+        
+          σ
+          
+            4
+          
+        
+        ,
+        
+          σ
+          
+            5
+          
+        
+        ,
+        
+          σ
+          
+            6
+          
+        
+        )
+        .
+      
+    
+    {\displaystyle {\tilde {\sigma }}=(\sigma _{xx},\sigma _{yy},\sigma _{zz},\sigma _{yz},\sigma _{xz},\sigma _{xy})\equiv (\sigma _{1},\sigma _{2},\sigma _{3},\sigma _{4},\sigma _{5},\sigma _{6}).}
+  
+The strain tensor, similar in nature to the stress tensor—both are symmetric second-order tensors --, is given in matrix form as
+
+  
+    
+      
+        
+          ϵ
+        
+        =
+        
+          [
+          
+            
+              
+                
+                  
+                    ϵ
+                    
+                      x
+                      x
+                    
+                  
+                
+                
+                  
+                    ϵ
+                    
+                      x
+                      y
+                    
+                  
+                
+                
+                  
+                    ϵ
+                    
+                      x
+                      z
+                    
+                  
+                
+              
+              
+                
+                  
+                    ϵ
+                    
+                      y
+                      x
+                    
+                  
+                
+                
+                  
+                    ϵ
+                    
+                      y
+                      y
+                    
+                  
+                
+                
+                  
+                    ϵ
+                    
+                      y
+                      z
+                    
+                  
+                
+              
+              
+                
+                  
+                    ϵ
+                    
+                      z
+                      x
+                    
+                  
+                
+                
+                  
+                    ϵ
+                    
+                      z
+                      y
+                    
+                  
+                
+                
+                  
+                    ϵ
+                    
+                      z
+                      z
+                    
+                  
+                
+              
+            
+          
+          ]
+        
+        .
+      
+    
+    {\displaystyle {\boldsymbol {\epsilon }}=\left[{\begin{matrix}\epsilon _{xx}&\epsilon _{xy}&\epsilon _{xz}\\\epsilon _{yx}&\epsilon _{yy}&\epsilon _{yz}\\\epsilon _{zx}&\epsilon _{zy}&\epsilon _{zz}\end{matrix}}\right].}
+  
+Its representation in Voigt notation is
+
+  
+    
+      
+        
+          
+            
+              ϵ
+              ~
+            
+          
+        
+        =
+        (
+        
+          ϵ
+          
+            x
+            x
+          
+        
+        ,
+        
+          ϵ
+          
+            y
+            y
+          
+        
+        ,
+        
+          ϵ
+          
+            z
+            z
+          
+        
+        ,
+        
+          γ
+          
+            y
+            z
+          
+        
+        ,
+        
+          γ
+          
+            x
+            z
+          
+        
+        ,
+        
+          γ
+          
+            x
+            y
+          
+        
+        )
+        ≡
+        (
+        
+          ϵ
+          
+            1
+          
+        
+        ,
+        
+          ϵ
+          
+            2
+          
+        
+        ,
+        
+          ϵ
+          
+            3
+          
+        
+        ,
+        
+          ϵ
+          
+            4
+          
+        
+        ,
+        
+          ϵ
+          
+            5
+          
+        
+        ,
+        
+          ϵ
+          
+            6
+          
+        
+        )
+        ,
+      
+    
+    {\displaystyle {\tilde {\epsilon }}=(\epsilon _{xx},\epsilon _{yy},\epsilon _{zz},\gamma _{yz},\gamma _{xz},\gamma _{xy})\equiv (\epsilon _{1},\epsilon _{2},\epsilon _{3},\epsilon _{4},\epsilon _{5},\epsilon _{6}),}
+  
+where 
+  
+    
+      
+        
+          γ
+          
+            x
+            y
+          
+        
+        =
+        2
+        
+          ϵ
+          
+            x
+            y
+          
+        
+      
+    
+    {\displaystyle \gamma _{xy}=2\epsilon _{xy}}
+  , 
+  
+    
+      
+        
+          γ
+          
+            y
+            z
+          
+        
+        =
+        2
+        
+          ϵ
+          
+            y
+            z
+          
+        
+      
+    
+    {\displaystyle \gamma _{yz}=2\epsilon _{yz}}
+  , and 
+  
+    
+      
+        
+          γ
+          
+            z
+            x
+          
+        
+        =
+        2
+        
+          ϵ
+          
+            z
+            x
+          
+        
+      
+    
+    {\displaystyle \gamma _{zx}=2\epsilon _{zx}}
+   are engineering shear strains.
+The benefit of using different representations for stress and strain is that the scalar invariance
+
+  
+    
+      
+        
+          σ
+        
+        ⋅
+        
+          ϵ
+        
+        =
+        
+          σ
+          
+            i
+            j
+          
+        
+        
+          ϵ
+          
+            i
+            j
+          
+        
+        =
+        
+          
+            
+              σ
+              ~
+            
+          
+        
+        ⋅
+        
+          
+            
+              ϵ
+              ~
+            
+          
+        
+      
+    
+    {\displaystyle {\boldsymbol {\sigma }}\cdot {\boldsymbol {\epsilon }}=\sigma _{ij}\epsilon _{ij}={\tilde {\sigma }}\cdot {\tilde {\epsilon }}}
+  
+is preserved.
+Likewise, a three-dimensional symmetric fourth-order tensor can be reduced to a 6×6 matrix.

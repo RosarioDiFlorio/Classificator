@@ -1,0 +1,214 @@
+In thermodynamics, the specific volume of a substance is the ratio of the substance's volume to its mass. It is the reciprocal of density and an intrinsic property of matter as well. Specific volume is defined as the number of cubic meters occupied by one kilogram of a particular substance. The standard unit is the cubic meter per kilogram 
+  
+    
+      
+        (
+        
+          
+            m
+            
+              3
+            
+          
+        
+        
+          /
+        
+        
+          k
+          g
+        
+        )
+      
+    
+    {\displaystyle (\mathrm {m^{3}} /\mathrm {kg} )}
+  .
+
+  
+    
+      
+         
+        v
+        =
+        
+          
+            V
+            m
+          
+        
+         
+        =
+        
+          
+            ρ
+          
+          
+            −
+            1
+          
+        
+      
+    
+    {\displaystyle \ v={\frac {V}{m}}\ ={\rho }^{-1}}
+  
+Specific volume for an ideal gas is also equal to the gas constant (R) multiplied by the temperature and then divided by the pressure multiplied by molar mass of that ideal gas.
+Since 
+  
+    
+      
+         
+        P
+        V
+        =
+        
+          n
+          R
+          T
+        
+         
+        (
+        n
+        =
+        
+          
+            m
+            M
+          
+        
+        )
+      
+    
+    {\displaystyle \ PV={nRT}\ (n={\frac {m}{M}})}
+  
+
+  
+    
+      
+         
+        v
+        =
+        
+          
+            V
+            m
+          
+        
+      
+    
+    {\displaystyle \ v={\frac {V}{m}}}
+   ,
+
+  
+    
+      
+         
+        v
+        =
+        
+          
+            
+              R
+              T
+            
+            
+              P
+              M
+            
+          
+        
+      
+    
+    {\displaystyle \ v={\frac {RT}{PM}}}
+  
+Typically, the specific volume of a substance is expressed in terms such as 
+  
+    
+      
+        
+          
+            
+              
+                m
+                
+                  3
+                
+              
+            
+            
+              k
+              g
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {\mathrm {m^{3}} }{\mathrm {kg} }}}
+  , 
+  
+    
+      
+        
+          
+            
+              f
+              
+                t
+                
+                  3
+                
+              
+            
+            
+              l
+              b
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {\mathrm {ft^{3}} }{\mathrm {lb} }}}
+  , 
+  
+    
+      
+        
+          
+            
+              f
+              
+                t
+                
+                  3
+                
+              
+            
+            
+              s
+              l
+              u
+              g
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {\mathrm {ft^{3}} }{\mathrm {slug} }}}
+  , or 
+  
+    
+      
+        
+          
+            
+              m
+              L
+            
+            
+              g
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {\mathrm {mL} }{\mathrm {g} }}}
+   .

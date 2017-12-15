@@ -1,0 +1,5 @@
+Harmony Compiler was written by Peter Samson at the Massachusetts Institute of Technology (MIT). The compiler was designed to encode music for the PDP-1 and built on an earlier program Samson wrote for the TX-0 computer.
+
+Jack Dennis noticed and had mentioned to Samson that the sound on or off state of the TX-0's speaker could be enough to play music. They succeeded in building a WYSIWYG program for one voice before or by 1960.
+For the PDP-1 which arrived at MIT in September 1961, Samson designed the Harmony Compiler which synthesizes four voices from input in a text-based notation. Although it created music in many genres, it was optimized for baroque music. PDP-1 music is merged from four channels and played back in stereo. Notes are on pitch and each has an undertone. The music does not stop for errors. Mistakes are greeted with a message from the typewriter's red ribbon, "To err is human, to forgive divine."
+Samson joined the PDP-1 restoration project at the Computer History Museum in 2004 to recreate the music player.

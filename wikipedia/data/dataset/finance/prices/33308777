@@ -1,0 +1,234 @@
+Good–deal bounds are price bounds for a financial portfolio which depends on an individual trader's preferences. Mathematically, if 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+   is a set of portfolios with future outcomes which are "acceptable" to the trader, then define the function 
+  
+    
+      
+        ρ
+        :
+        
+          
+            
+              L
+            
+          
+          
+            p
+          
+        
+        →
+        
+          R
+        
+      
+    
+    {\displaystyle \rho :{\mathcal {L}}^{p}\to \mathbb {R} }
+   by
+
+  
+    
+      
+        ρ
+        (
+        X
+        )
+        =
+        inf
+        
+          {
+          t
+          ∈
+          
+            R
+          
+          :
+          ∃
+          
+            V
+            
+              T
+            
+          
+          ∈
+          
+            A
+            
+              T
+            
+          
+          :
+          X
+          +
+          t
+          +
+          
+            V
+            
+              T
+            
+          
+          ∈
+          A
+          }
+        
+        =
+        inf
+        
+          {
+          t
+          ∈
+          
+            R
+          
+          :
+          X
+          +
+          t
+          ∈
+          A
+          −
+          
+            A
+            
+              T
+            
+          
+          }
+        
+      
+    
+    {\displaystyle \rho (X)=\inf \left\{t\in \mathbb {R} :\exists V_{T}\in A_{T}:X+t+V_{T}\in A\right\}=\inf \left\{t\in \mathbb {R} :X+t\in A-A_{T}\right\}}
+  
+where 
+  
+    
+      
+        
+          A
+          
+            T
+          
+        
+      
+    
+    {\displaystyle A_{T}}
+   is the set of final values for self-financing trading strategies. Then any price in the range 
+  
+    
+      
+        (
+        −
+        ρ
+        (
+        X
+        )
+        ,
+        ρ
+        (
+        −
+        X
+        )
+        )
+      
+    
+    {\displaystyle (-\rho (X),\rho (-X))}
+   does not provide a good deal for this trader, and this range is called the "no good-deal price bounds."
+If 
+  
+    
+      
+        A
+        =
+        
+          {
+          Z
+          ∈
+          
+            
+              
+                L
+              
+            
+            
+              0
+            
+          
+          :
+          Z
+          ≥
+          0
+          
+          
+            P
+          
+          −
+          a
+          .
+          s
+          .
+          }
+        
+      
+    
+    {\displaystyle A=\left\{Z\in {\mathcal {L}}^{0}:Z\geq 0\;\mathbb {P} -a.s.\right\}}
+   then the good-deal price bounds are the no-arbitrage price bounds, and correspond to the subhedging and superhedging prices. The no-arbitrage bounds are the greatest extremes that good-deal bounds can take.
+If 
+  
+    
+      
+        A
+        =
+        
+          {
+          Z
+          ∈
+          
+            
+              
+                L
+              
+            
+            
+              0
+            
+          
+          :
+          
+            E
+          
+          [
+          u
+          (
+          Z
+          )
+          ]
+          ≥
+          
+            E
+          
+          [
+          u
+          (
+          0
+          )
+          ]
+          }
+        
+      
+    
+    {\displaystyle A=\left\{Z\in {\mathcal {L}}^{0}:\mathbb {E} [u(Z)]\geq \mathbb {E} [u(0)]\right\}}
+   where 
+  
+    
+      
+        u
+      
+    
+    {\displaystyle u}
+   is a utility function, then the good-deal price bounds correspond to the indifference price bounds.

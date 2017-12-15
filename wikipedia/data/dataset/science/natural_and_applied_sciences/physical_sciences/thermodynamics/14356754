@@ -1,0 +1,273 @@
+The Hatta number (Ha) was developed by Shirôji Hatta, who taught at Tohoku University. It is a dimensionless parameter that compares the rate of reaction in a liquid film to the rate of diffusion through the film. For a second order reaction (rA = k2CBCA), the maximum rate of reaction assumes that the liquid film is saturated with gas at the interfacial concentration (CA,i); thus, the maximum rate of reaction is k2CB,bulkCA,iδL.
+
+  
+    
+      
+        H
+        
+          a
+          
+            2
+          
+        
+        =
+        
+          
+            
+              
+                k
+                
+                  2
+                
+              
+              
+                C
+                
+                  A
+                  ,
+                  i
+                
+              
+              
+                C
+                
+                  B
+                  ,
+                  b
+                  u
+                  l
+                  k
+                
+              
+              
+                δ
+                
+                  L
+                
+              
+            
+            
+              
+                
+                  
+                    D
+                    
+                      A
+                    
+                  
+                  
+                    δ
+                    
+                      L
+                    
+                  
+                
+              
+               
+              
+                C
+                
+                  A
+                  ,
+                  i
+                
+              
+            
+          
+        
+        =
+        
+          
+            
+              
+                k
+                
+                  2
+                
+              
+              
+                C
+                
+                  B
+                  ,
+                  b
+                  u
+                  l
+                  k
+                
+              
+              
+                D
+                
+                  A
+                
+              
+            
+            
+              (
+              
+                
+                  
+                    D
+                    
+                      A
+                    
+                  
+                  
+                    δ
+                    
+                      L
+                    
+                  
+                
+              
+              
+                )
+                
+                  2
+                
+              
+            
+          
+        
+        =
+        
+          
+            
+              
+                k
+                
+                  2
+                
+              
+              
+                C
+                
+                  B
+                  ,
+                  b
+                  u
+                  l
+                  k
+                
+              
+              
+                D
+                
+                  A
+                
+              
+            
+            
+              
+                
+                  
+                    k
+                    
+                      L
+                    
+                  
+                
+                
+                  2
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle Ha^{2}={{k_{2}C_{A,i}C_{B,bulk}\delta _{L}} \over {{\frac {D_{A}}{\delta _{L}}}\ C_{A,i}}}={{k_{2}C_{B,bulk}D_{A}} \over ({\frac {D_{A}}{\delta _{L}}})^{2}}={{k_{2}C_{B,bulk}D_{A}} \over {{k_{L}}^{2}}}}
+  
+
+For a reaction mth order in A and nth order in B:
+
+  
+    
+      
+        H
+        a
+        =
+        
+          
+            
+              
+                
+                  
+                    2
+                    
+                      
+                        m
+                      
+                      +
+                      1
+                    
+                  
+                
+                
+                  k
+                  
+                    m
+                    ,
+                    n
+                  
+                
+                
+                  
+                    
+                      C
+                      
+                        A
+                        ,
+                        i
+                      
+                    
+                  
+                  
+                    m
+                    −
+                    1
+                  
+                
+                
+                  C
+                  
+                    B
+                    ,
+                    b
+                    u
+                    l
+                    k
+                  
+                  
+                    n
+                  
+                
+                
+                  
+                    D
+                  
+                  
+                    A
+                  
+                
+              
+            
+            
+              
+                
+                  k
+                
+                
+                  L
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle Ha={{\sqrt {{\frac {2}{{m}+1}}k_{m,n}{C_{A,i}}^{m-1}C_{B,bulk}^{n}{D}_{A}}} \over {{k}_{L}}}}
+  
+
+It is an important parameter used in Chemical Reaction Engineering.

@@ -1,0 +1,3 @@
+A signal analyzer is an instrument that measures the magnitude and phase of the input signal at a single frequency within the IF bandwidth of the instrument. It employs digital techniques to extract useful information that is carried by an electrical signal. In common usage the term is related to both spectrum analyzers and vector signal analyzers. While spectrum analyzers measure the amplitude or magnitude of signals, a signal analyzer with appropriate software or programming can measure any aspect of the signal such as modulation. Today’s high-frequency signal analyzers achieve good performance by optimizing both the analog front end and the digital back end.
+
+

@@ -1,0 +1,18 @@
+The Snellius–Pothenot problem is a problem in planar surveying. Given three known points A, B and C, an observer at an unknown point P observes that the segment AC subtends an angle 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+   and the segment CB subtends an angle 
+  
+    
+      
+        β
+      
+    
+    {\displaystyle \beta }
+  ; the problem is to determine the position of the point P. (See figure; the point denoted C is between A and B as seen from P).
+Since it involves the observation of known points from an unknown point, the problem is an example of resection. Historically it was first studied by Snellius, who found a solution around 1615.

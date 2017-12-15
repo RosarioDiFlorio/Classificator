@@ -1,0 +1,227 @@
+In statistical mechanics, the Rushbrooke inequality relates the critical exponents of a magnetic system which exhibits a first-order phase transition in the thermodynamic limit for non-zero temperature T.
+Since the Helmholtz free energy is extensive, the normalization to free energy per site is given as
+
+  
+    
+      
+        f
+        =
+        −
+        k
+        T
+        
+          lim
+          
+            N
+            →
+            ∞
+          
+        
+        
+          
+            1
+            N
+          
+        
+        log
+        ⁡
+        
+          Z
+          
+            N
+          
+        
+      
+    
+    {\displaystyle f=-kT\lim _{N\rightarrow \infty }{\frac {1}{N}}\log Z_{N}}
+  
+The magnetization M per site in the thermodynamic limit, depending on the external magnetic field H and temperature T is given by
+
+  
+    
+      
+        M
+        (
+        T
+        ,
+        H
+        )
+         
+        
+          
+            
+              
+                =
+              
+              
+                
+                  d
+                  e
+                  f
+                
+              
+            
+          
+        
+         
+        
+          lim
+          
+            N
+            →
+            ∞
+          
+        
+        
+          
+            1
+            N
+          
+        
+        
+          (
+          
+            ∑
+            
+              i
+            
+          
+          
+            σ
+            
+              i
+            
+          
+          )
+        
+        =
+        −
+        
+          
+            (
+            
+              
+                
+                  ∂
+                  f
+                
+                
+                  ∂
+                  H
+                
+              
+            
+            )
+          
+          
+            T
+          
+        
+      
+    
+    {\displaystyle M(T,H)\ {\stackrel {\mathrm {def} }{=}}\ \lim _{N\rightarrow \infty }{\frac {1}{N}}\left(\sum _{i}\sigma _{i}\right)=-\left({\frac {\partial f}{\partial H}}\right)_{T}}
+  
+where 
+  
+    
+      
+        
+          σ
+          
+            i
+          
+        
+      
+    
+    {\displaystyle \sigma _{i}}
+   is the spin at the i-th site, and the magnetic susceptibility and specific heat at constant temperature and field are given by, respectively
+
+  
+    
+      
+        
+          χ
+          
+            T
+          
+        
+        (
+        T
+        ,
+        H
+        )
+        =
+        
+          
+            (
+            
+              
+                
+                  ∂
+                  M
+                
+                
+                  ∂
+                  H
+                
+              
+            
+            )
+          
+          
+            T
+          
+        
+      
+    
+    {\displaystyle \chi _{T}(T,H)=\left({\frac {\partial M}{\partial H}}\right)_{T}}
+  
+and
+
+  
+    
+      
+        
+          c
+          
+            H
+          
+        
+        =
+        −
+        T
+        
+          
+            (
+            
+              
+                
+                  
+                    ∂
+                    
+                      2
+                    
+                  
+                  f
+                
+                
+                  ∂
+                  
+                    T
+                    
+                      2
+                    
+                  
+                
+              
+            
+            )
+          
+          
+            H
+          
+        
+        .
+      
+    
+    {\displaystyle c_{H}=-T\left({\frac {\partial ^{2}f}{\partial T^{2}}}\right)_{H}.}

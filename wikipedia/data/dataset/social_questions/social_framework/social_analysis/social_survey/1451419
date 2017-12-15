@@ -1,0 +1,359 @@
+The upside-potential ratio is a measure of a return of an investment asset relative to the minimal acceptable return. The measurement allows a firm or individual to choose investments which have had relatively good upside performance, per unit of downside risk.
+
+  
+    
+      
+        U
+        =
+        
+          
+            
+              
+                ∑
+                
+                  min
+                
+                
+                  +
+                  ∞
+                
+              
+              
+                (
+                
+                  R
+                  
+                    r
+                  
+                
+                −
+                
+                  R
+                  
+                    min
+                  
+                
+              
+              )
+              
+                P
+                
+                  r
+                
+              
+            
+            
+              
+                
+                  ∑
+                  
+                    −
+                    ∞
+                  
+                  
+                    min
+                  
+                
+                
+                  (
+                  
+                    R
+                    
+                      r
+                    
+                  
+                  −
+                  
+                    R
+                    
+                      min
+                    
+                  
+                
+                
+                  )
+                  
+                    2
+                  
+                
+                
+                  P
+                  
+                    r
+                  
+                
+              
+            
+          
+        
+        =
+        
+          
+            
+              
+                E
+              
+              [
+              (
+              
+                R
+                
+                  r
+                
+              
+              −
+              
+                R
+                
+                  min
+                
+              
+              
+                )
+                
+                  +
+                
+              
+              ]
+            
+            
+              
+                E
+              
+              [
+              (
+              
+                R
+                
+                  r
+                
+              
+              −
+              
+                R
+                
+                  min
+                
+              
+              
+                )
+                
+                  −
+                
+                
+                  2
+                
+              
+              ]
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle U={{\sum _{\min }^{+\infty }{(R_{r}-R_{\min }})P_{r}} \over {\sqrt {\sum _{-\infty }^{\min }{(R_{r}-R_{\min }})^{2}P_{r}}}}={\frac {\mathbb {E} [(R_{r}-R_{\min })_{+}]}{\sqrt {\mathbb {E} [(R_{r}-R_{\min })_{-}^{2}]}}},}
+  
+where the returns 
+  
+    
+      
+        
+          R
+          
+            r
+          
+        
+      
+    
+    {\displaystyle R_{r}}
+   have been put into increasing order. Here 
+  
+    
+      
+        
+          P
+          
+            r
+          
+        
+      
+    
+    {\displaystyle P_{r}}
+   is the probability of the return 
+  
+    
+      
+        
+          R
+          
+            r
+          
+        
+      
+    
+    {\displaystyle R_{r}}
+   and 
+  
+    
+      
+        
+          R
+          
+            min
+          
+        
+      
+    
+    {\displaystyle R_{\min }}
+   which occurs at 
+  
+    
+      
+        r
+        =
+        min
+      
+    
+    {\displaystyle r=\min }
+   is the minimal acceptable return. In the secondary formula 
+  
+    
+      
+        (
+        X
+        
+          )
+          
+            +
+          
+        
+        =
+        
+          
+            {
+            
+              
+                
+                  X
+                
+                
+                  
+                    if 
+                  
+                  X
+                  ≥
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  
+                    else
+                  
+                
+              
+            
+            
+          
+        
+      
+    
+    {\displaystyle (X)_{+}={\begin{cases}X&{\text{if }}X\geq 0\\0&{\text{else}}\end{cases}}}
+   and 
+  
+    
+      
+        (
+        X
+        
+          )
+          
+            −
+          
+        
+        =
+        (
+        −
+        X
+        
+          )
+          
+            +
+          
+        
+      
+    
+    {\displaystyle (X)_{-}=(-X)_{+}}
+  .
+The upside-potential ratio may also be expressed as a ratio of partial moments since 
+  
+    
+      
+        
+          E
+        
+        [
+        (
+        
+          R
+          
+            r
+          
+        
+        −
+        
+          R
+          
+            min
+          
+        
+        
+          )
+          
+            +
+          
+        
+        ]
+      
+    
+    {\displaystyle \mathbb {E} [(R_{r}-R_{\min })_{+}]}
+   is the first upper moment and 
+  
+    
+      
+        
+          E
+        
+        [
+        (
+        
+          R
+          
+            r
+          
+        
+        −
+        
+          R
+          
+            min
+          
+        
+        
+          )
+          
+            −
+          
+          
+            2
+          
+        
+        ]
+      
+    
+    {\displaystyle \mathbb {E} [(R_{r}-R_{\min })_{-}^{2}]}
+   is the second lower partial moment.
+The measure was developed by Frank A. Sortino.

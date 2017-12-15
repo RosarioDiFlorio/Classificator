@@ -1,0 +1,17 @@
+A test engineer is a professional who determines how to create a process that would best test a particular product in manufacturing, quality assurance or related areas, like the RMA department, in order to assure that the product meets applicable specifications. Test engineers are also responsible for determining the best way a test can be performed in order to achieve 100% test coverage of all components using different test processes. Often test engineers also serve as a liaison between manufacturing, design engineering, sales engineering and marketing communities as well.
+Test engineers can have different expertise which depends on what test process they are more familiar with (although many test engineers have full familiarity from the PCB level processes like ICT, JTAG, and AXI) to PCBA and system level processes like board functional test (BFT or FT), burn-in test, system level test (ST). Some of the processes used in manufacturing where a test engineer is needed are:
+In-circuit test (ICT)
+Stand-alone JTAG test
+Automated x-ray inspection (AXI) (also known as X-ray test)
+Automated optical inspection (AOI) test
+Continuity or flying probe test
+(Board) functional test (BFT/FT)
+Burn-in test
+Environmental stress screening (ESS) test
+Highly Accelerated Life Test (HALT)
+Highly accelerated stress screening (HASS) test
+Ongoing reliability test (ORT)
+System test (ST)
+Final quality audit process (FQA) test
+
+

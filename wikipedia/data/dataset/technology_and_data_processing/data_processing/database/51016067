@@ -1,0 +1,2 @@
+WiredTiger is a NoSQL, Open Source extensible platform for data management. WiredTiger uses MultiVersion Concurrency Control (MVCC) architecture.
+MongoDB acquired WiredTiger Inc. on December 16, 2014. The WiredTiger storage engine is the default storage engine starting in MongoDB version 3.2. It provides a document-level concurrency model, checkpointing, and compression, among other features. In MongoDB Enterprise, WiredTiger also supports Encryption At Rest.
