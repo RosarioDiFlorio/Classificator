@@ -25,8 +25,8 @@ import eu.innovation.engineering.wikipedia.WikipediaMiner;
 public class Test {
 
   public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException, InterruptedException, ExecutionException{
-    main3(args);
-    //createMapDataset("D:/Development/Datasets/dataset_tassonomia/");
+    //main3(args);
+    createMapDataset("D:/Development/Datasets/dataset_latest_1412017/");
   }
 
   
@@ -69,7 +69,6 @@ public class Test {
       System.out.println(countLeafMap.get(csvMap.get(uriWiki).get(0)));
       int limitDocument = 500/countLeafMap.get(csvMap.get(uriWiki).get(0));
       System.out.println(limitDocument);
-      Map<String, Integer> Limits = new HashMap<>();
       csvMap.replace(uriWiki, parents);
       toExtract.add(uriWiki);
       count++;

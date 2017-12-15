@@ -311,13 +311,15 @@ public class WikipediaMiner implements WikiRequest{
     JsonArray pagesJson = response.get("query").getAsJsonObject().get("search").getAsJsonArray();
     if(pagesJson.size()!=0){
       for(int i = 0;i<pagesJson.size();i++){
-        pages.add(response.get("query").getAsJsonObject().get("search").getAsJsonArray().get(i).getAsJsonObject().get("title").getAsString());
+        String titlePage = response.get("query").getAsJsonObject().get("search").getAsJsonArray().get(i).getAsJsonObject().get("title").getAsString();
+        if(!titlePage.matches(".*[0-9]{4}.*"))
+          pages.add(titlePage);
       }
     }
     return pages;
   }
 
-  public static String getCategory(String queryKey,String toCompare) throws IOException{
+  public static WikiCategoryMatch getCategory(String queryKey,String toCompare,WikiCategoryMatch toReturn) throws IOException{
     String queryKeyType = "";
     if(queryKey!= null){
       if(queryKey.contains(" "))
@@ -334,12 +336,7 @@ public class WikipediaMiner implements WikiRequest{
       try{
         id = response.get("query").getAsJsonObject().get("pageids").getAsJsonArray().get(0).getAsString();
         category = response.get("query").getAsJsonObject().get("pages").getAsJsonObject().get(id).getAsJsonObject().get("categories").getAsJsonArray();
-      }catch (Exception e) {
-        // TODO: handle exception
-        System.out.println(queryKey);
-        System.out.println(id);
-        System.out.println(response);
-      }
+      
 
       LevenshteinDistance lDis = new LevenshteinDistance();
 
@@ -353,30 +350,40 @@ public class WikipediaMiner implements WikiRequest{
         double distance = 0;
         double distanceRight = lDis.apply(left,right);
         double distanceHint = lDis.apply(left,hint);
-        /*
-        System.out.println(right+" "+hint+" = "+distanceDeb);
-        System.out.println(left+" - "+right+" = "+distanceRight);
-        System.out.println(left+" - "+hint+" = "+distanceHint);
-        */
+
         if(distanceRight< distanceHint)
           distance = distanceRight;
-        else
+        else{
           distance = distanceHint;
-
+          if(distance == 0){
+            toReturn.addExact(tmpName,distance);
+          }
+        }
         if(distance <= min){
 
-          if(tmpName.matches("\\b(19|20)\\d{2}\\b")){
-            continue;
+          if(!tmpName.matches(".*[0-9]{4}.*")){
+            double distanceHintRight = lDis.apply(hint,right);
+            if(distance <=5 && distanceHintRight<=7)
+              toReturn.addMajor(tmpName,distance);
+            else if(distance<=12)
+              toReturn.addMinor(tmpName,distance);
+            min = distance;
           }
-
-          nameCategory = tmpName;
-          min = distance;
         }
 
       }
-      return nameCategory;
-    }else
-      return null;
+      return toReturn;
+      }catch (Exception e) {
+        // TODO: handle exception
+        System.out.println(queryKey);
+        System.out.println(id);
+        System.out.println(response);
+        return toReturn;
+      }
+    }
+      
+      else
+      return toReturn;
   }
 
 
