@@ -1,0 +1,5 @@
+In probability theory and related fields, Malliavin calculus is a set of mathematical techniques and ideas that extend the mathematical field of calculus of variations from deterministic functions to stochastic processes. In particular, it allows the computation of derivatives of random variables. Malliavin calculus is also called the stochastic calculus of variations.
+Malliavin calculus is named after Paul Malliavin whose ideas led to a proof that Hörmander's condition implies the existence and smoothness of a density for the solution of a stochastic differential equation; Hörmander's original proof was based on the theory of partial differential equations. The calculus has been applied to stochastic partial differential equations as well.
+The calculus allows integration by parts with random variables; this operation is used in mathematical finance to compute the sensitivities of financial derivatives. The calculus has applications in, for example, stochastic filtering.
+
+

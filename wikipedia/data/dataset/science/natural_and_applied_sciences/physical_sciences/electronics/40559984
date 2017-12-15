@@ -1,0 +1,3 @@
+JAM / STAPL ("Standard Test and Programming Language") is an Altera-developed standard for JTAG in-circuit programming of programmable logic devices which is defined by JEDEC standard JESD-71.
+STAPL defines a standard .jam file format which supports in-system programmability or configuration of programmable devices. A JTAG device programmer implements a JAM player which reads the file as a set of instructions directing it to programme a PLD.
+The standard is supported by multiple PLD and device programmer manufacturers.

@@ -1,0 +1,102 @@
+In mathematics, specifically in functional analysis and order theory, a Banach lattice 
+  
+    
+      
+        (
+        X
+        ,
+        ∥
+        ⋅
+        ∥
+        )
+      
+    
+    {\displaystyle (X,\|\cdot \|)}
+   is a Riesz space with a norm 
+  
+    
+      
+        ∥
+        ⋅
+        ∥
+      
+    
+    {\displaystyle \|\cdot \|}
+   such that 
+  
+    
+      
+        (
+        X
+        ,
+        ∥
+        ⋅
+        ∥
+        )
+      
+    
+    {\displaystyle (X,\|\cdot \|)}
+   is a Banach space and for all 
+  
+    
+      
+        x
+        ,
+        y
+        ∈
+        X
+      
+    
+    {\displaystyle x,y\in X}
+   the implication 
+  
+    
+      
+        
+          |
+        
+        x
+        
+          |
+        
+        ≤
+        
+          |
+        
+        y
+        
+          |
+        
+        ⇒
+        ∥
+        x
+        ∥
+        ≤
+        ∥
+        y
+        ∥
+      
+    
+    {\displaystyle |x|\leq |y|\Rightarrow \|x\|\leq \|y\|}
+   holds, where as usual 
+  
+    
+      
+        
+          |
+        
+        x
+        
+          |
+        
+        :=
+        x
+        ∨
+        −
+        x
+      
+    
+    {\displaystyle |x|:=x\vee -x}
+  .
+
+

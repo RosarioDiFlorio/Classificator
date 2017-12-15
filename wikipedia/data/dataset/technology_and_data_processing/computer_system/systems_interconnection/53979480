@@ -1,0 +1,7 @@
+Bonobo is an obsolete component framework for the GNOME free desktop environment. Bonobo is designed to create reusable software components and compound documents. Through its development history it resembles Microsoft's OLE technology and is GNOME's equivalent of KDE's KParts .
+Bonobo was developed as a solution to the problems and requirements of the free software community in the development of complex applications. Bonobo is based on the Common Object Request Broker Architecture (CORBA) or its GNOME implementation ORBit. Through Bonobo the functions of one application can be integrated into another: for example, Gnumeric spreadsheet tables can be directly imbedded into AbiWord text document by including Gnumeric as Bonobo component.
+Available components are:
+Gnumeric spreadsheet
+ggv PostScript viewer
+Xpdf PDF viewer
+gill SVG viewer

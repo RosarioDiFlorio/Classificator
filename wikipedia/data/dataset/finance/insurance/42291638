@@ -1,0 +1,2 @@
+Time at Risk (TaR) is a time-based risk measure designed for corporate finance practice.
+TaR represents certain quantile for a given probability distribution, so is similar to Value at Risk (VaR). However, TaR measures risk amount as time(time until an adverse event) rather than value (loss amount).

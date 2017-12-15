@@ -1,0 +1,4 @@
+SoundGrid is a networking and processing platform for real-time professional audio applications. It is a product of Waves Audio.
+The SoundGrid system consists of a Linux-based server that runs the SoundGrid environment, compatible plug-ins, a Mac or Windows control computer, and a digital-analog interface for input/output (I/O). It is used for live sound, broadcast, and post production—and provides a low latency environment for audio processing on certain hardware audio mixing consoles, e.g., DiGiCo, Allen & Heath, and Yamaha.
+
+

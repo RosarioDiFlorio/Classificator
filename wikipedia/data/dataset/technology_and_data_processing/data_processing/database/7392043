@@ -1,0 +1,6 @@
+mnoGoSearch is an open source search engine for Unix-like computer systems written in C. It is distributed under the GNU General Public License and designed to organize search within a website, group of websites, intranet or local system.
+mnoGoSearch can index text/plain, text/html and text/xml data natively, and many others datatypes using external parsers.
+This engine is ready to index multilingual websites: a wide range of character sets and languages are supported and can be detected automatically, it uses content negotiation technology to fetch versions of same page in different languages, it can perform accent insensitive search and segment phrases in Chinese, Japanese and Thai. It's possible to use synonyms and ispell-based fuzzing to extend search results.
+Results can be sorted by relevance, last modified time and by title.
+Just one example of large website using mnoGoSearch is MySQL.com, the website of MySQL database management system.
+The Windows version of MnoGoSearch features a graphical user interface and is sold under a commercial license.

@@ -1,0 +1,9 @@
+Vector sum excited linear prediction (VSELP) is a speech coding method used in several cellular standards. The VSELP algorithm is an analysis-by-synthesis coding technique and belongs to the class of speech coding algorithms known as CELP (Code Excited Linear Prediction).
+Variations of this codec have been used in several 2G cellular telephony standards, including IS-54, IS-136 (D-AMPS), GSM (Half Rate speech) and iDEN. It was also used in the first version of RealAudio for audio over the Internet. The IS-54 VSELP standard was published by the Telecommunications Industry Association in 1989.
+D-AMPS (IS-54 and IS-136) VSELP specifies an encoding of each 20 ms of speech into 159-bit frames, thus achieving a raw data rate of 7.95 kbit/s. In an actual TDMA cell phone, the vocoder output is packaged with error correction and signaling information, resulting in an over-the-air data rate of 16.2 kbit/s. For internet audio, each 159-bit frame is stored in 20 bytes, leaving 1 bit unused. The resulting file thus has a data rate of exactly 8 kbit/s.
+GSM half-rate VSELP (GSM 06.20) uses 20 ms frames with 112 bits per frame, giving a raw data rate of 5.6 kbit/s. The iDEN VSELP coder has three modes:
+30 ms frames at 126 bits per frame with a raw data rate of 4.2 kbit/s,
+22.5 ms frames at 99 bits per frame with a raw data rate of 4.4 kbit/s and
+22.5 ms frames at 180 bits per frame with a raw data rate of 8.0 kbit/s.
+A major drawback of VSELP is its limited ability to encode non-speech sounds, so that it performs poorly when encoding speech in the presence of background noise. For this reason, use of VSELP has been gradually phased out in favor of newer codecs.
+VSELP is also the encoding method used in some early Motorola Type II trunking systems. It was phased out in favor of the newer IMBE method.

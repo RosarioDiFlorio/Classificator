@@ -1,0 +1,73 @@
+In mechanics, a variable-mass system is a collection of matter whose mass varies with time. It can be confusing to try to apply Newton's second law of motion directly to such a system. Instead, the time dependence of the mass m can be calculated by rearranging Newton's second law and adding a term to account for the momentum carried by mass entering or leaving the system. The general equation of variable-mass motion is written as
+
+  
+    
+      
+        
+          
+            F
+          
+          
+            
+              e
+              x
+              t
+            
+          
+        
+        +
+        
+          
+            v
+          
+          
+            
+              r
+              e
+              l
+            
+          
+        
+        
+          
+            
+              
+                d
+              
+              m
+            
+            
+              
+                d
+              
+              t
+            
+          
+        
+        =
+        m
+        
+          
+            
+              
+                d
+              
+              
+                v
+              
+            
+            
+              
+                d
+              
+              t
+            
+          
+        
+      
+    
+    {\displaystyle \mathbf {F} _{\mathrm {ext} }+\mathbf {v} _{\mathrm {rel} }{\frac {\mathrm {d} m}{\mathrm {d} t}}=m{\mathrm {d} \mathbf {v}  \over \mathrm {d} t}}
+  
+F thrust = v rel ( dm/dt) and is also known as mass flow rate
+If dm / dt is negative then f thrust is in opposite direction of v relative.
+where Fext is the net external force on the body, vrel is the relative velocity of the escaping or incoming mass with respect to the center of mass of the body, and v is the velocity of the body. In astrodynamics, which deals with the mechanics of rockets, the term vrel is often called the effective exhaust velocity and denoted ve.

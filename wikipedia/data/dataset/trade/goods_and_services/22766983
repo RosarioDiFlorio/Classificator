@@ -1,0 +1,1 @@
+Image SXM is an image analysis software specialized in scanning microscope images. It is based on the public domain software NIH Image (now ImageJ from the National Institutes of Health) and extended to handle scanning microscope images, especially of the SxM formats (SAM, SCM, SEM, SFM, SLM, SNOM, SPM, STM), hence its name.

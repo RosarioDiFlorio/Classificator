@@ -1,0 +1,895 @@
+In many cases, there is an unobservable heterogeneity in the probit model. For instance, when modelling the consumption choice of a certain brand, consumers’ personal preference is unobserved but needs to be considered in the model. Owing to omitted variable or measurement error, endogeneity issue also could arise. A probit model including both of these two issues can be represented as:
+
+  
+    
+      
+        
+          y
+          
+            i
+            t
+          
+        
+        =
+        1
+        [
+        
+          y
+          
+            i
+            t
+          
+          
+            ∗
+          
+        
+        >
+        0
+        ]
+      
+    
+    {\displaystyle y_{it}=1[y_{it}^{*}>0]}
+  
+
+  
+    
+      
+        
+          y
+          
+            i
+            t
+          
+          
+            ∗
+          
+        
+        =
+        
+          x
+          
+            i
+            t
+          
+          
+            (
+            1
+            )
+          
+        
+        β
+        +
+        
+          z
+          
+            i
+            t
+          
+        
+        δ
+        +
+        
+          c
+          
+            i
+          
+        
+        +
+        
+          u
+          
+            i
+            t
+          
+        
+      
+    
+    {\displaystyle y_{it}^{*}=x_{it}^{(1)}\beta +z_{it}\delta +c_{i}+u_{it}}
+  
+
+  
+    
+      
+        
+          z
+          
+            i
+            t
+          
+        
+        =
+        
+          x
+          
+            i
+            t
+          
+          
+            (
+            1
+            )
+          
+        
+        
+          γ
+          
+            1
+          
+        
+        +
+        
+          x
+          
+            i
+            t
+          
+          
+            (
+            2
+            )
+          
+        
+        
+          γ
+          
+            2
+          
+        
+        +
+        
+          v
+          
+            i
+            t
+          
+        
+      
+    
+    {\displaystyle z_{it}=x_{it}^{(1)}\gamma _{1}+x_{it}^{(2)}\gamma _{2}+v_{it}}
+  
+where 
+  
+    
+      
+        
+          c
+          
+            i
+          
+        
+      
+    
+    {\displaystyle c_{i}}
+   is the unobservable heterogeneity effect and 
+  
+    
+      
+        
+          u
+          
+            i
+            t
+          
+        
+        ∣
+        
+          x
+          
+            i
+          
+        
+        ∼
+        N
+        (
+        0
+        ,
+        1
+        )
+        ,
+        
+          v
+          
+            i
+            t
+          
+        
+        
+          |
+        
+        
+          x
+          
+            i
+          
+        
+        ∼
+        N
+        (
+        0
+        ,
+        
+          σ
+          
+            2
+          
+        
+        )
+      
+    
+    {\displaystyle u_{it}\mid x_{i}\sim N(0,1),v_{it}|x_{i}\sim N(0,\sigma ^{2})}
+  . If 
+  
+    
+      
+        
+          v
+          
+            i
+            t
+          
+        
+      
+    
+    {\displaystyle v_{it}}
+   and 
+  
+    
+      
+        
+          u
+          
+            i
+            t
+          
+        
+      
+    
+    {\displaystyle u_{it}}
+   are independent, this model will degenerate to a probit model with unobservable heterogeneity. In this case, we can just integrate 
+  
+    
+      
+        P
+        (
+        
+          y
+          
+            i
+            T
+          
+        
+        ,
+        …
+        ,
+        
+          y
+          
+            i
+            0
+          
+        
+        ∣
+        
+          x
+          
+            i
+          
+        
+        ,
+        
+          c
+          
+            i
+          
+        
+        )
+      
+    
+    {\displaystyle P(y_{iT},\ldots ,y_{i0}\mid x_{i},c_{i})}
+   against the density of 
+  
+    
+      
+        
+          c
+          
+            i
+          
+        
+      
+    
+    {\displaystyle c_{i}}
+   conditional on 
+  
+    
+      
+        
+          x
+          
+            i
+          
+        
+      
+    
+    {\displaystyle x_{i}}
+  , then 
+  
+    
+      
+        P
+        (
+        
+          y
+          
+            i
+            T
+          
+        
+        ,
+        …
+        ,
+        
+          y
+          
+            i
+            0
+          
+        
+        
+          |
+        
+        
+          x
+          
+            i
+          
+        
+        )
+      
+    
+    {\displaystyle P(y_{iT},\ldots ,y_{i0}|x_{i})}
+   can be obtained  and the objective for the conditional Maximum Likelihood Estimation is
+
+  
+    
+      
+        
+          ∑
+          
+            i
+            =
+            1
+          
+          
+            N
+          
+        
+        log
+        ⁡
+        [
+        P
+        (
+        
+          y
+          
+            i
+            T
+          
+        
+        ,
+        …
+        ,
+        
+          y
+          
+            i
+            0
+          
+        
+        
+          |
+        
+        
+          x
+          
+            i
+          
+        
+        )
+        ]
+      
+    
+    {\displaystyle \sum _{i=1}^{N}\log[P(y_{iT},\ldots ,y_{i0}|x_{i})]}
+  
+If 
+  
+    
+      
+        
+          v
+          
+            i
+            t
+          
+        
+      
+    
+    {\displaystyle v_{it}}
+   and 
+  
+    
+      
+        
+          u
+          
+            i
+            t
+          
+        
+      
+    
+    {\displaystyle u_{it}}
+   are correlated, under the normality assumption, it can be assumed that 
+  
+    
+      
+        
+          v
+          
+            i
+            t
+          
+        
+      
+    
+    {\displaystyle v_{it}}
+   =
+  
+    
+      
+        ρ
+        
+          u
+          
+            i
+            t
+          
+        
+        +
+        
+          ϵ
+          
+            i
+            t
+          
+        
+      
+    
+    {\displaystyle \rho u_{it}+\epsilon _{it}}
+  , where 
+  
+    
+      
+        
+          ϵ
+          
+            i
+            t
+          
+        
+        
+          ∼
+          
+            i
+            i
+            d
+          
+        
+        N
+        (
+        0
+        ,
+        
+          σ
+          
+            2
+          
+        
+        −
+        
+          ρ
+          
+            2
+          
+        
+        )
+      
+    
+    {\displaystyle \epsilon _{it}\sim _{iid}N(0,\sigma ^{2}-\rho ^{2})}
+   and 
+  
+    
+      
+        
+          ϵ
+          
+            i
+          
+        
+      
+    
+    {\displaystyle \epsilon _{i}}
+   is independent with 
+  
+    
+      
+        
+          v
+          
+            i
+          
+        
+      
+    
+    {\displaystyle v_{i}}
+   and 
+  
+    
+      
+        
+          u
+          
+            i
+          
+        
+      
+    
+    {\displaystyle u_{i}}
+  . Then the model can be rewritten as:
+
+  
+    
+      
+        
+          y
+          
+            i
+            t
+          
+        
+        =
+        1
+        [
+        
+          x
+          
+            i
+            t
+          
+          
+            (
+            1
+            )
+          
+        
+        (
+        β
+        +
+        δ
+        
+          γ
+          
+            1
+          
+        
+        )
+        +
+        
+          x
+          
+            i
+            t
+          
+          
+            (
+            2
+            )
+          
+        
+        δ
+        
+          γ
+          
+            2
+          
+        
+        +
+        
+          c
+          
+            i
+          
+        
+        +
+        
+          ω
+          
+            i
+            t
+          
+        
+        >
+        0
+        ]
+      
+    
+    {\displaystyle y_{it}=1[x_{it}^{(1)}(\beta +\delta \gamma _{1})+x_{it}^{(2)}\delta \gamma _{2}+c_{i}+\omega _{it}>0]}
+  
+where 
+  
+    
+      
+        
+          ω
+          
+            i
+            t
+          
+        
+        =
+        (
+        1
+        +
+        ρ
+        δ
+        )
+        
+          u
+          
+            i
+            t
+          
+        
+        +
+        δ
+        
+          ϵ
+          
+            i
+            t
+          
+        
+        ,
+         
+        
+          ω
+          
+            i
+            t
+          
+        
+        ∼
+        N
+        
+          
+            (
+          
+        
+        0
+        ,
+        (
+        1
+        +
+        ρ
+        δ
+        
+          )
+          
+            2
+          
+        
+        +
+        
+          δ
+          
+            2
+          
+        
+        (
+        
+          σ
+          
+            2
+          
+        
+        −
+        
+          ρ
+          
+            2
+          
+        
+        )
+        
+          
+            )
+          
+        
+      
+    
+    {\displaystyle \omega _{it}=(1+\rho \delta )u_{it}+\delta \epsilon _{it},\ \omega _{it}\sim N{\bigl (}0,(1+\rho \delta )^{2}+\delta ^{2}(\sigma ^{2}-\rho ^{2}){\bigr )}}
+   and 
+  
+    
+      
+        
+          corr
+        
+        (
+        
+          ω
+          
+            i
+            t
+          
+        
+        ,
+        
+          ω
+          
+            i
+            ,
+            t
+            −
+            s
+          
+        
+        )
+        =
+        
+          
+            
+              (
+              1
+              +
+              ρ
+              δ
+              
+                )
+                
+                  2
+                
+              
+              
+                corr
+              
+              (
+              
+                u
+                
+                  i
+                  t
+                
+              
+              ,
+              
+                u
+                
+                  i
+                  ,
+                  t
+                  −
+                  s
+                
+              
+              )
+            
+            
+              (
+              1
+              +
+              ρ
+              δ
+              
+                )
+                
+                  2
+                
+              
+              +
+              
+                δ
+                
+                  2
+                
+              
+              (
+              
+                σ
+                
+                  2
+                
+              
+              −
+              
+                ρ
+                
+                  2
+                
+              
+              )
+            
+          
+        
+        .
+      
+    
+    {\displaystyle {\text{corr}}(\omega _{it},\omega _{i,t-s})={\frac {(1+\rho \delta )^{2}{\text{corr}}(u_{it},u_{i,t-s})}{(1+\rho \delta )^{2}+\delta ^{2}(\sigma ^{2}-\rho ^{2})}}.}
+  
+Based on this, following the same Maximum Likelihood Estimation procedure and the scaled parameter 
+  
+    
+      
+        (
+        β
+        +
+        δ
+        
+          γ
+          
+            1
+          
+        
+        ,
+        δ
+        
+          γ
+          
+            2
+          
+        
+        )
+        
+          /
+        
+        
+          
+            (
+            1
+            +
+            ρ
+            δ
+            
+              )
+              
+                2
+              
+            
+            +
+            
+              δ
+              
+                2
+              
+            
+            (
+            
+              σ
+              
+                2
+              
+            
+            −
+            
+              ρ
+              
+                2
+              
+            
+            )
+          
+        
+      
+    
+    {\displaystyle (\beta +\delta \gamma _{1},\delta \gamma _{2})/{\sqrt {(1+\rho \delta )^{2}+\delta ^{2}(\sigma ^{2}-\rho ^{2})}}}
+   can be consistently estimated, then the APE  can be consistently estimated correspondingly.

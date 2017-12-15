@@ -1,0 +1,6 @@
+A dichotomy  is a partition of a whole (or a set) into two parts (subsets). In other words, this couple of parts must be
+jointly exhaustive: everything must belong to one part or the other, and
+mutually exclusive: nothing can belong simultaneously to both parts.
+Such a partition is also frequently called a bipartition.
+The two parts thus formed are complements. In logic, the partitions are opposites if there exists a proposition such that it holds over one and not the other.
+Treating continuous variables or multicategorical variables as binary variables is called dichotomization. The discretization error inherent in dichotomization is temporarily ignored for modeling purposes.

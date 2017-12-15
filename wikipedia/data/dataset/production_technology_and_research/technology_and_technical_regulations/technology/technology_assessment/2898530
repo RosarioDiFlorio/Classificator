@@ -1,0 +1,2 @@
+Disk staging is using disks as an additional, temporary stage of backup process before finally storing backup to tape. Backups stay on disk typically for a day or a week, before being copied to tape in a background process and deleted afterwards.
+The process of disk staging is controlled by the same software that performs actual backups, which is different from virtual tape library where intermediate disk usage is hidden from main backup software. Both techniques are known as D2D2T (disk-to-disk-to-tape).

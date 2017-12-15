@@ -1,0 +1,1 @@
+In computing, the Inter-Client Communication Conventions Manual (ICCCM or I39L short for "I", 39 letters and "L") is a standard protocol for the X Window System. It specifies communication for clients of a common X server. It is primarily used for communication between the window manager and the X server's other clients.

@@ -1,0 +1,40 @@
+The Clausius theorem (1855) states that for a system exchanging heat with external reservoirs and undergoing a cyclic process, one that ultimately returns a system to its original state,
+
+  
+    
+      
+        ∮
+        
+          
+            
+              δ
+              Q
+            
+            T
+          
+        
+        ≤
+        0
+        ,
+      
+    
+    {\displaystyle \oint {\frac {\delta Q}{T}}\leq 0,}
+  
+where 
+  
+    
+      
+        δ
+        Q
+      
+    
+    {\displaystyle \delta Q}
+   is the infinitesimal amount of heat absorbed by the system from the reservoir and 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+   is the temperature of the external reservoir at a particular instant in time. In the special case of a reversible process, the equality holds. The reversible case is used to introduce the entropy state function. This is because in a cyclic process the variation of a state function is zero. In words, the Clausius statement states that it is impossible to construct a device whose sole effect is the transfer of heat from a cool reservoir to a hot reservoir. Equivalently, heat spontaneously flows from a hot body to a cooler one, not the other way around.

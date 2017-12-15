@@ -1,0 +1,2 @@
+Pensim2 is a dynamic microsimulation model to simulate the income of pensioners, owned by the British Department for Work and Pensions.
+Pensim2 is the second version of Pensim which was developed in the 1990s. The time horizon of the model is 100 years, by which time today's school leavers will retire. Pensim2 uses a lot of external alignment figures. Pensim2 uses data from different data sources, e.g. BHPS, LLMDB and the Family Resources Survey.

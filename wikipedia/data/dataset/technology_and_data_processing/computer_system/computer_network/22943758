@@ -1,0 +1,4 @@
+An 802.15.4 radio module is a small device used to communicate wirelessly with other devices according to the IEEE 802.15.4 protocol.
+This table lists production ready-to-use certified modules only, not radio chips. A ready-to-use module is a complete system with a transceiver, and optionally an MCU and antenna on a printed circuit board. While most of the modules in this list are ZigBee, Thread, ISA100.11a, or WirelessHART modules, some don't contain enough flash memory to implement a ZigBee stack and instead run plain 802.15.4 protocol, sometimes with a lighter wireless protocol on top.
+
+

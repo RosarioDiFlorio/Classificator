@@ -1,0 +1,2 @@
+A client–queue–client or passive queue system is a client–server computer network in which the server is a data queue for the clients. Instead of communicating with each other directly, clients exchange data with one another by storing it in a repository (the queue) on a server.
+Like peer-to-peer, the client–queue–client system empowers hosts on the network to serve data to other hosts.

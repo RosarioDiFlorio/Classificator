@@ -1,0 +1,4 @@
+A hypertree network is a network topology that shares some traits with the binary tree network. It is a variation of the fat tree architecture.
+A hypertree of degree k depth d may be visualized as a 3-dimensional object whose front view is the top-down complete k-ary tree of depth d and the side view is the bottom-up complete binary tree of depth d.
+Hypertrees were proposed in 1981 by James R. Goodman and Carlo Sequin.
+Hypertrees are a choice for parallel computer architecture, used, e.g., in the connection machine CM-5.

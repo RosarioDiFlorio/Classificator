@@ -1,0 +1,15 @@
+The Margules activity model is a simple thermodynamic model for the excess Gibbs free energy of a liquid mixture introduced in 1895 by Max Margules. After Lewis had introduced the concept of the activity coefficient, the model could be used to derive an expression for the activity coefficients 
+  
+    
+      
+        
+          γ
+          
+            i
+          
+        
+      
+    
+    {\displaystyle \gamma _{i}}
+   of a compound i in a liquid, a measure for the deviation from ideal solubility, also known as Raoult's law.
+In chemical engineering the Margules Gibbs free energy model for liquid mixtures is better known as the Margules activity or activity coefficient model. Although the model is old it has the characteristic feature to describe extrema in the activity coefficient, which modern models like NRTL and Wilson cannot.

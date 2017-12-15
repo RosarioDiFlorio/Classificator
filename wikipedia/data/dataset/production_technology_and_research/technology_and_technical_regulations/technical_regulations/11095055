@@ -1,0 +1,3 @@
+Routing Assets Database (RADb), also expanded as Routing Arbiter Database, run by Merit Network, is a lookup database designed to make fundamental information about networks available. The RADb is a public registry of routing information for networks in the Internet. It was developed in the early 1990s as part of the National Science Foundation (NSF)-funded Routing Arbiter Project. The acronym is frequently seen written in all caps (RADB) but its official usage is the following mixed case (RADb).
+Some Internet service providers require customers to be registered in some RADb prior to making BGP announcements.
+Among other things, the registry validates the origin of each announcement.

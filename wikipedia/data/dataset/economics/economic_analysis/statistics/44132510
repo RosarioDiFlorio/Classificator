@@ -1,0 +1,3 @@
+Probabilistic soft logic (PSL) is a framework for collective, probabilistic reasoning in relational domains. PSL uses first order logic rules as a template language for graphical models over random variables with soft truth values from the interval [0,1].
+
+

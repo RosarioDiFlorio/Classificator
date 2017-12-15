@@ -1,0 +1,37 @@
+The Karplus equation, named after Martin Karplus, describes the correlation between 3J-coupling constants and dihedral torsion angles in nuclear magnetic resonance spectroscopy:
+
+  
+    
+      
+        J
+        (
+        ϕ
+        )
+        =
+        C
+        cos
+        ⁡
+        2
+        ϕ
+        +
+        B
+        cos
+        
+        ϕ
+        +
+        A
+      
+    
+    {\displaystyle J(\phi )=C\cos 2\phi +B\cos \,\phi +A}
+  
+where J is the 3J coupling constant, 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+   is the dihedral angle, and A, B, and C are empirically derived parameters whose values depend on the atoms and substituents involved. The relationship may be expressed in a variety of equivalent ways e.g. involving cos2 φ rather than cos 2φ —these lead to different numerical values of A, B, and C but do not change the nature of the relationship.
+The relationship is used for 3JH,H coupling constants. The superscript "3" indicates that a 1H atom is coupled to another 1H atom three bonds away, via H-C-C-H bonds. (Such hydrogens bonded to neighbouring carbon atoms are termed vicinal). The magnitude of these couplings are generally smallest when the torsion angle is close to 90° and largest at angles of 0 and 180°.
+This relationship between local geometry and coupling constant is of great value throughout nuclear magnetic resonance spectroscopy and is particularly valuable for determining backbone torsion angles in protein NMR studies.

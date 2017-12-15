@@ -1,0 +1,1 @@
+Facebook Query Language (FQL) is a query language that allows querying Facebook user data by using a SQL-style interface, avoiding the need to use the Facebook Platform Graph API. Data returned from an FQL query is in JSON format by default.

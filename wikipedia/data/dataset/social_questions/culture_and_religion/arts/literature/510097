@@ -1,0 +1,57 @@
+LIX is a readability measure indicating the difficulty of reading a text developed by Swedish scholar Carl-Hugo Björnsson. It is computed as follows:
+
+  
+    
+      
+        
+          LIX
+        
+        =
+        
+          
+            A
+            B
+          
+        
+        +
+        
+          
+            
+              C
+              ⋅
+              100
+            
+            A
+          
+        
+      
+    
+    {\displaystyle {\text{LIX}}={\frac {A}{B}}+{\frac {C\cdot 100}{A}}}
+  , where
+
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+   is the number of words,
+
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+   is the number of periods (defined by period, colon or capital first letter), and
+
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+   is the number of long words (more than 6 letters).

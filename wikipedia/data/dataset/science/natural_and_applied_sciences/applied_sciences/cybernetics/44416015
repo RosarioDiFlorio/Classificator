@@ -1,0 +1,25 @@
+In physics, magnetic skyrmions (occasionally described as 'vortices,' or 'vortex-like' configurations) are quasiparticles which have been predicted theoretically and observed experimentally in condensed matter systems. Skyrmions, named after British physicist Tony Hilton Royle Skyrme, can be formed in magnetic materials in their 'bulk' such as in MnSi, or in magnetic thin films. They can be achiral (Fig. 1 a), or chiral (Fig 1 b) in nature, and may exist both as dynamic excitations or stable or metastable states. Although the broad lines defining magnetic skyrmions have been established de facto, there exist a variety of interpretations with subtle differences.
+Most descriptions include the notion of topology - a categorization of shapes and the way in which an object is laid out in space - using a continuous-field approximation as defined in micromagnetics. Descriptions generally specify a non-zero, integer value of the topological index, (not to be confused with the chemistry meaning of 'topological index'). This value is sometimes also referred to as the winding number, the topological charge (although it is unrelated to 'charge' in the electrical sense), the topological quantum number (although it is unrelated to quantum mechanics or quantum mechanical phenomena, notwithstanding the quantization of the index values), or more loosely as the “skyrmion number.” The topological index of the field can be described mathematically as
+
+where 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+   is the topological index, 
+  
+    
+      
+        
+          M
+        
+      
+    
+    {\displaystyle \mathbf {M} }
+   is the unit vector in the direction of the local magnetization within the magnetic thin, ultra-thin or bulk film, and the integral is taken over a two dimensional space. (A generalization to a three-dimensional space is possible).
+What this equation describes physically is a configuration in which the spins in a magnetic film are all aligned orthonormal to the plane of the film, with the exception of those in one, specific region, where the spins progressively turn over to an orientation that is perpendicular to the plane of the film but anti-parallel to those in the rest of the plane. Assuming 2D isotropy, the free energy of such a configuration is minimized by relaxation towards a state exhibiting circular symmetry, resulting in the configuration illustrated schematically (for a two dimensional skyrmion) in figure 1. In one dimension, the distinction between the progression of magnetization in a 'skyrmionic' pair of domain walls, and the progression of magnetization in a topologically trivial pair of magnetic domain walls, is illustrated in figure 2. Considering this one dimensional case is equivalent to considering a horizontal cut across the diameter of a 2-dimensional hedgehog skyrmion (fig. 1(a)) and looking at the progression of the local spin orientations.
+
+It is worth observing that there are two different configurations which satisfy the topological index criterion stated above. The distinction between these can be made clear by considering a horizontal cut across both of the skyrmions illustrated in figure 1, and looking at the progression of the local spin orientations. In the case of fig. 1(a) the progression of magnetization across the diameter is cycloidal. This type of skyrmion is known as a 'hedgehog skyrmion.' In the case of fig. 1(b), the progression of magnetization is helical, giving rise to what is often called a 'vortex skyrmion.'

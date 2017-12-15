@@ -1,0 +1,17 @@
+Green Power Usage Effectiveness (GPUE) is a proposed measurement of both how much sustainable energy a computer data center uses, its carbon footprint per usable kilowatt hour (kWh) and how efficiently it uses its power; specifically, how much of the power is actually used by the computing equipment (in contrast to cooling and other overhead). It is an addition to the power usage effectiveness (PUE) definition and was first proposed by Greenqloud.
+The Green Grid has developed the Power Usage Effectiveness metric  or PUE to measure a data centers' effectiveness of getting power to IT equipment. What the PUE tells in simple terms is how much extra energy is needed for each usable kWh for the IT equipment due to the power going into cooling, power distribution loss etc. and it’s a simple formula (in theory):
+PUE = Total Facility Power/IT Equipment Power
+The PUE can change depending on where measurements are made, when they are made and the timespan the measurements are made in. Data centers are subtracting factors from their PUE to lower it e.g. district heating. Some of the issues with PUE are being addressed with the PUEx definition.
+GPUE is a way to "weigh" the PUE to better see which data centers are truly green in the sense that they indirectly cause the least amount of CO2 to be emitted by their use of sustainable or unsustainable energy sources.
+This new metric GPUE or Green Power Usage Effectiveness is defined as:
+GPUE = G × PUEx (for inline comparison of data centers)
+or = G @ PUEx (a better display and for CO2 emission calculations)
+The "G" is the key factor here and it is a simple calculated value:
+G = Weighed sum of energy sources and their lifecycle KG CO2/KWh
+G =∑( %EnergySource × ( 1 + weight) )
+Adding 1 to the weight is to "weigh" (multiply) with the PUE to get a number that is comparable to PUE. The weights taken directly from the "lifecycle CO2/kWh for electricity generation by power source" table above we got from the 2008 Sovacool Study  e.g. the weight for unscrubbed coal is e.g. 1.050 (kg of CO2/kWh) while hydroelectric river generation has a weight of 0.013. An unknown energy source or a "mix" will get the same as the maximum value which for now is the same as coal.
+Example:
+PUE 1.20, 50/50 Coal/Hydro
+G = 0.5*(1+1.050) + 0.5*(1+0.013)
+G = 1.531, GPUEx = 1.84 or 1.531@1.20
+Kg CO2 per usable kWh = (G-1) × PUEx = 0.64 kg

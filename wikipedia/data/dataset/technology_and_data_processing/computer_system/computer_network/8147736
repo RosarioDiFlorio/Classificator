@@ -1,0 +1,9 @@
+Industrial USB is the name given to the use of the USB protocol in an industrial environment, for data acquisition, automation, and production machine control.
+Until recently, USB has been thought of strictly as a consumer communication bus, commonly used for PC peripherals. However, its popularity has caused increasing interest for USB in the industrial space. The introduction of USB 2.0, with a transfer rate of 480 Mbit/s, provides a solution for implementing a portable high speed diagnostic system.
+Some of the advantages are:
+High-speed transfer rates with USB 2.0 at 480 Mbit/s
+Easy setup due to Plug-and-Play
+Portability
+The difficulties of Industrial USB include:
+Connector strain relief
+Maximum cable length of 5m (with commercially available USB hubs and extenders, it is possible to extend USB up to 30 m or 500 m, respectively)

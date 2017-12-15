@@ -1,0 +1,2 @@
+Authenticated Received Chain (ARC) is an email-authentication system designed to allow an intermediate mail server like a mailing list or forwarding service to sign an email's original authentication results. This allows a receiving service to validate an email when the email's SPF and DKIM records are rendered invalid by an intermediate server's processing.
+ARC is currently a draft standard with the IETF.

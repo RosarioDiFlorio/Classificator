@@ -1,0 +1,27 @@
+In fluid dynamics, the Mach number (M or Ma) (; German: [maχ]) is a dimensionless quantity representing the ratio of flow velocity past a boundary to the local speed of sound.
+
+  
+    
+      
+        
+          M
+        
+        =
+        
+          
+            u
+            c
+          
+        
+        ,
+      
+    
+    {\displaystyle \mathrm {M} ={\frac {u}{c}},}
+  
+where:
+M is the Mach number,
+u is the local flow velocity with respect to the boundaries (either internal, such as an object immersed in the flow, or external, like a channel), and
+c is the speed of sound in the medium.
+By definition, Mach 1 is equal to the speed of sound. Mach 0.65 is 65% of the speed of sound (subsonic), and Mach 1.35 is 35% faster than the speed of sound (supersonic).
+The local speed of sound, and thereby the Mach number, depends on the condition of the surrounding medium, in particular the temperature. The Mach number is primarily used to determine the approximation with which a flow can be treated as an incompressible flow. The medium can be a gas or a liquid. The boundary can be traveling in the medium, or it can be stationary while the medium flows along it, or they can both be moving, with different velocities: what matters is their relative velocity with respect to each other. The boundary can be the boundary of an object immersed in the medium, or of a channel such as a nozzle, diffusers or wind tunnels channeling the medium. As the Mach number is defined as the ratio of two speeds, it is a dimensionless number. If M < 0.2–0.3 and the flow is quasi-steady and isothermal, compressibility effects will be small and simplified incompressible flow equations can be used.
+The Mach number is named after Austrian physicist and philosopher Ernst Mach, and is a designation proposed by aeronautical engineer Jakob Ackeret. As the Mach number is a dimensionless quantity rather than a unit of measure, with Mach, the number comes after the unit; the second Mach number is "Mach 2" instead of "2 Mach" (or Machs). This is somewhat reminiscent of the early modern ocean sounding unit "mark" (a synonym for fathom), which was also unit-first, and may have influenced the use of the term Mach. In the decade preceding faster-than-sound human flight, aeronautical engineers referred to the speed of sound as Mach's number, never "Mach 1."

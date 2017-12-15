@@ -1,0 +1,5 @@
+ISO 3166-2:VN is the entry for Vietnam in ISO 3166-2, part of the ISO 3166 standard published by the International Organization for Standardization (ISO), which defines codes for the names of the principal subdivisions (e.g., provinces or states) of all countries coded in ISO 3166-1.
+Currently for Vietnam, ISO 3166-2 codes are defined for 58 provinces and 5 municipalities. The municipalities have special status equal to the provinces.
+Each code consists of two parts, separated by a hyphen. The first part is VN, the ISO 3166-1 alpha-2 code of Vietnam. The second part either of the following:
+two digits: provinces
+two letters: municipalities

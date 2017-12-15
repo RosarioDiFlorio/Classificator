@@ -1,0 +1,9 @@
+Rational analysis is a theoretical framework, methodology, and research program in cognitive science that has been developed by John Anderson. The goal of rational analysis as a research program is to explain the function and purpose of cognitive processes and to discover the structure of the mind. Chater and Oaksford contrast it with the mechanistic explanations of cognition offered by both computational models and neuroscience.
+Rational analysis starts from the assumption that the mind is adapted to its environment. Rational analysis uses this assumption to investigate the structure and purpose of representations and cognitive processes by studying the structure of the environment. The methodology of rational analysis comprises six steps:
+Goals: Specify precisely the goals of the cognitive system.
+Environment: Develop a formal model of the environment to which the system is adapted.
+Computational Limitations: Make the minimal assumptions about computational limitations.
+Optimization: Derive the optimal behavioral function given 1-3 above.
+Data: Examine the empirical literature to see whether the predictions of the behavioral function are confirmed.
+Iteration: Repeat, iteratively refining the theory
+Rational analysis has been applied to memory, categorization, causal inference, problem solving, and reasoning.

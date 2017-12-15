@@ -1,0 +1,1 @@
+Metro is an opensource web service stack that is a part of the GlassFish project, though it can also be used in a stand-alone configuration. Components of metro include JAXB RI, JAX-WS RI, SAAJ RI, StAX (SJSXP implementation) and WSIT. It is available under the CDDL and GPLv2 (with classpath exception.)

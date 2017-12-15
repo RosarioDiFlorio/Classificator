@@ -1,0 +1,3 @@
+Chomp is a two-player strategy game played on a rectangular chocolate bar made up of smaller square blocks (cells). The players take it in turns to choose one block and "eat it" (remove from the board), together with those that are below it and to its right. The top left block is "poisoned" and the player who eats this loses.
+The chocolate-bar formulation of Chomp is due to David Gale, but an equivalent game expressed in terms of choosing divisors of a fixed integer was published earlier by Frederik Schuh.
+Chomp is a special case of a poset game where the partially ordered set on which the game is played is a product of total orders with the minimal element (poisonous block) removed.

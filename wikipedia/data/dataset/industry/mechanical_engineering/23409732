@@ -1,0 +1,222 @@
+In civil engineering and structural analysis Clapeyron's theorem of three moments is a relationship among the bending moments at three consecutive supports of a horizontal beam.
+Let A,B,C be the three consecutive points of support, and denote by- l the length of AB and 
+  
+    
+      
+        
+          l
+          ′
+        
+      
+    
+    {\displaystyle l'}
+   the length of BC, by w and 
+  
+    
+      
+        
+          w
+          ′
+        
+      
+    
+    {\displaystyle w'}
+   the weight per unit of length in these segments. Then the bending moments 
+  
+    
+      
+        
+          M
+          
+            A
+          
+        
+        ,
+        
+        
+          M
+          
+            B
+          
+        
+        ,
+        
+        
+          M
+          
+            C
+          
+        
+      
+    
+    {\displaystyle M_{A},\,M_{B},\,M_{C}}
+   at the three points are related by:
+
+  
+    
+      
+        
+          M
+          
+            A
+          
+        
+        l
+        +
+        2
+        
+          M
+          
+            B
+          
+        
+        (
+        l
+        +
+        
+          l
+          ′
+        
+        )
+        +
+        
+          M
+          
+            C
+          
+        
+        
+          l
+          ′
+        
+        =
+        
+          
+            1
+            4
+          
+        
+        w
+        
+          l
+          
+            3
+          
+        
+        +
+        
+          
+            1
+            4
+          
+        
+        
+          w
+          ′
+        
+        (
+        
+          l
+          ′
+        
+        
+          )
+          
+            3
+          
+        
+        .
+      
+    
+    {\displaystyle M_{A}l+2M_{B}(l+l')+M_{C}l'={\frac {1}{4}}wl^{3}+{\frac {1}{4}}w'(l')^{3}.}
+  
+This equation can also be written as 
+
+  
+    
+      
+        
+          M
+          
+            A
+          
+        
+        l
+        +
+        2
+        
+          M
+          
+            B
+          
+        
+        (
+        l
+        +
+        
+          l
+          ′
+        
+        )
+        +
+        
+          M
+          
+            C
+          
+        
+        
+          l
+          ′
+        
+        =
+        
+          
+            
+              6
+              
+                a
+                
+                  1
+                
+              
+              
+                x
+                
+                  1
+                
+              
+            
+            l
+          
+        
+        +
+        
+          
+            
+              6
+              
+                a
+                
+                  2
+                
+              
+              
+                x
+                
+                  2
+                
+              
+            
+            
+              l
+              ′
+            
+          
+        
+      
+    
+    {\displaystyle M_{A}l+2M_{B}(l+l')+M_{C}l'={\frac {6a_{1}x_{1}}{l}}+{\frac {6a_{2}x_{2}}{l'}}}
+  
+where a1 is the area on the bending moment diagram due to vertical loads on AB, a2 is the area due to loads on BC, x1 is the distance from A to the centroid of the bending moment diagram of beam AB, x2 is the distance from C to the centroid of the area of the bending moment diagram of beam BC.
+The second equation is more general as it does not require that the weight of each segment be distributed uniformly.

@@ -1,0 +1,137 @@
+Blade solidity is an important design parameter for the axial flow impeller and is defined as the ratio of blade chord length to pitch.
+
+Blade Solidity = c/s
+Where
+
+  
+    
+      
+        s
+        =
+        2
+        π
+        
+          r
+          
+            m
+          
+        
+        
+          /
+        
+        
+          Z
+          
+            b
+          
+        
+      
+    
+    {\displaystyle s=2\pi r_{m}/Z_{b}}
+  
+
+  
+    
+      
+        
+          r
+          
+            m
+          
+        
+      
+    
+    {\displaystyle r_{m}}
+   is the mean radius
+
+  
+    
+      
+        
+          Z
+          
+            b
+          
+        
+      
+    
+    {\displaystyle Z_{b}}
+   is blade number
+Chord length c is the length of the chord line
+s is pitch
+In case of an axial flow impeller mean radius is defined in terms of hub (
+  
+    
+      
+        
+          r
+          
+            h
+          
+        
+      
+    
+    {\displaystyle r_{h}}
+  ,inner radius) and tip radius (
+  
+    
+      
+        
+          r
+          
+            t
+          
+        
+      
+    
+    {\displaystyle r_{t}}
+  ,outer radius) as :
+
+  
+    
+      
+        
+          r
+          
+            m
+          
+        
+        =
+        [
+        (
+        
+          r
+          
+            t
+          
+          
+            2
+          
+        
+        +
+        
+          r
+          
+            h
+          
+          
+            2
+          
+        
+        )
+        
+          /
+        
+        2
+        
+          ]
+          
+            0.5
+          
+        
+      
+    
+    {\displaystyle r_{m}=[(r_{t}^{2}+r_{h}^{2})/2]^{0.5}}
+  
+Blade solidity affects various turbomachinery parameters. So to vary those parameters one needs to vary blade solidity but there are some limitations imposed by Aspect ratio (wing) (span/chord), pitch. If an impeller has few blades i.e high pitch it will result in less lift force and in a similar manner for more blades i.e. very low pitch, there will be high drag force.
+Blade solidity should not be confused with rotor solidity, which is the ratio of the total area of the rotor blades to the swept area of the rotor.

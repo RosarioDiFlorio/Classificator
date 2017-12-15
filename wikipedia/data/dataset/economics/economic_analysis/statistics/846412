@@ -1,0 +1,105 @@
+In Bayesian probability theory, if the posterior distributions p(θ|x) are in the same family as the prior probability distribution p(θ), the prior and posterior are then called conjugate distributions, and the prior is called a conjugate prior for the likelihood function. For example, the Gaussian family is conjugate to itself (or self-conjugate) with respect to a Gaussian likelihood function: if the likelihood function is Gaussian, choosing a Gaussian prior over the mean will ensure that the posterior distribution is also Gaussian. This means that the Gaussian distribution is a conjugate prior for the likelihood that is also Gaussian. The concept, as well as the term "conjugate prior", were introduced by Howard Raiffa and Robert Schlaifer in their work on Bayesian decision theory. A similar concept had been discovered independently by George Alfred Barnard.
+Consider the general problem of inferring a distribution for a parameter θ given some datum or data x. From Bayes' theorem, the posterior distribution is equal to the product of the likelihood function 
+  
+    
+      
+        θ
+        ↦
+        p
+        (
+        x
+        ∣
+        θ
+        )
+        
+      
+    
+    {\displaystyle \theta \mapsto p(x\mid \theta )\!}
+   and prior 
+  
+    
+      
+        p
+        (
+        θ
+        )
+        
+      
+    
+    {\displaystyle p(\theta )\!}
+  , normalized (divided) by the probability of the data 
+  
+    
+      
+        p
+        (
+        x
+        )
+        
+      
+    
+    {\displaystyle p(x)\!}
+  :
+
+  
+    
+      
+        p
+        (
+        θ
+        ∣
+        x
+        )
+        =
+        
+          
+            
+              p
+              (
+              x
+              ∣
+              θ
+              )
+              
+              p
+              (
+              θ
+              )
+            
+            
+              ∫
+              p
+              (
+              x
+              ∣
+              
+                θ
+                ′
+              
+              )
+              
+              p
+              (
+              
+                θ
+                ′
+              
+              )
+              
+              d
+              
+                θ
+                ′
+              
+            
+          
+        
+        .
+        
+      
+    
+    {\displaystyle p(\theta \mid x)={\frac {p(x\mid \theta )\,p(\theta )}{\int p(x\mid \theta ')\,p(\theta ')\,d\theta '}}.\!}
+  
+Let the likelihood function be considered fixed; the likelihood function is usually well-determined from a statement of the data-generating process. It is clear that different choices of the prior distribution p(θ) may make the integral more or less difficult to calculate, and the product p(x|θ) × p(θ) may take one algebraic form or another. For certain choices of the prior, the posterior has the same algebraic form as the prior (generally with different parameter values). Such a choice is a conjugate prior.
+A conjugate prior is an algebraic convenience, giving a closed-form expression for the posterior; otherwise numerical integration may be necessary. Further, conjugate priors may give intuition, by more transparently showing how a likelihood function updates a prior distribution.
+All members of the exponential family have conjugate priors.

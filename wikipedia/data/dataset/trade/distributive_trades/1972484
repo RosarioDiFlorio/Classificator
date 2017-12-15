@@ -1,0 +1,133 @@
+In economics, Reilly's law of retail gravitation is a heuristic developed by William J. Reilly in 1931. According to Reilly's "law," customers are willing to travel longer distances to larger retail centers given the higher attraction they present to customers. In Reilly's formulation, the attractiveness of the retail center becomes the analogy for size (mass) in the physical law of gravity.
+The law presumes the geography of the area is flat without any rivers, roads or mountains to alter a consumer's decision of where to travel to buy goods. It also assumes consumers are otherwise indifferent between the actual cities. In analogy with Newton's law of gravitation, the point of indifference is the point at which the "attractiveness" of the two retail centres (postulated to be proportional to their size and inversely proportional to the square of the distance to them) is equal:
+
+  
+    
+      
+        
+          
+            
+              d
+              
+                A
+              
+            
+            
+              d
+              
+                B
+              
+            
+          
+        
+        =
+        
+          
+            
+              
+                P
+                
+                  A
+                
+              
+              
+                P
+                
+                  B
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\frac {d_{A}}{d_{B}}}={\sqrt {\frac {P_{A}}{P_{B}}}}}
+  
+Where 
+  
+    
+      
+        
+          d
+          
+            A
+          
+        
+      
+    
+    {\displaystyle d_{A}}
+   is the distance of the point of indifference from A, 
+  
+    
+      
+        
+          d
+          
+            B
+          
+        
+      
+    
+    {\displaystyle d_{B}}
+   is its distance from B, and 
+  
+    
+      
+        
+          P
+          
+            A
+          
+        
+        
+          /
+        
+        
+          P
+          
+            B
+          
+        
+      
+    
+    {\displaystyle P_{A}/P_{B}}
+   is the relative size of the two centres. If the customer is on the line connecting A and B, then if D is the distance between the centres, the point of indifference as measured from A on the line is
+
+  
+    
+      
+        d
+        =
+        
+          
+            D
+            
+              1
+              +
+              
+                
+                  
+                    P
+                    
+                      B
+                    
+                  
+                  
+                    /
+                  
+                  
+                    P
+                    
+                      A
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle d={\frac {D}{1+{\sqrt {P_{B}/P_{A}}}}}}
+  
+As expected, for centres of the same size, d=D/2, and if A is larger than B, the point of indifference is closer to B. As the size of A becomes very large with respect to B, d tends to D, meaning the customer will always prefer the larger centre unless they're very close to the smaller one.

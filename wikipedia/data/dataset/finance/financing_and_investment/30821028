@@ -1,0 +1,2 @@
+TradersStudio is an EOD trading software and a technical analysis software used for analyzing and trading the financial markets. It is a Windows-based application.
+Its Core Concept is that it has two layers, (a) Session Layer, which is “a (one) system and a set of parameters on one or more markets” and (b) Trade Plan Layer, which allows multiple sessions to run one bar at a time and pass information between them using a type of Object based programming method, (just like Excel). Moreover, Sessions run one market at a time.

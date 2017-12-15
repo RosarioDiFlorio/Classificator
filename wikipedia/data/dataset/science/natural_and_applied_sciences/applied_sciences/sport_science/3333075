@@ -1,0 +1,8 @@
+The Q cycle (named for CoQ10) describes a series of reactions that describe how the sequential oxidation and reduction of the lipophilic electron carrier, Coenzyme Q10 (CoQ10), between the ubiquinol and ubiquinone forms, can result in the net movement of protons across a lipid bilayer (in the case of the mitochondria, the inner mitochondrial membrane).
+The Q cycle was first proposed by Peter D. Mitchell, though a modified version of Mitchell's original scheme is now accepted as the mechanism by which Complex III moves protons (i.e. how complex III contributes to the biochemical generation of the proton or pH, gradient, which is used for the biochemical generation of ATP).
+To summarize, the first reaction of Q cycle is:
+CoQH2 + cytochrome c1 (Fe3+) → CoQ−• + cytochrome c1 (Fe2+) + 2 H+ (intermembrane)
+Then the second reaction of the cycle involves the reduction of the transient semiquinone by another electron to give CoQH2:
+CoQH2 + CoQ−• + cytochrome c1 (Fe3+) + 2 H+ (matrix) → CoQ + CoQH2 + cytochrome c1 (Fe2+) + 2 H+ (intermembrane)
+Combining the two equations, we have the overall reaction of Q cycle:
+CoQH2 + 2 cytochrome c1 (Fe3+) + 2 H+ (matrix) → CoQ + 2 cytochrome c1 (Fe2+) + 4 H+ (intermembrane)

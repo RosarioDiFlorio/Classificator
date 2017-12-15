@@ -1,0 +1,1 @@
+The parallelization contract or PACT programming model is a generalization of the MapReduce programming model and uses second order functions to perform concurrent computations on large (Petabytes) data sets in parallel.

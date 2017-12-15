@@ -1,0 +1,4 @@
+In contexts of solar physics and data analysis, Ana is a somewhat whimsically named computer language that is designed for array processing and image data analysis. The name is an acronym for "A Non Acronym". Ana began as a fork of an early version of IDL, but has diverged significantly since then.
+It is in common use at the Lockheed-Martin Space Applications Laboratory and at institutions that analyze data from the TRACE spacecraft, but is not commonly used elsewhere. Ana appears to be intended as free software though it is not distributed under a recognized FOSS license. It is available as source code, primarily through the Solarsoft distribution system.
+The most commonly used application written in Ana is the TRACE image browser, which is designed for browsing and viewing time-lapse movies collected by TRACE, SOHO, Yohkoh, and other observatories.
+Ana homepage: [1]

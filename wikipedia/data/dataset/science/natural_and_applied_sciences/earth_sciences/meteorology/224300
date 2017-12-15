@@ -1,0 +1,165 @@
+In meteorology and hydrology, the Bowen ratio is used to describe the type of heat transfer in a water body. Heat transfer can either occur as sensible heat (differences in temperature without evapotranspiration) or latent heat (the energy required during a change of state, without a change in temperature). The Bowen ratio is the mathematical method generally used to calculate heat lost (or gained) in a substance; it is the ratio of energy fluxes from one state to another by sensible heat and latent heating respectively. It is calculated by the equation:
+
+  
+    
+      
+        B
+        =
+        
+          
+            
+              Q
+              
+                h
+              
+            
+            
+              Q
+              
+                e
+              
+            
+          
+        
+      
+    
+    {\displaystyle B={\frac {Q_{h}}{Q_{e}}}}
+  ,
+where 
+  
+    
+      
+        
+          Q
+          
+            h
+          
+        
+      
+    
+    {\displaystyle Q_{h}}
+   is sensible heating and 
+  
+    
+      
+        
+          Q
+          
+            e
+          
+        
+      
+    
+    {\displaystyle Q_{e}}
+   is latent heating. The quantity was named by Harald Sverdrup after Ira Sprague Bowen (1898–1973), an astrophysicist whose theoretical work on evaporation to air from water bodies made first use of it, and it is used most commonly in meteorology and hydrology. In this context, when the magnitude of 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+   is less than one, a greater proportion of the available energy at the surface is passed to the atmosphere as latent heat than as sensible heat, and the converse is true for values of 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+   greater than one. As 
+  
+    
+      
+        
+          
+            Q
+            
+              e
+            
+          
+          →
+          0
+        
+      
+    
+    {\displaystyle {Q_{e}\rightarrow 0}}
+  , however, 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+   becomes unbounded making the Bowen ratio a poor choice of variable for use in formulae, especially for arid surfaces. For this reason the evaporative fraction is sometimes a more appropriate choice of variable representing the relative contributions of the turbulent energy fluxes to the surface energy budget.
+The Bowen ratio is related to the evaporative fraction, 
+  
+    
+      
+        E
+        F
+      
+    
+    {\displaystyle EF}
+  , through the equation,
+
+  
+    
+      
+        
+          E
+          F
+          =
+          
+            
+              
+                Q
+                
+                  e
+                
+              
+              
+                
+                  Q
+                  
+                    e
+                  
+                
+                +
+                
+                  Q
+                  
+                    h
+                  
+                
+              
+            
+          
+          =
+          
+            
+              1
+              
+                1
+                +
+                B
+              
+            
+          
+        
+      
+    
+    {\displaystyle {EF={\frac {Q_{e}}{Q_{e}+Q_{h}}}={\frac {1}{1+B}}}}
+  .
+The Bowen ratio is an indicator of the type of surface. The Bowen ratio, 
+  
+    
+      
+        
+          B
+        
+      
+    
+    {\displaystyle {B}}
+  , is less than one over surfaces with abundant water supplies.

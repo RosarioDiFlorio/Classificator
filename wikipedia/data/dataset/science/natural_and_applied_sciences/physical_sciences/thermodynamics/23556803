@@ -1,0 +1,89 @@
+The Duhem–Margules equation, named for Pierre Duhem and Max Margules, is a thermodynamic statement of the relationship between the two components of a single liquid where the vapour mixture is regarded as an ideal gas:
+
+  
+    
+      
+        
+          
+            (
+            
+              
+                
+                  d
+                  
+                  ln
+                  
+                  
+                    P
+                    
+                      A
+                    
+                  
+                
+                
+                  d
+                  
+                  ln
+                  
+                  
+                    x
+                    
+                      A
+                    
+                  
+                
+              
+            
+            )
+          
+          
+            T
+            ,
+            P
+          
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  d
+                  
+                  ln
+                  
+                  
+                    P
+                    
+                      B
+                    
+                  
+                
+                
+                  d
+                  
+                  ln
+                  
+                  
+                    x
+                    
+                      B
+                    
+                  
+                
+              
+            
+            )
+          
+          
+            T
+            ,
+            P
+          
+        
+      
+    
+    {\displaystyle \left({\frac {d\,\ln \,P_{A}}{d\,\ln \,x_{A}}}\right)_{T,P}=\left({\frac {d\,\ln \,P_{B}}{d\,\ln \,x_{B}}}\right)_{T,P}}
+  
+where PA and PB are the partial vapour pressures of the two constituents and xA and xB are the mole fractions of the liquid.

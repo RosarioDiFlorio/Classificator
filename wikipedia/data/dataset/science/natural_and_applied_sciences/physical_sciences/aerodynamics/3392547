@@ -1,0 +1,108 @@
+In applied mathematics, the Joukowsky transform, named after Nikolai Zhukovsky, is a conformal map historically used to understand some principles of airfoil design.
+The transform is
+
+  
+    
+      
+        z
+        =
+        ζ
+        +
+        
+          
+            1
+            ζ
+          
+        
+        ,
+      
+    
+    {\displaystyle z=\zeta +{\frac {1}{\zeta }},}
+  
+where 
+  
+    
+      
+        z
+        =
+        x
+        +
+        i
+        y
+      
+    
+    {\displaystyle z=x+iy}
+   is a complex variable in the new space and 
+  
+    
+      
+        ζ
+        =
+        χ
+        +
+        i
+        η
+      
+    
+    {\displaystyle \zeta =\chi +i\eta }
+   is a complex variable in the original space. This transform is also called the Joukowsky transformation, the Joukowski transform, the Zhukovsky transform and other variations.
+In aerodynamics, the transform is used to solve for the two-dimensional potential flow around a class of airfoils known as Joukowsky airfoils. A Joukowsky airfoil is generated in the complex plane (
+  
+    
+      
+        z
+      
+    
+    {\displaystyle z}
+  -plane by applying the Joukowsky transform to a circle in the 
+  
+    
+      
+        ζ
+      
+    
+    {\displaystyle \zeta }
+  -plane. The coordinates of the centre of the circle are variables, and varying them modifies the shape of the resulting airfoil. The circle encloses the point 
+  
+    
+      
+        ζ
+        =
+        −
+        1
+      
+    
+    {\displaystyle \zeta =-1}
+   (where the derivative is zero) and intersects the point 
+  
+    
+      
+        ζ
+        =
+        1.
+      
+    
+    {\displaystyle \zeta =1.}
+   This can be achieved for any allowable centre position 
+  
+    
+      
+        
+          μ
+          
+            x
+          
+        
+        +
+        i
+        
+          μ
+          
+            y
+          
+        
+      
+    
+    {\displaystyle \mu _{x}+i\mu _{y}}
+   by varying the radius of the circle.
+Joukowsky airfoils have a cusp at their trailing edge. A closely related conformal mapping, the Kármán–Trefftz transform, generates the much broader class of Kármán–Trefftz airfoils by controlling the trailing edge angle. When a trailing edge angle of zero is specified, the Kármán–Trefftz transform reduces to the Joukowsky transform.

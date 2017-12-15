@@ -1,0 +1,57 @@
+In economics, demand for money is the desired holding of financial assets in the form of money: that is, cash or bank deposits rather than investments. It can refer to the demand for money narrowly defined as M1 (non-interest-bearing holdings), or for money in the broader sense of M2 or M3.
+Money in the sense of M1 is dominated as a store of value by interest-bearing assets. However, money is necessary to carry out transactions; in other words, it provides liquidity. This creates a trade-off between the liquidity advantage of holding money and the interest advantage of holding other assets. The demand for money is a result of this trade-off regarding the form in which a person's wealth should be held. In macroeconomics motivations for holding one's wealth in the form of money can roughly be divided into the transaction motive and the asset motive. These can be further subdivided into more microeconomically founded motivations for holding money.
+Generally, the nominal demand for money increases with the level of nominal output (price level times real output) and decreases with the nominal interest rate. The real demand for money is defined as the nominal amount of money demanded divided by the price level. For a given money supply the locus of income-interest rate pairs at which money demand equals money supply is known as the LM curve.
+The magnitude of the volatility of money demand has crucial implications for the optimal way in which a central bank should carry out monetary policy and its choice of a nominal anchor.
+Conditions under which the LM curve is flat, so that increases in the money supply have no stimulatory effect (a liquidity trap), play an important role in Keynesian theory. This situation occurs when the demand for money is infinitely elastic with respect to the interest rate.
+A typical money-demand function may be written as
+
+  
+    
+      
+        
+          M
+          
+            d
+          
+        
+        =
+        P
+        ∗
+        L
+        (
+        R
+        ,
+        Y
+        )
+        
+      
+    
+    {\displaystyle M^{d}=P*L(R,Y)\,}
+  
+where 
+  
+    
+      
+        
+          M
+          
+            d
+          
+        
+      
+    
+    {\displaystyle M^{d}}
+   is the nominal amount of money demanded, P is the price level, R is the nominal interest rate, Y is real output, and L(.) is real money demand. An alternate name for 
+  
+    
+      
+        L
+        (
+        R
+        ,
+        Y
+        )
+      
+    
+    {\displaystyle L(R,Y)}
+   is the liquidity preference function.

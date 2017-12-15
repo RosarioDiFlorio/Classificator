@@ -1,0 +1,103 @@
+In microeconomics, a consumer's Hicksian demand correspondence is the demand of a consumer over a bundle of goods that minimizes their expenditure while delivering a fixed level of utility. If the correspondence is actually a function, it is referred to as the Hicksian demand function, or compensated demand function. The function is named after John Hicks.
+Mathematically,
+
+  
+    
+      
+        h
+        (
+        p
+        ,
+        
+          
+            
+              u
+              ¯
+            
+          
+        
+        )
+        =
+        arg
+        ⁡
+        
+          min
+          
+            x
+          
+        
+        
+          ∑
+          
+            i
+          
+        
+        
+          p
+          
+            i
+          
+        
+        
+          x
+          
+            i
+          
+        
+      
+    
+    {\displaystyle h(p,{\bar {u}})=\arg \min _{x}\sum _{i}p_{i}x_{i}}
+  
+
+  
+    
+      
+        
+          
+            s
+            u
+            b
+            j
+            e
+            c
+            t
+             
+            t
+            o
+          
+        
+         
+         
+        u
+        (
+        x
+        )
+        ≥
+        
+          
+            
+              u
+              ¯
+            
+          
+        
+      
+    
+    {\displaystyle {\rm {subject~to}}\ \ u(x)\geq {\bar {u}}}
+  
+where h(p,u) is the Hicksian demand function, or commodity bundle demanded, at price vector p and utility level 
+  
+    
+      
+        
+          
+            
+              u
+              ¯
+            
+          
+        
+      
+    
+    {\displaystyle {\bar {u}}}
+  . Here p is a vector of prices, and x is a vector of quantities demanded so that the sum of all pixi, is the total expense on goods x.

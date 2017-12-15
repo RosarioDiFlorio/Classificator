@@ -1,0 +1,5 @@
+For power semiconductor devices (such as BJT, MOSFET, thyristor or IGBT), the safe operating area (SOA) is defined as the voltage and current conditions over which the device can be expected to operate without self-damage.
+SOA is usually presented in transistor datasheets as a graph with VCE (collector-emitter voltage) on the abscissa and ICE (collector-emitter current) on the ordinate; the safe 'area' referring to the area under the curve. The SOA specification combines the various limitations of the device — maximum voltage, current, power, junction temperature, secondary breakdown — into one curve, allowing simplified design of protection circuitry.
+
+Often, in addition to the continuous rating, separate SOA curves are plotted for short duration pulse conditions (1 ms pulse, 10 ms pulse, etc.).
+The safe operating area curve is a graphical representation of the power handling capability of the device under various conditions. The SOA curve takes into account the wire bond current carrying capability, transistor junction temperature, internal power dissipation and secondary breakdown limitations.

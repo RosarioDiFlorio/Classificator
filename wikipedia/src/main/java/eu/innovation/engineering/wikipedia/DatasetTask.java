@@ -17,17 +17,18 @@ public class DatasetTask extends RecursiveTask<Map<String,Set<DocumentInfo>>> im
   private String category;
   private int maxLevel;
   private boolean recursive;
-
+  private int limitDocs;
 
   /**
    * @param category
    * @param maxLevel
    * @param recursive
    */
-  public DatasetTask(String category,int maxLevel,boolean recursive){
+  public DatasetTask(String category,int maxLevel,boolean recursive,int limitDocs){
     this.category = category;
     this.maxLevel = maxLevel;
     this.recursive = recursive;
+    this.limitDocs = limitDocs;
   }
 
 
@@ -40,7 +41,7 @@ public class DatasetTask extends RecursiveTask<Map<String,Set<DocumentInfo>>> im
   protected Map<String, Set<DocumentInfo>> compute() {
     Map<String, Set<DocumentInfo>> toReturn = new HashMap<>();
     try {
-      Set<String> listIdDocuments = WikipediaMiner.requestIdsPagesOfCategory(category, new HashSet<String>(), recursive, 0, maxLevel);
+      Set<String> listIdDocuments = WikipediaMiner.requestIdsPagesOfCategory(category, new HashSet<String>(), recursive, 0, maxLevel,limitDocs);
       Map<String, DocumentInfo> contents = WikipediaMiner.getContentPages(listIdDocuments);
 
       Set<DocumentInfo> listDocument = new HashSet<>();

@@ -1,0 +1,107 @@
+In mathematics, an argument of a function is a specific input in the function, also known as an independent variable. When it is clear from the context which argument is meant, the argument is often denoted by the abbreviation arg.
+A mathematical function has one or more arguments in the form of independent variables designated in the function's definition, which can also contain parameters. The independent variables are mentioned in the list of arguments that the function takes, whereas the parameters are not. For example, in the logarithmic function 
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        
+          log
+          
+            b
+          
+        
+        ⁡
+        (
+        x
+        )
+      
+    
+    {\displaystyle f(x)=\log _{b}(x)}
+  , the base 
+  
+    
+      
+        b
+      
+    
+    {\displaystyle b}
+   is considered a parameter.
+A function that takes a single argument as input (such as 
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        
+          x
+          
+            2
+          
+        
+      
+    
+    {\displaystyle f(x)=x^{2}}
+  ) is called a unary function. A function of two or more variables is considered to have a domain consisting of ordered pairs or tuples of argument values. For example, the binary function 
+  
+    
+      
+        f
+        (
+        x
+        ,
+        y
+        )
+        =
+        
+          x
+          
+            2
+          
+        
+        +
+        
+          y
+          
+            2
+          
+        
+      
+    
+    {\displaystyle f(x,y)=x^{2}+y^{2}}
+   has two arguments, 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+   and 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  , in an ordered pair 
+  
+    
+      
+        (
+        x
+        ,
+        y
+        )
+      
+    
+    {\displaystyle (x,y)}
+  . The hypergeometric function is an example of a four-argument function. The number of arguments that a function takes is called the arity of the function.
+The argument of a circular function is an angle. The argument of a hyperbolic function is a hyperbolic angle.

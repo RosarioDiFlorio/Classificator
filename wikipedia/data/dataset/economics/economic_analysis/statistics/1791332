@@ -1,0 +1,103 @@
+In statistics, the reference class problem is the problem of deciding what class to use when calculating the probability applicable to a particular case. For example, to estimate the probability of an aircraft crashing, one might use the frequency of crashes of all aircraft, of this make of aircraft, of aircraft flown by this company in the last ten years, etc. Any case is a member of very many classes, in which the frequency of the attribute of interest (such as crashing) differs, and the reference class problem discusses which is the most appropriate to use.
+More formally, many arguments in statistics take the form of a statistical syllogism:
+
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+   proportion of 
+  
+    
+      
+        F
+      
+    
+    {\displaystyle F}
+   are 
+  
+    
+      
+        G
+      
+    
+    {\displaystyle G}
+  
+
+  
+    
+      
+        I
+      
+    
+    {\displaystyle I}
+   is an 
+  
+    
+      
+        F
+      
+    
+    {\displaystyle F}
+  
+Therefore, the chance that 
+  
+    
+      
+        I
+      
+    
+    {\displaystyle I}
+   is a 
+  
+    
+      
+        G
+      
+    
+    {\displaystyle G}
+   is 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+
+  
+    
+      
+        F
+      
+    
+    {\displaystyle F}
+   is called the "reference class" and 
+  
+    
+      
+        G
+      
+    
+    {\displaystyle G}
+   is the "attribute class" and 
+  
+    
+      
+        I
+      
+    
+    {\displaystyle I}
+   is the individual object. How is one to choose an appropriate class 
+  
+    
+      
+        F
+      
+    
+    {\displaystyle F}
+  ?
+In Bayesian statistics, the problem arises at that of deciding on a prior probability for the outcome in question (or when considering multiple outcomes, a prior probability distribution).

@@ -1,0 +1,2 @@
+Pacemaker is an open source high availability resource manager software used on computer clusters since 2004. Until about 2007, it was part of the Linux-HA project, then was split out to be its own project.
+It implements several APIs for controlling resources, but its preferred API for this purpose is the Open Cluster Framework resource agent API.

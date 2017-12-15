@@ -1,0 +1,4 @@
+In a digital circuit or system, static discipline is a guarantee on logical elements that "if inputs meet valid input thresholds, then the system guarantees outputs will meet valid output thresholds", named by Stephen A. Ward and Robert H. Halstead in 1990, but practiced for decades earlier.
+The valid output thresholds voltages VOH (output high) and VOL (output low), and valid input thresholds VIH (input high) and VIL (input low), satisfy a robustness principle such that
+VOL < VIL < VIH < VOH
+with sufficient noise margins in the inequalities.

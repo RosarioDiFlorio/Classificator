@@ -1,0 +1,6 @@
+Half Rate (HR or GSM-HR or GSM 06.20) is a speech coding system for GSM, developed in the early 1990s.
+Since the codec, operating at 5.6 kbit/s, requires half the bandwidth of the Full Rate codec, network capacity for voice traffic is doubled, at the expense of audio quality. It is recommended to use this codec when the battery is low as it may consume up to 30% less energy. The sampling rate is 8 kHz with resolution 13 bit, frame length 160 samples (20 ms) and subframe length 40 samples (5 ms).
+GSM Half Rate is specified in ETSI EN 300 969 (GSM 06.20), and uses a form of the VSELP algorithm. Previous specification was in ETSI ETS 300 581-2, which first edition was published in December 1995.
+For some Nokia phones one can configure the use of this codec:
+To activate HR codec use enter the following code: *4720#
+To deactivate HR codec use enter the following code: #4720#

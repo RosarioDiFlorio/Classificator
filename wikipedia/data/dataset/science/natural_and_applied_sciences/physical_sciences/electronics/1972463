@@ -1,0 +1,4 @@
+In digital electronics three-state, tri-state, or 3-state logic allows an output port to assume a high impedance state, effectively removing the output from the circuit, in addition to the 0 and 1 logic levels.
+This allows multiple circuits to share the same output line or lines (such as a bus which cannot listen to more than one device at a time).
+Three-state outputs are implemented in many registers, bus drivers, and flip-flops in the 7400 and 4000 series as well as in other types, but also internally in many integrated circuits. Other typical uses are internal and external buses in microprocessors, computer memory, and peripherals. Many devices are controlled by an active-low input called OE (Output Enable) which dictates whether the outputs should be held in a high-impedance state or drive their respective loads (to either 0- or 1-level).
+The term tri-state should not be confused with ternary logic (3-value logic).

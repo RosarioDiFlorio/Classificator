@@ -1,0 +1,19 @@
+A currency converter is software code that is designed to convert one currency into another in order to check its corresponding value. The code is generally a part of a web site or it forms a mobile app and it is based on current market or bank exchange rates.
+In order to convert one currency into another, a user enters an amount of money (e.g. '1000') and chooses the currency he/she wishes to check the monetary value of (e.g. 'United States Dollar'). After that, the user selects one, or sometimes several other currencies, he/she would like to see the result in. The application software then calculates and displays the corresponding amount of money.
+Currency converters aim to maintain real-time information on current market or bank exchange rates, so that the calculated result changes whenever the value of either of the component currencies does. They do so by connecting to a database of current currency exchange rates. The frequency at which currency converters update the exchange rates they use varies: Yahoo currency converter updates its rates every day, while Convert My Money< every hour.
+Currency converters usually display a value that is not biased towards buying or selling. This is useful when:
+Estimating the value of goods or services
+Basic accounting and invoicing
+Preparing financial plans and reports
+Currency converters are often used as a means of checking the relative value of a currency before exchanging it into another currency. This is useful for the traveler because the traveler can check the value of a foreign county’s currency before exchanging money. These programs list the value of a foreign country’s currency relative to the traveler’s own currency.
+The currency conversion software calculates the rates as decimal point numbers with typically 4 decimals after the comma. Some may calculate the conversion rates with more decimals internally but only 4 are displayed. This is related to precision, software internalization (i18n) and how the Forex (foreign exchange) market works, where most conversions have 4 decimal places, although some currency pairs also have 5. Most currency converters use up to 4.
+Some currency conversion software converts currency alongside information regarding the currencies. This information can be very helpful for travelers and those looking to make money by trading currency.
+The value of currency constantly fluctuates and is affected by a variety of different factors, including:
+The value of the nation’s imports & exports
+The relative political stability of the country
+War in the region
+Natural disasters
+The country’s public debts with other countries
+The regulatory policies of the country’s central bank
+The fluctuation of the county’s inflation rates.
+These currency conversion programs seek to arm the user with knowledge that can lead the user to an educated guess about the future fluctuations of a country’s currency. A trader would seek to buy the currency at a low rate and sell at a high rate, while a traveler could wait to exchange money at home in a favorable market.

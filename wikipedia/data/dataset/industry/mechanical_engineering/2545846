@@ -1,0 +1,193 @@
+In fluid dynamics, the enstrophy 
+  
+    
+      
+        
+          
+            E
+          
+        
+      
+    
+    {\displaystyle {\mathcal {E}}}
+   can be interpreted as another type of potential density; or, more concretely, the quantity directly related to the kinetic energy in the flow model that corresponds to dissipation effects in the fluid. It is particularly useful in the study of turbulent flows, and is often identified in the study of thrusters as well as the field of combustion theory.
+The enstrophy can be described as the integral of the square of the vorticity 
+  
+    
+      
+        ω
+      
+    
+    {\displaystyle \omega }
+  , 
+
+  
+    
+      
+        
+          
+            E
+          
+        
+        (
+        
+          ω
+        
+        )
+        ≡
+        
+          ∫
+          
+            S
+          
+        
+        
+          
+            ω
+          
+          
+            2
+          
+        
+        d
+        S
+        .
+      
+    
+    {\displaystyle {\mathcal {E}}({\boldsymbol {\omega }})\equiv \int _{S}{\boldsymbol {\omega }}^{2}dS.}
+  
+or, in terms of the flow velocity,
+
+  
+    
+      
+        
+          
+            E
+          
+        
+        (
+        
+          u
+        
+        )
+        ≡
+        
+          ∫
+          
+            S
+          
+        
+        (
+        ∇
+        ×
+        
+          u
+        
+        
+          )
+          
+            2
+          
+        
+        d
+        S
+        .
+      
+    
+    {\displaystyle {\mathcal {E}}(\mathbf {u} )\equiv \int _{S}(\nabla \times \mathbf {u} )^{2}dS.}
+  
+Here, since the curl gives a scalar field in 2-dimensions (vortex) corresponding to the vector-valued velocity solving in the incompressible Navier–Stokes equations, we can integrate its square over a surface S to retrieve a continuous linear operator on the space of possible velocity fields, known as a current. This equation is however somewhat misleading. Here we have chosen a simplified version of the enstrophy derived from the incompressibility condition, which is equivalent to vanishing divergence of the velocity field,
+
+  
+    
+      
+        ∇
+        ⋅
+        
+          u
+        
+        =
+        0.
+      
+    
+    {\displaystyle \nabla \cdot \mathbf {u} =0.}
+  
+More generally, when not restricted to the incompressible condition, or to two spatial dimensions, the enstrophy may be computed by:
+
+  
+    
+      
+        
+          
+            E
+          
+        
+        (
+        
+          u
+        
+        )
+        =
+        
+          ∫
+          
+            S
+          
+        
+        
+          |
+        
+        ∇
+        (
+        
+          u
+        
+        )
+        
+          
+            |
+          
+          
+            2
+          
+        
+        d
+        S
+        .
+      
+    
+    {\displaystyle {\mathcal {E}}(\mathbf {u} )=\int _{S}|\nabla (\mathbf {u} )|^{2}dS.}
+  
+where
+
+  
+    
+      
+        
+          |
+        
+        ∇
+        (
+        
+          u
+        
+        )
+        
+          |
+        
+      
+    
+    {\displaystyle |\nabla (\mathbf {u} )|}
+  
+is the Frobenius norm of the gradient of the velocity field 
+  
+    
+      
+        
+          u
+        
+      
+    
+    {\displaystyle \mathbf {u} }
+  .

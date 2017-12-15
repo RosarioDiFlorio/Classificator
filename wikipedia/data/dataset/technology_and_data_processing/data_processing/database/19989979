@@ -1,0 +1,8 @@
+An indexed file is a computer file with an index that allows easy random access to any record given its file key.
+The key must be such that it uniquely identifies a record. If more than one index is present the other ones are called alternate indexes. The indexes are created with the file and maintained by the system.
+Support for indexed files is built into COBOL and PL/I. Other languages with more limited I/O facilities such as C support indexed files through add-on packages in a runtime library such as C-ISAM.
+The COBOL language supports indexed files with the following command in the FILE CONTROL section
+
+ORGANIZATION IS INDEXED
+
+In recent systems relational databases are often used in place of indexed files.

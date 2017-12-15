@@ -1,0 +1,10 @@
+Silicon photomultipliers, often called "SiPM" in the literature, are solid-state single-photon-sensitive devices built from an avalanche photodiode (APD) array on common silicon substrate. The idea behind this device is the detection of single-photon events in sequentially connected Si APDs. The dimension of each single APD can vary from 10 to 100 micrometres, and their density can be up to 10000 per square millimeter. Every APD in SiPM operates in Geiger mode and is coupled with the others by a polysilicon quenching resistor. Although the device works in digital/switching mode, the SiPM is an analog device because all the microcells are read in parallel, making it possible to generate signals within a dynamic range from a single photon to 1000 photons for a device with just a square-millimeter area. The supply voltage (Vb) depends on APD technology used and typically varies between 20 V and 100 V, thus being from 15 to 75 times lower than the voltage required for a traditional photomultiplier tubes (PMTs) operation.
+Typical specifications for a SiPM:
+Photo detection efficiency (PDE) ranges from 20 to 50%, depending on device and wavelength, being similar to a traditional PMT.
+Gain (G) is also similar to a PMT, being about 106.
+G vs. Vb dependence is linear, does not follow a power law like in the case of PMTs.
+Timing jitter is optimized to have a photon arrival time resolution of about 100 ps.
+Signal decay time is inversely proportional to square root of photoelectrons number within an excitation event.
+The signal parameters are practically independent of external magnetic fields, in contrast to vacuum PMTs.
+Small dimensions permit extremely compact, light and robust mechanical design.
+SiPM for medical imaging are attractive candidates for the replacement of the conventional PMT in PET and SPECT imaging, since they provide high gain with low voltage and fast response, they are very compact and compatible with magnetic resonance setups. Nevertheless, there are still several challenges, for example, SiPM requires optimization for larger matrices, signal amplification and digitization.

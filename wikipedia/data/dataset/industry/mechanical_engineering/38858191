@@ -1,0 +1,798 @@
+In mathematics, a non-autonomous system of ordinary differential equations is defined to be a dynamic equation on a smooth fiber bundle 
+  
+    
+      
+        Q
+        →
+        
+          R
+        
+      
+    
+    {\displaystyle Q\to \mathbb {R} }
+   over 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  . For instance, this is the case of non-relativistic non-autonomous mechanics, but not relativistic mechanics. To describe relativistic mechanics, one should consider a system of ordinary differential equations on a smooth manifold 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+   whose fibration over 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+   is not fixed. Such a system admits transformations of a coordinate 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+   on 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+   depending on other coordinates on 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  . Therefore, it is called the relativistic system. In particular, Special Relativity on the Minkowski space 
+  
+    
+      
+        Q
+        =
+        
+          
+            R
+          
+          
+            4
+          
+        
+      
+    
+    {\displaystyle Q=\mathbb {R} ^{4}}
+   is of this type.
+Since a configuration space 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+   of a relativistic system has no preferable fibration over 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  , a velocity space of relativistic system is a first order jet manifold 
+  
+    
+      
+        
+          J
+          
+            1
+          
+          
+            1
+          
+        
+        Q
+      
+    
+    {\displaystyle J_{1}^{1}Q}
+   of one-dimensional submanifolds of 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  . The notion of jets of submanifolds generalizes that of jets of sections of fiber bundles which are utilized in covariant classical field theory and non-autonomous mechanics. A first order jet bundle 
+  
+    
+      
+        
+          J
+          
+            1
+          
+          
+            1
+          
+        
+        Q
+        →
+        Q
+      
+    
+    {\displaystyle J_{1}^{1}Q\to Q}
+   is projective and, following the terminology of Special Relativity, one can think of its fibers as being spaces of the absolute velocities of a relativistic system. Given coordinates 
+  
+    
+      
+        (
+        
+          q
+          
+            0
+          
+        
+        ,
+        
+          q
+          
+            i
+          
+        
+        )
+      
+    
+    {\displaystyle (q^{0},q^{i})}
+   on 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  , a first order jet manifold 
+  
+    
+      
+        
+          J
+          
+            1
+          
+          
+            1
+          
+        
+        Q
+      
+    
+    {\displaystyle J_{1}^{1}Q}
+   is provided with the adapted coordinates 
+  
+    
+      
+        (
+        
+          q
+          
+            0
+          
+        
+        ,
+        
+          q
+          
+            i
+          
+        
+        ,
+        
+          q
+          
+            0
+          
+          
+            i
+          
+        
+        )
+      
+    
+    {\displaystyle (q^{0},q^{i},q_{0}^{i})}
+   possessing transition functions
+
+  
+    
+      
+        
+          q
+          
+            ′
+            
+              0
+            
+          
+        
+        =
+        
+          q
+          
+            ′
+            
+              0
+            
+          
+        
+        (
+        
+          q
+          
+            0
+          
+        
+        ,
+        
+          q
+          
+            k
+          
+        
+        )
+        ,
+        
+        
+          q
+          
+            ′
+            
+              i
+            
+          
+        
+        =
+        
+          q
+          
+            ′
+            
+              i
+            
+          
+        
+        (
+        
+          q
+          
+            0
+          
+        
+        ,
+        
+          q
+          
+            k
+          
+        
+        )
+        ,
+        
+        
+          
+            
+              q
+              ′
+            
+          
+          
+            0
+          
+          
+            i
+          
+        
+        =
+        
+          (
+          
+            
+              
+                ∂
+                
+                  q
+                  
+                    ′
+                    
+                      i
+                    
+                  
+                
+              
+              
+                ∂
+                
+                  q
+                  
+                    j
+                  
+                
+              
+            
+          
+          
+            q
+            
+              0
+            
+            
+              j
+            
+          
+          +
+          
+            
+              
+                ∂
+                
+                  q
+                  
+                    ′
+                    
+                      i
+                    
+                  
+                
+              
+              
+                ∂
+                
+                  q
+                  
+                    0
+                  
+                
+              
+            
+          
+          )
+        
+        
+          
+            (
+            
+              
+                
+                  ∂
+                  
+                    q
+                    
+                      ′
+                      
+                        0
+                      
+                    
+                  
+                
+                
+                  ∂
+                  
+                    q
+                    
+                      j
+                    
+                  
+                
+              
+            
+            
+              q
+              
+                0
+              
+              
+                j
+              
+            
+            +
+            
+              
+                
+                  ∂
+                  
+                    q
+                    
+                      ′
+                      
+                        0
+                      
+                    
+                  
+                
+                
+                  ∂
+                  
+                    q
+                    
+                      0
+                    
+                  
+                
+              
+            
+            )
+          
+          
+            −
+            1
+          
+        
+        .
+      
+    
+    {\displaystyle q'^{0}=q'^{0}(q^{0},q^{k}),\quad q'^{i}=q'^{i}(q^{0},q^{k}),\quad {q'}_{0}^{i}=\left({\frac {\partial q'^{i}}{\partial q^{j}}}q_{0}^{j}+{\frac {\partial q'^{i}}{\partial q^{0}}}\right)\left({\frac {\partial q'^{0}}{\partial q^{j}}}q_{0}^{j}+{\frac {\partial q'^{0}}{\partial q^{0}}}\right)^{-1}.}
+  
+The relativistic velocities of a relativistic system are represented by elements of a fibre bundle 
+  
+    
+      
+        
+          R
+        
+        ×
+        T
+        Q
+      
+    
+    {\displaystyle \mathbb {R} \times TQ}
+  , coordinated by 
+  
+    
+      
+        (
+        τ
+        ,
+        
+          q
+          
+            λ
+          
+        
+        ,
+        
+          a
+          
+            τ
+          
+          
+            λ
+          
+        
+        )
+      
+    
+    {\displaystyle (\tau ,q^{\lambda },a_{\tau }^{\lambda })}
+  , where 
+  
+    
+      
+        T
+        Q
+      
+    
+    {\displaystyle TQ}
+   is the tangent bundle of 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  . Then a generic equation of motion of a relativistic system in terms of relativistic velocities reads
+
+  
+    
+      
+        
+          (
+          
+            
+              
+                
+                  ∂
+                  
+                    λ
+                  
+                
+                
+                  G
+                  
+                    μ
+                    
+                      α
+                      
+                        2
+                      
+                    
+                    …
+                    
+                      α
+                      
+                        2
+                        N
+                      
+                    
+                  
+                
+              
+              
+                2
+                N
+              
+            
+          
+          −
+          
+            ∂
+            
+              μ
+            
+          
+          
+            G
+            
+              λ
+              
+                α
+                
+                  2
+                
+              
+              …
+              
+                α
+                
+                  2
+                  N
+                
+              
+            
+          
+          )
+        
+        
+          q
+          
+            τ
+          
+          
+            μ
+          
+        
+        
+          q
+          
+            τ
+          
+          
+            
+              α
+              
+                2
+              
+            
+          
+        
+        ⋯
+        
+          q
+          
+            τ
+          
+          
+            
+              α
+              
+                2
+                N
+              
+            
+          
+        
+        −
+        (
+        2
+        N
+        −
+        1
+        )
+        
+          G
+          
+            λ
+            μ
+            
+              α
+              
+                3
+              
+            
+            …
+            
+              α
+              
+                2
+                N
+              
+            
+          
+        
+        
+          q
+          
+            τ
+            τ
+          
+          
+            μ
+          
+        
+        
+          q
+          
+            τ
+          
+          
+            
+              α
+              
+                3
+              
+            
+          
+        
+        ⋯
+        
+          q
+          
+            τ
+          
+          
+            
+              α
+              
+                2
+                N
+              
+            
+          
+        
+        +
+        
+          F
+          
+            λ
+            μ
+          
+        
+        
+          q
+          
+            τ
+          
+          
+            μ
+          
+        
+        =
+        0
+        ,
+      
+    
+    {\displaystyle \left({\frac {\partial _{\lambda }G_{\mu \alpha _{2}\ldots \alpha _{2N}}}{2N}}-\partial _{\mu }G_{\lambda \alpha _{2}\ldots \alpha _{2N}}\right)q_{\tau }^{\mu }q_{\tau }^{\alpha _{2}}\cdots q_{\tau }^{\alpha _{2N}}-(2N-1)G_{\lambda \mu \alpha _{3}\ldots \alpha _{2N}}q_{\tau \tau }^{\mu }q_{\tau }^{\alpha _{3}}\cdots q_{\tau }^{\alpha _{2N}}+F_{\lambda \mu }q_{\tau }^{\mu }=0,}
+  
+
+  
+    
+      
+        
+          G
+          
+            
+              α
+              
+                1
+              
+            
+            …
+            
+              α
+              
+                2
+                N
+              
+            
+          
+        
+        
+          q
+          
+            τ
+          
+          
+            
+              α
+              
+                1
+              
+            
+          
+        
+        ⋯
+        
+          q
+          
+            τ
+          
+          
+            
+              α
+              
+                2
+                N
+              
+            
+          
+        
+        =
+        1.
+      
+    
+    {\displaystyle G_{\alpha _{1}\ldots \alpha _{2N}}q_{\tau }^{\alpha _{1}}\cdots q_{\tau }^{\alpha _{2N}}=1.}
+  
+For instance, if 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+   is the Minkowski space with a Minkowski metric 
+  
+    
+      
+        
+          G
+          
+            μ
+            ν
+          
+        
+      
+    
+    {\displaystyle G_{\mu \nu }}
+  , this is an equation of a relativistic charge in the presence of an electromagnetic field.

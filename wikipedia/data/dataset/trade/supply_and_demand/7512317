@@ -1,0 +1,187 @@
+In finance, the Chen model is a mathematical model describing the evolution of interest rates. It is a type of "three-factor model" (short rate model) as it describes interest rate movements as driven by three sources of market risk. It was the first stochastic mean and stochastic volatility model and it was published in 1994 by Lin Chen, financial economist and environmental economist, professor of American University, Yonsei University and Nanyang Technological University of Singapore.
+The dynamics of the instantaneous interest rate are specified by the stochastic differential equations:
+
+  
+    
+      
+        d
+        
+          r
+          
+            t
+          
+        
+        =
+        (
+        
+          θ
+          
+            t
+          
+        
+        −
+        
+          α
+          
+            t
+          
+        
+        )
+        
+        d
+        t
+        +
+        
+          
+            
+              r
+              
+                t
+              
+            
+          
+        
+        
+        
+          σ
+          
+            t
+          
+        
+        
+        d
+        
+          W
+          
+            t
+          
+        
+        ,
+      
+    
+    {\displaystyle dr_{t}=(\theta _{t}-\alpha _{t})\,dt+{\sqrt {r_{t}}}\,\sigma _{t}\,dW_{t},}
+  
+
+  
+    
+      
+        d
+        
+          α
+          
+            t
+          
+        
+        =
+        (
+        
+          ζ
+          
+            t
+          
+        
+        −
+        
+          α
+          
+            t
+          
+        
+        )
+        
+        d
+        t
+        +
+        
+          
+            
+              α
+              
+                t
+              
+            
+          
+        
+        
+        
+          σ
+          
+            t
+          
+        
+        
+        d
+        
+          W
+          
+            t
+          
+        
+        ,
+      
+    
+    {\displaystyle d\alpha _{t}=(\zeta _{t}-\alpha _{t})\,dt+{\sqrt {\alpha _{t}}}\,\sigma _{t}\,dW_{t},}
+  
+
+  
+    
+      
+        d
+        
+          σ
+          
+            t
+          
+        
+        =
+        (
+        
+          β
+          
+            t
+          
+        
+        −
+        
+          σ
+          
+            t
+          
+        
+        )
+        
+        d
+        t
+        +
+        
+          
+            
+              σ
+              
+                t
+              
+            
+          
+        
+        
+        
+          η
+          
+            t
+          
+        
+        
+        d
+        
+          W
+          
+            t
+          
+        
+        .
+      
+    
+    {\displaystyle d\sigma _{t}=(\beta _{t}-\sigma _{t})\,dt+{\sqrt {\sigma _{t}}}\,\eta _{t}\,dW_{t}.}
+  
+In an authoritative review of modern finance (Continuous-Time Methods in Finance: A Review and an Assessment), Chen model is listed along with the models of Robert C. Merton, Oldrich Vasicek, John C. Cox, Stephen A. Ross, Darrell Duffie, John Hull, Robert A. Jarrow, and Emanuel Derman as a major term structure model.
+Different variants of Chen model are still being used in financial institutions worldwide. James and Webber devote a section to discuss Chen model in their book; Gibson et al. devote a section to cover Chen model in their review article. Andersen et al. devote a paper to study and extend Chen model. Gallant et al. devote a paper to test Chen model and other models; Wibowo and Cai, among some others, devote their PhD dissertations to testing Chen model and other competing interest rate models.

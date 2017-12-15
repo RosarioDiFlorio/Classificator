@@ -1,0 +1,3 @@
+GloNET is a virtual globe client–server system developed on Netcad 3D.
+The client has stereo (anaglyph or page flipping) support for effective display with relatively weak graphics subsystems and simple stereo shutter eyeglasses or with most advanced stereo workstations.
+The system's servers run on the NETGIS|Server platform. These servers can publish raster, vector and DTM elevation data. The platform complies with OGC (Open Geospatial Consortium) standards (WFS, WMS, SFS). Clients can receive the geographical data from GloNET servers, any other OGC WMS/WFS-compliant servers, or local data sets.

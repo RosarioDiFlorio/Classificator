@@ -1,0 +1,36 @@
+The cerebellar model arithmetic computer (CMAC) is a type of neural network based on a model of the mammalian cerebellum. It is also known as the cerebellar model articulation controller. It is a type of associative memory.
+The CMAC was first proposed as a function modeler for robotic controllers by James Albus in 1975 (hence the name), but has been extensively used in reinforcement learning and also as for automated classification in the machine learning community. CMAC computes a function 
+  
+    
+      
+        f
+        (
+        
+          x
+          
+            1
+          
+        
+        .
+        .
+        .
+        
+          x
+          
+            n
+          
+        
+        )
+      
+    
+    {\displaystyle f(x_{1}...x_{n})}
+  , where 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+   is the number of input dimensions. The input space is divided up into hyper-rectangles, each of which is associated with a memory cell. The contents of the memory cells are the weights, which are adjusted during training. Usually, more than one quantisation of input space is used, so that any point in input space is associated with a number of hyper-rectangles, and therefore with a number of memory cells. The output of a CMAC is the algebraic sum of the weights in all the memory cells activated by the input point.
+A change of value of the input point results in a change in the set of activated hyper-rectangles, and therefore a change in the set of memory cells participating in the CMAC output. The CMAC output is therefore stored in a distributed fashion, such that the output corresponding to any point in input space is derived from the value stored in a number of memory cells (hence the name associative memory). This provides generalisation.

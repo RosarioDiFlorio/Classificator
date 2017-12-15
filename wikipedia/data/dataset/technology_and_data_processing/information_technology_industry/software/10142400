@@ -1,0 +1,4 @@
+LitwareHR is a fictitious HR application released in February 2007 as part of Microsoft's SaaS architecture guidance. Aimed at software architects and developers, the goal of LitwareHR is twofold:
+To be the embodiment of the architectural guidance described in Microsoft's whitepapers
+To demonstrate how the Microsoft platform is used in the creation of SaaS solutions
+This reference implementation application provides recruitment management software delivered as a service. The important aspect is not what the application does but how it is implemented.

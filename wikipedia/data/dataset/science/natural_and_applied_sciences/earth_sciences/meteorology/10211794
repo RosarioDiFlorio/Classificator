@@ -1,0 +1,108 @@
+The Exner function is an important parameter in atmospheric modeling. The Exner function can be viewed as non-dimensionalized pressure and can be defined as:
+
+  
+    
+      
+        Π
+        =
+        
+          
+            (
+            
+              
+                p
+                
+                  p
+                  
+                    0
+                  
+                
+              
+            
+            )
+          
+          
+            
+              R
+              
+                d
+              
+            
+            
+              /
+            
+            
+              c
+              
+                p
+              
+            
+          
+        
+        =
+        
+          
+            T
+            θ
+          
+        
+      
+    
+    {\displaystyle \Pi =\left({\frac {p}{p_{0}}}\right)^{R_{d}/c_{p}}={\frac {T}{\theta }}}
+  
+where 
+  
+    
+      
+        
+          p
+          
+            0
+          
+        
+      
+    
+    {\displaystyle p_{0}}
+   is a standard reference surface pressure, usually taken as 1000 hPa; 
+  
+    
+      
+        
+          R
+          
+            d
+          
+        
+      
+    
+    {\displaystyle R_{d}}
+   is the gas constant for dry air; 
+  
+    
+      
+        
+          c
+          
+            p
+          
+        
+      
+    
+    {\displaystyle c_{p}}
+   is the heat capacity of dry air at constant pressure; 
+  
+    
+      
+        T
+      
+    
+    {\displaystyle T}
+   is the absolute temperature; and 
+  
+    
+      
+        θ
+      
+    
+    {\displaystyle \theta }
+   is the potential temperature.

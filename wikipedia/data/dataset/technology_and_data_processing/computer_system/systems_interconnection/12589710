@@ -1,0 +1,5 @@
+Remote Audio Output Protocol (RAOP) is an Internet streaming protocol based on RTSP / RTP authored by Apple Inc. It powers the AirPlay technology built into AirPort Express wireless (802.11b/g/n) access point as well as the Apple TV.
+The major difference from RTSP is an initial asymmetric key verification made by iTunes to verify it is communicating with an AirPort Express or an Apple TV (as opposed to a simulation), and vice versa. The data channel is also encrypted by AES, with a random key protected by the asymmetric key mentioned above.
+The RSA public key stored in iTunes was extracted by Jon Lech Johansen, enabling third-party software to stream music to an Airport Express.
+The RSA private key stored in the AirPort Express was extracted by James Laird, enabling simulation of an Airport Express.
+The Shairport-sync application which emulates Airport Express hardware is available.

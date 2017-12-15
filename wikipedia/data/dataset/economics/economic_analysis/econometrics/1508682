@@ -1,0 +1,119 @@
+Mixed-data sampling (MIDAS) is an econometric regression or filtering method developed by Ghysels et al. There is now a substantial literature on MIDAS regressions and their applications, including Andreou et al. (2010), and especially Andreou et al. (2013).
+A simple regression example has the independent variable appearing at a higher frequency than the dependent variable:
+
+  
+    
+      
+        
+          y
+          
+            t
+          
+        
+        =
+        
+          β
+          
+            0
+          
+        
+        +
+        
+          β
+          
+            1
+          
+        
+        B
+        (
+        
+          L
+          
+            1
+            
+              /
+            
+            m
+          
+        
+        ;
+        θ
+        )
+        
+          x
+          
+            t
+          
+          
+            (
+            m
+            )
+          
+        
+        +
+        
+          ε
+          
+            t
+          
+          
+            (
+            m
+            )
+          
+        
+        ,
+      
+    
+    {\displaystyle y_{t}=\beta _{0}+\beta _{1}B(L^{1/m};\theta )x_{t}^{(m)}+\varepsilon _{t}^{(m)},}
+  
+where y is the dependent variable, x is the regressor, m denotes the frequency – for instance if y is yearly 
+  
+    
+      
+        
+          x
+          
+            t
+          
+          
+            (
+            4
+            )
+          
+        
+      
+    
+    {\displaystyle x_{t}^{(4)}}
+   is quarterly – 
+  
+    
+      
+        ε
+      
+    
+    {\displaystyle \varepsilon }
+   is the disturbance and 
+  
+    
+      
+        B
+        (
+        
+          L
+          
+            1
+            
+              /
+            
+            m
+          
+        
+        ;
+        θ
+        )
+      
+    
+    {\displaystyle B(L^{1/m};\theta )}
+   is a lag distribution, for instance the Beta function or the Almon Lag.
+The regression models can be viewed in some cases as substitutes for the Kalman filter when applied in the context of mixed frequency data. Bai, Ghysels and Wright (2010) examine the relationship between MIDAS regressions and Kalman filter state space models applied to mixed frequency data. In general, the latter involve a system of equations, whereas in contrast MIDAS regressions involve a (reduced form) single equation. As a consequence, MIDAS regressions might be less efficient, but also less prone to specification errors. In cases where the MIDAS regression is only an approximation, the approximation errors tend to be small.

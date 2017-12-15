@@ -1,0 +1,3 @@
+NeuronStudio is a non-commercial program created at Icahn School of Medicine at Mount Sinai by the Computational Neurobiology and Imaging Center. This program performs automatic tracing and reconstruction of neuron structures from confocal image stacks. The resulting model can then be exported to a file using standard formats for further processing, modeling, or for statistical analyses.
+
+The system handles morphologic details on scales spanning local spine geometry through complex tree topology to the gross spatial arrangement of multi-neuron networks. NeuronStudio's capability for automated digitization avoids the subjective errors that arise during manual tracing.

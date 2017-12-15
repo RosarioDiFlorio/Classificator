@@ -1,0 +1,264 @@
+The geometric measure of entanglement  is a means to quantify the entanglement in a multi-partite system.
+For a system consisting of 
+  
+    
+      
+        N
+      
+    
+    {\displaystyle N}
+   subsystems, the full Hilbert space 
+  
+    
+      
+        
+          
+            H
+          
+        
+      
+    
+    {\displaystyle {\mathcal {H}}}
+   is a tensor product of those of the subsystems, i.e., 
+  
+    
+      
+        
+          
+            H
+          
+        
+        =
+        
+          
+            
+              H
+            
+          
+          
+            1
+          
+        
+        ⊗
+        
+          
+            
+              H
+            
+          
+          
+            2
+          
+        
+        …
+        ⊗
+        
+          
+            
+              H
+            
+          
+          
+            N
+          
+        
+      
+    
+    {\displaystyle {\mathcal {H}}={\mathcal {H}}_{1}\otimes {\mathcal {H}}_{2}\ldots \otimes {\mathcal {H}}_{N}}
+  . But for a generic state 
+  
+    
+      
+        ψ
+        ∈
+        
+          
+            H
+          
+        
+      
+    
+    {\displaystyle \psi \in {\mathcal {H}}}
+  , it is impossible to write it as a tensor product state. That is, it is impossible to write it in the form of 
+  
+    
+      
+        ψ
+        =
+        
+          ψ
+          
+            1
+          
+        
+        ⊗
+        
+          ψ
+          
+            2
+          
+        
+        …
+        ⊗
+        
+          ψ
+          
+            N
+          
+        
+      
+    
+    {\displaystyle \psi =\psi _{1}\otimes \psi _{2}\ldots \otimes \psi _{N}}
+  , with 
+  
+    
+      
+        
+          ψ
+          
+            i
+          
+        
+        ∈
+        
+          
+            
+              H
+            
+          
+          
+            i
+          
+        
+      
+    
+    {\displaystyle \psi _{i}\in {\mathcal {H}}_{i}}
+  . This implies the existence of entanglement between the subsystems.
+The geometric measure of entanglement in 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+   (with 
+  
+    
+      
+        ⟨
+        ψ
+        
+          |
+        
+        ψ
+        ⟩
+        =
+        1
+      
+    
+    {\displaystyle \langle \psi |\psi \rangle =1}
+  ) is then quantified by the minimum of
+
+  
+    
+      
+        ∥
+        ψ
+        −
+        ϕ
+        ∥
+      
+    
+    {\displaystyle \|\psi -\phi \|}
+  
+with respect to all the separable states
+
+  
+    
+      
+        ϕ
+        =
+        
+          ∏
+          
+            i
+            =
+            1
+          
+          
+            N
+          
+        
+        ⊗
+        
+          ϕ
+          
+            i
+          
+        
+        ,
+      
+    
+    {\displaystyle \phi =\prod _{i=1}^{N}\otimes \phi _{i},}
+  
+with 
+  
+    
+      
+        ⟨
+        
+          ϕ
+          
+            i
+          
+        
+        
+          |
+        
+        
+          ϕ
+          
+            i
+          
+        
+        ⟩
+        =
+        1
+      
+    
+    {\displaystyle \langle \phi _{i}|\phi _{i}\rangle =1}
+  .
+This approach works for distinguishable particles or the spin systems. For identical or indistinguishable fermions or bosons, the full Hilbert space is not the tensor product of those of each individual particle. Therefore, a simple modification is necessary. For example, for identical fermions, since the full wave function 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+   is now completely anti-symmetric, so is required for 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+  . This means, the 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+   taken to approximate 
+  
+    
+      
+        ψ
+      
+    
+    {\displaystyle \psi }
+   should be a Slater determinant wave function.

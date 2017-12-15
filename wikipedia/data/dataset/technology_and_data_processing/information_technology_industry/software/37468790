@@ -1,0 +1,1 @@
+Amfphp is a library for creating PHP-based application back ends. Key features are support for AMF among other Protocols, and developer tools such as a service browser, a client code generator, and a performance profiler. Amfphp is used primarily for games and Apache Flex business applications.

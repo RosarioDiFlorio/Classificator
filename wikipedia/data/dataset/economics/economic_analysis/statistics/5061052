@@ -1,0 +1,2 @@
+GEMPACK (General Equilibrium Modelling PACKage) is a modeling system for CGE economic models, used at the Centre of Policy Studies (CoPS) in Melbourne, Australia, and sold to other CGE modellers.
+Some of the more well-known CGE models solved using GEMPACK are the GTAP model of world trade, and the MONASH, MMRF, ORANI-G and TERM models used at CoPS. All these models share a distinctive feature: they are formulated as a system of differential equations in percentage change form; however, this is not required by GEMPACK.

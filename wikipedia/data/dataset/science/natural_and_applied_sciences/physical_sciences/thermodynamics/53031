@@ -1,0 +1,266 @@
+The Stefan–Boltzmann law describes the power radiated from a black body in terms of its temperature. Specifically, the Stefan–Boltzmann law states that the total energy radiated per unit surface area of a black body across all wavelengths per unit time (also known as the black-body radiant emittance or radiant exitance), 
+  
+    
+      
+        
+          j
+          
+            ⋆
+          
+        
+      
+    
+    {\displaystyle j^{\star }}
+  , is directly proportional to the fourth power of the black body's thermodynamic temperature T:
+
+  
+    
+      
+        
+          j
+          
+            ⋆
+          
+        
+        =
+        σ
+        
+          T
+          
+            4
+          
+        
+        .
+      
+    
+    {\displaystyle j^{\star }=\sigma T^{4}.}
+  
+The constant of proportionality σ, called the Stefan–Boltzmann constant derives from other known constants of nature. The value of the constant is
+
+  
+    
+      
+        σ
+        =
+        
+          
+            
+              2
+              
+                π
+                
+                  5
+                
+              
+              
+                k
+                
+                  4
+                
+              
+            
+            
+              15
+              
+                c
+                
+                  2
+                
+              
+              
+                h
+                
+                  3
+                
+              
+            
+          
+        
+        =
+        5.670373
+        ×
+        
+          10
+          
+            −
+            8
+          
+        
+        
+        
+          W
+          
+          
+            m
+            
+              −
+              2
+            
+          
+          
+            K
+            
+              −
+              4
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle \sigma ={\frac {2\pi ^{5}k^{4}}{15c^{2}h^{3}}}=5.670373\times 10^{-8}\,\mathrm {W\,m^{-2}K^{-4}} ,}
+  
+where k is the Boltzmann constant, h is Planck's constant, and c is the speed of light in a vacuum. Thus at 100 K the energy flux is 5.67 W/m2, at 1000 K 56,700 W/m2, etc. The radiance (watts per square metre per steradian) is given by
+
+  
+    
+      
+        L
+        =
+        
+          
+            
+              j
+              
+                ⋆
+              
+            
+            π
+          
+        
+        =
+        
+          
+            σ
+            π
+          
+        
+        
+          T
+          
+            4
+          
+        
+        .
+      
+    
+    {\displaystyle L={\frac {j^{\star }}{\pi }}={\frac {\sigma }{\pi }}T^{4}.}
+  
+A body that does not absorb all incident radiation (sometimes known as a grey body) emits less total energy than a black body and is characterized by an emissivity, 
+  
+    
+      
+        ε
+        <
+        1
+      
+    
+    {\displaystyle \varepsilon <1}
+  :
+
+  
+    
+      
+        
+          j
+          
+            ⋆
+          
+        
+        =
+        ε
+        σ
+        
+          T
+          
+            4
+          
+        
+        .
+      
+    
+    {\displaystyle j^{\star }=\varepsilon \sigma T^{4}.}
+  
+The irradiance 
+  
+    
+      
+        
+          j
+          
+            ⋆
+          
+        
+      
+    
+    {\displaystyle j^{\star }}
+   has dimensions of energy flux (energy per time per area), and the SI units of measure are joules per second per square metre, or equivalently, watts per square metre. The SI unit for absolute temperature T is the kelvin. 
+  
+    
+      
+        ε
+      
+    
+    {\displaystyle \varepsilon }
+   is the emissivity of the grey body; if it is a perfect blackbody, 
+  
+    
+      
+        ε
+        =
+        1
+      
+    
+    {\displaystyle \varepsilon =1}
+  . In the still more general (and realistic) case, the emissivity depends on the wavelength, 
+  
+    
+      
+        ε
+        =
+        ε
+        (
+        λ
+        )
+      
+    
+    {\displaystyle \varepsilon =\varepsilon (\lambda )}
+  .
+To find the total power radiated from an object, multiply by its surface area, 
+  
+    
+      
+        A
+      
+    
+    {\displaystyle A}
+  :
+
+  
+    
+      
+        P
+        =
+        A
+        
+          j
+          
+            ⋆
+          
+        
+        =
+        A
+        ε
+        σ
+        
+          T
+          
+            4
+          
+        
+        .
+      
+    
+    {\displaystyle P=Aj^{\star }=A\varepsilon \sigma T^{4}.}
+  
+Wavelength- and subwavelength-scale particles, metamaterials, and other nanostructures are not subject to ray-optical limits and may be designed to exceed the Stefan–Boltzmann law.

@@ -1,0 +1,8 @@
+Mura (斑) is a Japanese word meaning "unevenness; irregularity; lack of uniformity; nonuniformity; inequality", and is a key concept in the Toyota Production System (TPS) as one of the three types of waste (muda, mura, muri). Waste reduction is an effective way to increase profitability. Toyota adopted these three Japanese words as part of their product improvement program, due to their familiarity in common usage.
+Mura, in terms of business/process improvement, is avoided through Just-In-Time systems which are based on keeping little or no inventory. These systems supply the production process with the right part, at the right time, In the right amount, using first-in, first-out (FIFO) component flow. Just-In-Time systems create a “pull system” in which each sub-process withdraws its needs from the preceding sub-processes, and ultimately from an outside supplier. When a preceding process does not receive a request or withdrawal it does not make more parts. This type of system is designed to maximize productivity by minimizing storage overhead.
+For example:
+The assembly line “makes a request to,” or “pulls from” the Paint Shop, which pulls from Body Weld.
+The Body Weld shop pulls from Stamping.
+At the same time, requests are going out to suppliers for specific parts, for the vehicles that have been ordered by customers.
+Small buffers accommodate minor fluctuations, yet allow continuous flow.
+If parts or material defects are found in one process, the Just-in-Time approach requires that the problem be quickly identified and corrected.

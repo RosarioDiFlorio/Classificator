@@ -1,0 +1,2 @@
+Apache Axis2 is a core engine for Web services. It is a complete re-design and re-write of the widely used Apache Axis SOAP stack. Implementations of Axis2 are available in Java and C.
+Axis2 provides the capability to add Web services interfaces to Web applications. It can also function as a standalone application server.

@@ -1,0 +1,53 @@
+A frequency divider, also called a clock divider or scaler or prescaler, is a circuit that takes an input signal of a frequency, 
+  
+    
+      
+        
+          f
+          
+            i
+            n
+          
+        
+      
+    
+    {\displaystyle f_{in}}
+  , and generates an output signal of a frequency:
+
+  
+    
+      
+        
+          f
+          
+            o
+            u
+            t
+          
+        
+        =
+        
+          
+            
+              f
+              
+                i
+                n
+              
+            
+            n
+          
+        
+      
+    
+    {\displaystyle f_{out}={\frac {f_{in}}{n}}}
+  
+where 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+   is an integer. Phase-locked loop frequency synthesizers make use of frequency dividers to generate a frequency that is a multiple of a reference frequency. Frequency dividers can be implemented for both analog and digital applications.

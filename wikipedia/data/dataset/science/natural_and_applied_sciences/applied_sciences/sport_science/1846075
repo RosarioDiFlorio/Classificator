@@ -1,0 +1,65 @@
+The Metabolic Equivalent of Task (MET), or simply metabolic equivalent, is a physiological measure expressing the energy cost of physical activities and is defined as the ratio of metabolic rate (and therefore the rate of energy consumption) during a specific physical activity to a reference metabolic rate, set by convention to 3.5 ml O2·kg−1·min−1 or approximately:
+
+  
+    
+      
+        
+          1 MET
+        
+         
+        =
+        1
+        
+          
+            
+              kcal
+              
+                
+                  kg
+                
+                ∗
+                
+                  h
+                
+              
+            
+          
+        
+         
+        =
+        4.184
+        
+          
+            
+              kJ
+              
+                
+                  kg
+                
+                ∗
+                
+                  h
+                
+              
+            
+          
+        
+        =
+        1.1622222...
+        
+          
+            
+              W
+              kg
+            
+          
+        
+      
+    
+    {\displaystyle {\text{1 MET}}\ =1{\dfrac {\text{kcal}}{{\text{kg}}*{h}}}\ =4.184{\dfrac {\text{kJ}}{{\text{kg}}*{h}}}=1.1622222...{\dfrac {\text{W}}{\text{kg}}}}
+  
+Still another definition of 1 MET is 58.2 W/m2 (18.4 Btu/h·ft2), which is equal to the rate of energy produced per unit surface area of an average person seated at rest. The surface area of an average person is 1.8 m2 (19 ft2). Metabolic rate is usually expressed in terms of unit area of the total body surface (ANSI/ASHRAE Standard 55).
+Originally, 1 MET was considered as the Resting Metabolic Rate (RMR) obtained during quiet sitting. MET values of activities range from 0.9 (sleeping) to 23 (running at 22.5 km/h or a 4:17 mile pace).
+Although the RMR of any person may deviate from the reference value, MET can be thought of as an index of the intensity of activities: for example, an activity with a MET value of 2, such as walking at a slow pace (e.g., 3 km/h) would require twice the energy that an average person consumes at rest (e.g., sitting quietly).
+MET is used as a means of expressing the intensity and energy expenditure of activities in a way comparable among persons of different weight. Actual energy expenditure (e.g., in calories or joules) during an activity depends on the person's body mass; therefore, the energy cost of the same activity will be different for persons of different weight. However, since the RMR is also dependent on body mass in a similar way, it is assumed that the ratio of this energy cost to the RMR of each person will remain more or less stable for the specific activity and thus independent of each person's weight.
+The 1 MET reference value of 1 kcal·kg−1·h−1, is used by convention and refers to a typical metabolism at rest of an "average" individual. It must not be confused or misused as an approximation of Basal Metabolic Rate (BMR), which is the minimum metabolic rate obtained under specified conditions. This is illustrated by the fact that sleeping has a MET of 0.9, while an individual's normal sleeping metabolism may be greater than the BMR.

@@ -1,0 +1,12 @@
+The calorific value is the total energy released as heat when a substance undergoes complete combustion with oxygen under standard conditions. The chemical reaction is typically a hydrocarbon or other organic molecule reacting with oxygen to form carbon dioxide and water and release heat. It may be expressed with the quantities:
+energy/mole of fuel (kJ/mol)
+energy/mass of fuel
+energy/volume of the fuel
+The calorific value is conventionally measured with a bomb calorimeter. It may also be calculated as the difference between the heat of formation ΔHo
+f of the products and reactants (though this approach is purely empirical since most heats of formation are calculated from measured heats of combustion). For a fuel of composition CcHhOoNn, the magnitude of the heat of combustion is 418 kJ/mol (c + 0.3 h – 0.5 o) usually to a good approximation (±3%), though it can be drastically wrong if o + n > c (for instance in the case of nitroglycerine this formula would predict a heat of combustion of 0). The calorific value of all organic compounds has the sign corresponding to an exothermic reaction (negative in the standard chemical convention) because the double bond in molecular oxygen is much weaker than other double bonds or pairs of single bonds, particularly those in the combustion products carbon dioxide and water; conversion of the weak bonds in O2 to the stronger bonds in CO2 and H2O releases energy as heat.
+The heating value (or energy value or calorific value) of a substance, usually a fuel or food (see food energy), is the amount of heat released during the combustion of a specified amount of it. The energy value is a characteristic for each substance. It is measured in units of energy per unit of the substance, usually mass, such as: kJ/kg, kJ/mol, kcal/kg, Btu/lb. Heating value is commonly determined by use of a bomb calorimeter.
+Heating value unit conversions:
+MJ/kg x 238.846 = kcal/kg
+Btu/lb x 2.326 = kJ/kg
+Btu/lb x 0.5557 = kcal/kg
+The heat of combustion for fuels is expressed as the HHV, LHV, or GHV.

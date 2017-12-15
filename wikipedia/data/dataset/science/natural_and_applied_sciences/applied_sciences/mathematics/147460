@@ -1,0 +1,8 @@
+In mathematics, and in other disciplines involving formal languages, including mathematical logic and computer science, a free variable is a notation that specifies places in an expression where substitution may take place. Some older books use the terms real variable and apparent variable for free variable and bound variable. The idea is related to a placeholder (a symbol that will later be replaced by some literal string), or a wildcard character that stands for an unspecified symbol.
+In computer programming, the term free variable refers to variables used in a function that are neither local variables nor parameters of that function. The term non-local variable is often a synonym in this context.
+A bound variable is a variable that was previously free, but has been bound to a specific value or set of values called domain of discourse or universe. For example, the variable x becomes a bound variable when we write:
+'For all x, (x + 1)2 = x2 + 2x + 1.'
+or
+'There exists x such that x2 = 2.'
+In either of these propositions, it does not matter logically whether we use x or some other letter. However, it could be confusing to use the same letter again elsewhere in some compound proposition. That is, free variables become bound, and then in a sense retire from being available as stand-in values for other values in the creation of formulae.
+The term "dummy variable" is also sometimes used for a bound variable (more often in general mathematics than in computer science), but that use can create an ambiguity with the definition of dummy variables in regression analysis.

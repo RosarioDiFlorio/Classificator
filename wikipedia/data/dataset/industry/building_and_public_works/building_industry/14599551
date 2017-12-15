@@ -1,0 +1,5 @@
+iSBEM is a free-cost software interface to the Simplified Building Energy Model (SBEM) which is designed for the purpose of indicating compliance with UK building regulations part L2a and L2b in England and section 6 in Scotland as regards carbon emissions from non domestic buildings. The latest version at time of writing is V 5.2.g  which is available as a download from the EPBD NCM website.
+It has recently undergone additional programming to allow it to be used to produce EPCs for Non-Domestic Buildings.
+
+Several commercial software tools exist, offering a more 'user-friendly' front-end to the SBEM calculation engine than iSBEM.
+The SBEM calculation engine has some limitations and is explicitly distributed 'Not a Design Tool'. For more complex buildings, accredited Dynamic Simulation Modelling tools should be used for Part L compliance and EPCs.

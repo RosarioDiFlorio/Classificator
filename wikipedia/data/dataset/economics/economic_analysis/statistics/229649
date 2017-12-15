@@ -1,0 +1,257 @@
+In mathematics applied to computer science, Monge arrays, or Monge matrices, are mathematical objects named for their discoverer, the French mathematician Gaspard Monge.
+An m-by-n matrix is said to be a Monge array if, for all 
+  
+    
+      
+        
+          i
+          ,
+          
+          j
+          ,
+          
+          k
+          ,
+          
+          ℓ
+        
+      
+    
+    {\displaystyle \scriptstyle i,\,j,\,k,\,\ell }
+   such that
+
+  
+    
+      
+        1
+        ≤
+        i
+        <
+        k
+        ≤
+        m
+        
+           and 
+        
+        1
+        ≤
+        j
+        <
+        ℓ
+        ≤
+        n
+      
+    
+    {\displaystyle 1\leq i<k\leq m{\text{ and }}1\leq j<\ell \leq n}
+  
+one obtains
+
+  
+    
+      
+        A
+        [
+        i
+        ,
+        j
+        ]
+        +
+        A
+        [
+        k
+        ,
+        ℓ
+        ]
+        ≤
+        A
+        [
+        i
+        ,
+        ℓ
+        ]
+        +
+        A
+        [
+        k
+        ,
+        j
+        ]
+        .
+        
+      
+    
+    {\displaystyle A[i,j]+A[k,\ell ]\leq A[i,\ell ]+A[k,j].\,}
+  
+So for any two rows and two columns of a Monge array (a 2 × 2 sub-matrix) the four elements at the intersection points have the property that the sum of the upper-left and lower right elements (across the main diagonal) is less than or equal to the sum of the lower-left and upper-right elements (across the antidiagonal).
+This matrix is a Monge array:
+
+  
+    
+      
+        
+          
+            [
+            
+              
+                
+                  10
+                
+                
+                  17
+                
+                
+                  13
+                
+                
+                  28
+                
+                
+                  23
+                
+              
+              
+                
+                  17
+                
+                
+                  22
+                
+                
+                  16
+                
+                
+                  29
+                
+                
+                  23
+                
+              
+              
+                
+                  24
+                
+                
+                  28
+                
+                
+                  22
+                
+                
+                  34
+                
+                
+                  24
+                
+              
+              
+                
+                  11
+                
+                
+                  13
+                
+                
+                  6
+                
+                
+                  17
+                
+                
+                  7
+                
+              
+              
+                
+                  45
+                
+                
+                  44
+                
+                
+                  32
+                
+                
+                  37
+                
+                
+                  23
+                
+              
+              
+                
+                  36
+                
+                
+                  33
+                
+                
+                  19
+                
+                
+                  21
+                
+                
+                  6
+                
+              
+              
+                
+                  75
+                
+                
+                  66
+                
+                
+                  51
+                
+                
+                  53
+                
+                
+                  34
+                
+              
+            
+            ]
+          
+        
+      
+    
+    {\displaystyle {\begin{bmatrix}10&17&13&28&23\\17&22&16&29&23\\24&28&22&34&24\\11&13&6&17&7\\45&44&32&37&23\\36&33&19&21&6\\75&66&51&53&34\end{bmatrix}}}
+  
+For example, take the intersection of rows 2 and 4 with columns 1 and 5. The four elements are:
+
+  
+    
+      
+        
+          
+            [
+            
+              
+                
+                  17
+                
+                
+                  23
+                
+              
+              
+                
+                  11
+                
+                
+                  7
+                
+              
+            
+            ]
+          
+        
+      
+    
+    {\displaystyle {\begin{bmatrix}17&23\\11&7\end{bmatrix}}}
+  
+17 + 7 = 24
+23 + 11 = 34
+The sum of the upper-left and lower right elements is less than or equal to the sum of the lower-left and upper-right elements.

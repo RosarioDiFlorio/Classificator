@@ -1,0 +1,15 @@
+A short-rate model, in the context of interest rate derivatives, is a mathematical model that describes the future evolution of interest rates by describing the future evolution of the short rate, usually written 
+  
+    
+      
+        
+          r
+          
+            t
+          
+        
+        
+      
+    
+    {\displaystyle r_{t}\,}
+  .

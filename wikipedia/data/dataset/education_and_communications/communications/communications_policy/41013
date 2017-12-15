@@ -1,0 +1,7 @@
+In telecommunications, delay encoding is the encoding of binary data to form a two-level signal where (a) a "0" causes no change of signal level unless it is followed by another "0" in which case a transition to the other level takes place at the end of the first bit period; and (b) a "1" causes a transition from one level to the other in the middle of the bit period.
+Delay encoding is used primarily for encoding radio signals because the frequency spectrum of the encoded signal contains less low-frequency energy than a conventional non-return-to-zero (NRZ) signal and less high-frequency energy than a biphase signal.
+Delay encoding is an encoding using only half the bandwidth for biphase encoding but features all the advantages of biphase encoding: To be rewritten: It is guaranteed to have transitions every other bit, meaning that decoding systems can adjust their clock/DC threshold continuously. One drawback is that it lacks easy human readability (e.g. on an oscilloscope).
+Delay encoding is also known as Miller encoding (named after Armin Miller, its inventor).
+Some RFID cards, in particular EPC UHF Gen 2 RF cards, use a variant called "Miller sub-carrier coding". In this system, 2, 4 or 8 cycles of a subcarrier square wave are transmitted for each bit time. The Miller encoding transitions are indicated by 180° phase shifts in the subcarrier, i.e. the subcarrier pauses for 1/2 of a cycle at each transition. (The resultant binary subcarrier is itself either ASK or PSK modulated on another carrier.)
+
+

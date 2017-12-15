@@ -1,0 +1,1 @@
+Tarantool is an open-source NoSQL database management system and Lua application server. It maintains databases in memory and ensures crash resistance with write-ahead logging. It includes a Lua interpreter and interactive console but also accepts connections from programs in several other languages.

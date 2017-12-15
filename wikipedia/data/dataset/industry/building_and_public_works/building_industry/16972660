@@ -1,0 +1,20 @@
+In earthquake engineering, vibration control is a set of technical means aimed to mitigate seismic impacts in building and non-building structures.
+All seismic vibration control devices may be classified as passive, active or hybrid [1] where:
+
+passive control devices have no feedback capability between them, structural elements and the ground;
+active control devices incorporate real-time recording instrumentation on the ground integrated with earthquake input processing equipment and actuators within the structure;
+hybrid control devices have combined features of active and passive control systems.
+When ground seismic waves reach up and start to penetrate a base of a building, their energy flow density, due to reflections, reduces dramatically: usually, up to 90%. However, the remaining portions of the incident waves during a major earthquake still bear a huge devastating potential.
+After the seismic waves enter a superstructure, there is a number of ways to control them in order to soothe their damaging effect and improve the building's seismic performance, for instance:
+to dissipate the wave energy inside a superstructure with properly engineered dampers;
+to disperse the wave energy between a wider range of frequencies;
+to absorb the resonant portions of the whole wave frequencies band with the help of so-called mass dampers [2].
+
+Devices of the last kind, abbreviated correspondingly as TMD for the tuned (passive), as AMD for the active, and as HMD for the hybrid mass dampers, have been studied and installed in high-rise buildings, predominantly in Japan, for a quarter of a century [3].
+However, there is quite another approach: partial suppression of the seismic energy flow into the superstructure known as seismic or base isolation which has been implemented in a number of historical buildings all over the world and remains in the focus of earthquake engineering research for years.
+For this, some pads are inserted into all major load-carrying elements in the base of the building which should substantially decouple a superstructure from its substructure resting on a shaking ground. It also requires creating a rigidity diaphragm and a moat around the building, as well as making provisions against overturning and P-delta effect.
+In refineries or plants snubbers are often used for vibration control. Snubbers come in two different variations: hydraulic snubber and a mechanical snubber.
+Hydraulic snubbers are used on piping systems when restrained thermal movement is allowed.
+Mechanical snubbers operate on the standards of restricting acceleration of any pipe movements to a threshold of 0.2 g's, which is the maximum acceleration that the snubber will permit the piping to see.
+
+

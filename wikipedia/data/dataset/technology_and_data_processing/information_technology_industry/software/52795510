@@ -1,0 +1,4 @@
+MyRocks is open-source software developed at Facebook in order to use MySQL features with RocksDB implementations. It is based on Oracle MySQL 5.6.
+Percona is making MyRocks more accessible to users by bringing it to Percona Server. Starting from version 10.2.5, MariaDB includes MyRocks as an alpha-stage storage engine. 
+
+The library is maintained by the Facebook Database Engineering Team.

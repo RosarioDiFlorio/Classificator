@@ -1,0 +1,3 @@
+bhyve (pronounced "bee hive", formerly written as BHyVe) is a type-2 hypervisor that runs on FreeBSD.
+bhyve runs FreeBSD 9+, OpenBSD, NetBSD, Linux and MS Windows desktop (versions Vista, 7, 8/8.1/8.2 and 10), as well as MS Windows Server (versions 2008/2008R2, 2012/2012R2 and 2016 Technical Preview 2 and 3) guests.
+Current development efforts aim at widening support for other x86-64 operating systems.

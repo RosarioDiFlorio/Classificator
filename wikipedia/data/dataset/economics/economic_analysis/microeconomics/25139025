@@ -1,0 +1,101 @@
+The Amoroso–Robinson relation, named after economists Luigi Amoroso and Joan Robinson, describes the relation between price, marginal revenue, and elasticity of demand.
+
+  
+    
+      
+        
+          
+            
+              ∂
+              R
+            
+            
+              ∂
+              x
+            
+          
+        
+        =
+        p
+        
+          (
+          1
+          +
+          
+            
+              1
+              
+                ϵ
+                
+                  x
+                  ,
+                  p
+                
+              
+            
+          
+          )
+        
+      
+    
+    {\displaystyle {\frac {\partial R}{\partial x}}=p\left(1+{\frac {1}{\epsilon _{x,p}}}\right)}
+  ,
+where
+
+  
+    
+      
+        
+          
+            
+              
+                ∂
+                R
+              
+              
+                ∂
+                x
+              
+            
+          
+        
+      
+    
+    {\displaystyle \scriptstyle {\frac {\partial R}{\partial x}}}
+   is the marginal revenue,
+
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+   is the particular good,
+
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+   is the good's price,
+
+  
+    
+      
+        
+          ϵ
+          
+            x
+            ,
+            p
+          
+        
+        <
+        0
+      
+    
+    {\displaystyle \epsilon _{x,p}<0}
+   is the price elasticity of demand.

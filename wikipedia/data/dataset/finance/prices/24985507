@@ -1,0 +1,82 @@
+EMSR stands for Expected Marginal Seat Revenue and is a very popular heuristic in Revenue Management. There are two versions: EMSRa and EMSRb, both of which were introduced by Belobaba. Both methods are for n-class, static, single-resource problems. Because the models are static some assumptions apply: classes are indexed in such a way that the fare for the highest class, 
+  
+    
+      
+        
+          r
+          
+            1
+          
+        
+      
+    
+    {\displaystyle r_{1}}
+  , is higher than the fare for the next highest class, 
+  
+    
+      
+        
+          r
+          
+            2
+          
+        
+      
+    
+    {\displaystyle r_{2}}
+  , so 
+  
+    
+      
+        
+          r
+          
+            1
+          
+        
+      
+    
+    {\displaystyle r_{1}}
+   > 
+  
+    
+      
+        
+          r
+          
+            2
+          
+        
+      
+    
+    {\displaystyle r_{2}}
+   > ... > 
+  
+    
+      
+        
+          r
+          
+            n
+          
+        
+      
+    
+    {\displaystyle r_{n}}
+  ; demand arrives in a strict low to high order in stages that are indexed with j as well; demand for class j is distributed with cdf 
+  
+    
+      
+        
+          F
+          
+            j
+          
+        
+        (
+        x
+        )
+      
+    
+    {\displaystyle F_{j}(x)}
+  . For simplicity it is also assumed that demand, capacity and the distributions are continuous, although it is not very difficult to drop this assumption.

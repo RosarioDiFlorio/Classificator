@@ -1,0 +1,6 @@
+An air pump is a device for pushing air. Examples include a bicycle pump, pumps that are used to aerate an aquarium or a pond via an airstone; a gas compressor used to power a pneumatic tool, air horn or pipe organ; a bellows used to encourage a fire; a vacuum cleaner and a vacuum pump.
+Pumps and compressors use very similar mechanisms, and basically perform the same action, but in different fluid regimes. At some point there is a crossover point in terminology, but here are some stereotypes:
+• Compressors operate on compressible fluids, typically gases. Pumps operate on fluids, typically liquids, approximated as incompressible.
+• Compressors are intended to develop a very high pressure rise against a closed system; pumps are designed to develop relatively little pressure against a free-flowing system with minimal backpressure.
+• Pumps are often used in continuous-flow operation, while many lower-end compressors must have intermittent duty cycles.
+• Compressors usually have a feedback sensor to shut off when they reach a desired pressure; pumps have a fixed design and operate freely across their performance curve as conditions change

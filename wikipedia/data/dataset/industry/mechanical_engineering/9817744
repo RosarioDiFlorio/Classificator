@@ -1,0 +1,122 @@
+The quantum concentration nQ is the particle concentration (i.e. the number of particles per unit volume) of a system where the interparticle distance is equal to the thermal de Broglie wavelength.
+Quantum effects become appreciable when the particle concentration is greater than or equal to the quantum concentration, which is defined as:
+
+  
+    
+      
+        
+          n
+          
+            
+              Q
+            
+          
+        
+        =
+        
+          
+            (
+            
+              
+                
+                  M
+                  k
+                  T
+                
+                
+                  2
+                  π
+                  
+                    ℏ
+                    
+                      2
+                    
+                  
+                
+              
+            
+            )
+          
+          
+            3
+            
+              /
+            
+            2
+          
+        
+      
+    
+    {\displaystyle n_{\rm {Q}}=\left({\frac {MkT}{2\pi \hbar ^{2}}}\right)^{3/2}}
+  
+where:
+M is the mass of the particles in the system
+k is the Boltzmann constant
+T is the temperature as measured in kelvins
+
+  
+    
+      
+        ℏ
+      
+    
+    {\displaystyle \hbar }
+   is the reduced Planck constant
+The quantum concentration for room temperature protons is about 1/cubic-Angstrom.
+As the quantum concentration depends on temperature, high temperatures will put most systems in the classical limit unless they have a very high density e.g. a White dwarf.
+For an ideal gas the Sackur–Tetrode equation can be written in terms of the quantum concentration as
+
+  
+    
+      
+        S
+        (
+        T
+        ,
+        V
+        ,
+        N
+        )
+        =
+        N
+        
+          k
+          
+            
+              B
+            
+          
+        
+        
+          [
+          
+            
+              5
+              2
+            
+          
+          +
+          ln
+          ⁡
+          
+            (
+            
+              
+                
+                  n
+                  
+                    
+                      Q
+                    
+                  
+                
+                n
+              
+            
+            )
+          
+          ]
+        
+      
+    
+    {\displaystyle S(T,V,N)=Nk_{\rm {B}}\left[{\frac {5}{2}}+\ln \left({\frac {n_{\rm {Q}}}{n}}\right)\right]}

@@ -1,0 +1,31 @@
+Evolution of a random network is a dynamical process, usually leading to emergence of giant component accompanied with striking consequences on the network topology. To quantify this process, there is a need of inspection on how the size of the largest connected cluster within the network, 
+  
+    
+      
+        
+          
+            N
+            
+              G
+            
+          
+        
+      
+    
+    {\displaystyle {N_{G}}}
+  , varies with 
+  
+    
+      
+        
+          
+            ⟨
+            k
+            ⟩
+          
+        
+      
+    
+    {\displaystyle {\left\langle k\right\rangle }}
+  . Networks change their topology as they evolve, undergoing phase transitions. Phase transitions are generally known from physics, where it occurs as matter changes state according to its thermal energy level, or when ferromagnetic properties emerge in some materials as they are cooling down. Such phase transitions take place in matter because it is a network of particles, and as such, rules of network phase transition directly apply to it. Phase transitions in networks happen as links are added to a network, meaning that having N nodes, in each time increment, a link is placed between a randomly chosen pair of them. The transformation from a set of disconnected nodes to a fully connected network is called the evolution of a network.
+If we begin with a network having N totally disconnected nodes (number of links is zero), and start adding links between randomly selected pairs of nodes, the evolution of the network begins. For some time we will just create pairs of nodes. After a while some of these pairs will connect, forming little trees. As we continue adding more links to the network, there comes a point when a giant component emerges in the network as some of these isolated trees connect to each other. This is called the critical point. In our natural example, this point corresponds to temperatures where materials change their state. Further adding nodes to the system, the giant component becomes even larger, as more and more nodes get a link to an other node which is already part of the giant component. The other special moment in this transition is when the network becomes fully connected, that is, when all nodes belong to the one giant component, which is effectively the network itself at that point.

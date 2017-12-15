@@ -1,0 +1,1 @@
+The trinomial tree is a lattice based computational model used in financial mathematics to price options. It was developed by Phelim Boyle in 1986. It is an extension of the binomial options pricing model, and is conceptually similar. It can also be shown that the approach is equivalent to the explicit finite difference method for option pricing.

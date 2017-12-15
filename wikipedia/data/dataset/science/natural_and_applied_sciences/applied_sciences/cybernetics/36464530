@@ -1,0 +1,6 @@
+Symmetry Protected Topological order (SPT order) is a kind of order in zero-temperature quantum-mechanical states of matter that have a symmetry and a finite energy gap.
+To derive the results in a most-invariant way, renormalization group methods are used (leading to equivalence classes corresponding to certain fixed points). The SPT order has the following defining properties:
+(a) distinct SPT states with a given symmetry cannot be smoothly deformed into each other without a phase transition, if the deformation preserves the symmetry.
+(b) however, they all can be smoothly deformed into the same trivial product state without a phase transition, if the symmetry is broken during the deformation.
+The above definition works for both bosonic systems and fermionic systems, which leads to the notions of bosonic SPT order and fermionic SPT order.
+Using the notion of quantum entanglement, we can say that SPT states are short-range entangled states with a symmetry (by contrast: for long-range entanglement see topological order, which is not related to the famous EPR paradox). Since short-range entangled states have only trivial topological orders we may also refer the SPT order as Symmetry Protected "Trivial" order.

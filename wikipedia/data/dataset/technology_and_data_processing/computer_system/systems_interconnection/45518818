@@ -1,0 +1,2 @@
+In computer networking, a failure domain encompasses a section of a network that is negatively affected when a critical device or network service experiences problems. The size of a failure domain and its potential impact depends on the device or service that is malfunctioning. For example, a router potentially experiencing problems would generally create a more significant failure domain than a network switch would.
+Smaller failure domains reduce the risk of disruption over a large section of a network, and eases the troubleshooting process.

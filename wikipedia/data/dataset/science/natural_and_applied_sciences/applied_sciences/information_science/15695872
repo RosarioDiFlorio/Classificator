@@ -1,0 +1,10 @@
+A concept recently championed by International Business Machines (IBM), consumability is a description of customers' end-to-end experience with technology solutions (although the concept could easily apply to almost anything). The tasks associated with consumability start before the consumer purchases a product and continue until the customer stops using the product. By improving the consumability of the product, the value of that product to the client can be increased.
+Understanding product consumability requires an in-depth understanding of how clients are actually trying to use the product, which is why consumability is so closely aligned with the user experience and Outside-in software development. While usability addresses a client's ability to use a product, consumability is a higher-level concept that incorporates all the other aspects of the customer’s experience with the product.
+Key consumability aspects of the user experience include:
+Identifying the right product
+Acquiring the product
+Installing and configuring the product
+Using and administering the product
+Troubleshooting problems with the product
+Updating the product (e.g. installing fix packs)
+How efficiently and effectively clients can complete these tasks affects the value they get from the product. Missteps anywhere along this path can have direct impacts on the customer's ability to complete the task they set out to do. By focusing on consumability, developers can smooth the path, allowing technology solution consumers to focus on the needs of their business, improving their perception and satisfaction with the product or solution.

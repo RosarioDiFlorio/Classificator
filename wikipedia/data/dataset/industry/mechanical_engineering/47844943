@@ -1,0 +1,36 @@
+The inverse square root potential is a three-parametric quantum-mechanical potential for which the one-dimensional Schrödinger equation is exactly solvable in terms of the confluent hypergeometric functions. The potential is defined as:
+
+  
+    
+      
+        V
+        (
+        x
+        )
+        =
+        
+          V
+          
+            c
+          
+        
+        +
+        
+          
+            V
+            
+              x
+              −
+              
+                x
+                
+                  0
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle V(x)=V_{c}+{\frac {V}{\sqrt {x-x_{0}}}}}
+  .

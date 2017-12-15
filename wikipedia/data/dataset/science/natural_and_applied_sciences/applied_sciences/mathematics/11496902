@@ -1,0 +1,429 @@
+In mathematics, the secondary polynomials 
+  
+    
+      
+        {
+        
+          q
+          
+            n
+          
+        
+        (
+        x
+        )
+        }
+      
+    
+    {\displaystyle \{q_{n}(x)\}}
+   associated with a sequence 
+  
+    
+      
+        {
+        
+          p
+          
+            n
+          
+        
+        (
+        x
+        )
+        }
+      
+    
+    {\displaystyle \{p_{n}(x)\}}
+   of polynomials orthogonal with respect to a density 
+  
+    
+      
+        ρ
+        (
+        x
+        )
+      
+    
+    {\displaystyle \rho (x)}
+   are defined by
+
+  
+    
+      
+        
+          q
+          
+            n
+          
+        
+        (
+        x
+        )
+        =
+        
+          ∫
+          
+            
+              R
+            
+          
+        
+        
+        
+          
+            
+              
+                p
+                
+                  n
+                
+              
+              (
+              t
+              )
+              −
+              
+                p
+                
+                  n
+                
+              
+              (
+              x
+              )
+            
+            
+              t
+              −
+              x
+            
+          
+        
+        ρ
+        (
+        t
+        )
+        
+        d
+        t
+        .
+      
+    
+    {\displaystyle q_{n}(x)=\int _{\mathbb {R} }\!{\frac {p_{n}(t)-p_{n}(x)}{t-x}}\rho (t)\,dt.}
+  
+To see that the functions 
+  
+    
+      
+        
+          q
+          
+            n
+          
+        
+        (
+        x
+        )
+      
+    
+    {\displaystyle q_{n}(x)}
+   are indeed polynomials, consider the simple example of 
+  
+    
+      
+        
+          p
+          
+            0
+          
+        
+        (
+        x
+        )
+        =
+        
+          x
+          
+            3
+          
+        
+        .
+      
+    
+    {\displaystyle p_{0}(x)=x^{3}.}
+   Then,
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  q
+                  
+                    0
+                  
+                
+                (
+                x
+                )
+              
+              
+                
+                
+
+                
+                =
+                
+                  ∫
+                  
+                    
+                      R
+                    
+                  
+                
+                
+                
+                  
+                    
+                      
+                        t
+                        
+                          3
+                        
+                      
+                      −
+                      
+                        x
+                        
+                          3
+                        
+                      
+                    
+                    
+                      t
+                      −
+                      x
+                    
+                  
+                
+                ρ
+                (
+                t
+                )
+                
+                d
+                t
+              
+            
+            
+              
+              
+                
+                
+
+                
+                =
+                
+                  ∫
+                  
+                    
+                      R
+                    
+                  
+                
+                
+                
+                  
+                    
+                      (
+                      t
+                      −
+                      x
+                      )
+                      (
+                      
+                        t
+                        
+                          2
+                        
+                      
+                      +
+                      t
+                      x
+                      +
+                      
+                        x
+                        
+                          2
+                        
+                      
+                      )
+                    
+                    
+                      t
+                      −
+                      x
+                    
+                  
+                
+                ρ
+                (
+                t
+                )
+                
+                d
+                t
+              
+            
+            
+              
+              
+                
+                
+
+                
+                =
+                
+                  ∫
+                  
+                    
+                      R
+                    
+                  
+                
+                
+                (
+                
+                  t
+                  
+                    2
+                  
+                
+                +
+                t
+                x
+                +
+                
+                  x
+                  
+                    2
+                  
+                
+                )
+                ρ
+                (
+                t
+                )
+                
+                d
+                t
+              
+            
+            
+              
+              
+                
+                
+
+                
+                =
+                
+                  ∫
+                  
+                    
+                      R
+                    
+                  
+                
+                
+                
+                  t
+                  
+                    2
+                  
+                
+                ρ
+                (
+                t
+                )
+                
+                d
+                t
+                +
+                x
+                
+                  ∫
+                  
+                    
+                      R
+                    
+                  
+                
+                
+                t
+                ρ
+                (
+                t
+                )
+                
+                d
+                t
+                +
+                
+                  x
+                  
+                    2
+                  
+                
+                
+                  ∫
+                  
+                    
+                      R
+                    
+                  
+                
+                
+                ρ
+                (
+                t
+                )
+                
+                d
+                t
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}q_{0}(x)&{}=\int _{\mathbb {R} }\!{\frac {t^{3}-x^{3}}{t-x}}\rho (t)\,dt\\&{}=\int _{\mathbb {R} }\!{\frac {(t-x)(t^{2}+tx+x^{2})}{t-x}}\rho (t)\,dt\\&{}=\int _{\mathbb {R} }\!(t^{2}+tx+x^{2})\rho (t)\,dt\\&{}=\int _{\mathbb {R} }\!t^{2}\rho (t)\,dt+x\int _{\mathbb {R} }\!t\rho (t)\,dt+x^{2}\int _{\mathbb {R} }\!\rho (t)\,dt\end{aligned}}}
+  
+which is a polynomial 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+   provided that the three integrals in 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+   (the moments of the density 
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+  ) are convergent.

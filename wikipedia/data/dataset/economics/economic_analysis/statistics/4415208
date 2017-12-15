@@ -1,0 +1,175 @@
+In statistics, a semiparametric model is a statistical model that has parametric and nonparametric components.
+A statistical model is a collection of distributions: 
+  
+    
+      
+        {
+        
+          P
+          
+            θ
+          
+        
+        :
+        θ
+        ∈
+        Θ
+        }
+      
+    
+    {\displaystyle \{P_{\theta }:\theta \in \Theta \}}
+   indexed by a parameter 
+  
+    
+      
+        θ
+      
+    
+    {\displaystyle \theta }
+  .
+A parametric model is one in which the indexing parameter is a finite-dimensional vector (in 
+  
+    
+      
+        k
+      
+    
+    {\displaystyle k}
+  -dimensional Euclidean space for some integer 
+  
+    
+      
+        k
+      
+    
+    {\displaystyle k}
+  ); i.e. the set of possible values for 
+  
+    
+      
+        θ
+      
+    
+    {\displaystyle \theta }
+   is a subset of 
+  
+    
+      
+        
+          
+            R
+          
+          
+            k
+          
+        
+      
+    
+    {\displaystyle \mathbb {R} ^{k}}
+  , or 
+  
+    
+      
+        Θ
+        ⊂
+        
+          
+            R
+          
+          
+            k
+          
+        
+      
+    
+    {\displaystyle \Theta \subset \mathbb {R} ^{k}}
+  . In this case we say that 
+  
+    
+      
+        θ
+      
+    
+    {\displaystyle \theta }
+   is finite-dimensional.
+In nonparametric models, the set of possible values of the parameter 
+  
+    
+      
+        θ
+      
+    
+    {\displaystyle \theta }
+   is a subset of some space, not necessarily finite-dimensional. For example, we might consider the set of all distributions with mean 0. Such spaces are vector spaces with topological structure, but may not be finite-dimensional as vector spaces. Thus, 
+  
+    
+      
+        Θ
+        ⊂
+        
+          F
+        
+      
+    
+    {\displaystyle \Theta \subset \mathbb {F} }
+   for some possibly infinite-dimensional space 
+  
+    
+      
+        
+          F
+        
+      
+    
+    {\displaystyle \mathbb {F} }
+  .
+In semiparametric models, the parameter has both a finite-dimensional component and an infinite-dimensional component (often a real-valued function defined on the real line). Thus the parameter space 
+  
+    
+      
+        Θ
+      
+    
+    {\displaystyle \Theta }
+   in a semiparametric model satisfies 
+  
+    
+      
+        Θ
+        ⊂
+        
+          
+            R
+          
+          
+            k
+          
+        
+        ×
+        
+          F
+        
+      
+    
+    {\displaystyle \Theta \subset \mathbb {R} ^{k}\times \mathbb {F} }
+  , where 
+  
+    
+      
+        
+          F
+        
+      
+    
+    {\displaystyle \mathbb {F} }
+   is an infinite-dimensional space.
+It may appear at first that semiparametric models include nonparametric models, since they have an infinite-dimensional as well as a finite-dimensional component. However, a semiparametric model is considered to be "smaller" than a completely nonparametric model because we are often interested only in the finite-dimensional component of 
+  
+    
+      
+        θ
+      
+    
+    {\displaystyle \theta }
+  . That is, we are not interested in estimating the infinite-dimensional component. In nonparametric models, by contrast, the primary interest is in estimating the infinite-dimensional parameter. Thus the estimation task is statistically harder in nonparametric models.
+These models often use smoothing or kernels.

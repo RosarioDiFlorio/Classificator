@@ -1,0 +1,4 @@
+Rog-O-Matic is a bot developed in 1981 to play and win the computer game Rogue, by four graduate students in the Computer Science Department at Carnegie-Mellon University in Pittsburgh: Andrew Appel, Leonard Hamey, Guy Jacobson and Michael Loren Mauldin.
+Described as a "belligerent expert system", Rog-O-Matic performs well when tested against expert Rogue players, even winning the game.
+Because all information in Rogue is communicated to the player via ASCII text, Rog-O-Matic has automatic access to the same information a human player has. The program is still the subject of some scholarly interest; a 2005 paper said:
+One of Rog-O-Matic's authors, Michael Loren Mauldin, would go on to write the Lycos search engine.

@@ -1,0 +1,2 @@
+In computing, the Oracle Call Interface (OCI) consists of a set of C-language software APIs which provide an interface to the Oracle database.
+OCI offers a procedural API for not only performing certain database administration tasks (such as system startup and shutdown), but also for using PL/SQL or SQL to query, access, and manipulate data. The OCI library, based on Oracle's undocumented User Programmatic Interface (UPI), acts as an "interpreter" between applications and the low-level database network protocol.

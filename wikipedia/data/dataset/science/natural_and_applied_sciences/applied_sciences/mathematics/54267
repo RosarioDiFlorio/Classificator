@@ -1,0 +1,67 @@
+In mathematics and computer science, the floor function is the function that takes as input a real number 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+   and gives as output the greatest integer 
+  
+    
+      
+        
+          floor
+        
+        (
+        x
+        )
+        =
+        ⌊
+        x
+        ⌋
+      
+    
+    {\displaystyle {\text{floor}}(x)=\lfloor x\rfloor }
+   that is less than or equal to 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  . Similarly, the ceiling function maps 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+   to the least integer 
+  
+    
+      
+        
+          ceiling
+        
+        (
+        x
+        )
+        =
+        ⌈
+        x
+        ⌉
+      
+    
+    {\displaystyle {\text{ceiling}}(x)=\lceil x\rceil }
+   that is greater than or equal to 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  .

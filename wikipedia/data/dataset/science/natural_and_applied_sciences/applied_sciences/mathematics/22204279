@@ -1,0 +1,120 @@
+In mathematics, the indefinite product operator is the inverse operator of 
+  
+    
+      
+        Q
+        (
+        f
+        (
+        x
+        )
+        )
+        =
+        
+          
+            
+              f
+              (
+              x
+              +
+              1
+              )
+            
+            
+              f
+              (
+              x
+              )
+            
+          
+        
+      
+    
+    {\displaystyle Q(f(x))={\frac {f(x+1)}{f(x)}}}
+  . It is a discrete version of the geometric integral of geometric calculus, one of the non-Newtonian calculi. Some authors use term discrete multiplicative integration
+Thus
+
+  
+    
+      
+        Q
+        (
+        
+          ∏
+          
+            x
+          
+        
+        f
+        (
+        x
+        )
+        )
+        =
+        f
+        (
+        x
+        )
+        
+        .
+      
+    
+    {\displaystyle Q(\prod _{x}f(x))=f(x)\,.}
+  
+More explicitly, if 
+  
+    
+      
+        
+          ∏
+          
+            x
+          
+        
+        f
+        (
+        x
+        )
+        =
+        F
+        (
+        x
+        )
+      
+    
+    {\displaystyle \prod _{x}f(x)=F(x)}
+  , then
+
+  
+    
+      
+        
+          
+            
+              F
+              (
+              x
+              +
+              1
+              )
+            
+            
+              F
+              (
+              x
+              )
+            
+          
+        
+        =
+        f
+        (
+        x
+        )
+        
+        .
+      
+    
+    {\displaystyle {\frac {F(x+1)}{F(x)}}=f(x)\,.}
+  
+If F(x) is a solution of this functional equation for a given f(x), then so is CF(x) for any constant C. Therefore each indefinite product actually represents a family of functions, differing by a multiplicative constant.

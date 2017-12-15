@@ -1,0 +1,6 @@
+Expected loss is the sum of the values of all possible losses, each multiplied by the probability of that loss occurring.
+In bank lending (homes, autos, credit cards, commercial lending, etc.) the expected loss on a loan varies over time for a number of reasons. Most loans are repaid over time and therefore have a declining outstanding amount to be repaid. Additionally, loans are typically backed up by pledged collateral whose value changes differently over time vs. the outstanding loan value.
+Three factors are relevant in analyzing expected loss:
+Probability of default (PD)
+Exposure at default (EAD)
+Loss given default (LGD)

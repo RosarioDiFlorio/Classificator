@@ -1,0 +1,110 @@
+The Shields parameter, also called the Shields criterion or Shields number, is a nondimensional number used to calculate the initiation of motion of sediment in a fluid flow. It is a nondimensionalization of a shear stress, and is typically denoted 
+  
+    
+      
+        
+          τ
+          
+            ∗
+          
+        
+      
+    
+    {\displaystyle \tau _{\ast }}
+   or 
+  
+    
+      
+        θ
+      
+    
+    {\displaystyle \theta }
+  . It is given by:
+
+  
+    
+      
+        
+          τ
+          
+            ∗
+          
+        
+        =
+        θ
+        =
+        
+          
+            τ
+            
+              (
+              
+                ρ
+                
+                  s
+                
+              
+              −
+              ρ
+              )
+              g
+              D
+            
+          
+        
+        ,
+      
+    
+    {\displaystyle \tau _{\ast }=\theta ={\frac {\tau }{(\rho _{s}-\rho )gD}},}
+  
+where:
+
+  
+    
+      
+        τ
+      
+    
+    {\displaystyle \tau }
+   is a dimensional shear stress;
+
+  
+    
+      
+        
+          ρ
+          
+            s
+          
+        
+      
+    
+    {\displaystyle \rho _{s}}
+   is the density of the sediment;
+
+  
+    
+      
+        ρ
+      
+    
+    {\displaystyle \rho }
+   is the density of the fluid;
+
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+   is acceleration due to gravity;
+
+  
+    
+      
+        D
+      
+    
+    {\displaystyle D}
+   is a characteristic particle diameter of the sediment.

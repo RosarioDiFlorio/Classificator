@@ -1,0 +1,18 @@
+A speech corpus (or spoken corpus) is a database of speech audio files and text transcriptions. In Speech technology, speech corpora are used, among other things, to create acoustic models (which can then be used with a speech recognition engine). In Linguistics, spoken corpora are used to do research into phonetic, conversation analysis, dialectology and other fields.
+A corpus is one such database. Corpora is the plural of corpus (i.e. it is many such databases).
+There are two types of Speech Corpora:
+Read Speech - which includes:
+Book excerpts
+Broadcast news
+Lists of words
+Sequences of numbers
+
+Spontaneous Speech - which includes:
+Dialogs - between two or more people (includes meetings);
+Narratives - a person telling a story (one such corpus is the Buckeye Corpus);
+Map-tasks - one person explains a route on a map to another;
+Appointment-tasks - two people try to find a common meeting time based on individual schedules.
+
+A special kind of speech corpora are non-native speech databases that contain speech with foreign accent.
+
+

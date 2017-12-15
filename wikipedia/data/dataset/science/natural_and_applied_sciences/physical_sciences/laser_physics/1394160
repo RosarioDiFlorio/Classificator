@@ -1,0 +1,8 @@
+Thermal shock occurs when a thermal gradient causes different parts of an object to expand by different amounts. This differential expansion can be understood in terms of stress or of strain, equivalently. At some point, this stress can exceed the strength of the material, causing a crack to form. If nothing stops this crack from propagating through the material, it will cause the object's structure to fail.
+Failure due to thermal shock can be prevented by;
+Reducing the thermal gradient seen by the object, by changing its temperature more slowly or increasing the material's thermal conductivity
+Reducing the material's coefficient of thermal expansion
+Increasing its strength
+Introducing built-in compressive stress, as for example in tempered glass
+Decreasing its Young's modulus
+Increasing its toughness, by crack tip blunting (i.e., plasticity or phase transformation) or crack deflection

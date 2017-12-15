@@ -1,0 +1,111 @@
+In microeconomics, a consumer's Marshallian demand function (named after Alfred Marshall) specifies what the consumer would buy in each price and income or wealth situation, assuming it perfectly solves the utility maximization problem. Marshallian demand is sometimes called Walrasian demand (named after Léon Walras) or uncompensated demand function instead, because the original Marshallian analysis refused wealth effects.
+According to the utility maximization problem, there are L commodities with price vector p and choosable quantity vector x. The consumer has income I, and hence a set of affordable packages
+
+  
+    
+      
+        B
+        (
+        p
+        ,
+        I
+        )
+        =
+        {
+        x
+        :
+        ⟨
+        p
+        ,
+        x
+        ⟩
+        ≤
+        I
+        }
+        ,
+      
+    
+    {\displaystyle B(p,I)=\{x:\langle p,x\rangle \leq I\},}
+  
+where 
+  
+    
+      
+        ⟨
+        p
+        ,
+        x
+        ⟩
+      
+    
+    {\displaystyle \langle p,x\rangle }
+   is the inner product of the price and quantity vectors. The consumer has a utility function
+
+  
+    
+      
+        u
+        :
+        
+          
+            
+              R
+            
+          
+          
+            +
+          
+          
+            L
+          
+        
+        →
+        
+          
+            R
+          
+        
+        .
+      
+    
+    {\displaystyle u:{\textbf {R}}_{+}^{L}\rightarrow {\textbf {R}}.}
+  
+The consumer's Marshallian demand correspondence is defined to be
+
+  
+    
+      
+        
+          x
+          
+            ∗
+          
+        
+        (
+        p
+        ,
+        I
+        )
+        =
+        
+          argmax
+          
+            x
+            ∈
+            B
+            (
+            p
+            ,
+            I
+            )
+          
+        
+        ⁡
+        u
+        (
+        x
+        )
+        .
+      
+    
+    {\displaystyle x^{*}(p,I)=\operatorname {argmax} _{x\in B(p,I)}u(x).}

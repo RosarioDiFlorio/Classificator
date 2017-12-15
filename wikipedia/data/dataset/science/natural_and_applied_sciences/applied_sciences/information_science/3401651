@@ -1,0 +1,4 @@
+The 6529 Single Port Interface (SPI aka PIO) was an integrated circuit made by MOS Technology. It served as an I/O controller for the 6502 family of microprocessors, providing a single 8-bit digital bidirectional parallel I/O port. Unlike the more sophisticated 6522 VIA and 6526 CIA, it did not allow the data direction for each I/O line to be separately specified, nor did it support serial I/O or contain any timer capabilities. Because of this, it did not achieve widespread use.
+6529 ICs were available in 1 MHz, 2 MHz, and 3 MHz versions. The form factor was a JEDEC-standard 20-pin ceramic or plastic DIP.
+
+

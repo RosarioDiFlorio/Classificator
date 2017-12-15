@@ -1,0 +1,10 @@
+The Good NetKeeping Seal of Approval or GNKSA is a designation that indicates a piece of Usenet newsreader (client) software meets a set of usability and formatting standards. The name is a play on the "Good Housekeeping Seal of Approval", a set of consumer reports issued by Good Housekeeping Magazine.
+The original GNKSA author thought that many newbies to Usenet posted malformed or inappropriately-sent articles because their software did not encourage better netiquette. For instance, software which made it easy to confuse replying to a sender by email with posting a followup to a newsgroup led to users mistakenly publishing what was intended to be a private response, or vice versa.
+Some of the guidelines from GNKSA 2.0
+The user can see the essential header fields, including "Newsgroups" and "Followup-To".
+The user can edit all header fields when composing a follow up.
+There is a clear difference between 'followup' and 'reply'.
+Followups preserve the Subject and References of the original article, unless the user explicitly changes them.
+News software respects "Followup-To" and "Reply-To" specifications.
+What the user writes is what gets posted, as is.
+Additional requirements concern accurate From: headers, signature block formatting, and the ability to cancel and supersede articles.

@@ -1,0 +1,83 @@
+The Cambridge equation formally represents the Cambridge cash-balance theory, an alternative approach to the classical quantity theory of money. Both quantity theories, Cambridge and classical, attempt to express a relationship among the amount of goods produced, the price level, amounts of money, and how money moves. The Cambridge equation focuses on money demand instead of money supply. The theories also differ in explaining the movement of money: In the classical version, associated with Irving Fisher, money moves at a fixed rate and serves only as a medium of exchange while in the Cambridge approach money acts as a store of value and its movement depends on the desirability of holding cash.
+Economists associated with Cambridge University, including Alfred Marshall, A.C. Pigou, and John Maynard Keynes (before he developed his own, eponymous school of thought) contributed to a quantity theory of money that paid more attention to money demand than the supply-oriented classical version. The Cambridge economists argued that a certain portion of the money supply will not be used for transactions; instead, it will be held for the convenience and security of having cash on hand. This portion of cash is commonly represented as k, a portion of nominal income (the product of the price level and real income), 
+  
+    
+      
+        P
+        ⋅
+        Y
+      
+    
+    {\displaystyle P\cdot Y}
+  ). The Cambridge economists also thought wealth would play a role, but wealth is often omitted from the equation for simplicity. The Cambridge equation is thus:
+
+  
+    
+      
+        
+          M
+          
+            
+              d
+            
+          
+        
+        =
+        
+          
+            k
+          
+        
+        ⋅
+        P
+        ⋅
+        Y
+      
+    
+    {\displaystyle M^{\textit {d}}={\textit {k}}\cdot P\cdot Y}
+  
+Assuming that the economy is at equilibrium (
+  
+    
+      
+        
+          M
+          
+            
+              d
+            
+          
+        
+        =
+        M
+      
+    
+    {\displaystyle M^{\textit {d}}=M}
+  ), 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+   is exogenous, and k is fixed in the short run, the Cambridge equation is equivalent to the equation of exchange with velocity equal to the inverse of k:
+
+  
+    
+      
+        M
+        ⋅
+        
+          
+            1
+            k
+          
+        
+        =
+        P
+        ⋅
+        Y
+      
+    
+    {\displaystyle M\cdot {\frac {1}{k}}=P\cdot Y}

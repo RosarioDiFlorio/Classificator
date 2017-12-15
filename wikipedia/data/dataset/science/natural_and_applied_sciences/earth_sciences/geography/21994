@@ -1,0 +1,7 @@
+Whereas originally the term Navigation applies to the process of directing a ship to a destination, Navigation research deals with fundamental aspects of navigation in general. It can be defined as "The process of determining and maintaining a course or trajectory to a goal location" (Franz, Mallot, 2000). It concerns basically all moving agents, biological or artificial, autonomous or remote-controlled.
+Franz and Mallot proposed a navigation hierarchy in Robotics and Autonomous Systems 30 (2006):
+There are two basic methods for navigation:
+Egocentric navigation also known as Idiothetic navigation
+Allocentric navigation also known as Allothetic navigation
+
+

@@ -1,0 +1,158 @@
+Analogous to continuous compounding, a continuous annuity is an ordinary annuity in which the payment interval is narrowed indefinitely. A (theoretical) continuous repayment mortgage is a mortgage loan paid by means of a continuous annuity.
+Mortgages (i.e., mortgage loans) are generally settled over a period of years by a series of fixed regular payments commonly referred to as an annuity. Each payment accumulates compound interest from time of deposit to the end of the mortgage timespan at which point the sum of the payments with their accumulated interest equals the value of the loan with interest compounded over the entire timespan. Given loan P0, per period interest rate i, number of periods n and fixed per period payment x, the end of term balancing equation is:
+
+  
+    
+      
+        
+          P
+          
+            0
+          
+        
+        (
+        1
+        +
+        i
+        
+          )
+          
+            n
+          
+        
+        =
+        
+          ∑
+          
+            k
+            =
+            1
+          
+          
+            n
+          
+        
+        x
+        (
+        1
+        +
+        i
+        
+          )
+          
+            n
+            −
+            k
+          
+        
+        =
+        
+          
+            
+              x
+              [
+              (
+              1
+              +
+              i
+              
+                )
+                
+                  n
+                
+              
+              −
+              1
+              ]
+            
+            i
+          
+        
+      
+    
+    {\displaystyle P_{0}(1+i)^{n}=\sum _{k=1}^{n}x(1+i)^{n-k}={\frac {x[(1+i)^{n}-1]}{i}}}
+  
+
+Summation can be computed using the standard formula for summation of a geometric sequence.
+In a (theoretical) continuous-repayment mortgage the payment interval is narrowed indefinitely until the discrete interval process becomes continuous and the fixed interval payments become—in effect—a literal cash "flow" at a fixed annual rate. In this case, given loan P0, annual interest rate r, loan timespan T (years) and annual rate Ma, the infinitesimal cash flow elements Maδt accumulate continuously compounded interest from time t to the end of the loan timespan at which point the balancing equation is:
+
+  
+    
+      
+        
+          P
+          
+            0
+          
+        
+        
+          e
+          
+            r
+            T
+          
+        
+        =
+        
+          ∫
+          
+            0
+          
+          
+            T
+          
+        
+        
+          M
+          
+            a
+          
+        
+        
+          e
+          
+            r
+            (
+            T
+            −
+            t
+            )
+          
+        
+        
+        d
+        t
+        =
+        
+          
+            
+              
+                M
+                
+                  a
+                
+              
+              (
+              
+                e
+                
+                  r
+                  T
+                
+              
+              −
+              1
+              )
+            
+            r
+          
+        
+        .
+      
+    
+    {\displaystyle P_{0}e^{rT}=\int \limits _{0}^{T}M_{a}e^{r(T-t)}\,dt={\frac {M_{a}(e^{rT}-1)}{r}}.}
+  
+
+Summation of the cash flow elements and accumulated interest is effected by integration as shown. It is assumed that compounding interval and payment interval are equal—i.e., compounding of interest always occurs at the same time as payment is deducted.
+Within the timespan of the loan the time continuous mortgage balance function obeys a first order linear differential equation (LDE) and an alternative derivation thereof may be obtained by solving the LDE using the method of Laplace transforms.
+Application of the equation yields a number of results relevant to the financial process which it describes. Although this article focuses primarily on mortgages, the methods employed are relevant to any situation in which payment or saving is effected by a regular stream of fixed interval payments (annuity).

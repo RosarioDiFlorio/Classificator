@@ -1,0 +1,1 @@
+Android Runtime for Chrome (ARC) is a compatibility layer and sandboxing technology for running Android applications on desktop and laptop computers in an isolated environment. It allows safely running the applications from a web browser, independent of user operating system, allowing the Android applications to run at near-native speeds.

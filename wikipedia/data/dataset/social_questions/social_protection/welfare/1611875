@@ -1,0 +1,190 @@
+Equivalent variation (EV) is a measure of economic welfare changes associated with changes in prices. John Hicks (1939) is attributed with introducing the concept of compensating and equivalent variation.
+The equivalent variation is the change in wealth, at current prices, that would have the same effect on consumer welfare as would the change in prices, with income unchanged. It is a useful tool when the present prices are the best place to make a comparison.
+The value of the equivalent variation is given in terms of the expenditure function (
+  
+    
+      
+        e
+        (
+        ⋅
+        ,
+        ⋅
+        )
+      
+    
+    {\displaystyle e(\cdot ,\cdot )}
+  ) as
+
+  
+    
+      
+        E
+        V
+        =
+        e
+        (
+        
+          p
+          
+            0
+          
+        
+        ,
+        
+          u
+          
+            1
+          
+        
+        )
+        −
+        e
+        (
+        
+          p
+          
+            0
+          
+        
+        ,
+        
+          u
+          
+            0
+          
+        
+        )
+      
+    
+    {\displaystyle EV=e(p_{0},u_{1})-e(p_{0},u_{0})}
+  
+
+  
+    
+      
+        =
+        e
+        (
+        
+          p
+          
+            0
+          
+        
+        ,
+        
+          u
+          
+            1
+          
+        
+        )
+        −
+        w
+      
+    
+    {\displaystyle =e(p_{0},u_{1})-w}
+  
+
+  
+    
+      
+        =
+        e
+        (
+        
+          p
+          
+            0
+          
+        
+        ,
+        
+          u
+          
+            1
+          
+        
+        )
+        −
+        e
+        (
+        
+          p
+          
+            1
+          
+        
+        ,
+        
+          u
+          
+            1
+          
+        
+        )
+      
+    
+    {\displaystyle =e(p_{0},u_{1})-e(p_{1},u_{1})}
+  
+where 
+  
+    
+      
+        w
+      
+    
+    {\displaystyle w}
+   is the wealth level, 
+  
+    
+      
+        
+          p
+          
+            0
+          
+        
+      
+    
+    {\displaystyle p_{0}}
+   and 
+  
+    
+      
+        
+          p
+          
+            1
+          
+        
+      
+    
+    {\displaystyle p_{1}}
+   are the old and new prices respectively, and 
+  
+    
+      
+        
+          u
+          
+            0
+          
+        
+      
+    
+    {\displaystyle u_{0}}
+   and 
+  
+    
+      
+        
+          u
+          
+            1
+          
+        
+      
+    
+    {\displaystyle u_{1}}
+   are the old and new utility levels respectively.

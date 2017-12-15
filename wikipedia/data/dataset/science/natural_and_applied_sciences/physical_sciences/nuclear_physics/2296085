@@ -1,0 +1,29 @@
+Rietveld refinement is a technique described by Hugo Rietveld for use in the characterisation of crystalline materials. The neutron and x-ray diffraction of powder samples results in a pattern characterised by reflections (peaks in intensity) at certain positions. The height, width and position of these reflections can be used to determine many aspects of the material's structure.
+The Rietveld method uses a least squares approach to refine a theoretical line profile until it matches the measured profile. The introduction of this technique was a significant step forward in the diffraction analysis of powder samples as, unlike other techniques at that time, it was able to deal reliably with strongly overlapping reflections.
+The method was first implemented in 1967, and reported in 1969 for the diffraction of monochromatic neutrons where the reflection-position is reported in terms of the Bragg angle 2θ. This terminology will be used here although the technique is equally applicable to alternative scales such as x-ray energy or neutron time-of-flight. The only wavelength and technique independent scale is in reciprocal space units or momentum transfer Q, which is historically rarely used in powder diffraction but very common in all other diffraction and optics techniques. The relation is
+
+  
+    
+      
+        Q
+        =
+        
+          
+            
+              4
+              π
+              sin
+              ⁡
+              
+                (
+                θ
+                )
+              
+            
+            λ
+          
+        
+        .
+      
+    
+    {\displaystyle Q={\frac {4\pi \sin \left(\theta \right)}{\lambda }}.}

@@ -1,0 +1,92 @@
+In mathematics, D'Alembert's equation is a first order nonlinear ordinary differential equation, named after the French mathematician Jean le Rond d'Alembert. The equation reads as
+
+  
+    
+      
+        y
+        =
+        x
+        f
+        (
+        p
+        )
+        +
+        g
+        (
+        p
+        )
+      
+    
+    {\displaystyle y=xf(p)+g(p)}
+  
+where 
+  
+    
+      
+        p
+        =
+        d
+        y
+        
+          /
+        
+        d
+        x
+      
+    
+    {\displaystyle p=dy/dx}
+  . After differentiating once, and rearranging we have
+
+  
+    
+      
+        
+          
+            
+              d
+              x
+            
+            
+              d
+              p
+            
+          
+        
+        +
+        
+          
+            
+              x
+              
+                f
+                ′
+              
+              (
+              p
+              )
+              +
+              
+                g
+                ′
+              
+              (
+              p
+              )
+            
+            
+              f
+              (
+              p
+              )
+              −
+              p
+            
+          
+        
+        =
+        0
+      
+    
+    {\displaystyle {\frac {dx}{dp}}+{\frac {xf'(p)+g'(p)}{f(p)-p}}=0}
+  
+The above equation is linear.

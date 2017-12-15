@@ -1,0 +1,12 @@
+A System Basis Chip (SBC) is an integrated circuit that includes various functions of automotive electronic control units (ECU) on a single die.
+It typically includes a mixture between digital standard functionality like communication bus interfaces and analog or power functionality, denoted as smart power. Therefore SBCs are based on special smart power technology platforms.
+The embedded functions may include:
+Voltage regulators
+Supervision functions
+Reset generators,
+Watchdog functions
+Bus interfaces, like LIN, CAN or others
+Wake-up logic
+Power switches
+The complexity range for SBCs starts with rather simple hardwired devices to configurable state-machine controlled devices, e.g. through a serial peripheral interface.
+Various major automotive semiconductor manufacturers offer SBCs.

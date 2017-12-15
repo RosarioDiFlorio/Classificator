@@ -1,0 +1,150 @@
+Feedback linearization is a common approach used in controlling nonlinear systems. The approach involves coming up with a transformation of the nonlinear system into an equivalent linear system through a change of variables and a suitable control input. Feedback linearization may be applied to nonlinear systems of the form
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  
+                    
+                      x
+                      ˙
+                    
+                  
+                
+              
+              
+                
+                =
+                f
+                (
+                x
+                )
+                +
+                g
+                (
+                x
+                )
+                u
+                
+              
+              
+                
+                (
+                1
+                )
+              
+            
+            
+              
+                y
+              
+              
+                
+                =
+                h
+                (
+                x
+                )
+                
+                
+                
+              
+              
+                
+                (
+                2
+                )
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}{\dot {x}}&=f(x)+g(x)u\qquad &(1)\\y&=h(x)\qquad \qquad \qquad &(2)\end{aligned}}}
+  
+where 
+  
+    
+      
+        x
+        ∈
+        
+          
+            R
+          
+          
+            n
+          
+        
+      
+    
+    {\displaystyle x\in \mathbb {R} ^{n}}
+   is the state vector, 
+  
+    
+      
+        u
+        ∈
+        
+          
+            R
+          
+          
+            p
+          
+        
+      
+    
+    {\displaystyle u\in \mathbb {R} ^{p}}
+   is the vector of inputs, and 
+  
+    
+      
+        y
+        ∈
+        
+          
+            R
+          
+          
+            m
+          
+        
+      
+    
+    {\displaystyle y\in \mathbb {R} ^{m}}
+   is the vector of outputs. The goal is to develop a control input
+
+  
+    
+      
+        u
+        =
+        a
+        (
+        x
+        )
+        +
+        b
+        (
+        x
+        )
+        v
+        
+      
+    
+    {\displaystyle u=a(x)+b(x)v\,}
+  
+that renders a linear input–output map between the new input 
+  
+    
+      
+        v
+      
+    
+    {\displaystyle v}
+   and the output. An outer-loop control strategy for the resulting linear control system can then be applied.

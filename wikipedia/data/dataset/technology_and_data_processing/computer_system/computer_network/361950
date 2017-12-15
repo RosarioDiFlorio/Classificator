@@ -1,0 +1,4 @@
+The Network Control Program (NCP) provided the middle layers of the protocol stack running on host computers of the ARPANET, the predecessor to the modern Internet.
+NCP preceded the Transmission Control Protocol (TCP) as a transport layer protocol used during the early ARPANET. NCP was a simplex protocol that utilized two port addresses, establishing two connections, for two-way communications. An odd and an even port were reserved for each application layer application or protocol. The standardization of TCP and UDP reduced the need for the use of two simplex ports for each application down to one duplex port.
+
+

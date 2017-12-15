@@ -1,0 +1,305 @@
+The Ramberg–Osgood equation was created to describe the non linear relationship between stress and strain—that is, the stress–strain curve—in materials near their yield points. It is especially useful for metals that harden with plastic deformation (see strain hardening), showing a smooth elastic-plastic transition.
+In its original form, the equation for strain (deformation) is
+
+  
+    
+      
+        ε
+        =
+        
+          
+            σ
+            E
+          
+        
+        +
+        K
+        
+          
+            (
+            
+              
+                σ
+                E
+              
+            
+            )
+          
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \varepsilon ={\frac {\sigma }{E}}+K\left({\frac {\sigma }{E}}\right)^{n}}
+  
+
+where
+
+  
+    
+      
+        ε
+      
+    
+    {\displaystyle \varepsilon }
+   is strain,
+
+  
+    
+      
+        σ
+      
+    
+    {\displaystyle \sigma }
+   is stress,
+
+  
+    
+      
+        E
+      
+    
+    {\displaystyle E}
+   is Young's modulus, and
+
+  
+    
+      
+        K
+      
+    
+    {\displaystyle K}
+   and 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+   are constants that depend on the material being considered.
+The first term on the right side, 
+  
+    
+      
+        
+          σ
+        
+        
+          /
+        
+        
+          E
+        
+        
+      
+    
+    {\displaystyle {\sigma }/{E}\,}
+  , is equal to the elastic part of the strain, while the second term, 
+  
+    
+      
+         
+        K
+        (
+        
+          σ
+        
+        
+          /
+        
+        
+          E
+        
+        
+          )
+          
+            n
+          
+        
+      
+    
+    {\displaystyle \ K({\sigma }/{E})^{n}}
+  , accounts for the plastic part, the parameters 
+  
+    
+      
+        K
+      
+    
+    {\displaystyle K}
+   and 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+   describing the hardening behavior of the material. Introducing the yield strength of the material, 
+  
+    
+      
+        
+          σ
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \sigma _{0}}
+  , and defining a new parameter, 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  , related to 
+  
+    
+      
+        K
+      
+    
+    {\displaystyle K}
+   as 
+  
+    
+      
+        α
+        =
+        K
+        (
+        
+          
+            σ
+            
+              0
+            
+          
+        
+        
+          /
+        
+        
+          E
+        
+        
+          )
+          
+            n
+            −
+            1
+          
+        
+        
+      
+    
+    {\displaystyle \alpha =K({\sigma _{0}}/{E})^{n-1}\,}
+  , it is convenient to rewrite the term on the extreme right side as follows:
+
+  
+    
+      
+         
+        K
+        
+          
+            (
+            
+              
+                σ
+                E
+              
+            
+            )
+          
+          
+            n
+          
+        
+        =
+        α
+        
+          
+            σ
+            E
+          
+        
+        
+          
+            (
+            
+              
+                σ
+                
+                  σ
+                  
+                    0
+                  
+                
+              
+            
+            )
+          
+          
+            n
+            −
+            1
+          
+        
+      
+    
+    {\displaystyle \ K\left({\frac {\sigma }{E}}\right)^{n}=\alpha {\frac {\sigma }{E}}\left({\frac {\sigma }{\sigma _{0}}}\right)^{n-1}}
+  
+
+Replacing in the first expression, the Ramberg–Osgood equation can be written as
+
+  
+    
+      
+        ε
+        =
+        
+          
+            σ
+            E
+          
+        
+        +
+        α
+        
+          
+            σ
+            E
+          
+        
+        
+          
+            (
+            
+              
+                σ
+                
+                  σ
+                  
+                    0
+                  
+                
+              
+            
+            )
+          
+          
+            n
+            −
+            1
+          
+        
+      
+    
+    {\displaystyle \varepsilon ={\frac {\sigma }{E}}+\alpha {\frac {\sigma }{E}}\left({\frac {\sigma }{\sigma _{0}}}\right)^{n-1}}

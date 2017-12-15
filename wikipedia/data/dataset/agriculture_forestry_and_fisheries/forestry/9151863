@@ -1,0 +1,7 @@
+In digital photography, dark-frame subtraction is a way to minimize image noise for pictures taken with long exposure times. It takes advantage of the fact that a component of image noise, known as fixed-pattern noise, is the same from shot to shot: noise from the sensor, dead or hot pixels. It works by taking a picture with the shutter closed.
+
+A dark frame is an image captured with the sensor in the dark, essentially just an image of noise in an image sensor. A dark frame, or an average of several dark frames, can then be subtracted from subsequent images to correct for fixed-pattern noise such as that caused by dark current. Dark-frame subtraction has been done for some time in scientific imaging; many newer consumer digital cameras offer it as an option, or may do it automatically for exposures beyond a certain time. However, automatic dark frame subtraction is not implemented in cell phones since it requires a mechanical shutter in front of the lens, which cell phones lack.
+Visible fixed-pattern noise is often caused by hot pixels – pixel sensors with higher than normal dark current. On long exposure, they can appear as bright pixels. Photosites on the sensor that always appear as brighter pixels are called stuck pixels while sensors that only brighten up after long exposure are called hot pixels.
+The dark-frame-subtraction technique is also used in digital photogrammetry, to improve the contrast of satellite and air photograms, and is considered part of "best practice", along with flat-field correction, for astrophotography.
+
+

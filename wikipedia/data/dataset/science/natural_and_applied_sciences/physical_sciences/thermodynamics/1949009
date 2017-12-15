@@ -1,0 +1,47 @@
+In thermal physics and thermodynamics, the heat capacity ratio or adiabatic index or ratio of specific heats or Poisson constant, is the ratio of the heat capacity at constant pressure (CP) to heat capacity at constant volume (CV). It is sometimes also known as the isentropic expansion factor and is denoted by γ (gamma) for an ideal gas or κ (kappa), the isentropic exponent for a real gas. The symbol gamma is used by aerospace and chemical engineers.
+
+  
+    
+      
+        γ
+        =
+        
+          
+            
+              C
+              
+                P
+              
+            
+            
+              C
+              
+                V
+              
+            
+          
+        
+        =
+        
+          
+            
+              c
+              
+                P
+              
+            
+            
+              c
+              
+                V
+              
+            
+          
+        
+      
+    
+    {\displaystyle \gamma ={\frac {C_{P}}{C_{V}}}={\frac {c_{P}}{c_{V}}}}
+  
+where C is the heat capacity and c the specific heat capacity (heat capacity per unit mass) of a gas. The suffixes P and V refer to constant pressure and constant volume conditions, respectively.
+To understand this relation, consider the following thought experiment. A closed pneumatic cylinder contains air. The piston is locked. The pressure inside is equal to atmospheric pressure. This cylinder is heated to a certain target temperature. Since the piston cannot move, the volume is constant. The temperature and pressure will rise. When the target temperature is reached, the heating is stopped. The amount of energy added equals CVΔT, with ΔT representing the change in temperature. The piston is now freed and moves outwards, stopping as the pressure inside the chamber reaches atmospheric pressure. We assume the expansion occurs without exchange of heat (adiabatic expansion). Doing this work, air inside the cylinder will cool to below the target temperature. To return to the target temperature (still with a free piston), the air must be heated, but is no longer under constant volume since the piston is free to move as the gas is reheated. This extra heat amounts to about 40% more than the previous amount added. In this example, the amount of heat added with a locked piston is proportional to CV, whereas the total amount of heat added is proportional to CP. Therefore, the heat capacity ratio in this example is 1.4.
+Another way of understanding the difference between CP and CV is that CP applies if work is done to the system which causes a change in volume (such as by moving a piston so as to compress the contents of a cylinder), or if work is done by the system which changes its temperature (such as heating the gas in a cylinder to cause a piston to move). CV applies only if P dV – that is, the work done – is zero. Consider the difference between adding heat to the gas with a locked piston, and adding heat with a piston free to move, so that pressure remains constant. In the second case, the gas will both heat and expand, causing the piston to do mechanical work on the atmosphere. The heat that is added to the gas goes only partly into heating the gas, while the rest is transformed into the mechanical work performed by the piston. In the first, constant-volume case (locked piston) there is no external motion, and thus no mechanical work is done on the atmosphere; CV is used. In the second case, additional work is done as the volume changes, so the amount of heat required to raise the gas temperature (the specific heat capacity) is higher for this constant pressure case.

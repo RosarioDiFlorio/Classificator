@@ -1,0 +1,300 @@
+A Quantum Well Infrared Photodetector (QWIP) is an infrared photodetector, which uses electronic intersubband transitions in quantum wells to absorb photons. The basic elements of a QWIP are quantum wells, which are separated by barriers. The quantum wells are designed to have one confined state inside the well and a first excited state which aligns with the top of the barrier. The wells are n-doped such that the ground state is filled with electrons. The barriers are wide enough to prevent quantum tunneling between the quantum wells. Typical QWIPs consists of 20 to 50 quantum wells. When a bias voltage is applied to the QWIP, the entire conduction band is tilted. Without light the electrons in the quantum wells just sit in the ground state. When the QWIP is illuminated with light of the same or higher energy as the intersubband transition energy, an electron is excited.
+
+Once the electron is in an excited state, it can escape into the continuum and be measured as photocurrent. To externally measure a photocurrent the electrons need to be extracted by applying an electric field to the quantum wells. The efficiency of this absorption and extraction process depends on several parameters.
+Photocurrent
+Assuming that the detector is illuminated with a photon flux 
+  
+    
+      
+        ϕ
+      
+    
+    {\displaystyle \phi }
+   (number of photons per unit time), the photocurrent 
+  
+    
+      
+        
+          I
+          
+            p
+            h
+          
+        
+      
+    
+    {\displaystyle I_{ph}}
+   is
+
+  
+    
+      
+        
+          I
+          
+            p
+            h
+          
+        
+        =
+        e
+        ϕ
+        η
+        
+          g
+          
+            p
+            h
+          
+        
+      
+    
+    {\displaystyle I_{ph}=e\phi \eta g_{ph}}
+  
+where 
+  
+    
+      
+        e
+      
+    
+    {\displaystyle e}
+   is the elementary charge, 
+  
+    
+      
+        η
+      
+    
+    {\displaystyle \eta }
+   is the absorption efficiency and 
+  
+    
+      
+        
+          g
+          
+            p
+            h
+          
+        
+      
+    
+    {\displaystyle g_{ph}}
+   is the photoconductive gain. 
+  
+    
+      
+        η
+      
+    
+    {\displaystyle \eta }
+   and 
+  
+    
+      
+        
+          g
+          
+            p
+            h
+          
+        
+      
+    
+    {\displaystyle g_{ph}}
+   are the probabilities for a photon to add an electron to the photocurrent, also called quantum efficiency. 
+  
+    
+      
+        η
+      
+    
+    {\displaystyle \eta }
+   is the probability of a photon exciting an electron, and 
+  
+    
+      
+        
+          g
+          
+            p
+            h
+          
+        
+      
+    
+    {\displaystyle g_{ph}}
+   depends on the electronic transport properties.
+Photoconductive gain
+The photoconductive gain 
+  
+    
+      
+        
+          g
+          
+            p
+            h
+          
+        
+      
+    
+    {\displaystyle g_{ph}}
+   is the probability that an excited electron contributes to the photocurrent—or more generally, the number of electrons in the external circuit, divided by the number of quantum well electrons that absorb a photon. Although it might be counterintuitive at first, it is possible for 
+  
+    
+      
+        
+          g
+          
+            p
+            h
+          
+        
+      
+    
+    {\displaystyle g_{ph}}
+   to be larger than one. Whenever an electron is excited and extracted as photocurrent, an extra electron is injected from the opposite (emitter) contact to balance the loss of electrons from the quantum well. In general the capture probability 
+  
+    
+      
+        
+          p
+          
+            c
+          
+        
+        ≤
+        1
+      
+    
+    {\displaystyle p_{c}\leq 1}
+  , so an injected electron might sometimes pass over the quantum well and into the opposite contact. In that case, yet another electron is injected from the emitter contact to balance the charge, and again heads towards the well where it might or might not get captured, and so on, until eventually an electron is captured in the well. In this way, 
+  
+    
+      
+        
+          g
+          
+            p
+            h
+          
+        
+      
+    
+    {\displaystyle g_{ph}}
+   can become larger than one.
+
+The exact value of 
+  
+    
+      
+        
+          g
+          
+            p
+            h
+          
+        
+      
+    
+    {\displaystyle g_{ph}}
+   is determined by the ratio of capture probability 
+  
+    
+      
+        
+          p
+          
+            c
+          
+        
+      
+    
+    {\displaystyle p_{c}}
+   and escape probability 
+  
+    
+      
+        
+          p
+          
+            e
+          
+        
+      
+    
+    {\displaystyle p_{e}}
+  .
+
+  
+    
+      
+        
+          g
+          
+            p
+            h
+          
+        
+        =
+        
+          
+            
+              p
+              
+                e
+              
+            
+            
+              N
+              
+              
+                p
+                
+                  c
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle g_{ph}={\frac {p_{e}}{N\,p_{c}}}}
+  
+where 
+  
+    
+      
+        N
+      
+    
+    {\displaystyle N}
+   is the number of quantum wells. The number of quantum wells appears only in the denominator, as it increases the capture probability 
+  
+    
+      
+        
+          p
+          
+            c
+          
+        
+      
+    
+    {\displaystyle p_{c}}
+  , but not the escape probability 
+  
+    
+      
+        
+          p
+          
+            e
+          
+        
+      
+    
+    {\displaystyle p_{e}}
+  .

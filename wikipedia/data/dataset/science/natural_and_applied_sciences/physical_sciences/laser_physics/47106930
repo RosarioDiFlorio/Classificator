@@ -1,0 +1,15 @@
+LED (Light-emitting diode) to LED communication, also known as “Mobile Device Light Communications” are sundry techniques which repurpose mobile computer devices, including mobile telephones, to communicate with other devices, using visual or infrared light.
+
+“Mobile device light communication” differs from Visual Light Communication as “mobile device light communication” transmits data at speeds thousands of times slower than Li-fi.
+
+“Mobile Device Light Communication” takes various forms:
+The mobile device flashlight LED (also called the camera flash LED) can send visual light signals in the form of white light flashes.
+The mobile device infrared proximity emitter and sensor can send infrared flashes and receive infrared flashes.
+The liquid crystal display (LCD) or LED display of the mobile device can send visual light signals in the form of colored display flashes.
+A color sensor, or an ambient light sensor, or a reverse biased LED can receive flashes from the mobile device, and send flashes back to the infrared light sensor on the mobile device.
+Picalico exploits the features of two iOS mobile devices. Light Message also does so for Android.
+“Mobile device light communication” is low cost, since the hardware for mobile light communication is often already a component of the mobile device assembly. Adding the capability of receiving mobile light communication to electronic gadgets is also low cost, since a reverse biased LED or color sensor chip costs very little.
+“Mobile device light communication” is orders of magnitude slower than Bluetooth, or Li-fi. “Mobile device light communication” is suitable for low cost basic mobile telephones that lack Bluetooth or iBeacon. “Mobile device light communication” is also suitable as a backup communication system, when Bluetooth fails.
+“Mobile device light communication” is the basis for the German banking ATM system flicker code procedure.
+Since many electronic devices have a display or LEDs, “mobile device light communication” can be added to these devices. Devices like CRT monitors, tablets, watches, laptops, LED flashers, wristbands, and other gadgets with displays or LEDs can accommodate mobile light communication. Bg-fi is a mobile light JavaScript which can be adapted to devices running Java.
+Mobile device light communication is described in patents 5136644, 5488571, 5742260, 6977868, 20090232515, 20140082076, EP1211841B1, EP1788509A1, GB2376115A1, WO2011007380A1, and by patents pending.

@@ -1,0 +1,85 @@
+The Fisher equation in financial mathematics and economics estimates the relationship between nominal and real interest rates under inflation. It is named after Irving Fisher, who was famous for his works on the theory of interest. In finance, the Fisher equation is primarily used in YTM calculations of bonds or IRR calculations of investments. In economics, this equation is used to predict nominal and real interest rate behavior.
+Letting r denote the real interest rate, i denote the nominal interest rate, and let π denote the inflation rate, the Fisher equation is:
+
+  
+    
+      
+        i
+        ≈
+        r
+        +
+        π
+      
+    
+    {\displaystyle i\approx r+\pi }
+  
+This is a linear approximation, but as here, it is often written as an equality:
+
+  
+    
+      
+        i
+        =
+        r
+        +
+        π
+      
+    
+    {\displaystyle i=r+\pi }
+  
+The Fisher equation can be used in either ex-ante (before) or ex-post (after) analysis. Ex-post, it can be used to describe the real purchasing power of a loan:
+
+  
+    
+      
+        r
+        =
+        i
+        −
+        π
+      
+    
+    {\displaystyle r=i-\pi }
+  
+Rearranged into an expectations augmented Fisher equation and given a desired real rate of return and an expected rate of inflation πe (with superscript e meaning "expected") over the period of a loan, it can be used as an ex-ante version to decide upon the nominal rate that should be charged for the loan:
+
+  
+    
+      
+        i
+        =
+        r
+        +
+        
+          π
+          
+            e
+          
+        
+      
+    
+    {\displaystyle i=r+\pi ^{e}}
+  
+This equation existed before Fisher, but Fisher proposed a better approximation which is given below. The approximation can be derived from the exact equation:
+
+  
+    
+      
+        1
+        +
+        i
+        =
+        (
+        1
+        +
+        r
+        )
+        (
+        1
+        +
+        π
+        )
+        .
+      
+    
+    {\displaystyle 1+i=(1+r)(1+\pi ).}

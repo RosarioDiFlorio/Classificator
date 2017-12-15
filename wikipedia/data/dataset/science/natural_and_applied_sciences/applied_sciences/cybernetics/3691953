@@ -1,0 +1,2 @@
+NETtalk is an artificial neural network. It is the result of research carried out in the mid-1980s by Terrence Sejnowski and Charles Rosenberg. The intent behind NETtalk was to construct simplified models that might shed light on the complexity of learning human level cognitive tasks, and their implementation as a connectionist model that could also learn to perform a comparable task.
+NETtalk is a program that learns to pronounce written English text by being shown text as input and matching phonetic transcriptions for comparison.

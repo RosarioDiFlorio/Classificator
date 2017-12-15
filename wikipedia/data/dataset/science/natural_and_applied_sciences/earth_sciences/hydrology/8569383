@@ -1,0 +1,32 @@
+Groundwater discharge is the volumetric flow rate of groundwater through an aquifer.
+Total groundwater discharge, as reported through a specified area, is similarly expressed as:
+
+  
+    
+      
+        Q
+        =
+        
+          
+            
+              d
+              h
+            
+            
+              d
+              l
+            
+          
+        
+        K
+        A
+      
+    
+    {\displaystyle Q={\frac {dh}{dl}}KA}
+  
+where
+Q is the total groundwater discharge ([L3·T−1]; m3/s),
+K is the hydraulic conductivity of the aquifer ([L·T−1]; m/s),
+dh/dl is the hydraulic gradient ([L·L−1]; unitless), and
+A is the area which the groundwater is flowing through ([L2]; m2)
+For example, this can be used to determine the flow rate of water flowing along a plane with known geometry.

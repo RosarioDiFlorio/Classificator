@@ -1,0 +1,9 @@
+Oracle LogMiner, a utility provided by Oracle Corporation to purchasers of its Oracle database, provides methods of querying logged changes made to an Oracle database, principally though SQL commands referencing data in Oracle redo logs. A GUI interface for the functionality comes with the Oracle Enterprise Manager product.
+LogMiner turns the concept and practices of data mining on the internal processes of the database itself.
+Database administrators can use LogMiner to:
+identify the time of a database-event
+isolate transactions carried out in error by users
+determine steps needed for the recovery of inadvertent changes to data
+assemble data on actual usage for use in performance-tuning and capacity-planning
+auditing the operation of any commands run against the database
+Note that LogMiner uses Oracle logs to reconstruct exactly how data changed, whereas the complementary utility Oracle Flashback addresses, reconstructs and presents the finished results of such changes, giving a view of the database at some point in time.

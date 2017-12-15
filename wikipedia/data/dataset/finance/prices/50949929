@@ -1,0 +1,6 @@
+Algorithmic pricing is the practice of automatically setting the requested price for items for sale, in order to maximize the seller's profits.
+Dynamic pricing algorithms usually rely on one or more of the following data.
+Probabilistic and statistical information on potential buyers; see Bayesian-optimal pricing.
+Prices of competitors. E.g., a seller of an item may automatically detect the lowest price currently offered for that item, and suggest a price within $1 of that price.
+Personal information of the currently active buyer, such as his demographics and his interest in the product. If the seller detects that you are about to buy, your price goes up.
+Business information of the seller, such as the expected date in which he is going to receive new stocks, or his target selling velocity in units per day.

@@ -1,0 +1,1 @@
+A voltage regulator module (VRM), sometimes called processor power module (PPM), is a buck converter that provides a microprocessor the appropriate supply voltage, converting +5 V or +12 V to a much lower voltage required by the CPU, allowing processors with different supply voltage to be mounted on the same motherboard.

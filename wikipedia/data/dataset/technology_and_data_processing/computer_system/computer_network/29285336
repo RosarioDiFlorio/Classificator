@@ -1,0 +1,8 @@
+ISO 15765-2, or ISO-TP (Transport Layer), is an international standard for sending data packets over a CAN-Bus. The protocol allows for the transport of messages that exceed the eight byte maximum payload of CAN frames. ISO-TP segments longer messages into multiple frames, adding metadata that allows the interpretation of individual frames and reassembly into a complete message packet by the recipient. It can carry up to 4095 bytes of payload per message packet.
+In the OSI Model, ISO-TP covers the layer 3 (network layer) and 4 (transport layer).
+The most common application for ISO-TP is the transfer of diagnostic messages with OBD-2 equipped vehicles using KWP2000 and UDS, but is used broadly in other application-specific CAN implementations.
+ISO-TP can be operated with its own addressing as so-called Extended Addressing or without address using only the CAN ID (so-called Normal Addressing). Extended addressing uses the first data byte of each frame as an additional element of the address, reducing the application payload by one byte. For clarity the protocol description below is based on Normal Addressing with eight byte CAN frames. In total, six types of addressing are allowed by the ISO 15765-2 Protocol.
+ISO-TP prepends one or more metadata bytes to the payload data in the eight byte CAN frame, reducing the payload to seven or fewer bytes per frame. The metadata is called the Protocol Control Information, or PCI. The PCI is one, two or three bytes. The initial field is four bits indicating the frame type, and implicitly describing the PCI length.
+The ISO-TP defines four frame types:
+
+

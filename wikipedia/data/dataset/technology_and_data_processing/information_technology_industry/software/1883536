@@ -1,0 +1,3 @@
+exit is a command used in many operating system command line shells and scripting languages. The command causes the shell or program to terminate. If performed within an interactive command shell, the user is logged out of their current session, and/or user's current console or terminal connection is disconnected. Typically an optional exit code can be specified, which is typically a simple integer value that is then returned to the parent process. Scripting languages providing this command include sh, ksh, Perl, AWK, PHP, TCL, and others.
+
+

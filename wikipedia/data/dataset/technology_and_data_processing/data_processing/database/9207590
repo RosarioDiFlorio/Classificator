@@ -1,0 +1,4 @@
+A precedence graph, also named conflict graph and serializability graph, is used in the context of concurrency control in databases.
+The precedence graph for a schedule S contains:
+A node for each committed transaction in S
+An arc from Ti to Tj if an action of Ti precedes and conflicts with one of Tj's actions.

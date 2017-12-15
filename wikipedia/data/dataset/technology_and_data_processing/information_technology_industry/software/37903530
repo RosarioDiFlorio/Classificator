@@ -1,0 +1,9 @@
+Diff-Text is a free software tool which finds the differences between two blocks of plain text. It takes the form of a collection of web-pages, each one with a slightly different layout. Text to be compared is pasted directly into the web-page. It can be used from any operating system.
+Diff-Text was developed by DiffEngineX LLC and uses improved algorithms originally developed for the spreadsheet compare tool DiffEngineX
+It allows the user to choose between comparing at the level of whole lines (or paragraphs), words or characters. If comparing whole lines only the fact that a line is not in the other block will be reported. Diff Text considers a paragraph to be any line ending with a Windows, Macintosh or Unix line terminator.
+The website can combine the original and modified text blocks into one pane with all differences highlighted. Alternatively the marked-up original and modified text blocks can be displayed in individual panes.
+Navigation from one difference to the next is supported.
+All of the above features are not unique and can be found in other text comparison tools.
+The software can display just the differences, the differences with a variable amount of context on either side or the whole marked-up text.
+The website supports the use of https/SSL (Secure Sockets Layer) so confidential text can be compared.
+The algorithm used by Diff Text is used by Selection Diff Tool, which is an app for Microsoft Word and Excel 2013.

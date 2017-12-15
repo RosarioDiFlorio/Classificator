@@ -1,0 +1,318 @@
+A yield surface is a five-dimensional surface in the six-dimensional space of stresses. The yield surface is usually convex and the state of stress of inside the yield surface is elastic. When the stress state lies on the surface the material is said to have reached its yield point and the material is said to have become plastic. Further deformation of the material causes the stress state to remain on the yield surface, even though the shape and size of the surface may change as the plastic deformation evolves. This is because stress states that lie outside the yield surface are non-permissible in rate-independent plasticity, though not in some models of viscoplasticity.
+The yield surface is usually expressed in terms of (and visualized in) a three-dimensional principal stress space (
+  
+    
+      
+        
+          σ
+          
+            1
+          
+        
+        ,
+        
+          σ
+          
+            2
+          
+        
+        ,
+        
+          σ
+          
+            3
+          
+        
+      
+    
+    {\displaystyle \sigma _{1},\sigma _{2},\sigma _{3}}
+  ), a two- or three-dimensional space spanned by stress invariants (
+  
+    
+      
+        
+          I
+          
+            1
+          
+        
+        ,
+        
+          J
+          
+            2
+          
+        
+        ,
+        
+          J
+          
+            3
+          
+        
+      
+    
+    {\displaystyle I_{1},J_{2},J_{3}}
+  ) or a version of the three-dimensional Haigh–Westergaard stress space. Thus we may write the equation of the yield surface (that is, the yield function) in the forms:
+
+  
+    
+      
+        f
+        (
+        
+          σ
+          
+            1
+          
+        
+        ,
+        
+          σ
+          
+            2
+          
+        
+        ,
+        
+          σ
+          
+            3
+          
+        
+        )
+        =
+        0
+        
+      
+    
+    {\displaystyle f(\sigma _{1},\sigma _{2},\sigma _{3})=0\,}
+   where 
+  
+    
+      
+        
+          σ
+          
+            i
+          
+        
+      
+    
+    {\displaystyle \sigma _{i}}
+   are the principal stresses.
+
+  
+    
+      
+        f
+        (
+        
+          I
+          
+            1
+          
+        
+        ,
+        
+          J
+          
+            2
+          
+        
+        ,
+        
+          J
+          
+            3
+          
+        
+        )
+        =
+        0
+        
+      
+    
+    {\displaystyle f(I_{1},J_{2},J_{3})=0\,}
+   where 
+  
+    
+      
+        
+          I
+          
+            1
+          
+        
+      
+    
+    {\displaystyle I_{1}}
+   is the first principal invariant of the Cauchy stress and 
+  
+    
+      
+        
+          J
+          
+            2
+          
+        
+        ,
+        
+          J
+          
+            3
+          
+        
+      
+    
+    {\displaystyle J_{2},J_{3}}
+   are the second and third principal invariants of the deviatoric part of the Cauchy stress.
+
+  
+    
+      
+        f
+        (
+        p
+        ,
+        q
+        ,
+        r
+        )
+        =
+        0
+        
+      
+    
+    {\displaystyle f(p,q,r)=0\,}
+   where 
+  
+    
+      
+        p
+        ,
+        q
+      
+    
+    {\displaystyle p,q}
+   are scaled versions of 
+  
+    
+      
+        
+          I
+          
+            1
+          
+        
+      
+    
+    {\displaystyle I_{1}}
+   and 
+  
+    
+      
+        
+          J
+          
+            2
+          
+        
+      
+    
+    {\displaystyle J_{2}}
+   and 
+  
+    
+      
+        r
+      
+    
+    {\displaystyle r}
+   is a function of 
+  
+    
+      
+        
+          J
+          
+            2
+          
+        
+        ,
+        
+          J
+          
+            3
+          
+        
+      
+    
+    {\displaystyle J_{2},J_{3}}
+  .
+
+  
+    
+      
+        f
+        (
+        ξ
+        ,
+        ρ
+        ,
+        θ
+        )
+        =
+        0
+        
+      
+    
+    {\displaystyle f(\xi ,\rho ,\theta )=0\,}
+   where 
+  
+    
+      
+        ξ
+        ,
+        ρ
+      
+    
+    {\displaystyle \xi ,\rho }
+   are scaled versions of 
+  
+    
+      
+        
+          I
+          
+            1
+          
+        
+      
+    
+    {\displaystyle I_{1}}
+   and 
+  
+    
+      
+        
+          J
+          
+            2
+          
+        
+      
+    
+    {\displaystyle J_{2}}
+  , and 
+  
+    
+      
+        θ
+      
+    
+    {\displaystyle \theta }
+   is the Lode angle.
+
+

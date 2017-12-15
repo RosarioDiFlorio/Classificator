@@ -1,0 +1,9 @@
+McStas is free and open-source (GNU Public License) software simulator for neutron scattering experiments. McStas is an abbreviation for Monte carlo Simulation of triple axis spectrometers, but the software can be used to simulate all types of neutron scattering instruments. The software is based on both Monte Carlo methods and Ray tracing (physics). A special compiler translates a domain-specific language describing the neutron instrument geometry and component definitions (written in C) to a stand-alone C code.
+The basics of McStas was written in 1997 at Risø for simulation of their neutron experiments, that were based at the DR3 reactor that was shut down in year 2000. After the fusion of Risø with the Technical University of Denmark, McStas is currently developed at the Physics department of DTU and Institut Laue-Langevin, with involvement from the Niels Bohr Institute and Paul Scherrer Institute. The Copenhagen-based Data Management and Software Centre of the European Spallation Source is also expected to become a partner since many of the future instruments are being simulated using McStas.
+McXtrace, an equivalent simulation package using X-rays instead of neutrons, started being developed in 2009 and it is now freely available.
+Official partner sites are
+The Physics department at DTU
+The European Spallation Source
+The Institut Laue-Langevin
+The Niels Bohr Institute
+The Paul Scherrer Institute

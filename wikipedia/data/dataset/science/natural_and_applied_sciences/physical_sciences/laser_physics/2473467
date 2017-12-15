@@ -1,0 +1,95 @@
+An optical parametric oscillator (OPO) is a parametric oscillator that oscillates at optical frequencies. It converts an input laser wave (called "pump") with frequency 
+  
+    
+      
+        
+          ω
+          
+            p
+          
+        
+      
+    
+    {\displaystyle \omega _{p}}
+   into two output waves of lower frequency (
+  
+    
+      
+        
+          ω
+          
+            s
+          
+        
+        ,
+        
+          ω
+          
+            i
+          
+        
+      
+    
+    {\displaystyle \omega _{s},\omega _{i}}
+  ) by means of second-order nonlinear optical interaction. The sum of the output waves' frequencies is equal to the input wave frequency: 
+  
+    
+      
+        
+          ω
+          
+            s
+          
+        
+        +
+        
+          ω
+          
+            i
+          
+        
+        =
+        
+          ω
+          
+            p
+          
+        
+      
+    
+    {\displaystyle \omega _{s}+\omega _{i}=\omega _{p}}
+  . For historical reasons, the two output waves are called "signal" and "idler", where the output wave with higher frequency is the "signal". A special case is the degenerate OPO, when the output frequency is one-half the pump frequency, 
+  
+    
+      
+        
+          ω
+          
+            s
+          
+        
+        =
+        
+          ω
+          
+            i
+          
+        
+        =
+        
+          ω
+          
+            p
+          
+        
+        
+          /
+        
+        2
+      
+    
+    {\displaystyle \omega _{s}=\omega _{i}=\omega _{p}/2}
+  , which can result in half-harmonic generation when signal and idler have the same polarization.
+The first optical parametric oscillator was demonstrated by Joseph Giordmaine and Bob Miller in 1965, five years after the invention of the laser, at Bell Labs. Optical parametric oscillators are used as coherent light sources for various scientific purposes, and to generate squeezed light for quantum mechanics research. A Soviet report was also published in 1965.
+
+

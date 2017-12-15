@@ -1,0 +1,7 @@
+The International Terrestrial Reference System (ITRS) describes procedures for creating reference frames suitable for use with measurements on or near the Earth's surface. This is done in much the same way that a physical standard might be described as a set of procedures for creating a realization of that standard. The ITRS defines a geocentric system of coordinates using the SI system of measurement.
+An International Terrestrial Reference Frame (ITRF) is a realization of the ITRS. New ITRF solutions are produced every few years, using the latest mathematical and surveying techniques to attempt to realize the ITRS as precisely as possible. Due to experimental error, any given ITRF will differ very slightly from any other realization of the ITRF. Also, the difference between the latest WGS84 and the latest ITRF is only a few centimeters.
+Practical navigation systems are in general referenced to a specific ITRF solution, or to their own coordinate systems which are then referenced to an ITRF solution.
+The Galileo Terrestrial Reference Frame (GTRF) is used for the Galileo navigation system; currently defined as ITRF2005.
+The ITRS and ITRF solutions are maintained by the International Earth Rotation and Reference Systems Service (IERS). GTRF is defined by the European Space Agency (ESA).
+
+

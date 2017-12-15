@@ -4,7 +4,6 @@ import java.io.IOException;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
 
 
 /**
@@ -14,6 +13,7 @@ public class AppTest
 {
 
 	public static void main(String[] args) throws IOException{
+
 		TaxonomyRequester requester = new TaxonomyRequester("http://www.wheesbee.eu/taxonomy");
 
 		
@@ -27,6 +27,7 @@ public class AppTest
 				}
 
 		}
+
 	}
 
 	public void requestByUri(TaxonomyRequester requester) throws IOException{

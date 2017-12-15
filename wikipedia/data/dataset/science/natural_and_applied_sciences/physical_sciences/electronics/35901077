@@ -1,0 +1,3 @@
+OpenELEC (short for Open Embedded Linux Entertainment Center) is a Linux distribution designed for home theater PCs and based on the Kodi (formerly XBMC) media player.
+OpenELEC applies the "just enough operating system" principle. It is designed to consume relatively few resources and to boot quickly from flash memory. OpenELEC disk images for the Raspberry Pi series and Freescale i.MX6 based devices are also available.
+The OpenELEC team released OpenELEC 4.0 on 5 May 2014, and this version features updated XBMC 13.0 with further updated important parts of the operating system as well as the Linux kernel updated to version 3.14 and additional device drivers. OpenELEC 4.0 also switched its init system to systemd.

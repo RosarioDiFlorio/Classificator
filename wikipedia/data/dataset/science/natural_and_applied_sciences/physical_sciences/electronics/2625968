@@ -1,0 +1,5 @@
+DO-178B, Software Considerations in Airborne Systems and Equipment Certification is a guideline dealing with the safety of safety-critical software used in certain airborne systems. Although technically a guideline, it was a de facto standard for developing avionics software systems until it was replaced in 2012 by DO-178C.
+The FAA applies DO-178B as the document it uses for guidance to determine if the software will perform reliably in an airborne environment, when specified by the Technical Standard Order (TSO) for which certification is sought. In the United States, the introduction of TSOs into the airworthiness certification process, and by extension DO-178B, is explicitly established in Title 14: Aeronautics and Space of the Code of Federal Regulations (CFR), also known as the Federal Aviation Regulations, Part 21, Subpart O.
+It was jointly developed by the safety-critical working group RTCA SC-167 of RTCA and WG-12 of EUROCAE. RTCA published the document as RTCA/DO-178B, while EUROCAE published the document as ED-12B.
+
+

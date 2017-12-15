@@ -1,0 +1,4 @@
+PSPad editor is a freeware text editor and source editor intended for use by programmers. First released in 2001, this software is produced by a single Czech developer, Jan Fiala, for the Windows platform.
+PSPad has many software development-oriented features, such as syntax highlighting and hex editing, and is designed as a universal GUI for editing many languages including PHP, Perl, HTML, and Java. It integrates the use of many project formats for handling and saving multiple files. PSPad also edits UTF-8 encoded texts. Other features include autocompletion, tabs, FTP client and find/replace using regular expressions.
+PSPad interface is based on the MDI with tabs for editing multiple files and better open document manipulation.
+The software is packaged ready-to-run, so that no installer needs to be run, and it is semi-portable.

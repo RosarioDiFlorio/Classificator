@@ -1,0 +1,2 @@
+WPL (Windows Media Player Playlist) is a computer file format that stores multimedia playlists. It is a proprietary file format used in Microsoft Windows Media Player versions 9–12. The elements of WPL files are represented in XML format. The top-level element, smil, specifies that the file's elements follow the SMIL (Synchronized Multimedia Integration Language) structure.
+The file is saved with the "wpl" filename extension and its MIME type is application/vnd.ms-wpl.

@@ -1,0 +1,3 @@
+The rate of heat flow between two systems is measured in watts (joules per second). The formula for the rate of heat flow is
+∆Q/∆t = −K A ∆T/x,
+where ∆Q/∆t is the rate of heat flow, −K is the thermal conductivity factor, A is the surface area, ∆T is the change in temperature, and x is the thickness of the material (∆T/x is called the temperature gradient and is always negative because the heat always flows from the higher temperature to the lower).

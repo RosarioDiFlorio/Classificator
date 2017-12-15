@@ -1,0 +1,108 @@
+Forward osmosis (FO) is an osmotic process that, like reverse osmosis (RO), uses a semi-permeable membrane to effect separation of water from dissolved solutes. The driving force for this separation is an osmotic pressure gradient, such that a "draw" solution of high concentration (relative to that of the feed solution), is used to induce a net flow of water through the membrane into the draw solution, thus effectively separating the feed water from its solutes. In contrast, the reverse osmosis process uses hydraulic pressure as the driving force for separation, which serves to counteract the osmotic pressure gradient that would otherwise favor water flux from the permeate to the feed. Hence significantly more energy is required for reverse osmosis compared to forward osmosis.
+
+The simplest equation describing the relationship between osmotic and hydraulic pressures and water (solvent) flux is:
+
+  
+    
+      
+        
+          J
+          
+            w
+          
+        
+        =
+        A
+        
+          (
+          Δ
+          π
+          −
+          Δ
+          P
+          )
+        
+      
+    
+    {\displaystyle J_{w}=A\left(\Delta \pi -\Delta P\right)}
+  
+where 
+  
+    
+      
+        
+          J
+          
+            w
+          
+        
+      
+    
+    {\displaystyle J_{w}}
+   is water flux, A is the hydraulic permeability of the membrane, Δπ is the difference in osmotic pressures on the two sides of the membrane, and ΔP is the difference in hydrostatic pressure (negative values of 
+  
+    
+      
+        
+          J
+          
+            w
+          
+        
+      
+    
+    {\displaystyle J_{w}}
+   indicating reverse osmotic flow). The modeling of these relationships is in practice more complex than this equation indicates, with flux depending on the membrane, feed, and draw solution characteristics, as well as the fluid dynamics within the process itself.
+The solute flux (
+  
+    
+      
+        
+          J
+          
+            s
+          
+        
+      
+    
+    {\displaystyle J_{s}}
+  ) for each individual solute can be modelled by Fick’s Law
+
+  
+    
+      
+        
+          J
+          
+            s
+          
+        
+        =
+        B
+        Δ
+        c
+      
+    
+    {\displaystyle J_{s}=B\Delta c}
+  
+Where 
+  
+    
+      
+        B
+      
+    
+    {\displaystyle B}
+   is the solute permeability coefficient and 
+  
+    
+      
+        Δ
+        c
+      
+    
+    {\displaystyle \Delta c}
+   is the trans-membrane concentration differential for the solute. It is clear from this governing equation that a solute will diffuse from an area of high concentration to an area of low concentration. This is well known in reverse osmosis where solutes from the feedwater diffuse to the product water, however in the case of forward osmosis the situation can be far more complicated.
+In FO processes we may have solute diffusion in both directions depending on the composition of the draw solution and the feed water. This does two things; the draw solution solutes may diffuse to the feed solution and the feed solution solutes may diffuse to the draw solution. Clearly these phenomena have consequences in terms of the selection of the draw solution for any particular FO process. For instance the loss of draw solution may affect the feed solution perhaps due to environmental issues or contamination of the feed stream, such as in osmotic membrane bioreactors.
+An additional distinction between the reverse osmosis (RO) and forward osmosis (FO) processes is that the permeate water resulting from an RO process is in most cases fresh water ready for use. In the FO process, this is not the case. The membrane separation of the FO process in effect results in a "trade" between the solutes of the feed solution and the draw solution. Depending on the concentration of solutes in the feed (which dictates the necessary concentration of solutes in the draw) and the intended use of the product of the FO process, this step may be all that is required.
+The forward osmosis process is also known as osmosis or in the case of a number of companies who have coined their own terminology 'engineered osmosis' and 'manipulated osmosis'.

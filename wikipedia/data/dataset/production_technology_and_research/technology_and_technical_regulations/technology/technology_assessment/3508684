@@ -1,0 +1,3 @@
+A backup rotation scheme is a system of backing up data to computer media (such as tapes) that minimizes, by re-use, the number of media used. The scheme determines how and when each piece of removable storage is used for a backup job and how long it is retained once it has backup data stored on it. Different techniques have evolved over time to balance data retention and restoration needs with the cost of extra data storage media. Such a scheme can be quite complicated if it takes incremental backups, multiple retention periods, and off-site storage into consideration.
+
+

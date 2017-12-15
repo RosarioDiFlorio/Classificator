@@ -1,0 +1,2 @@
+Coupon leverage, or leverage factor, is the amount by which a reference rate is multiplied to determine the floating interest rate payable by an inverse floater. Some debt instruments leverage the particular effects of interest rate changes, most commonly in inverse floaters.
+As an example, an inverse floater with a multiple may pay interest at the rate, or coupon, of 22 percent minus the product of 2 times the 1-month London Interbank Offered Rate (LIBOR). The coupon leverage is 2, in this example, and the reference rate is the 1-month LIBOR.

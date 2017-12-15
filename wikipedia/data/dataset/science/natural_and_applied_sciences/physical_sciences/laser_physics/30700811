@@ -1,0 +1,87 @@
+In nonlinear optics, B-Integral is a measure of the nonlinear phase shift of light. It calculates the exponential growth of the least stable spatial frequency in a laser beam, and is the numerical equivalent of the nonlinear phase shift along the laser system's optical axis.
+In a multipass laser system as a cumulative measure of the nonlinear interaction, this integral is given by:
+
+  
+    
+      
+        B
+        =
+        
+          
+            
+              2
+              π
+            
+            λ
+          
+        
+        ∫
+        
+        
+          n
+          
+            2
+          
+        
+        I
+        (
+        z
+        )
+        
+        d
+        z
+        
+      
+    
+    {\displaystyle B={\frac {2\pi }{\lambda }}\int \!n_{2}I(z)\,dz\,}
+  
+where 
+  
+    
+      
+        I
+        (
+        z
+        )
+      
+    
+    {\displaystyle I(z)}
+   is the optical intensity along the beam axis, 
+  
+    
+      
+        z
+      
+    
+    {\displaystyle z}
+   the position in beam direction, and 
+  
+    
+      
+        
+          n
+          
+            2
+          
+        
+      
+    
+    {\displaystyle n_{2}}
+   the nonlinear index quantifying the Kerr nonlinearity. As 
+  
+    
+      
+        
+          n
+          
+            2
+          
+        
+        I
+        (
+        z
+        )
+      
+    
+    {\displaystyle n_{2}I(z)}
+   is the nonlinear change in the refractive index, one easily recognizes the B integral to be the total on-axis nonlinear phase shift accumulated in a passage through the device. The B integral is frequently used in the context of ultrafast amplifiers, e.g. for optical components such as the Pockels cell of a regenerative amplifier.

@@ -1,0 +1,213 @@
+The Malmquist Index (MI) is a bilateral index that can be used to compare the production technology of two economies. It is named after Professor Sten Malmquist, on whose ideas it is based. It is also called the Malmquist Productivity Index.
+The MI is based on the concept of the Production function. This is a function of maximum possible production, with respect to a set of inputs pertaining to capital and labour. So, if 
+  
+    
+      
+        
+          S
+          
+            a
+          
+        
+      
+    
+    {\displaystyle S_{a}}
+   is the set of labour and capital inputs to the production function of Economy A, and 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+   is the production function of Economy A, we could write 
+  
+    
+      
+        Q
+        =
+        
+          f
+          
+            a
+          
+        
+        (
+        
+          S
+          
+            a
+          
+        
+        )
+      
+    
+    {\displaystyle Q=f_{a}(S_{a})}
+  .
+While the production function would normally apply to an enterprise, it is possible to calculate it for an entire region or nation. This would be called the aggregate production function.
+To calculate the Malmquist Index of economy A with respect to economy B, we must substitute the labour and capital inputs of economy A into the production function of B, and vice versa. The formula for MI is given below.
+
+  
+    
+      
+        M
+        I
+        =
+        
+          
+            (
+            
+              Q
+              
+                1
+              
+            
+            
+              Q
+              
+                2
+              
+            
+            )
+            
+              /
+            
+            (
+            
+              Q
+              
+                3
+              
+            
+            
+              Q
+              
+                4
+              
+            
+            )
+          
+        
+      
+    
+    {\displaystyle MI={\sqrt {(Q_{1}Q_{2})/(Q_{3}Q_{4})}}}
+  
+where
+
+  
+    
+      
+        
+          Q
+          
+            1
+          
+        
+        =
+        
+          f
+          
+            a
+          
+        
+        (
+        
+          S
+          
+            a
+          
+        
+        )
+      
+    
+    {\displaystyle Q_{1}=f_{a}(S_{a})}
+  
+
+  
+    
+      
+        
+          Q
+          
+            2
+          
+        
+        =
+        
+          f
+          
+            a
+          
+        
+        (
+        
+          S
+          
+            b
+          
+        
+        )
+      
+    
+    {\displaystyle Q_{2}=f_{a}(S_{b})}
+  
+
+  
+    
+      
+        
+          Q
+          
+            3
+          
+        
+        =
+        
+          f
+          
+            b
+          
+        
+        (
+        
+          S
+          
+            a
+          
+        
+        )
+      
+    
+    {\displaystyle Q_{3}=f_{b}(S_{a})}
+  
+
+  
+    
+      
+        
+          Q
+          
+            4
+          
+        
+        =
+        
+          f
+          
+            b
+          
+        
+        (
+        
+          S
+          
+            b
+          
+        
+        )
+      
+    
+    {\displaystyle Q_{4}=f_{b}(S_{b})}
+  
+Note that the MI of A with respect to B is the reciprocal of the MI of B with respect to A. If the MI of A with respect to B is greater than 1, the aggregate production technology of economy A is superior to that of economy B.
+The Malmquist Index was introduced in the 1982 paper, "Multilateral Comparisons of Output, Input and Productivity Using Superlative Index Numbers", by Douglas W. Caves, Laurits R. Christensen and W. Erwin Diewert.

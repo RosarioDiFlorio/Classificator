@@ -1,0 +1,1 @@
+Local independence is the underlying assumption of latent variable models. The observed items are conditionally independent of each other given an individual score on the latent variable(s). This means that the latent variable explains why the observed items are related to another. This can be explained by the following example.

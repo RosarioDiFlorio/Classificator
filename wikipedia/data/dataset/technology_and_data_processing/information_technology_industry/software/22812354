@@ -1,0 +1,1 @@
+IIIMF (Internet/Intranet Input Method Framework) is the default input method framework for Chinese (Simplified and Traditional), Japanese and Korean on old Fedora Linux systems. Since Fedora Core 5, SCIM has been selected as the default input method framework instead. Developed by Hideki Hiura, it supports Unicode and allows multiple language engines to run at the same time.

@@ -1,0 +1,4 @@
+Dragon refers to any of several remote sensing image processing software packages. This software provides capabilities for displaying, analyzing, and interpreting digital images from earth satellites and raster data files that represent spatially distributed data. All the Dragon packages derive from code created by Goldin-Rudahl Systems, Incorporated, and focus on geography education:
+OpenDragon is free to educational users. It was intended to be free worldwide, as well as open source (hence the name) but due to funding problems, is currently available only in Southeast Asia.
+Dragon Academic is functionally identical to OpenDragon.
+Dragon Professional is expanded to handle full-scene data sets from sensors such as Landsat TM, SPOT, and Aster.

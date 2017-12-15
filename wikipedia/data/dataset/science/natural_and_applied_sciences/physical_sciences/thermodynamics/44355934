@@ -1,0 +1,366 @@
+The region of space enclosed by open system boundaries is usually called a control volume. It may or may not correspond to physical walls. It is convenient to define the shape of the control volume so that all flow of matter, in or out, occurs perpendicular to its surface. One may consider a process in which the matter flowing into and out of the system is chemically homogeneous. Then the inflowing matter performs work as if it were driving a piston of fluid into the system. Also, the system performs work as if it were driving out a piston of fluid. Through the system walls that do not pass matter, heat (δQ) and work (δW) transfers may be defined, including shaft work.
+Classical thermodynamics considers processes for a system that is initially and finally in its own internal state of thermodynamic equilibrium, with no flow. This is feasible also under some restrictions, if the system is a mass of fluid flowing at a uniform rate. Then for many purposes a process, called a flow process, may be considered in accord with classical thermodynamics as if the classical rule of no flow were effective. For the present introductory account, it is supposed that the kinetic energy of flow, and the potential energy of elevation in the gravity field, do not change, and that the walls, other than the matter inlet and outlet, are rigid and motionless.
+Under these conditions, the first law of thermodynamics for a flow process states: the increase in the internal energy of a system is equal to the amount of energy added to the system by matter flowing in and by heating, minus the amount lost by matter flowing out and in the form of work done by the system. Under these conditions, the first law for a flow process is written:
+
+  
+    
+      
+        
+          d
+        
+        U
+        =
+        
+          d
+        
+        
+          U
+          
+            i
+            n
+          
+        
+        +
+        δ
+        Q
+        −
+        
+          d
+        
+        
+          U
+          
+            o
+            u
+            t
+          
+        
+        −
+        δ
+        W
+        
+      
+    
+    {\displaystyle \mathrm {d} U=\mathrm {d} U_{in}+\delta Q-\mathrm {d} U_{out}-\delta W\,}
+  
+where Uin and Uout respectively denote the average internal energy entering and leaving the system with the flowing matter.
+There are then two types of work performed: 'flow work' described above, which is performed on the fluid in the control volume (this is also often called 'PV work'), and 'shaft work', which may be performed by the fluid in the control volume on some mechanical device with a shaft. These two types of work are expressed in the equation:
+
+  
+    
+      
+        δ
+        W
+        =
+        
+          d
+        
+        (
+        
+          P
+          
+            o
+            u
+            t
+          
+        
+        
+          V
+          
+            o
+            u
+            t
+          
+        
+        )
+        −
+        
+          d
+        
+        (
+        
+          P
+          
+            i
+            n
+          
+        
+        
+          V
+          
+            i
+            n
+          
+        
+        )
+        +
+        δ
+        
+          W
+          
+            s
+            h
+            a
+            f
+            t
+          
+        
+        
+      
+    
+    {\displaystyle \delta W=\mathrm {d} (P_{out}V_{out})-\mathrm {d} (P_{in}V_{in})+\delta W_{shaft}\,}
+  
+Substitution into the equation above for the control volume cv yields:
+
+  
+    
+      
+        
+          d
+        
+        
+          U
+          
+            c
+            v
+          
+        
+        =
+        
+          d
+        
+        
+          U
+          
+            i
+            n
+          
+        
+        +
+        
+          d
+        
+        (
+        
+          P
+          
+            i
+            n
+          
+        
+        
+          V
+          
+            i
+            n
+          
+        
+        )
+        −
+        
+          d
+        
+        
+          U
+          
+            o
+            u
+            t
+          
+        
+        −
+        
+          d
+        
+        (
+        
+          P
+          
+            o
+            u
+            t
+          
+        
+        
+          V
+          
+            o
+            u
+            t
+          
+        
+        )
+        +
+        δ
+        Q
+        −
+        δ
+        
+          W
+          
+            s
+            h
+            a
+            f
+            t
+          
+        
+        
+      
+    
+    {\displaystyle \mathrm {d} U_{cv}=\mathrm {d} U_{in}+\mathrm {d} (P_{in}V_{in})-\mathrm {d} U_{out}-\mathrm {d} (P_{out}V_{out})+\delta Q-\delta W_{shaft}\,}
+  
+The definition of enthalpy, H = U + PV, permits us to use this thermodynamic potential to account jointly for internal energy U and PV work in fluids for a flow process:
+
+  
+    
+      
+        
+          d
+        
+        
+          U
+          
+            c
+            v
+          
+        
+        =
+        
+          d
+        
+        
+          H
+          
+            i
+            n
+          
+        
+        −
+        
+          d
+        
+        
+          H
+          
+            o
+            u
+            t
+          
+        
+        +
+        δ
+        Q
+        −
+        δ
+        
+          W
+          
+            s
+            h
+            a
+            f
+            t
+          
+        
+        
+      
+    
+    {\displaystyle \mathrm {d} U_{cv}=\mathrm {d} H_{in}-\mathrm {d} H_{out}+\delta Q-\delta W_{shaft}\,}
+  
+During steady-state operation of a device (see turbine, pump, and engine), any system property within the control volume is independent of time. Therefore, the internal energy of the system enclosed by the control volume remains constant, which implies that dUcv in the expression above may be set equal to zero. This yields a useful expression for the power generation or requirement for these devices with chemical homogeneity in the absence of chemical reactions:
+
+  
+    
+      
+        
+          
+            
+              δ
+              
+                W
+                
+                  s
+                  h
+                  a
+                  f
+                  t
+                
+              
+            
+            
+              
+                d
+              
+              t
+            
+          
+        
+        =
+        
+          
+            
+              
+                d
+              
+              
+                H
+                
+                  i
+                  n
+                
+              
+            
+            
+              
+                d
+              
+              t
+            
+          
+        
+        −
+        
+          
+            
+              
+                d
+              
+              
+                H
+                
+                  o
+                  u
+                  t
+                
+              
+            
+            
+              
+                d
+              
+              t
+            
+          
+        
+        +
+        
+          
+            
+              δ
+              Q
+            
+            
+              
+                d
+              
+              t
+            
+          
+        
+        
+      
+    
+    {\displaystyle {\frac {\delta W_{shaft}}{\mathrm {d} t}}={\frac {\mathrm {d} H_{in}}{\mathrm {d} t}}-{\frac {\mathrm {d} H_{out}}{\mathrm {d} t}}+{\frac {\delta Q}{\mathrm {d} t}}\,}
+  
+This expression is described by the diagram above.

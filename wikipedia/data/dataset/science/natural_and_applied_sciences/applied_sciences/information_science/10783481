@@ -1,0 +1,8 @@
+The Electronic Document System (EDS) was an early hypertext system – also known as the Interactive Graphical Documents (IGD) hypermedia system – focused on creation of interactive documents such as equipment repair manuals or computer-aided instruction texts with embedded links and graphics. EDS was created as 1978–1981 research project at Brown University by Steven Feiner, Sandor Nagy and Andries van Dam.
+
+EDS used a dedicated Ramtech raster display and VAX-11/780 computer to create and navigate a network of graphic pages containing interactive graphic buttons. Graphic buttons had programmed behaviors such as invoking an animation, linking to another page, or exposing an additional level of detail.
+The system had three automatically created navigation aids:
+a timeline showing thumbnail images of pages traversed;
+a 'neighbors' display showing thumbnails of all pages linking to the current page on the left, and all pages reachable from the current page on the right;
+a visual display of thumbnail page images arranged by page keyword, color coded by chapter.
+Unlike most hypertext systems, EDS incorporated state variables associated with each page. For example, clicking a button indicating a particular hardware fault might set a state variable that would expose a new set of buttons with links to a relevant choice of diagnostic pages. The EDS model prefigured graphic hypertext systems such as Apple's HyperCard.

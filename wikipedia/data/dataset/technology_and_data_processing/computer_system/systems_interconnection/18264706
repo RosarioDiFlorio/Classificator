@@ -1,0 +1,1 @@
+In a telecommunication network, a ring network affords fault tolerance to the network because there are two paths between any two nodes on the network. Ring protection is the system used to assure communication continues in the event of failure of one of the paths. There are two widely used protection architectures: 1+1 protection and 1:1 protection.

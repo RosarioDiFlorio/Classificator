@@ -1,0 +1,6 @@
+This article is about the proprietary variant USB standard. Self-powered conventional USB devices may also colloquially be referred to as "powered USB"; cf. e.g. Self-powered USB hubs.
+For information on the power provided by standard USB, see USB power.
+
+PoweredUSB, also known as Retail USB, USB PlusPower, and USB +Power, is an addition to the Universal Serial Bus standard that allows for higher-power devices to obtain power through their USB host instead of requiring an independent power supply or external AC adapter. It is mostly used in point-of-sale equipment, such as receipt printers and barcode readers.
+
+

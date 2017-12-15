@@ -1,0 +1,1 @@
+Samvera is an open-source digital repository software product. Samvera main components are Fedora Commons, Solr, Blacklight, and HydraHead (a Ruby on Rails plugin and gem, respectively). Each Samvera implementation is called a "head".

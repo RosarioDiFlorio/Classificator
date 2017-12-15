@@ -1,0 +1,2 @@
+OverSim is an OMNeT++-based open-source simulation framework for overlay and peer-to-peer networks, developed at the Institute of Telematics, Karlsruhe Institute of Technology, Germany.
+The simulator contains several models for structured (e.g. Chord, Kademlia, Pastry) and unstructured (e.g. GIA) peer-to-peer protocols. An example implementation of the framework is an implementation of a peer-to-peer SIP communications network.

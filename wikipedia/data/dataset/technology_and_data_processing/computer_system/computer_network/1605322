@@ -1,0 +1,2 @@
+In computer networks, a reverse proxy is a type of proxy server that retrieves resources on behalf of a client from one or more servers. These resources are then returned to the client as if they originated from the Web server itself. Contrary to a forward proxy, which is an intermediary for its associated clients to contact any server, a reverse proxy is an intermediary for its associated servers to be contacted by any client.
+Quite often, popular web servers use reverse-proxying functionality, shielding application frameworks of weaker HTTP capabilities.

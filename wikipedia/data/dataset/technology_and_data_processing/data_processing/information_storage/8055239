@@ -1,0 +1,7 @@
+Record restoration, a particular kind of audio restoration, is the process of converting the analog signal stored on gramophone records (either 78 rpm shellac, or 45 and 33⅓ rpm vinyl) into digital audio files that can then be edited with computer software and eventually stored on a hard-drive, recorded to digital tape, or burned to a CD or DVD. The process may be divided into several separate steps performed in the following order:
+1. Cleaning the record, to prevent unwanted audio artefacts from being introduced in the capture that will necessitate correction in the digital domain (e.g. transient surface noise caused by dirt), and to prevent unnecessary wear and damage to the stylus used in playback. 2. Transcription of the record to another format on another medium (generally a digital format such as a wav file on a computer);
+3. Processing the raw sound file with software in order to remove transient noise resulting from record surface damage (clicks, pops, and crackle cause by surface scratches and wear);
+4. Using software to adjust the volume and equalization;
+5. Processing the audio with digital and analogue techniques to reduce surface/wideband noise;
+6. Saving the file in the desired format (WAV, MP3, FLAC, etc.).
+The source of the information for these steps is available from various websites and the help files for the software employed in the process.

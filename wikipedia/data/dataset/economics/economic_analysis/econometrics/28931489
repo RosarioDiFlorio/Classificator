@@ -1,0 +1,202 @@
+A consistent pricing process (CPP) is any representation of (frictionless) "prices" of assets in a market. It is a stochastic process in a filtered probability space 
+  
+    
+      
+        (
+        Ω
+        ,
+        
+          
+            F
+          
+        
+        ,
+        {
+        
+          
+            
+              F
+            
+          
+          
+            t
+          
+        
+        
+          }
+          
+            t
+            =
+            0
+          
+          
+            T
+          
+        
+        ,
+        P
+        )
+      
+    
+    {\displaystyle (\Omega ,{\mathcal {F}},\{{\mathcal {F}}_{t}\}_{t=0}^{T},P)}
+   such that at time 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+   the 
+  
+    
+      
+        
+          i
+          
+            t
+            h
+          
+        
+      
+    
+    {\displaystyle i^{th}}
+   component can be thought of as a price for the 
+  
+    
+      
+        
+          i
+          
+            t
+            h
+          
+        
+      
+    
+    {\displaystyle i^{th}}
+   asset.
+Mathematically, a CPP 
+  
+    
+      
+        Z
+        =
+        (
+        
+          Z
+          
+            t
+          
+        
+        
+          )
+          
+            t
+            =
+            0
+          
+          
+            T
+          
+        
+      
+    
+    {\displaystyle Z=(Z_{t})_{t=0}^{T}}
+   in a market with d-assets is an adapted process in 
+  
+    
+      
+        
+          
+            R
+          
+          
+            d
+          
+        
+      
+    
+    {\displaystyle \mathbb {R} ^{d}}
+   if Z is a martingale with respect to the physical probability measure 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  , and if 
+  
+    
+      
+        
+          Z
+          
+            t
+          
+        
+        ∈
+        
+          K
+          
+            t
+          
+          
+            +
+          
+        
+        ∖
+        {
+        0
+        }
+      
+    
+    {\displaystyle Z_{t}\in K_{t}^{+}\backslash \{0\}}
+   at all times 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+   such that 
+  
+    
+      
+        
+          K
+          
+            t
+          
+        
+      
+    
+    {\displaystyle K_{t}}
+   is the solvency cone for the market at time 
+  
+    
+      
+        t
+      
+    
+    {\displaystyle t}
+  .
+The CPP plays the role of an equivalent martingale measure in markets with transaction costs. In particular, there exists a 1-to-1 correspondence between the CPP 
+  
+    
+      
+        Z
+      
+    
+    {\displaystyle Z}
+   and the EMM 
+  
+    
+      
+        Q
+      
+    
+    {\displaystyle Q}
+  .

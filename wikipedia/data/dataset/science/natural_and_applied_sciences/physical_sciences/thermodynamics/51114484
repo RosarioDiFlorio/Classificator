@@ -1,0 +1,12 @@
+The Knudsen Paradox has been observed in experiments of channel flow with varying channel width or equivalently different pressures. If the normalized mass flux through the channel is plotted over the Knudsen number based on the channel width a distinct minimum is observed around 
+  
+    
+      
+        K
+        n
+        =
+        0.8
+      
+    
+    {\displaystyle Kn=0.8}
+  . This is a paradoxical behaviour because, based on the Navier–Stokes equations, one would expect the mass flux to decrease with increasing the Knudsen number. The minimum can be understood intuitively by considering the two extreme cases of very small and very large Knudsen number. For very small Kn the viscosity vanishes and a fully developed steady state channel flow shows infinite flux. On the other hand, the particles stop interacting for large Knudsen numbers. Because of the constant acceleration due to the external force, the steady state again will show infinite flux.

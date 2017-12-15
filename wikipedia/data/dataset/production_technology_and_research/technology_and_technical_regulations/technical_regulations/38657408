@@ -1,0 +1,5 @@
+Indicator of compromise (IOC) — in computer forensics is an artifact observed on a network or in an operating system that with high confidence indicates a computer intrusion.
+Typical IOCs are virus signatures and IP addresses, MD5 hashes of malware files or URLs or domain names of botnet command and control servers. After IOCs have been identified in a process of incident response and computer forensics, they can be used for early detection of future attack attempts using intrusion detection systems and antivirus software.
+For more efficient automated processing there are initiatives to standardize the format of IOCs. Known indicators are usually exchanged within the industry.
+
+

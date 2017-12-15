@@ -1,0 +1,2 @@
+Consistent Network Device Naming is a convention for naming Ethernet adapters in Linux.
+It was created around 2009 to replace the old ethX naming scheme that caused problems on multihomed machines because the network interface controllers (NICs) would be named based on the order in which they were found by the kernel as it booted. Adding new interfaces could cause the previously added ones to change names. An ECR was submitted to the PCI SIG firmware group on how system firmware can provide device naming to operating systems via the ACPI interface.

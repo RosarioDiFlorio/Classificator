@@ -1,0 +1,5 @@
+SUNET is the Swedish University Computer Network. SUNET provides high-speed Internet access to academic institutions in Sweden. The current incarnation of the network, OptoSunet, provides 40 Gbit/s links between the cities hosting universities. It replaces the older network, GigaSunet, based mainly on 10 Gbit/s links. SUNET's upstream network is the Nordic NORDUnet. SUNET is governed by a board appointed by the Swedish Research Council (Vetenskapsrådet). In addition to the board there is a technical reference group and a development group, as well as people working at the participating universities.
+SUNET also operates one of Sweden's largest FTP archive, mirroring a lot of useful material of 'academic' interest, similar to the UK Mirror Service hosted by the University of Kent. The archive was upgraded in recent years and is nowadays dimensioned to handle more than 10 000 concurrent users.
+SUNET together with Sprint and TeliaSonera took part in a 40 Gbit/s transmission on a single wavelength between Luleå, Sweden and New York City using TAT-14.
+
+

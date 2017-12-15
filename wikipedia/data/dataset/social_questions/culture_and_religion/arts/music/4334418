@@ -1,0 +1,3 @@
+"The Complexity of Songs" was a journal article published by computer scientist Donald Knuth in 1977, as an in-joke about computational complexity theory. The article capitalizes on the tendency of popular songs to devolve from long and content-rich ballads to highly repetitive texts with little or no meaningful content. The article notes how some songs can reach a complexity level, for a song of length N words, as formula: O(log N). The gist of the article is repeated below, maintaining the wit of the key concepts.
+
+

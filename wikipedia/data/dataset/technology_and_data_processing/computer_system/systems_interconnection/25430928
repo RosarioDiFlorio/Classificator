@@ -1,0 +1,9 @@
+Cyber foraging is a pervasive computing technique where resource poor, mobile devices offload some of their heavy work to stronger surrogate machines in the vicinity. The term cyber foraging was coined by M. Satyanarayanan in his 2001 paper entitled "Pervasive Computing: Vision and Challenges".
+A number of cyber foraging systems have been proposed within academia:
+Framework for Power Aware Remote Processing, by Gerald Kaefer et al.
+Puppeteer, by de Lara et al.
+Spectra, by Flinn. et al.
+Chroma, by Balan et al.
+Goyal & Carter's system
+Slingshot, by Su & Flinn
+Scavenger, by Kristensen

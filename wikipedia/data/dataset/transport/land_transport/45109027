@@ -1,0 +1,6 @@
+The total stopping distance is the sum of the reaction distance and the braking distance.
+In a non-metric country the stopping distance in feet given a velocity in MPH can be approximated as follows:
+take the first digit of the velocity, and square it. Add a zero to the result, then divide by 2.
+sum the previous result to the double of the velocity.
+Example: velocity = 50 MPH. stopping distance = 5 squared = 25, add a zero = 250, divide by 2 = 125, sum 2*50 = 225 feet (the exact value can be calculated using the formula given below the diagram on the right).
+In Germany the rule of thumb for the stopping distance in a city in good conditions is the 1-second rule, i.e. the distance covered in 1 second should at most be the distance to the vehicle ahead. At 50 km/h this corresponds to about 15 m. For higher speeds up to about 100 km/h outside built-up areas a similarly defined 2-second rule applies, which for 100 km/h translates to about 50 m. For speeds on the order of 100 km/h there is also the more or less equivalent rule that the stopping distance be the speed divided by 2 k/h, referred to as halber tacho (half the speedometer) rule, e.g. for 100 km/h the stopping distance should be about 50 m.

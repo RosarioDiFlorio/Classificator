@@ -1,0 +1,14 @@
+The Avaya Virtual Services Platform 4000 Series (VSP 4000) are products that, in computer networking terms, are standalone Switch/Routers (Layer 2/Layer 3) designed and manufactured by Avaya for Ethernet-based networks. The VSP 4000 hardware is a derivative of the earlier Ethernet Routing Switch 4000 Series, leveraging certain shared components, but implementing a new, completely different, operating system derived from the Virtual Service Platform 9000 Series. The role of the VSP 4000 is to extend Fabric-based network virtualization services to smaller, remote locations, thereby creating a single service delivery network.
+The VSP 4000 offers a range of network virtualization services that are based on Avaya's extended implementation of Shortest Path Bridging; marketed as the 'Avaya VENA Fabric Connect' technology. The first software release supports:
+Layer 2 Virtualized Services that extend VLANs across the Fabric (including across subnets and long distances)
+Layer 3 Virtualized Services that interconnect and extend VRFs across the Fabric
+Native routing between Layer 2 and Layer 3 Virtualized Services for access to shared services
+IP Shortcut Routing that enables direct Layer 3 connectivity between individual end-points without requiring deployment of an additional IGP (e.g. OSPF).
+These capabilities are positioned are supporting the following deployment scenarios:
+Virtualized small and mid-sized Enterprise
+Distributed Enterprise
+Deployments would be made to facilitate the following business situations:
+End-to-end traffic separation for multi-tenancy or for security / regulatory compliance (i.e. PCI DSS)
+Integrated video surveillance
+
+

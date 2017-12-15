@@ -1,0 +1,1 @@
+The XSwitch is an interconnect used by the XCore processor. The interconnect protocol is defined by XMOS, and is based around routing messages comprising 9-bit tokens between cores on a network. The protocol is specifically designed for on-chip and board-level communication, but using LVDS drivers it can also run over longer cables.

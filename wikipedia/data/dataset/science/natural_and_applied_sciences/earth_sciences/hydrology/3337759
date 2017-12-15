@@ -1,0 +1,105 @@
+The Nash–Sutcliffe model efficiency coefficient is used to assess the predictive power of hydrological models. It is defined as:
+
+  
+    
+      
+        E
+        =
+        1
+        −
+        
+          
+            
+              
+                ∑
+                
+                  t
+                  =
+                  1
+                
+                
+                  T
+                
+              
+              
+                
+                  (
+                  
+                    Q
+                    
+                      m
+                    
+                    
+                      t
+                    
+                  
+                  −
+                  
+                    Q
+                    
+                      o
+                    
+                    
+                      t
+                    
+                  
+                  )
+                
+                
+                  2
+                
+              
+            
+            
+              
+                ∑
+                
+                  t
+                  =
+                  1
+                
+                
+                  T
+                
+              
+              
+                
+                  (
+                  
+                    Q
+                    
+                      o
+                    
+                    
+                      t
+                    
+                  
+                  −
+                  
+                    
+                      
+                        Q
+                        
+                          o
+                        
+                      
+                      ¯
+                    
+                  
+                  )
+                
+                
+                  2
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle E=1-{\frac {\sum _{t=1}^{T}\left(Q_{m}^{t}-Q_{o}^{t}\right)^{2}}{\sum _{t=1}^{T}\left(Q_{o}^{t}-{\overline {Q_{o}}}\right)^{2}}}}
+  
+where Qo is the mean of observed discharges, and Qm is modeled discharge. Qot is observed discharge at time t.
+Nash–Sutcliffe efficiency can range from −∞ to 1. An efficiency of 1 (E = 1) corresponds to a perfect match of modeled discharge to the observed data. An efficiency of 0 (E = 0) indicates that the model predictions are as accurate as the mean of the observed data, whereas an efficiency less than zero (E < 0) occurs when the observed mean is a better predictor than the model or, in other words, when the residual variance (described by the numerator in the expression above), is larger than the data variance (described by the denominator). Essentially, the closer the model efficiency is to 1, the more accurate the model is.
+The efficiency coefficient is sensitive to extreme values and might yield sub-optimal results when the dataset contains large outliers in it.
+Nash–Sutcliffe efficiency can be used to quantitatively describe the accuracy of model outputs other than discharge. This method can be used to describe the predictive accuracy of other models as long as there is observed data to compare the model results to. For example, Nash–Sutcliffe efficiency has been reported in scientific literature for model simulations of discharge, and water quality constituents such as sediment, nitrogen, and phosphorus loading.

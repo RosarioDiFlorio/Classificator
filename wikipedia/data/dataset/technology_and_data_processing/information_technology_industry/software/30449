@@ -1,0 +1,4 @@
+TECO (Tee'koh / ), Text Editor & COrrector is both a sophisticated character-oriented text editor and a powerful programming language that was developed in 1962 for use on Digital Equipment Corporation computers, and has since become available on PCs and Unix.
+Dan Murphy, who subsequently worked for Digital Equipment Corporation, developed TECO while still a student at MIT.
+The initial acronym was "Tape Editor and Corrector" because "punched paper tape was the only medium for the storage of program source on our PDP-1. There was no hard disk, floppy disk, magnetic tape (magtape), or network." By the time TECO was made available for general use, the name had become "Text Editor and Corrector," since even the PDP-1 version by then supported other media.
+It was subsequently modified by many other people and is a direct ancestor of Emacs, which was originally implemented in TECO macros.

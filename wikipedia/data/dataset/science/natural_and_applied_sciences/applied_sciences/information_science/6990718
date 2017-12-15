@@ -1,0 +1,2 @@
+Audio visual speech recognition (AVSR) is a technique that uses image processing capabilities in lip reading to aid speech recognition systems in recognizing undeterministic phones or giving preponderance among near probability decisions.
+Each system of lip reading and speech recognition works separately, then their results are mixed at the stage of feature fusion.

@@ -1,0 +1,1 @@
+Buck is a build system developed and used by Facebook. It encourages the creation of small, reusable modules consisting of code and resources, and supports a variety of languages on many platforms. Buck is licensed under the Apache License 2.0.

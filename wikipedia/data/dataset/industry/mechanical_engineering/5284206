@@ -1,0 +1,59 @@
+In classical mechanics, Bertrand's theorem states that among central force potentials with bound orbits, there are only two types of central force potentials with the property that all bound orbits are also closed orbits: (1) an inverse-square central force such as the gravitational or electrostatic potential
+
+  
+    
+      
+        V
+        (
+        
+          r
+        
+        )
+        =
+        
+          
+            
+              −
+              k
+            
+            r
+          
+        
+        ,
+      
+    
+    {\displaystyle V(\mathbf {r} )={\frac {-k}{r}},}
+  
+and (2) the radial harmonic oscillator potential
+
+  
+    
+      
+        V
+        (
+        
+          r
+        
+        )
+        =
+        
+          
+            1
+            2
+          
+        
+        k
+        
+          r
+          
+            2
+          
+        
+        .
+      
+    
+    {\displaystyle V(\mathbf {r} )={\frac {1}{2}}kr^{2}.}
+  
+The theorem was discovered by and named for the French mathematician Joseph Bertrand (1822-1900).
+
+

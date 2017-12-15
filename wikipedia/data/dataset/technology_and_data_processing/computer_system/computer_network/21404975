@@ -1,0 +1,2 @@
+ServerNet is a switched fabric communications link primarily used in proprietary computers made by Tandem Computers, Compaq, and HP.
+Its features include good scalability, clean fault containment, error detection and failover. The ServerNet architecture specification defines a connection between nodes, either processor or high performance I/O nodes such as storage devices.

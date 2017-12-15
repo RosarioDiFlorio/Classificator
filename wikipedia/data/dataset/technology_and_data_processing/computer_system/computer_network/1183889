@@ -1,0 +1,1 @@
+In computer networking, a minimal pause may be required between network packets or network frames. Depending on the physical layer protocol or encoding used, the pause may be necessary to allow for receiver clock recovery, permitting the receiver to prepare for another packet (e.g. powering up from a low-power state) or another purpose.

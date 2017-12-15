@@ -1,0 +1,631 @@
+The Rayleigh's quotient represents a quick method to estimate the natural frequency of a multi-degree-of-freedom vibration system, in which the mass and the stiffness matrices are known.
+The eigenvalue problem for a general system of the form
+
+  
+    
+      
+        M
+        
+        
+          
+            
+              
+                q
+              
+              ¨
+            
+          
+        
+        (
+        t
+        )
+        +
+        C
+        
+        
+          
+            
+              
+                q
+              
+              ˙
+            
+          
+        
+        (
+        t
+        )
+        +
+        K
+        
+        
+          
+            q
+          
+        
+        (
+        t
+        )
+        =
+        
+          
+            Q
+          
+        
+        (
+        t
+        )
+      
+    
+    {\displaystyle M\,{\ddot {\textbf {q}}}(t)+C\,{\dot {\textbf {q}}}(t)+K\,{\textbf {q}}(t)={\textbf {Q}}(t)}
+  
+in absence of damping and external forces reduces to
+
+  
+    
+      
+        M
+        
+        
+          
+            
+              
+                q
+              
+              ¨
+            
+          
+        
+        (
+        t
+        )
+        +
+        K
+        
+        
+          
+            q
+          
+        
+        (
+        t
+        )
+        =
+        0
+      
+    
+    {\displaystyle M\,{\ddot {\textbf {q}}}(t)+K\,{\textbf {q}}(t)=0}
+  
+The previous equation can be written also as
+
+  
+    
+      
+        K
+        
+        
+          
+            u
+          
+        
+        =
+        λ
+        
+        M
+        
+        
+          
+            u
+          
+        
+      
+    
+    {\displaystyle K\,{\textbf {u}}=\lambda \,M\,{\textbf {u}}}
+  
+where 
+  
+    
+      
+        λ
+        =
+        
+          ω
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \lambda =\omega ^{2}}
+  , in which 
+  
+    
+      
+        ω
+      
+    
+    {\displaystyle \omega }
+   represents the natural frequency, M and K are the real positive symmetric mass and stiffness matrices respectively.
+For an n-degree-of-freedom system the equation has n solutions 
+  
+    
+      
+        
+          λ
+          
+            m
+          
+        
+      
+    
+    {\displaystyle \lambda _{m}}
+  , 
+  
+    
+      
+        
+          
+            
+              u
+            
+          
+          
+            m
+          
+        
+      
+    
+    {\displaystyle {\textbf {u}}_{m}}
+   that satisfy the equation
+
+  
+    
+      
+        K
+        
+        
+          
+            
+              u
+            
+          
+          
+            m
+          
+        
+        =
+        
+          λ
+          
+            m
+          
+        
+        
+        M
+        
+        
+          
+            
+              u
+            
+          
+          
+            m
+          
+        
+      
+    
+    {\displaystyle K\,{\textbf {u}}_{m}=\lambda _{m}\,M\,{\textbf {u}}_{m}}
+  
+By multiplying both sides of the equation by 
+  
+    
+      
+        
+          
+            
+              u
+            
+          
+          
+            m
+          
+          
+            T
+          
+        
+      
+    
+    {\displaystyle {\textbf {u}}_{m}^{T}}
+   and dividing by the scalar 
+  
+    
+      
+        
+          
+            
+              u
+            
+          
+          
+            m
+          
+          
+            T
+          
+        
+        
+        M
+        
+        
+          
+            
+              u
+            
+          
+          
+            m
+          
+        
+      
+    
+    {\displaystyle {\textbf {u}}_{m}^{T}\,M\,{\textbf {u}}_{m}}
+  , it is possible to express the eigenvalue problem as follow:
+
+  
+    
+      
+        
+          λ
+          
+            m
+          
+        
+        =
+        
+          ω
+          
+            m
+          
+          
+            2
+          
+        
+        =
+        
+          
+            
+              
+                
+                  
+                    u
+                  
+                
+                
+                  m
+                
+                
+                  T
+                
+              
+              
+              K
+              
+              
+                
+                  
+                    u
+                  
+                
+                
+                  m
+                
+              
+            
+            
+              
+                
+                  
+                    u
+                  
+                
+                
+                  m
+                
+                
+                  T
+                
+              
+              
+              M
+              
+              
+                
+                  
+                    u
+                  
+                
+                
+                  m
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle \lambda _{m}=\omega _{m}^{2}={\frac {{\textbf {u}}_{m}^{T}\,K\,{\textbf {u}}_{m}}{{\textbf {u}}_{m}^{T}\,M\,{\textbf {u}}_{m}}}}
+  
+for m = 1,2,3,...,n.
+In the previous equation it is also possible to observe that the numerator is proportional to the potential energy while the denominator depicts a measure of the kinetic energy. Moreover, the equation allow us to calculate the natural frequency only if the eigenvector (as well as any other displacement vector) 
+  
+    
+      
+        
+          
+            
+              u
+            
+          
+          
+            m
+          
+        
+      
+    
+    {\displaystyle {\textbf {u}}_{m}}
+   is known. For academic interests, if the modal vectors are not known, we can repeat the foregoing process but with 
+  
+    
+      
+        λ
+        =
+        
+          ω
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \lambda =\omega ^{2}}
+   and 
+  
+    
+      
+        
+          
+            u
+          
+        
+      
+    
+    {\displaystyle {\textbf {u}}}
+   taking the place of 
+  
+    
+      
+        
+          λ
+          
+            m
+          
+        
+        =
+        
+          ω
+          
+            m
+          
+          
+            2
+          
+        
+      
+    
+    {\displaystyle \lambda _{m}=\omega _{m}^{2}}
+   and 
+  
+    
+      
+        
+          
+            
+              u
+            
+          
+          
+            m
+          
+        
+      
+    
+    {\displaystyle {\textbf {u}}_{m}}
+  , respectively. By doing so we obtain the scalar 
+  
+    
+      
+        R
+        (
+        
+          
+            u
+          
+        
+        )
+      
+    
+    {\displaystyle R({\textbf {u}})}
+  , also known as Rayleigh's quotient:
+
+  
+    
+      
+        R
+        (
+        
+          
+            u
+          
+        
+        )
+        =
+        λ
+        =
+        
+          ω
+          
+            2
+          
+        
+        =
+        
+          
+            
+              
+                
+                  
+                    u
+                  
+                
+                
+                  T
+                
+              
+              
+              K
+              
+              
+                
+                  u
+                
+              
+            
+            
+              
+                
+                  
+                    u
+                  
+                
+                
+                  T
+                
+              
+              
+              M
+              
+              
+                
+                  u
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle R({\textbf {u}})=\lambda =\omega ^{2}={\frac {{\textbf {u}}^{T}\,K\,{\textbf {u}}}{{\textbf {u}}^{T}\,M\,{\textbf {u}}}}}
+  
+Therefore, the Rayleigh's quotient is a scalar whose value depends on the vector 
+  
+    
+      
+        
+          
+            u
+          
+        
+      
+    
+    {\displaystyle {\textbf {u}}}
+   and it can be calculated with good approximation for any arbitrary vector 
+  
+    
+      
+        
+          
+            u
+          
+        
+      
+    
+    {\displaystyle {\textbf {u}}}
+   as long as it lays reasonably far from the modal vectors 
+  
+    
+      
+        
+          
+            
+              u
+            
+          
+          
+            i
+          
+        
+      
+    
+    {\displaystyle {\textbf {u}}_{i}}
+  , i = 1,2,3,...,n.
+Since, is it possible to state that the vector 
+  
+    
+      
+        
+          
+            u
+          
+        
+      
+    
+    {\displaystyle {\textbf {u}}}
+   differs from the modal vector 
+  
+    
+      
+        
+          
+            
+              u
+            
+          
+          
+            m
+          
+        
+      
+    
+    {\displaystyle {\textbf {u}}_{m}}
+   by a small quantity of first order, the correct result of the Rayleigh's quotient will differ not sensitively from the estimated one and that's what makes this method very useful. A good way to estimate the lowest modal vector 
+  
+    
+      
+        (
+        
+          u
+          
+            1
+          
+        
+        )
+      
+    
+    {\displaystyle (u_{1})}
+  , that generally works well for most structures (even though is not guaranteed), is to assume 
+  
+    
+      
+        (
+        
+          u
+          
+            1
+          
+        
+        )
+      
+    
+    {\displaystyle (u_{1})}
+   equal to the static displacement from an applied force that has the same relative distribution of the diagonal mass matrix terms. The latter can be elucidated by the following 3-DOF example.

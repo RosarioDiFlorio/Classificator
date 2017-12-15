@@ -1,0 +1,3 @@
+The rank condition is a necessary and sufficient condition for a set of simultaneous equations in an econometric system to allow identification of all its parameters from the estimated coefficients of the reduced form equations. The condition simply requires the matrix of all structural equations of the model to have full rank.
+
+

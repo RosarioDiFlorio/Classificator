@@ -1,0 +1,7 @@
+A remote sensing application is a software application that processes remote sensing data. Remote sensing applications are similar to graphics software, but they enable generating geographic information from satellite and airborne sensor data. Remote sensing applications read specialized file formats that contain sensor image data, georeferencing information, and sensor metadata. Some of the more popular remote sensing file formats include: GeoTIFF, NITF, JPEG 2000, ECW (file format), MrSID, HDF, and NetCDF.
+Remote Sensing applications perform many features including:
+Change Detection — Determine the changes from images taken at different times of the same area
+Orthorectification — Warp an image to its location on the earth.
+Spectral Analysis — For example, using non-visible parts of the electromagnetic spectrum to determine if a forest is healthy
+Image Classification — Categorization of pixels based on reflectance into different land cover classes (e.g. Supervised classification, Unsupervised classification and Object Oriented Classification)
+Many remote sensing applications are built using common remote sensing toolkits, like GDAL and OSSIM.

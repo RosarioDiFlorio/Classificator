@@ -1,0 +1,1 @@
+Bitcask is an Erlang application that provides an API for storing and retrieving key/value data into a log-structured hash table. The design owes a lot to the principles found in log-structured file systems and draws inspiration from a number of designs that involve log file merging.

@@ -1,0 +1,6 @@
+The OpenLLDP project aims to bring a comprehensive implementation of the IEEE standard 802.1AB Link Layer Discovery Protocol.
+OpenLLDP currently supports LLDP transmission and reception on the following platforms:
+Linux
+Mac OS X (including iPhone)
+FreeBSD
+NetBSD

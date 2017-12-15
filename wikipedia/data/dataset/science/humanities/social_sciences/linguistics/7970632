@@ -1,0 +1,3 @@
+A recursive transition network ("RTN") is a graph theoretical schematic used to represent the rules of a context-free grammar. RTNs have application to programming languages, natural language and lexical analysis. Any sentence that is constructed according to the rules of an RTN is said to be "well-formed". The structural elements of a well-formed sentence may also be well-formed sentences by themselves, or they may be simpler structures. This is why RTNs are described as recursive.
+
+

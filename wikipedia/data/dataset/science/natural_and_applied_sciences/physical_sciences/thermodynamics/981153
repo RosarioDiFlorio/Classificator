@@ -1,0 +1,85 @@
+An exergonic process is one in which there is a positive flow of energy from the system to the surroundings. This is in contrast with an endergonic process. Constant pressure, constant temperature reactions are exergonic if and only if the Gibbs free energy change is negative (∆G < 0). "Exergonic" (from the prefix exo-, derived for the Greek word ἔξω exō, "outside" and the suffix -ergonic, derived from the Greek word ἔργον ergon, "work") means "releasing energy in the form of work". In thermodynamics, work is defined as the energy moving from the system (the internal region) to the surroundings (the external region) during a given process.
+All physical and chemical systems in the universe follow the second law of thermodynamics and proceed in a downhill, i.e., exergonic, direction. Thus, left to itself, any physical or chemical system will proceed, according to the second law of thermodynamics, in a direction that tends to lower the free energy of the system, and thus to expend energy in the form of work. These reactions occur spontaneously.
+A chemical reaction is also exergonic when spontaneous. Thus in this type of reactions the Gibbs free energy decreases. The entropy is included in any change of the Gibbs free energy. This differs from a exothermic reaction or a endothermic reaction where the entropy is not included. The Gibbs free energy is calculated with the Gibbs–Helmholtz equation:
+
+  
+    
+      
+        Δ
+        G
+        =
+        Δ
+        H
+        −
+        T
+        ⋅
+        Δ
+        S
+      
+    
+    {\displaystyle \Delta G=\Delta H-T\cdot \Delta S}
+  
+where:
+T = temperature in kelvins (K)
+ΔG = change in the Gibbs free energy
+ΔS = change in entropy (at 298 K) as ΔS = Σ{S(Product)} − Σ{S(Reagent)}
+ΔH = change in enthalpy (at 298 K) as ΔH = Σ{H(Product)} − Σ{H(Reagent)}
+A chemical reaction progresses only spontaneously when the Gibbs free energy decreases, in that case the ΔG is negative. In exergonic reactions the ΔG is negative and in endergonic reactions the ΔG is positive:
+
+  
+    
+      
+        
+          Δ
+          
+            
+              R
+            
+          
+        
+        G
+        <
+        0
+      
+    
+    {\displaystyle \Delta _{\mathrm {R} }G<0}
+   exergon
+
+  
+    
+      
+        
+          Δ
+          
+            
+              R
+            
+          
+        
+        G
+        >
+        0
+      
+    
+    {\displaystyle \Delta _{\mathrm {R} }G>0}
+   endergon
+where:
+
+  
+    
+      
+        
+          Δ
+          
+            
+              R
+            
+          
+        
+        G
+      
+    
+    {\displaystyle \Delta _{\mathrm {R} }G}
+   equals the change in the Gibbs free energy after completion of a chemical reaction.
+
+

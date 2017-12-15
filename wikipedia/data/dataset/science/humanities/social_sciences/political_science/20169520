@@ -1,0 +1,3 @@
+In voting theory, non-dictatorship is a property of social choice functions which requires that the results of voting cannot simply mirror that of any single person's preferences without consideration of the other voters.
+The property of non-dictatorship is satisfied if there is no single voter i with the individual preference order P, such that P is the societal ("winning") preference order, unless all voters have the same P. Thus, as long as there are voters in the society that have different preference orderings, the preferences of individual i should not always prevail.
+Blind voting systems (with at least two voters) automatically satisfy the non-dictatorship property.

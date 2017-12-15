@@ -1,0 +1,39 @@
+Ohm's law states that the current through a conductor between two points is directly proportional to the voltage across the two points. Introducing the constant of proportionality, the resistance, one arrives at the usual mathematical equation that describes this relationship:
+
+  
+    
+      
+        I
+        =
+        
+          
+            V
+            R
+          
+        
+        ,
+      
+    
+    {\displaystyle I={\frac {V}{R}},}
+  
+where I is the current through the conductor in units of amperes, V is the voltage measured across the conductor in units of volts, and R is the resistance of the conductor in units of ohms. More specifically, Ohm's law states that the R in this relation is constant, independent of the current.
+The law was named after the German physicist Georg Ohm, who, in a treatise published in 1827, described measurements of applied voltage and current through simple electrical circuits containing various lengths of wire. Ohm explained his experimental results by a slightly more complex equation than the modern form above (see History).
+In physics, the term Ohm's law is also used to refer to various generalizations of the law originally formulated by Ohm. The simplest example of this is:
+
+  
+    
+      
+        
+          J
+        
+        =
+        σ
+        
+          E
+        
+        ,
+      
+    
+    {\displaystyle \mathbf {J} =\sigma \mathbf {E} ,}
+  
+where J is the current density at a given location in a resistive material, E is the electric field at that location, and σ (sigma) is a material-dependent parameter called the conductivity. This reformulation of Ohm's law is due to Gustav Kirchhoff.
