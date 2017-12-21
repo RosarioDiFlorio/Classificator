@@ -2,13 +2,9 @@ package datasetCreatorFromTaxonomy.ResumeDataset;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
-
-import javax.swing.plaf.FileChooserUI;
 
 import org.apache.commons.io.FileUtils;
 
@@ -17,13 +13,13 @@ public class CreateDataset {
 
 	public static void main(String[] args) throws IOException{
 		ListAllFiles fileReader = new ListAllFiles();
-		String directoryWindows ="D:/TextClassifier/dataset_tassonomia";
+		String directoryWindows ="D:/Development/Datasets/dataset_500xleaf_2012017/";
 
 
 		ArrayList<String> fileList = (ArrayList<String>) fileReader.listFilesAndFilesSubDirectories(directoryWindows, new ArrayList<String>());
 		Set<String> pathList = new HashSet<String>();
-		String basePathSrc = "D:/TextClassifier/dataset_tassonomia/";
-		String basePathDst = "D:/TextClassifier/training/datasets2/";
+		String basePathSrc = "D:/Development/Datasets/dataset_500xleaf_2012017/";
+		String basePathDst = "D:/Development/Datasets/dataset_training/";
 
 		/*for(int i=0;i<1;i++){
 			System.out.println(i);
