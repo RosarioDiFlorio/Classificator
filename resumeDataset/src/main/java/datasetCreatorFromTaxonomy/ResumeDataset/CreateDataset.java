@@ -18,67 +18,23 @@ public class CreateDataset {
 	public static void main(String[] args) throws IOException{
 		ListAllFiles fileReader = new ListAllFiles();
 		String directoryWindows ="D:/TextClassifier/dataset_tassonomia";
-
+		//String directoryWindows = "D:/TextClassifier/training/datasets_training/root2000";
 
 		ArrayList<String> fileList = (ArrayList<String>) fileReader.listFilesAndFilesSubDirectories(directoryWindows, new ArrayList<String>());
 		Set<String> pathList = new HashSet<String>();
 		String basePathSrc = "D:/TextClassifier/dataset_tassonomia/";
-		String basePathDst = "D:/TextClassifier/training/datasets2/";
+		//String basePathSrc = "D:/TextClassifier/training/datasets_training/root2000/";
 
-		/*for(int i=0;i<1;i++){
-			System.out.println(i);
-			if(i==0)
-				basePathDst = basePathDst+"/root/";
-			else
-				basePathDst = basePathDst.replace("/root/", "");
-			pathList = new HashSet<String>();
-			for(String file : fileList){
+		new File("D:/TextClassifier/datasets_training").mkdir();
+		new File("D:/TextClassifier/datasets_test").mkdir();
+		String basePathDstTraining = "D:/TextClassifier/datasets_training/";
+		String basePathDstTest = "D:/TextClassifier/datasets_test/";
+		
+		/*new File("D:/TextClassifier/training/training").mkdir();
+		new File("D:/TextClassifier/training/test").mkdir();
+		String basePathDstTraining = "D:/TextClassifier/training/trainingApp/";
+		String basePathDstTest = "D:/TextClassifier/training/testApp/";*/
 
-				file = file.replace("\\", "/").replace(basePathSrc, "");
-				String [] splitted = file.split("/");
-				if(splitted.length-2>i)
-					pathList.add(splitted[i]);
-			}
-			//		System.out.println(pathList);
-			for(String path:pathList){
-				//creo la folder 
-
-				new File(basePathDst+path).mkdir();
-				Set<String> leafList = new HashSet<String>();
-				for(String file: fileList){
-					file = file.replace("\\", "/").replace(basePathSrc, "");
-					String [] splitted = file.split("/");
-					if(splitted.length-2>i){
-						if(splitted[i].equals(path)){
-							String toSave = file.replace("/"+splitted[splitted.length-1], "");
-							leafList.add(toSave);
-						}
-					}
-
-				}
-				int numSource = 2000/leafList.size()+1;
-
-				for(String leaf:leafList){
-					int count = 0;
-					ArrayList<String> files = (ArrayList<String>) fileReader.listFilesAndFilesSubDirectories(directoryWindows+"/"+leaf, new ArrayList<String>());
-					for(String file:files){
-
-						if(count>= numSource)
-							break;
-						else{
-							count++;
-							file = file.replace("\\", "/");
-							String[] splitted = file.split("/");
-							File f1 = new File(file);
-							File f2 = new File(basePathDst+path+"/"+splitted[splitted.length-1]);
-							FileUtils.copyFile(f1, f2);
-
-						}
-					}
-				}
-			}
-
-		}*/
 
 
 		//CALCOLO TUTTE LE POSSIBILI COPPIE DI CATEGORIE E LE AGGIUNGO AL SET 
@@ -96,14 +52,21 @@ public class CreateDataset {
 				}
 				pathList.add("root/"+splitted[0]);
 			}
+			else
+				if(length==0){
+					//System.out.println(splitted[0]);
+					pathList.add("root/"+splitted[0]);
+				}
+
 		}
 
 		// PER OGNNI PATH CALCOLATO 
 		for(String path:pathList){
 			System.out.println(path);
-			
+
 			//creo la folder 
-			new File(basePathDst+path).mkdir();
+			new File(basePathDstTraining+path).mkdir();
+			new File(basePathDstTest+path).mkdir();
 			Set<String> leafList = new HashSet<String>();
 
 			// CALCOLO LA LISTA DI TUTTE LE CATEGORIE FOGLIA
@@ -118,15 +81,16 @@ public class CreateDataset {
 
 			// A QUESTO PUNTO AGGIUNGO I DOCUMENTI AL PATH CORRENTE USANDO LE CATEGORIE FOGLIA CALCOLATE
 
-			int numSource = 500/leafList.size();
+			int numSource = (500/leafList.size())*3;
 
 			for(String leaf:leafList){
+				
 				String [] leafSplitted = leaf.split("/");
 				String nameLeaf = leafSplitted[leafSplitted.length-1];
-				int count = 0;
+
+				int count = 0, countTraining = 0,countTest = 0;
 				ArrayList<String> files = (ArrayList<String>) fileReader.listFilesAndFilesSubDirectories(directoryWindows+"/"+leaf, new ArrayList<String>());
 				for(String file:files){
-
 					if(count>= numSource)
 						break;
 					else{
@@ -134,12 +98,20 @@ public class CreateDataset {
 						file = file.replace("\\", "/");
 						String[] splitted = file.split("/");
 						File f1 = new File(file);
-						File f2 = new File(basePathDst+path+"/"+nameLeaf+"_"+splitted[splitted.length-1]);
+						File f2 = null;
+						if(countTest<(numSource*0.1)){
+							f2 = new File(basePathDstTest+path+"/"+nameLeaf+"_"+splitted[splitted.length-1]);
+							countTest++;
+						}
+						else{
+							f2 = new File(basePathDstTraining+path+"/"+nameLeaf+"_"+splitted[splitted.length-1]);
+							countTraining++;
+						}
 						FileUtils.copyFile(f1, f2);
 
 					}
 				}
-
+				
 			}
 		}
 
@@ -154,7 +126,7 @@ public class CreateDataset {
 		int numDocuments = 1000;
 		for(String file : fileList){
 			String basePathSrc = "D:/TextClassifier/dataset_tassonomia/";
-			String basePathDst = "D:/TextClassifier/training2/datasets/";
+			String basePathDst = "D:/TextClassifier/training/datasets/";
 			file = file.replace("\\", "/").replace(basePathSrc, "");
 			String [] splitted = file.split("/");
 			String name = splitted[splitted.length-1];
@@ -164,6 +136,7 @@ public class CreateDataset {
 				File f1 = new File(basePathSrc+file);
 				new File(basePathDst+splitted[length-1]).mkdir();
 				new File(basePathDst+splitted[length-1]+"/"+splitted[length]).mkdir();
+				System.out.println(basePathDst+splitted[length-1]+"/"+splitted[length]);
 				if(fileReader.listFolders(basePathDst+splitted[length-1]+"/"+splitted[length]).size()<numDocuments){
 					File f3 = new File(basePathDst+splitted[length-1]+"/"+splitted[length]+"/"+name);
 					FileUtils.copyFile(f1,f3);

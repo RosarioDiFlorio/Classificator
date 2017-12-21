@@ -15,8 +15,6 @@
         <dcterms:rightsHolder>Innovation Engineering srl</dcterms:rightsHolder>
         <dcterms:license>Commercial (all rights reserved)</dcterms:license>
         <skos:hasTopConcept rdf:resource="http://www.wheesbee.eu/taxonomy#100147" />
-        <skos:hasTopConcept rdf:resource="http://www.wheesbee.eu/taxonomy#100145" />
-        <skos:hasTopConcept rdf:resource="http://www.wheesbee.eu/taxonomy#100149" />
         <skos:hasTopConcept rdf:resource="http://www.wheesbee.eu/taxonomy#100156" />
         <skos:hasTopConcept rdf:resource="http://www.wheesbee.eu/taxonomy#100150" />
         <skos:hasTopConcept rdf:resource="http://www.wheesbee.eu/taxonomy#100146" />
@@ -28,6 +26,7 @@
         <skos:hasTopConcept rdf:resource="http://www.wheesbee.eu/taxonomy#100159" />
         <skos:hasTopConcept rdf:resource="http://www.wheesbee.eu/taxonomy#100154" />
         <skos:hasTopConcept rdf:resource="http://www.wheesbee.eu/taxonomy#100223" />
+		<skos:hasTopConcept rdf:resource="http://www.wheesbee.eu/taxonomy#100225" /> 
     </rdf:Description>
     <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#100147">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
@@ -2485,7 +2484,6 @@
     <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#100145">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
         <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy" />
-        <skos:topConceptOf rdf:resource="http://www.wheesbee.eu/taxonomy" />
         <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/100145" />
         <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#100178" />
         <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#100179" />
@@ -4934,7 +4932,6 @@
     <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#100149">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
         <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy" />
-        <skos:topConceptOf rdf:resource="http://www.wheesbee.eu/taxonomy" />
         <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/100149" />
         <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#100208" />
         <skos:narrower rdf:resource="http://www.wheesbee.eu/taxonomy#100209" />
@@ -23358,6 +23355,7 @@
     </rdf:Description>
     <rdf:Description rdf:about="http://www.wheesbee.eu/taxonomy#100225">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+		<skos:topConceptOf rdf:resource="http://www.wheesbee.eu/taxonomy" />
         <skos:inScheme rdf:resource="http://www.wheesbee.eu/taxonomy" />
         <skos:exactMatch rdf:resource="http://eurovoc.europa.eu/100225" />
         <skos:broader rdf:resource="http://www.wheesbee.eu/taxonomy#100151" />
