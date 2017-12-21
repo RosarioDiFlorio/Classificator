@@ -57,20 +57,21 @@ public class TaxonomyImporterCsv {
     Map<String,ConceptBean> mapOfConcepts = new HashMap<>();
 
 
-    String csvFile ="materials.csv";
+    String csvFile ="technology.csv";
     String line = "";
     String cvsSplitBy = ",";
-    String fileToSave ="newMaterials.rdf";
-    String fileEmptyModel ="materials.rdf";
-    int limit = 2;  
+    String fileToSave ="newTechnology.rdf";
+    String fileEmptyModel ="technology.rdf";
+    int limit = 1;  
 
 
 
     try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
       while ((line = br.readLine()) != null) {
         // use comma as separator
+        System.out.println(line);
         String[] csvData = line.split(cvsSplitBy);
-
+ 
         if (csvData.length > limit){
           String name= csvData[csvData.length-1].trim().replace(" ", "_");
           if(mapOfConcepts.containsKey(name)){

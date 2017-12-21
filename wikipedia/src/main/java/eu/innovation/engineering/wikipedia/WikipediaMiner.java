@@ -195,11 +195,18 @@ public class WikipediaMiner implements WikiRequest{
    * @return
    * @throws IOException
    */
-  public static JsonObject getPageInfoById(String pageids) throws IOException{
+  public static JsonObject getPageInfoById(String pageids){
     JsonObject toReturn = new JsonObject();
+    try{
+    
     String query = "https://en.wikipedia.org/w/api.php?action=query&prop=info&pageids="+pageids+"&format=json";
     JsonObject response = getJsonResponse(query);
     toReturn = response.get("query").getAsJsonObject().get("pages").getAsJsonObject().get(pageids).getAsJsonObject();
+
+    }catch (IOException e) {
+      // TODO: handle exception
+      e.printStackTrace();
+    }
     return toReturn;
   }
 
