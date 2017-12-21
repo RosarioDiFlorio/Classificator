@@ -25,8 +25,8 @@ import eu.innovation.engineering.wikipedia.WikipediaMiner;
 public class Test {
 
   public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException, InterruptedException, ExecutionException{
-    //main3(args);
-    createMapDataset("D:/Development/Datasets/dataset_500xleaf_2012017/");
+    main3(args);
+    //createMapDataset("D:/Development/Datasets/dataset_500xleaf_2012017/");
   }
 
   private static Map<String, Integer> countLeafs(Map<String, List<String>> mapcsv){
