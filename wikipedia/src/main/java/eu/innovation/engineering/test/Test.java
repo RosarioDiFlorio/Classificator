@@ -26,13 +26,9 @@ public class Test {
 
   public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException, InterruptedException, ExecutionException{
     //main3(args);
-    createMapDataset("D:/Development/Datasets/dataset_latest_1412017/");
+    createMapDataset("D:/Development/Datasets/dataset_500xleaf_2012017/");
   }
 
-  
-  
-  
-  
   private static Map<String, Integer> countLeafs(Map<String, List<String>> mapcsv){
     Map<String, Integer> toReturn = new HashMap<>();
     for(String key:mapcsv.keySet()){
@@ -46,10 +42,9 @@ public class Test {
     }
     return toReturn;
   }
-  
+
   public static void main3(String[] args) throws JsonParseException, JsonMappingException, IOException, InterruptedException, ExecutionException{
-    Map<String, List<String>> csvMap = read("wheesbee_cat.csv", false);
-    Map<String, Integer> countLeafMap = countLeafs(csvMap);
+    Map<String, List<String>> csvMap = read("wheesbee_cat_recovery.csv", false);
     System.out.println(csvMap.keySet().size());
     int count = 0;
 
@@ -66,15 +61,12 @@ public class Test {
       }
       parents = new ArrayList<>();
       parents.add(path);
-      System.out.println(countLeafMap.get(csvMap.get(uriWiki).get(0)));
-      int limitDocument = 500/countLeafMap.get(csvMap.get(uriWiki).get(0));
-      System.out.println(limitDocument);
       csvMap.replace(uriWiki, parents);
       toExtract.add(uriWiki);
       count++;
-      
 
-      Map<String, Set<DocumentInfo>> results = WikipediaMiner.buildDataset(toExtract, 0, true, limitDocument);
+
+      Map<String, Set<DocumentInfo>> results = WikipediaMiner.buildDataset(toExtract, 0, true, 125);
       for(String key : results.keySet()){
         for( DocumentInfo doc: results.get(key)){
           PrintWriter writer = new PrintWriter(new File(csvMap.get(key).get(0)+"/"+doc.getId()));
@@ -99,7 +91,7 @@ public class Test {
       toWrite.putAll(createMapDatasetTask(path+"/"+child));
     }
     ObjectMapper mapper = new ObjectMapper();
-    mapper.writerWithDefaultPrettyPrinter().writeValue(new File("map_tax.json"), toWrite);
+    mapper.writerWithDefaultPrettyPrinter().writeValue(new File("categories.json"), toWrite);
   }
 
   public static Map<String,List<String>> createMapDatasetTask(String path) throws JsonGenerationException, JsonMappingException, IOException{
@@ -142,6 +134,7 @@ public class Test {
     try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
       if(labeled)
         line = br.readLine();
+      
       while ((line = br.readLine()) != null) {
         // use comma as separator
         String[] csvData = line.split(cvsSplitBy); 
