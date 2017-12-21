@@ -181,7 +181,7 @@ public class RenovatorTaxonomy
 
 
 	/**
-	 * this method change narrower and broader property into concept, readed from categoriesToChange.txt file
+	 * this method change narrower and broader property into concept, readed from categoriesToChange.txt file In this file, the pairs are: narrower,newBroader
 	 * @param model
 	 * @param statementList
 	 * @return
