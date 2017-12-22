@@ -26,11 +26,11 @@ public class Test {
 
   public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException, InterruptedException, ExecutionException{
     main3(args);
-<<<<<<< HEAD
-    //createMapDataset("D:/Development/Datasets/dataset_IBM/");
-=======
+
+    createMapDataset("D:/Development/Datasets/dataset_IBM/");
+
     //createMapDataset("D:/Development/Datasets/dataset_500xleaf_2012017/");
->>>>>>> branch 'master' of https://github.com/luilom/DataSourceClassificator.git
+
   }
 
   private static Map<String, Integer> countLeafs(Map<String, List<String>> mapcsv){
