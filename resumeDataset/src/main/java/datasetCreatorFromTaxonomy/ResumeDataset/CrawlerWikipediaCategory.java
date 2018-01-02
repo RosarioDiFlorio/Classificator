@@ -34,7 +34,7 @@ public class CrawlerWikipediaCategory {
   }
 
   public static void BackupBFS(String category,boolean persist) throws JsonParseException, JsonMappingException, IOException{
-    CrawlerResult crawlerResult = new CrawlerResult(false,category,new HashSet<String>(),new HashMap<String, AdjacencyListRow>());
+    CrawlerResult crawlerResult = new CrawlerResult(false,category,new HashSet<String>(),new HashMap<String,AdjacencyListRow>(),new PriorityQueue<String>());
     File crawlerResultFile = new File(crawlerResult.getClass().getSimpleName());
     
     if(crawlerResultFile.exists()){
@@ -42,7 +42,7 @@ public class CrawlerWikipediaCategory {
       crawlerResult = mapper.readValue(crawlerResultFile, new TypeReference<CrawlerResult>() {});
     }
     try{
-     BFS(crawlerResult.getLatestCategoryProcessed(), crawlerResult.getMarkedNode(), crawlerResult.getAdjacencyList(), persist);
+     BFS(crawlerResult.getLatestCategoryProcessed(), crawlerResult.getMarkedNode(), crawlerResult.getAdjacencyList(),crawlerResult.getVertexToVisit(), persist);
 	
     }catch (Exception e) {
       // TODO: handle exception
@@ -62,13 +62,12 @@ public class CrawlerWikipediaCategory {
    * @return
    * @throws IOException
    */
-  public static HashMap BFS(String category,HashSet<String> markedNode, HashMap<String,AdjacencyListRow> adjacencylist,boolean persist) throws IOException{
+  public static HashMap BFS(String category,HashSet<String> markedNode, HashMap<String,AdjacencyListRow> adjacencylist,PriorityQueue<String> vertexToVisit,boolean persist) throws IOException{
 
     // add first category
     markedNode.add(category);
 
     // Queue vertex to visit 
-    PriorityQueue<String> vertexToVisit = new PriorityQueue<String>();
     vertexToVisit.add(category);
 
     // while there are vertex to visit, build adyacency list
@@ -79,7 +78,7 @@ public class CrawlerWikipediaCategory {
       AdjacencyListRow currentVertex = new AdjacencyListRow(linkedVertex, false);
       adjacencylist.put(vertex, currentVertex);
       if(persist){
-        CrawlerResult crawlerResult = new CrawlerResult(false,vertex,markedNode, adjacencylist);
+        CrawlerResult crawlerResult = new CrawlerResult(false,vertex,markedNode, adjacencylist,vertexToVisit);
         ObjectMapper writerCrawlerResult = new ObjectMapper();
         writerCrawlerResult.writerWithDefaultPrettyPrinter().writeValue(new File(crawlerResult.getClass().getSimpleName()), crawlerResult);
       }

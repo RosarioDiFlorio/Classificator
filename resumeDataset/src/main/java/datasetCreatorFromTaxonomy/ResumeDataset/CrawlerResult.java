@@ -2,6 +2,7 @@ package datasetCreatorFromTaxonomy.ResumeDataset;
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.PriorityQueue;
 
 public class CrawlerResult {
 
@@ -10,20 +11,20 @@ public class CrawlerResult {
 	private String latestCategoryProcessed;
 	private HashSet<String> markedNode;
 	private HashMap<String,AdjacencyListRow> adjacencyList;
-
+	private PriorityQueue<String> vertexToVisit;
 
 	public CrawlerResult(){
 		
 	}
 
-	public CrawlerResult(boolean isCrashed, String latestCategoryProcessed, HashSet<String> markedNode,
-			HashMap<String, AdjacencyListRow> adjacencyList) {
+	public CrawlerResult(boolean isCrashed, String latestCategoryProcessed, HashSet<String> markedNode,HashMap<String, AdjacencyListRow> adjacencyList, PriorityQueue<String> vertexToVisit) {
 		super();
 		this.isCrashed = isCrashed;
 		this.latestCategoryProcessed = latestCategoryProcessed;
 		this.markedNode = markedNode;
 		this.adjacencyList = adjacencyList;
 		this.numCategory = markedNode.size();
+		this.vertexToVisit = vertexToVisit;
 	}
 	
 	
@@ -68,6 +69,14 @@ public class CrawlerResult {
 	public void setAdjacencyList(HashMap<String,AdjacencyListRow> adjacencyList) {
 		this.adjacencyList = adjacencyList;
 	}
+
+  public PriorityQueue<String> getVertexToVisit() {
+    return vertexToVisit;
+  }
+
+  public void setVertexToVisit(PriorityQueue<String> vertexToVisit) {
+    this.vertexToVisit = vertexToVisit;
+  }
 
 
 
