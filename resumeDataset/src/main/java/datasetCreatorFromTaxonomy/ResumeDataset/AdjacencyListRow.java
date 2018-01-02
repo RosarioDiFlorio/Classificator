@@ -7,6 +7,9 @@ public class AdjacencyListRow {
 	HashSet<String> linkedVertex = new HashSet<String>();
 	boolean taxonomyCategory;
 	
+	public AdjacencyListRow(){
+		
+	}
 	
 	public AdjacencyListRow(HashSet<String> linkedVertex, boolean taxonomyCategory) {
 		this.linkedVertex = linkedVertex;

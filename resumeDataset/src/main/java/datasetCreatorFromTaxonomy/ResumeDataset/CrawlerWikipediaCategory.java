@@ -34,20 +34,22 @@ public class CrawlerWikipediaCategory {
   }
 
   public static void BackupBFS(String category,boolean persist) throws JsonParseException, JsonMappingException, IOException{
-    CrawlerResult crawlerResult = new CrawlerResult(category);
+    CrawlerResult crawlerResult = new CrawlerResult(false,category,new HashSet<String>(),new HashMap<String, AdjacencyListRow>());
     File crawlerResultFile = new File(crawlerResult.getClass().getSimpleName());
-
+    
     if(crawlerResultFile.exists()){
       ObjectMapper mapper = new ObjectMapper();
       crawlerResult = mapper.readValue(crawlerResultFile, new TypeReference<CrawlerResult>() {});
     }
     try{
-      BFS(crawlerResult.getLatestCategoryProcessed(), crawlerResult.getMarkedNode(), crawlerResult.getAdjacencyList(), persist);
+     BFS(crawlerResult.getLatestCategoryProcessed(), crawlerResult.getMarkedNode(), crawlerResult.getAdjacencyList(), persist);
+	
     }catch (Exception e) {
       // TODO: handle exception
       e.printStackTrace();
       System.out.println("Something went wrong");
       crawlerResult.setCrashed(true);
+      
     }
   }
 
@@ -76,9 +78,7 @@ public class CrawlerWikipediaCategory {
       AdjacencyListRow currentVertex = new AdjacencyListRow(linkedVertex, false);
       adjacencylist.put(vertex, currentVertex);
       if(persist){
-        CrawlerResult crawlerResult = new CrawlerResult(vertex);
-        crawlerResult.setAdjacencyList(adjacencylist);
-        crawlerResult.setMarkedNode(markedNode);
+        CrawlerResult crawlerResult = new CrawlerResult(false,vertex,markedNode, adjacencylist);
         ObjectMapper writerCrawlerResult = new ObjectMapper();
         writerCrawlerResult.writerWithDefaultPrettyPrinter().writeValue(new File(crawlerResult.getClass().getSimpleName()), crawlerResult);
       }
@@ -124,7 +124,7 @@ public class CrawlerWikipediaCategory {
       System.out.println(id+": hasn't parent category");
     }
 
-    HashSet<String> categoriesToReturn = new HashSet<>();
+    HashSet<String> categoriesToReturn = new HashSet<String>();
 
     // add all certex obtained to hashset
     for(JsonElement cat : categories){
