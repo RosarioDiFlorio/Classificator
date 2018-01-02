@@ -32,30 +32,29 @@ public class CrawlerWikipediaCategory {
 
 	}
 
-	public static Category BFS(String category) throws IOException{
+	public static HashMap BFS(String category) throws IOException{
+		// Adjacency List
+		HashMap<String,AdjacencyListRow> adjacencylist = new HashMap<>();
+		
+		// contains marked nodes already visited
 		HashSet<String> markedNode = new HashSet<String>();
+		
+		// add first category
 		markedNode.add(category);
-		//Primo nodo
+		
+		// Queue vertex to visit 
 		PriorityQueue<String> vertexToVisit = new PriorityQueue<String>();
 		vertexToVisit.add(category);
-		Category graph = new Category(category,wikipediaRequest(category));
-		String u = vertexToVisit.poll();
-		HashMap<String, Category> subCategory = graph.getChilds();
-		for(String v  : subCategory.keySet()) {
-			if(!markedNode.contains(v)){
-				vertexToVisit.add(v);
-				markedNode.add(v);
-			}
-		}
-		//Tutti gli altri nodi
+		
+		// while there are vertex to visit, build adyacency list
 		while(!vertexToVisit.isEmpty()){
-			String z = vertexToVisit.poll();
-			Category vertex = new Category(z,wikipediaRequest(z));
-			subCategory = vertex.getChilds();
-			for(String v  : subCategory.keySet()) {
+			String vertex = vertexToVisit.poll();
+			HashSet<String> linkedVertex = wikipediaRequest(vertex);
+			AdjacencyListRow currentVertex = new AdjacencyListRow(linkedVertex, false);
+			adjacencylist.put(vertex, currentVertex);
+			for(String v : linkedVertex){
 				if(!markedNode.contains(v)){
 					vertexToVisit.add(v);
-					vertex.addChild(subCategory.get(v));
 					markedNode.add(v);
 				}
 			}
@@ -65,32 +64,62 @@ public class CrawlerWikipediaCategory {
 		Date date = new Date();
 		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 		System.out.println("Ora di fine :"+dateFormat.format(date));
-		return graph;
+		return adjacencylist;
 	}
 
 
-	public static HashMap<String, Category> wikipediaRequest(String category) throws IOException{
-		String targetURL="https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category:"+category+"&cmtype=subcat&format=json";
-		System.out.println(category);
-		JsonObject response = getJsonResponse(targetURL);
-		JsonArray categories = response.getAsJsonObject().get("query").getAsJsonObject().get("categorymembers").getAsJsonArray();
-		HashMap<String,Category> categoriesToReturn = new HashMap<String, Category>();
+	/**
+	 * Return vertexList linked from current vertex. In this method are used two request WIKIPEDIA to obtain parents list and childs list.
+	 * @param category
+	 * @return
+	 * @throws IOException
+	 */
+	public static HashSet<String> wikipediaRequest(String category) throws IOException{
+		//define 2 wikipedia request
+		String childsURL = "https://en.wikipedia.org/w/api.php?action=query&titles=Category:"+category+"&prop=categories&clshow=!hidden&cllimit=500&indexpageids&format=json";
+		String parentsURL="https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category:"+category+"&cmlimit=500&cmtype=subcat&format=json";
+
+		// make 2 request
+		JsonObject responseParent = getJsonResponse(parentsURL);
+		JsonObject responseChild = getJsonResponse(childsURL);
+
+		// first categoryList to obtain childs
+		JsonArray categories = responseParent.getAsJsonObject().get("query").getAsJsonObject().get("categorymembers").getAsJsonArray();
+		// second categoryList to obtain parents. Check if current category has parent with try-catch.
+		String id = responseChild.get("query").getAsJsonObject().get("pageids").getAsJsonArray().get(0).getAsString();
+		try{
+			categories.addAll(responseChild.get("query").getAsJsonObject().get("pages").getAsJsonObject().get(id).getAsJsonObject().get("categories").getAsJsonArray());
+		}		
+		catch(Exception e){
+			System.out.println(id+": hasn't parent category");
+		}
+		
+		HashSet<String> categoriesToReturn = new HashSet<>();
+		
+		// add all certex obtained to hashset
 		for(JsonElement cat : categories){
 			String name = cat.getAsJsonObject().get("title").getAsString();
 			String [] namesplitted = name.replaceAll(" ", "_").split("Category:");
-			categoriesToReturn.put(namesplitted[1], new Category(namesplitted[1], new HashMap<String,Category>()));
+			categoriesToReturn.add(namesplitted[1]);
 		}
-		//System.out.println(category+" "+categoriesToReturn.keySet());
+
+		System.out.println(category+" "+categoriesToReturn.size());
+
 		return categoriesToReturn;
 
 	}
 
 
 
+	/**
+	 * this method is used to do wikipedia request
+	 * @param targetURL
+	 * @return JsonObject response
+	 * @throws IOException
+	 */
 	private static  JsonObject getJsonResponse(String targetURL) throws IOException{
 		final String USER_AGENT = "Mozilla/5.0";
 		URL url = new URL(targetURL);
-		//System.out.println(url);
 		HttpURLConnection con = (HttpURLConnection) url.openConnection();
 		con.setDoOutput(true);
 		con.setRequestMethod("GET");
