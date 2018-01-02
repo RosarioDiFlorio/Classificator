@@ -6,14 +6,15 @@ import java.util.HashSet;
 public class CrawlerResult {
 
 	private boolean isCrashed;
+	private int numCategory = 0;
 	private String latestCategoryProcessed;
 	private HashSet<String> markedNode;
 	private HashMap<String,AdjacencyListRow> adjacencyList;
 
 
-
-
-
+	public CrawlerResult(){
+		
+	}
 
 	public CrawlerResult(boolean isCrashed, String latestCategoryProcessed, HashSet<String> markedNode,
 			HashMap<String, AdjacencyListRow> adjacencyList) {
@@ -22,16 +23,18 @@ public class CrawlerResult {
 		this.latestCategoryProcessed = latestCategoryProcessed;
 		this.markedNode = markedNode;
 		this.adjacencyList = adjacencyList;
+		this.numCategory = markedNode.size();
 	}
 	
-	public CrawlerResult(){
-		
+	
+	
+	public int getNumCategory() {
+		return numCategory;
 	}
 
-
-
-
-
+	public void setNumCategory(int numCategory) {
+		this.numCategory = numCategory;
+	}
 
 
 	public boolean isCrashed() {

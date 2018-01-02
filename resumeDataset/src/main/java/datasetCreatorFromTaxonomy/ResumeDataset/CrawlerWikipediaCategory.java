@@ -74,6 +74,7 @@ public class CrawlerWikipediaCategory {
     // while there are vertex to visit, build adyacency list
     while(!vertexToVisit.isEmpty()){
       String vertex = vertexToVisit.poll();
+      markedNode.add(vertex);
       HashSet<String> linkedVertex = wikipediaRequest(vertex);
       AdjacencyListRow currentVertex = new AdjacencyListRow(linkedVertex, false);
       adjacencylist.put(vertex, currentVertex);
@@ -85,7 +86,6 @@ public class CrawlerWikipediaCategory {
       for(String v : linkedVertex){
         if(!markedNode.contains(v)){
           vertexToVisit.add(v);
-          markedNode.add(v);
         }
       }
     }
