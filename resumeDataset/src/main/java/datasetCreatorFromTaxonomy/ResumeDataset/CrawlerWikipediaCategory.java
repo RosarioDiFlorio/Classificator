@@ -133,7 +133,7 @@ public class CrawlerWikipediaCategory {
       categoriesToReturn.add(namesplitted[1]);
     }
 
-    System.out.println(category+" "+categoriesToReturn.size());
+    //System.out.println(category+" "+categoriesToReturn.size());
 
     return categoriesToReturn;
 
