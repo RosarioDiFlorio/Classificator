@@ -29,8 +29,8 @@ public class AnalyzerWikipediaGraph {
 
     String vertexStart = "Years_of_the_19th_century_in_Egypt";
 
-    Map<String, AdjacencyListRow> adjacencyList = markNodes(crawlerResults.getAdjacencyList(), toMark);
-    Set<String> result = searchNearestMarkedVertex(adjacencyList, vertexStart, 1);
+    Map<String, AdjacencyListRow> markedAdjacencyList = markNodes(crawlerResults.getAdjacencyList(), toMark);
+    Set<String> result = searchNearestMarkedVertex(markedAdjacencyList, vertexStart, 1);
     
     System.out.println(result);
 
@@ -40,30 +40,41 @@ public class AnalyzerWikipediaGraph {
 
 
   public static Set<String> searchNearestMarkedVertex(Map<String,AdjacencyListRow> adjacencyList,String vertexStart,int numberOfMarkedVertex){
+    //insieme di nodi marcati da ritornare.
     Set<String> nearestMarkedVertex = new HashSet<String>();
     if(adjacencyList.containsKey(vertexStart)){
+      //contatore del numero di nodi marcati trovati.
       int countMarked = 0;
+      //controllo se il nodo di partenza è una categoria marcata.
       if(adjacencyList.get(vertexStart).isTaxonomyCategory()){
         nearestMarkedVertex.add(vertexStart);
         countMarked++;
         if(countMarked >= numberOfMarkedVertex)
           return nearestMarkedVertex;
       }
+      //lista dei nodi già visitati
       Set<String> visitedVertex = new HashSet<String>();
+      //aggiungo il nodo di partenza alla lista dei nodi già visitati.
       visitedVertex.add(vertexStart);
+      //coda dei nodi da visitare
       PriorityQueue<String> vertexToVisit = new PriorityQueue<String>();
+      //aggiungo tutti i nodi linkati dal nodo di partenza ai nodi da visitare.
       vertexToVisit.addAll(adjacencyList.get(vertexStart).getLinkedVertex());
-
+      //finchè i nodi da visitare non sono terminati.
       while(!vertexToVisit.isEmpty()){
+        //prendo il primo elemento della coda.
         String vertex = vertexToVisit.poll();
+        //aggiungo il nodo alla lista dei vertici già visitati.
         visitedVertex.add(vertex);
         if(adjacencyList.containsKey(vertex)){
+          //se il nodo corrente è una categoria marcata l'aggiungo alla lista da ritornare.
           if(adjacencyList.get(vertex).isTaxonomyCategory()){
             nearestMarkedVertex.add(vertex);
             countMarked++;
             if(countMarked >= numberOfMarkedVertex)
               return nearestMarkedVertex;
           }
+          //aggiungo i prossimi nodi da visitare
           for(String v : adjacencyList.get(vertex).getLinkedVertex()){
             if(!visitedVertex.contains(v) && !vertexToVisit.contains(v))
               vertexToVisit.add(v);
@@ -71,6 +82,7 @@ public class AnalyzerWikipediaGraph {
         }
       }
     }
+    //ritorno la lista di nodi marcati.
     return nearestMarkedVertex;
   }
 
