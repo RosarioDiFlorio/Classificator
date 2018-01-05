@@ -33,7 +33,8 @@ import com.google.gson.JsonParser;
 public class CrawlerWikipediaCategory {
 
 
-	private static 	ExecutorService executorService = Executors.newFixedThreadPool(10);
+	private static int numConcurrency = 20;
+	private static 	ExecutorService executorService = Executors.newFixedThreadPool(numConcurrency);
 
 
 
@@ -90,7 +91,7 @@ public class CrawlerWikipediaCategory {
 				categoriesParent = responseParent.getAsJsonObject().get("query").getAsJsonObject().get("pages").getAsJsonObject().get(id).getAsJsonObject().get("categories").getAsJsonArray();
 				String title = responseParent.getAsJsonObject().get("query").getAsJsonObject().get("pages").getAsJsonObject().get(id).getAsJsonObject().get("title").getAsString();
 				if(categoriesParent!=null){
-					// add all certex obtained to hashset
+					// add all vertex obtained to hashset
 					for(JsonElement cat : categoriesParent){
 						String name = cat.getAsJsonObject().get("title").getAsString();
 						String [] namesplitted = name.replaceAll(" ", "_").split("Category:");
@@ -112,6 +113,12 @@ public class CrawlerWikipediaCategory {
 	}
 
 
+	/**
+	 * This method is used to do request to obtain child category
+	 * @param categories. Category list, used to build request with more category. For any category is returned a list of child category
+	 * @return HashMap<String, HashSet<String>>, keys are names of initial categories. HashSet are child category for any initial category
+	 * @throws IOException
+	 */
 	public static HashMap<String, HashSet<String>> getChildsRequest(HashSet<String> categories) throws IOException, InterruptedException, ExecutionException{
 		HashMap<String, HashSet<String>> toReturn = new HashMap<String, HashSet<String>>();
 
@@ -135,7 +142,14 @@ public class CrawlerWikipediaCategory {
 
 
 
-
+	/**
+	 * Used to read graph by backup and to call BFS methods
+	 * @param categories
+	 * @param persist
+	 * @throws JsonParseException
+	 * @throws JsonMappingException
+	 * @throws IOException
+	 */
 	public static void BackupBFS(Set<String> categories,boolean persist) throws JsonParseException, JsonMappingException, IOException{
 		CrawlerResult crawlerResult = new CrawlerResult(false,categories,new HashSet<String>(),new HashMap<String,AdjacencyListRow>(),new PriorityQueue<String>());
 		File crawlerResultFile = new File(crawlerResult.getClass().getSimpleName());
@@ -180,7 +194,7 @@ public class CrawlerWikipediaCategory {
 		while(!vertexToVisit.isEmpty()){
 			HashSet<String> categories = new HashSet<String>(categoryList);
 
-			while (countToAddQuery < 10 && (!vertexToVisit.isEmpty()) && categories.size()<10){
+			while (countToAddQuery < numConcurrency && (!vertexToVisit.isEmpty()) && categories.size()< numConcurrency){
 				categories.add(vertexToVisit.poll());
 				countToAddQuery++;
 				countToPersiste++;
@@ -199,7 +213,7 @@ public class CrawlerWikipediaCategory {
 				adjacencylist.put(e, currentVertex);
 			}
 
-			if((persist && countToPersiste == 100) || (vertexToVisit.isEmpty())){
+			if((persist && countToPersiste == (numConcurrency*10)) || (vertexToVisit.isEmpty())){
 				countToPersiste = 0;
 				System.out.println("NODI RIMANENTI: "+vertexToVisit.size());
 				System.out.println("NODI MARCATI: "+markedNode.size());
@@ -239,7 +253,16 @@ public class CrawlerWikipediaCategory {
 	}
 
 
+	
 
+	/**
+	 * Method used to do wikipedia request
+	 * @param categories
+	 * @return response that contains parent and child for any category contained into initial list
+	 * @throws IOException
+	 * @throws InterruptedException
+	 * @throws ExecutionException
+	 */
 	public static HashMap<String,HashMap<String, HashSet<String>>> wikipediaRequest(HashSet<String> categories) throws IOException, InterruptedException, ExecutionException{
 
 		HashMap<String, HashMap<String, HashSet<String>>> toReturn = new HashMap<String, HashMap<String,HashSet<String>>>();
