@@ -3,12 +3,13 @@ package datasetCreatorFromTaxonomy.ResumeDataset;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.PriorityQueue;
+import java.util.Set;
 
 public class CrawlerResult {
 
 	private boolean isCrashed;
 	private int numCategory = 0;
-	private String latestCategoryProcessed;
+	private Set<String> latestCategoryProcessed;
 	private HashSet<String> markedNode;
 	private HashMap<String,AdjacencyListRow> adjacencyList;
 	private PriorityQueue<String> vertexToVisit;
@@ -17,7 +18,7 @@ public class CrawlerResult {
 		
 	}
 
-	public CrawlerResult(boolean isCrashed, String latestCategoryProcessed, HashSet<String> markedNode,HashMap<String, AdjacencyListRow> adjacencyList, PriorityQueue<String> vertexToVisit) {
+	public CrawlerResult(boolean isCrashed, Set<String> latestCategoryProcessed, HashSet<String> markedNode,HashMap<String, AdjacencyListRow> adjacencyList, PriorityQueue<String> vertexToVisit) {
 		super();
 		this.isCrashed = isCrashed;
 		this.latestCategoryProcessed = latestCategoryProcessed;
@@ -46,11 +47,11 @@ public class CrawlerResult {
 		this.isCrashed = isCrashed;
 	}
 
-	public String getLatestCategoryProcessed() {
+	public Set<String> getLatestCategoryProcessed() {
 		return latestCategoryProcessed;
 	}
 
-	public void setLatestCategoryProcessed(String latestCategoryProcessed) {
+	public void setLatestCategoryProcessed(Set<String> latestCategoryProcessed) {
 		this.latestCategoryProcessed = latestCategoryProcessed;
 	}
 
