@@ -16,6 +16,10 @@ import java.util.HashSet;
 import java.util.PriorityQueue;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -29,16 +33,28 @@ import com.google.gson.JsonParser;
 public class CrawlerWikipediaCategory {
 
 
+	private static 	ExecutorService executorService = Executors.newFixedThreadPool(10);
+
 
 
 	public static void main(String[] args) throws IOException{
-		
-		HashSet<String> categories = new HashSet<String>(); 
-		categories.add("Contents");
-		BackupBFS(categories, true);
+		try {
+			HashSet<String> categories = new HashSet<String>(); 
+			categories.add("Contents");
+			BackupBFS(categories, true);
+		}
+		finally {
+			executorService.shutdown();
+		}
 
 	}
 
+	/**
+	 * This method is used to do request to obtain parent category
+	 * @param categories. Category list, used to build request with more category. For any category is returned a list of parent category
+	 * @return HashMap<String, HashSet<String>>, keys are names of initial categories. HashSet are parent category for any initial category
+	 * @throws IOException
+	 */
 	public static HashMap<String, HashSet<String>> getParentsRequest(HashSet<String> categories) throws IOException{
 
 
@@ -96,40 +112,20 @@ public class CrawlerWikipediaCategory {
 	}
 
 
-
-	public static HashMap<String, HashSet<String>> getChildsRequest(HashSet<String> categories) throws IOException{
+	public static HashMap<String, HashSet<String>> getChildsRequest(HashSet<String> categories) throws IOException, InterruptedException, ExecutionException{
 		HashMap<String, HashSet<String>> toReturn = new HashMap<String, HashSet<String>>();
 
 
+		ArrayList<Future> featureList = new ArrayList<Future>();
 		for(String category : categories){
-			String categoryEncoded = URLEncoder.encode(category,"utf-8");
-			String childsURL="https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category:"+categoryEncoded+"&cmlimit=500&cmtype=subcat&format=json";
+			CallableImplementation currentCallable = new CallableImplementation(category);
+			featureList.add(executorService.submit(currentCallable));
+		}
 
-			// make 2 request
-			JsonObject responseChild = getJsonResponse(childsURL);
-
-
-			// second categoryList to obtain childs. Check if current category has parent with try-catch.
-
-			JsonArray categoriesChilds = null;
-			try{
-				categoriesChilds = responseChild.getAsJsonObject().get("query").getAsJsonObject().get("categorymembers").getAsJsonArray();
-			}		
-			catch(Exception e){
-				System.out.println(category+": hasn't childs category --- URL: "+childsURL);
-			}
-
-			HashSet<String> categoriesChildToReturn = new HashSet<String>();
-
-
-			if(categoriesChilds!=null){
-				// add all certex obtained to hashset
-				for(JsonElement cat : categoriesChilds){
-					String name = cat.getAsJsonObject().get("title").getAsString();
-					String [] namesplitted = name.replaceAll(" ", "_").split("Category:");
-					categoriesChildToReturn.add(namesplitted[1]);
-				}
-				toReturn.put(category, categoriesChildToReturn);
+		for ( Future future : featureList) {
+			HashMap<String, HashSet<String>> childrenMap = (HashMap<String, HashSet<String>>) future.get();
+			for(String key : childrenMap.keySet()){
+				toReturn.put(key, childrenMap.get(key));
 			}
 		}
 		return toReturn;
@@ -168,8 +164,10 @@ public class CrawlerWikipediaCategory {
 	 * @param adjacencylist Adjacency List
 	 * @return
 	 * @throws IOException
+	 * @throws ExecutionException 
+	 * @throws InterruptedException 
 	 */
-	public static HashMap BFS(Set<String> categoryList,HashSet<String> markedNode, HashMap<String,AdjacencyListRow> adjacencylist,PriorityQueue<String> vertexToVisit,boolean persist) throws IOException{
+	public static HashMap BFS(Set<String> categoryList,HashSet<String> markedNode, HashMap<String,AdjacencyListRow> adjacencylist,PriorityQueue<String> vertexToVisit,boolean persist) throws IOException, InterruptedException, ExecutionException{
 
 		// add first category
 		markedNode.addAll(categoryList);
@@ -181,36 +179,28 @@ public class CrawlerWikipediaCategory {
 		// while there are vertex to visit, build adyacency list
 		while(!vertexToVisit.isEmpty()){
 			HashSet<String> categories = new HashSet<String>(categoryList);
-			
-			//NEW//
-			while (countToAddQuery < 15 && (!vertexToVisit.isEmpty()) && categories.size()<10){
+
+			while (countToAddQuery < 10 && (!vertexToVisit.isEmpty()) && categories.size()<10){
 				categories.add(vertexToVisit.poll());
 				countToAddQuery++;
 				countToPersiste++;
 				if(vertexToVisit.isEmpty())
 					break;
 			}
-			
+
 			countToAddQuery = 0;
-			
-			//
-			
-			//String vertex = vertexToVisit.poll();
-			//count++;
-			//markedNode.add(vertex);
-			//HashMap<String, HashSet<String>> linkedVertex = wikipediaRequest(vertex);
-			
-			//NEW
+
 			markedNode.addAll(categories);
 			HashMap<String, HashMap<String, HashSet<String>>> linkedVertex = wikipediaRequest(categories);
 			HashMap<String, HashSet<String>> parent = linkedVertex.get("parents");
-			
+
 			for(String e : parent.keySet()){
 				AdjacencyListRow currentVertex = new AdjacencyListRow(parent.get(e), false);
 				adjacencylist.put(e, currentVertex);
 			}
-			
-			if((persist && countToPersiste%1000==0) || (vertexToVisit.isEmpty())){
+
+			if((persist && countToPersiste == 100) || (vertexToVisit.isEmpty())){
+				countToPersiste = 0;
 				System.out.println("NODI RIMANENTI: "+vertexToVisit.size());
 				System.out.println("NODI MARCATI: "+markedNode.size());
 				System.out.println("------------------------------------------------------");
@@ -218,10 +208,10 @@ public class CrawlerWikipediaCategory {
 				ObjectMapper writerCrawlerResult = new ObjectMapper();
 				writerCrawlerResult.writerWithDefaultPrettyPrinter().writeValue(new File(crawlerResult.getClass().getSimpleName()), crawlerResult);
 			}
-			
-			
+
+
 			HashSet<String> app = new HashSet<String>();
-			
+
 			HashMap<String, HashSet<String>> parentsMap = linkedVertex.get("parents");
 			HashMap<String, HashSet<String>> childsMap = linkedVertex.get("childs");
 			for(String key : parentsMap.keySet()){
@@ -230,33 +220,15 @@ public class CrawlerWikipediaCategory {
 			for(String key : childsMap.keySet()){
 				app.addAll(childsMap.get(key));
 			}
-	
-			for(String v : app){
-				if(!markedNode.contains(v) && !vertexToVisit.contains(v)){
-					vertexToVisit.add(v);
-				}
-			}
-			
-			categoryList = new HashSet<String>();
-			//
 
-			//AdjacencyListRow currentVertex = new AdjacencyListRow(linkedVertex.get("parents"), false);
-			//adjacencylist.put(vertex, currentVertex);
-			
-			/*if((persist && count%1000==0) || (vertexToVisit.isEmpty())){
-				System.out.println(markedNode.size());
-				CrawlerResult crawlerResult = new CrawlerResult(false,vertex,markedNode, adjacencylist,vertexToVisit);
-				ObjectMapper writerCrawlerResult = new ObjectMapper();
-				writerCrawlerResult.writerWithDefaultPrettyPrinter().writeValue(new File(crawlerResult.getClass().getSimpleName()), crawlerResult);
-			}
-			HashSet<String> app = new HashSet<String>();
-			app.addAll(linkedVertex.get("parents"));
-			app.addAll(linkedVertex.get("childs"));
 			for(String v : app){
 				if(!markedNode.contains(v) && !vertexToVisit.contains(v)){
 					vertexToVisit.add(v);
 				}
-			}*/
+			}
+
+			categoryList = new HashSet<String>();
+			
 		}
 
 		System.out.println("TotalCategory: "+markedNode.size());
@@ -267,83 +239,15 @@ public class CrawlerWikipediaCategory {
 	}
 
 
-	/**
-	 * Return vertexList linked from current vertex. In this method are used two request WIKIPEDIA to obtain parents list and childs list.
-	 * @param category
-	 * @return 
-	 * @return
-	 * @throws IOException
-	 */
-	/*public static HashMap<String,HashSet<String>> wikipediaRequest(String category) throws IOException{
-		//define 2 wikipedia request
-		HashMap<String, HashSet<String>> toReturn = new HashMap<String, HashSet<String>>();
-		String categoryEncoded = URLEncoder.encode(category,"utf-8");
-		String parentsURL = "https://en.wikipedia.org/w/api.php?action=query&titles=Category:"+categoryEncoded+"&prop=categories&clshow=!hidden&cllimit=500&indexpageids&format=json";
-		String childsURL="https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category:"+categoryEncoded+"&cmlimit=500&cmtype=subcat&format=json";
 
+	public static HashMap<String,HashMap<String, HashSet<String>>> wikipediaRequest(HashSet<String> categories) throws IOException, InterruptedException, ExecutionException{
 
-
-
-		// make 2 request
-		JsonObject responseParent = getJsonResponse(parentsURL);
-		JsonObject responseChild = getJsonResponse(childsURL);
-
-		JsonArray categoriesParent = null;
-		// first categoryList to obtain parents
-		String id = responseParent.get("query").getAsJsonObject().get("pageids").getAsJsonArray().get(0).getAsString();
-		try{
-			categoriesParent = responseParent.getAsJsonObject().get("query").getAsJsonObject().get("pages").getAsJsonObject().get(id).getAsJsonObject().get("categories").getAsJsonArray();
-		}
-		catch(Exception e){
-			System.out.println(id+": hasn't parents category --- URL: "+parentsURL);
-		}
-		// second categoryList to obtain childs. Check if current category has parent with try-catch.
-
-		JsonArray categoriesChilds = null;
-		try{
-			categoriesChilds = responseChild.getAsJsonObject().get("query").getAsJsonObject().get("categorymembers").getAsJsonArray();
-		}		
-		catch(Exception e){
-			System.out.println(id+": hasn't childs category --- URL: "+childsURL);
-		}
-
-		HashSet<String> categoriesParentToReturn = new HashSet<String>();
-		HashSet<String> categoriesChildToReturn = new HashSet<String>();
-
-		if(categoriesParent!=null){
-			// add all certex obtained to hashset
-			for(JsonElement cat : categoriesParent){
-				String name = cat.getAsJsonObject().get("title").getAsString();
-				String [] namesplitted = name.replaceAll(" ", "_").split("Category:");
-				categoriesParentToReturn.add(namesplitted[1]);
-			}
-		}
-
-		if(categoriesChilds!=null){
-			// add all certex obtained to hashset
-			for(JsonElement cat : categoriesChilds){
-				String name = cat.getAsJsonObject().get("title").getAsString();
-				String [] namesplitted = name.replaceAll(" ", "_").split("Category:");
-				categoriesChildToReturn.add(namesplitted[1]);
-			}
-		}
-
-		toReturn.put("parents", categoriesParentToReturn);
-		toReturn.put("childs", categoriesChildToReturn);
-
-
-		return toReturn;
-
-	} */
-
-	public static HashMap<String,HashMap<String, HashSet<String>>> wikipediaRequest(HashSet<String> categories) throws IOException{
-		
 		HashMap<String, HashMap<String, HashSet<String>>> toReturn = new HashMap<String, HashMap<String,HashSet<String>>>();
 		toReturn.put("parents", getParentsRequest(categories));
 		toReturn.put("childs", getChildsRequest(categories));
 		return toReturn;
-		
-		
+
+
 	}
 
 	/**
@@ -352,7 +256,7 @@ public class CrawlerWikipediaCategory {
 	 * @return JsonObject response
 	 * @throws IOException
 	 */
-	private static  JsonObject getJsonResponse(String targetURL) throws IOException{
+	public static  JsonObject getJsonResponse(String targetURL) throws IOException{
 		final String USER_AGENT = "Mozilla/5.0";
 		URL url = new URL(targetURL);
 		HttpURLConnection con = (HttpURLConnection) url.openConnection();
