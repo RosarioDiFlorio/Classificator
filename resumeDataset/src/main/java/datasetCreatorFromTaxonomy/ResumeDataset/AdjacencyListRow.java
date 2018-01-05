@@ -4,8 +4,8 @@ import java.util.HashSet;
 
 public class AdjacencyListRow {
 	
-	HashSet<String> linkedVertex = new HashSet<String>();
-	boolean taxonomyCategory;
+	private HashSet<String> linkedVertex = new HashSet<String>();
+	private boolean taxonomyCategory;
 	
 	public AdjacencyListRow(){
 		
@@ -35,6 +35,11 @@ public class AdjacencyListRow {
 	public void setTaxonomyCategory(boolean taxonomyCategory) {
 		this.taxonomyCategory = taxonomyCategory;
 	}
+
+  @Override
+  public String toString() {
+    return "AdjacencyListRow [linkedVertex=" + linkedVertex + ", taxonomyCategory=" + taxonomyCategory + "]";
+  }
 	
 
 
