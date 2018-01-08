@@ -1,103 +1,152 @@
 package datasetCreatorFromTaxonomy.ResumeDataset;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import eu.innovation.engineering.wikipedia.WikipediaMiner;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
 
 public class AnalyzerWikipediaGraph {
 
 
   public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException{
-    Set<String> toMark = new HashSet<String>(getNodeToMark("wheesbee_taxonomy.csv"));
-    ObjectMapper mapper = new ObjectMapper();
-    CrawlerResult crawlerResults = mapper.readValue(new File(CrawlerResult.class.getSimpleName()), new TypeReference<CrawlerResult>() {});
-    Map<String, AdjacencyListRow> markedAdjacencyList = markNodes(crawlerResults.getAdjacencyList(), toMark);
-    Set<String> totalResult = new HashSet<String>();
-    //11442
-    Set<String> belongCategory = WikipediaMiner.getBelongCategories("11442");
-    for(String category : belongCategory){
-      String vertexStart = WikipediaMiner.getPageInfoById(category).get("title").getAsString().replace("Category:", "");
-      System.out.println("Vertice Di Partenza -> "+vertexStart);
+    String testDocument = "45712";
+    System.out.println(getDocumentLabels(testDocument,3));
+  }
+  
  
-      Set<String> result = searchNearestMarkedVertex(markedAdjacencyList, vertexStart, 2);
-      System.out.println(result);
-      System.out.println("-------------------");
-      totalResult.addAll(result);
+  public static List<String> getDocumentLabels(String idDocument,int limitLabels) throws IOException{
+
+    Set<String> documentCategories = getParentCategoriesByIdPage(idDocument);
+    Set<PathInfo> results = new HashSet<>();
+    
+    //leggo la matrice di adiacenza.
+    HashMap<String, AdjacencyListRow> adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("signedGraphWikipedia");
+    
+    
+    for(String category: documentCategories){
+      results.addAll(searchNearestMarkedVertex(adjacencyList, category, 3));
     }
-    System.out.println(totalResult);
-
-
+    
+    List<PathInfo> orderedResults = new ArrayList<>(results);
+    Collections.sort(orderedResults,Collections.reverseOrder());
+    return orderedResults.subList(0,limitLabels).stream().map(e->e.getName()).collect(Collectors.toList());
+  }
+  
+  /**
+   * This method is used to do request to obtain parent category
+   * @param categories. Category list, used to build request with more category. For any category is returned a list of parent category
+   * @return HashMap<String, HashSet<String>>, keys are names of initial categories. HashSet are parent category for any initial category
+   * @throws IOException
+   */
+  public static Set<String> getParentCategoriesByIdPage(String idDocument) throws IOException{
+      Set<String> toReturn  = new HashSet<>();
+      JsonArray categoriesParent = null;
+      String parentsURL = "https://en.wikipedia.org/w/api.php?action=query&pageids="+idDocument+"&prop=categories&clshow=!hidden&cllimit=500&indexpageids&format=json";
+      JsonObject responseParent = CrawlerWikipediaCategory.getJsonResponse(parentsURL);
+      //build ids array 
+      JsonArray idsJsonArray = responseParent.get("query").getAsJsonObject().get("pageids").getAsJsonArray();
+      ArrayList<String> ids = new ArrayList<String>();
+      for (JsonElement e : idsJsonArray){
+          if (Integer.parseInt(e.getAsString())>0){
+              ids.add(e.getAsString());
+          }
+      }
+      for(String id : ids){
+          try{
+              categoriesParent = responseParent.getAsJsonObject().get("query").getAsJsonObject().get("pages").getAsJsonObject().get(id).getAsJsonObject().get("categories").getAsJsonArray();
+              String title = responseParent.getAsJsonObject().get("query").getAsJsonObject().get("pages").getAsJsonObject().get(id).getAsJsonObject().get("title").getAsString();
+              if(categoriesParent!=null){
+                  // add all vertex obtained to hashset
+                  for(JsonElement cat : categoriesParent){
+                      String name = cat.getAsJsonObject().get("title").getAsString();
+                      String [] namesplitted = name.replaceAll(" ", "_").split("Category:");
+                      toReturn.add(namesplitted[1]);
+                  }
+              }
+          }
+          catch(Exception e){
+              System.out.println(id+": hasn't parents category --- URL: "+parentsURL);
+          }
+      }
+      return toReturn;
   }
 
-
-
-  public static Set<String> searchNearestMarkedVertex(Map<String,AdjacencyListRow> adjacencyList,String vertexStart,int numberOfMarkedVertex){
+  public static Set<PathInfo> searchNearestMarkedVertex(Map<String,AdjacencyListRow> adjacencyList,String vertexStart,int numberOfMarkedVertex){
     //insieme di nodi marcati da ritornare.
-    Set<String> nearestMarkedVertex = new HashSet<String>();
+    Set<PathInfo> nearestMarkedVertex = new HashSet<PathInfo>();
     if(adjacencyList.containsKey(vertexStart)){
+      int lenghtPath = 0;
+      PathInfo vertexStartInfo = new PathInfo(vertexStart,lenghtPath);
       //contatore del numero di nodi marcati trovati.
       int countMarked = 0;
       //controllo se il nodo di partenza è una categoria marcata.
       if(adjacencyList.get(vertexStart).isTaxonomyCategory()){
-        nearestMarkedVertex.add(vertexStart);
+        nearestMarkedVertex.add(vertexStartInfo);
         countMarked++;
         if(countMarked >= numberOfMarkedVertex)
           return nearestMarkedVertex;
       }
       //lista dei nodi già visitati
-      Set<String> visitedVertex = new HashSet<String>();
+      Set<PathInfo> visitedVertex = new HashSet<PathInfo>();
       //aggiungo il nodo di partenza alla lista dei nodi già visitati.
-      visitedVertex.add(vertexStart);
+      visitedVertex.add(vertexStartInfo);
       //coda dei nodi da visitare
-      LinkedList<String> vertexToVisit = new LinkedList<String>();
+      LinkedList<PathInfo> vertexToVisit = new LinkedList<PathInfo>();
+      //incremento la lunghezza del path per i nodi linkati dal nodo di partenza.
+      lenghtPath++;
+
+      ///!!!!!!!!!!!!!!!!! JAVA 8 FUNCTION (conversione di Set<String> in un Set<PathInfo>)
+      //trasformo il set di stringhe linkate dal nodo in un set di oggetti PathInfo.
+      Set<PathInfo> linkedVertex = adjacencyList.get(vertexStart).getLinkedVertex().stream().map(vertexName-> new PathInfo(vertexName, vertexStartInfo.getValue()+1)).collect(Collectors.toSet());
+
       //aggiungo tutti i nodi linkati dal nodo di partenza ai nodi da visitare.
-      vertexToVisit.addAll(adjacencyList.get(vertexStart).getLinkedVertex());
+      vertexToVisit.addAll(linkedVertex);
       //finchè i nodi da visitare non sono terminati.
       while(!vertexToVisit.isEmpty()){
         //prendo il primo elemento della coda.
-        String vertex = vertexToVisit.poll();
+        PathInfo vertex = vertexToVisit.poll();
         //aggiungo il nodo alla lista dei vertici già visitati.
         visitedVertex.add(vertex);
-        if(adjacencyList.containsKey(vertex)){
+        lenghtPath ++;
+        if(adjacencyList.containsKey(vertex.getName())){
           //se il nodo corrente è una categoria marcata l'aggiungo alla lista da ritornare.
-          if(adjacencyList.get(vertex).isTaxonomyCategory()){
+          if(adjacencyList.get(vertex.getName()).isTaxonomyCategory()){
             nearestMarkedVertex.add(vertex);
             countMarked++;
             if(countMarked >= numberOfMarkedVertex)
               return nearestMarkedVertex;
           }
           //aggiungo i prossimi nodi da visitare
-          for(String v : adjacencyList.get(vertex).getLinkedVertex()){
-            if(!visitedVertex.contains(v) && !vertexToVisit.contains(v))
-              vertexToVisit.add(v);
+          for(String v : adjacencyList.get(vertex.getName()).getLinkedVertex()){
+            PathInfo vInfo = new PathInfo(v, vertex.getValue()+1);
+            if(!visitedVertex.contains(vInfo) && !vertexToVisit.contains(vInfo))
+              vertexToVisit.add(vInfo);
           }
-        }else if(adjacencyList.containsKey(vertex.replace("_", " "))){
-          vertex = vertex.replace("_", " ");
-          if(adjacencyList.get(vertex).isTaxonomyCategory()){
+        }else if(adjacencyList.containsKey(vertex.getName().replace("_", " "))){
+          vertex.setName(vertex.getName().replace("_", " "));
+          if(adjacencyList.get(vertex.getName()).isTaxonomyCategory()){
             nearestMarkedVertex.add(vertex);
             countMarked++;
             if(countMarked >= numberOfMarkedVertex)
               return nearestMarkedVertex;
           }
           //aggiungo i prossimi nodi da visitare
-          for(String v : adjacencyList.get(vertex).getLinkedVertex()){
-            if(!visitedVertex.contains(v) && !vertexToVisit.contains(v))
-              vertexToVisit.add(v);
+          for(String v : adjacencyList.get(vertex.getName()).getLinkedVertex()){
+            PathInfo vInfo = new PathInfo(v, vertex.getValue()+1);
+            if(!visitedVertex.contains(vInfo) && !vertexToVisit.contains(vInfo))
+              vertexToVisit.add(vInfo);
           }
         }
       }
@@ -106,55 +155,4 @@ public class AnalyzerWikipediaGraph {
     return nearestMarkedVertex;
   }
 
-  public static Map<String,AdjacencyListRow> markNodes(Map<String,AdjacencyListRow> adjacencyList,Set<String> toMark){
-    Set<String> toTest = new HashSet<String>();
-    for(String vertex: toMark){
-      if(adjacencyList.containsKey(vertex)){
-        AdjacencyListRow rowToUpdate = adjacencyList.get(vertex);
-        rowToUpdate.setTaxonomyCategory(true);
-        adjacencyList.replace(vertex, rowToUpdate);
-        toTest.add(vertex);
-      }else {
-        String newSearch = vertex.replace("_", " ");
-        if(adjacencyList.containsKey(newSearch)){
-          AdjacencyListRow rowToUpdate = adjacencyList.get(newSearch);
-          rowToUpdate.setTaxonomyCategory(true);
-          adjacencyList.replace(newSearch, rowToUpdate);
-          toTest.add(newSearch);
-        }
-      }     
-    }
-    return adjacencyList; 
-  }
-
-  public static Set<String> getNodeToMark(String fileWhereRead) throws IOException{
-    return readCSV(fileWhereRead, false).keySet();
-  }
-
-
-  private static Map<String,List<String>> readCSV(String csvFile,boolean labeled) throws IOException{
-
-    String line = "";
-    String cvsSplitBy = ",";
-    Map<String, List<String>> dataMap = new HashMap<String, List<String>>();
-
-    BufferedReader br = new BufferedReader(new FileReader(csvFile));
-    if(labeled)
-      line = br.readLine();
-
-    while ((line = br.readLine()) != null) {
-      // use comma as separator
-      String[] csvData = line.split(cvsSplitBy); 
-      List<String> data = new ArrayList<String>();
-      if(csvData.length>=2){
-        for(int i =0;i<csvData.length-1;i++){
-          data.add(csvData[i].trim());
-        }
-        String key = csvData[csvData.length-1].trim().replace("en.wikipedia.org/wiki/Category:", "");
-        if(!key.equals(""))
-          dataMap.put(key, data);
-      }
-    }
-    return dataMap;
-  }  
 }
