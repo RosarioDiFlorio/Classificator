@@ -29,7 +29,7 @@ public class AnalyzerWikipediaGraph {
   public static List<String> getDocumentLabels(String idDocument,int limitLabels) throws IOException{
 
     Set<String> documentCategories = getParentCategoriesByIdPage(idDocument);
-    Set<PathInfo> results = new HashSet<>();
+    Set<PathInfo> results = new HashSet<PathInfo>();
     
     //leggo la matrice di adiacenza.
     HashMap<String, AdjacencyListRow> adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("signedGraphWikipedia");
@@ -39,7 +39,7 @@ public class AnalyzerWikipediaGraph {
       results.addAll(searchNearestMarkedVertex(adjacencyList, category, 3));
     }
     
-    List<PathInfo> orderedResults = new ArrayList<>(results);
+    List<PathInfo> orderedResults = new ArrayList<PathInfo>(results);
     Collections.sort(orderedResults,Collections.reverseOrder());
     return orderedResults.subList(0,limitLabels).stream().map(e->e.getName()).collect(Collectors.toList());
   }
