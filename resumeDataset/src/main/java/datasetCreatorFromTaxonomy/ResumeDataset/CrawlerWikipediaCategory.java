@@ -1,6 +1,8 @@
 package datasetCreatorFromTaxonomy.ResumeDataset;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -13,6 +15,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Scanner;
 import java.util.Set;
@@ -21,6 +25,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
+import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -36,9 +41,12 @@ public class CrawlerWikipediaCategory {
 	private static int numConcurrency = 20;
 	private static 	ExecutorService executorService = Executors.newFixedThreadPool(numConcurrency);
 
-
-
-	public static void main(String[] args) throws IOException{
+	/**
+	 * used to build wikipedia category graph
+	 * @param args
+	 * @throws IOException
+	 */
+	public static void mainToBuildGraph(String[] args) throws IOException{
 		try {
 			HashSet<String> categories = new HashSet<String>(); 
 			categories.add("Contents");
@@ -49,7 +57,60 @@ public class CrawlerWikipediaCategory {
 		}
 
 	}
+	
+	/**
+	 * used to mark category
+	 * @param args
+	 * @throws IOException
+	 */
+	public static void main(String[] args) throws IOException{
+		HashMap<String, AdjacencyListRow> graph = returnAdjacencyListFromFile("GraphWikipedia");
+		Set<String> categories =  returnCategoriesFromTaxonomyCSV("categories_taxonomy.csv");
+		markGraph(graph, categories);
+	}
+	
+	
+	/**
+	 * main uset to clean graph   categoryName: "category name" --> "category_name"
+	 * @param args
+	 * @throws IOException
+	 */
+	public static void mainToClear(String[] args) throws IOException{
+		HashMap<String, AdjacencyListRow> graph = returnAdjacencyListFromFile("CrawlerResult");
+		HashMap<String, AdjacencyListRow> app = new HashMap<String, AdjacencyListRow>();
+		
+		System.out.println("Initial graph size: "+graph.size());
+		
+		HashSet<String> toRemove = new HashSet<String>();
+		for(String category : graph.keySet()){
+			
+			if(category.contains(" ")){
+				app.put(category.replace(" ", "_"),graph.get(category));
+				toRemove.add(category);
+			}
+		}
+		
+		//aggiungo le categorie con _
+		for(String cat : app.keySet()){
+			graph.put(cat, app.get(cat));
+		}
+		
+		// rimuovo le categorie con gli spazi
+		for(String cat : toRemove){
+			graph.remove(cat);
+		}
+		
+		
+		ObjectMapper writerCrawlerResult = new ObjectMapper();
+		writerCrawlerResult.writerWithDefaultPrettyPrinter().writeValue(new File("GraphWikipedia"), graph);
+		System.out.println("Final graph size: "+graph.size());
+		
+	}
 
+	
+	
+	
+	
 	/**
 	 * This method is used to do request to obtain parent category
 	 * @param categories. Category list, used to build request with more category. For any category is returned a list of parent category
@@ -242,7 +303,7 @@ public class CrawlerWikipediaCategory {
 			}
 
 			categoryList = new HashSet<String>();
-			
+
 		}
 
 		System.out.println("TotalCategory: "+markedNode.size());
@@ -253,7 +314,7 @@ public class CrawlerWikipediaCategory {
 	}
 
 
-	
+
 
 	/**
 	 * Method used to do wikipedia request
@@ -286,10 +347,110 @@ public class CrawlerWikipediaCategory {
 		con.setDoOutput(true);
 		con.setRequestMethod("GET");
 		con.setRequestProperty("User-Agent", USER_AGENT);
-		Scanner in = new Scanner(
-				new InputStreamReader(con.getInputStream()));  
-		JsonParser parser = new JsonParser(); 
-		JsonObject jOb = parser.parse(in.nextLine()).getAsJsonObject();
+		JsonObject jOb = new JsonObject();
+		try{
+			Scanner in = new Scanner(new InputStreamReader(con.getInputStream()));  
+			JsonParser parser = new JsonParser(); 
+			jOb = parser.parse(in.nextLine()).getAsJsonObject();
+		}
+		catch(Exception e){
+			System.out.println("Connection timed out: recall method ");
+			jOb = getJsonResponse(targetURL);
+		}
 		return jOb;
 	}
+
+
+	/**
+	 * read Category by Taxonomy CSV. Input file contains all categories used from Taxonomy
+	 * @param csvFile
+	 * @param labeled
+	 * @return 
+	 * @return
+	 * @throws IOException
+	 */
+	public static  Set<String> returnCategoriesFromTaxonomyCSV(String csvFile) throws IOException{
+
+		String line = "";
+		String cvsSplitBy = ",";
+		Map<String, List<String>> dataMap = new HashMap<String, List<String>>();
+
+		BufferedReader br = new BufferedReader(new FileReader(csvFile));
+
+		while ((line = br.readLine()) != null) {
+			// use comma as separator
+			String[] csvData = line.split(cvsSplitBy); 
+			List<String> data = new ArrayList<String>();
+			if(csvData.length>=2){
+				for(int i =0;i<csvData.length-1;i++){
+					data.add(csvData[i].trim());
+				}
+				String key = csvData[csvData.length-1].trim().replace("en.wikipedia.org/wiki/Category:", "");
+				if(!key.equals(""))
+					dataMap.put(key, data);
+			}
+		}
+		return dataMap.keySet();
+	}  
+
+
+
+
+	/**
+	 * return graph in adjacency_list structure
+	 * @param filePath
+	 * @return
+	 * @throws JsonParseException
+	 * @throws JsonMappingException
+	 * @throws IOException
+	 */
+	public static  HashMap<String, AdjacencyListRow> returnAdjacencyListFromFile(String filePath) throws JsonParseException, JsonMappingException, IOException{
+		ObjectMapper mapper = new ObjectMapper();
+		CrawlerResult crawlerResult = null;
+		try {
+			crawlerResult = mapper.readValue(new File(filePath), new TypeReference<CrawlerResult>() {});
+		} catch (Exception e) {
+			return mapper.readValue(new File(filePath), new TypeReference<HashMap<String, AdjacencyListRow>>() {});
+			
+		}
+		
+		return crawlerResult.getAdjacencyList();
+	}
+
+
+	/**
+	 * 
+	 * @param graph
+	 * @param categoriesToMark
+	 * @throws IOException 
+	 * @throws JsonMappingException 
+	 * @throws JsonGenerationException 
+	 */
+	public static HashMap<String, AdjacencyListRow> markGraph(HashMap<String, AdjacencyListRow> graph, Set<String> categoriesToMark) throws JsonGenerationException, JsonMappingException, IOException{
+
+		int countMarked = 0;
+		for(String category : categoriesToMark){
+			if(graph.containsKey(category)){
+				graph.get(category).setTaxonomyCategory(true);
+				countMarked++;
+				}
+			else if (graph.containsKey(category.replace("_", " "))){
+				graph.get(category.replace("_", " ")).setTaxonomyCategory(true);
+				countMarked++;
+				}
+		}
+		
+		System.out.println("Marked nodes: "+countMarked);
+		ObjectMapper writerCrawlerResult = new ObjectMapper();
+		writerCrawlerResult.writerWithDefaultPrettyPrinter().writeValue(new File("signedGraphWikipedia"), graph);
+		
+		return graph;
+
+	}
+	
+	
+	
+
+
+
 }
