@@ -18,21 +18,22 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 public class AnalyzerWikipediaGraph {
-
+  
+  private static  HashMap<String, AdjacencyListRow> adjacencyList = null;
 
   public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException{
     String testDocument = "45712";
     System.out.println(getDocumentLabels(testDocument,3));
   }
-  
  
   public static List<String> getDocumentLabels(String idDocument,int limitLabels) throws IOException{
 
     Set<String> documentCategories = getParentCategoriesByIdPage(idDocument);
     Set<PathInfo> results = new HashSet<PathInfo>();
     
-    //leggo la matrice di adiacenza.
-    HashMap<String, AdjacencyListRow> adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("signedGraphWikipedia");
+    if(adjacencyList == null)    
+      adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("signedGraphWikipedia");
+
     
     
     for(String category: documentCategories){
