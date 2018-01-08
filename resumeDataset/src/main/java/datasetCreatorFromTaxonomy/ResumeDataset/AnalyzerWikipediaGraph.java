@@ -1,10 +1,15 @@
 package datasetCreatorFromTaxonomy.ResumeDataset;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
-import java.util.PriorityQueue;
 import java.util.Set;
 
 import com.fasterxml.jackson.core.JsonParseException;
@@ -12,27 +17,29 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import eu.innovation.engineering.wikipedia.WikipediaMiner;
+
 public class AnalyzerWikipediaGraph {
 
 
   public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException{
+    Set<String> toMark = new HashSet<String>(getNodeToMark("wheesbee_taxonomy.csv"));
     ObjectMapper mapper = new ObjectMapper();
     CrawlerResult crawlerResults = mapper.readValue(new File(CrawlerResult.class.getSimpleName()), new TypeReference<CrawlerResult>() {});
-
-
-    //"A-Class_Akwa_Ibom_articles", "A-Class_Andhra_Pradesh_articles_of_Mid-importance", "A-Class_Alberta_articles",
-    Set<String> toMark = new HashSet<String>();
-    toMark.add("A-Class_Akwa_Ibom_articles");
-    toMark.add("A-Class_Andhra_Pradesh_articles_of_Mid-importance");
-    toMark.add("1895_in_Egypt");
-
-
-    String vertexStart = "Years_of_the_19th_century_in_Egypt";
-
     Map<String, AdjacencyListRow> markedAdjacencyList = markNodes(crawlerResults.getAdjacencyList(), toMark);
-    Set<String> result = searchNearestMarkedVertex(markedAdjacencyList, vertexStart, 1);
-    
-    System.out.println(result);
+    Set<String> totalResult = new HashSet<String>();
+    //11442
+    Set<String> belongCategory = WikipediaMiner.getBelongCategories("11442");
+    for(String category : belongCategory){
+      String vertexStart = WikipediaMiner.getPageInfoById(category).get("title").getAsString().replace("Category:", "");
+      System.out.println("Vertice Di Partenza -> "+vertexStart);
+ 
+      Set<String> result = searchNearestMarkedVertex(markedAdjacencyList, vertexStart, 2);
+      System.out.println(result);
+      System.out.println("-------------------");
+      totalResult.addAll(result);
+    }
+    System.out.println(totalResult);
 
 
   }
@@ -57,7 +64,7 @@ public class AnalyzerWikipediaGraph {
       //aggiungo il nodo di partenza alla lista dei nodi già visitati.
       visitedVertex.add(vertexStart);
       //coda dei nodi da visitare
-      PriorityQueue<String> vertexToVisit = new PriorityQueue<String>();
+      LinkedList<String> vertexToVisit = new LinkedList<String>();
       //aggiungo tutti i nodi linkati dal nodo di partenza ai nodi da visitare.
       vertexToVisit.addAll(adjacencyList.get(vertexStart).getLinkedVertex());
       //finchè i nodi da visitare non sono terminati.
@@ -79,6 +86,19 @@ public class AnalyzerWikipediaGraph {
             if(!visitedVertex.contains(v) && !vertexToVisit.contains(v))
               vertexToVisit.add(v);
           }
+        }else if(adjacencyList.containsKey(vertex.replace("_", " "))){
+          vertex = vertex.replace("_", " ");
+          if(adjacencyList.get(vertex).isTaxonomyCategory()){
+            nearestMarkedVertex.add(vertex);
+            countMarked++;
+            if(countMarked >= numberOfMarkedVertex)
+              return nearestMarkedVertex;
+          }
+          //aggiungo i prossimi nodi da visitare
+          for(String v : adjacencyList.get(vertex).getLinkedVertex()){
+            if(!visitedVertex.contains(v) && !vertexToVisit.contains(v))
+              vertexToVisit.add(v);
+          }
         }
       }
     }
@@ -87,13 +107,54 @@ public class AnalyzerWikipediaGraph {
   }
 
   public static Map<String,AdjacencyListRow> markNodes(Map<String,AdjacencyListRow> adjacencyList,Set<String> toMark){
+    Set<String> toTest = new HashSet<String>();
     for(String vertex: toMark){
       if(adjacencyList.containsKey(vertex)){
         AdjacencyListRow rowToUpdate = adjacencyList.get(vertex);
         rowToUpdate.setTaxonomyCategory(true);
         adjacencyList.replace(vertex, rowToUpdate);
+        toTest.add(vertex);
+      }else {
+        String newSearch = vertex.replace("_", " ");
+        if(adjacencyList.containsKey(newSearch)){
+          AdjacencyListRow rowToUpdate = adjacencyList.get(newSearch);
+          rowToUpdate.setTaxonomyCategory(true);
+          adjacencyList.replace(newSearch, rowToUpdate);
+          toTest.add(newSearch);
+        }
+      }     
+    }
+    return adjacencyList; 
+  }
+
+  public static Set<String> getNodeToMark(String fileWhereRead) throws IOException{
+    return readCSV(fileWhereRead, false).keySet();
+  }
+
+
+  private static Map<String,List<String>> readCSV(String csvFile,boolean labeled) throws IOException{
+
+    String line = "";
+    String cvsSplitBy = ",";
+    Map<String, List<String>> dataMap = new HashMap<String, List<String>>();
+
+    BufferedReader br = new BufferedReader(new FileReader(csvFile));
+    if(labeled)
+      line = br.readLine();
+
+    while ((line = br.readLine()) != null) {
+      // use comma as separator
+      String[] csvData = line.split(cvsSplitBy); 
+      List<String> data = new ArrayList<String>();
+      if(csvData.length>=2){
+        for(int i =0;i<csvData.length-1;i++){
+          data.add(csvData[i].trim());
+        }
+        String key = csvData[csvData.length-1].trim().replace("en.wikipedia.org/wiki/Category:", "");
+        if(!key.equals(""))
+          dataMap.put(key, data);
       }
     }
-    return adjacencyList;
-  }
+    return dataMap;
+  }  
 }
