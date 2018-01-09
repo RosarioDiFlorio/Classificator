@@ -23,10 +23,10 @@ public class AnalyzerWikipediaGraph {
 
   public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException{
     String testDocument = "45712";
-    System.out.println(getDocumentLabels(testDocument,3));
+    System.out.println(getDocumentLabels(testDocument));
   }
  
-  public static List<String> getDocumentLabels(String idDocument,int limitLabels) throws IOException{
+  public static List<String> getDocumentLabels(String idDocument) throws IOException{
 
     Set<String> documentCategories = getParentCategoriesByIdPage(idDocument);
     Set<PathInfo> results = new HashSet<PathInfo>();
@@ -42,13 +42,15 @@ public class AnalyzerWikipediaGraph {
     
     List<PathInfo> orderedResults = new ArrayList<PathInfo>(results);
     Collections.sort(orderedResults,Collections.reverseOrder());
-    return orderedResults.subList(0,limitLabels).stream().map(e->e.getName()).collect(Collectors.toList());
+    return orderedResults.stream().map(e->e.getName()).collect(Collectors.toList());
   }
   
+
   /**
-   * This method is used to do request to obtain parent category
-   * @param categories. Category list, used to build request with more category. For any category is returned a list of parent category
-   * @return HashMap<String, HashSet<String>>, keys are names of initial categories. HashSet are parent category for any initial category
+   * Return the categories of a Wikipedia's page.
+   * Take as input the id of a Wikipedia's document.
+   * @param idDocument
+   * @return
    * @throws IOException
    */
   public static Set<String> getParentCategoriesByIdPage(String idDocument) throws IOException{
@@ -84,6 +86,13 @@ public class AnalyzerWikipediaGraph {
       return toReturn;
   }
 
+  /**
+   * Search the nearest n marked vertex starting to the vertex passed in input to this function.
+   * @param adjacencyList
+   * @param vertexStart
+   * @param numberOfMarkedVertex
+   * @return
+   */
   public static Set<PathInfo> searchNearestMarkedVertex(Map<String,AdjacencyListRow> adjacencyList,String vertexStart,int numberOfMarkedVertex){
     //insieme di nodi marcati da ritornare.
     Set<PathInfo> nearestMarkedVertex = new HashSet<PathInfo>();
@@ -108,7 +117,7 @@ public class AnalyzerWikipediaGraph {
       //incremento la lunghezza del path per i nodi linkati dal nodo di partenza.
       lenghtPath++;
 
-      ///!!!!!!!!!!!!!!!!! JAVA 8 FUNCTION (conversione di Set<String> in un Set<PathInfo>)
+      ///!!!!!!!!!!!!!!!!! JAVA 8 FUNCTION (conversione di Set<String> in un Set<PathInfo>) !!!!!!!!!!!!!!!!
       //trasformo il set di stringhe linkate dal nodo in un set di oggetti PathInfo.
       Set<PathInfo> linkedVertex = adjacencyList.get(vertexStart).getLinkedVertex().stream().map(vertexName-> new PathInfo(vertexName, vertexStartInfo.getValue()+1)).collect(Collectors.toSet());
 
@@ -135,7 +144,8 @@ public class AnalyzerWikipediaGraph {
             if(!visitedVertex.contains(vInfo) && !vertexToVisit.contains(vInfo))
               vertexToVisit.add(vInfo);
           }
-        }else if(adjacencyList.containsKey(vertex.getName().replace("_", " "))){
+        }else // porzione aggiunta per possibile errore di formato delle chiavi all'interno della lista di adiacenze. 
+          if(adjacencyList.containsKey(vertex.getName().replace("_", " "))){
           vertex.setName(vertex.getName().replace("_", " "));
           if(adjacencyList.get(vertex.getName()).isTaxonomyCategory()){
             nearestMarkedVertex.add(vertex);
