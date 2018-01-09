@@ -134,8 +134,12 @@ public class CreateDataset {
 							else{
 								f2 = new File(basePathDst+"/"+splitted[splitted.length-1]);
 								// Codice per cercare le categori dal grafo wikipedia. Creare un file CSV che contiene le categorie che il grafo ha restituito
-								List<String>labels =  analyzerWikipedia.getDocumentLabels(splitted[splitted.length-1],3);
-								writerLabelsTest.write(splitted[splitted.length-1]+","+labels.get(0)+","+labels.get(1)+","+labels.get(2)+"\n");
+								List<String> labels =  analyzerWikipedia.getDocumentLabels(splitted[splitted.length-1]);
+								if(labels.size()>=2)
+									writerLabelsTest.write(splitted[splitted.length-1]+","+labels.get(0)+","+labels.get(1)+"\n");
+								else
+									writerLabelsTest.write(splitted[splitted.length-1]+","+labels.get(0)+"\n");
+
 								writerLabelsTest.flush();
 							}
 							FileUtils.copyFile(f1, f2);  
