@@ -1,6 +1,7 @@
 package datasetCreatorFromTaxonomy.ResumeDataset;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -21,6 +22,8 @@ import com.google.gson.JsonParser;
 
 public class CreateDataset {
 
+	final private static int minCut = 100;
+	final private static int maxCut = 10000000;
 
 	public static void main(String[] args) throws IOException{
 		ListAllFiles fileReader = new ListAllFiles();
@@ -35,14 +38,9 @@ public class CreateDataset {
 		String basePathDst = "D:/Development/Datasets/dataset_trainingNew/";
 
 		new File("D:/TextClassifier/datasets_trainingNew").mkdir();
-		new File("D:/TextClassifier/datasets_testNew").mkdir();
+		new File("D:/TextClassifier/datasets_testNew_"+minCut+"-"+maxCut).mkdir();
 		String basePathDstTraining = "D:/TextClassifier/datasets_trainingNew/";
-		String basePathDstTest = "D:/TextClassifier/datasets_testNew/";
-
-		/*new File("D:/TextClassifier/training/training").mkdir();
-		new File("D:/TextClassifier/training/test").mkdir();
-		String basePathDstTraining = "D:/TextClassifier/training/trainingApp/";
-		String basePathDstTest = "D:/TextClassifier/training/testApp/";*/
+		String basePathDstTest = "D:/TextClassifier/datasets_testNew_"+minCut+"-"+maxCut+"/";
 
 
 
@@ -68,7 +66,7 @@ public class CreateDataset {
 
 		}
 
-		
+
 
 		//TRAINING
 		ArrayList<String> added = buildDataset(pathList, basePathDstTraining, basePathSrc, directoryWindows, fileList, fileReader,450, new ArrayList<String>(), "training");
@@ -84,9 +82,10 @@ public class CreateDataset {
 
 	public static ArrayList<String>  buildDataset(Set<String> pathList,String basePathDst,String basePathSrc, String directoryWindows, ArrayList<String> fileList, ListAllFiles fileReader, int numSourceToCopy, ArrayList<String> added, String datasetType) throws IOException{
 		// PER OGNNI PATH CALCOLATO
-		
+
 		ArrayList<String> addedToReturn = new ArrayList<String>();
-		int countDuplicate = 0;
+		FileWriter writerLabelsTest = new FileWriter(new File("labelsItemTestWithOrigin.csv"));
+		writerLabelsTest.write("id,origin,firstLabel,secondLabel,thirdLabel\n");
 		for(String path:pathList){
 			System.out.println(path);
 
@@ -106,8 +105,8 @@ public class CreateDataset {
 
 			// A QUESTO PUNTO AGGIUNGO I DOCUMENTI AL PATH CORRENTE USANDO LE CATEGORIE FOGLIA CALCOLATE
 			int numSource = (numSourceToCopy/leafList.size());
-			
-			FileWriter writerLabelsTest = new FileWriter(new File("labelsItemTest.csv"));
+
+
 			AnalyzerWikipediaGraph analyzerWikipedia = new AnalyzerWikipediaGraph();
 			for(String leaf:leafList){
 
@@ -117,40 +116,76 @@ public class CreateDataset {
 				int count = 0; 
 				ArrayList<String> files = (ArrayList<String>) fileReader.listFilesAndFilesSubDirectories(directoryWindows+"/"+leaf, new ArrayList<String>());
 				for(String file:files){
+
 					file = file.replace("\\", "/");
 					String[] splitted = file.split("/");
 
+					File f1 = new File(file);
+					int wordCount=0;
+
+					// conto il numero di parole del documento
+					try(Scanner sc = new Scanner(new FileInputStream(file))){
+						while(sc.hasNext()){
+							sc.next();
+							wordCount++;
+						}
+					}
+					catch(Exception e){
+
+					}
+
+
 					if(!added.contains(splitted[splitted.length-1])){
-						addedToReturn.add(splitted[splitted.length-1]);
+
 						if(count>=numSource)
 							break;
 						else{
 							count++;
-							File f1 = new File(file);
 							File f2 = null;
 							if(datasetType.equals("training")){
+								addedToReturn.add(splitted[splitted.length-1]);
 								f2 = new File(basePathDst+path+"/"+nameLeaf+"_"+splitted[splitted.length-1]);
+								FileUtils.copyFile(f1, f2); 
 							}
-							else{
-								f2 = new File(basePathDst+"/"+splitted[splitted.length-1]);
-								// Codice per cercare le categori dal grafo wikipedia. Creare un file CSV che contiene le categorie che il grafo ha restituito
-								List<String> labels =  analyzerWikipedia.getDocumentLabels(splitted[splitted.length-1]);
-								if(labels.size()>=2)
-									writerLabelsTest.write(splitted[splitted.length-1]+","+labels.get(0)+","+labels.get(1)+"\n");
-								else
-									writerLabelsTest.write(splitted[splitted.length-1]+","+labels.get(0)+"\n");
-
-								writerLabelsTest.flush();
-							}
-							FileUtils.copyFile(f1, f2);  
+							else
+								if(datasetType.equals("test") && (!addedToReturn.contains(splitted[splitted.length-1]))){									if(wordCount >=minCut && wordCount<=maxCut){
+									addedToReturn.add(splitted[splitted.length-1]);
+									f2 = new File(basePathDst+"/"+splitted[splitted.length-1]); 
+									// Codice per cercare le categori dal grafo wikipedia. Creare un file CSV che contiene le categorie che il grafo ha restituito
+									List<String> labels =  analyzerWikipedia.getDocumentLabelsTaxonomy(splitted[splitted.length-1]);
+									if(nameLeaf.toLowerCase().equals(labels.get(0).toLowerCase())){
+										try{
+											if(labels.size()>=3){
+												writerLabelsTest.write(splitted[splitted.length-1]+","+nameLeaf+","+labels.get(0)+","+labels.get(1)+","+labels.get(2)+"\n");
+												FileUtils.copyFile(f1, f2);
+											}
+											else
+												if(labels.size()>=2){
+													writerLabelsTest.write(splitted[splitted.length-1]+","+nameLeaf+","+labels.get(0)+","+labels.get(1)+"\n");
+													FileUtils.copyFile(f1, f2);
+												}
+												else
+													if(labels.size()>0){
+														writerLabelsTest.write(splitted[splitted.length-1]+","+nameLeaf+","+labels.get(0)+"\n");
+														FileUtils.copyFile(f1, f2);
+													}
+										}
+										catch(Exception e){
+											System.out.println(splitted[splitted.length-1]);
+										}
+										writerLabelsTest.flush();
+									} 
+								}
+								}
 						}
 					}
 				}
 			}
-			writerLabelsTest.flush();
-			writerLabelsTest.close();
+
 		}
-		
+		writerLabelsTest.flush();
+		writerLabelsTest.close();
+
 		return addedToReturn;
 	}
 
@@ -167,7 +202,7 @@ public class CreateDataset {
 
 
 
-	
+
 
 
 }
