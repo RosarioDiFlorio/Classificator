@@ -17,7 +17,7 @@ public class StopWordEnglish {
   
   public static  boolean isStopWord(String word){
     if(stopWords != null){
-      if(stopWords.contains(word))
+      if(stopWords.contains(word.toLowerCase()))
         return true;
       else 
         return false;
@@ -38,7 +38,7 @@ public class StopWordEnglish {
       is = new InputStreamReader(new FileInputStream(txt), "UTF-8");
       BufferedReader br = new BufferedReader(is);             
       while ((sw=br.readLine()) != null)  {
-        stopWords.add(sw);   
+        stopWords.add(sw.toLowerCase());   
       }
     } catch (Exception e) {
       e.printStackTrace();

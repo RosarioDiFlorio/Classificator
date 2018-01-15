@@ -25,64 +25,80 @@ import eu.innovation.engineering.wikipedia.WikipediaMiner;
 public class Test {
 
   public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException, InterruptedException, ExecutionException{
-    main3(args);
+    createDatasetFromWikipedia(args);
 
-    createMapDataset("D:/Development/Datasets/dataset_IBM/");
-
+    //createMapDataset("D:/Development/Datasets/dataset_IBM/");
     //createMapDataset("D:/Development/Datasets/dataset_500xleaf_2012017/");
 
   }
 
-  private static Map<String, Integer> countLeafs(Map<String, List<String>> mapcsv){
+  private static Map<String, Integer> countLeafs(Map<String, List<List<String>>> mapcsv){
     Map<String, Integer> toReturn = new HashMap<>();
     for(String key:mapcsv.keySet()){
-      String rootCat = mapcsv.get(key).get(0);
-      if(toReturn.containsKey(rootCat)){
-        int count = toReturn.get(rootCat);
-        count ++;
-        toReturn.replace(rootCat, count);
-      }else
-        toReturn.put(rootCat, 1);
+      for(List<String> list: mapcsv.get(key)){
+        String rootCat = list.get(0);
+        if(toReturn.containsKey(rootCat)){
+          int count = toReturn.get(rootCat);
+          count ++;
+          toReturn.replace(rootCat, count);
+        }else
+          toReturn.put(rootCat, 1);
+      }   
     }
     return toReturn;
   }
 
-  public static void main3(String[] args) throws JsonParseException, JsonMappingException, IOException, InterruptedException, ExecutionException{
-    Map<String, List<String>> csvMap = read("wheesbee_cat_recovery.csv", false);
-    System.out.println(csvMap.keySet().size());
-    int count = 0;
+  public static void createDatasetFromWikipedia(String[] args) throws JsonParseException, JsonMappingException, IOException, InterruptedException, ExecutionException{
+    //leggo il file della tassonomia in formato csv
+    Map<String, List<List<String>>> csvMap = read("wheesbee_taxonomy.csv", false);
+    Map<String, Integer> leafMap = countLeafs(csvMap);
 
-    String pathDataset = "D:/Development/Datasets/dataset_IBM/dataset_tassonomia";
+    System.out.println("Total categories -> "+csvMap.keySet().size());
+
+
+    int rootDocumentLimit = 2000;
+
+
+    int count = 0;
+    //costruisco la struttura delle folder secondo il file csv.
+    String pathDataset = "data/dataset_test_1xLeaf_50char";
     new File(pathDataset).mkdir();
     Set<String> toExtract = new HashSet<>();
     for(String uriWiki : csvMap.keySet()){
-
-      List<String> parents = csvMap.get(uriWiki);
-      String path = pathDataset;
+      List<List<String>> parents = csvMap.get(uriWiki);
+      List<String> pathToAdd = new ArrayList<>();
       for(int i =0; i<parents.size();i++){
-        path = path+"/"+parents.get(i);
-        new File(path).mkdir();
+        String path = pathDataset;
+        for(int j=0;j<parents.get(i).size();j++){
+          path = path+"/"+parents.get(i).get(j);
+          new File(path).mkdir();
+        } 
+        pathToAdd.add(path);
       }
       parents = new ArrayList<>();
-      parents.add(path);
+      parents.add(pathToAdd);
+
       csvMap.replace(uriWiki, parents);
       toExtract.add(uriWiki);
       count++;
 
-
-      Map<String, Set<DocumentInfo>> results = WikipediaMiner.buildDataset(toExtract, 0, true, 125);
-      for(String key : results.keySet()){
-        for( DocumentInfo doc: results.get(key)){
-          PrintWriter writer = new PrintWriter(new File(csvMap.get(key).get(0)+"/"+doc.getId()));
-          writer.println(doc.getText());
-          writer.flush();
-          writer.close();
+      if(count%8 == 0 || count == csvMap.size()){
+        Map<String, Set<DocumentInfo>> results = WikipediaMiner.buildDataset(toExtract, 0, true, 1,50);
+        System.out.println("Categories done -> "+ count);
+        for(String key : results.keySet()){
+          System.out.print(key+"-> "+results.get(key).size()+", ");
+          for( DocumentInfo doc: results.get(key)){
+            for(List<String> list: csvMap.get(key)){
+              PrintWriter writer = new PrintWriter(new File(list.get(0)+"/"+doc.getId()));
+              writer.println(doc.getText());
+              writer.flush();
+              writer.close();
+            }
+          }
+          System.out.println("writed in "+csvMap.get(key).get(0));
         }
-        System.out.println("writed in "+csvMap.get(key).get(0));
+        toExtract = new HashSet<>();
       }
-      count = 0;
-      toExtract = new HashSet<>();
-
     }
   }
 
@@ -131,14 +147,14 @@ public class Test {
     return toReturn;
   }
 
-  public static Map<String,List<String>> read(String csvFile,boolean labeled) {
+  public static Map<String,List<List<String>>> read(String csvFile,boolean labeled) {
     String line = "";
     String cvsSplitBy = ",";
-    Map<String, List<String>> dataMap = new HashMap<>();
+    Map<String, List<List<String>>> dataMap = new HashMap<>();
     try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
       if(labeled)
         line = br.readLine();
-      
+
       while ((line = br.readLine()) != null) {
         // use comma as separator
         String[] csvData = line.split(cvsSplitBy); 
@@ -148,10 +164,21 @@ public class Test {
             data.add(csvData[i].trim());
           }
           String key = csvData[csvData.length-1].trim().replace("en.wikipedia.org/wiki/", "");
-          if(dataMap.containsKey(key))
-            System.out.println(key);
-          if(!key.equals(""))
-            dataMap.put(key, data);
+
+          if(!key.equals("")){
+            if(dataMap.containsKey(key)){
+              List<List<String>> toReplace = dataMap.get(key);
+              toReplace.add(data);
+              dataMap.replace(key, toReplace);
+              System.out.println(key+"-->"+toReplace);
+            }else{
+              List<List<String>> datas = new ArrayList<>();
+              datas.add(data);
+              dataMap.put(key, datas);
+            }
+          }
+
+
         }
       }
       return dataMap;

@@ -16,6 +16,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.JsonArray;
@@ -32,34 +33,64 @@ public class AnalyzerWikipediaGraph {
 
   public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException{
     adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("signedGraphWikipedia");
-    System.out.println(getVectorsWikipediaGraph(adjacencyList.keySet()));
+    long start = System.currentTimeMillis();
+    //getVectorsWikipediaGraph(adjacencyList.keySet(),"vectorsWikipediaVertex");
+    loadVectorsWikipediaGraph("vectorsWikipediaVertex");
+    System.out.println(System.currentTimeMillis() - start);
+  }
+
+  public static Map<String,float[]> loadVectorsWikipediaGraph(String pathFile) throws JsonParseException, JsonMappingException, IOException{
+    ObjectMapper mapper = new ObjectMapper();
+    return mapper.readValue(new File(pathFile), new TypeReference<Map<String,float[]>>() {});
   }
   
-  public static Map<String,float[]> getVectorsWikipediaGraph(Set<String> vertexWikipedia) throws IOException{
+  
+  public static Map<String,float[]> getVectorsWikipediaGraph(Set<String> vertexWikipedia,String pathFile) throws IOException{
     StopWordEnglish stopWords = new StopWordEnglish("stopwords_en.txt");
+    int cutoffSaving = 10000;
+    int incrementCutoffSaving = 100000;
     if(vectorsWikipediaVertex == null){
-      vectorsWikipediaVertex = new HashMap<>();
-      List<List<String>> toVectorize = new ArrayList<>();
-      List<String> vertexList = vertexWikipedia.stream().collect(Collectors.toList());
       ObjectMapper mapper = new ObjectMapper();
+      List<List<String>> toVectorize = new ArrayList<>();
+
+      if(!new File(pathFile).exists()){
+        vectorsWikipediaVertex = new HashMap<>();      
+      }else{
+        vectorsWikipediaVertex =  mapper.readValue(new File(pathFile), new TypeReference<Map<String,float[]>>() {});
+        vertexWikipedia.removeAll(vectorsWikipediaVertex.keySet());
+        incrementCutoffSaving= (vectorsWikipediaVertex.keySet().size()/2);
+        cutoffSaving = cutoffSaving*(vectorsWikipediaVertex.keySet().size()/incrementCutoffSaving);
+      }
+      List<String> vertexList = vertexWikipedia.stream().collect(Collectors.toList());
       int offset = 0;
       for(int i = 0; i<vertexList.size();i++){
         //pulisco i nomi dagli underscore e dalle stop word
         String vertexName = vertexList.get(i).replace("_", " ");
-        List<String> cleanVertexName = Arrays.asList(vertexName.split(" ")).stream().filter(el->!stopWords.isStopWord(el)).collect(Collectors.toList());
+        List<String> cleanVertexName = Arrays.asList(vertexName.split(" ")).stream().filter(el->!stopWords.isStopWord(el)).map(el->el.toLowerCase()).collect(Collectors.toList());
         toVectorize.add(cleanVertexName);     
-        if((i % 100 == 0 || i == vertexWikipedia.size()-1) && i != 0){
+        if((i % 200 == 0 || i == vertexWikipedia.size()-1) && i != 0){
           float[][] vectorizedNames = Word2Vec.returnVectorsFromTextList(toVectorize);
-          System.out.println("start-> "+(i-offset)+",end-> "+i);
-          for(int j = (i-offset);j<=i;j++){
-            vectorsWikipediaVertex.put(vertexList.get(j).replace(" ", "_"), vectorizedNames[j]);
+          int count = 0;
+          for(int j = (i-offset);j<i;j++){
+            vectorsWikipediaVertex.put(vertexList.get(j).replace(" ", "_"), vectorizedNames[count]);
+            count++;
           }
+
           offset =0;
-          System.out.println(vectorsWikipediaVertex.size());
-          mapper.writerWithDefaultPrettyPrinter().writeValue(new File("vectorsWikipediaVertex"), vectorsWikipediaVertex);
+          toVectorize = new ArrayList<>();
+
+          if((i%cutoffSaving == 0 || i == vertexWikipedia.size()-1)){           
+            cutoffSaving = (cutoffSaving*3)/2;
+            System.out.println("incrementSaving ->"+incrementCutoffSaving+", cutoffSaving ->"+cutoffSaving);
+            System.out.println("vertexDone->"+vectorsWikipediaVertex.size());
+            if(i!=0)
+              mapper.writerWithDefaultPrettyPrinter().writeValue(new File("vectorsWikipediaVertex"), vectorsWikipediaVertex);
+          }
         }
         offset ++;
       }
+
+
     }
     return vectorsWikipediaVertex;
   }
@@ -94,9 +125,9 @@ public class AnalyzerWikipediaGraph {
       getPath(p.getParent(), builder);      
     }
   }
-  
-  
-  
+
+
+
   public static List<String> getDocumentLabels(String idDocument) throws IOException{
     Set<String> documentCategories = getParentCategoriesByIdPage(idDocument);
     Set<PathInfo> results = new HashSet<PathInfo>();
@@ -168,7 +199,7 @@ public class AnalyzerWikipediaGraph {
   public static Set<PathInfo> searchNearestMarkedVertex(Map<String,AdjacencyListRow> adjacencyList,String vertexStart,int numberOfMarkedVertex){
     //insieme di nodi marcati da ritornare.
     Set<PathInfo> nearestMarkedVertex = new HashSet<PathInfo>();
-    
+
     if(adjacencyList.containsKey(vertexStart)){
       int lenghtPath = 0;
       PathInfo vertexStartInfo = new PathInfo(vertexStart,lenghtPath);

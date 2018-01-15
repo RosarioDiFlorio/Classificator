@@ -42,11 +42,7 @@ public class InnenExtractor implements KeywordExtractor {
     this.mainDirectory = mainDirectory;
     this.stopWordPath = this.mainDirectory + stopWordPath;
     languageDetector = new LanguageDetector();
-
   }
-
-
-
 
   @Override
   public List<List<Keyword>> extractKeywordsFromTexts(List<String> texts, int numKeywordsToReturn) throws LanguageException{

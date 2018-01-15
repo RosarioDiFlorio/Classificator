@@ -18,17 +18,19 @@ public class DatasetTask extends RecursiveTask<Map<String,Set<DocumentInfo>>> im
   private int maxLevel;
   private boolean recursive;
   private int limitDocs;
+  private int minLenText;
 
   /**
    * @param category
    * @param maxLevel
    * @param recursive
    */
-  public DatasetTask(String category,int maxLevel,boolean recursive,int limitDocs){
+  public DatasetTask(String category,int maxLevel,boolean recursive,int limitDocs,int minLenText){
     this.category = category;
     this.maxLevel = maxLevel;
     this.recursive = recursive;
     this.limitDocs = limitDocs;
+    this.minLenText = minLenText;
   }
 
 
@@ -41,9 +43,12 @@ public class DatasetTask extends RecursiveTask<Map<String,Set<DocumentInfo>>> im
   protected Map<String, Set<DocumentInfo>> compute() {
     Map<String, Set<DocumentInfo>> toReturn = new HashMap<>();
     try {
-      Set<String> listIdDocuments = WikipediaMiner.requestIdsPagesOfCategory(category, new HashSet<String>(), recursive, 0, maxLevel,limitDocs);
-      Map<String, DocumentInfo> contents = WikipediaMiner.getContentPages(listIdDocuments);
+      //Set<String> listIdDocuments = WikipediaMiner.requestIdsPagesOfCategory(category, new HashSet<String>(), recursive, 0, maxLevel,limitDocs);
+      //Map<String, DocumentInfo> contents = WikipediaMiner.getContentPages(listIdDocuments,200,limitDocs);
+      
+      Map<String, DocumentInfo> contents = WikipediaMiner.getContentFromCategoryPages(category, new HashSet<String>(), recursive, 0, maxLevel,limitDocs,minLenText);
 
+      
       Set<DocumentInfo> listDocument = new HashSet<>();
       for(String idDoc: contents.keySet()){
         DocumentInfo docInfo = contents.get(idDoc);
@@ -56,7 +61,7 @@ public class DatasetTask extends RecursiveTask<Map<String,Set<DocumentInfo>>> im
       e.printStackTrace();
     }
 
-    System.out.println(category+" -> done");
+    //System.out.println(category+" -> done");
     return toReturn;
   }
 
