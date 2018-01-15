@@ -189,6 +189,7 @@ public class AnalyzerWikipediaGraph {
     return toReturn;
   }
 
+  
   /**
    * Search the nearest n marked vertex starting to the vertex passed in input to this function.
    * @param adjacencyList
