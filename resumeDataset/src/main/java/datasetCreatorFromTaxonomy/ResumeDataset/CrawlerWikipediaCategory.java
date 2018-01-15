@@ -7,10 +7,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLEncoder;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -67,6 +65,16 @@ public class CrawlerWikipediaCategory {
 		HashMap<String, AdjacencyListRow> graph = returnAdjacencyListFromFile("GraphWikipedia");
 		Set<String> categories =  returnCategoriesFromTaxonomyCSV("categories_taxonomy.csv");
 		markGraph(graph, categories);
+	}
+	
+	
+	
+	public static Map<String,AdjacencyListRowVertex> fromAdjacencyListRowToAdjacencyListRowVertex(Map<String,float[]> vectorsFromWikipediaGraph,Map<String,AdjacencyListRow> adjacencyList){
+	  Map<String,AdjacencyListRowVertex> toReturn = new HashMap<>();
+	  for(String key : adjacencyList.keySet()){
+	    
+	  }
+	  return toReturn;
 	}
 	
 	
