@@ -1,5 +1,6 @@
 package datasetCreatorFromTaxonomy.ResumeDataset;
 
+import java.beans.VetoableChangeListener;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -55,29 +56,103 @@ public class CrawlerWikipediaCategory {
 		}
 
 	}
-	
+
 	/**
 	 * used to mark category
 	 * @param args
 	 * @throws IOException
 	 */
-	public static void main(String[] args) throws IOException{
+	public static void mainToMarkGraph(String[] args) throws IOException{
 		HashMap<String, AdjacencyListRow> graph = returnAdjacencyListFromFile("GraphWikipedia");
 		Set<String> categories =  returnCategoriesFromTaxonomyCSV("categories_taxonomy.csv");
 		markGraph(graph, categories);
 	}
+
 	
+	/**
+	 * main to create weighed graph
+	 * @param args
+	 * @throws JsonParseException
+	 * @throws JsonMappingException
+	 * @throws IOException
+	 */
+	public static void main(String args[]) throws JsonParseException, JsonMappingException, IOException{
+		HashMap<String, AdjacencyListRow> adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("signedGraphWikipedia");
+		Map<String, float[]> vectorsFromWikipediaGraph = AnalyzerWikipediaGraph.loadVectorsWikipediaGraph("vectorsWikipediaVertex");
+		Map<String, AdjacencyListRowVertex> result = fromAdjacencyListRowToAdjacencyListRowVertex(vectorsFromWikipediaGraph,adjacencyList);
+		ObjectMapper mapper = new ObjectMapper();
+		mapper.writerWithDefaultPrettyPrinter().writeValue(new File("graphWikipediaWeighed"), result);
+		
+	}
 	
-	
-	public static Map<String,AdjacencyListRowVertex> fromAdjacencyListRowToAdjacencyListRowVertex(Map<String,float[]> vectorsFromWikipediaGraph,Map<String,AdjacencyListRow> adjacencyList){
-	  Map<String,AdjacencyListRowVertex> toReturn = new HashMap<>();
-	  for(String key : adjacencyList.keySet()){
-	    
-	  }
-	  return toReturn;
+
+	/**
+	 * this method check if a vector is different from 0 vector
+	 * @param vector
+	 * @return
+	 */
+	public static boolean validateVector(float[] vector){
+
+		if (vector == null)
+			return false;
+		
+		for(int i=0;i<vector.length-1;i++){
+			if (vector[i]!=0.0)
+				return true;
+		}
+		return false;
 	}
 	
 	
+	
+	/**
+	 * read vectors object 
+	 * @param vectorsFromWikipediaGraph
+	 * @param adjacencyList
+	 * @return
+	 */
+	public static Map<String,AdjacencyListRowVertex> fromAdjacencyListRowToAdjacencyListRowVertex(Map<String,float[]> vectorsFromWikipediaGraph,Map<String,AdjacencyListRow> adjacencyList){
+		Map<String,AdjacencyListRowVertex> toReturn = new HashMap<>();
+
+		for(String key : adjacencyList.keySet()){
+			AdjacencyListRowVertex adjacencyListRowVertex = new AdjacencyListRowVertex();
+			adjacencyListRowVertex.setTaxonomyCategory(adjacencyList.get(key).isTaxonomyCategory());
+			float[] keyVector = vectorsFromWikipediaGraph.get(key);
+			
+			if(keyVector== null){
+				System.out.println("key null: "+key);
+			}
+			else{
+				System.out.println("key not null: "+key);
+			}
+			
+			for(String parent : adjacencyList.get(key).getLinkedVertex()){
+				Vertex currentParent = new Vertex();
+				currentParent.setVertexName(parent);
+				float[] parentVector = vectorsFromWikipediaGraph.get(parent);
+				
+				if(parentVector== null)
+					System.out.println("parent null : "+parent);
+				else
+					System.out.println("parent not null : "+parent);
+				
+				if(validateVector(keyVector) && validateVector(parentVector)){
+					
+					currentParent.setSimilarity(cosineSimilarityInverse(keyVector, parentVector));
+				}
+				else{
+					currentParent.setSimilarity(0.5);
+				}
+				adjacencyListRowVertex.getLinkedVertex().add(currentParent);
+			}
+			toReturn.put(key, adjacencyListRowVertex);
+		}
+		return toReturn;
+	}
+
+
+
+
 	/**
 	 * main uset to clean graph   categoryName: "category name" --> "category_name"
 	 * @param args
@@ -86,39 +161,39 @@ public class CrawlerWikipediaCategory {
 	public static void mainToClear(String[] args) throws IOException{
 		HashMap<String, AdjacencyListRow> graph = returnAdjacencyListFromFile("CrawlerResult");
 		HashMap<String, AdjacencyListRow> app = new HashMap<String, AdjacencyListRow>();
-		
+
 		System.out.println("Initial graph size: "+graph.size());
-		
+
 		HashSet<String> toRemove = new HashSet<String>();
 		for(String category : graph.keySet()){
-			
+
 			if(category.contains(" ")){
 				app.put(category.replace(" ", "_"),graph.get(category));
 				toRemove.add(category);
 			}
 		}
-		
+
 		//aggiungo le categorie con _
 		for(String cat : app.keySet()){
 			graph.put(cat, app.get(cat));
 		}
-		
+
 		// rimuovo le categorie con gli spazi
 		for(String cat : toRemove){
 			graph.remove(cat);
 		}
-		
-		
+
+
 		ObjectMapper writerCrawlerResult = new ObjectMapper();
 		writerCrawlerResult.writerWithDefaultPrettyPrinter().writeValue(new File("GraphWikipedia"), graph);
 		System.out.println("Final graph size: "+graph.size());
-		
+
 	}
 
-	
-	
-	
-	
+
+
+
+
 	/**
 	 * This method is used to do request to obtain parent category
 	 * @param categories. Category list, used to build request with more category. For any category is returned a list of parent category
@@ -419,31 +494,37 @@ public class CrawlerWikipediaCategory {
 			crawlerResult = mapper.readValue(new File(filePath), new TypeReference<CrawlerResult>() {});
 		} catch (Exception e) {
 			return mapper.readValue(new File(filePath), new TypeReference<HashMap<String, AdjacencyListRow>>() {});
-			
+
 		}
-		
+
 		return crawlerResult.getAdjacencyList();
 	}
-	
-	
-	
-	public static double cosineSimilarityInverse(float[] vectorA, float[] vectorB) {
-	    double dotProduct = 0.0;
-	    double normA = 0.0;
-	    double normB = 0.0;
-	    if(vectorA!=null && vectorB!=null && vectorA.length==vectorB.length){
-	      for (int i = 0; i < vectorA.length; i++) {
-	        dotProduct += vectorA[i] * vectorB[i];
-	        normA += vectorA[i] * vectorA[i];
-	        normB += vectorB[i] * vectorB[i];
-	      }   
-	    }
 
-	    if(dotProduct == 0 || (normA * normB) == 0)
-	      return 0;
-	    else
-	      return Math.asin((dotProduct) / (Math.sqrt(normA * normB)));
-	  }
+
+
+	/**
+	 * Used to do inverse of cosine similarity with 2 vector
+	 * @param vectorA
+	 * @param vectorB
+	 * @return
+	 */
+	public static double cosineSimilarityInverse(float[] vectorA, float[] vectorB) {
+		double dotProduct = 0.0;
+		double normA = 0.0;
+		double normB = 0.0;
+		if(vectorA!=null && vectorB!=null && vectorA.length==vectorB.length){
+			for (int i = 0; i < vectorA.length; i++) {
+				dotProduct += vectorA[i] * vectorB[i];
+				normA += vectorA[i] * vectorA[i];
+				normB += vectorB[i] * vectorB[i];
+			}   
+		}
+
+		if(dotProduct == 0 || (normA * normB) == 0)
+			return 0;
+		else
+			return Math.asin((dotProduct) / (Math.sqrt(normA * normB)));
+	}
 
 
 	/**
@@ -461,23 +542,23 @@ public class CrawlerWikipediaCategory {
 			if(graph.containsKey(category)){
 				graph.get(category).setTaxonomyCategory(true);
 				countMarked++;
-				}
+			}
 			else if (graph.containsKey(category.replace("_", " "))){
 				graph.get(category.replace("_", " ")).setTaxonomyCategory(true);
 				countMarked++;
-				}
+			}
 		}
-		
+
 		System.out.println("Marked nodes: "+countMarked);
 		ObjectMapper writerCrawlerResult = new ObjectMapper();
 		writerCrawlerResult.writerWithDefaultPrettyPrinter().writeValue(new File("signedGraphWikipedia"), graph);
-		
+
 		return graph;
 
 	}
-	
-	
-	
+
+
+
 
 
 
