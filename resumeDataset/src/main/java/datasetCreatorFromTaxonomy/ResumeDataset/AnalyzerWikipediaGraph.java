@@ -32,19 +32,47 @@ public class AnalyzerWikipediaGraph {
 
 
   public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException{
+    
     adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("signedGraphWikipedia");
     long start = System.currentTimeMillis();
-    //getVectorsWikipediaGraph(adjacencyList.keySet(),"vectorsWikipediaVertex");
-    loadVectorsWikipediaGraph("vectorsWikipediaVertex");
+    getVectorsWikipediaGraph(adjacencyList.keySet(),"vectorsWikipediaVertexTest");
+    //loadVectorsWikipediaGraph("vectorsWikipediaVertex");
     System.out.println(System.currentTimeMillis() - start);
+    
+
+    /*
+    List<List<String>> toVectorize = new ArrayList<List<String>>();
+    StopWordEnglish stopWords = new StopWordEnglish("stopwords_en.txt");
+    String vertexName = "Trinidad_and_Tobago_people_of_African_descent";
+    
+    List<String> cleanVertexName = Arrays.asList(vertexName.replace("_", " ").split(" ")).stream().filter(el->!stopWords.isStopWord(el)).map(el->el.toLowerCase()).collect(Collectors.toList());
+    toVectorize.add(cleanVertexName);
+    float[][] result = Word2Vec.returnVectorsFromTextList(toVectorize);
+    for(int i = 0;i<result[0].length;i++){
+      System.out.println(result[0][i]);
+    }*/
+     
+    /*
+    adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("signedGraphWikipedia");
+    System.out.println(adjacencyList.keySet().size());
+    Map<String, float[]> result = loadVectorsWikipediaGraph("vectorsWikipediaVertex");
+    System.out.println(result.keySet().size());
+    int count = 0;
+    for(String key:adjacencyList.keySet()){
+      if(result.get(key) == null){
+        count++;
+        System.out.println(key);
+      }
+    }
+    System.out.println(count);*/
   }
 
   public static Map<String,float[]> loadVectorsWikipediaGraph(String pathFile) throws JsonParseException, JsonMappingException, IOException{
     ObjectMapper mapper = new ObjectMapper();
     return mapper.readValue(new File(pathFile), new TypeReference<Map<String,float[]>>() {});
   }
-  
-  
+
+
   public static Map<String,float[]> getVectorsWikipediaGraph(Set<String> vertexWikipedia,String pathFile) throws IOException{
     StopWordEnglish stopWords = new StopWordEnglish("stopwords_en.txt");
     int cutoffSaving = 10000;
@@ -68,9 +96,13 @@ public class AnalyzerWikipediaGraph {
         String vertexName = vertexList.get(i).replace("_", " ");
         List<String> cleanVertexName = Arrays.asList(vertexName.split(" ")).stream().filter(el->!stopWords.isStopWord(el)).map(el->el.toLowerCase()).collect(Collectors.toList());
         toVectorize.add(cleanVertexName);     
-        if((i % 200 == 0 || i == vertexWikipedia.size()-1) && i != 0){
+        if((i % 200 == 0 || i == vertexWikipedia.size()-1) && (i != 0 || vertexList.size() == 1)){
           float[][] vectorizedNames = Word2Vec.returnVectorsFromTextList(toVectorize);
           int count = 0;
+          
+          if(i == 0)
+            vectorsWikipediaVertex.put(vertexList.get(i).replace(" ", "_"), vectorizedNames[count]);
+          
           for(int j = (i-offset);j<i;j++){
             vectorsWikipediaVertex.put(vertexList.get(j).replace(" ", "_"), vectorizedNames[count]);
             count++;
@@ -83,8 +115,7 @@ public class AnalyzerWikipediaGraph {
             cutoffSaving = (cutoffSaving*3)/2;
             System.out.println("incrementSaving ->"+incrementCutoffSaving+", cutoffSaving ->"+cutoffSaving);
             System.out.println("vertexDone->"+vectorsWikipediaVertex.size());
-            if(i!=0)
-              mapper.writerWithDefaultPrettyPrinter().writeValue(new File("vectorsWikipediaVertex"), vectorsWikipediaVertex);
+            mapper.writerWithDefaultPrettyPrinter().writeValue(new File("vectorsWikipediaVertex"), vectorsWikipediaVertex);
           }
         }
         offset ++;
@@ -189,7 +220,7 @@ public class AnalyzerWikipediaGraph {
     return toReturn;
   }
 
-  
+
   /**
    * Search the nearest n marked vertex starting to the vertex passed in input to this function.
    * @param adjacencyList
