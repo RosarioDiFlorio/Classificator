@@ -73,36 +73,50 @@ public class AnalyzerWikipediaGraph {
   }
 
 
+  /**
+   * This method return the vector's map created from the graph of the wikipedia's category.
+   * If the map doesn't exit yet,  build the map from scratch Otherwise, load the map from the file (specified into the variable pathfile).
+   * If the file exist load the map from the file and continue building it.
+   * When there is no more category to convert in vectors the method return the map with the vectors.
+   * @param vertexWikipedia 
+   * @param pathFile
+   * @return
+   * @throws IOException
+   */
   public static Map<String,float[]> getVectorsWikipediaGraph(Set<String> vertexWikipedia,String pathFile) throws IOException{
+    //carico le stopword dal file specificato.
     StopWordEnglish stopWords = new StopWordEnglish("stopwords_en.txt");
+    //variabile che specifica ogni quanti elementi deve salvare il tutto. viene incrementato ad ogni salvataggio per evitare che il programma vada in idle scrivendo tutto il tempo sul disco.
     int cutoffSaving = 10000;
-    int incrementCutoffSaving = 100000;
+    
     if(vectorsWikipediaVertex == null){
       ObjectMapper mapper = new ObjectMapper();
       List<List<String>> toVectorize = new ArrayList<>();
-
-      if(!new File(pathFile).exists()){
+      
+      if(!new File(pathFile).exists()){ //se il file non esiste istanzio una mappa ex novo.
         vectorsWikipediaVertex = new HashMap<>();      
-      }else{
+      }else{    //altrimenti leggo la mappa dal file specificato e rimuovo dall'insieme di vertici da vettorizzare quelli già presenti nella mappa appena caricata.
         vectorsWikipediaVertex =  mapper.readValue(new File(pathFile), new TypeReference<Map<String,float[]>>() {});
         vertexWikipedia.removeAll(vectorsWikipediaVertex.keySet());
-        incrementCutoffSaving= (vectorsWikipediaVertex.keySet().size()/2);
-        cutoffSaving = cutoffSaving*(vectorsWikipediaVertex.keySet().size()/incrementCutoffSaving);
+        cutoffSaving = (cutoffSaving*3)/2;
       }
+      //converto l'insieme di elementi da vettorizzare in una lista in modo da poterci accedere con l'indice.
       List<String> vertexList = vertexWikipedia.stream().collect(Collectors.toList());
-      int offset = 0;
+      int offset = 0;         //variabile che mi tiene traccia dell'indice corrente.
       for(int i = 0; i<vertexList.size();i++){
         //pulisco i nomi dagli underscore e dalle stop word
         String vertexName = vertexList.get(i).replace("_", " ");
         List<String> cleanVertexName = Arrays.asList(vertexName.split(" ")).stream().filter(el->!stopWords.isStopWord(el)).map(el->el.toLowerCase()).collect(Collectors.toList());
-        toVectorize.add(cleanVertexName);     
+        toVectorize.add(cleanVertexName);
+        //ogni tot di vertici eseguo la query al servizio Word2Vec
         if((i % 200 == 0 || i == vertexWikipedia.size()-1) && (i != 0 || vertexList.size() == 1)){
           float[][] vectorizedNames = Word2Vec.returnVectorsFromTextList(toVectorize);
           int count = 0;
-          
+          //nel caso vi è un unico elemento da vettorizzare.
           if(i == 0)
             vectorsWikipediaVertex.put(vertexList.get(i).replace(" ", "_"), vectorizedNames[count]);
-          
+          //nel caso vi sia più un solo elemento da vettorizzare
+          //
           for(int j = (i-offset);j<i;j++){
             vectorsWikipediaVertex.put(vertexList.get(j).replace(" ", "_"), vectorizedNames[count]);
             count++;
@@ -110,21 +124,20 @@ public class AnalyzerWikipediaGraph {
 
           offset =0;
           toVectorize = new ArrayList<>();
-
+          //salvo ogni "cutoffSaving" di elementi la mappa in formato json nel path specificato(pathFile)
           if((i%cutoffSaving == 0 || i == vertexWikipedia.size()-1)){           
             cutoffSaving = (cutoffSaving*3)/2;
-            System.out.println("incrementSaving ->"+incrementCutoffSaving+", cutoffSaving ->"+cutoffSaving);
+            System.out.println("cutoffSaving ->"+cutoffSaving);
             System.out.println("vertexDone->"+vectorsWikipediaVertex.size());
-            mapper.writerWithDefaultPrettyPrinter().writeValue(new File("vectorsWikipediaVertex"), vectorsWikipediaVertex);
+            mapper.writerWithDefaultPrettyPrinter().writeValue(new File(pathFile), vectorsWikipediaVertex);
           }
         }
         offset ++;
       }
-
-
     }
     return vectorsWikipediaVertex;
   }
+
 
 
   public static List<String> getDocumentLabelsTaxonomy(String idDocument) throws IOException{
