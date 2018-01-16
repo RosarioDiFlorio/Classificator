@@ -34,7 +34,14 @@ public class AnalyzerWikipediaGraph {
   public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException{ 
     adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("signedGraphWikipedia");
     long start = System.currentTimeMillis();
-    getVectorsWikipediaGraph(adjacencyList.keySet(),"vectorsWikipediaVertexTest");
+    Set<String> toVectorize = new HashSet<String>(adjacencyList.keySet());
+
+    for(String key: adjacencyList.keySet()){
+      toVectorize.addAll(adjacencyList.get(key).getLinkedVertex());  
+    }
+
+
+    getVectorsWikipediaGraph(toVectorize,"vectorsWikipediaVertex");
     //loadVectorsWikipediaGraph("vectorsWikipediaVertex");
     System.out.println(System.currentTimeMillis() - start);
   }
@@ -60,11 +67,11 @@ public class AnalyzerWikipediaGraph {
     StopWordEnglish stopWords = new StopWordEnglish("stopwords_en.txt");
     //variabile che specifica ogni quanti elementi deve salvare il tutto. viene incrementato ad ogni salvataggio per evitare che il programma vada in idle scrivendo tutto il tempo sul disco.
     int cutoffSaving = 10000;
-    
+
     if(vectorsWikipediaVertex == null){
       ObjectMapper mapper = new ObjectMapper();
       List<List<String>> toVectorize = new ArrayList<>();
-      
+
       if(!new File(pathFile).exists()){ //se il file non esiste istanzio una mappa ex novo.
         vectorsWikipediaVertex = new HashMap<>();      
       }else{    //altrimenti leggo la mappa dal file specificato e rimuovo dall'insieme di vertici da vettorizzare quelli già presenti nella mappa appena caricata.
@@ -150,7 +157,7 @@ public class AnalyzerWikipediaGraph {
     if(adjacencyList == null)    
       adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("signedGraphWikipedia");
     for(String category: documentCategories){
-      results.addAll(searchNearestMarkedVertex(adjacencyList, category, 3));
+      results.addAll(searchNearestMarkedVertexBFS(adjacencyList, category, 3));
     }
     List<PathInfo> orderedResults = new ArrayList<PathInfo>(results);
     Collections.sort(orderedResults,Collections.reverseOrder());
@@ -205,6 +212,12 @@ public class AnalyzerWikipediaGraph {
   }
 
 
+  public static void searchNearestMarkedVertexDjistra(Map<String,AdjacencyListRowVertex> adjacencyList,String vertexStartName){
+
+  }
+
+
+
   /**
    * Search the nearest n marked vertex starting to the vertex passed in input to this function.
    * @param adjacencyList
@@ -212,7 +225,7 @@ public class AnalyzerWikipediaGraph {
    * @param numberOfMarkedVertex
    * @return
    */
-  public static Set<PathInfo> searchNearestMarkedVertex(Map<String,AdjacencyListRow> adjacencyList,String vertexStart,int numberOfMarkedVertex){
+  public static Set<PathInfo> searchNearestMarkedVertexBFS(Map<String,AdjacencyListRow> adjacencyList,String vertexStart,int numberOfMarkedVertex){
     //insieme di nodi marcati da ritornare.
     Set<PathInfo> nearestMarkedVertex = new HashSet<PathInfo>();
 
