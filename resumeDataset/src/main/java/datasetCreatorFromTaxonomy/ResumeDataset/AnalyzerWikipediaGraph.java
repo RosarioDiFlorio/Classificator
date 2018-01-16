@@ -31,40 +31,12 @@ public class AnalyzerWikipediaGraph {
 
 
 
-  public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException{
-    
+  public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException{ 
     adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("signedGraphWikipedia");
     long start = System.currentTimeMillis();
     getVectorsWikipediaGraph(adjacencyList.keySet(),"vectorsWikipediaVertexTest");
     //loadVectorsWikipediaGraph("vectorsWikipediaVertex");
     System.out.println(System.currentTimeMillis() - start);
-    
-
-    /*
-    List<List<String>> toVectorize = new ArrayList<List<String>>();
-    StopWordEnglish stopWords = new StopWordEnglish("stopwords_en.txt");
-    String vertexName = "Trinidad_and_Tobago_people_of_African_descent";
-    
-    List<String> cleanVertexName = Arrays.asList(vertexName.replace("_", " ").split(" ")).stream().filter(el->!stopWords.isStopWord(el)).map(el->el.toLowerCase()).collect(Collectors.toList());
-    toVectorize.add(cleanVertexName);
-    float[][] result = Word2Vec.returnVectorsFromTextList(toVectorize);
-    for(int i = 0;i<result[0].length;i++){
-      System.out.println(result[0][i]);
-    }*/
-     
-    /*
-    adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("signedGraphWikipedia");
-    System.out.println(adjacencyList.keySet().size());
-    Map<String, float[]> result = loadVectorsWikipediaGraph("vectorsWikipediaVertex");
-    System.out.println(result.keySet().size());
-    int count = 0;
-    for(String key:adjacencyList.keySet()){
-      if(result.get(key) == null){
-        count++;
-        System.out.println(key);
-      }
-    }
-    System.out.println(count);*/
   }
 
   public static Map<String,float[]> loadVectorsWikipediaGraph(String pathFile) throws JsonParseException, JsonMappingException, IOException{
@@ -216,7 +188,6 @@ public class AnalyzerWikipediaGraph {
     for(String id : ids){
       try{
         categoriesParent = responseParent.getAsJsonObject().get("query").getAsJsonObject().get("pages").getAsJsonObject().get(id).getAsJsonObject().get("categories").getAsJsonArray();
-        String title = responseParent.getAsJsonObject().get("query").getAsJsonObject().get("pages").getAsJsonObject().get(id).getAsJsonObject().get("title").getAsString();
         if(categoriesParent!=null){
           // add all vertex obtained to hashset
           for(JsonElement cat : categoriesParent){
