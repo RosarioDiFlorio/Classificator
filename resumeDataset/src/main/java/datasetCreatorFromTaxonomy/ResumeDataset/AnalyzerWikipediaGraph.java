@@ -32,10 +32,10 @@ public class AnalyzerWikipediaGraph {
   private static HashMap<String,Set<String>> mappingTaxonomyWikipedia = null;
   private static Map<String,float[]> vectorsWikipediaVertex = null;
   private static Map<String,AdjacencyListRowVertex> graphWeighed = null;
-
+  private static Word2Vec word2Vec;
 
   public static void mainToBuildVectors(String[] args) throws JsonParseException, JsonMappingException, IOException{ 
-    adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("signedGraphWikipedia");
+    adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("signedGraphWikipediaCleared");
     Set<String> toVectorize = new HashSet<String>(adjacencyList.keySet());
     for(String key: adjacencyList.keySet()){
       toVectorize.addAll(adjacencyList.get(key).getLinkedVertex());  
@@ -49,16 +49,16 @@ public class AnalyzerWikipediaGraph {
   }
 
 
-  
+
   private  static List<String> cleanText(String text){
-  //carico le stopword dal file specificato.
+    //carico le stopword dal file specificato.
     StopWordEnglish stopWords = new StopWordEnglish("stopwords_en.txt");
     String vertexName = text.replace("_", " ");
     List<String> cleanVertexName = Arrays.asList(vertexName.split(" ")).stream().filter(el->!stopWords.isStopWord(el)).map(el->el.toLowerCase()).collect(Collectors.toList());
     return cleanVertexName;
   }
-  
-  
+
+
   /**
    * This method return the vector's map created from the graph of the wikipedia's category.
    * If the map doesn't exit yet,  build the map from scratch Otherwise, load the map from the file (specified into the variable pathfile).
@@ -76,6 +76,8 @@ public class AnalyzerWikipediaGraph {
     int cutoffSaving = 10000;
 
     if(vectorsWikipediaVertex == null){
+      if(word2Vec == null)
+        word2Vec = new Word2Vec();
       ObjectMapper mapper = new ObjectMapper();
       List<List<String>> toVectorize = new ArrayList<>();
 
@@ -96,7 +98,7 @@ public class AnalyzerWikipediaGraph {
         toVectorize.add(cleanVertexName);
         //ogni tot di vertici eseguo la query al servizio Word2Vec
         if((i % 200 == 0 || i == vertexWikipedia.size()-1) && (i != 0 || vertexList.size() == 1)){
-          float[][] vectorizedNames = Word2Vec.returnVectorsFromTextList(toVectorize);
+          float[][] vectorizedNames = word2Vec.returnVectorsFromTextList(toVectorize);
           int count = 0;
           //nel caso vi è un unico elemento da vettorizzare.
           if(i == 0)
@@ -140,7 +142,7 @@ public class AnalyzerWikipediaGraph {
       }
     }
     List<String> toReturn = new ArrayList<>();
-    List<String> wikipediaLabels = getDocumentLabels(idDocument);
+    List<String> wikipediaLabels = getDocumentLabelsBFS(idDocument);
     for(String label: wikipediaLabels){
       if(mappingTaxonomyWikipedia.containsKey(label))
         toReturn.addAll(mappingTaxonomyWikipedia.get(label));
@@ -164,16 +166,21 @@ public class AnalyzerWikipediaGraph {
       ObjectMapper mapper = new ObjectMapper();
       graphWeighed = mapper.readValue(new File("graphWikipediaWeighed"), new TypeReference<Map<String,AdjacencyListRowVertex>>() {});
     }
-    if(vectorsWikipediaVertex == null){
-      vectorsWikipediaVertex = loadVectorsWikipediaGraph("vectorsWikipediaVertex");
-    }
+
+    if(word2Vec == null)
+      word2Vec = new Word2Vec();
     String title = getPageInfoById(idDocument).get("title").getAsString();
     List<List<String>> toVectorize = new ArrayList<>();
     toVectorize.add(cleanText(title));
-    float[] titleVector = Word2Vec.returnVectorsFromTextList(toVectorize)[0];
+    float[] titleVector = word2Vec.returnVectorsFromTextList(toVectorize)[0];
     for(String category: documentCategories){
-      
-      for(PathInfo p: searchDjistraMarkedNode(graphWeighed, category, 2,CrawlerWikipediaCategory.cosineSimilarityInverse(titleVector, vectorsWikipediaVertex.get(category)))){
+      toVectorize = new ArrayList<>();
+      toVectorize.add(cleanText(category));
+      float[] categoryVector = word2Vec.returnVectorsFromTextList(toVectorize)[0];
+
+      for(PathInfo p: searchDjistraMarkedNode(graphWeighed, category, 2,CrawlerWikipediaCategory.cosineSimilarityInverse(titleVector, categoryVector))){
+        //      for(PathInfo p: searchDjistraMarkedNode(graphWeighed, category, 3,0)){
+
         if(results.contains(p)){
           PathInfo tmp = results.get(results.indexOf(p));
           if(p.getValue() < tmp.getValue()){
@@ -184,34 +191,44 @@ public class AnalyzerWikipediaGraph {
           results.add(p);
       }
     }
-    /*
+    //riscalo i valori dividendoli per la lunghezza del path.  
     for(PathInfo p: results){
       p.setValue(p.getValue()/p.getLenPath());
-    }*/
+    }
     List<PathInfo> orderedResults = new ArrayList<PathInfo>(results);
     Collections.sort(orderedResults);
     //DEBUG PRINT
-    System.out.println(orderedResults); 
+    /*System.out.println(orderedResults); 
     for(PathInfo p: orderedResults){
       StringBuilder builder = new StringBuilder();
       getPath(p, builder);
       System.out.println(builder.toString());
-    }
+    }*/
     return orderedResults.stream().map(e->e.getName()).collect(Collectors.toList());
   }
-  
-  
 
-  public static List<String> getDocumentLabels(String idDocument) throws IOException{
+
+
+  public static List<String> getDocumentLabelsBFS(String idDocument) throws IOException{
     Set<String> documentCategories = getParentCategoriesByIdPage(idDocument);
-    Set<PathInfo> results = new HashSet<PathInfo>();
+    List<PathInfo> results = new ArrayList<PathInfo>();
     if(adjacencyList == null)    
-      adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("signedGraphWikipedia");
+      adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("signedGraphWikipediaCleared");
     for(String category: documentCategories){
-      results.addAll(seachBFSMarkedNodes(adjacencyList, category, 3));
+      for(PathInfo p: seachBFSMarkedNodes(adjacencyList, category, 3)){
+        if(results.contains(p)){
+          PathInfo tmp = results.get(results.indexOf(p));
+          if(p.getValue() < tmp.getValue()){
+            results.remove(tmp);
+            results.add(p);
+          }
+        }else
+          results.add(p);
+      }
+
     }
     List<PathInfo> orderedResults = new ArrayList<PathInfo>(results);
-    Collections.sort(orderedResults,Collections.reverseOrder());
+    Collections.sort(orderedResults);
     //DEBUG PRINT
     /*System.out.println(orderedResults); 
     for(PathInfo p: orderedResults){
@@ -298,7 +315,7 @@ public class AnalyzerWikipediaGraph {
           List<PathInfo> listLinked = new ArrayList<>();
           linkedVertex.stream().filter(v->!visitedVertex.contains(v)).forEach(listLinked::add);
           Iterator<PathInfo> iter = q.iterator();
-          
+
           while(iter.hasNext()){
             PathInfo p = iter.next();
             if(listLinked.contains(p)){
@@ -308,12 +325,13 @@ public class AnalyzerWikipediaGraph {
               }
             }
           }
-          listLinked.stream().forEach(v->v.setParent(currentVertex));
-          listLinked.stream().forEach(v->v.setLenPath(currentVertex.getLenPath()+1));
-          listLinked.stream().forEach(v->q.add(v));
-          
-          
-          
+          for(PathInfo linked : listLinked){
+            linked.setParent(currentVertex);
+            linked.setLenPath(currentVertex.getLenPath()+1);
+            q.add(linked);
+          }
+
+
         }
       }
 
@@ -401,7 +419,7 @@ public class AnalyzerWikipediaGraph {
             }
           }
           else{
-        	  System.out.println("Il grafo non contiene la categoria: "+vertex.getName());
+            System.out.println("Il grafo non contiene la categoria: "+vertex.getName());
           }
       }
     }
@@ -441,7 +459,7 @@ public class AnalyzerWikipediaGraph {
     }
     return dataMap;
   } 
-  
+
   public static JsonObject getPageInfoById(String pageids){
     JsonObject toReturn = new JsonObject();
     try{
