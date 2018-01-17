@@ -400,6 +400,9 @@ public class AnalyzerWikipediaGraph {
                 vertexToVisit.add(vInfo);
             }
           }
+          else{
+        	  System.out.println("Il grafo non contiene la categoria: "+vertex.getName());
+          }
       }
     }
     //ritorno la lista di nodi marcati.
