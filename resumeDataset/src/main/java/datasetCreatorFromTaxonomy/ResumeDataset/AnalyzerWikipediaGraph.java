@@ -9,10 +9,13 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.NavigableSet;
 import java.util.Set;
+import java.util.TreeSet;
 import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.core.JsonParseException;
@@ -28,22 +31,16 @@ public class AnalyzerWikipediaGraph {
   private static  HashMap<String, AdjacencyListRow> adjacencyList = null;
   private static HashMap<String,Set<String>> mappingTaxonomyWikipedia = null;
   private static Map<String,float[]> vectorsWikipediaVertex = null;
+  private static Map<String,AdjacencyListRowVertex> graphWeighed = null;
 
 
-
-  public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException{ 
+  public static void mainToBuildVectors(String[] args) throws JsonParseException, JsonMappingException, IOException{ 
     adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("signedGraphWikipedia");
-    long start = System.currentTimeMillis();
     Set<String> toVectorize = new HashSet<String>(adjacencyList.keySet());
-
     for(String key: adjacencyList.keySet()){
       toVectorize.addAll(adjacencyList.get(key).getLinkedVertex());  
     }
-
-
     getVectorsWikipediaGraph(toVectorize,"vectorsWikipediaVertex");
-    //loadVectorsWikipediaGraph("vectorsWikipediaVertex");
-    System.out.println(System.currentTimeMillis() - start);
   }
 
   public static Map<String,float[]> loadVectorsWikipediaGraph(String pathFile) throws JsonParseException, JsonMappingException, IOException{
@@ -52,6 +49,16 @@ public class AnalyzerWikipediaGraph {
   }
 
 
+  
+  private  static List<String> cleanText(String text){
+  //carico le stopword dal file specificato.
+    StopWordEnglish stopWords = new StopWordEnglish("stopwords_en.txt");
+    String vertexName = text.replace("_", " ");
+    List<String> cleanVertexName = Arrays.asList(vertexName.split(" ")).stream().filter(el->!stopWords.isStopWord(el)).map(el->el.toLowerCase()).collect(Collectors.toList());
+    return cleanVertexName;
+  }
+  
+  
   /**
    * This method return the vector's map created from the graph of the wikipedia's category.
    * If the map doesn't exit yet,  build the map from scratch Otherwise, load the map from the file (specified into the variable pathfile).
@@ -150,6 +157,50 @@ public class AnalyzerWikipediaGraph {
   }
 
 
+  public static List<String> getDocumentLabelsDijstra(String idDocument) throws IOException{
+    Set<String> documentCategories = getParentCategoriesByIdPage(idDocument);
+    List<PathInfo> results = new ArrayList<PathInfo>();
+    if(graphWeighed == null){
+      ObjectMapper mapper = new ObjectMapper();
+      graphWeighed = mapper.readValue(new File("graphWikipediaWeighed"), new TypeReference<Map<String,AdjacencyListRowVertex>>() {});
+    }
+    if(vectorsWikipediaVertex == null){
+      vectorsWikipediaVertex = loadVectorsWikipediaGraph("vectorsWikipediaVertex");
+    }
+    String title = getPageInfoById(idDocument).get("title").getAsString();
+    List<List<String>> toVectorize = new ArrayList<>();
+    toVectorize.add(cleanText(title));
+    float[] titleVector = Word2Vec.returnVectorsFromTextList(toVectorize)[0];
+    for(String category: documentCategories){
+      
+      for(PathInfo p: searchDjistraMarkedNode(graphWeighed, category, 2,CrawlerWikipediaCategory.cosineSimilarityInverse(titleVector, vectorsWikipediaVertex.get(category)))){
+        if(results.contains(p)){
+          PathInfo tmp = results.get(results.indexOf(p));
+          if(p.getValue() < tmp.getValue()){
+            results.remove(tmp);
+            results.add(p);
+          }
+        }else
+          results.add(p);
+      }
+    }
+    /*
+    for(PathInfo p: results){
+      p.setValue(p.getValue()/p.getLenPath());
+    }*/
+    List<PathInfo> orderedResults = new ArrayList<PathInfo>(results);
+    Collections.sort(orderedResults);
+    //DEBUG PRINT
+    System.out.println(orderedResults); 
+    for(PathInfo p: orderedResults){
+      StringBuilder builder = new StringBuilder();
+      getPath(p, builder);
+      System.out.println(builder.toString());
+    }
+    return orderedResults.stream().map(e->e.getName()).collect(Collectors.toList());
+  }
+  
+  
 
   public static List<String> getDocumentLabels(String idDocument) throws IOException{
     Set<String> documentCategories = getParentCategoriesByIdPage(idDocument);
@@ -157,7 +208,7 @@ public class AnalyzerWikipediaGraph {
     if(adjacencyList == null)    
       adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("signedGraphWikipedia");
     for(String category: documentCategories){
-      results.addAll(searchNearestMarkedVertexBFS(adjacencyList, category, 3));
+      results.addAll(seachBFSMarkedNodes(adjacencyList, category, 3));
     }
     List<PathInfo> orderedResults = new ArrayList<PathInfo>(results);
     Collections.sort(orderedResults,Collections.reverseOrder());
@@ -212,8 +263,62 @@ public class AnalyzerWikipediaGraph {
   }
 
 
-  public static void searchNearestMarkedVertexDjistra(Map<String,AdjacencyListRowVertex> adjacencyList,String vertexStartName){
+  public static Set<PathInfo> searchDjistraMarkedNode(Map<String,AdjacencyListRowVertex> adjacencyList,String vertexStartName,int numberOfMarkedVertex,double startValue){
+    Set<PathInfo> nearestMarkedVertex = new HashSet<PathInfo>();
 
+    if(adjacencyList.containsKey(vertexStartName)){
+      int lenPath = 0;
+      int countMarked = 0;
+      PathInfo startingPoint = new PathInfo(vertexStartName, startValue);
+      startingPoint.setLenPath(lenPath);
+      Set<PathInfo> visitedVertex = new HashSet<PathInfo>();
+
+
+      if(adjacencyList.get(vertexStartName).isTaxonomyCategory()){
+        nearestMarkedVertex.add(startingPoint);
+        countMarked++;
+        if(countMarked >= numberOfMarkedVertex)
+          return nearestMarkedVertex;
+      }
+      NavigableSet<PathInfo> q = new TreeSet<>();
+      q.add(startingPoint);
+
+      while(!q.isEmpty()){
+        PathInfo currentVertex = q.pollFirst();
+        if(adjacencyList.containsKey(currentVertex.getName())){
+          if(adjacencyList.get(currentVertex.getName()).isTaxonomyCategory()){
+            nearestMarkedVertex.add(currentVertex);
+            countMarked++;
+            if(countMarked >= numberOfMarkedVertex)
+              return nearestMarkedVertex;
+          }
+          visitedVertex.add(currentVertex);
+
+          Set<PathInfo> linkedVertex = adjacencyList.get(currentVertex.getName()).getLinkedVertex().stream().map(v->new PathInfo(v.getVertexName(),(currentVertex.getValue()+v.getSimilarity()))).collect(Collectors.toSet());
+          List<PathInfo> listLinked = new ArrayList<>();
+          linkedVertex.stream().filter(v->!visitedVertex.contains(v)).forEach(listLinked::add);
+          Iterator<PathInfo> iter = q.iterator();
+          
+          while(iter.hasNext()){
+            PathInfo p = iter.next();
+            if(listLinked.contains(p)){
+              PathInfo tmp = listLinked.get(listLinked.indexOf(p));
+              if(p.getValue() > tmp.getValue()){
+                iter.remove();
+              }
+            }
+          }
+          listLinked.stream().forEach(v->v.setParent(currentVertex));
+          listLinked.stream().forEach(v->v.setLenPath(currentVertex.getLenPath()+1));
+          listLinked.stream().forEach(v->q.add(v));
+          
+          
+          
+        }
+      }
+
+    }
+    return nearestMarkedVertex;
   }
 
 
@@ -225,7 +330,7 @@ public class AnalyzerWikipediaGraph {
    * @param numberOfMarkedVertex
    * @return
    */
-  public static Set<PathInfo> searchNearestMarkedVertexBFS(Map<String,AdjacencyListRow> adjacencyList,String vertexStart,int numberOfMarkedVertex){
+  public static Set<PathInfo> seachBFSMarkedNodes(Map<String,AdjacencyListRow> adjacencyList,String vertexStart,int numberOfMarkedVertex){
     //insieme di nodi marcati da ritornare.
     Set<PathInfo> nearestMarkedVertex = new HashSet<PathInfo>();
 
@@ -333,6 +438,20 @@ public class AnalyzerWikipediaGraph {
     }
     return dataMap;
   } 
+  
+  public static JsonObject getPageInfoById(String pageids){
+    JsonObject toReturn = new JsonObject();
+    try{
 
+      String query = "https://en.wikipedia.org/w/api.php?action=query&prop=info&pageids="+pageids+"&format=json";
+      JsonObject response = CrawlerWikipediaCategory.getJsonResponse(query);
+      toReturn = response.get("query").getAsJsonObject().get("pages").getAsJsonObject().get(pageids).getAsJsonObject();
+
+    }catch (IOException e) {
+      // TODO: handle exception
+      e.printStackTrace();
+    }
+    return toReturn;
+  }
 
 }
