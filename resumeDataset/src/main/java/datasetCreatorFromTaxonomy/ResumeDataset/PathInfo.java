@@ -5,24 +5,25 @@ import org.apache.commons.lang3.builder.CompareToBuilder;
 public class PathInfo implements Comparable<PathInfo>{
 
   private String name;
-  private int value;
+  private double value;
+  private double lenPath;
   private PathInfo parent;
   public PathInfo(){
 
   }
 
-  public PathInfo(String name, int value) {
+  public PathInfo(String name, double value) {
     super();
     this.name = name;
     this.value = value;
   }
 
 
-  public int getValue() {
+  public double getValue() {
     return value;
   }
 
-  public void setValue(int value) {
+  public void setValue(double value) {
     this.value = value;
   }
 
@@ -67,7 +68,7 @@ public class PathInfo implements Comparable<PathInfo>{
 
   @Override
   public int compareTo(PathInfo object) {
-    return new CompareToBuilder().append(this.getValue() * (-1), object.getValue()* (-1)).toComparison();
+    return new CompareToBuilder().append(this.getValue(), object.getValue()).toComparison();
   }
 
   public PathInfo getParent() {
@@ -76,5 +77,13 @@ public class PathInfo implements Comparable<PathInfo>{
 
   public void setParent(PathInfo parent) {
     this.parent = parent;
+  }
+
+  public double getLenPath() {
+    return lenPath;
+  }
+
+  public void setLenPath(double lenPath) {
+    this.lenPath = lenPath;
   }
 }
