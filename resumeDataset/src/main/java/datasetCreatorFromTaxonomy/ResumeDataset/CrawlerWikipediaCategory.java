@@ -45,11 +45,8 @@ public class CrawlerWikipediaCategory {
 
 
 	public static void main(String args[]) throws IOException, InterruptedException, ExecutionException{
-		//mainToBuildWeighedGraph(args);
-		//checkWikipediaGraph();
-		mainToBuildGraph(args);
-		//HashMap<String, AdjacencyListRow> adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("CrawlerResult");
-		//System.out.println("After:  "+adjacencyList.size());
+		
+		mainToBuildWeighedGraph(args);
 	}
 	
 	
@@ -208,7 +205,6 @@ public class CrawlerWikipediaCategory {
 				if(validateVector(keyVector) && validateVector(parentVector)){
 
 					currentParent.setSimilarity(cosineSimilarityInverse(keyVector, parentVector));
-					System.out.println(key+" "+parent);
 				}
 				else{
 					currentParent.setSimilarity(3.14/2);
@@ -626,7 +622,6 @@ public class CrawlerWikipediaCategory {
 			
 		}
 		else{
-			System.out.println((dotProduct) / (Math.sqrt(normA * normB))+" ------> "+Math.acos((dotProduct) / (Math.sqrt(normA * normB))));
 			return Math.acos((dotProduct) / (Math.sqrt(normA * normB)));
 		}
 	}
