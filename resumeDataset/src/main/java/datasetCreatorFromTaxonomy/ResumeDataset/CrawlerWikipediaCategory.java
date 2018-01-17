@@ -4,6 +4,7 @@ import java.beans.VetoableChangeListener;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -40,6 +41,71 @@ public class CrawlerWikipediaCategory {
 	private static int numConcurrency = 20;
 	private static 	ExecutorService executorService = Executors.newFixedThreadPool(numConcurrency);
 
+
+
+
+	public static void main(String args[]) throws IOException, InterruptedException, ExecutionException{
+		//mainToBuildWeighedGraph(args);
+		//checkWikipediaGraph();
+		mainToBuildGraph(args);
+		//HashMap<String, AdjacencyListRow> adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("CrawlerResult");
+		//System.out.println("After:  "+adjacencyList.size());
+	}
+	
+	
+	/**
+	 * Questo metodo controlla se sono state prese tutte le categorie wikipedia. Verifica se tutti i parents esistono anche come nodi dell adjacency list
+	 * Se esistono nodi che non appartengono, crea un nuovo oggeto CrawlerResult con la PriorityQueue contenente i nuovi nodi da visitare
+	 * @throws JsonParseException
+	 * @throws JsonMappingException
+	 * @throws IOException
+	 * @throws ExecutionException 
+	 * @throws InterruptedException 
+	 */
+	public static CrawlerResult checkWikipediaGraph() throws JsonParseException, JsonMappingException, IOException, InterruptedException, ExecutionException{
+		CrawlerResult crawlerResult = new CrawlerResult();
+		HashMap<String, AdjacencyListRow> adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("signedGraphWikipediaCleared");
+		HashSet<String> categoryToAdd = new HashSet<String>();
+		
+		// ciclo per vedere se si sono nodi mancanti tra le parent list e le row della lista di adiacenza
+		for(String key : adjacencyList.keySet()){
+			HashSet<String> parentList = adjacencyList.get(key).getLinkedVertex();
+			for(String parent : parentList){
+				if(!adjacencyList.containsKey(parent)){
+					categoryToAdd.add(parent);
+				}
+			}
+		}
+		
+		System.out.println("Numero nodi mancancti: "+categoryToAdd.size());
+		System.out.println(categoryToAdd.toString());
+		
+		//se ci sono nodi mancanti li aggiungo al grafo
+		if(categoryToAdd.size()>0){
+			//prima creao la PriorityQueue dei vertedToVisit
+			PriorityQueue<String> vertexToVisit = new PriorityQueue<>();
+			vertexToVisit.addAll(categoryToAdd);
+			
+			//inizializzo il crawler results
+			
+			crawlerResult.setAdjacencyList(adjacencyList);
+			crawlerResult.setLatestCategoryProcessed(new HashSet<>());
+			crawlerResult.setVertexToVisit(vertexToVisit);
+			crawlerResult.setCrashed(false);
+			crawlerResult.setMarkedNode(new HashSet<>(adjacencyList.keySet()));
+			crawlerResult.setNumCategory(adjacencyList.size());
+			
+			ObjectMapper writerCrawlerResult = new ObjectMapper();
+			writerCrawlerResult.writerWithDefaultPrettyPrinter().writeValue(new File(crawlerResult.getClass().getSimpleName()), crawlerResult);
+		
+		}
+		System.out.println("Before: "+crawlerResult.getAdjacencyList().size());
+		return crawlerResult;
+	}
+	
+
+
+
 	/**
 	 * used to build wikipedia category graph
 	 * @param args
@@ -68,7 +134,7 @@ public class CrawlerWikipediaCategory {
 		markGraph(graph, categories);
 	}
 
-	
+
 	/**
 	 * main to create weighed graph
 	 * @param args
@@ -76,15 +142,19 @@ public class CrawlerWikipediaCategory {
 	 * @throws JsonMappingException
 	 * @throws IOException
 	 */
-	public static void main(String args[]) throws JsonParseException, JsonMappingException, IOException{
-		HashMap<String, AdjacencyListRow> adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("signedGraphWikipedia");
+	public static void mainToBuildWeighedGraph(String args[]) throws JsonParseException, JsonMappingException, IOException{
+		System.out.println("Start to read signedGraphWikipediaCleared ");
+		HashMap<String, AdjacencyListRow> adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("signedGraphWikipediaCleared");
+		System.out.println("Start to read vectorsWikipediaVertex ");
 		Map<String, float[]> vectorsFromWikipediaGraph = AnalyzerWikipediaGraph.loadVectorsWikipediaGraph("vectorsWikipediaVertex");
+		System.out.println("Start to build new Graph ");
 		Map<String, AdjacencyListRowVertex> result = fromAdjacencyListRowToAdjacencyListRowVertex(vectorsFromWikipediaGraph,adjacencyList);
 		ObjectMapper mapper = new ObjectMapper();
 		mapper.writerWithDefaultPrettyPrinter().writeValue(new File("graphWikipediaWeighed"), result);
-		
+
 	}
-	
+
+
 
 	/**
 	 * this method check if a vector is different from 0 vector
@@ -95,58 +165,61 @@ public class CrawlerWikipediaCategory {
 
 		if (vector == null)
 			return false;
-		
+
 		for(int i=0;i<vector.length-1;i++){
 			if (vector[i]!=0.0)
 				return true;
 		}
 		return false;
 	}
-	
-	
-	
+
+
+
 	/**
 	 * read vectors object 
 	 * @param vectorsFromWikipediaGraph
 	 * @param adjacencyList
 	 * @return
+	 * @throws IOException 
 	 */
-	public static Map<String,AdjacencyListRowVertex> fromAdjacencyListRowToAdjacencyListRowVertex(Map<String,float[]> vectorsFromWikipediaGraph,Map<String,AdjacencyListRow> adjacencyList){
+	public static Map<String,AdjacencyListRowVertex> fromAdjacencyListRowToAdjacencyListRowVertex(Map<String,float[]> vectorsFromWikipediaGraph,Map<String,AdjacencyListRow> adjacencyList) throws IOException{
 		Map<String,AdjacencyListRowVertex> toReturn = new HashMap<>();
-
+		FileWriter writer = new FileWriter(new File("nodeToVisit.txt"));
 		for(String key : adjacencyList.keySet()){
 			AdjacencyListRowVertex adjacencyListRowVertex = new AdjacencyListRowVertex();
 			adjacencyListRowVertex.setTaxonomyCategory(adjacencyList.get(key).isTaxonomyCategory());
 			float[] keyVector = vectorsFromWikipediaGraph.get(key);
-			
+
 			if(keyVector== null){
-				System.out.println("key null: "+key);
+				System.out.println(key);
+				writer.write("\""+key+"\",");
 			}
-			else{
-				System.out.println("key not null: "+key);
-			}
-			
+
 			for(String parent : adjacencyList.get(key).getLinkedVertex()){
 				Vertex currentParent = new Vertex();
 				currentParent.setVertexName(parent);
 				float[] parentVector = vectorsFromWikipediaGraph.get(parent);
-				
-				if(parentVector== null)
-					System.out.println("parent null : "+parent);
-				else
-					System.out.println("parent not null : "+parent);
-				
+
+				if(parentVector== null){
+					System.out.println(parent);
+					writer.write("\""+parent+"\",");
+				}
+
 				if(validateVector(keyVector) && validateVector(parentVector)){
-					
+
 					currentParent.setSimilarity(cosineSimilarityInverse(keyVector, parentVector));
+					System.out.println(key+" "+parent);
 				}
 				else{
-					currentParent.setSimilarity(0.5);
+					currentParent.setSimilarity(3.14/2);
 				}
 				adjacencyListRowVertex.getLinkedVertex().add(currentParent);
 			}
 			toReturn.put(key, adjacencyListRowVertex);
 		}
+
+		writer.flush();
+		writer.close();
 		return toReturn;
 	}
 
@@ -159,18 +232,33 @@ public class CrawlerWikipediaCategory {
 	 * @throws IOException
 	 */
 	public static void mainToClear(String[] args) throws IOException{
-		HashMap<String, AdjacencyListRow> graph = returnAdjacencyListFromFile("CrawlerResult");
+		HashMap<String, AdjacencyListRow> graph = returnAdjacencyListFromFile("signedGraphWikipedia");
 		HashMap<String, AdjacencyListRow> app = new HashMap<String, AdjacencyListRow>();
 
 		System.out.println("Initial graph size: "+graph.size());
 
-		HashSet<String> toRemove = new HashSet<String>();
+		HashSet<String> toRemoveKey = new HashSet<String>();
+
 		for(String category : graph.keySet()){
 
+			// per pulire i parent
+			HashSet<String> toRemoveParent = new HashSet<String>();
+			HashSet<String> appParent = new HashSet<>();
+			for(String parent : graph.get(category).getLinkedVertex()){
+				appParent.add(parent.replace(" ", "_"));
+			} 
+
+			graph.get(category).setLinkedVertex(appParent);
+
+			//per pilure le chiavi
 			if(category.contains(" ")){
 				app.put(category.replace(" ", "_"),graph.get(category));
-				toRemove.add(category);
+				toRemoveKey.add(category);
 			}
+
+
+
+
 		}
 
 		//aggiungo le categorie con _
@@ -179,13 +267,13 @@ public class CrawlerWikipediaCategory {
 		}
 
 		// rimuovo le categorie con gli spazi
-		for(String cat : toRemove){
+		for(String cat : toRemoveKey){
 			graph.remove(cat);
 		}
 
 
 		ObjectMapper writerCrawlerResult = new ObjectMapper();
-		writerCrawlerResult.writerWithDefaultPrettyPrinter().writeValue(new File("GraphWikipedia"), graph);
+		writerCrawlerResult.writerWithDefaultPrettyPrinter().writeValue(new File("signedGraphWikipediaCleared"), graph);
 		System.out.println("Final graph size: "+graph.size());
 
 	}
@@ -246,7 +334,7 @@ public class CrawlerWikipediaCategory {
 				}
 			}
 			catch(Exception e){
-				System.out.println(id+": hasn't parents category --- URL: "+parentsURL);
+				//System.out.println(id+": hasn't parents category --- URL: "+parentsURL);
 			}
 
 		}
@@ -287,6 +375,7 @@ public class CrawlerWikipediaCategory {
 
 
 	/**
+	 * Check if graph file already exist. Yes: load and use it   NO: it's created
 	 * Used to read graph by backup and to call BFS methods
 	 * @param categories
 	 * @param persist
@@ -327,19 +416,24 @@ public class CrawlerWikipediaCategory {
 	 */
 	public static HashMap BFS(Set<String> categoryList,HashSet<String> markedNode, HashMap<String,AdjacencyListRow> adjacencylist,PriorityQueue<String> vertexToVisit,boolean persist) throws IOException, InterruptedException, ExecutionException{
 
-		// add first category
-		markedNode.addAll(categoryList);
 
-		// Queue vertex to visit 
+		// Aggiungo a vertexToVisit i vertici da visitare. Serve perchè al primo lancio bisogna salvare il primo vertice in vertextovisit
 		vertexToVisit.addAll(categoryList);
-		int countToPersiste = 0;
-		int countToAddQuery = 0;
-		// while there are vertex to visit, build adyacency list
-		while(!vertexToVisit.isEmpty()){
-			HashSet<String> categories = new HashSet<String>(categoryList);
 
-			while (countToAddQuery < numConcurrency && (!vertexToVisit.isEmpty()) && categories.size()< numConcurrency){
-				categories.add(vertexToVisit.poll());
+		// counter usato per la persistenza
+		int countToPersiste = 0;
+
+		// counter usato per la concorrenza
+		int countToAddQuery = 0;
+
+		// while there are vertex to visit, build adyacency list
+		HashSet<String> categories = new HashSet<String>(categoryList);
+
+		// finchè esistono vertici da visitare
+		while(!vertexToVisit.isEmpty()){
+			while(countToAddQuery < numConcurrency && (!vertexToVisit.isEmpty()) && categories.size()< numConcurrency){
+				String vertex = vertexToVisit.poll();
+				categories.add(vertex);
 				countToAddQuery++;
 				countToPersiste++;
 				if(vertexToVisit.isEmpty())
@@ -348,30 +442,27 @@ public class CrawlerWikipediaCategory {
 
 			countToAddQuery = 0;
 
-			markedNode.addAll(categories);
 			HashMap<String, HashMap<String, HashSet<String>>> linkedVertex = wikipediaRequest(categories);
-			HashMap<String, HashSet<String>> parent = linkedVertex.get("parents");
-
-			for(String e : parent.keySet()){
-				AdjacencyListRow currentVertex = new AdjacencyListRow(parent.get(e), false);
-				adjacencylist.put(e, currentVertex);
-			}
-
-			if((persist && countToPersiste == (numConcurrency*10)) || (vertexToVisit.isEmpty())){
-				countToPersiste = 0;
-				System.out.println("NODI RIMANENTI: "+vertexToVisit.size());
-				System.out.println("NODI MARCATI: "+markedNode.size());
-				System.out.println("------------------------------------------------------");
-				CrawlerResult crawlerResult = new CrawlerResult(false,parent.keySet(),markedNode, adjacencylist,vertexToVisit);
-				ObjectMapper writerCrawlerResult = new ObjectMapper();
-				writerCrawlerResult.writerWithDefaultPrettyPrinter().writeValue(new File(crawlerResult.getClass().getSimpleName()), crawlerResult);
-			}
-
-
-			HashSet<String> app = new HashSet<String>();
-
 			HashMap<String, HashSet<String>> parentsMap = linkedVertex.get("parents");
 			HashMap<String, HashSet<String>> childsMap = linkedVertex.get("childs");
+
+			for(String e : parentsMap.keySet()){
+				AdjacencyListRow currentVertex = new AdjacencyListRow(parentsMap.get(e), false);
+				adjacencylist.put(e, currentVertex);
+				markedNode.add(e);
+			}
+
+			Set<String> toRemove = new HashSet<>(categories);
+			toRemove.removeAll(parentsMap.keySet());
+			markedNode.addAll(toRemove);
+
+			categories = new HashSet<>();
+
+
+			// Creo un HashSet di appoggio per salvare parents e childs da aggiungere a vertexToVIsit
+			HashSet<String> app = new HashSet<String>();
+
+
 			for(String key : parentsMap.keySet()){
 				app.addAll(parentsMap.get(key));
 			}
@@ -385,14 +476,22 @@ public class CrawlerWikipediaCategory {
 				}
 			}
 
+			// Persistenza
+			if((persist && countToPersiste >= (numConcurrency*10)) || (vertexToVisit.isEmpty())){
+				countToPersiste = 0;
+				System.out.println("NODI RIMANENTI: "+vertexToVisit.size());
+				System.out.println("NODI MARCATI: "+markedNode.size());
+				System.out.println("------------------------------------------------------");
+				CrawlerResult crawlerResult = new CrawlerResult(false,parentsMap.keySet(),markedNode, adjacencylist,vertexToVisit);
+				ObjectMapper writerCrawlerResult = new ObjectMapper();
+				writerCrawlerResult.writerWithDefaultPrettyPrinter().writeValue(new File(crawlerResult.getClass().getSimpleName()), crawlerResult);
+			}
+
+
 			categoryList = new HashSet<String>();
 
 		}
 
-		System.out.println("TotalCategory: "+markedNode.size());
-		Date date = new Date();
-		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-		System.out.println("Ora di fine :"+dateFormat.format(date));
 		return adjacencylist;
 	}
 
@@ -512,6 +611,7 @@ public class CrawlerWikipediaCategory {
 		double dotProduct = 0.0;
 		double normA = 0.0;
 		double normB = 0.0;
+
 		if(vectorA!=null && vectorB!=null && vectorA.length==vectorB.length){
 			for (int i = 0; i < vectorA.length; i++) {
 				dotProduct += vectorA[i] * vectorB[i];
@@ -520,10 +620,15 @@ public class CrawlerWikipediaCategory {
 			}   
 		}
 
-		if(dotProduct == 0 || (normA * normB) == 0)
-			return 0;
-		else
-			return Math.asin((dotProduct) / (Math.sqrt(normA * normB)));
+		if(dotProduct == 0 || (normA * normB) == 0){
+			System.out.println(0);
+			return Math.acos(0);
+			
+		}
+		else{
+			System.out.println((dotProduct) / (Math.sqrt(normA * normB))+" ------> "+Math.acos((dotProduct) / (Math.sqrt(normA * normB))));
+			return Math.acos((dotProduct) / (Math.sqrt(normA * normB)));
+		}
 	}
 
 
