@@ -128,7 +128,7 @@ public class AnalyzerWikipediaGraph {
 
 
 
-  public static List<String> getDocumentLabelsTaxonomy(String idDocument) throws IOException{
+  public static List<String> getDocumentLabelsTaxonomy(String idDocument,boolean withDijstra) throws IOException{
     if(mappingTaxonomyWikipedia == null){
       mappingTaxonomyWikipedia = new HashMap<>();
       Map<String, List<String>> taxonomyCsv = getTaxonomyCSV("wheesbee_taxonomy.csv");
@@ -142,7 +142,11 @@ public class AnalyzerWikipediaGraph {
       }
     }
     List<String> toReturn = new ArrayList<>();
-    List<String> wikipediaLabels = getDocumentLabelsBFS(idDocument);
+    List<String> wikipediaLabels = new ArrayList<>();
+    if(withDijstra)
+      wikipediaLabels = getDocumentLabelsDijstra(idDocument);
+    else
+      wikipediaLabels = getDocumentLabelsBFS(idDocument);
     for(String label: wikipediaLabels){
       if(mappingTaxonomyWikipedia.containsKey(label))
         toReturn.addAll(mappingTaxonomyWikipedia.get(label));
