@@ -648,11 +648,11 @@ public class CrawlerWikipediaCategory {
 		}
 
 		if(dotProduct == 0 || (normA * normB) == 0){
-			return 0.001;
+			return 0;
 			
 		}
 		else{
-			return (dotProduct) / (Math.sqrt(normA * normB))+0.001;
+			return (dotProduct) / (Math.sqrt(normA * normB));
 		}
 	}
 
