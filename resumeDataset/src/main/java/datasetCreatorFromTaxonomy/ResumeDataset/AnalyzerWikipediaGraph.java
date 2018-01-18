@@ -171,19 +171,19 @@ public class AnalyzerWikipediaGraph {
       graphWeighed = mapper.readValue(new File("graphWikipediaWeighed"), new TypeReference<Map<String,AdjacencyListRowVertex>>() {});
     }
 
-    if(word2Vec == null)
+    /*if(word2Vec == null)
       word2Vec = new Word2Vec();
     String title = getPageInfoById(idDocument).get("title").getAsString();
     List<List<String>> toVectorize = new ArrayList<>();
     toVectorize.add(cleanText(title));
-    float[] titleVector = word2Vec.returnVectorsFromTextList(toVectorize)[0];
+    float[] titleVector = word2Vec.returnVectorsFromTextList(toVectorize)[0];*/
     for(String category: documentCategories){
-      toVectorize = new ArrayList<>();
+      /*toVectorize = new ArrayList<>();
       toVectorize.add(cleanText(category));
-      float[] categoryVector = word2Vec.returnVectorsFromTextList(toVectorize)[0];
+      float[] categoryVector = word2Vec.returnVectorsFromTextList(toVectorize)[0];*/
 
-      for(PathInfo p: searchDjistraMarkedNode(graphWeighed, category, 2,CrawlerWikipediaCategory.cosineSimilarityInverse(titleVector, categoryVector))){
-        //      for(PathInfo p: searchDjistraMarkedNode(graphWeighed, category, 3,0)){
+      //      for(PathInfo p: searchDjistraMarkedNode(graphWeighed, category, 2,CrawlerWikipediaCategory.cosineSimilarityInverse(titleVector, categoryVector))){
+      for(PathInfo p: searchDjistraMarkedNode(graphWeighed, category, 2,0)){
 
         if(results.contains(p)){
           PathInfo tmp = results.get(results.indexOf(p));
