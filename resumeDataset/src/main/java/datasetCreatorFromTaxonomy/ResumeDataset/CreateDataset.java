@@ -152,10 +152,10 @@ public class CreateDataset {
 								FileUtils.copyFile(f1, f2); 
 
 								//Dataset To evaluate classifier with training set
-								File f3 = new File(basePathDst+"/datasetToEvaluate/"+splitted[splitted.length-1]); 
-								FileUtils.copyFile(f1, f3); 
-								List<String> labels =  analyzerWikipedia.getDocumentLabelsTaxonomy(splitted[splitted.length-1]);
-								saveLabelsOnCSV(nameLeaf,labels,writerLabelsTraining,splitted);
+								//File f3 = new File(basePathDst+"/datasetToEvaluate/"+splitted[splitted.length-1]); 
+								//FileUtils.copyFile(f1, f3); 
+								//List<String> labels =  analyzerWikipedia.getDocumentLabelsTaxonomy(splitted[splitted.length-1]);
+								//saveLabelsOnCSV(nameLeaf,labels,writerLabelsTraining,splitted);
 								/////////////////////////////////////////////////
 							}
 							else
@@ -164,12 +164,14 @@ public class CreateDataset {
 										addedToReturn.add(splitted[splitted.length-1]);
 										f2 = new File(basePathDst+"/"+splitted[splitted.length-1]); 
 										//Codice per cercare le categorie dal grafo wikipedia. Creare un file CSV che contiene le categorie che il grafo ha restituito
-										List<String> labels =  analyzerWikipedia.getDocumentLabelsTaxonomy(splitted[splitted.length-1]);
+										List<String> labels =  analyzerWikipedia.getDocumentLabelsTaxonomy(splitted[splitted.length-1],true);
 										// se il nome della foglia è uguale al nome della labels in posizione 0. Faccio questo per prendere solo i documenti per i quali il grafo wikipedia ha una buona corrispondenza con l'etichetta usata durante la generazione del dataset
-										if(nameLeaf.toLowerCase().equals(labels.get(0).toLowerCase())){
-											FileUtils.copyFile(f1, f2);
-											saveLabelsOnCSV(nameLeaf,labels,writerLabelsTest,splitted);
-										} 
+										if(labels!=null && !labels.isEmpty()){
+											//if(nameLeaf.toLowerCase().equals(labels.get(0).toLowerCase())){
+												FileUtils.copyFile(f1, f2);
+												saveLabelsOnCSV(nameLeaf,labels,writerLabelsTest,splitted);
+											//} 
+										}
 									}
 								}
 						}
@@ -210,7 +212,7 @@ public class CreateDataset {
 					}
 		}
 		catch(Exception e){
-			System.out.println(splitted[splitted.length-1]);
+			//System.out.println(splitted[splitted.length-1]);
 		}
 		writer.flush();
 
