@@ -16,6 +16,7 @@ public class Word2Vec {
 
   private static WebClient webClient;
   private static Word2vecServiceImpl word2vecService;
+  
   public static float[][] returnVectorsFromTextList(List<List<String>> textList) throws IOException{
 
 
@@ -38,27 +39,4 @@ public class Word2Vec {
     
 
   }
-
-
-
-
-  public static double cosineSimilarity(float[] vectorA, float[] vectorB) {
-    double dotProduct = 0.0;
-    double normA = 0.0;
-    double normB = 0.0;
-    if(vectorA!=null && vectorB!=null && vectorA.length==vectorB.length){
-      for (int i = 0; i < vectorA.length; i++) {
-        dotProduct += vectorA[i] * vectorB[i];
-        normA += vectorA[i] * vectorA[i];
-        normB += vectorB[i] * vectorB[i];
-      }   
-    }
-
-    if(dotProduct == 0 || (normA * normB) == 0)
-      return 0;
-    else
-      return ((dotProduct) / (Math.sqrt(normA * normB)));
-  }
-
-
 }
