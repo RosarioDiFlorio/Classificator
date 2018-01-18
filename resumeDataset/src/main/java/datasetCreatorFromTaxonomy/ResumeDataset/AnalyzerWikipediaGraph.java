@@ -34,13 +34,19 @@ public class AnalyzerWikipediaGraph {
   private static Map<String,AdjacencyListRowVertex> graphWeighed = null;
   private static Word2Vec word2Vec;
 
+  
+  public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException{
+    mainToBuildVectors(args);
+  }
+  
+  
   public static void mainToBuildVectors(String[] args) throws JsonParseException, JsonMappingException, IOException{ 
     adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("signedGraphWikipediaCleared");
     Set<String> toVectorize = new HashSet<String>(adjacencyList.keySet());
     for(String key: adjacencyList.keySet()){
       toVectorize.addAll(adjacencyList.get(key).getLinkedVertex());  
     }
-    getVectorsWikipediaGraph(toVectorize,"vectorsWikipediaVertex");
+    getVectorsWikipediaGraph(toVectorize,"vectorsWikipediaVertexTest");
   }
 
   public static Map<String,float[]> loadVectorsWikipediaGraph(String pathFile) throws JsonParseException, JsonMappingException, IOException{
