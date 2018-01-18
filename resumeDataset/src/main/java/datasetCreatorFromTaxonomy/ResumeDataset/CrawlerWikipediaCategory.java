@@ -197,7 +197,7 @@ public class CrawlerWikipediaCategory {
 				currentParent.setVertexName(parent);
 				float[] parentVector = vectorsFromWikipediaGraph.get(parent);
 
-				if(parentVector== null){
+				if(parentVector==null){
 					System.out.println(parent);
 					writer.write("\""+parent+"\",");
 				}
