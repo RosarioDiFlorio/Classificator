@@ -626,7 +626,7 @@ public class CrawlerWikipediaCategory {
 		}
 
 		if(dotProduct == 0 || (normA * normB) == 0){
-			return Math.acos(0);
+			return 0.01;
 			
 		}
 		else{
@@ -648,7 +648,7 @@ public class CrawlerWikipediaCategory {
 		}
 
 		if(dotProduct == 0 || (normA * normB) == 0){
-			return 0;
+			return 0.01;
 			
 		}
 		else{
