@@ -7,11 +7,21 @@ public class PathInfo implements Comparable<PathInfo>{
   private String name;
   private double value;
   private double lenPath;
+  private double inverseCosine;
   private PathInfo parent;
   public PathInfo(){
 
   }
 
+  
+  public PathInfo(String name, double value,double inverseCosine) {
+    super();
+    this.name = name;
+    this.value = value;
+    this.inverseCosine = inverseCosine;
+  }
+  
+  
   public PathInfo(String name, double value) {
     super();
     this.name = name;
@@ -85,5 +95,13 @@ public class PathInfo implements Comparable<PathInfo>{
 
   public void setLenPath(double lenPath) {
     this.lenPath = lenPath;
+  }
+
+  public double getInverseCosine() {
+    return inverseCosine;
+  }
+
+  public void setInverseCosine(double inverseCosine) {
+    this.inverseCosine = inverseCosine;
   }
 }

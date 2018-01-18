@@ -13,9 +13,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.NavigableSet;
 import java.util.Set;
-import java.util.TreeSet;
 import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.core.JsonParseException;
@@ -25,6 +23,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+
+import eu.innovationengineering.solrclient.auth.collection.queue.UpdatablePriorityQueue;
 
 public class AnalyzerWikipediaGraph {
 
@@ -48,15 +48,6 @@ public class AnalyzerWikipediaGraph {
     return mapper.readValue(new File(pathFile), new TypeReference<Map<String,float[]>>() {});
   }
 
-
-
-  private  static List<String> cleanText(String text){
-    //carico le stopword dal file specificato.
-    StopWordEnglish stopWords = new StopWordEnglish("stopwords_en.txt");
-    String vertexName = text.replace("_", " ");
-    List<String> cleanVertexName = Arrays.asList(vertexName.split(" ")).stream().filter(el->!stopWords.isStopWord(el)).map(el->el.toLowerCase()).collect(Collectors.toList());
-    return cleanVertexName;
-  }
 
 
   /**
@@ -89,7 +80,7 @@ public class AnalyzerWikipediaGraph {
         cutoffSaving = (cutoffSaving*3)/2;
       }
       //converto l'insieme di elementi da vettorizzare in una lista in modo da poterci accedere con l'indice.
-      List<String> vertexList = vertexWikipedia.stream().collect(Collectors.toList());
+      List<String> vertexList = new ArrayList<>(vertexWikipedia);
       int offset = 0;         //variabile che mi tiene traccia dell'indice corrente.
       for(int i = 0; i<vertexList.size();i++){
         //pulisco i nomi dagli underscore e dalle stop word
@@ -97,21 +88,16 @@ public class AnalyzerWikipediaGraph {
         List<String> cleanVertexName = Arrays.asList(vertexName.split(" ")).stream().filter(el->!stopWords.isStopWord(el)).map(el->el.toLowerCase()).collect(Collectors.toList());
         toVectorize.add(cleanVertexName);
         //ogni tot di vertici eseguo la query al servizio Word2Vec
-        if((i % 200 == 0 || i == vertexWikipedia.size()-1) && (i != 0 || vertexList.size() == 1)){
+        if((toVectorize.size() == 200 || i == vertexWikipedia.size()-1)){
           float[][] vectorizedNames = word2Vec.returnVectorsFromTextList(toVectorize);
-          int count = 0;
-          //nel caso vi è un unico elemento da vettorizzare.
-          if(i == 0)
-            vectorsWikipediaVertex.put(vertexList.get(i).replace(" ", "_"), vectorizedNames[count]);
-          //nel caso vi sia più un solo elemento da vettorizzare
-          //
-          for(int j = (i-offset);j<i;j++){
-            vectorsWikipediaVertex.put(vertexList.get(j).replace(" ", "_"), vectorizedNames[count]);
-            count++;
+          
+          for (int j = 0; j < toVectorize.size(); j++) {
+            vectorsWikipediaVertex.put(vertexList.get(j + offset).replace(" ", "_"), vectorizedNames[j]);            
           }
 
-          offset =0;
-          toVectorize = new ArrayList<>();
+          offset += toVectorize.size();
+          toVectorize.clear();
+          
           //salvo ogni "cutoffSaving" di elementi la mappa in formato json nel path specificato(pathFile)
           if((i%cutoffSaving == 0 || i == vertexWikipedia.size()-1)){           
             cutoffSaving = (cutoffSaving*3)/2;
@@ -120,7 +106,6 @@ public class AnalyzerWikipediaGraph {
             mapper.writerWithDefaultPrettyPrinter().writeValue(new File(pathFile), vectorsWikipediaVertex);
           }
         }
-        offset ++;
       }
     }
     return vectorsWikipediaVertex;
@@ -154,10 +139,28 @@ public class AnalyzerWikipediaGraph {
     return toReturn;
   }
 
+  
+  public static double getAVG(PathInfo p,double avg,double d){
+    if(p!= null){
+      avg += p.getInverseCosine();
+      getAVG(p, avg, d);
+    }
+    return avg/d;
+  }
 
+  public static double getVariance(PathInfo p,double variance,double avg,double d){
+    if(p!=null){
+      variance += Math.pow((p.getInverseCosine()-avg),2);
+      getVariance(p, variance,avg,d);
+    }
+    return variance/d;
+  }
+ 
+  
+  
   public static void getPath(PathInfo p, StringBuilder builder){
     if (p != null) {
-      builder.insert(0, "/" + p.getName());
+      builder.insert(0, "/" + p.getName()+"["+p.getInverseCosine()+"]");
       getPath(p.getParent(), builder);      
     }
   }
@@ -171,18 +174,8 @@ public class AnalyzerWikipediaGraph {
       graphWeighed = mapper.readValue(new File("graphWikipediaWeighed"), new TypeReference<Map<String,AdjacencyListRowVertex>>() {});
     }
 
-    /*if(word2Vec == null)
-      word2Vec = new Word2Vec();
-    String title = getPageInfoById(idDocument).get("title").getAsString();
-    List<List<String>> toVectorize = new ArrayList<>();
-    toVectorize.add(cleanText(title));
-    float[] titleVector = word2Vec.returnVectorsFromTextList(toVectorize)[0];*/
     for(String category: documentCategories){
-      /*toVectorize = new ArrayList<>();
-      toVectorize.add(cleanText(category));
-      float[] categoryVector = word2Vec.returnVectorsFromTextList(toVectorize)[0];*/
-
-      //      for(PathInfo p: searchDjistraMarkedNode(graphWeighed, category, 2,CrawlerWikipediaCategory.cosineSimilarityInverse(titleVector, categoryVector))){
+      
       for(PathInfo p: searchDjistraMarkedNode(graphWeighed, category, 2,0)){
 
         if(results.contains(p)){
@@ -202,12 +195,13 @@ public class AnalyzerWikipediaGraph {
     List<PathInfo> orderedResults = new ArrayList<PathInfo>(results);
     Collections.sort(orderedResults);
     //DEBUG PRINT
-    /*System.out.println(orderedResults); 
+    System.out.println(orderedResults); 
     for(PathInfo p: orderedResults){
       StringBuilder builder = new StringBuilder();
       getPath(p, builder);
       System.out.println(builder.toString());
-    }*/
+      
+    }
     return orderedResults.stream().map(e->e.getName()).collect(Collectors.toList());
   }
 
@@ -284,58 +278,94 @@ public class AnalyzerWikipediaGraph {
   }
 
 
+  /**
+   * Search the nearest n marked vertex starting to the vertex passed in input to this function.
+   * Using the dijstra algorithm.
+   * The weight for each vertex u is based on the inverseCosineSimiliraty between the vertex (u,v).
+   * @param adjacencyList
+   * @param vertexStartName
+   * @param numberOfMarkedVertex
+   * @param startValue
+   * @return
+   */
   public static Set<PathInfo> searchDjistraMarkedNode(Map<String,AdjacencyListRowVertex> adjacencyList,String vertexStartName,int numberOfMarkedVertex,double startValue){
+    //insieme di nodi marcati da ritornare.
     Set<PathInfo> nearestMarkedVertex = new HashSet<PathInfo>();
-
     if(adjacencyList.containsKey(vertexStartName)){
-      int lenPath = 0;
-      int countMarked = 0;
-      PathInfo startingPoint = new PathInfo(vertexStartName, startValue);
-      startingPoint.setLenPath(lenPath);
-      Set<PathInfo> visitedVertex = new HashSet<PathInfo>();
-
-
+      int lenPath = 0; //conta la lunghezza del path
+      int countMarked = 0; //conta il numero di nodi marcati trovati
+      Set<PathInfo> visitedVertex = new HashSet<PathInfo>(); //lista dei nodi già visitati.
+      /*
+       * creo il nodo di partenza.
+       */
+      PathInfo startingPoint = new PathInfo(vertexStartName, startValue); 
+      startingPoint.setLenPath(lenPath); 
+      /*
+       * controllo se il nodo di partenza è una categoria contenuta all'interno della tassonomia.
+       */
       if(adjacencyList.get(vertexStartName).isTaxonomyCategory()){
         nearestMarkedVertex.add(startingPoint);
         countMarked++;
         if(countMarked >= numberOfMarkedVertex)
           return nearestMarkedVertex;
       }
-      NavigableSet<PathInfo> q = new TreeSet<>();
+      /*
+       * DIJSTRA ALGORITHM
+       * creo la priority queue.
+       * ed aggiungo il nodo di partenza.
+       */
+      UpdatablePriorityQueue<PathInfo> q = new UpdatablePriorityQueue<>();
       q.add(startingPoint);
-
+      
       while(!q.isEmpty()){
-        PathInfo currentVertex = q.pollFirst();
+        /*
+         * prendo l'elemento con il peso più minore.
+         */
+        PathInfo currentVertex = q.poll();
         if(adjacencyList.containsKey(currentVertex.getName())){
+          /*
+           * controllo se il nodo di partenza è una categoria contenuta all'interno della tassonomia.
+           */
           if(adjacencyList.get(currentVertex.getName()).isTaxonomyCategory()){
             nearestMarkedVertex.add(currentVertex);
             countMarked++;
             if(countMarked >= numberOfMarkedVertex)
               return nearestMarkedVertex;
           }
-          visitedVertex.add(currentVertex);
-
-          Set<PathInfo> linkedVertex = adjacencyList.get(currentVertex.getName()).getLinkedVertex().stream().map(v->new PathInfo(v.getVertexName(),(currentVertex.getValue()+v.getSimilarity()))).collect(Collectors.toSet());
-          List<PathInfo> listLinked = new ArrayList<>();
-          linkedVertex.stream().filter(v->!visitedVertex.contains(v)).forEach(listLinked::add);
+          visitedVertex.add(currentVertex); // aggiungo il nodo alla lista dei nodi visitati.
+          /*
+           * Per ognuno dei Nodi Linkati creo una lista di PathInfo.
+           * con value uguale al valore del nodo corrente + valore del nodo linkato considerato.
+           */
+          List<PathInfo> linkedVertex = adjacencyList.get(currentVertex.getName()).getLinkedVertex().stream().map(v->new PathInfo(v.getVertexName(),(currentVertex.getValue()+v.getSimilarity()),v.getSimilarity())).collect(Collectors.toList());       
+          /*
+           * elimino dalla coda i nodi linkati al nodo corrente che hanno valore più alto di quello appena considerato.
+           */
+          boolean updateQueue = false;
           Iterator<PathInfo> iter = q.iterator();
-
           while(iter.hasNext()){
             PathInfo p = iter.next();
-            if(listLinked.contains(p)){
-              PathInfo tmp = listLinked.get(listLinked.indexOf(p));
+            int index = linkedVertex.indexOf(p);
+            if(index > 0){
+              PathInfo tmp = linkedVertex.get(index);
+              
+              //update element into the priority queue
               if(p.getValue() > tmp.getValue()){
-                iter.remove();
-              }
+                p.setValue(tmp.getValue());
+                updateQueue = true;              }
             }
           }
-          for(PathInfo linked : listLinked){
-            linked.setParent(currentVertex);
-            linked.setLenPath(currentVertex.getLenPath()+1);
-            q.add(linked);
+          if (updateQueue) {
+            q.update();
           }
-
-
+ 
+          /*
+           * filtro i nodi linkati che non appartengo alla priority queue e non appartengo alla lista dei nodi visitati.
+           * per ognuno di questi nodi assegno con parent il nodo corrente e gli aggiorno la lunghezza del path.
+           * infine li aggiungo alla priority queue dei prossimi nodi da visitare.
+           */
+          linkedVertex.stream().filter(el->!q.contains(el) && !visitedVertex.contains(el)).peek(el->el.setParent(currentVertex)).peek(el->el.setLenPath(currentVertex.getLenPath()+1)).forEach(q::add);
+          
         }
       }
 
