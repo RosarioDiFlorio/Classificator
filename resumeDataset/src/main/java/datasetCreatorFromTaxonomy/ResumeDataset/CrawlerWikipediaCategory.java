@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.nio.ByteBuffer;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -25,6 +26,9 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
+import org.apache.commons.text.similarity.CosineSimilarity;
+import org.sqlite.SQLiteConnection;
+
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -34,6 +38,8 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+
+import persistence.SQLiteConnector;
 
 public class CrawlerWikipediaCategory {
 
@@ -145,7 +151,7 @@ public class CrawlerWikipediaCategory {
 		System.out.println("Start to read vectorsWikipediaVertex ");
 		Map<String, float[]> vectorsFromWikipediaGraph = AnalyzerWikipediaGraph.loadVectorsWikipediaGraph("vectorsWikipediaVertex");
 		System.out.println("Start to build new Graph ");
-		Map<String, AdjacencyListRowVertex> result = fromAdjacencyListRowToAdjacencyListRowVertex(vectorsFromWikipediaGraph,adjacencyList);
+		Map<String, AdjacencyListRowVertex> result = fromAdjacencyListRowToAdjacencyListRowVertex(adjacencyList);
 		ObjectMapper mapper = new ObjectMapper();
 		mapper.writerWithDefaultPrettyPrinter().writeValue(new File("graphWikipediaWeighed"), result);
 
@@ -173,20 +179,20 @@ public class CrawlerWikipediaCategory {
 
 
 	/**
-	 * read vectors object 
+	 * read vectors object. This methods is used to performe cosinSimilarityInverse between key and her parents 
 	 * @param vectorsFromWikipediaGraph
 	 * @param adjacencyList
 	 * @return
 	 * @throws IOException 
 	 */
-	public static Map<String,AdjacencyListRowVertex> fromAdjacencyListRowToAdjacencyListRowVertex(Map<String,float[]> vectorsFromWikipediaGraph,Map<String,AdjacencyListRow> adjacencyList) throws IOException{
+	public static Map<String,AdjacencyListRowVertex> fromAdjacencyListRowToAdjacencyListRowVertex(Map<String,AdjacencyListRow> adjacencyList) throws IOException{
+		SQLiteConnector sql = new SQLiteConnector();
 		Map<String,AdjacencyListRowVertex> toReturn = new HashMap<>();
 		FileWriter writer = new FileWriter(new File("nodeToVisit.txt"));
 		for(String key : adjacencyList.keySet()){
 			AdjacencyListRowVertex adjacencyListRowVertex = new AdjacencyListRowVertex();
 			adjacencyListRowVertex.setTaxonomyCategory(adjacencyList.get(key).isTaxonomyCategory());
-			float[] keyVector = vectorsFromWikipediaGraph.get(key);
-
+			float[] keyVector = sql.getVectorByName(key);
 			if(keyVector== null){
 				System.out.println(key);
 				writer.write("\""+key+"\",");
@@ -195,13 +201,16 @@ public class CrawlerWikipediaCategory {
 			for(String parent : adjacencyList.get(key).getLinkedVertex()){
 				Vertex currentParent = new Vertex();
 				currentParent.setVertexName(parent);
-				float[] parentVector = vectorsFromWikipediaGraph.get(parent);
+				float[] parentVector = sql.getVectorByName(parent);
 
+			
 				if(parentVector==null){
 					System.out.println(parent);
 					writer.write("\""+parent+"\",");
 				}
-
+				System.out.println(key+"----"+parent);
+				System.out.println(" CosineSimilarity: "+cosineSimilarity(keyVector, parentVector)+" Inverse: "+cosineSimilarityInverse(keyVector, parentVector));
+				System.out.println("----------------------------------------------------------------------------------");
 				if(validateVector(keyVector) && validateVector(parentVector)){
 
 					currentParent.setSimilarity(cosineSimilarityInverse(keyVector, parentVector));
@@ -617,7 +626,6 @@ public class CrawlerWikipediaCategory {
 		}
 
 		if(dotProduct == 0 || (normA * normB) == 0){
-			System.out.println(0);
 			return Math.acos(0);
 			
 		}
@@ -626,6 +634,27 @@ public class CrawlerWikipediaCategory {
 		}
 	}
 
+	public static double cosineSimilarity(float[] vectorA, float[] vectorB) {
+		double dotProduct = 0.0;
+		double normA = 0.0;
+		double normB = 0.0;
+
+		if(vectorA!=null && vectorB!=null && vectorA.length==vectorB.length){
+			for (int i = 0; i < vectorA.length; i++) {
+				dotProduct += vectorA[i] * vectorB[i];
+				normA += vectorA[i] * vectorA[i];
+				normB += vectorB[i] * vectorB[i];
+			}   
+		}
+
+		if(dotProduct == 0 || (normA * normB) == 0){
+			return 0;
+			
+		}
+		else{
+			return (dotProduct) / (Math.sqrt(normA * normB));
+		}
+	}
 
 	/**
 	 * 

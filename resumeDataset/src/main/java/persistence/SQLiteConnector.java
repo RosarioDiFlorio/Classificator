@@ -1,10 +1,13 @@
 package persistence;
 
+import java.sql.Array;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Arrays;
 
 public class SQLiteConnector {
   
@@ -22,7 +25,7 @@ public class SQLiteConnector {
   public static Connection connect() {
 
     // SQLite connection string
-    String url = "jdbc:sqlite:D://Development/sqlite/db/databaseVector.db";
+    String url = "jdbc:sqlite:database.db";
     Connection conn = null;
     try {
         conn = DriverManager.getConnection(url);
@@ -32,47 +35,59 @@ public class SQLiteConnector {
     return conn;
 }
   
-  public static void insertVector(String name,float[] vector){
+  public static void insertVector(String name,float[] vector) throws SQLException{
     if(conn == null)
       conn = connect();
-    String sql = "INSERT INTO vectors VALUES("+name+","+vector+")";
-    try{
-      Statement smt = conn.createStatement();
-      smt.executeQuery(sql);
-    }catch (Exception e) {
-      // TODO: handle exception
-      e.printStackTrace();
-    }
+	PreparedStatement pstmt = conn.prepareStatement("INSERT INTO vectors VALUES(?,?)");
+	
+	
+	byte[] vectorToSave = fromFloatToByte(vector);
+	pstmt.setString(1, name);
+	pstmt.setBytes(2, vectorToSave);
+	pstmt.executeUpdate();
+   
     
   }
   
   public static float[] getVectorByName(String name){
     if(conn == null)
       conn = connect();
-    String sql = "SELECT vector FROM vectors WHERE name = "+name;
+    String sql = "SELECT vector FROM vectors WHERE name = '"+name+"'";
     float[] vector = null;
     try{
       Statement stm = conn.createStatement();
       ResultSet res = stm.executeQuery(sql);
       byte[] byteVector = res.getBytes("vector");
-      vector = new float[byteVector.length-1];
-      for(int i=0;i<byteVector.length;i++){
-        vector[i] = byteVector[i];
-      }
+      vector = fromByteToFloat(byteVector); 
       
           }catch (Exception e) {
-      // TODO: handle exception
+        	  e.printStackTrace();
     }
    
     return vector;
   }
   
-  
-  public static void main(String[] args){
-    float[] testVector = new float[1];
-    testVector[0] = 1;
-    SQLiteConnector.insertVector("ciao", testVector);
+  public static byte[] fromFloatToByte(float[] array){
+	  byte buffer[] = new byte[array.length * 4];
+	  for (int i = 0; i < array.length; i++) {
+		  int intBits = Float.floatToIntBits(array[i]);
+		  buffer[i * 4]     = (byte) (((intBits & 0xff000000) >> 24) & 0x000000ff);
+		  buffer[i * 4 + 1] = (byte) (((intBits & 0x00ff0000) >> 16) & 0x000000ff);
+		  buffer[i * 4 + 2] = (byte) (((intBits & 0x0000ff00) >> 8) & 0x000000ff);
+		  buffer[i * 4 + 3] = (byte) (intBits & 0x000000ff);		  
+	  }
+	  return buffer;
   }
+  
+  public static float[] fromByteToFloat(byte[] buffer) {
+	  float array[] = new float[buffer.length / 4];
+	  for (int i = 0; i < array.length; i++) {
+		  int intBits = ((buffer[i * 4] & 0x000000ff) << 24) | ((buffer[i * 4 + 1] & 0x000000ff) << 16) | ((buffer[i * 4 + 2] & 0x000000ff) << 8) | (buffer[i * 4 + 3] & 0x000000ff);
+		  array[i] = Float.intBitsToFloat(intBits);
+	  }
+	  return array;
+  }
+  
   
 
 }
