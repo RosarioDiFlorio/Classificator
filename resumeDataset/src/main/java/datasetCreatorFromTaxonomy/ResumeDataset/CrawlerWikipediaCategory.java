@@ -630,7 +630,7 @@ public class CrawlerWikipediaCategory {
 			
 		}
 		else{
-			return Math.acos((dotProduct) / (Math.sqrt(normA * normB)));
+			return Math.acos((dotProduct) / (Math.sqrt(normA * normB)))+0.001;
 		}
 	}
 
@@ -652,7 +652,7 @@ public class CrawlerWikipediaCategory {
 			
 		}
 		else{
-			return (dotProduct) / (Math.sqrt(normA * normB));
+			return (dotProduct) / (Math.sqrt(normA * normB))+0.001;
 		}
 	}
 
