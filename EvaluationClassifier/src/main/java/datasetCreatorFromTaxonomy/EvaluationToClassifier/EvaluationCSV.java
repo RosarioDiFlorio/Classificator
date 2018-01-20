@@ -21,8 +21,6 @@ public class EvaluationCSV
 		HashMap<String, HashSet<String>> csvOur = readCSV("ourScore.csv",",");
 		System.out.println(calculateAccuracy(csvLabels,csvGiulia));
 		System.out.println(calculateAccuracy(csvLabels,csvOur));
-		
-
 	}
 
 
