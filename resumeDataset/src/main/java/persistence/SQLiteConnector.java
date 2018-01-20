@@ -35,6 +35,12 @@ public class SQLiteConnector {
     return conn;
 }
   
+  /**
+   * This methos is used to insert values into db
+   * @param name
+   * @param vector
+   * @throws SQLException
+   */
   public static void insertVector(String name,float[] vector) throws SQLException{
     if(conn == null)
       conn = connect();
@@ -49,6 +55,11 @@ public class SQLiteConnector {
     
   }
   
+  /**
+   * This method return a vector by name param. 
+   * @param name
+   * @return
+   */
   public static float[] getVectorByName(String name){
     if(conn == null)
       conn = connect();
@@ -67,6 +78,12 @@ public class SQLiteConnector {
     return vector;
   }
   
+  
+  /**
+   * This method transform a float array into byte array
+   * @param array
+   * @return
+   */
   public static byte[] fromFloatToByte(float[] array){
 	  byte buffer[] = new byte[array.length * 4];
 	  for (int i = 0; i < array.length; i++) {
@@ -79,6 +96,12 @@ public class SQLiteConnector {
 	  return buffer;
   }
   
+  
+  /**
+   * This method transform a byte array into float array
+   * @param buffer
+   * @return
+   */
   public static float[] fromByteToFloat(byte[] buffer) {
 	  float array[] = new float[buffer.length / 4];
 	  for (int i = 0; i < array.length; i++) {
