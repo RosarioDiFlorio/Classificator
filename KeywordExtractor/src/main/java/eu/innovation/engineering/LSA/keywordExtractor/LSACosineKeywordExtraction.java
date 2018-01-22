@@ -60,7 +60,7 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
 
   }
 
-  private void initGlossary(String glossaryName) throws IOException{
+  public void initGlossary(String glossaryName) throws IOException{
 
     ObjectMapper mapper = new ObjectMapper();
     Map<String,List<String>> glossaryMap = mapper.readValue(new File(glossaryName),new TypeReference<Map<String,List<String>>>() {});

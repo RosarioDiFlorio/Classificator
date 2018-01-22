@@ -4,9 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import eu.innovation.engineering.LSA.keywordExtractor.LSACosineKeywordExtraction;
-import eu.innovation.engineering.LSA.keywordExtractor.LSAKeywordExtractor;
-import eu.innovation.engineering.keyword.extractor.innen.InnenExtractor;
-import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
 
 public class TesterChuncker {
 
@@ -50,12 +47,19 @@ public class TesterChuncker {
         +"substantial financial support to this research and to my graduate education"
         +"through AASERT funding under ONR Grant N00014-93-1-1140. NSF supported the purchase of"
         +"hardware and services under NSF Grant OCE-9314357";
-    LSACosineKeywordExtraction kex = new LSACosineKeywordExtraction("","data/glossaries.json");
+    
+    String test2 = "The umbilical region, in the anatomists' abdominal pelvic nine-region scheme, is the area surrounding the umbilicus (navel). This region of the abdomen contains part of the stomach, the" 
+        +"head of the pancreas, the duodenum, a section of the transverse colon and the lower aspects of the left and right kidney. The upper three regions, from left to right, are the left "
+        +"hypochondriac, epigastric, and right hypochondriac regions. The middle three regions, from left to right, are the left lumbar, umbilical, and right lumbar regions. The bottom three" 
+        +"regions, from left to right, are the left inguinal, hypogastric, and right inguinal regions.";
+   
+    LSACosineKeywordExtraction kex = new LSACosineKeywordExtraction("","data/glossaries/medicine.json");
 
 
     List<String> testList = new ArrayList<>();
-    testList.add(test);
-    System.out.println(kex.extractKeywordsFromTexts(testList, 5));
+    testList.add(test2);
+    System.out.println("LSA Cosine Version:\n"+kex.extractKeywordsFromTexts(testList, 5));
+    
 
     /*
     List<String> toCompare = new ArrayList<>();
@@ -67,20 +71,19 @@ public class TesterChuncker {
     //toCompare.add("science");
     System.out.println(kex.extractKeywordsFromTexts(testList, toCompare,5));
     */
+    /*
     long startTime = 0;
     KeywordExtractor ke = new InnenExtractor("");
     KeywordExtractor lsake = new LSAKeywordExtractor("");
     
     startTime = System.currentTimeMillis();
-    ke.extractKeywordsFromTexts(testList, 4);
-    System.out.println(System.currentTimeMillis() - startTime);
+    System.out.println("Innen Extractor:\n"+ke.extractKeywordsFromTexts(testList, 4));
     
     
     startTime = System.currentTimeMillis();
-    lsake.extractKeywordsFromTexts(testList, 4);
-    System.out.println(System.currentTimeMillis() - startTime);
+    System.out.println("LSA Paper Version:\n"+lsake.extractKeywordsFromTexts(testList, 4));
 
-    
+    */
    
     /*
     StanfordnlpAnalyzer analyzer = new StanfordnlpAnalyzer();

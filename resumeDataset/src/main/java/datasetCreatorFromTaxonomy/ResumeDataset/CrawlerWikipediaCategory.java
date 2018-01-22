@@ -1,6 +1,5 @@
 package datasetCreatorFromTaxonomy.ResumeDataset;
 
-import java.beans.VetoableChangeListener;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -9,11 +8,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.nio.ByteBuffer;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -26,9 +21,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-import org.apache.commons.text.similarity.CosineSimilarity;
-import org.sqlite.SQLiteConnection;
-
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -39,7 +31,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
-import persistence.SQLiteConnector;
+import persistence.SQLiteVectors;
 import utility.AdjacencyListRow;
 import utility.AdjacencyListRowVertex;
 import utility.CallableChildsRequest;
@@ -191,7 +183,7 @@ public class CrawlerWikipediaCategory {
 	 * @throws IOException 
 	 */
 	public static Map<String,AdjacencyListRowVertex> fromAdjacencyListRowToAdjacencyListRowVertex(Map<String,AdjacencyListRow> adjacencyList) throws IOException{
-		SQLiteConnector sql = new SQLiteConnector();
+		SQLiteVectors sql = new SQLiteVectors();
 		Map<String,AdjacencyListRowVertex> toReturn = new HashMap<>();
 		FileWriter writer = new FileWriter(new File("nodeToVisit.txt"));
 		for(String key : adjacencyList.keySet()){

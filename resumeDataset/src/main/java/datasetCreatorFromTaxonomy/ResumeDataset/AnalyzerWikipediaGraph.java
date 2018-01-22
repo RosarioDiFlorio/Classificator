@@ -25,7 +25,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import eu.innovationengineering.solrclient.auth.collection.queue.UpdatablePriorityQueue;
-import persistence.SQLiteConnector;
+import persistence.SQLiteVectors;
 import utility.AdjacencyListRow;
 import utility.AdjacencyListRowVertex;
 import utility.PathInfo;
@@ -84,7 +84,7 @@ public class AnalyzerWikipediaGraph {
   public static void getVectorsWikipediaGraph(Set<String> vertexWikipedia) throws IOException, InterruptedException{
     //carico le stopword dal file specificato.
     StopWordEnglish stopWords = new StopWordEnglish("stopwords_en.txt");
-    SQLiteConnector sql = new SQLiteConnector();
+    SQLiteVectors sql = new SQLiteVectors();
     try{
       if(word2Vec == null)
         word2Vec = new Word2Vec();
@@ -114,10 +114,10 @@ public class AnalyzerWikipediaGraph {
             sql.commitConnection();
           toVectorize.clear();
         }
-
       }
     }finally {
       sql.commitConnection();
+      System.exit(0);
     }
   }
 

@@ -1,7 +1,6 @@
 package persistence;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -15,45 +14,22 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class SQLiteConnector {
+public class SQLiteVectors extends SQLiteConnector {
 
+  private static final String urlDb = "jdbc:sqlite:databaseVectors.db";
   private static Connection conn;
   private static ExecutorService executorService = Executors.newFixedThreadPool(8);
 
-  public SQLiteConnector(){
-    conn = connect();
+  public SQLiteVectors(){
+    super(urlDb);
+    conn = getConnection();
   }
 
 
-  /**Method to establish the connection to the database.
-   * @return
-   */
-  public static Connection connect() {
-
-    // SQLite connection string
-    String url = "jdbc:sqlite:database.db";
-    Connection conn = null;
-    try {
-      conn = DriverManager.getConnection(url);
-      conn.setAutoCommit(false);
-    } catch (SQLException e) {
-      e.printStackTrace();
-    }
-    return conn;
-  }
-
-  public static void commitConnection(){
-    try {
-      conn.commit();
-    }
-    catch (SQLException e) {
-      // TODO Auto-generated catch block
-      e.printStackTrace();
-    }
-  }
-  
   public static void insertVectors(Map<String,float[]> vectors) throws InterruptedException{
-
+    if(conn == null){
+      conn = getConnection();
+    }
     List<InsertTask> list = new ArrayList<>();
     for(String name:vectors.keySet()){
       list.add(new InsertTask(conn, name, vectors.get(name)));
@@ -65,7 +41,7 @@ public class SQLiteConnector {
 
   public static void insertVector(String name,float[] vector) throws SQLException{
     if(conn == null)
-      conn = connect();
+      conn = getConnection();
     PreparedStatement pstmt = conn.prepareStatement("INSERT INTO vectors VALUES(?,?)");	
     byte[] vectorToSave = fromFloatToByte(vector);
     pstmt.setString(1, name);
@@ -76,7 +52,7 @@ public class SQLiteConnector {
 
   public static float[] getVectorByName(String name){
     if(conn == null)
-      conn = connect();
+      conn = getConnection();
     String sql = "SELECT vector FROM vectors WHERE name = '"+name+"'";
     float[] vector = null;
     try{
@@ -91,9 +67,6 @@ public class SQLiteConnector {
 
     return vector;
   }
-
-
-
 
   public static boolean isExist(String name){
     if(conn == null)
@@ -182,7 +155,7 @@ class InsertTask implements Callable<Boolean>{
 
   private void insertVector(String name,float[] vector) throws SQLException{
     PreparedStatement pstmt = conn.prepareStatement("INSERT INTO vectors VALUES(?,?)"); 
-    byte[] vectorToSave = SQLiteConnector.fromFloatToByte(vector);
+    byte[] vectorToSave = SQLiteVectors.fromFloatToByte(vector);
     pstmt.setString(1, name);
     pstmt.setBytes(2, vectorToSave);
     pstmt.executeUpdate();
