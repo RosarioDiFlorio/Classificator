@@ -25,6 +25,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import eu.innovationengineering.solrclient.auth.collection.queue.UpdatablePriorityQueue;
+import persistence.SQLiteConnector;
 
 public class AnalyzerWikipediaGraph {
 
@@ -34,19 +35,19 @@ public class AnalyzerWikipediaGraph {
   private static Map<String,AdjacencyListRowVertex> graphWeighed = null;
   private static Word2Vec word2Vec;
 
-  
-  public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException{
+
+  public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException, InterruptedException{
     mainToBuildVectors(args);
   }
-  
-  
-  public static void mainToBuildVectors(String[] args) throws JsonParseException, JsonMappingException, IOException{ 
+
+
+  public static void mainToBuildVectors(String[] args) throws JsonParseException, JsonMappingException, IOException, InterruptedException{ 
     adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("signedGraphWikipediaCleared");
     Set<String> toVectorize = new HashSet<String>(adjacencyList.keySet());
     for(String key: adjacencyList.keySet()){
       toVectorize.addAll(adjacencyList.get(key).getLinkedVertex());  
     }
-    getVectorsWikipediaGraph(toVectorize,"vectorsWikipediaVertexTest");
+    getVectorsWikipediaGraph(toVectorize);
   }
 
   public static Map<String,float[]> loadVectorsWikipediaGraph(String pathFile) throws JsonParseException, JsonMappingException, IOException{
@@ -55,6 +56,12 @@ public class AnalyzerWikipediaGraph {
   }
 
 
+  private static List<String> cleanText(String text){
+    StopWordEnglish stopWords = new StopWordEnglish("stopwords_en.txt");
+    text = text.replaceAll("\\p{Punct}", " ");
+    text = text.replaceAll("\\d+", " ");
+    return Arrays.asList(text.split(" ")).stream().filter(el->!stopWords.isStopWord(el) && !el.matches("")).map(el->el.toLowerCase().trim()).collect(Collectors.toList());
+  }
 
   /**
    * This method return the vector's map created from the graph of the wikipedia's category.
@@ -65,56 +72,41 @@ public class AnalyzerWikipediaGraph {
    * @param pathFile
    * @return
    * @throws IOException
+   * @throws InterruptedException 
    */
-  public static Map<String,float[]> getVectorsWikipediaGraph(Set<String> vertexWikipedia,String pathFile) throws IOException{
+  public static void getVectorsWikipediaGraph(Set<String> vertexWikipedia) throws IOException, InterruptedException{
     //carico le stopword dal file specificato.
     StopWordEnglish stopWords = new StopWordEnglish("stopwords_en.txt");
-    //variabile che specifica ogni quanti elementi deve salvare il tutto. viene incrementato ad ogni salvataggio per evitare che il programma vada in idle scrivendo tutto il tempo sul disco.
-    int cutoffSaving = 10000;
+    SQLiteConnector sql = new SQLiteConnector();
 
-    if(vectorsWikipediaVertex == null){
-      if(word2Vec == null)
-        word2Vec = new Word2Vec();
-      ObjectMapper mapper = new ObjectMapper();
-      List<List<String>> toVectorize = new ArrayList<>();
+    if(word2Vec == null)
+      word2Vec = new Word2Vec();
+    List<List<String>> toVectorize = new ArrayList<>();
+    Set<String> donealready = sql.getNamesVector();
+    System.out.println("already done -> "+donealready.size());
+    vertexWikipedia.removeAll(donealready);
+    System.out.println("to do -> "+vertexWikipedia.size());
 
-      if(!new File(pathFile).exists()){ //se il file non esiste istanzio una mappa ex novo.
-        vectorsWikipediaVertex = new HashMap<>();      
-      }else{    //altrimenti leggo la mappa dal file specificato e rimuovo dall'insieme di vertici da vettorizzare quelli già presenti nella mappa appena caricata.
-        vectorsWikipediaVertex =  mapper.readValue(new File(pathFile), new TypeReference<Map<String,float[]>>() {});
-        vertexWikipedia.removeAll(vectorsWikipediaVertex.keySet());
-        cutoffSaving = (cutoffSaving*3)/2;
-      }
-      //converto l'insieme di elementi da vettorizzare in una lista in modo da poterci accedere con l'indice.
-      List<String> vertexList = new ArrayList<>(vertexWikipedia);
-      int offset = 0;         //variabile che mi tiene traccia dell'indice corrente.
-      for(int i = 0; i<vertexList.size();i++){
-        //pulisco i nomi dagli underscore e dalle stop word
-        String vertexName = vertexList.get(i).replace("_", " ");
-        List<String> cleanVertexName = Arrays.asList(vertexName.split(" ")).stream().filter(el->!stopWords.isStopWord(el)).map(el->el.toLowerCase()).collect(Collectors.toList());
-        toVectorize.add(cleanVertexName);
+    //converto l'insieme di elementi da vettorizzare in una lista in modo da poterci accedere con l'indice.
+    List<String> vertexList = new ArrayList<>(vertexWikipedia);
+    int offset = 0;         //variabile che mi tiene traccia dell'indice corrente.
+    for(int i = 0; i<vertexList.size();i++){
+      
+      //pulisco i nomi dagli underscore e dalle stop word
+        toVectorize.add(cleanText(vertexList.get(i)));
         //ogni tot di vertici eseguo la query al servizio Word2Vec
-        if((toVectorize.size() == 200 || i == vertexWikipedia.size()-1)){
+        if((toVectorize.size() == 10 || i == vertexWikipedia.size()-1)){
+          Map<String,float[]> vectors = new HashMap<>();
           float[][] vectorizedNames = word2Vec.returnVectorsFromTextList(toVectorize);
-          
           for (int j = 0; j < toVectorize.size(); j++) {
-            vectorsWikipediaVertex.put(vertexList.get(j + offset).replace(" ", "_"), vectorizedNames[j]);            
+            vectors.put(vertexList.get(j + offset).replace(" ", "_"), vectorizedNames[j]);
           }
-
+          sql.insertVectors(vectors);
           offset += toVectorize.size();
           toVectorize.clear();
-          
-          //salvo ogni "cutoffSaving" di elementi la mappa in formato json nel path specificato(pathFile)
-          if((i%cutoffSaving == 0 || i == vertexWikipedia.size()-1)){           
-            cutoffSaving = (cutoffSaving*3)/2;
-            System.out.println("cutoffSaving ->"+cutoffSaving);
-            System.out.println("vertexDone->"+vectorsWikipediaVertex.size());
-            mapper.writerWithDefaultPrettyPrinter().writeValue(new File(pathFile), vectorsWikipediaVertex);
-          }
         }
-      }
+      
     }
-    return vectorsWikipediaVertex;
   }
 
 
@@ -145,7 +137,7 @@ public class AnalyzerWikipediaGraph {
     return toReturn;
   }
 
-  
+
   public static double getAVG(PathInfo p,double avg,double d){
     if(p!= null){
       avg += p.getInverseCosine();
@@ -161,9 +153,9 @@ public class AnalyzerWikipediaGraph {
     }
     return variance/d;
   }
- 
-  
-  
+
+
+
   public static void getPath(PathInfo p, StringBuilder builder){
     if (p != null) {
       builder.insert(0, "/" + p.getName()+"["+p.getInverseCosine()+"]");
@@ -181,7 +173,7 @@ public class AnalyzerWikipediaGraph {
     }
 
     for(String category: documentCategories){
-      
+
       for(PathInfo p: searchDjistraMarkedNode(graphWeighed, category, 2,0)){
 
         if(results.contains(p)){
@@ -206,7 +198,7 @@ public class AnalyzerWikipediaGraph {
       StringBuilder builder = new StringBuilder();
       getPath(p, builder);
       System.out.println(builder.toString());
-      
+
     }
     return orderedResults.stream().map(e->e.getName()).collect(Collectors.toList());
   }
@@ -322,7 +314,7 @@ public class AnalyzerWikipediaGraph {
        */
       UpdatablePriorityQueue<PathInfo> q = new UpdatablePriorityQueue<>();
       q.add(startingPoint);
-      
+
       while(!q.isEmpty()){
         /*
          * prendo l'elemento con il peso più minore.
@@ -354,7 +346,7 @@ public class AnalyzerWikipediaGraph {
             int index = linkedVertex.indexOf(p);
             if(index > 0){
               PathInfo tmp = linkedVertex.get(index);
-              
+
               //update element into the priority queue
               if(p.getValue() > tmp.getValue()){
                 p.setValue(tmp.getValue());
@@ -364,14 +356,14 @@ public class AnalyzerWikipediaGraph {
           if (updateQueue) {
             q.update();
           }
- 
+
           /*
            * filtro i nodi linkati che non appartengo alla priority queue e non appartengo alla lista dei nodi visitati.
            * per ognuno di questi nodi assegno con parent il nodo corrente e gli aggiorno la lunghezza del path.
            * infine li aggiungo alla priority queue dei prossimi nodi da visitare.
            */
           linkedVertex.stream().filter(el->!q.contains(el) && !visitedVertex.contains(el)).peek(el->el.setParent(currentVertex)).peek(el->el.setLenPath(currentVertex.getLenPath()+1)).forEach(q::add);
-          
+
         }
       }
 
