@@ -16,12 +16,12 @@ import java.util.concurrent.Executors;
 
 public class SQLiteVectors extends SQLiteConnector {
 
-  private static final String urlDb = "databaseVectors.db";
+
   private static Connection conn;
   private static ExecutorService executorService = Executors.newFixedThreadPool(8);
 
-  public SQLiteVectors(){
-    super(urlDb);
+  public SQLiteVectors(String dbName){
+    super(dbName);
     conn = getConnection();
   }
 
