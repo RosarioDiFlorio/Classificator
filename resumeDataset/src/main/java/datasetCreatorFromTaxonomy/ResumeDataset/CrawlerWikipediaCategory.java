@@ -40,6 +40,11 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 import persistence.SQLiteConnector;
+import utility.AdjacencyListRow;
+import utility.AdjacencyListRowVertex;
+import utility.CallableChildsRequest;
+import utility.CrawlerResult;
+import utility.Vertex;
 
 public class CrawlerWikipediaCategory {
 
@@ -362,7 +367,7 @@ public class CrawlerWikipediaCategory {
 
 		ArrayList<Future> featureList = new ArrayList<Future>();
 		for(String category : categories){
-			CallableImplementation currentCallable = new CallableImplementation(category);
+			CallableChildsRequest currentCallable = new CallableChildsRequest(category);
 			featureList.add(executorService.submit(currentCallable));
 		}
 

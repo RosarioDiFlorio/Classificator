@@ -1,4 +1,4 @@
-package datasetCreatorFromTaxonomy.ResumeDataset;
+package utility;
 
 public class Vertex {
 	

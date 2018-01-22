@@ -22,7 +22,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import eu.innovation.engineering.wikipedia.DocumentInfo;
 import eu.innovation.engineering.wikipedia.WikipediaMiner;
 
-public class Test {
+public class DatasetBuilder {
 
   public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException, InterruptedException, ExecutionException{
     createDatasetFromWikipedia(args);

@@ -54,7 +54,7 @@ public class TaxonomyImporterCsv {
   public static void main(String[] args) throws FileNotFoundException, IOException, ParserConfigurationException, SAXException{
 
     int count= 0;
-    Map<String,ConceptBean> mapOfConcepts = new HashMap<>();
+    Map<String,ConceptBean> mapOfConcepts = new HashMap<String, ConceptBean>();
 
 
     String csvFile ="technology.csv";
@@ -119,7 +119,7 @@ public class TaxonomyImporterCsv {
 
 
   public static Model createConcept(Model model, ConceptBean concept) throws MalformedURLException, ParserConfigurationException, SAXException, IOException {
-    List<Statement> toAdd = new ArrayList<>();
+    List<Statement> toAdd = new ArrayList<Statement>();
     Resource subject = new ResourceImpl(model.getNsPrefixURI("")+concept.getId());
 
 

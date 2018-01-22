@@ -15,11 +15,7 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>datasetCreatorFromTaxonomy</groupId>
-            <artifactId>datasetCreatorFromTaxonomy</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
+        
         <!-- https://mvnrepository.com/artifact/com.hp.hpl.jena/jena -->
         <dependency>
             <groupId>com.hp.hpl.jena</groupId>

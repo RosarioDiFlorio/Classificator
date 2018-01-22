@@ -1,4 +1,4 @@
-package datasetCreatorFromTaxonomy.ResumeDataset;
+package utility;
 
 import java.util.HashMap;
 import java.util.HashSet;

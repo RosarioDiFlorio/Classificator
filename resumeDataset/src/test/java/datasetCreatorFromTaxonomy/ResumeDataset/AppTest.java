@@ -8,6 +8,8 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 import junit.framework.TestCase;
+import utility.StopWordEnglish;
+import utility.Word2Vec;
 
 /**
  * Unit test for simple App.
