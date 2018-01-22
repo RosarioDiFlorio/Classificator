@@ -54,9 +54,18 @@ public class AnalyzerWikipediaGraph {
     for(String key: adjacencyList.keySet()){
       toVectorize.addAll(adjacencyList.get(key).getLinkedVertex());  
     }
-    getVectorsWikipediaGraph(toVectorize);
+    buildDatabaseVectorsWikipedia(toVectorize,"databaseVectors.db");
   }
 
+  /**
+   * @param pathFile
+   * @return
+   * @throws JsonParseException
+   * @throws JsonMappingException
+   * @throws IOException
+   * @deprecated
+   */
+  @Deprecated
   public static Map<String,float[]> loadVectorsWikipediaGraph(String pathFile) throws JsonParseException, JsonMappingException, IOException{
     ObjectMapper mapper = new ObjectMapper();
     return mapper.readValue(new File(pathFile), new TypeReference<Map<String,float[]>>() {});
@@ -81,10 +90,10 @@ public class AnalyzerWikipediaGraph {
    * @throws IOException
    * @throws InterruptedException 
    */
-  public static void getVectorsWikipediaGraph(Set<String> vertexWikipedia) throws IOException, InterruptedException{
+  public static void buildDatabaseVectorsWikipedia(Set<String> vertexWikipedia,String dbName) throws IOException, InterruptedException{
     //carico le stopword dal file specificato.
     StopWordEnglish stopWords = new StopWordEnglish("stopwords_en.txt");
-    SQLiteVectors sql = new SQLiteVectors();
+    SQLiteVectors sql = new SQLiteVectors(dbName);
     sql.setAutoCommit(false);
     try{
       if(word2Vec == null)
