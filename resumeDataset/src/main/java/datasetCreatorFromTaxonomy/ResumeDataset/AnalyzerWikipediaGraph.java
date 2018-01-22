@@ -15,7 +15,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
-
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -23,7 +22,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-
 import eu.innovationengineering.solrclient.auth.collection.queue.UpdatablePriorityQueue;
 import persistence.SQLiteConnector;
 import utility.AdjacencyListRow;
@@ -31,6 +29,8 @@ import utility.AdjacencyListRowVertex;
 import utility.PathInfo;
 import utility.StopWordEnglish;
 import utility.Word2Vec;
+
+
 
 public class AnalyzerWikipediaGraph {
 
