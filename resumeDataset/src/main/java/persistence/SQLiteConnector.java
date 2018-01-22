@@ -27,7 +27,6 @@ public abstract class SQLiteConnector {
     Connection conn = null;
     try {
       conn = DriverManager.getConnection(urlDb);
-      conn.setAutoCommit(false);
     } catch (SQLException e) {
       e.printStackTrace();
     }

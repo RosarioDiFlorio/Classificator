@@ -85,6 +85,7 @@ public class AnalyzerWikipediaGraph {
     //carico le stopword dal file specificato.
     StopWordEnglish stopWords = new StopWordEnglish("stopwords_en.txt");
     SQLiteVectors sql = new SQLiteVectors();
+    sql.setAutoCommit(false);
     try{
       if(word2Vec == null)
         word2Vec = new Word2Vec();
