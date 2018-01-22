@@ -6,13 +6,13 @@ import java.sql.SQLException;
 
 public abstract class SQLiteConnector {
 
-  private static String urlDb;
+  private static String urlDb = "jdbc:sqlite:";
   private static Connection conn;
 
 
 
   public SQLiteConnector(String urlDb){
-    this.urlDb = urlDb;
+    this.urlDb += urlDb;
     this.conn = connect();
 
   }

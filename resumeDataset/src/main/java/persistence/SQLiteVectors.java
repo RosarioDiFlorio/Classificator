@@ -16,7 +16,7 @@ import java.util.concurrent.Executors;
 
 public class SQLiteVectors extends SQLiteConnector {
 
-  private static final String urlDb = "jdbc:sqlite:databaseVectors.db";
+  private static final String urlDb = "databaseVectors.db";
   private static Connection conn;
   private static ExecutorService executorService = Executors.newFixedThreadPool(8);
 
