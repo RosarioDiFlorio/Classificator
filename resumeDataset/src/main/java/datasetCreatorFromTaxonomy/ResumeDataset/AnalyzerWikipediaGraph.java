@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
+
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -22,6 +23,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+
 import eu.innovationengineering.solrclient.auth.collection.queue.UpdatablePriorityQueue;
 import persistence.SQLiteConnector;
 import utility.AdjacencyListRow;
@@ -83,37 +85,41 @@ public class AnalyzerWikipediaGraph {
     //carico le stopword dal file specificato.
     StopWordEnglish stopWords = new StopWordEnglish("stopwords_en.txt");
     SQLiteConnector sql = new SQLiteConnector();
+    try{
+      if(word2Vec == null)
+        word2Vec = new Word2Vec();
+      List<List<String>> toVectorize = new ArrayList<>();
+      Set<String> donealready = sql.getNamesVector();
+      System.out.println("already done -> "+donealready.size());
+      vertexWikipedia.removeAll(donealready);
+      System.out.println("to do -> "+vertexWikipedia.size());
 
-    if(word2Vec == null)
-      word2Vec = new Word2Vec();
-    List<List<String>> toVectorize = new ArrayList<>();
-    Set<String> donealready = sql.getNamesVector();
-    System.out.println("already done -> "+donealready.size());
-    vertexWikipedia.removeAll(donealready);
-    System.out.println("to do -> "+vertexWikipedia.size());
+      //converto l'insieme di elementi da vettorizzare in una lista in modo da poterci accedere con l'indice.
+      List<String> vertexList = new ArrayList<>(vertexWikipedia);
+      int offset = 0;         //variabile che mi tiene traccia dell'indice corrente.
+      for(int i = 0; i<vertexList.size();i++){
 
-    //converto l'insieme di elementi da vettorizzare in una lista in modo da poterci accedere con l'indice.
-    List<String> vertexList = new ArrayList<>(vertexWikipedia);
-    int offset = 0;         //variabile che mi tiene traccia dell'indice corrente.
-    for(int i = 0; i<vertexList.size();i++){
-      
-      //pulisco i nomi dagli underscore e dalle stop word
+        //pulisco i nomi dagli underscore e dalle stop word
         toVectorize.add(cleanText(vertexList.get(i)));
         //ogni tot di vertici eseguo la query al servizio Word2Vec
-        if((toVectorize.size() == 10 || i == vertexWikipedia.size()-1)){
+        if((toVectorize.size() == 200 || i == vertexWikipedia.size()-1)){
           Map<String,float[]> vectors = new HashMap<>();
           float[][] vectorizedNames = word2Vec.returnVectorsFromTextList(toVectorize);
           for (int j = 0; j < toVectorize.size(); j++) {
             vectors.put(vertexList.get(j + offset).replace(" ", "_"), vectorizedNames[j]);
           }
-          sql.insertVectors(vectors);
           offset += toVectorize.size();
+          sql.insertVectors(vectors);
+          if(offset % 100000 == 0 || i == vertexWikipedia.size()-1)
+            sql.commitConnection();
           toVectorize.clear();
         }
-      
+
+      }
+    }finally {
+      sql.commitConnection();
     }
   }
-
 
 
   public static List<String> getDocumentLabelsTaxonomy(String idDocument,boolean withDijstra) throws IOException{
