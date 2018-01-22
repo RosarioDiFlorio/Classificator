@@ -16,7 +16,7 @@ public class ConceptBean {
   
   public ConceptBean(){
     broaders = new ArrayList<String>();
-    narrowers = new ArrayList<>();
+    narrowers = new ArrayList<String>();
   }
   
   
