@@ -1,4 +1,4 @@
-package datasetCreatorFromTaxonomy.ResumeDataset;
+package utility;
 
 import java.io.IOException;
 import java.util.Arrays;

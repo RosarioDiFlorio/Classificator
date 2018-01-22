@@ -1,4 +1,4 @@
-package datasetCreatorFromTaxonomy.ResumeDataset;
+package utility;
 
 import java.net.URLEncoder;
 import java.util.HashMap;
@@ -10,11 +10,13 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
-public class CallableImplementation implements Callable<HashMap<String,HashSet<String>>> {
+import datasetCreatorFromTaxonomy.ResumeDataset.CrawlerWikipediaCategory;
+
+public class CallableChildsRequest implements Callable<HashMap<String,HashSet<String>>> {
 
 	private String category;
 
-	public CallableImplementation(String category){
+	public CallableChildsRequest(String category){
 		this.category=category;
 	}
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="wikipedia">
+    <wb-module deploy-name="Wikipedia">
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
@@ -37,7 +37,7 @@
         <dependent-module archiveName="solrclient-auth-binary-storage-adapters-4.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/solrclient-auth-binary-storage-adapters/solrclient-auth-binary-storage-adapters">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <property name="context-root" value="wikipedia"/>
-        <property name="java-output-path" value="/wikipedia/target/classes"/>
+        <property name="java-output-path" value="/Wikipedia/target/classes"/>
+        <property name="context-root" value="Wikipedia"/>
     </wb-module>
 </project-modules>

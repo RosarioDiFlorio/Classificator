@@ -1,4 +1,4 @@
-package datasetCreatorFromTaxonomy.ResumeDataset;
+package utility;
 
 import org.apache.commons.lang3.builder.CompareToBuilder;
 
