@@ -54,7 +54,7 @@ public class AnalyzerWikipediaGraph {
     for(String key: adjacencyList.keySet()){
       toVectorize.addAll(adjacencyList.get(key).getLinkedVertex());  
     }
-    buildDatabaseVectorsWikipedia(toVectorize,"databaseVectors.db");
+    saveVectorsWikipediaInDB(toVectorize,"databaseVectors.db");
   }
 
   /**
@@ -90,7 +90,7 @@ public class AnalyzerWikipediaGraph {
    * @throws IOException
    * @throws InterruptedException 
    */
-  public static void buildDatabaseVectorsWikipedia(Set<String> vertexWikipedia,String dbName) throws IOException, InterruptedException{
+  public static void saveVectorsWikipediaInDB(Set<String> vertexWikipedia,String dbName) throws IOException, InterruptedException{
     //carico le stopword dal file specificato.
     StopWordEnglish stopWords = new StopWordEnglish("stopwords_en.txt");
     SQLiteVectors sql = new SQLiteVectors(dbName);
