@@ -1,16 +1,13 @@
 package eu.innovation.engineering.wikipedia;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.net.ConnectException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -19,9 +16,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ForkJoinPool;
-import java.util.concurrent.Future;
 import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
@@ -48,68 +42,11 @@ public class WikipediaMiner{
   
   
   
-  /**
-   * @param pathDataset
-   * @param datasetMap
-   * @param alreadyWritten
-   * @throws FileNotFoundException
-   */
-  public static void writeDocumentMap(String pathDataset,Map<String,Set<DocumentInfo>> datasetMap, Set<String> alreadyWritten) throws FileNotFoundException{   
-    for(String wikiCat: datasetMap.keySet()){
-      System.out.println("Wikipedia Category -> "+wikiCat+" documents -> "+datasetMap.get(wikiCat).size());
-      for(DocumentInfo doc: datasetMap.get(wikiCat)){
-        if(!alreadyWritten.contains(doc.getId())){
-          alreadyWritten.add(doc.getId());          
-          PrintWriter p = new PrintWriter(new File(pathDataset+"/"+wikiCat.replace("Category:", "")+"/"+doc.getId()));
-          p.println(doc.getTitle()+"\n"+doc.getText());
-          p.flush();
-          p.close();
-        }             
-      }
-    }  
-  }
-
-
-  /**
-   * @param nameFolders
-   * @param pathFolder
-   * @return
-   */
-  public static String buildStructureFolder(Set<String> nameFolders,String pathFolder){
-    boolean success = new File(pathFolder).mkdir();
-    for(String keyMap: nameFolders){
-      success = new File(pathFolder+"/"+keyMap.replace("Category:", "")).mkdir();
-    }
-    return pathFolder;
-  }
 
 
 
-  /**
-   * @param pathDataset
-   * @param categories
-   * @param blackList
-   * @throws IOException
-   * @throws InterruptedException
-   * @throws ExecutionException
-   */
-  public static Map<String,Set<DocumentInfo>> buildDatasetOnline(Set<String> categories,int maxLevel,boolean recursive,int limitDocs) throws IOException, InterruptedException, ExecutionException{
 
 
-    ForkJoinPool pool = new ForkJoinPool();
-    List<DatasetTask> datasetTasks = new ArrayList<>();
-    for(String cat : categories){
-      DatasetTask task = new DatasetTask(cat, maxLevel,recursive,limitDocs);
-      datasetTasks.add(task);
-    }
-    List<Future<Map<String, Set<DocumentInfo>>>> result = pool.invokeAll(datasetTasks);
-    Map<String,Set<DocumentInfo>> datasetMap = new HashMap<>();
-    for(Future<Map<String, Set<DocumentInfo>>> future : result){
-      datasetMap.putAll(future.get());
-    }
-    return datasetMap;
-
-  }
 
   /**
    * @param queryKey
@@ -286,16 +223,12 @@ public class WikipediaMiner{
           docInfo.setTitle(title);
           contentPagesMap.put(id, docInfo);
         }
-
-
         countDocument+=countLimit;      
         if(countDocument >= limitDocs)
           return contentPagesMap;
-
         limitDocs -= exlimit;
         if(limitDocs< exlimit)
           exlimit = limitDocs;
-
         ids ="";
         countLimit = 0;
       }
@@ -318,17 +251,27 @@ public class WikipediaMiner{
    * @throws IOException
    */
   private static  JsonObject getJsonResponse(String targetURL) throws IOException{
-    final String USER_AGENT = "Mozilla/5.0";
     URL url = new URL(targetURL);
-    //System.out.println(url);
     HttpURLConnection con = (HttpURLConnection) url.openConnection();
     con.setDoOutput(true);
     con.setRequestMethod("GET");
-    con.setRequestProperty("User-Agent", USER_AGENT);
-    Scanner in = new Scanner(
-        new InputStreamReader(con.getInputStream()));  
-    JsonParser parser = new JsonParser(); 
-    JsonObject jOb = parser.parse(in.nextLine()).getAsJsonObject();
+    JsonObject jOb = new JsonObject();
+    try{
+      Scanner in = new Scanner(new InputStreamReader(con.getInputStream()));  
+      JsonParser parser = new JsonParser(); 
+      jOb = parser.parse(in.nextLine()).getAsJsonObject();
+    }
+    catch(ConnectException e){
+      System.out.println("Connection timed out: recall method ");
+      try {
+        Thread.sleep(1000);
+      }
+      catch (InterruptedException e1) {
+        // TODO Auto-generated catch block
+        e1.printStackTrace();
+      }
+      jOb = getJsonResponse(targetURL);
+    }
     return jOb;
   }
 
@@ -441,24 +384,6 @@ public class WikipediaMiner{
     }   
     return toReturn;
   }
-
-  /**
-   * Save a dataset into a folders structure.
-   * @param contents
-   * @param pathWhereSave
-   * @throws FileNotFoundException
-   */
-  private static Set<String> saveContentFolder(Map<String,DocumentInfo> contents, String pathWhereSave) throws FileNotFoundException{
-    boolean success = new File(pathWhereSave).mkdir();  
-    for(String documentId: contents.keySet()){
-      PrintWriter p = new PrintWriter(new File(pathWhereSave+"/"+documentId));
-      p.println(contents.get(documentId).getTitle()+"\n"+contents.get(documentId).getText());
-      p.flush();
-      p.close();
-    }
-    return contents.keySet();
-  }
-
 
   public static boolean isNumeric(String str)  
   {  

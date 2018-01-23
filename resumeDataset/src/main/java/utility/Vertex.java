@@ -1,6 +1,8 @@
 package utility;
 
-public class Vertex {
+import org.apache.commons.lang3.builder.CompareToBuilder;
+
+public class Vertex implements Comparable<Vertex>{
 	
 	private String vertexName;
 	private double similarity;
@@ -28,6 +30,11 @@ public class Vertex {
 	public void setSimilarity(double similarity) {
 		this.similarity = similarity;
 	}
+
+  @Override
+  public int compareTo(Vertex o) {
+    return new CompareToBuilder().append(this.getSimilarity(), o.getSimilarity()).toComparison();
+  }
 	
 	
 
