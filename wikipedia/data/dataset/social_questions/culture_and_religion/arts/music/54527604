@@ -1,8 +1,0 @@
-From a subtopic: This is a redirect from a subtopic of the target article.
-If the redirected subtopic could potentially have its own article in the future, then also use {{R with possibilities}} and {{R printworthy}}. If notability of the subject can be shown, then be bold and convert this redirect into an article on the subtopic.
-
-With possibilities: This is a redirect from a title that potentially could be expanded into a new article or other type of associated page such as a new template. Also use {{R printworthy}} together with this template when used in mainspace. The topic described by this title may be more detailed than is currently provided on the target page or in a section of that page.
-When used on a template redirect, it will automatically populate Category:Template redirects with possibilities.
-When the target page becomes too large, or for any reason a new page would be an improvement, this redirect may be replaced with an article, template or other project page that is carved out of the target page. See also {{R to section}} and use together with this rcat when appropriate.
-If the topic of the redirect is not susceptible to expansion, then use other rcats such as {{R to section}} or {{R to list entry}} when appropriate.
-Since a new page may be created, links to this redirect should not be replaced with a direct link to the target page.

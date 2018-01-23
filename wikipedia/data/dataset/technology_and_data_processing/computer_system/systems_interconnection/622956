@@ -1,2 +1,0 @@
-OpenSSI is an open source single-system image clustering system. It allows a collection of computers to be treated as one large system, allowing applications running on any one machine access to the resources of all the machines in the cluster.
-OpenSSI is based on the Linux operating system and was released as an open source project by Compaq in 2001. It is the final stage of a long process of development, stretching back to LOCUS, developed in the early 1980s.

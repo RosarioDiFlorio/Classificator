@@ -1,5 +1,0 @@
-A limited dependent variable is a variable whose range of possible values is "restricted in some important way." In econometrics, the term is often used when estimation of the relationship between the limited dependent variable of interest and other variables requires methods that take this restriction into account. For example, this may arise when the variable of interest is constrained to lie between zero and one, as in the case of a probability, or is constrained to be positive, as in the case of wages or hours worked.
-Limited dependent variable models include:
-Censoring, where for some individuals in a data set, some data are missing but other data are present;
-Truncation, where some individuals are systematically excluded from observation (failure to take this phenomenon into account can result in selection bias);
-Discrete outcomes, such as binary decisions or qualitative data restricted to a small number of categories. Discrete choice models may have either unordered or ordered alternatives; ordered alternatives may take the form of count data or ordered rating responses (such as a Likert scale).

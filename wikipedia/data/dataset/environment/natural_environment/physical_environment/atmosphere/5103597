@@ -1,3 +1,0 @@
-The Jacchia Reference Atmosphere is an atmospheric model that define values for atmospheric temperature, density, pressure and other properties at altitudes from 90 to 2500 km. Unlike the more common US Standard Atmosphere and related models, the Jacchia model includes latitudinal, seasonal, geomagnetic, and solar effects, but must be supplemented with another model at lower altitudes. The model, first published in 1970 and updated in 1971 and 1977, is based on spacecraft drag data, and is primarily used in spacecraft modeling and related fields.
-A common assumption while using the Jacchia Model is that the atmosphere rotates with the Earth as a rigid body.
-The statistical accuracy of the Jacchia Model is 15%.

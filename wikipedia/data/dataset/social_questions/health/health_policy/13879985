@@ -1,2 +1,0 @@
-Laika is an open source Electronic Health Record (EHR) testing framework which analyzes and reports on the interchangeability of EHR systems. This includes the testing for certification of EHR software products and networks. Laika is designed to verify the input and output of EHR data against the standards and criteria identified by the Certification Commission for Healthcare Information Technology (CCHIT).
-In June 2008, CCHIT began used Laika to automate EHR interchangeability testing, but by December 2011, the organization had suspended its use of Laika.

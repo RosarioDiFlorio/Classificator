@@ -1,8 +1,0 @@
-Brokaw bandgap reference is a voltage reference circuit widely used in integrated circuits, with an output voltage around 1.25 V with low temperature dependence. This particular circuit is one type of a bandgap voltage reference, named after Paul Brokaw, the author of its first publication.
-
-Like all temperature-independent bandgap references, the circuit maintains an internal voltage source that has a positive temperature coefficient and another internal voltage source that has a negative temperature coefficient. By summing the two together, the temperature dependence can be canceled. Additionally, either of the two internal sources can be used as a temperature sensor.
-In the Brokaw bandgap reference, the circuit uses negative feedback (e.g., an operational amplifier) to force a constant current through two bipolar transistors with different emitter areas. By the Ebers–Moll model of a transistor,
-The transistor with the larger emitter area requires a smaller base–emitter voltage for the same current.
-The base–emitter voltage for each transistor has a negative temperature coefficient (i.e., it decreases with temperature).
-The difference between the two base–emitter voltages has a positive temperature coefficient (i.e., it increases with temperature).
-The circuit output is the sum of the base–emitter voltage difference with one of the base–emitter voltages. With proper component choices, the two opposing temperature coefficients will cancel each other exactly and the output will have no temperature dependence.

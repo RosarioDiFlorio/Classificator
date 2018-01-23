@@ -1,5 +1,0 @@
-In psychology, game theory, statistics, and machine learning, win–stay, lose–switch (also win–stay, lose–shift) is a heuristic learning strategy used to model learning in decision situations. It was first invented as an improvement over randomization in bandit problems. It was later applied to the prisoner's dilemma in order to model the evolution of altruism.
-The learning rule bases its decision only on the outcome of the previous play. Outcomes are divided into successes (wins) and failures (losses). If the play on the previous round resulted in a success, then the agent plays the same strategy on the next round. Alternatively, if the play resulted in a failure the agent switches to another action.
-A large-scale empirical study of players of the game rock, paper, scissors shows that a variation of this strategy is adopted by real-world players of the game, instead of the Nash equilibrium strategy of choosing entirely at random between the three options.
-
-

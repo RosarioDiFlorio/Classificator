@@ -1,3 +1,0 @@
-Dotbot is a web crawler developed by Dotmic. As Dotmic an e-commerce search engine, Dotbot only examines e-commerce web sites. Unlike other crawlers, Dotbot can identify e-commerce websites. It is also capable of recognizing product name, image, prices, and description. The data collected from web pages by Dotbot are processed into information using various algorithms.
-Dotbot is a crawler of Dotnetdotcom.org. This crawling system is written in a mixture of C and Python.
-Dotbot obeys the Robots exclusion standard, the user-agent string of Dotbot is DotBot/1.1.

@@ -1,5 +1,0 @@
-Ubuntu releases are made semiannually by Canonical Ltd, the developers of the Ubuntu operating system, using the year and month of the release as a version number. The first Ubuntu release, for example, was Ubuntu 4.10 and was released on 20 October 2004. Consequently, version numbers for future versions are provisional; if the release is delayed until a different month (or even year) to that planned, the version number will change accordingly.
-Ubuntu releases are timed to be approximately one month after GNOME releases, which are in turn about one month after releases of X.Org, resulting in each Ubuntu release including a newer version of GNOME and X.
-Every fourth release, in the second quarter of even-numbered years, has been designated as a Long Term Support (LTS) release, indicating that they are supported and receive updates for five years, with paid technical support also available from Canonical Ltd. However the desktop version of LTS releases before 12.04 were supported for only three years. Releases 14.04, and 16.04 are the current LTS releases. The support period for non-LTS is 9 months. Prior to 13.04 it was 18 months.
-
-

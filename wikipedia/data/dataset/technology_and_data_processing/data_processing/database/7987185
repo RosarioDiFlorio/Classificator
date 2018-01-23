@@ -1,3 +1,0 @@
-ScientificCommons is a project of the University of St. Gallen Institute for Media and Communications Management. The major aim of the project is to develop the world’s largest archive of scientific knowledge with fulltexts freely accessible to the public.
-ScientificCommons includes a search engine for publications and author profiles. It also allows the user to turn searches into customized RSS feeds of new publications. ScientificCommons also provides a fulltext caching service for researchers.
-Since the beginning of 2013, ScientificCommons has been inaccessible. All visitors are forwared to an administration login for server virtualization management software Proxmox VE and the site is no longer issuing a valid TLS certificate.

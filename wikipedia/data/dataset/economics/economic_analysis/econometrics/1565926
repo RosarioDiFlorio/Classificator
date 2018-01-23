@@ -1,9 +1,0 @@
-Estimation theory is a branch of statistics that deals with estimating the values of parameters based on measured empirical data that has a random component. The parameters describe an underlying physical setting in such a way that their value affects the distribution of the measured data. An estimator attempts to approximate the unknown parameters using the measurements.
-For example, it is desired to estimate the proportion of a population of voters who will vote for a particular candidate. That proportion is the parameter sought; the estimate is based on a small random sample of voters.
-Or, for example, in radar our aim is to find the range of objects (airplanes, boats, etc.) by analyzing the two-way transit timing of received echoes of transmitted pulses. Since the reflected pulses are unavoidably embedded in electrical noise, their measured values are randomly distributed, so that the transit time must be estimated.
-In estimation theory, two approaches are generally considered.
-The probabilistic approach (described in this article) assumes that the measured data is random with probability distribution dependent on the parameters of interest
-The set-membership approach assumes that the measured data vector belongs to a set which depends on the parameter vector.
-For example, in electrical communication theory, the measurements which contain information regarding the parameters of interest are often associated with a noisy signal.
-
-

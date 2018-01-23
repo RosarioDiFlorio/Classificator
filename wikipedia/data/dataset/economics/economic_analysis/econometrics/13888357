@@ -1,2 +1,0 @@
-In statistics, the Chapman–Robbins bound or Hammersley–Chapman–Robbins bound is a lower bound on the variance of estimators of a deterministic parameter. It is a generalization of the Cramér–Rao bound; compared to the Cramér–Rao bound, it is both tighter and applicable to a wider range of problems. However, it is usually more difficult to compute.
-The bound was independently discovered by John Hammersley in 1950, and by Douglas Chapman and Herbert Robbins in 1951.

@@ -1,4 +1,0 @@
-STONITH ("Shoot The Other Node In The Head" or "Shoot The Offending Node In The Head"), sometimes called STOMITH ("Shoot The Other Member/Machine In The Head"), is a technique for fencing in computer clusters.
-Fencing is the isolation of a failed node so that it does not cause disruption to a computer cluster. As its name suggests, STONITH fences failed nodes by resetting or powering down the failed node.
-Multi-node error-prone contention in a cluster can have catastrophic results, such as if both nodes try writing to a shared storage resource. STONITH provides effective, if rather drastic, protection against these problems.
-Single node systems use a comparable mechanism called a watchdog timer. A watchdog timer will reset the node if the node does not tell the watchdog circuit that it is operating well. A STONITH decision can be based on various decisions which can be customer specific plugins.

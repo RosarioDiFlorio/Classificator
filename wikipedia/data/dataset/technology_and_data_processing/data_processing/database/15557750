@@ -1,2 +1,0 @@
-In computers spindling is the allocation of different files (e.g., the data files and index files of a database) on different hard disks. This practice usually reduces contention for read or write resources, thus increasing the system's performance.
-The word comes from spindle, the axis on which the hard disks spin.

@@ -1,7 +1,0 @@
-In physics and engineering, Davenport chained rotations are three chained intrinsic rotations about body-fixed specific axes. Euler rotations and Tait–Bryan rotations are particular cases of the Davenport general rotation decomposition. The angles of rotation are called Davenport angles because the general problem of decomposing a rotation in a sequence of three was studied first by Paul B. Davenport.
-The non-orthogonal rotating coordinate system may be imagined to be rigidly attached to a rigid body. In this case, it is sometimes called a local coordinate system. Being rotation axes are solidary with the moving body, the generalized rotations can be divided into two groups (here x, y and z refer to the non-orthogonal moving frame):
-generalized Euler rotations (z-x-z, x-y-x, y-z-y, z-y-z, x-z-x, y-x-y)
-generalized Tait–Bryan rotations (x-y-z, y-z-x, z-x-y, x-z-y, z-y-x, y-x-z).
-Most of the cases belong to the second group, being the generalized Euler rotations a degenerated case in which first and third axes are overlapping.
-
-

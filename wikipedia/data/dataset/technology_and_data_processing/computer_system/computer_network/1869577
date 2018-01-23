@@ -1,3 +1,0 @@
-Jigdo (a portmanteau of "Jigsaw" and "download") is a utility typically used for downloading to piece together a large file, most commonly an optical disk image such as a CD, DVD or Blu-ray Disc (BD) image, from many smaller individual constituent files. The constituent files may be local and/or retrieved from one or more mirror sites. Jigdo's features are similar to BitTorrent, but unlike BitTorrent, Jigdo uses a client-server model, not peer-to-peer.
-Jigdo itself is quite portable and is available for many UNIX and Unix-like operating systems, and is also available for Microsoft Windows.
-Released under the terms of the GNU General Public License, Jigdo is free software.

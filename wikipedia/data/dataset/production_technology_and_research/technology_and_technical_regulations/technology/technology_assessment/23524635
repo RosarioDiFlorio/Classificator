@@ -1,4 +1,0 @@
-The Key Management Interoperability Protocol (KMIP) is an extensible communication protocol that defines message formats for the manipulation of cryptographic keys on a key management server. This facilitates data encryption by simplifying encryption key management. Keys may be created on a server and then retrieved, possibly wrapped by other keys. Both symmetric and asymmetric keys are supported, including the ability to sign certificates. KMIP also allows for clients to ask a server to encrypt or decrypt data, without needing direct access to the key.
-The KMIP standard was first released in 2010 and has since become the industry standard for key management. Vendors have demonstrated commercially available clients and servers at every recent RSA Conference. The KMIP standard effort is governed by the OASIS standards body. Technical details can also be found on the official KMIP page and wiki.
-
-

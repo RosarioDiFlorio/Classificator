@@ -1,2 +1,0 @@
-A group-envy-free division (also known as: coalition-fair division) is a division of a resource among several partners such that every group of partners feel that their allocated share is at least as good as the share of any other group with the same size. The term is used especially in problems of fair division, such as resource allocation and fair cake-cutting.
-Group-envy-freeness is a very strong fairness requirement: a group-envy-free allocation is both envy-free and Pareto efficient, but the opposite is not true.

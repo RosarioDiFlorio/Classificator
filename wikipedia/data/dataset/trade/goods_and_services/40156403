@@ -1,5 +1,0 @@
-The Chrome OS core fonts, also known as the Croscore fonts, are a collection of three TrueType font families: Arimo (sans-serif), Tinos (serif) and Cousine (monospace). These fonts are metrically compatible with Monotype Corporation’s Arial, Times New Roman, and Courier New, the most commonly used fonts on Microsoft Windows operating system, for which they are intended as open-source substitutes.
-Google licenses these fonts from Ascender Corporation under the Apache License 2.0.
-The fonts were originally developed by Steve Matteson as Ascender Sans and Ascender Serif, and were also the basis for the Liberation fonts licensed by Red Hat under another open source license. In July 2012, version 2.0 of the Liberation fonts, based on the Croscore fonts, was released under the SIL Open Font License.
-
-

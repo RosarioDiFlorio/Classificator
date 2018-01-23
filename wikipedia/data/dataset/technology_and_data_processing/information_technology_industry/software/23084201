@@ -1,5 +1,0 @@
-dbndns was a fork of the djbdns software package, maintained by the Debian Project, made possible by the release of djbdns to the public domain.
-The fork was created so as to add many common patches to djbdns. Most notably, this now includes IPv6 support.
-Previously, it was necessary to get a special 'djbdns-installer' package that downloaded the djbdns source from the author's site and apply a patch, but the free software status means this is no longer necessary, and Debian can directly carry the source and patches, producing a redistributable binary deb package.
-This package had filtered through into Ubuntu.
-Dbndns is no longer maintained as part of the Debian distribution.

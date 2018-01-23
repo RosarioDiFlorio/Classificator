@@ -1,8 +1,0 @@
-Functional Requirements for Authority Data (FRAD), formerly known as Functional Requirements for Authority Records (FRAR) is a conceptual entity-relationship model developed by the International Federation of Library Associations and Institutions (IFLA) for relating the data that are recorded in library authority records to the needs of the users of those records and facilitate and sharing of that data.
-The draft was presented in 2004 at the 70th IFLA General Conference and Council in Buenos Aires by Glenn Patton. It is an extension and expansion to the FRBR model, adding numerous entities and attributes.
-The conceptual work and future implementations are aimed at supporting four tasks, frequently executed by users in a library context -- either the library patrons (the first three tasks), or the librarians themselves (all four tasks):
-Find: Find an entity or set of entities corresponding to stated criteria;
-Identify: Identify an entity;
-Contextualize: Place a person, corporate body, work, etc. in context;
-Justify: Document the authority record creator’s reason for choosing the name or form of name on which an access point is based.
-Next to the development of FRAR, the Working Group on Functional Requirements and Numbering of Authority Records (FRANAR) is also charged to study the feasibility of an International Standard Authority Data Number (ISADN) and serve as the official IFLA liaison to and work with other interested groups concerning authority files.

@@ -1,6 +1,0 @@
-A terminated merchant file (TMF) is a tool used by credit card processing companies to screen potential merchants before giving them a merchant account. In the case of Mastercard and American Express it is known as the MATCH list.
-The terminated merchant files are shared among processors and act as blacklists, where merchants with high-risk accounts or excessive chargebacks are put on the list and prevented from opening an account with a different credit card processor.
-Other reasons for being put on a terminated merchant file include:
-Merchant collusion
-Fraud
-Money laundering

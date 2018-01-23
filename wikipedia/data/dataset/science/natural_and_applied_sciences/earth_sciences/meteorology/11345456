@@ -1,2 +1,0 @@
-Prognostic equation - in the context of physical (and especially geophysical) simulation, a prognostic equation predicts the value of variables for some time in the future on the basis of the values at the current or previous times.
-For instance, the well-known Navier-Stokes equations that describe the time evolution of a fluid are prognostic equations that predict the future distribution of velocities in that fluid on the basis of current fields such as the pressure gradient.

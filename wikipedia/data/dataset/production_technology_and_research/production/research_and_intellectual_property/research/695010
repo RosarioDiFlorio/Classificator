@@ -1,2 +1,0 @@
-The Penny Black Project is a Microsoft Research project that tries to find effective and practical ways of fighting spam. Because identifying spams consumes a recipient's time, the idea is to make the sender of emails "pay" a certain amount for sending them. The currency or the mode of payment could be CPU cycles, Turing tests or memory cycles. Such a payment would limit spammers' ability to send out large quantities of emails quickly.
-The project's name is derived from the Penny Black, the world's first adhesive stamp used for paid postage.

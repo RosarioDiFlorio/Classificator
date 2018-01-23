@@ -1,2 +1,0 @@
-The Composite Binary Offset Carrier (CBOC) modulation is a particular implementation of the Multiplexed Binary Offset Carrier modulation and it is nowadays used by Galileo satellite signals. It is formed by addition or subtraction of two weighted sine binary offset carrier modulations. It has been introduced as an MBOC variant, following an EU-US Agreement in 2004 on the Promotion, Provision and use of Galileo and GPS Satellite-Based Navigation Systems and Related Applications.
-A CBOC theoretical modeling can be found in.

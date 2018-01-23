@@ -1,6 +1,0 @@
-In game theory, the purification theorem was contributed by Nobel laureate John Harsanyi in 1973. The theorem aims to justify a puzzling aspect of mixed strategy Nash equilibria: that each player is wholly indifferent amongst each of the actions he puts non-zero weight on, yet he mixes them so as to make every other player also indifferent.
-The mixed strategy equilibria are explained as being the limit of pure strategy equilibria for a disturbed game of incomplete information in which the payoffs of each player are known to themselves but not their opponents. The idea is that the predicted mixed strategy of the original game emerge as ever improving approximations of a game that is not observed by the theorist who designed the original, idealized game.
-The apparently mixed nature of the strategy is actually just the result of each player playing a pure strategy with threshold values that depend on the ex-ante distribution over the continuum of payoffs that a player can have. As that continuum shrinks to zero, the players strategies converge to the predicted Nash equilibria of the original, unperturbed, complete information game.
-The result is also an important aspect of modern day inquiries in evolutionary game theory where the perturbed values are interpreted as distributions over types of players randomly paired in a population to play games.
-
-

@@ -1,9 +1,0 @@
-The cyclically adjusted price-to-earnings ratio, commonly known as CAPE, Shiller P/E, or P/E 10 ratio, is a valuation measure usually applied to the US S&P 500 equity market. It is defined as price divided by the average of ten years of earnings (moving average), adjusted for inflation. As such, it is principally used to assess likely future returns from equities over timescales of 10 to 20 years, with higher than average CAPE values implying lower than average long-term annual average returns.
-
-Thus,
-CAPE Ratio:
-A ratio used to gauge whether a stock is undervalued or overvalued by comparing its current market price to its inflation adjusted historical earnings record.
-it is a variant of the more popular price to earning ratio and is calculated by dividing the current price of a stock by its average inflation adjusted earning over the last 10 years.
-Using average earnings over the last decade helps to smooth out the impact of business cycles and other events and gives a better picture of a company's sustainable earning power.
-The ratio was invented by American economist Robert Shiller.
-It is not intended as an indicator of impending market crashes, although high CAPE values have been associated with such events.

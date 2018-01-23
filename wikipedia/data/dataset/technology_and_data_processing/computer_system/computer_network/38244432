@@ -1,1 +1,0 @@
-Ethernet Configuration Testing Protocol is a diagnostic protocol included in the Xerox Ethernet II specification. Functionality of the protocol is similar to that offered by ping but it operates at the data link layer as opposed to the network layer. Ethernet Configuration Testing Protocol was implemented on DEC hosts and Cisco routers.

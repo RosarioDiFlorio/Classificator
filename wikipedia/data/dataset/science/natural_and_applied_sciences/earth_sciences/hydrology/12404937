@@ -1,5 +1,0 @@
-A runoff model is a mathematical model describing the rainfall–runoff relations of a rainfall catchment area, drainage basin or watershed. More precisely, it produces a surface runoff hydrograph in response to a rainfall event, represented by and input as a hyetograph. In other words, the model calculates the conversion of rainfall into runoff.
-A well known runoff model is the linear reservoir, but in practice it has limited applicability.
-The runoff model with a non-linear reservoir is more universally applicable, but still it holds only for catchments whose surface area is limited by the condition that the rainfall can be considered more or less uniformly distributed over the area. The maximum size of the watershed then depends on the rainfall characteristics of the region. When the study area is too large, it can be divided into sub-catchments and the various runoff hydrographs may be combined using flood routing techniques.
-
-Rainfall-runoff models need to be calibrated before they can be used.

@@ -1,4 +1,0 @@
-yProxy is a Network News Transfer Protocol (NNTP) proxy server for the Windows operating system. yProxy's main function is to convert yEnc-encoded attachments to UUE-encoded attachments on the fly. The main purpose of this is to add functionality to NNTP newsreaders that do not have native support for yEnc. The inventor of yEnc recommends yProxy for use by Windows users whose newsreaders do not support yEnc decoding.
-yProxy comes in two varieties:
-yProxy
-yProxy Pro

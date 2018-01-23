@@ -1,8 +1,0 @@
-An ISFET is an ion-sensitive field-effect transistor, that is a field-effect transistor used for measuring ion concentrations in solution; when the ion concentration (such as H+, see pH scale) changes, the current through the transistor will change accordingly. Here, the solution is used as the gate electrode. A voltage between substrate and oxide surfaces arises due to an ion sheath.
-
-The surface hydrolysis of Si–OH groups of the gate materials varies in aqueous solutions due to pH value. Typical gate materials are SiO2, Si3N4, Al2O3 and Ta2O5.
-The mechanism responsible for the oxide surface charge can be described by the site binding model, which describes the equilibrium between the Si–OH surface sites and the H+ ions in the solution. The hydroxyl groups coating an oxide surface such as that of SiO2 can donate or accept a proton and thus behave in an amphoteric way as illustrated by the following acid-base reactions occurring at the oxide-electrolyte interface:
-—Si–OH + H2O     ↔   —Si–O−     + H3O+
-—Si–OH + H3O+   ↔   —Si–OH2+ + H2O
-An ISFET's source and drain are constructed as for a MOSFET. The gate electrode is separated from the channel by a barrier which is sensitive to hydrogen ions and a gap to allow the substance under test to come in contact with the sensitive barrier. An ISFET's threshold voltage depends on the pH of the substance in contact with its ion-sensitive barrier.
-ISFET was invented by Piet Bergveld in 1970.

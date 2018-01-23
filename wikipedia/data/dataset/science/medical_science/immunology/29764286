@@ -1,8 +1,0 @@
-Real-time outbreak and disease surveillance system (RODS) is a syndromic surveillance system developed by the University of Pittsburgh, Department of Biomedical Informatics. It is "prototype developed at the University of Pittsburgh where real-time clinical data from emergency departments within a geographic region can be integrated to provide an instantaneous picture of symptom patterns and early detection of epidemic events."
-RODS uses a combination of various monitoring tools.
-The first tool is a moving average with a 120-day sliding phase-I-window.
-The second tool is a nonstandard combination of CUSUM and EWMA, where an EWMA is used to predict next-day counts, and a CuSum monitors the residuals from these predictions.
-The third monitoring tool in RODS is a recursive least squares (RLS) algorithm, which fits an autoregressive model to the counts and updates estimates continuously by minimizing prediction error. A Shewhart I-chart is then applied to the residuals, using a threshold of 4 standard deviations.
-The fourth tool in RODS implements a wavelet approach, which decomposes the time series using Haar wavelets, and uses the lowest resolution to remove long-term trends from the raw series. The residuals are then monitored using an ordinary Shewhart I-chart with a threshold of 4 standard deviations.
-
-

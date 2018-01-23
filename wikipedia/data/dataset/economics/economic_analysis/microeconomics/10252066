@@ -1,4 +1,0 @@
-A Choquet integral is a subadditive or superadditive integral created by the French mathematician Gustave Choquet in 1953. It was initially used in statistical mechanics and potential theory, but found its way into decision theory in the 1980s, where it is used as a way of measuring the expected utility of an uncertain event. It is applied specifically to membership functions and capacities. In imprecise probability theory, the Choquet integral is also used to calculate the lower expectation induced by a 2-monotone lower probability, or the upper expectation induced by a 2-alternating upper probability.
-Using the Choquet integral to denote the expected utility of belief functions measured with capacities is a way to reconcile the Ellsberg paradox and the Allais paradox.
-
-

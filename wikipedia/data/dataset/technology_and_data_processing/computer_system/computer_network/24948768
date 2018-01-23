@@ -1,2 +1,0 @@
-General Purpose Serial Interface, also known as GPSI, 7-wire interface, or 7WS, is a 7 wire communications interface. It is used as an interface between Ethernet MAC and PHY blocks.
-Data is received and transmitted using separate data paths (TXD, RXD) and separate data clocks (TXCLK, RXCLK). Other signals consist of transmit enable (TXEN), receive carrier sense (CRS), and collision (COL).

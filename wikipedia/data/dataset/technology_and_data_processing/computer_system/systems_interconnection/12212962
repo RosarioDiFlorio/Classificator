@@ -1,2 +1,0 @@
-A binary protocol is a protocol which is intended to be read by a machine rather than a human being, as opposed to a plain text protocol such as IRC, SMTP, or HTTP. Binary protocols have the advantage of terseness, which translates into speed of transmission and interpretation.
-Binary protocol is also used in the context of a protocol between exactly two parties, in contrast to a multi-party protocol. Binary protocol, or binary collaboration have been used in the terminology of standards such as EbXML and EDOC. An interface in UML  may also be considered a binary protocol.

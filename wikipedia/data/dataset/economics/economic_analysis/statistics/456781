@@ -1,6 +1,0 @@
-The Bruck–Ryser–Chowla theorem is a result on the combinatorics of block designs. It states that if a (v, b, r, k, λ)-design exists with v = b (a symmetric block design), then:
-if v is even, then k − λ is a square;
-if v is odd, then the following Diophantine equation has a nontrivial solution:
-x2 − (k − λ)y2 − (−1)(v−1)/2 λ z2 = 0.
-
-The theorem was proved in the case of projective planes in (Bruck & Ryser 1949). It was extended to symmetric designs in (Ryser & Chowla 1950).

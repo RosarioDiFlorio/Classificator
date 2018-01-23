@@ -1,5 +1,0 @@
-Static atmospheric models describe how the ideal gas properties (namely: pressure, temperature, density, and molecular weight) of an atmosphere change, primarily as a function of altitude. The World Meteorological Organization defines a standard atmosphere as "a hypothetical vertical distribution of atmospheric temperature, pressure and density which, by international agreement, is roughly representative of year-round, midlatitude conditions. Typical usages are as a basis for pressure altimeter calibrations, aircraft performance calculations, aircraft and rocket design, ballistic tables, and meteorological diagrams."
-For example, the US Standard Atmosphere derives the values for air temperature, pressure, and mass density, as a function of altitude above sea level.
-Other static atmospheric models may have other outputs, or depend on inputs besides altitude.
-
-

@@ -1,2 +1,0 @@
-PowerCLI is a Windows PowerShell interface for managing VMware vSphere.
-VMware describes PowerCLI as "a powerful command-line tool that lets you automate all aspects of vSphere management, including network, storage, VM, guest OS and more. PowerCLI is distributed as a Windows PowerShell snapin (PowerCLI 6.0 introduced PowerShell module), and includes over 500 PowerShell cmdlets for managing and automating vSphere and vCloud, along with documentation and samples."

@@ -1,5 +1,0 @@
-For the short form of user node, see C programming language and tree data structure; for use in mathematics see Glossary of classical algebraic geometry.
-Unode is a short form of underground node: a script or program that combines other programs for creating a decentralized anonymous encrypted communication network. Other programs include: Entropy, Mixmaster, GPG, NEWSPOST, plus Plugins for more.
-Unode is a project to create a set of bash scripts to help Activists communicate without revealing their IP, or other personal data.
-Some of these scripts are used to forward email lists to the newsgroup alt.activism.underground. By doing this, activists can read important action alerts and other information without being included on the servers email lists that run the lists. Email headers are removed from these posts, as well as email addresses themselves are altered to help avoid spam.
-Unix bash scripts are used because it is easy for other to alter or correct errors in the scripts, and because it is an easy way to try out new ideas. It is used as a rough draft, before the eventual move to stable binary programs.

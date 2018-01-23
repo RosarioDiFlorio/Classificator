@@ -1,8 +1,0 @@
-Serial Vector Format (SVF) is a file format that contains boundary scan vectors to be sent to an electronic circuit using a JTAG interface. Boundary scan vectors consist of the following data:
-Stimulus data: This is data to be sent to a device or electronic circuit
-Expected response: This is the data the device or circuit is expected to send back if there is no error
-Mask data: Defines which bits in the expected response are valid; other bits of the device's response are unknown and must be ignored when comparing the expected response and the data returned from the circuit
-Additional information on how to send the data (e.g. maximum clock frequency)
-The SVF standard was jointly developed by companies Texas Instruments and Teradyne. Control over the format has been handed off to boundary-scan solution provider ASSET InterTech. The most recent revision is Revision E.
-SVF files are used to transfer boundary scan data between tools. As an example a VHDL compiler may create an SVF file that is read by a tool for programming CPLDs.
-The SVF file is defined as an ASCII file that consists of a set of SVF statements. The maximum number of characters allowed on a line is 256, although one SVF statement can span more than one line. Each statement consists of a command and associated parameters. Each SVF statement is terminated by a semicolon. SVF is not case sensitive. Comments can be inserted into a SVF file after an exclamation point ‘!’ or a pair of slashes ‘//’. Either ‘//’ or ‘!’ will comment out the remainder of the line.

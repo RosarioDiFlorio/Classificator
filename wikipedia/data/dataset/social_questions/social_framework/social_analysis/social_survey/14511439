@@ -1,5 +1,0 @@
-A Divisia index is a theoretical construct to create index number series for continuous-time data on prices and quantities of goods exchanged. The name comes from François Divisia who first proposed and formally analyzed the indexes in 1926, and discussed in related 1925 and 1928 works.
-The Divisia index is designed to incorporate quantity and price changes over time from subcomponents that are measured in different units, such as labor hours and equipment investment and materials purchases, and to summarize them in a time series that summarizes the changes in quantities and/or prices. The resulting index number series is unitless, like other index numbers.
-In practice, economic data are not measured in continuous time. Thus, when a series is said to be a Divisia index, it usually means the series follows a procedure that makes a close analogue in discrete time periods, usually the Törnqvist index procedure or the Fisher Ideal Index procedures.
-
-

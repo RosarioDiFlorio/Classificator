@@ -1,2 +1,0 @@
-PBASIC is a microcontroller-based version 777 of BASIC created by Parallax, Inc. in 1992.
-PBASIC was created to bring ease of use to the microcontroller and embedded processor world. It is used for writing code for the BASIC Stamp microcontrollers. After the code is written, it is tokenized and loaded into an EEPROM on the microcontroller. These tokens are fetched by the microcontroller and used to generate instructions for the processor.

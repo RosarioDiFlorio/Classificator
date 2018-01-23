@@ -1,3 +1,0 @@
-Echo (one-to-all, one-to-one, or one-to-some distribution) is a group communications protocol where authenticated and encrypted information is addressed to members connected to a node. Several clients such as Spot-On, BitMail, GoldBug, and FireFloo support this protocol.
-Adaptive Echo, Full Echo, and Half Echo can be chosen as several modes of the encrypted Echo protocol.
-The Echo protocol offers three modes of operation: Adaptive Echo, Full Echo, and Half Echo.

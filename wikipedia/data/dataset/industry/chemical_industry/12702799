@@ -1,4 +1,0 @@
-A flow computer is an electronic computer which implements algorithms using the analog and digital signals received from flow meters, temperature, pressure and density transmitters to which it is connected into volumes at base conditions. They are used for custody or fiscal transfer.
-It also audits changes that have been made to any of the parameters required to turn the raw flow meter data into volumes. It records events and alarms related to the flow meter (for example, loss of flow, loss of required electrical signals from measurement transducers, or transition of these electrical signals near their upper or lower range). It keeps a running tally of the volume for each flow meter it monitors and creates a record of this volume on an hourly, daily, batch or monthly basis. The flow data is made available externally through an electronic interface so that other computers can download the information for supervision, accounting and auditing.
-
-

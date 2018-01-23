@@ -1,2 +1,0 @@
-The Tempotron is a supervised synaptic learning algorithm which is applied when the information is encoded in spatiotemporal spiking patterns. This is an advancement of the perceptron which does not incorporate a spike timing framework.
-It is general consensus that spike timing (STDP) plays a crucial role in the development of synaptic efficacy for many different kinds of neurons  Therefore a large variety of STDP-rules has been developed one of which is the tempotron.

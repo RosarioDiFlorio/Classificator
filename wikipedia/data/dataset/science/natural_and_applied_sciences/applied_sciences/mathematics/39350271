@@ -1,3 +1,0 @@
-A parity plot is a scatterplot that compares experimental data against tabulated data. Each point has coordinates (x, y), where x is the tabulated value, and y is the corresponding experimental value.
-A line of the equation y = x is sometimes added as a reference. When an experimental value equals a tabulated value, the point will lie on the line.
-Parity plots are found in scientific papers and reports, when the author wishes to compare his data to accepted values in an easily understandable way.

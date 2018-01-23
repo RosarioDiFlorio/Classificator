@@ -1,2 +1,0 @@
-Rudder is an open source audit and configuration management utility to help automate system configuration across large IT infrastructures. Rudder relies on a lightweight local agent installed on each managed machine (derived from CFEngine 3).
-Rudder is produced by Normation, founded in 2010. Its server-side web interface is written in Scala and its local agent is written in C, and are published as free software under the GNU General Public License 3.0.

@@ -1,8 +1,0 @@
-Self-Management is the process by which computer systems shall manage their own operation without human intervention. Self-Management technologies are expected to pervade the next generation of network management systems.
-The growing complexity of modern networked computer systems is currently the biggest limiting factor in their expansion. The increasing heterogeneity of big corporate computer systems, the inclusion of mobile computing devices, and the combination of different networking technologies like WLAN, cellular phone networks, and mobile ad hoc networks make the conventional, manual management very difficult, time-consuming, and error-prone. More recently self-management has been suggested as a solution to increasing complexity in cloud computing.
-Currently, the most important industrial initiative towards realizing self-management is the Autonomic Computing Initiative (ACI) started by IBM in 2001. The ACI defines the following four functional areas:
-Self-Configuration: Automatic configuration of components;
-Self-Healing: Automatic discovery, and correction of faults; automatically applying all necessary actions to bring system back to normal operation
-Self-Optimization: Automatic monitoring and control of resources to ensure the optimal functioning with respect to the defined requirements;
-Self-Protection: Proactive identification and protection from arbitrary attacks.
-The design complexity of Autonomic Systems and self-management systems can be simplified by utilizing design patterns such as the Model View Controller (MVC) to improve separation of concerns by helping encapsulate functional concerns.

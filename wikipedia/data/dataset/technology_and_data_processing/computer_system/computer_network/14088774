@@ -1,1 +1,0 @@
-FlexCAN is an embedded network architecture that extends Controller Area Network (CAN). It was designed by Dr. Juan Pimentel at Kettering University. It was inspired by FlexRay and the need to provide more deterministic behavior over the CAN network. Its focus is on redundancy at the hardware level, and time-based prioritized communication at the protocol level.

@@ -1,3 +1,0 @@
-Art-Net is a royalty-free communications protocol for transmitting the DMX512-A lighting control protocol and Remote Device management (RDM) protocol over the User Datagram Protocol (UDP) of the Internet Protocol suite. It is used to communicate between "nodes" (e.g., intelligent lighting instruments) and a "server" (a lighting desk or general purpose computer running lighting control software).
-
-

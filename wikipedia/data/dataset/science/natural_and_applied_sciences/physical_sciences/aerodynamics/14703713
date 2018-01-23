@@ -1,3 +1,0 @@
-In computational fluid dynamics, shock-capturing methods are a class of techniques for computing inviscid flows with shock waves. The computation of flow containing shock waves is an extremely difficult task because such flows result in sharp, discontinuous changes in flow variables such as pressure, temperature, density, and velocity across the shock.
-
-

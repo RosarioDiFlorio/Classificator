@@ -1,5 +1,0 @@
-Replay Solutions is a private, venture-backed independent software vendor founded in 2004 and based in Redwood City, California, United States.
-The company’s main product, ReplayDIRECTOR, has been described by the New York Times as a “TiVo for Software”. it records application execution, and replays code execution without requiring the original environment and stimuli present during recording. Software problems such as crashes or security issues can be reproduced during replay. It is based on the concept of recording any input coming into an application, and then feeding the same inputs back to the application during replay. 
-Technology created by Replay Solutions has been the subject of multiple patents issued by the USPTO. 
-The product supports multiple platforms including iOS, Android, Xbox gaming platform and several versions of the Microsoft Windows operating system. as well as applications written in Java and Javascript.
-Replay Solutions was acquired by CA Technologies in June 2012.

@@ -1,5 +1,0 @@
-Test and Training Enabling Architecture (TENA) is an architecture designed to bring interoperability to United States Department of Defense test and training systems. TENA is designed to promote integrated testing and simulation-based acquisition through the use of a large-scale, distributed, real-time synthetic environment, which integrates testing, training, simulation, and high-performance computing technologies, distributed across many facilities, using a common architecture.
-The purpose of TENA is to provide the architecture and the software implementation necessary to
-Enable Interoperability among Range systems, Facilities, Simulations, C4ISR systems in a quick, cost-efficient manner,
-Foster Reuse for Range asset utilization and for future developments
-Provide Composability to rapidly assemble, initialize, test, and execute a system from a pool of reusable, interoperable elements

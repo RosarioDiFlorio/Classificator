@@ -1,3 +1,0 @@
-For a more technical treatment, see Identifiability.
-In statistics and econometrics, the parameter identification problem is the inability in principle to identify a best estimate of the value(s) of one or more parameters in a regression. This problem can occur in the estimation of multiple-equation econometric models where the equations have variables in common.
-More generally, the term can be used to refer to any situation where a statistical model will invariably have more than one set of parameters that generate the same distribution of observations, meaning that multiple parametrizations are observationally equivalent.

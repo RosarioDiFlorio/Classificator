@@ -1,2 +1,0 @@
-RPC-1 and RPC-2 are designations applied to firmware for DVD drives. Older DVD drives use RPC-1 firmware, which allows DVDs from any region to play. Newer drives use RPC-2 firmware, which enforces DVD region coding at the hardware level. See DVD region code#Computer DVD drives for further information.
-Some RPC-2 drives can be converted to RPC-1 with the same features as before by using alternative firmware on the drive, or on some drives by setting a secret flag in the drive's EEPROM.

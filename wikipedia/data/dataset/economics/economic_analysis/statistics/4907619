@@ -1,3 +1,0 @@
-Truncated regression models arise in many applications of statistics, for example in econometrics, in cases where observations with values in the outcome variable below or above certain thresholds are systematically excluded from the sample. Therefore, whole observations are missing, so that neither the dependent nor the independent variable is known.
-Truncated regression models are often confused with censored regression models where only the value of the dependent variable is clustered at a lower threshold, an upper threshold, or both, while the value for independent variables is available.
-Estimation of truncated regression models are usually done via parametric, semi-parametric and non-parametric maximum likelihood methods.

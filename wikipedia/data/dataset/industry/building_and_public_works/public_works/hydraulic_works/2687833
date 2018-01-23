@@ -1,4 +1,0 @@
-In a hydraulic circuit, net positive suction head (NPSH) may refer to one of two quantities in the analysis of cavitation:
-The Available NPSH (NPSHA): a measure of how close the fluid at a given point is to flashing, and so to cavitation.
-The Required NPSH (NPSHR): the head value at a specific point (e.g. the inlet of a pump) required to keep the fluid from cavitating.
-NPSH is particularly relevant inside centrifugal pumps and turbines, which are parts of a hydraulic system that are most vulnerable to cavitation. If cavitation occurs, the drag coefficient of the impeller vanes will increase drastically—possibly stopping flow altogether—and prolonged exposure will damage the impeller.

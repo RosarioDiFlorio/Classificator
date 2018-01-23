@@ -1,3 +1,0 @@
-Apache NiFi (short for NiagaraFiles) is a software project from the Apache Software Foundation designed to automate the flow of data between software systems. It is based on the "NiagaraFiles" software previously developed by the NSA and open-sourced as a part of its technology transfer program in 2014.
-The software design is based on the flow-based programming model and offers features which prominently include the ability to operate within clusters, security using TLS encryption, extensibility (users can write their own software to extend it's abilities) and improved usability features like a portal which can be used to view and modify behaviour visually.
-Software development and commercial support is currently offered by Hortonworks, previously known as Onyara Inc.

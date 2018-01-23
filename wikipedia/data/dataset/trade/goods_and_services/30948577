@@ -1,2 +1,0 @@
-Orbada is a free tool for database developers, SQL developers and administrators. Includes many wizards and special features to help database administrator job. By using Java and JDBC drivers allow you to connect to multiple databases. Orbada is provided with a dedicated plug-in for databases such as Oracle, SQLite, Firebird, HSQLDB, DerbyDB and help with syntax highlighting, database browser, profiler. The tool is still being developed with additional plug-ins.
-The program is distributed under the GNU General Public License.

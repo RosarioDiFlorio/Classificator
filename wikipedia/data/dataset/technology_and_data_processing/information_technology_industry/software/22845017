@@ -1,3 +1,0 @@
-LIVE555 Streaming Media is a set of open source (LGPL) C++ libraries developed by Live Networks, Inc. for multimedia streaming. The libraries support open standards such as RTP/RTCP and RTSP for streaming, and can also manage video RTP payload formats such as H.264, H.265, MPEG, VP8, and DV, and audio RTP payload formats such as MPEG, AAC, AMR, AC-3 and Vorbis. It is used internally by well-known software such as VLC and mplayer.
-The software distribution also includes a complete RTSP server application, RTSP clients and a RTSP proxy server.
-Live666  is a fork of live555 that supports to build the library as shared library on Windows, Linux and Mac OS. It is synchronized regularly with the live555 library.

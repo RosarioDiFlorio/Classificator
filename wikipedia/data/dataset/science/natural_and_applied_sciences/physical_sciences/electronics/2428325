@@ -1,2 +1,0 @@
-A potentiostat is the electronic hardware required to control a three electrode cell and run most electroanalytical experiments. A Bipotentiostat and polypotentiostat are potentiostats capable of controlling two working electrodes and more than two working electrodes, respectively.
-The system functions by maintaining the potential of the working electrode at a constant level with respect to the reference electrode by adjusting the current at an auxiliary electrode. It consists of an electric circuit which is usually described in terms of simple op amps.

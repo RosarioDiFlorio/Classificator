@@ -1,2 +1,0 @@
-Common Programming Interface for Communications (CPI-C) is an application programming interface developed by IBM in 1987 to provide a platform-independent communications interface for the IBM Systems Application Architecture based network, and standardising programming access to SNA LU 6.2.
-It was adopted in 1992 by X/Open as an open systems standard, identified as standard C210, and documented in X/Open Developers Specification: CPI-C.

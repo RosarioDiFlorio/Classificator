@@ -1,4 +1,0 @@
-FreeCast is a free software application which allows peer-to-peer streaming, sometimes called peercasting. It makes possible an audio (Ogg Vorbis) or video (Ogg Theora) stream broadcast to a large number of listeners from a simple DSL connection.
-The FreeCast client used by listeners does not require any configuration to work. FreeCast nodes support NAT traversal.
-FreeCast is made up of Java applications released under the GNU GPL and is available for most operating systems.
-Last commit was on 2006-06-29.

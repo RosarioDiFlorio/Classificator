@@ -1,6 +1,0 @@
-Temporal database stores data relating to time instances. It offers temporal data types and stores information relating to past, present and future time. the temporal data base has two major notions or attributes. 1. valid time. 2. transaction time. More specifically the temporal aspects usually include valid time and transaction time. These attributes can be combined to form bitemporal data.
-Valid time is the time period during which a fact is true in the real world.
-Transaction time is the time period during which a fact stored in the database was known.
-Bitemporal data combines both Valid and Transaction Time.
-It is possible to have timelines other than Valid Time and Transaction Time, such as Decision Time, in the database. In that case the database is called a multitemporal database as opposed to a bitemporal database. However, this approach introduces additional complexities such as dealing with the validity of (foreign) keys.
-Temporal databases are in contrast to current databases (a term that doesn't mean currently available databases, some do have temporal features, see also below), which store only facts which are believed to be true at the current time.

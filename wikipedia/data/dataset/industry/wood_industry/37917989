@@ -1,9 +1,0 @@
-The EPUB3 standard was released by the IDPF in 2011; however, even a year after the standard was released, most readers do not fully support this standard.
-This version of the standard adds rich media capabilities such as:
-Scalable Vector Graphics (SVG)
-JavaScript scripting capabilities for interaction and animation
-Support for CSS3 (and HTML5)
-MathML
-Video support
-Media overlay (read aloud) an option to add audio to text or images
-Source codes available at http://imojo.in/epub

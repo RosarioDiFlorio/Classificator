@@ -1,6 +1,0 @@
-The strain hardening exponent (also called strain hardening index), noted as n, is a material's constant which is used in calculations for stress–strain behavior in work hardening.
-In the formula σ = K ε n,
-σ represents the applied stress on the material,
-ε is the strain,
-K is the strength coefficient.
-The value of the strain hardening exponent lies between 0 and 1. A value of 0 means that a material is a perfectly plastic solid, while a value of 1 represents a 100% elastic solid. Most metals have an n value between 0.10 and 0.50.

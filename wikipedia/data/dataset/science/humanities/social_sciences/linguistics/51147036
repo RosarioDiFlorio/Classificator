@@ -1,6 +1,0 @@
-Constraint-based grammars can perhaps be best understood in contrast to generative grammars. A generative grammar lists all the transformations, merges, movements, and deletions that can result in all well-formed sentences, while constraint-based grammars, take the opposite approach, allowing anything that is not otherwise constrained. "The grammar is nothing but a set of constraints that structures are required to satisfy in order to be considered well-formed." "A constraint-based grammar is more like a data base or a knowledge representation system than it is like a collection of algorithms."
-Examples of such grammars include
-the non-procedural variant of Transformational Grammar of Lakoff, that formulates constraints on potential tree sequences,
-Johnson and Postal’s formalization of Relational Grammar (1980), GPSG in the variants developed by Gazdar et al. (1988), Blackburn et al. (1993) and Rogers (1997),
-LFG in the formalization of Kaplan (1995) and
-HPSG in the formalization of King (1999).

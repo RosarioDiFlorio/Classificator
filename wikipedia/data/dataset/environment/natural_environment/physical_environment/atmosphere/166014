@@ -1,4 +1,0 @@
-In atmospheric science, surface pressure is the atmospheric pressure at a location on Earth's surface. It is directly proportional to the mass of air over that location.
-For numerical reasons, atmospheric models such as general circulation models (GCMs) usually predict the nondimensional logarithm of surface pressure.
-The average value of surface pressure on Earth is 985hPa. This is in contrast to mean sea-level pressure, which involves the extrapolation of pressure to sea-level for locations above or below sea-level. The average pressure at mean sea-level (MSL) in the International Standard Atmosphere (ISA) is 1013.25hPa, or 1 atmosphere (Atm), or 29.92 inches of mercury.
-Pressure (P), mass (m), and the acceleration due to gravity (g), are related by P = F/A = (m*g)/A, where A is surface area. Atmospheric pressure is thus proportional to the weight per unit area of the atmospheric mass above that location.

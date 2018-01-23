@@ -1,3 +1,0 @@
-The Zero-Coupon Inflation Swap (ZCIS) is a standard derivative product which payoff depends on the Inflation rate realized over a given period of time. The underlying asset is a single Consumer price index (CPI).
-It is called Zero-Coupon because there is only one cash flow at the maturity of the swap, without any intermediate coupon.
-It is called Swap because at maturity date, one counterparty pays a fixed amount to the other in exchange for a floating amount (in this case linked to inflation). The final cash flow will therefore consist of the difference between the fixed amount and the value of the floating amount at expiry of the swap.

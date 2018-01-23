@@ -1,1 +1,0 @@
-Sparse binary polynomial hashing (SBPH) is a generalization of Bayesian spam filtering that can match mutating phrases as well as single words. SBPH is a way of generating a large number of features from an incoming text automatically, and then using statistics to determine the weights for each of those features in terms of their predictive values for spam/nonspam evaluation.

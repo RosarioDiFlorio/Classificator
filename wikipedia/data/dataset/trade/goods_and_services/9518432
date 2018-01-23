@@ -1,8 +1,0 @@
-WikiProfessional (Wiki for Professionals) is a web-based research environment for semantic searching, providing an intuitive tool for analyzing and relating concepts.
-When data is entered, the system semantically analyzes and recognizes co-occurrences between different entities. The results are visualized through a Knowlet, which is a visual representation of semantic distance between associated entities. This Knowlet is then used to notify persons that have subscribed to these entities, enabling a rapid data interchange between collaborators.
-The current focus is proteins using WikiProteins as knowledge portal. It contains over a hundred million entries, "melding some of the key biomedical databases into a single information resource".
-245,000 Proteins from UniProt/Swiss-Prot
-24,000 Gene Ontology terms from the GO Consortium
-880,000 Concepts from UMLS/NLM
-112,000,000 Unique sentences from Medline
-The project, which is nearing the open beta test phase, is operated by Knewco and led by initiator Barend Mons, a bioinformatician at the Erasmus MC and Leiden University Medical Centre. Knewco intends to profit from WikiProfessionals by charging some users (such as drug firms) for "premium services", for example incorporating a private version of the system with in-house data.

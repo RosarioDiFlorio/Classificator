@@ -1,3 +1,0 @@
-Nikto Web Scanner is a Web server scanner that tests Web servers for dangerous files/CGIs, outdated server software and other problems. It performs generic and server type specific checks. It also captures and prints any cookies received.
-The Nikto code itself is Open Source (GPL), however the data files it uses to drive the program are not.
-Chris Sullo, the CFO of Open Security Foundation has written this scanner for vulnerability assessment.

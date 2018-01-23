@@ -1,6 +1,0 @@
-In aerospace engineering, the ultimate load is a statistical figure used in calculations, and should (hopefully) never actually occur.
-Strength requirements are specified in terms of limit loads (the maximum loads to be expected in service) and ultimate loads (limit loads multiplied by prescribed factors of safety). With respect to aircraft structure and design, ultimate load is the amount of load applied to a component beyond which the component will fail. The chance that it will occur is, however, not zero, and, if it were to occur, then the relevant structure in the aircraft would stand a large chance of fracture.
-During the testing for determination of the loads, no fracture must occur at the ultimate load for a period of 3 seconds.
-This also majorly used in knowing the properties of a metal beams, for example it is used in experiments such as called T.T.M(tensile testing machine), U.T.M(universal teating machine)
-The ultimate load is related to the limit load Bn, using the concept of safety factor, j. The relation is as follows:
-Bu >= 1.5 Bn

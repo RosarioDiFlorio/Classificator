@@ -1,8 +1,0 @@
-DOCLE (Doctor Command Language), is a non-numeric health coding and medical classification system. The DOCLE system is used in Health Communication Network's electronic medical record and patient management software package, Medical Director. Medical Director is the most widely used electronic medical record system by Australian primary health care providers.
-DOCLE has been modelled on the Linnaean biological classification system since 1995. DOCLE generates clinical codes from ubiquitous health language using an algorithm, hence it is a human readable clinical coding system.
-The design principles of DOCLE, as enumerated by the author in the DOCLE website include:
-DOCLE codes being meaningful and intentional
-DOCLE codes are derived from ubiquitous health language
-DOCLE codes grew with evolving order and speciation of large scale structures in a linnean manner.
-DOCLE codes are designed to strap together and form clinical structures using joiner codes
-The author of DOCLE, Dr. Y Kuang Oon, has likened clinical codes to "neurons" and joiner codes as the "glia"

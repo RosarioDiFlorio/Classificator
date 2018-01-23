@@ -1,4 +1,0 @@
-The Australian Integrated Forecast System (AIFS) is a UNIX and Linux -based processing, display, analysis and communications system for meteorological data.
-It incorporates facilities for the ingest and storage of meteorological and hydrological observations, which can be displayed, analysed and manipulated on screen. Tools are also provided for alerting, chart plotting and the preparation and dissemination of forecasts and warnings to the public.
-AIFS is currently running on AIX, HP-UX and Linux platforms in Australia, Fiji, Indonesia and Malaysia.
-Development began in 1991 as a replacement for the Automated Regional Operations System (AROS), built on Tandem NonStop architecture.

@@ -1,6 +1,0 @@
-Task Analysis, Environment Modeling, and Simulation (TAEMS or TÆMS) is a problem domain independent modeling language used to describe the task structures and the problem-solving activities of intelligent agents in a multi-agent environment.
-The intelligent agent operates in environments where:
-responses by specific deadlines may be required
-the information required for the optimal performance of a computational task may not be available
-the results of the computations of multiple agents to interdependent subproblems may need to be aggregated together in order to solve a high-level goal
-an agent may be contributing concurrently to the solution of multiple goals

@@ -1,1 +1,0 @@
-Approximate max-flow min-cut theorems are mathematical propositions in network flow theory. They deal with the relationship between maximum flow rate ("max-flow") and minimum cut ("min-cut") in a multi-commodity flow problem. The theorems have enabled the development of approximation algorithms for use in graph partition and related problems.

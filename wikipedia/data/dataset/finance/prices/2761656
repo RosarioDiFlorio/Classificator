@@ -1,2 +1,0 @@
-A Walrasian auction, introduced by Léon Walras, is a type of simultaneous auction where each agent calculates its demand for the good at every possible price and submits this to an auctioneer. The price is then set so that the total demand across all agents equals the total amount of the good. Thus, a Walrasian auction perfectly matches the supply and the demand.
-Walras suggests that equilibrium will be achieved through a process of tâtonnement (French for "trial and error"), a form of hill climbing.

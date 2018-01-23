@@ -1,4 +1,0 @@
-A transverse mode of electromagnetic radiation is a particular electromagnetic field pattern of radiation measured in a plane perpendicular (i.e., transverse) to the propagation direction of the beam. Transverse modes occur in radio waves and microwaves confined to a waveguide, and also in light waves in an optical fiber and in a laser's optical resonator.
-Transverse modes occur because of boundary conditions imposed on the wave by the waveguide. For example, a radio wave in a hollow metal waveguide must have zero tangential electric field amplitude at the walls of the waveguide, so the transverse pattern of the electric field of waves is restricted to those that fit between the walls. For this reason, the modes supported by a waveguide are quantized. The allowed modes can be found by solving Maxwell's equations for the boundary conditions of a given waveguide.
-
-

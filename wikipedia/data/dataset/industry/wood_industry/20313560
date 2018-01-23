@@ -1,9 +1,0 @@
-In mathematics the regular paperfolding sequence, also known as the dragon curve sequence, is an infinite automatic sequence of 0s and 1s defined as the limit of the following process:
-1
-1 1 0
-1 1 0 1 1 0 0
-1 1 0 1 1 0 0 1 1 1 0 0 1 0 0
-At each stage an alternating sequence of 1s and 0s is inserted between the terms of the previous sequence. The sequence takes its name from the fact that it represents the sequence of left and right folds along a strip of paper that is folded repeatedly in half in the same direction. If each fold is then opened out to create a right-angled corner, the resulting shape approaches the dragon curve fractal. For instance the following curve is given by folding a strip four times to the right and then unfolding to give right angles, this gives the first 15 terms of the sequence when 1 represents a right turn and 0 represents a left turn.
-
-Starting at n = 1, the first few terms of the regular paperfolding sequence are:
-1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, ... (sequence A014577 in the OEIS)

@@ -1,5 +1,0 @@
-OpenFX is an open-source, free modeling and animation studio, distributed under the GNU General Public License, created by Dr. Stuart Ferguson. He made the decision to release the source code to the public in the middle of 1999 and released a stable version a year and a half later. The product, formerly named SoftF/X, was renamed to OpenFX.
-The OpenFX featureset includes a full renderer and raytracing engine, NURBS support, kinematics-based animation, morphing, and an extensive plugin API. Plugin capabilities include image post processor effects such as lens flare, fog and depth of field. Animation effects such as explosions, waves and dissolves add to the flexibility of the program. Version 2.0 also features support for modern graphics cards with hardware GPU acceleration.
-OpenFX supports the Win32 platform, including Windows 2000, XP, Vista, 7 and 8. It can run under Unix-based platforms by using the Wine compatibility layer.
-
-

@@ -1,4 +1,0 @@
-Cascades in financial networks are situations in which the failure of one financial institution causes a cascading failure in another member of the financial network. In an extreme this can cause failure of the whole network in what is known as systemic failure. It can be defined as the discontinuous value loss (e.g. default) of the organization caused by the discontinuous value loss of another organization in the network. There are three conditions required for a cascade, there are; a failure, contagion and interconnection.
-Diversification and integration in the financial network determine whether and how failures will spread. Using the data on cross-holdings of organizations and on the value of organizations, it is possible to construct the dependency matrix to simulate cascades in the financial network.
-
-

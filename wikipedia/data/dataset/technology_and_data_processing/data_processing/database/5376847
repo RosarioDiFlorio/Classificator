@@ -1,6 +1,0 @@
-In Database Management System, a transitive dependency is a functional dependency which holds by virtue of transitivity. A transitive dependency can occur only in a relation that has three or more attributes. Let A, B, and C designate three distinct attributes (or distinct collections of attributes) in the relation. Suppose all three of the following conditions hold:
-A → B
-It is not the case that B → A
-B → C
-Then the functional dependency A → C (which follows from 1 and 3 by the axiom of transitivity) is a transitive dependency.
-In database normalization, one of the important features of third normal form is that it excludes certain types of transitive dependencies. E.F. Codd, the inventor of the relational model, introduced the concepts of transitive dependence and third normal form in 1971.
