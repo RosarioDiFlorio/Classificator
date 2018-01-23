@@ -169,6 +169,13 @@ public class CrawlerWikipediaCategory {
 		SQLiteVectors sqlConnectorVector = new SQLiteVectors("databaseVectors.db");
 
 		for(String vertex : adjacencyList.keySet()){
+			
+			try {
+				sqlConnectorGraph.insertMarkedNode(vertex, adjacencyList.get(vertex).isTaxonomyCategory());
+			} catch (SQLException e1) {
+				e1.printStackTrace();
+			}
+			
 			float[] vertexVector = sqlConnectorVector.getVectorByName(vertex);
 			HashSet<String> linkedNode = adjacencyList.get(vertex).getLinkedVertex();
 			for(String currentVertex : linkedNode){
@@ -176,7 +183,12 @@ public class CrawlerWikipediaCategory {
 				double weight = cosineSimilarityInverse(vertexVector, currentVertexVector);
 				System.out.println(currentVertex);
 				try {
-					sqlConnectorGraph.insertEdge(vertex, currentVertex, weight);
+					if(validateVector(vertexVector) && validateVector(currentVertexVector)){
+						sqlConnectorGraph.insertEdge(vertex, currentVertex, weight);					}
+					else{
+						sqlConnectorGraph.insertEdge(vertex, currentVertex, 3.14/2);
+					}
+					
 				} catch (SQLException e) {
 					System.out.println("To continue cicle");
 					e.printStackTrace();

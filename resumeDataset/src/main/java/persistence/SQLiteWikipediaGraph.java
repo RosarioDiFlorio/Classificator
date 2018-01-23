@@ -13,12 +13,12 @@ import utility.Vertex;
 
 public class SQLiteWikipediaGraph extends SQLiteConnector  {
 
-	
-	
+
+
 	public SQLiteWikipediaGraph (String dbName){
-		
+
 		super(dbName);
-		
+
 	}
 
 
@@ -61,6 +61,30 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
 
 	}
 
+
+	public void insertMarkedNode(String name, boolean isMarked) throws SQLException{
+		PreparedStatement pstmt = super.getConnection().prepareStatement("INSERT INTO markedNodes VALUES(?,?)");
+		pstmt.setString(1, name);
+		pstmt.setBoolean(2, isMarked);
+		pstmt.executeUpdate();
+	}
+
+	public boolean isMarked(String name){
+		String sql = "SELECT marked FROM markedNodes WHERE name =\""+name+"\"";
+
+		boolean toReturn = false;
+		try {
+			Statement stm = super.getConnection().createStatement();
+			stm.executeQuery(sql);
+			ResultSet res = stm.executeQuery(sql);
+			toReturn = res.getBoolean("marked");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return toReturn;
+	}
+
 	/**
 	 * return query results. 
 	 * @param source
@@ -70,7 +94,7 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
 	 */
 	public EdgeResult getEdgeList(String source, String queryType) throws SQLException{
 
-		
+
 		// build sql request 
 		String sql=null;
 		if(queryType.equals("parents"))
@@ -78,22 +102,21 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
 		else if(queryType.equals("childs"))
 			sql = "SELECT childs,weight FROM edges WHERE parents =\""+source+"\"";
 
-		
-		 Statement stm = super.getConnection().createStatement();
-		 stm.executeQuery(sql);
-		 ResultSet res = stm.executeQuery(sql);
-		 boolean result = res.next();
-		 List<Vertex> vertexList = new ArrayList<Vertex>();
-		 
-		 //while there are row in result to read
-		 while(result){
-			 String dest = res.getString(queryType);
-			 double distance = res.getDouble("weight");
-			 vertexList.add(new Vertex(dest,distance));
-			 result = res.next();
-		 }
-		 
-		 return new EdgeResult(source, vertexList);
+
+		Statement stm = super.getConnection().createStatement();
+		ResultSet res = stm.executeQuery(sql);
+		boolean result = res.next();
+		List<Vertex> vertexList = new ArrayList<Vertex>();
+
+		//while there are row in result to read
+		while(result){
+			String dest = res.getString(queryType);
+			double distance = res.getDouble("weight");
+			vertexList.add(new Vertex(dest,distance));
+			result = res.next();
+		}
+
+		return new EdgeResult(source, vertexList);
 
 	}
 
