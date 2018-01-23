@@ -58,7 +58,6 @@ public class DatasetBuilder {
 
     int rootDocumentLimit = 2000;
 
-
     int count = 0;
     //costruisco la struttura delle folder secondo il file csv.
     String pathDataset = "data/dataset_test_1xLeaf_50char";
@@ -83,7 +82,7 @@ public class DatasetBuilder {
       count++;
 
       if(count%8 == 0 || count == csvMap.size()){
-        Map<String, Set<DocumentInfo>> results = WikipediaMiner.buildDataset(toExtract, 0, true, 1,50);
+        Map<String, Set<DocumentInfo>> results = WikipediaMiner.buildDatasetOnline(toExtract, 0, true, 1);
         System.out.println("Categories done -> "+ count);
         for(String key : results.keySet()){
           System.out.print(key+"-> "+results.get(key).size()+", ");

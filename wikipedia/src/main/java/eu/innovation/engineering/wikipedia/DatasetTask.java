@@ -8,6 +8,8 @@ import java.util.Set;
 import java.util.concurrent.Callable;
 import java.util.concurrent.RecursiveTask;
 
+import persistence.SQLiteWikipediaGraph;
+
 /**
  * @author Rosario Di Florio (RosarioUbuntu)
  *
@@ -18,19 +20,30 @@ public class DatasetTask extends RecursiveTask<Map<String,Set<DocumentInfo>>> im
   private int maxLevel;
   private boolean recursive;
   private int limitDocs;
-  private int minLenText;
+  private SQLiteWikipediaGraph graph;
 
-  /**
+  /**Constructior for the Offline Versione(database required).
+   * @param category
+   * @param graph
+   * @param limitDocs
+   */
+  public DatasetTask(String category,SQLiteWikipediaGraph graph,int limitDocs){
+    this.category = category;
+    this.graph = graph;
+    this.limitDocs = limitDocs;
+  }
+  /**Constructor for the Online version without the database.
    * @param category
    * @param maxLevel
    * @param recursive
+   * @param limitDocs
    */
-  public DatasetTask(String category,int maxLevel,boolean recursive,int limitDocs,int minLenText){
+  public DatasetTask(String category,int maxLevel,boolean recursive,int limitDocs){
     this.category = category;
     this.maxLevel = maxLevel;
     this.recursive = recursive;
     this.limitDocs = limitDocs;
-    this.minLenText = minLenText;
+    this.graph = graph;
   }
 
 
@@ -43,11 +56,17 @@ public class DatasetTask extends RecursiveTask<Map<String,Set<DocumentInfo>>> im
   protected Map<String, Set<DocumentInfo>> compute() {
     Map<String, Set<DocumentInfo>> toReturn = new HashMap<>();
     try {
-      //Set<String> listIdDocuments = WikipediaMiner.requestIdsPagesOfCategory(category, new HashSet<String>(), recursive, 0, maxLevel,limitDocs);
-      //Map<String, DocumentInfo> contents = WikipediaMiner.getContentPages(listIdDocuments,200,limitDocs);
-      
-      Map<String, DocumentInfo> contents = WikipediaMiner.getContentFromCategoryPages(category, new HashSet<String>(), recursive, 0, maxLevel,limitDocs,minLenText);
-
+      Map<String, DocumentInfo> contents = new HashMap<>();
+      /*
+       * Oline Version.
+       */     
+      if(graph == null)
+        contents = WikipediaMiner.getContentFromCategoryPages(category, new HashSet<String>(), recursive, 0, maxLevel,limitDocs);
+      /*
+       * Offline Versione
+       */
+      else
+        contents = WikipediaMiner.getContentFromCategoryPages(category, graph, limitDocs);
       
       Set<DocumentInfo> listDocument = new HashSet<>();
       for(String idDoc: contents.keySet()){

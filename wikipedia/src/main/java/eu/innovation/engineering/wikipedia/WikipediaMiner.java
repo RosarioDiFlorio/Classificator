@@ -9,13 +9,11 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLEncoder;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -26,56 +24,30 @@ import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.Future;
 import java.util.stream.Collectors;
 
-import org.apache.commons.text.similarity.LevenshteinDistance;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
+import eu.innovationengineering.solrclient.auth.collection.queue.UpdatablePriorityQueue;
+import persistence.EdgeResult;
+import persistence.SQLiteWikipediaGraph;
+import utility.PathInfo;
+
 /**
  * @author Rosario Di Florio (RosarioUbuntu)
  *
  */
-public class WikipediaMiner implements WikiRequest{
+public class WikipediaMiner{
+  
   private static final long serialVersionUID = 1L;
-
   private static final Logger logger = LoggerFactory.getLogger(WikipediaMiner.class);
-
-  /**
-   * @param args
-   * @throws IOException
-   * @throws InterruptedException
-   * @throws ExecutionException
-   */
-  public static void main(String args[]) throws IOException, InterruptedException, ExecutionException{
-
-  }
-
-
-  private static void mergeFolders(String pathSource,String pathTarget) throws IOException{
-    File dir = new File(pathSource);
-    List<File> toMove = new ArrayList<File>();
-    if(dir.isDirectory()){
-      File[] subDirs = dir.listFiles();
-
-      for(File f:subDirs){
-        if(f.isDirectory()){
-          File target = new File(pathTarget);
-          for(File doc:f.listFiles()){
-            Files.copy(doc.toPath(), Paths.get(pathTarget+doc.getName()), StandardCopyOption.REPLACE_EXISTING);
-          }           
-        }
-      }
-
-
-    }
-  }
-
-
+  
+  
+  
   /**
    * @param pathDataset
    * @param datasetMap
@@ -121,17 +93,15 @@ public class WikipediaMiner implements WikiRequest{
    * @throws InterruptedException
    * @throws ExecutionException
    */
-  public static Map<String,Set<DocumentInfo>> buildDataset(Set<String> categories,int maxLevel,boolean recursive,int limitDocs,int minLenText) throws IOException, InterruptedException, ExecutionException{
+  public static Map<String,Set<DocumentInfo>> buildDatasetOnline(Set<String> categories,int maxLevel,boolean recursive,int limitDocs) throws IOException, InterruptedException, ExecutionException{
 
 
     ForkJoinPool pool = new ForkJoinPool();
     List<DatasetTask> datasetTasks = new ArrayList<>();
-
     for(String cat : categories){
-      DatasetTask task = new DatasetTask(cat, maxLevel,recursive,limitDocs,minLenText);
+      DatasetTask task = new DatasetTask(cat, maxLevel,recursive,limitDocs);
       datasetTasks.add(task);
     }
-
     List<Future<Map<String, Set<DocumentInfo>>>> result = pool.invokeAll(datasetTasks);
     Map<String,Set<DocumentInfo>> datasetMap = new HashMap<>();
     for(Future<Map<String, Set<DocumentInfo>>> future : result){
@@ -148,8 +118,11 @@ public class WikipediaMiner implements WikiRequest{
    * @return
    * @throws IOException
    */
-  public static Set<String> getIdsMemberByType(String queryKey, String typePages,int nameSpace) throws IOException{
+  public static Set<String> getIdsMemberByType(String queryKey, String typePages,int nameSpace,int limitDocument) throws IOException{
     Set<String> toReturn = new HashSet<>();
+    if(limitDocument > 500 || limitDocument <= 0)
+      limitDocument = 500;
+
 
     String queryKeyType = "";
     if(isNumeric(queryKey)){
@@ -157,7 +130,7 @@ public class WikipediaMiner implements WikiRequest{
     }else{
       queryKeyType = "&cmtitle=";
     }
-    String targetURL = "https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtype="+typePages+queryKeyType+queryKey+"&cmnamespace="+nameSpace+"&cmprop=ids&cmlimit=500&format=json";
+    String targetURL = "https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtype="+typePages+queryKeyType+queryKey+"&cmnamespace="+nameSpace+"&cmprop=ids&cmlimit="+limitDocument+"&format=json";
     //System.out.println(targetURL);
     JsonObject response = getJsonResponse(targetURL);
     JsonArray results = new JsonArray();
@@ -272,7 +245,7 @@ public class WikipediaMiner implements WikiRequest{
    * @return
    * @throws IOException
    */
-  public static Map<String, DocumentInfo> getContentPages(Set<String> idPages,int minLenghtText,int limitDocs) throws IOException{
+  public static Map<String, DocumentInfo> getContentPages(Set<String> idPages,int limitDocs) throws IOException{
 
     Map<String,DocumentInfo> contentPagesMap = new HashMap<>();
     String targetURL = "";
@@ -287,38 +260,44 @@ public class WikipediaMiner implements WikiRequest{
      * Default: 20
      */
     int exlimit = 20;
-
+    if(limitDocs< exlimit)
+      exlimit = limitDocs;
     LinkedList<String> listId = new LinkedList<>(idPages);
     int countLimit = 0;
+    int countDocument = 0;
     String ids = "";
     while(!listId.isEmpty()){
       countLimit++;
       ids += listId.poll()+"|";
 
+
+
       if(countLimit>= exlimit || listId.isEmpty()){
         ids = ids.replaceAll("\\|$", "");
-        int countDocument = 0;
-        targetURL = " https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=&exintro=&pageids="+ids+"&format=json";
+        targetURL = " https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=&exintro=&exlimit="+exlimit+"&pageids="+ids+"&format=json";
         response = getJsonResponse(targetURL); 
 
         for(String id: ids.split("\\|")){
           String title = response.get("query").getAsJsonObject().get("pages").getAsJsonObject().get(id).getAsJsonObject().get("title").getAsString();
           String content = response.get("query").getAsJsonObject().get("pages").getAsJsonObject().get(id).getAsJsonObject().get("extract").getAsString();
-          //countrollo sulla lunghezza minima del testo.
-          if(content.length() >= 200){
-            countDocument++;
-            DocumentInfo docInfo = new DocumentInfo();
-            docInfo.setId(id);
-            docInfo.setText(content);
-            docInfo.setTitle(title);
-            contentPagesMap.put(id, docInfo);
-            if(countDocument >= limitDocs)
-              return contentPagesMap;
-          }
+          DocumentInfo docInfo = new DocumentInfo();
+          docInfo.setId(id);
+          docInfo.setText(content);
+          docInfo.setTitle(title);
+          contentPagesMap.put(id, docInfo);
         }
 
+
+        countDocument+=countLimit;      
+        if(countDocument >= limitDocs)
+          return contentPagesMap;
+
+        limitDocs -= exlimit;
+        if(limitDocs< exlimit)
+          exlimit = limitDocs;
+
         ids ="";
-        countLimit = 1;
+        countLimit = 0;
       }
 
 
@@ -328,87 +307,8 @@ public class WikipediaMiner implements WikiRequest{
     return contentPagesMap;
   }
 
-  public static List<String> searchWiki(String keySearch) throws IOException{
-    String query = "https://en.wikipedia.org/w/api.php?action=query&list=search&redirects&srnamespace=0&srwhat=text&utf8=&srsearch="+keySearch.replace(" ", "_")+"&format=json";
-    JsonObject response = getJsonResponse(query);
-    List<String> pages= new ArrayList<>();
-    JsonArray pagesJson = response.get("query").getAsJsonObject().get("search").getAsJsonArray();
-    if(pagesJson.size()!=0){
-      for(int i = 0;i<pagesJson.size();i++){
-        String titlePage = response.get("query").getAsJsonObject().get("search").getAsJsonArray().get(i).getAsJsonObject().get("title").getAsString();
-        if(!titlePage.matches(".*[0-9]{4}.*"))
-          pages.add(titlePage);
-      }
-    }
-    return pages;
-  }
-
-  public static WikiCategoryMatch getCategory(String queryKey,String toCompare,WikiCategoryMatch toReturn) throws IOException{
-    String queryKeyType = "";
-    if(queryKey!= null){
-      if(queryKey.contains(" "))
-        queryKey = URLEncoder.encode(queryKey,"utf-8");
-      if(isNumeric(queryKey)){
-        queryKeyType = "&pageids=";
-      }else{
-        queryKeyType = "&titles=";
-      }
-      String query ="https://en.wikipedia.org/w/api.php?action=query&prop=categories&redirects&indexpageids=&clshow=!hidden&cldir=ascending"+queryKeyType+queryKey+"&format=json";
-      JsonObject response = getJsonResponse(query);
-      String id = null;
-      JsonArray category = null;
-      try{
-        id = response.get("query").getAsJsonObject().get("pageids").getAsJsonArray().get(0).getAsString();
-        category = response.get("query").getAsJsonObject().get("pages").getAsJsonObject().get(id).getAsJsonObject().get("categories").getAsJsonArray();
 
 
-        LevenshteinDistance lDis = new LevenshteinDistance();
-
-        String nameCategory = "";
-        double min = 200;
-        for(int i=0;i<category.size();i++){
-          String tmpName = category.get(i).getAsJsonObject().get("title").getAsString();
-          String left = tmpName.replace("Category:", "").toLowerCase();
-          String right = queryKey.replace("_", " ").toLowerCase();
-          String hint = toCompare.replace("_", " ").toLowerCase();
-          double distance = 0;
-          double distanceRight = lDis.apply(left,right);
-          double distanceHint = lDis.apply(left,hint);
-
-          if(distanceRight< distanceHint)
-            distance = distanceRight;
-          else{
-            distance = distanceHint;
-            if(distance == 0){
-              toReturn.addExact(tmpName,distance);
-            }
-          }
-          if(distance <= min){
-
-            if(!tmpName.matches(".*[0-9]{4}.*")){
-              double distanceHintRight = lDis.apply(hint,right);
-              if(distance <=5 && distanceHintRight<=7)
-                toReturn.addMajor(tmpName,distance);
-              else if(distance<=12)
-                toReturn.addMinor(tmpName,distance);
-              min = distance;
-            }
-          }
-
-        }
-        return toReturn;
-      }catch (Exception e) {
-        // TODO: handle exception
-        System.out.println(queryKey);
-        System.out.println(id);
-        System.out.println(response);
-        return toReturn;
-      }
-    }
-
-    else
-      return toReturn;
-  }
 
 
   /**
@@ -432,25 +332,94 @@ public class WikipediaMiner implements WikiRequest{
     return jOb;
   }
 
+  public static Map<String,DocumentInfo> getContentFromCategoryPages(String category,SQLiteWikipediaGraph graph,int limitDocs) throws IOException{
+    JsonObject response = new JsonObject();
+    Map<String,DocumentInfo> toReturn = new HashMap<>();  
+    //prendo gli id delle pagine di questa categoria.
+    Set<String> idsPages = getIdsMemberByType(category, "page", 0,limitDocs);   
+    toReturn.putAll(getContentPages(idsPages,limitDocs));
+    limitDocs = (limitDocs - toReturn.size());
+    if(toReturn.size() >= limitDocs){
+      return toReturn;
+    }
+    
+    PathInfo  startVertex = new PathInfo(category, 0);
+    UpdatablePriorityQueue<PathInfo> q = new UpdatablePriorityQueue<>();
+    Set<PathInfo> visitedCategory = new HashSet<PathInfo>();
+    q.add(startVertex);
+    while(!q.isEmpty()){
+      PathInfo currentVertex = q.poll();
+      String name = "Category:"+currentVertex.getName();
+      toReturn.putAll(getContentFromCategoryPages(name,graph,limitDocs));
+      limitDocs = limitDocs - toReturn.size();
+      if(toReturn.size() >= limitDocs){
+        return toReturn;
+      }
+      visitedCategory.add(currentVertex);
+      djistraUpdate(currentVertex, visitedCategory, q, graph);
+    }
+    return toReturn;
+  }
 
-  public static Map<String,DocumentInfo> getContentFromCategoryPages(String category,Set<String> ids,boolean recursive,int level,int levelmax,int limitDocs,int minLenText) throws IOException{
+  public static UpdatablePriorityQueue<PathInfo> djistraUpdate(PathInfo vertexStart,Set<PathInfo> visitedVertex,UpdatablePriorityQueue<PathInfo> q,SQLiteWikipediaGraph graph){
+    try{
+      EdgeResult currentEdges = graph.getEdgeList(vertexStart.getName(), "childs");
+      List<PathInfo> linkedVertex = currentEdges.getLinkedVertex().stream().map(v->new PathInfo(v.getVertexName(),(vertexStart.getValue()+v.getSimilarity()),v.getSimilarity())).collect(Collectors.toList());
+      /*
+       * elimino dalla coda i nodi linkati al nodo corrente che hanno valore più alto di quello appena considerato.
+       */
+      boolean updateQueue = false;
+      Iterator<PathInfo> iter = q.iterator();
+      while(iter.hasNext()){
+        PathInfo p = iter.next();
+        int index = linkedVertex.indexOf(p);
+        if(index > 0){
+          PathInfo tmp = linkedVertex.get(index);
+
+          //update element into the priority queue
+          if(p.getValue() > tmp.getValue()){
+            p.setValue(tmp.getValue());
+            updateQueue = true;              }
+        }
+      }
+      if (updateQueue) {
+        q.update();
+      }      
+      /*
+       * filtro i nodi linkati che non appartengo alla priority queue e non appartengo alla lista dei nodi visitati.
+       * per ognuno di questi nodi assegno con parent il nodo corrente e gli aggiorno la lunghezza del path.
+       * infine li aggiungo alla priority queue dei prossimi nodi da visitare.
+       */
+      linkedVertex.stream().filter(el->!q.contains(el) && !visitedVertex.contains(el)).forEach(q::add);
+    }catch (SQLException e) {
+      e.printStackTrace();
+    }   
+    return q;
+  }
+
+
+  /**Complete Online Versione using the wikipedia API.
+   * @param category
+   * @param ids
+   * @param recursive
+   * @param level
+   * @param levelmax
+   * @param limitDocs
+   * @return
+   * @throws IOException
+   */
+  public static Map<String,DocumentInfo> getContentFromCategoryPages(String category,Set<String> ids,boolean recursive,int level,int levelmax,int limitDocs) throws IOException{
     JsonObject response = new JsonObject();
     Map<String,DocumentInfo> toReturn = new HashMap<>();  
     limitDocs = (limitDocs - ids.size());
-    
+
     //level 5 is too heavy to compute.
     if(level >= 4)
       return toReturn;
-    
-    
-    
     //prendo gli id delle pagine di questa categoria.
-    Set<String> idsPages = getIdsMemberByType(category, "page", 0);   
+    Set<String> idsPages = getIdsMemberByType(category, "page", 0,limitDocs);   
     idsPages.removeAll(ids);
-    toReturn.putAll(getContentPages(idsPages, minLenText,limitDocs));
-    
-
-    
+    toReturn.putAll(getContentPages(idsPages,limitDocs));
     if(toReturn.keySet().size() + ids.size() >= limitDocs){
       Map<String,DocumentInfo> tmpMap = new HashMap<>();
       for(String doc: toReturn.keySet()){
@@ -459,51 +428,19 @@ public class WikipediaMiner implements WikiRequest{
           return tmpMap;
       }   
     }
-    
     if((recursive && level <= levelmax) || (toReturn.keySet().size() < limitDocs && recursive)){
-      Set<String> idSubCategories = getIdsMemberByType(category, "subcat", 14);
+      Set<String> idSubCategories = getIdsMemberByType(category, "subcat", 14,0);
       if(idSubCategories.size()>0){
         for(String idSubCategory: idSubCategories){ 
-              toReturn.putAll(getContentFromCategoryPages(idSubCategory,toReturn.keySet(),recursive,level + 1,levelmax,limitDocs,minLenText));
-              if(toReturn.keySet().size()>= limitDocs)
-                return toReturn;
+          toReturn.putAll(getContentFromCategoryPages(idSubCategory,toReturn.keySet(),recursive,level + 1,levelmax,limitDocs));
+          if(toReturn.keySet().size()>= limitDocs)
+            return toReturn;
         }
       }else
         recursive = false;
     }   
     return toReturn;
   }
-
-
-  /**
-   * For a certain category request the id of all its pages.
-   * If recursive is setted true, the function is called for each subcategory of the selected category.
-   * @param category specify the selected category.
-   * @param ids a set of pages ids.
-   * @param recursive specify if the fuction have to be recursive.
-   * @param level specify the max level of deepen 
-   * @return
-   * @throws IOException
-   */
-  public static Set<String> requestIdsPagesOfCategory(String category,Set<String> ids,boolean recursive,int level,int levelmax,int limitDocs) throws IOException { 
-    JsonObject response = new JsonObject();
-    //level 5 is too heavy to compute.
-    if(level >= 4)
-      return ids;
-
-    if((recursive && level <= levelmax) || (ids.size() < limitDocs && recursive)){
-      Set<String> idSubCategories = getIdsMemberByType(category, "subcat", 14);
-      if(idSubCategories.size()>0){
-        for(String idSubCategory: idSubCategories){
-          ids = requestIdsPagesOfCategory(idSubCategory,ids,recursive,level + 1,levelmax,limitDocs);
-        }
-      }else
-        recursive = false;
-    }
-    ids.addAll(getIdsMemberByType(category, "page", 0));
-    return ids.stream().limit(limitDocs).collect(Collectors.toSet());
-  }
-
 
   /**
    * Save a dataset into a folders structure.
@@ -534,37 +471,5 @@ public class WikipediaMiner implements WikiRequest{
       return false;  
     }  
     return true;  
-  }
-
-
-  @Override
-  public DatasetResponse buildDataset(DatasetRequest request) {
-    DatasetResponse response = new DatasetResponse();
-    String levelPathFolder = "/var/lib/jetty/data/"+request.getCurrentLevel();
-    boolean success = new File(levelPathFolder).mkdir();
-    Set<String> categories = request.getCategories();
-    Set<String> tosave = new HashSet<>();
-    for(String c: categories){
-      tosave.add(c.replace("Category:", "").toLowerCase());
-    }
-    try {
-
-      ObjectMapper mapper = new ObjectMapper();
-      mapper.writerWithDefaultPrettyPrinter().writeValue(new File(levelPathFolder+"/categories_"+request.getName()+".json"), tosave);
-
-      String pathFolder = levelPathFolder+"/dataset_"+request.getName();
-      buildStructureFolder(categories, pathFolder);
-      Map<String, Set<DocumentInfo>> datasetMap = buildDataset(request.getCategories(),request.getMaxLevel(), request.isRecursive(),1000,50);
-      writeDocumentMap(pathFolder, datasetMap, new HashSet<String>());
-      response.setStatus(200);
-    }
-    catch (Exception e) {
-      logger.error("An error occurred while generating dataset", e);
-      response.setStatus(500);
-      response.setMessage(e.getClass().getCanonicalName() + ": " + e.getMessage());
-    }
-
-    return response;
-
   }
 }
