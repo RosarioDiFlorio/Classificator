@@ -13,13 +13,11 @@ import utility.Vertex;
 
 public class SQLiteWikipediaGraph extends SQLiteConnector  {
 
-	private static Connection conn;
 	
 	
 	public SQLiteWikipediaGraph (String dbName){
 		
 		super(dbName);
-		conn = getConnection();
 		
 	}
 
@@ -33,10 +31,8 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
 	 */
 	public void insertEdge(String source, String destination, double weight) throws SQLException{
 
-		if(conn == null)
-			conn = connect();
 
-		PreparedStatement pstmt = conn.prepareStatement("INSERT INTO edge VALUES(?,?,?)");	
+		PreparedStatement pstmt = super.getConnection().prepareStatement("INSERT INTO edges VALUES(?,?,?)");	
 
 		pstmt.setString(1, source);
 		pstmt.setString(2, destination);
@@ -54,10 +50,7 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
 	 */
 	public void insertEdgeList(String source, List<String> destination, List<Double> weight) throws SQLException{
 
-		if(conn == null)
-			conn = connect();
-
-		PreparedStatement pstmt = conn.prepareStatement("INSERT INTO edge VALUES(?,?,?)");	
+		PreparedStatement pstmt = super.getConnection().prepareStatement("INSERT INTO edges VALUES(?,?,?)");	
 
 		pstmt.setString(1, source);
 		for(int i=0;i<destination.size();i++){
@@ -76,18 +69,17 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
 	 * @throws SQLException
 	 */
 	public EdgeResult getEdgeList(String source, String queryType) throws SQLException{
-		if(conn == null)
-			conn = connect();
+
 		
 		// build sql request 
 		String sql=null;
 		if(queryType.equals("parents"))
-			sql = "SELECT parents,weight FROM edge WHERE childs = '"+source+"'";
+			sql = "SELECT parents,weight FROM edges WHERE childs =\""+source+"\"";
 		else if(queryType.equals("childs"))
-			sql = "SELECT childs,weight FROM edge WHERE parents = '"+source+"'";
+			sql = "SELECT childs,weight FROM edges WHERE parents =\""+source+"\"";
 
 		
-		 Statement stm = conn.createStatement();
+		 Statement stm = super.getConnection().createStatement();
 		 stm.executeQuery(sql);
 		 ResultSet res = stm.executeQuery(sql);
 		 boolean result = res.next();

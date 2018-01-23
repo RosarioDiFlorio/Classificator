@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -32,6 +33,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 import persistence.SQLiteVectors;
+import persistence.SQLiteWikipediaGraph;
 import utility.AdjacencyListRow;
 import utility.AdjacencyListRowVertex;
 import utility.CallableChildsRequest;
@@ -48,11 +50,11 @@ public class CrawlerWikipediaCategory {
 
 
 	public static void main(String args[]) throws IOException, InterruptedException, ExecutionException{
-		
+
 		mainToBuildWeighedGraph(args);
 	}
-	
-	
+
+
 	/**
 	 * Questo metodo controlla se sono state prese tutte le categorie wikipedia. Verifica se tutti i parents esistono anche come nodi dell adjacency list
 	 * Se esistono nodi che non appartengono, crea un nuovo oggeto CrawlerResult con la PriorityQueue contenente i nuovi nodi da visitare
@@ -66,7 +68,7 @@ public class CrawlerWikipediaCategory {
 		CrawlerResult crawlerResult = new CrawlerResult();
 		HashMap<String, AdjacencyListRow> adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("signedGraphWikipediaCleared");
 		HashSet<String> categoryToAdd = new HashSet<String>();
-		
+
 		// ciclo per vedere se si sono nodi mancanti tra le parent list e le row della lista di adiacenza
 		for(String key : adjacencyList.keySet()){
 			HashSet<String> parentList = adjacencyList.get(key).getLinkedVertex();
@@ -76,33 +78,33 @@ public class CrawlerWikipediaCategory {
 				}
 			}
 		}
-		
+
 		System.out.println("Numero nodi mancancti: "+categoryToAdd.size());
 		System.out.println(categoryToAdd.toString());
-		
+
 		//se ci sono nodi mancanti li aggiungo al grafo
 		if(categoryToAdd.size()>0){
 			//prima creao la PriorityQueue dei vertedToVisit
 			PriorityQueue<String> vertexToVisit = new PriorityQueue<>();
 			vertexToVisit.addAll(categoryToAdd);
-			
+
 			//inizializzo il crawler results
-			
+
 			crawlerResult.setAdjacencyList(adjacencyList);
 			crawlerResult.setLatestCategoryProcessed(new HashSet<>());
 			crawlerResult.setVertexToVisit(vertexToVisit);
 			crawlerResult.setCrashed(false);
 			crawlerResult.setMarkedNode(new HashSet<>(adjacencyList.keySet()));
 			crawlerResult.setNumCategory(adjacencyList.size());
-			
+
 			ObjectMapper writerCrawlerResult = new ObjectMapper();
 			writerCrawlerResult.writerWithDefaultPrettyPrinter().writeValue(new File(crawlerResult.getClass().getSimpleName()), crawlerResult);
-		
+
 		}
 		System.out.println("Before: "+crawlerResult.getAdjacencyList().size());
 		return crawlerResult;
 	}
-	
+
 
 
 
@@ -145,15 +147,43 @@ public class CrawlerWikipediaCategory {
 	public static void mainToBuildWeighedGraph(String args[]) throws JsonParseException, JsonMappingException, IOException{
 		System.out.println("Start to read signedGraphWikipediaCleared ");
 		HashMap<String, AdjacencyListRow> adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("signedGraphWikipediaCleared");
-		System.out.println("Start to read vectorsWikipediaVertex ");
-		Map<String, float[]> vectorsFromWikipediaGraph = AnalyzerWikipediaGraph.loadVectorsWikipediaGraph("vectorsWikipediaVertex");
+		//System.out.println("Start to read vectorsWikipediaVertex ");
+		//Map<String, float[]> vectorsFromWikipediaGraph = AnalyzerWikipediaGraph.loadVectorsWikipediaGraph("vectorsWikipediaVertex");
 		System.out.println("Start to build new Graph ");
-		Map<String, AdjacencyListRowVertex> result = fromAdjacencyListRowToAdjacencyListRowVertex(adjacencyList);
-		ObjectMapper mapper = new ObjectMapper();
-		mapper.writerWithDefaultPrettyPrinter().writeValue(new File("graphWikipediaWeighed"), result);
+		//Map<String, AdjacencyListRowVertex> result = fromAdjacencyListRowToAdjacencyListRowVertex(adjacencyList);
+		saveWeighedGraphIntoDB(adjacencyList);
+
+		//ObjectMapper mapper = new ObjectMapper();
+		//mapper.writerWithDefaultPrettyPrinter().writeValue(new File("graphWikipediaWeighed"), result);
 
 	}
 
+
+
+	/**
+	 * this method is used to weighed wikipediaGraph and save it into db
+	 * @param adjacencyList
+	 */
+	private static void saveWeighedGraphIntoDB(HashMap<String, AdjacencyListRow> adjacencyList) {
+		SQLiteWikipediaGraph sqlConnectorGraph = new SQLiteWikipediaGraph("databaseWikipediaGraph.db");
+		SQLiteVectors sqlConnectorVector = new SQLiteVectors("databaseVectors.db");
+
+		for(String vertex : adjacencyList.keySet()){
+			float[] vertexVector = sqlConnectorVector.getVectorByName(vertex);
+			HashSet<String> linkedNode = adjacencyList.get(vertex).getLinkedVertex();
+			for(String currentVertex : linkedNode){
+				float[] currentVertexVector = sqlConnectorVector.getVectorByName(currentVertex);
+				double weight = cosineSimilarityInverse(vertexVector, currentVertexVector);
+				System.out.println(currentVertex);
+				try {
+					sqlConnectorGraph.insertEdge(vertex, currentVertex, weight);
+				} catch (SQLException e) {
+					System.out.println("To continue cicle");
+					e.printStackTrace();
+				}
+			}
+		}
+	}
 
 
 	/**
@@ -181,9 +211,10 @@ public class CrawlerWikipediaCategory {
 	 * @param adjacencyList
 	 * @return
 	 * @throws IOException 
+	 * @deprecated
 	 */
 	public static Map<String,AdjacencyListRowVertex> fromAdjacencyListRowToAdjacencyListRowVertex(Map<String,AdjacencyListRow> adjacencyList) throws IOException{
-		SQLiteVectors sql = new SQLiteVectors();
+		SQLiteVectors sql = new SQLiteVectors("databaseVectors.db");
 		Map<String,AdjacencyListRowVertex> toReturn = new HashMap<>();
 		FileWriter writer = new FileWriter(new File("nodeToVisit.txt"));
 		for(String key : adjacencyList.keySet()){
@@ -200,7 +231,7 @@ public class CrawlerWikipediaCategory {
 				currentParent.setVertexName(parent);
 				float[] parentVector = sql.getVectorByName(parent);
 
-			
+
 				if(parentVector==null){
 					System.out.println(parent);
 					writer.write("\""+parent+"\",");
@@ -624,7 +655,7 @@ public class CrawlerWikipediaCategory {
 
 		if(dotProduct == 0 || (normA * normB) == 0){
 			return 0.001;
-			
+
 		}
 		else{
 			return Math.acos((dotProduct) / (Math.sqrt(normA * normB)))+0.001;
@@ -646,7 +677,7 @@ public class CrawlerWikipediaCategory {
 
 		if(dotProduct == 0 || (normA * normB) == 0){
 			return 0;
-			
+
 		}
 		else{
 			return (dotProduct) / (Math.sqrt(normA * normB));

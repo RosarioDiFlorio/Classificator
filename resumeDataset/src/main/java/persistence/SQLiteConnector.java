@@ -6,8 +6,8 @@ import java.sql.SQLException;
 
 public abstract class SQLiteConnector {
 
-  private static String urlDb = "jdbc:sqlite:";
-  private static Connection conn;
+  private  String urlDb = "jdbc:sqlite:";
+  private  Connection conn;
 
 
 
@@ -22,7 +22,7 @@ public abstract class SQLiteConnector {
    * Default autoCommit is false.
    * @return
    */
-  public static Connection connect() {
+  public  Connection connect() {
 
     Connection conn = null;
     try {
@@ -36,14 +36,14 @@ public abstract class SQLiteConnector {
   /**Default connection is with autoCommit false.
    * @return
    */
-  public static Connection getConnection(){
+  public  Connection getConnection(){
     if(conn == null)
       conn = connect();
     return conn;  
   }
 
   
-  public static void setAutoCommit(boolean isAuto){
+  public  void setAutoCommit(boolean isAuto){
     try {
       conn.setAutoCommit(isAuto);
     }
@@ -53,7 +53,7 @@ public abstract class SQLiteConnector {
     }
   }
 
-  public static void commitConnection(){
+  public  void commitConnection(){
     try {
       conn.commit();
     }

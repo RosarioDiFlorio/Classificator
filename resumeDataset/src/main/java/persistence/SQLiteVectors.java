@@ -17,32 +17,26 @@ import java.util.concurrent.Executors;
 public class SQLiteVectors extends SQLiteConnector {
 
 
-  private static Connection conn;
-  private static ExecutorService executorService = Executors.newFixedThreadPool(8);
+  private  ExecutorService executorService = Executors.newFixedThreadPool(8);
 
   public SQLiteVectors(String dbName){
     super(dbName);
-    conn = getConnection();
   }
 
 
-  public static void insertVectors(Map<String,float[]> vectors) throws InterruptedException{
-    if(conn == null){
-      conn = getConnection();
-    }
+  public  void insertVectors(Map<String,float[]> vectors) throws InterruptedException{
+  
     List<InsertTask> list = new ArrayList<>();
     for(String name:vectors.keySet()){
-      list.add(new InsertTask(conn, name, vectors.get(name)));
+      list.add(new InsertTask(super.getConnection(), name, vectors.get(name)));
     }
     executorService.invokeAll(list);
   }
 
 
 
-  public static void insertVector(String name,float[] vector) throws SQLException{
-    if(conn == null)
-      conn = getConnection();
-    PreparedStatement pstmt = conn.prepareStatement("INSERT INTO vectors VALUES(?,?)");	
+  public  void insertVector(String name,float[] vector) throws SQLException{
+    PreparedStatement pstmt = super.getConnection().prepareStatement("INSERT INTO vectors VALUES(?,?)");	
     byte[] vectorToSave = fromFloatToByte(vector);
     pstmt.setString(1, name);
     pstmt.setBytes(2, vectorToSave);
@@ -50,13 +44,12 @@ public class SQLiteVectors extends SQLiteConnector {
   }
 
 
-  public static float[] getVectorByName(String name){
-    if(conn == null)
-      conn = getConnection();
-    String sql = "SELECT vector FROM vectors WHERE name = '"+name+"'";
+  public  float[] getVectorByName(String name){
+    
+    String sql = "SELECT vector FROM vectors WHERE name =\""+name+"\"";
     float[] vector = null;
     try{
-      Statement stm = conn.createStatement();
+      Statement stm = super.getConnection().createStatement();
       ResultSet res = stm.executeQuery(sql);
       byte[] byteVector = res.getBytes("vector");
       vector = fromByteToFloat(byteVector); 
@@ -68,12 +61,11 @@ public class SQLiteVectors extends SQLiteConnector {
     return vector;
   }
 
-  public static boolean isExist(String name){
-    if(conn == null)
-      conn = connect();
+  public  boolean isExist(String name){
+   
     try{
-      String sql = "SELECT name FROM vectors WHERE name = '"+name+"'";
-      Statement stm = conn.createStatement();
+      String sql = "SELECT name FROM vectors WHERE name =\""+name+"\"";
+      Statement stm = super.getConnection().createStatement();
       ResultSet res = stm.executeQuery(sql);
       res.getString("name").isEmpty();
     }catch (SQLException e) {
@@ -84,13 +76,12 @@ public class SQLiteVectors extends SQLiteConnector {
 
   }
 
-  public static Set<String> getNamesVector(){
+  public  Set<String> getNamesVector(){
     Set<String> names = new HashSet<>();
-    if(conn == null)
-      conn = connect();
+    
     String sql = "SELECT name FROM vectors";
     try{
-      Statement stm = conn.createStatement();
+      Statement stm = super.getConnection().createStatement();
       ResultSet res = stm.executeQuery(sql);
       while (res.next()) {
         names.add(res.getString("name"));
