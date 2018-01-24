@@ -1,5 +1,0 @@
-Ring lasers are composed of two beams of light of the same polarization traveling in opposite directions ("counter-rotating") in a closed loop.
-Currently ring lasers are used most frequently as gyroscopes (ring laser gyroscope; (figure 2)) in moving vessels like cars, ships, planes, and missiles. The world's largest ring lasers can detect details of the Earth's rotation. Such large rings are also capable of extending scientific research in many new directions, including the detection of gravitational waves, Fresnel drag, Lense-Thirring effect, and quantum-electrodynamic effects.
-In a rotating ring laser gyroscope, the two counter-propagating waves are slightly shifted in frequency and an interference pattern is observed, which is used to determine the rotational speed. The response to a rotation is a frequency difference between the two beams, which is proportional  to the rotation rate of the ring laser (Sagnac effect). The difference can easily be measured. Generally however, any non reciprocity in the propagation between the two beams leads to a beat frequency.
-
-

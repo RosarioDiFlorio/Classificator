@@ -1,5 +1,0 @@
-In distributed computing, code mobility is the ability for running programs, code or objects to be migrated (or moved) from one machine or application to another. This is the process of moving mobile code across the nodes of a network as opposed to distributed computation where the data is moved.
-It is common practice in distributed systems to require the movement of code or processes between parts of the system, instead of data.
-Examples of code mobility include scripts downloaded over a network (for example JavaScript, VBScript), Java applets, ActiveX controls, Flash animations, Shockwave movies (and Xtras), and macros embedded within Microsoft Office documents.
-
-

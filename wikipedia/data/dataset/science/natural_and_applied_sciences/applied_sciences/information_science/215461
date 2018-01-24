@@ -1,5 +1,0 @@
-In computing, a command is a directive to a computer program acting as an interpreter of some kind, in order to perform a specific task. Most commonly a command is either a directive to some kind of command-line interface, such as a shell, or an event in a graphical user interface triggered by the user selecting an option in a menu.
-Specifically, the term command is used in imperative computer languages. These languages are called this, because statements in these languages are usually written in a manner similar to the imperative mood used in many natural languages. If one views a statement in an imperative language as being like a sentence in a natural language, then a command is generally like a verb in such a language.
-Many programs allow specially formatted arguments, known as flags or options, which modify the default behaviour of the command, while further arguments describe what the command acts on. Comparing to a natural language: the flags are adverbs, whilst the other arguments are objects.
-
-

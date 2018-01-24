@@ -1,1 +1,0 @@
-A low-voltage detect (LVD) is a microcontroller or microprocessor peripheral that generates a reset signal when the Vcc supply voltage falls below Vref. Sometimes is combined with power-on reset (POR) and then it is called POR-LVD.

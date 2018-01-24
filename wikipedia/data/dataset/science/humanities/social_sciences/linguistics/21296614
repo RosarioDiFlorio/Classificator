@@ -1,1 +1,0 @@
-In computational linguistics the Yarowsky algorithm is an unsupervised learning algorithm for word sense disambiguation that uses the "one sense per collocation" and the "one sense per discourse" properties of human languages for word sense disambiguation. From observation, words tend to exhibit only one sense in most given discourse and in a given collocation.

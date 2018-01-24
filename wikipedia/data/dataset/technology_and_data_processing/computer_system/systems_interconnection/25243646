@@ -1,4 +1,0 @@
-Native Cloud Application (NCA) refers to a type of computer software that natively utilizes services and infrastructure provided by cloud computing providers such as Amazon EC2 or Force.com. NCAs exhibit a combined usage of the three fundamental technologies:
-Computational grid (loosely e.g. MapReduce 
-Data grids (e.g. distributed in-memory data caches)
-Auto-scaling on any managed infrastructure

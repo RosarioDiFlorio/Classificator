@@ -1,3 +1,0 @@
-Password Safe is a free and open-source password manager program for use with Microsoft Windows.
-A beta version is also available for Ubuntu (including the Kubuntu and Xubuntu derivatives), Debian and FreeBSD operating systems. A Java-based version is also available on SourceForge. On its page user can find links to unofficial releases running under Android, BlackBerry and other mobile OS.
-The port for macOS and iOS, pwSafe (not to be confused with "pwsafe password database", a compatible unix commandline program), is compatible with Password Safe files. It uses iCloud or Dropbox to keep password databases synced between iOS devices and computers.

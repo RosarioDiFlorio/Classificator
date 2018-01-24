@@ -1,3 +1,0 @@
-SETI@home beta, using the Berkeley Open Infrastructure for Network Computing (BOINC) platform, is a test environment for the following future projects:
-AstroPulse: a distributed computing project searching for primordial black holes, pulsars, and ETI. AstroPulse clients have been tested by this project for nearly 6 years. It is already running on SETI@home, testing new GPU/CPU optimized apps and performing other tasks.
-SETI Southern Hemisphere Search, which is another SETI@home project that is due to join BOINC in the future. It is expected that this project will use a slightly modified version of the SETI enhanced client, as the Parkes Observatory has a feedhorn with more beams than the Arecibo Observatory.

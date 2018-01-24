@@ -1,7 +1,0 @@
-VRPN (Virtual-Reality Peripheral Network) is a device-independent and network-transparent system for accessing virtual reality peripherals in VR applications. It was originally designed and implemented by Russell M. Taylor II at the Department of Computer Science of the University of North Carolina at Chapel Hill. VRPN is now maintained and supported by Sensics and developed in collaboration with a productive community of contributors. It is described more fully at vrpn.org.
-The purpose of VRPN is to provide a unified interface to input devices, like motion trackers or joystick controllers. It also provides for
-Time-stamping of data
-Multiple simultaneous access to peripheral devices
-Automatic re-connection of failed servers
-Storage and playback of sessions
-The VRPN system consists of programming interfaces for both the client application and the hardware drivers and a server application that communicates with the hardware devices. The client interfaces are written in C++ but has been wrapped in Python and Java.

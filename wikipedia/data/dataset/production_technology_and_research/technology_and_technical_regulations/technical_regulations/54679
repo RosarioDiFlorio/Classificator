@@ -1,1 +1,0 @@
-A cypherpunk anonymous remailer is a Type I anonymous remailer that takes messages encrypted with PGP or GPG, or in some cases in plain text, and forwards them removing any identifying information from the header.

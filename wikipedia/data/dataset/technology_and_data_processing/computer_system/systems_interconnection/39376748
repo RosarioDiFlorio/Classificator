@@ -1,3 +1,0 @@
-OpenConnect is an open-source software application for connecting to virtual private networks (VPN), which implement secure point-to-point connections.
-It was originally written as an open-source replacement for Cisco's proprietary AnyConnect SSL VPN client, which is supported by several Cisco routers. As of 2013, the OpenConnect project also offers an AnyConnect-compatible server, and thus offers a full client-server VPN solution.
-The OpenConnect client added support for Juniper Networks' SSL VPN in version 7.05, and a fork has provided experimental support for Palo Alto Networks' GlobalProtect VPN.

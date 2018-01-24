@@ -1,3 +1,0 @@
-A ceibo emulator is an in-circuit emulators for microcontrollers and microprocessors.
-These emulators use bond-out processors, which have internal signals brought out for the purpose of debugging. These signals provide information about the state of the processor that is otherwise unobtainable.
-Supported microprocessors and microcontrollers include Atmel, Dallas Semiconductor, Infineon, Intel, Microchip, NEC, Philips, STMicroelectronics, and Winbond.

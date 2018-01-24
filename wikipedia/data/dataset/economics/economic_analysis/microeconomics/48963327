@@ -1,4 +1,0 @@
-In mechanism design, monotonicity is a property of a social choice function. It is a necessary condition for being able to implement the function using a strategyproof mechanism. Its verbal description is:
-"If changing one agent's type (while keeping the types of other agents fixed) changes the outcome under the social choice function, then the resulting difference in utilities of the new and original outcomes evaluated at the new type of this agent must be at least as much as this difference in utilities evaluated at the original type of this agent."
-In other words:
-"If the social choice changes when a single player changes his valuation, then it must be because the player increased his value of the new choice relative to his value of the old choice."

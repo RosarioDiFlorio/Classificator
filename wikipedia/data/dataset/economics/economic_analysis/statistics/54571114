@@ -1,9 +1,0 @@
-Interrupted time series analysis, sometimes known as quasi-experimental time series analysis, is an approach for the analysis of a single time series of data known or conjectured to be affected by interventions (controlled external influences). Interrupted time series design is the design of experiments based on the interrupted time series approach.
-Applications include various research in social sciences:
-political science: impact of changes in laws on the behavior of people; see, e.g., Effectiveness of sex offender registration policies in the United States#Interrupted time series analysis studies.
-economics: impact of changes in credit controls on borrowing behavior
-sociology: impact of experiments in income maintenance on the behavior of participants in welfare programs
-history: impact of major historical events on the behavior of those affected by the events
-medicine: in medical research, medical treatment is an intervention whose effect are to be studied
-The ITS design is the base of the comparative time series design, whereby there is a control series and an interrupted series, and the effect of an intervention is confirmed by the control series.
-Effects of the intervention are evaluated by changes in the level and slope of the time series and statistical significance of the intervention parameters.

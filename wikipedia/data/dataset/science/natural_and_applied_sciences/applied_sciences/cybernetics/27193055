@@ -1,3 +1,0 @@
-Prefrontal cortex basal ganglia working memory (PBWM) is an algorithm that models working memory in the prefrontal cortex and the basal ganglia. It can be compared to long short-term memory (LSTM) in functionality, but is more biologically explainable.
-It uses the primary value learned value model to train prefrontal cortex working-memory updating system, based on the biology of the prefrontal cortex and basal ganglia.
-It is used as part of the Leabra framework and was implemented in Emergent.

@@ -1,2 +1,0 @@
-SekChek Local is a set of automated computer security audit and benchmarking tools developed by SekChek IPS in March 2008.
-The product analyses security controls on Hosts or domains across an organisation’s LAN and produces reports relating to the security on the network. The reporting engine is based on a portable Microsoft Access database. The product comprises 3 built-in security analysis tools: SekChek for SAM, SekChek for AD and SekChek for SQL.

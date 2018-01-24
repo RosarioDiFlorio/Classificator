@@ -1,1 +1,0 @@
-In finance, a T-forward measure is a pricing measure absolutely continuous with respect to a risk-neutral measure but rather than using the money market as numeraire, it uses a bond with maturity T. The use of the forward measure was pioneered by Farshid Jamshidian (1987), and later used as a means of calculating the price of options on bonds.

@@ -1,2 +1,0 @@
-A redistribution layer (RDL) is an extra metal layer on a chip that makes the IO pads of an integrated circuit available in other locations.
-When an integrated circuit is manufactured, it usually has a set of IO pads that are wirebonded to the pins of the package. A redistribution layer is an extra layer of wiring on the chip that enables you to bond out from different locations on the chip, making chip-to-chip bonding simpler.

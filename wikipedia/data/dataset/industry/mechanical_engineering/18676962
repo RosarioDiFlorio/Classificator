@@ -1,2 +1,0 @@
-This article derives the main properties of rotations in 3-dimensional space.
-The three Euler rotations are one way to bring a rigid body to any desired orientation by sequentially making rotations about axis' fixed relative to the object. However, this can also be achieved with one single rotation (Euler's rotation theorem). Using the concepts of linear algebra it is shown how this single rotation can be performed.

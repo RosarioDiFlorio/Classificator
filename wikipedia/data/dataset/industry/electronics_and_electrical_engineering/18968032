@@ -1,7 +1,0 @@
-IntervalZero, Inc. develops hard real-time software and its symmetric multiprocessing (SMP) enabled RTX and RTX64 software transform the Microsoft Windows general-purpose operating system (GPOS) into a real-time operating system (RTOS).
-IntervalZero and its engineering group regularly release new software (cf its history).
-Its most recent product, RTX64, focuses on 64-bit and symmetric multiprocessing (SMP) to replace dedicated hardware based systems such as digital signal processors (DSPs) or field-programmable gate arrays (FPGAs) with multicore PCs.
-For instance, an audio mixing surface manufacturer which largely deployed DSP based systems, switched to personal computer (PC) based systems, dedicating multi-core processors for the real time audio processing.
-Founded in July 2008 by a group of former Ardence executives, IntervalZero is headed by CEO Jeffrey D. Hibbard. The firm has offices in Waltham, MA; Nice, France; Munich, Germany, and Taiwan, ROC.
-This global presence is important because these solutions are deployed worldwide, primarily in industrial automation, military, aerospace, medical devices, digital media, and test and simulation software.
-The corporate name, IntervalZero, comes from the firm's mission to deliver deterministic, hard real-time functionality. An "interval of zero" is the technical definition of the optimal experience between a system command and execution.

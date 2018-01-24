@@ -1,4 +1,0 @@
-A stepped nozzle is a de Laval rocket nozzle which has altitude compensating properties.
-The characteristic of this kind of nozzle is that part of the way along the inside of the nozzle there is a straightening of the curve of the nozzle contour, followed by a sharp step outwards.
-At low altitude, this causes the jet to separate at the step and ambient pressure maintains the jet at this place, avoiding jet instabilities and avoiding massive overexpansion.
-As the altitude rises, the jet becomes progressively under-expanded and grows until it fills the nozzle, at which point the gas provides more pressure against the rest of the nozzle and thrust and specific impulse increases.

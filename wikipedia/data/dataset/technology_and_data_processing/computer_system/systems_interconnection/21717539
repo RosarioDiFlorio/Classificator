@@ -1,4 +1,0 @@
-A message consumer is a Java interface for distributed systems. It is used to receive messages from a destination. To create it, a destination object is passed to a message-consumer creation method that is supplied by the session of this object.
-Created by a selector, it is possible to send a message to particular message consumer objects. The communication may be synchronous or asynchronous.
-
-

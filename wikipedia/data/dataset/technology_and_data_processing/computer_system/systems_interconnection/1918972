@@ -1,4 +1,0 @@
-Fibre Channel point-to-point (FC-P2P) is a Fibre Channel topology where exactly two ports (devices) are directly connected to each other.
-It is the simplest topology, no network addressing is needed, because each message has only one possible receiver.
-The bandwidth is dedicated.
-Point-to-point uses N_port.

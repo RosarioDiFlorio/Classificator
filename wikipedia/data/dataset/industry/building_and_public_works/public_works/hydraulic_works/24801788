@@ -1,9 +1,0 @@
-Valve leakage refers to flow through a valve which is set in the 'off' state.
-The importance of valve leakage depends on what the valve is controlling. For example, a dripping tap is less significant than a leak from a six-inch pipe carrying high-pressure radioactive steam.
-In the United States, the American National Standards Institute specifies six different leakage classes, with "leakage" defined in terms of the full open valve capacity:
-Class I, or 'dust-tight' valves, are intended to work but have not been tested
-Class II valves have no more than 0.5% leakage with 50psi (or less if operating pressure is less) of air pressure at the operating temperature
-Class III valves have no more than 0.1% leakage under those conditions; this may require soft valve seats, or lapped metal surfaces
-Class IV valves have no more than 0.01% leakage under those conditions; this tends to require multiple graphite piston rings or a single Teflon piston ring, and lapped metal seats.
-Class V valves leak less than 5*10^-12 cubic metres, per second, per bar of pressure differential, per millimetre of port diameter, of water when tested at the service pressure.
-Class VI valves are slightly different in that they are required (at 50psi or operating pressure, whichever is less) to have less than a specified leakage rate in millilitres of air per minute:

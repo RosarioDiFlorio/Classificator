@@ -1,9 +1,0 @@
-Stochastic resonance is a phenomenon that occurs in a threshold measurement system (e.g. a man-made instrument or device; a natural cell, organ or organism) when an appropriate measure of information transfer (signal-to-noise ratio, mutual information, coherence, d', etc.) is maximized in the presence of a non-zero level of stochastic input noise thereby lowering the response threshold; the system resonates at a particular noise level.
-The three criteria that must be met for stochastic resonance to occur are:
-Nonlinear device or system: the input-output relationship must be nonlinear
-Weak, periodic signal of interest: the input signal must be below threshold of measurement device and recur periodically
-Added input noise: there must be random, uncorrelated variation added to signal of interest
-Stochastic resonance occurs when these conditions combine in such a way that a certain average noise intensity results in maximized information transfer. A time-averaged (or, equivalently, low-pass filtered) output due to signal of interest plus noise will yield an even better measurement of the signal compared to the system's response without noise in terms of SNR.
-The idea of adding noise to a system in order to improve the quality of measurements is counter-intuitive. Measurement systems are usually constructed or evolved to reduce noise as much as possible and thereby provide the most precise measurement of the signal of interest. Numerous experiments have demonstrated that, in both biological and non-biological systems, the addition of noise can actually improve the probability of detecting the signal; this is stochastic resonance. The systems in which stochastic resonance occur are always nonlinear systems. The addition of noise to a linear system will always decrease the information transfer rate.
-
-

@@ -1,6 +1,0 @@
-The Eötvös rule, named after the Hungarian physicist Loránd (Roland) Eötvös (1848–1919) enables the prediction of the surface tension of an arbitrary liquid pure substance at all temperatures. The density, molar mass and the critical temperature of the liquid have to be known. At the critical point the surface tension is zero.
-The first assumption of the Eötvös rule is:
-1. The surface tension is a linear function of the temperature.
-This assumption is approximately fulfilled for most known liquids. When plotting the surface tension versus the temperature a fairly straight line can be seen which has a surface tension of zero at the critical temperature.
-The Eötvös rule also gives a relation of the surface tension behaviour of different liquids in respect to each other:
-2. The temperature dependence of the surface tension can be plotted for all liquids in a way that the data collapses to a single master curve. To do so either the molar mass, the density, or the molar volume of the corresponding liquid has to be known.

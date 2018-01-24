@@ -1,3 +1,0 @@
-DUCS (Display Unit Control System) was a teleprocessing monitor from CFS Inc. It was one of two early local teleprocessing packages for IBM's DOS/VSE environment. DUCS provided an interface and access method for programmers to 'talk' to monitors. Such access methods later became known as APIs.
-Initially written for the IBM 2260 running under DOS on IBM mainframes, the original product was free for IBM users. With the advent of DOS/VS and the IBM 3270 series terminals, the original author commercialized the product, circa 1970. The company added transparent remote access about 1972.
-The product is believed to be the first non-IBM publicly available commercial software package to transmit data via satellite.

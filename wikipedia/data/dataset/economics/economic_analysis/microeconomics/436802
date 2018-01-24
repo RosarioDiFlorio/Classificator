@@ -1,5 +1,0 @@
-The fundamental theorem of poker is a principle first articulated by David Sklansky that he believes expresses the essential nature of poker as a game of decision-making in the face of incomplete information.
-The fundamental theorem is stated in common language, but its formulation is based on mathematical reasoning. Each decision that is made in poker can be analyzed in terms of the expected value of the payoff of a decision. The correct decision to make in a given situation is the decision that has the largest expected value. If a player could see all of their opponents' cards, they would always be able to calculate the correct decision with mathematical certainty, and the less they deviate from these correct decisions, the better their expected long-term results. This is certainly true heads-up, but Morton's theorem, in which an opponent's correct decision can benefit a player, may apply in multi-way pots.
-In probabilistic terms, this is an application of the law of total expectation.
-
-

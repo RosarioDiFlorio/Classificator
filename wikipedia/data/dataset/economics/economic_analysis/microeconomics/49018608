@@ -1,6 +1,0 @@
-In mathematics, the map segmentation problem is a kind of optimization problem. It involves a certain geographic region that has to be partitioned into smaller sub-regions in order to achieve a certain goal. Typical optimization objectives include:
-Minimizing the workload of a fleet of vehicles assigned to the sub-regions;
-Balancing the consumption of a resource, as in fair cake-cutting.
-Determining the optimal locations of supply depots;
-Maximizing the surveillance coverage.
-Fair division of land has been an important issue since ancient times, e.g. in ancient Greece.

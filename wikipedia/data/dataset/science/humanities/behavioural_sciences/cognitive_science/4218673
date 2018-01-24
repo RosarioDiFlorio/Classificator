@@ -1,5 +1,0 @@
-A spatial relation, specifies how some object is located in space in relation to some reference object. When the reference object is much bigger than the object to locate, the latter is often represented by a point. The reference object is often represented by a bounding box.
-In Anatomy it might be the case that a spatial relation is not fully applicable. Thus, the degree of applicability is defined which specifies from 0 till 100% how strongly a spatial relation holds. Often researchers concentrate on defining the applicability function for various spatial relations.
-In spatial databases and Geospatial topology the spatial relations are used for spatial analysis and constraint specifications.
-In cognitive development for walk and for catch objects, or for understand objects-behaviour; in robotic Natural Features Navigation; and many other areas, spatial relations plays a central role.
-Commonly used types of spatial relations are: topological, directional and distance relations.

@@ -1,3 +1,0 @@
-A demosaicing (also de-mosaicing, demosaicking or debayering) algorithm is a digital image process used to reconstruct a full color image from the incomplete color samples output from an image sensor overlaid with a color filter array (CFA). It is also known as CFA interpolation or color reconstruction.
-Most modern digital cameras acquire images using a single image sensor overlaid with a CFA, so demosaicing is part of the processing pipeline required to render these images into a viewable format.
-Many modern digital cameras can save images in a raw format allowing the user to demosaic them using software, rather than using the camera's built-in firmware.

@@ -1,6 +1,0 @@
-Relationship Management Application (RMA) is a service provided by SWIFT to manage the business relationships between financial institutions.
-RMA operates by managing which message types are permitted to be exchanged between users of a SWIFT service:
-the receiver specifies which message types are permitted, and sends this permission data to the sender,
-the sender checks the message type against the permission data before sending a message to the receiver.
-RMA uses a SWIFTNet InterAct Store and Forward service to exchange the permission data between financial institutions.
-RMA was initially scheduled for roll-out on the SWIFT FIN service as part of the SWIFTNet Phase 2 project in 2008.

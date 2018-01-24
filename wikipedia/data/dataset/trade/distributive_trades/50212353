@@ -1,1 +1,0 @@
-The base stock model is a statistical model in inventory theory. In this model demand is refilled one unit at a time and demand is random. If there is only one replenishment, then the problem can be solved with the newsvendor model.

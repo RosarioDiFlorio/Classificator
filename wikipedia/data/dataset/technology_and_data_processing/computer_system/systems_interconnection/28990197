@@ -1,4 +1,0 @@
-The Identifier/Locator Network Protocol (RFCs) is a network protocol designed to separate the two functions of network addresses, the identification of network endpoints, and assisting routing by separating topological information from node identity. ILNP is backwards-compatible with existing IP, and is incrementally-deployable.
-ILNP itself is an architecture with two different instantiations at present. ILNPv4 is ILNP engineered to work as a set of IPv4 extensions, while ILNPv6 is ILNP engineered as a set of IPv6 extensions.
-At least 2 independent open-source implementations of ILNPv6 exist. U. St Andrews (Scotland) has a prototype in FreeBSD/x86, while Tsinghua U. (China) has a prototype in Linux/x86.
-In February 2011, IRTF Routing Research Group (RRG) Chairs recommended that the IETF standardise ILNP (RFC 6115) as the preferred evolutionary direction for IPv6.

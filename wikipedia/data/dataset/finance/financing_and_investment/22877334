@@ -1,3 +1,0 @@
-Cost of Delay is "a way of communicating the impact of time on the outcomes we hope to achieve". More formally, it is the partial derivative of the total expected value with respect to time. Cost of Delay combines an understanding of value with how that value leaks away over time.
-More simply, it is the answer to the question: "What would it cost us if this was delayed by 1 month?". Or, alternatively, "what would it be worth to us if we could get this 1 month earlier?"
-Cost of Delay has the units of $/time. The Delay Cost incurred (as a result of a delay) is found by integrating Cost of Delay over a specific time period.

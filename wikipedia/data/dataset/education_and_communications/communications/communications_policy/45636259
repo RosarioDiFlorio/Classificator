@@ -1,2 +1,0 @@
-Single Radio Voice Call Continuity (SRVCC) provides an interim solution for handing over VoLTE (Voice over LTE) to 2G/3G networks. The voice calls on LTE network are meant to be packet switched calls which use IMS system to be made. To make it inter operable with existing networks, these calls are to be handed over to Circuit switched calls in GSM/WCDMA networks. QoS is ensured by SRVCC operators for calls made.
-3GPP also standardized SRVCC to provide easy handovers from LTE network to GSM/UMTS network.

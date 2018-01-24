@@ -1,9 +1,0 @@
-The WWW Interactive Multipurpose Server (WIMS) (sometimes referred to as WWW Interactive Mathematics Server) project is designed for supporting intensive mathematical exercises via the Internet or in a computer-equipped classroom with server-side interactivity, accessible at the address http://wims.unice.fr.
-The system has the following main features:
-A modular design allowing applications and software interfaces to be created and maintained independently from each other.
-Features interfaces for software including MuPAD, PARI/GP, Gnuplot, POV-Ray, Co.
-Dynamic rendering of mathematical formulas and animated graphics.
-A structure of virtual classes, including mechanisms for automatic score gathering and processing.
-
-The program is open source and freely available under the GNU General Public Licence, however each WIMS module has its own copyright policy, which may differ from that of the server program.
-It is often cited and linked for its sophisticated "online calculator" tools capable of generating animated GIFs of parametric 2D or 3D graphs or allowing prime tests with very large numbers.

@@ -1,2 +1,0 @@
-Liberty Eiffel is a free Eiffel compiler. The compiler translates Eiffel code to C. Hence it can be used to write programs that run on virtually any platform for which an ANSI C compiler exists. Liberty Eiffel uses type inference to make it possible to implement a more efficient compiler.
-Liberty Eiffel continued the work of SmartEiffel, which has not been updated since 2007, forking their code base in 2005 to continue its development towards the disputed ECMA TC39-TG4 (now TC49-TG4) standard for the language.

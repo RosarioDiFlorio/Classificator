@@ -1,1 +1,0 @@
-File binders are utility software that allow a user to "bind" multiple files together resulting in a single executable. They are commonly used by hackers to insert other programs such as Trojan horses into otherwise harmless files, making them more difficult to detect. Malware builders (such as keyloggers or stealers) often include a binder by default.

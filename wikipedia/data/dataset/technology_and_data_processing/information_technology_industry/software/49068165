@@ -1,3 +1,0 @@
-Halon is a commercial scriptable SMTP server, packaged as a software distribution based on FreeBSD.
-The web hosting provider One.com uses Halon which operates some of the most active (on the basis of the number of domains they support) mail servers.
-Like Postfix it supports DANE, as well as the draft for MTA-STS, for encrypted email transfer. It provides other email security features such as spam filtering from CYREN, DMARC and DKIM. Like MailChannels, it supports transparent operation in order to filter spam coming out of servers not administered by the provider.

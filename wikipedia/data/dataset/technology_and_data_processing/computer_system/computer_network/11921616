@@ -1,4 +1,0 @@
-Virtual LACP (VLACP) is an Avaya extension of the Link Aggregation Control Protocol to provide a Layer 2 handshaking protocol which can detect end-to-end failure between two physical Ethernet interfaces. It allows the switch to detect unidirectional or bi-directional link failures irrespective of intermediary devices and enables link recovery in less than one second.
-With VLACP, far-end failures can be detected, which allows a Link aggregation trunk to fail over properly when end-to-end connectivity is not guaranteed for certain links through the internet in an aggregation group. When a remote link failure is detected, the change is propagated to the partner port.
-
-

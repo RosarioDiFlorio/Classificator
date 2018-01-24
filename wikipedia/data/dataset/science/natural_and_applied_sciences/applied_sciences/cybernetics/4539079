@@ -1,2 +1,0 @@
-Underactuation is a technical term used in robotics and control theory to describe mechanical systems that cannot be commanded to follow arbitrary trajectories in configuration space. This condition can occur for a number of reasons, the simplest of which is when the system has a lower number of actuators than degrees of freedom. In this case, the system is said to be trivially underactuated.
-The class of underactuated mechanical systems is very rich and includes such diverse members as automobiles, airplanes, and even animals.

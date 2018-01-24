@@ -1,5 +1,0 @@
-Symmetric Phase Recording is a tape recording (Computer storage media) technology developed by Quantum Corporation packs data across a tape's recording surface by writing adjacent tracks in a herringbone pattern:
-
-track 0 = \\\\\, track 1 = /////, track 2 = \\\\\, track 3 = /////, etc. 
-
-This eliminates crosstrack interference and guard bands so that more tracks of data can be stored on a tape.

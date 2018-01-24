@@ -1,2 +1,0 @@
-In relational database management systems and in the particular context of an Oracle Enterprise Manager (OEM) environment, an Oracle Management Server (OMS) is a software system that functions as a middle tier between Oracle intelligent agents and Oracle management consoles. The system may operate on multiple nodes and by default uses a schema named DBSNMP. Through this system, database administrators may view and control their OEM domain(s).
-An OMS has special links with a repository database, used for storing OEM details.

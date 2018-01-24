@@ -1,3 +1,0 @@
-Crouton (Chromium OS Universal Chroot Environment) is a set of scripts which allows Ubuntu, Debian, and Kali Linux systems to run parallel to a Chrome OS system. Crouton works by using a chroot instead of dual-booting to allow a user to run two desktop environments at the same time: Chrome OS and another environment of the user's choice.
-
-

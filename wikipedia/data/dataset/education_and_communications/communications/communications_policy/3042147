@@ -1,4 +1,0 @@
-A subpage usually refers to a lower level web page in a website or wiki with the same main name as the starting level page plus a slash and text identifying the location of the subpage. More precisely, it refers to a part of the path in the hierarchical part of the Uniform Resource Identifier (also known as URI or URL).
-For example, if the name of the main page were :first, a typical subpage would be called :first/second. In most implementations this system is recursive, so that subpages can have their own subpages (e.g. :first/second/third).
-
-

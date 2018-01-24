@@ -1,4 +1,0 @@
-The Firewall Services Module (FWSM) is a firewall module integrated by Cisco into its Komodo blade on Catalyst 6500 Switches and 7600 Series Routers.
-Installed inside a Cisco Catalyst 6500 Series Switch or Cisco 7600 Internet Router, the FWSM allows any VLAN on the switch to be passed through to the device to operate as a firewall port and integrates firewall security inside the network infrastructure.
-The FWSM is based on Cisco PIX technology and uses the same Cisco PIX Operating System, a secure, real-time operating system. The Cisco FWSM enables organizations to manage multiple firewalls from the same management platform.
-It has reached end of support status as of September 26, 2007 and replaced by the Cisco Catalyst 6500 Series 7600 Series ASA Services Module.

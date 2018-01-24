@@ -1,2 +1,0 @@
-A performance supervision system (PSS) is a software system used to improve the performance of a process plant. Typical process plants include oil refineries, paper mills, and chemical plants.
-The PSS gathers real-time data from the process control system, typically a distributed control system. Using this data, the PSS can calculate performance metrics for process equipment, controls, and operations.

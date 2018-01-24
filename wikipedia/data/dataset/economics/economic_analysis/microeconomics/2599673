@@ -1,3 +1,0 @@
-Tsumeshogi (詰将棋 or 詰め将棋, tsumeshōgi) or tsume (詰め) is the Japanese term for a shogi problem in which the goal is to checkmate the opponent's king. Tsume problems present a situation that might occur in a shogi game, and the solver must find out how to achieve checkmate. It is similar to a chess problem.
-The term tsumi (詰み) means the state of checkmate itself. The verb form is tsumu (詰む) "to checkmate". (The related term tsumero 詰めろ refers to the slightly different concept of "threatmate". See: Hisshi.)
-Note that the concept of stalemate as in western chess does not exist in shogi as it essentially does not occur. Thus, tsumeshogi problems are strictly mate problems with constant checks.

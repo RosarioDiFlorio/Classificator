@@ -1,9 +1,0 @@
-In mathematical set theory, Baumgartner's axiom (BA) can be one of three different axioms introduced by James Earl Baumgartner.
-An axiom introduced by Baumgartner (1973) states that any two ℵ1-dense subsets of the real line are order-isomorphic.
-Another axiom introduced by Baumgartner (1975) states that Martin's axiom for partially ordered sets MAP(κ) is true for all partially ordered sets P that are countable closed, well met and ℵ1-linked and all cardinals κ less than 2ℵ1.
-Baumgartner's axiom A is an axiom for partially ordered sets introduced in (Baumgartner 1983, section 7). A partial order (P, ≤) is said to satisfy axiom A if there is a family ≤n of partial orderings on P for n = 0, 1, 2, ... such that
-≤0 is the same as ≤
-If p ≤n+1q then p ≤nq
-If there is a sequence pn with pn+1 ≤n pn then there is a q with q ≤n pn for all n.
-If I is a pairwise incompatible subset of P then for all p and for all natural numbers n there is a q such that q ≤n p and the number of elements of I compatible with q is countable.
-A proof of Baumgartner Axiom was established by Justin Tatch Moore and Stevo Todorcevic.

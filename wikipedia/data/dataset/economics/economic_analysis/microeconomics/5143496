@@ -1,2 +1,0 @@
-Clobber is an abstract strategy game invented in 2001 by combinatorial game theorists Michael H. Albert, J.P. Grossman and Richard Nowakowski. It has subsequently been studied by Elwyn Berlekamp and Erik Demaine among others. Since 2005, it has been one of the events in the Computer Olympiad.
-Players take turns to move one of their own pieces onto an orthogonally adjacent opposing piece, removing it from the game. The winner of the game is the player who makes the last move (i.e. whose opponent cannot move).

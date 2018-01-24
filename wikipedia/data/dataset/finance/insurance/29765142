@@ -1,3 +1,0 @@
-A short rate table is a table used to calculate the earned premium for a policy that is cancelled before the expiration date of an insurance policy. This is a penalty method called short rate or old short rate and is often used when the policy is cancelled at the policy holder's request.
-The following table is an example of this table for a policy that has a 365-day term and show the percentage of premium retained by the insurance company based on the number of days that policy is in effect.
-In this case, penalty starts off initially at 25% of the annual premium and increases up to 100% by the end of the policy term. But not all insurers have a 25% minimum retained premium.

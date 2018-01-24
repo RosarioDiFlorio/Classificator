@@ -1,1 +1,0 @@
-MCU 8051 IDE is a free software integrated development environment for microcontrollers based on 8051. MCU 8051 IDE has its own simulator and assembler (support for some external assemblers is also available). This IDE supports 2 programming languages: C and Assembly language. For C language it uses SDCC.

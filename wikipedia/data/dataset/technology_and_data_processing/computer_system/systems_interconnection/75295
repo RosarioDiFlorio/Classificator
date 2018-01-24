@@ -1,4 +1,0 @@
-Arla is an implementation of the AFS distributed file system developed at the Royal Institute of Technology in Stockholm.
-Arla was started by Björn Grönvall in 1993. Assar Westerlund and Johan Danielsson joined the project shortly thereafter. The project died down before it was usable.
-In the fall of 1997, the project was restarted, starting with Björn's implementation of rxkad. Assar ported xfs (an arla component, not to be confused with the XFS filesystem) to FreeBSD. Love Hörnqvist-Åstrand began working on it, followed by Magnus Ahltorp, working on the Linux kernel module, and Artur Grabowski, working on the OpenBSD kernel module.
-Today, Arla has AFS client support for OpenBSD, FreeBSD, NetBSD, Linux, Solaris, Tru64 and Mac OS X. Windows support is on the way, delayed by insufficient Windows knowledge. An experimental AFS server is available, but it is not yet considered stable.

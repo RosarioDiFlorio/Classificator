@@ -1,7 +1,0 @@
-Graphite, a free open-source software (FOSS) tool that monitors and graphs the performance of computer systems. Graphite was developed by Orbitz and released as open source software in 2008.
-Graphite collects, stores, and displays time-series data in real time.
-The tool has three main components:
-carbon - a Twisted daemon that listens for time-series data
-whisper - a simple database library for storing time-series data (similar in design to RRD)
-graphite webapp - A Django webapp that renders graphs on-demand using Cairo
-Graphite is used in production by companies such as Booking.com, GitHub, Etsy and Electronic Arts.

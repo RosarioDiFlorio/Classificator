@@ -1,2 +1,0 @@
-TokuDB is an open source, high-performance storage engine for MySQL and MariaDB. It achieves this by using a fractal tree index. It is scalable, ACID and MVCC compliant, provides indexing-based query improvements, offers online schema modifications, and reduces slave lag for both hard disk drives and flash memory.
-TokuDB is included in Percona Server, MariaDB and Nagios based opmon.

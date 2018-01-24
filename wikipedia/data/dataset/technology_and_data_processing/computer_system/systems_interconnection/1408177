@@ -1,5 +1,0 @@
-The Transport Driver Interface or TDI is the protocol understood by the upper edge of the Transport layer of the Microsoft Windows kernel network stack.
-Transport Providers are implementations of network protocols such as TCP/IP, NetBIOS, and AppleTalk.
-When user-mode binaries are created by compiling and linking, an entity called a TDI client is linked into the binary. TDI clients are provided with the compiler. The user-mode binary uses the user-mode API of whatever network protocol is being used, which in turn causes the TDI client to emit TDI commands into the Transport Provider.
-Typical TDI commands are TDI_SEND, TDI_CONNECT, TDI_RECEIVE.
-The purpose of the Transport Driver Interface is to provide an abstraction layer, permitting simplification of the TDI clients.

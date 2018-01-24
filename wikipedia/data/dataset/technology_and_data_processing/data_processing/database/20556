@@ -1,7 +1,0 @@
-Meta elements are tags used in HTML and XHTML documents to provide structured metadata about a Web page. They are part of a web page's head section. Multiple Meta elements with different attributes can be used on the same page. Meta elements can be used to specify page description, keywords and any other metadata not provided through the other head elements and attributes.
-The meta element has two uses: either to emulate the use of an HTTP response header field, or to embed additional metadata within the HTML document.
-With HTML up to and including HTML 4.01 and XHTML, there were four valid attributes: content, http-equiv, name and scheme. Under HTML 5 there are now five valid attributes, charset having been added. http-equiv is used to emulate an HTTP header, and name to embed metadata. The value of the statement, in either case, is contained in the content attribute, which is the only required attribute unless charset is given. charset is used to indicate the character set of the document, and is available in HTML5.
-Such elements must be placed as tags in the head section of an HTML or XHTML document.
-The two distinct parts of the elements are:
-Title tags
-Meta description

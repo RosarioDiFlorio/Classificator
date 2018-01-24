@@ -1,7 +1,0 @@
-In vitro to in vivo extrapolation (IVIVE) refers to the qualitative or quantitative transposition of experimental results or observations made in vitro to predicts phenomena in vivo, biological organisms.
-The problem of transposing in vitro results is particularly acute in areas such as toxicology where animal experiments are being phased out and are increasingly being replaced by alternative tests.
-Results obtained from in vitro experiments cannot often be directly applied to predict biological responses of organisms to chemical exposure in vivo. Therefore, it is extremely important to build a consistent and reliable in vitro to in vivo extrapolation method.
-Two solutions are now commonly accepted:
-(1) Increasing the complexity of in vitro systems where multiple cells can interact with each other in order recapitulate cell-cell interactions present in tissues (as in "human on chip" systems).
-(2) Using mathematical modeling to numerically simulate the behavior of a complex system, whereby in vitro data provides the parameter values for developing a model.
-The two approaches can be applied simultaneously allowing in vitro systems to provide adequate data for the development of mathematical models. To comply with push for the development of alternative testing methods, increasingly sophisticated in vitro experiments are now collecting numerous, complex, and challenging data that can be integrated into mathematical models.

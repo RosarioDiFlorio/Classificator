@@ -1,2 +1,0 @@
-In computer networking, large send offload (LSO) is a technique for increasing egress throughput of high-bandwidth network connections by reducing CPU overhead. It works by passing a multipacket buffer to the network interface card (NIC). The NIC then split them into separate packets. The technique is also called TCP segmentation offload (TSO) when applied to TCP, or generic segmentation offload (GSO).
-The inbound counterpart of large segment offload is large receive offload (LRO).

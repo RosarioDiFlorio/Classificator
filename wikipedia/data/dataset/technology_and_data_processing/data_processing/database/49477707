@@ -1,4 +1,0 @@
-RocksDB is a high performance embedded database for key-value data. It is a fork of LevelDB which was then optimized to exploit many central processing unit (CPU) cores, and make efficient use of fast storage, such as solid-state drives (SSD), for input/output (I/O) bound workloads. It is based on a log-structured merge-tree (LSM tree) data structure. It is written in C++ and provides official application programming interface (API) language bindings for C++, C, and Java; alongside many third-party language bindings. RocksDB is open-source software, and was originally released under a BSD 3-clause license. However, in July 2017 the project was migrated to a dual license of both Apache 2.0 and GPLv2 license, possibly in response to the Apache Software Foundation's blacklist of the previous BSD+Patents license clause.
-RocksDB is used in production systems at various web-scale enterprises including Facebook, Yahoo!, and LinkedIn.
-
-

@@ -1,8 +1,0 @@
-Microsoft Semblio is a software development kit for development of rich educational software. Version 1.0 was published by Microsoft on 15 December 2008.
-Before its launch it was codenamed Grava, to become a set of tools for creating and using educational and training materials. The tools were to be built using WPF and consists of the following components:
-Grava SDK: The Grava SDK is built on top of WPF and provides a programming model consistent with it. It also includes a set of services for assessment and logging results.
-Grava Authoring: The Grava authoring tool can be used to create interactive training material using GUI-based authoring. It can be used to create wizard like content or follow non-linear content creation. It integrates with developer tools like Microsoft Visual Studio.
-Grava Player: The Grava player can play back interactive Grava content, and can use the logging and assessment services to track the progress of the trainee.
-The Microsoft Semblio SDK is built on the .NET Framework 3.5, and is intended to provide developers with tools for packaging and distribution of rich interactive learning material, such as e-books containing images, audio, and video. Version 1.0 of the SDK can be freely downloaded from Microsoft.
-The SDK is the first of three components that will make up the Semblio Platform. The other two includes an assembly tool and a media player.
-The Semblio file format (.semblio) is based on ISO/IEC 29500-2:2008 Open Packaging Convention.

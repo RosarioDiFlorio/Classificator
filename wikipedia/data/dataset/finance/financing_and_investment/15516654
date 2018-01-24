@@ -1,7 +1,0 @@
-The investment function is a summary of the variables that influence the levels of aggregate investments. It can be formalized as follows:
-I=f(r,ΔY,q)
-
-- + +                                                                                                                  
-
-where r is the real interest rate, Y the GDP and q is Tobin's q. The signs under the variables simply tell us if the variable influences investment in a positive or negative way (for instance, if real interest rates were to rise, investments would correspondingly fall).
-The reason for investment being inversely related to the Interest rate is simply because the interest rate is a measure of the opportunity cost of those resources. If the resources instead of financing the investment could be invested in financial assets, there is an opportunity cost of (1+r), where r is the interest rate. This implies higher investment spending with a lower interest rate. When GDP increases, the output and the capacity utilization increases. This results in an increase of capital investment. At last, a higher Tobins q is represented when the market puts a high value of the installed capital and buys stocks in the firm for a higher price. The firm can then raise more resources per share issued and increase their investments.

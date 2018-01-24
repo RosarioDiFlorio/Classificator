@@ -1,2 +1,0 @@
-The Game Boy Sound System (or GBS) for the Game Boy is akin to the sound system of the Nintendo Entertainment System (NES). The GBS has two pulse waves, an arbitrary 4-bit wave channel (similar to the NES DPCM channel, but with 32 repeating samples) and a noise channel; however, the triangle/DPCM channels are not separated as in the NES.
-GBS music files can be ripped and played with special players or Game Boy emulators.

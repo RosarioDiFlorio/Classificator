@@ -1,5 +1,0 @@
-In mainframe computing a PR/SM (Processor Resource/System Manager) is a type-1 Hypervisor (a virtual machine monitor) that allows multiple logical partitions to share physical resources such as CPUs, I/O channels and direct access storage devices (DASD). It is integrated with all IBM System z machines.
-IBM introduced PR/SM in 1988 with the IBM 3090 processors.
-IBM developed the concept of hypervisors in their CP-40 and CP-67, and in 1972 provided it for the S/370 as Virtual Machine Facility/370. IBM introduced the Start Interpretive Execution (SIE) instruction as part of 370-XA on the 3081, and VM/XA versions of VM to exploit it. PR/SM is a type-1 Hypervisor based on the CP component of VM/XA that runs directly on the machine level and allocates system resources across LPARs to share physical resources. It is a standard feature on IBM System z machines.
-
-

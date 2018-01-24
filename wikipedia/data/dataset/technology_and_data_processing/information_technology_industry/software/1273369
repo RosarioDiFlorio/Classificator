@@ -1,3 +1,0 @@
-Action! is a procedural programming language similar to ALGOL 68 that is intended to produce high-performance programs for the Atari 8-bit family. The language was written by Clinton Parker and distributed on ROM cartridge by Optimized Systems Software starting in 1983.
-Action! was used to develop at least two commercial products—the Homepak productivity suite and Games Computers Play client program—and numerous programs in ANALOG Computing and Antic magazines. The system was not ported to any other platforms.
-Parker had previously developed the Micro-SPL language with Henry Baker, a similar language for the Xerox Alto. The 6502 assembly language source code for Action! was made available under the GNU General Public License by the author in 2015.

@@ -1,4 +1,0 @@
-HDCAM, introduced in 1997, is a high-definition video digital recording videocassette version of digital Betacam, using an 8-bit discrete cosine transform (DCT) compressed 3:1:1 recording, in 1080i-compatible down-sampled resolution of 1440×1080, and adding 24p and 23.976 progressive segmented frame (PsF) modes to later models. The HDCAM codec uses rectangular pixels and as such the recorded 1440×1080 content is upsampled to 1920×1080 on playback. The recorded video bit rate is 144 Mbit/s. Audio is also similar, with four channels of AES3 20-bit, 48 kHz digital audio.
-Like Betacam, HDCAM tapes are produced in small and large cassette sizes; the small cassette uses the same form factor as the original Betamax.
-The main competitor to HDCAM is the DVCPRO HD format offered by Panasonic. It uses a similar compression scheme and bit rates ranging from 40 Mbit/s to 100 Mbit/s depending on frame rate.
-HDCAM is standardized as SMPTE 367M, also known as SMPTE D-11.

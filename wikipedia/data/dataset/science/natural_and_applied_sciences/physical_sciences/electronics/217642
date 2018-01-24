@@ -1,6 +1,0 @@
-In computer science, conservative two-phase locking (C2PL) is a locking method used in DBMS and relational databases.
-Conservative 2PL prevents deadlocks.
-The difference between 2PL and C2PL is that C2PL's transactions obtain all the locks they need before the transactions begin. This is to ensure that a transaction that already holds some locks will not block waiting for other locks.
-In heavy lock contention, C2PL reduces the time locks are held on average, relative to 2PL and Strict 2PL, because transactions that hold locks are never blocked.
-In light lock contention, C2PL holds more locks than is necessary, because it is hard to tell what locks will be needed in the future, thus leads to higher overhead.
-Also, a transaction will not even obtain any locks if it cannot obtain all the locks it needs in its initial request. Furthermore, each transaction needs to declare its read and write set (data items to be read/written during transaction), which is not always possible. Because of these limitations, C2PL is not used very frequently.

@@ -1,3 +1,0 @@
-SABLE is an XML markup language used to annotate texts for speech synthesis. It defines tags that control how written words, numbers, and sentences are audibly reproduced by a computer. SABLE was developed as an informal joint project between Sun Microsystems, AT&T, Bell Labs, and Edinburgh University (the initial letters of each make the word "SABLE") as an initiative to combine three previous speech synthesis markup languages SSML, STML, and JSML.
-SABLE is used in the Festival Speech Synthesis System.
-Development on SABLE appears to have stopped in 2010, and it has not reached the status of a formal standard or recommended specification.

@@ -1,4 +1,0 @@
-Redundant Array of Inexpensive Servers (RAIS) is the use of multiple servers to provide the same service in such a way that service will still be available if the servers fails. The term may imply some kind of load balancing between the servers.
-Ia a simple, high performance, mainframe-grade alternative to today’s Enterprise computing infrastructure solutions. Te RAIS, turn an array of ordinary servers into a single virtual machine like RAID turns a cluster of ordinary disks into a single block device. Every RAIS node is a stateless computing unit.
-RAIS stripes and mirrors application code and memory across an array of ordinary servers using the standard RAID schemata of level 0, level 1, level 5, level 1+0. This is possible through the invention of a radical new memory management system called Versioned Memory.
-RAIS provide the benefits of an SMP at the entry cost of clusters.

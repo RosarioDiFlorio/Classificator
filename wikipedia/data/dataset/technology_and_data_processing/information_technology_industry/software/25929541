@@ -1,4 +1,0 @@
-OpenPilot was a Free software unmanned aerial vehicle project for model aircraft aimed at supporting both multi-rotor craft as well as fixed-wing aircraft. Initially founded by David Ankers, Angus Peart and Vassilis Varveropoulos in late 2009, OpenPilot was conceived as both a learning tool and to address areas the developers perceived were lacking in other small UAV platforms.
-The OpenPilot open source autopilot software can be combined with hardware such as an inertial navigation system board, a main control board, a GPS receiver, and a 2.4 GHz serial communications link with the ground station.
-The OpenPilot software is released under the GPL version 3 license.
-In July 2015 OpenPilot, was forked to create LibrePilot.

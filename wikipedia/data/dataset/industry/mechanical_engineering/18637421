@@ -1,2 +1,0 @@
-The derivatives of scalars, vectors, and second-order tensors with respect to second-order tensors are of considerable use in continuum mechanics. These derivatives are used in the theories of nonlinear elasticity and plasticity, particularly in the design of algorithms for numerical simulations.
-The directional derivative provides a systematic way of finding these derivatives.

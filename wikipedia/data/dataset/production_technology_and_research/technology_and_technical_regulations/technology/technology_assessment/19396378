@@ -1,3 +1,0 @@
-SekChek Classic comprises a set of automated computer security audit and benchmarking tools for non-mainframe platforms developed by SekChek IPS in 1996.
-The product analyses the effectiveness of security controls on host systems supporting organisations’ applications and produces reports highlighting strengths, weaknesses, and recommended corrective actions, relating to security controls on a host or domain.
-The reports are offered in user selectable formats, including Microsoft Word, Excel and Access. The product comprises four security analysis modules: Windows, AS400, UNIX and NetWare as well as SekCrypt, a symmetric encryption/decryption module.

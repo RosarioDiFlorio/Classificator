@@ -1,7 +1,0 @@
-Atmosphere and Telescope Simulators are used because time in science-worthy class telescopes are generally expensive and difficult to obtain. Telescope facilities are often uncomfortable for operators working for long periods of time. Researchers have expressed the need for a laboratory tool which could provide better and cheaper accessibility than a real telescope, and better characterization than computer simulations. A LED based illumination system in which five Galilean collimation systems have been used is reported on. It is part of a turbulence simulator for the evaluation of on ground telescopes instrumentation developed by INTA (optics) and LIDAX (opto-mechanics)  for the IAC called IACATS.
-
-The IACATS instrument simulates a scene consisting of a set of different binary stars simulating the required angular separation between them, and their spectral characteristics. As a result, a visible and infrared multi-spectral illumination system has been integrated as a part of the turbulence simulator. A wave front sensor enables to evaluate the deformation that the phase plates, or the simulated turbulence, produce in the wave front coming from the illumination system and star simulator. Finally, a specific illumination system include different working wavelengths.
-A simulator is a tool which allows to simulate different scenes with 3 main controlled components:
-Stars Light
-Atmospheric turbulences
-Telescope focal plane

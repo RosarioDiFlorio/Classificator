@@ -1,3 +1,0 @@
-An iSCSI target is a storage resource located on an iSCSI server (more generally, one of potentially many instances of iSCSI storage nodes running on that server) as a "target". An iSCSI target usually represents hard disk storage, often accessed using an Ethernet-based network.
-
-

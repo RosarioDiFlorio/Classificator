@@ -1,3 +1,0 @@
-Oracle Corporation's Oracle Ultra Search (also known as Ultrasearch) allows the generation of indexes to textual material stored (for example) on web-servers, file-servers, databases and mail-systems. It uses crawlers and Oracle Text utilities to build its indexes, which it then makes available within an Oracle database.
-Oracle Corporation makes Ultrasearch available free-of-charge to customers who purchase an Oracle database, an Oracle Application Server or the Oracle Collaboration Suite.
-By default, Oracle Ultra Search uses the WKSYS schema and the DRSYS tablespace.

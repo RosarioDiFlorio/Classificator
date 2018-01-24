@@ -1,5 +1,0 @@
-In statistics, point estimation involves the use of sample data to calculate a single value (known as a statistic) which is to serve as a "best guess" or "best estimate" of an unknown (fixed or random) population parameter.
-More formally, it is the application of a point estimator to the data.
-In general, point estimation should be contrasted with interval estimation: such interval estimates are typically either confidence intervals in the case of frequentist inference, or credible intervals in the case of Bayesian inference.
-
-

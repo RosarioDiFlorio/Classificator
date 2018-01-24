@@ -1,4 +1,0 @@
-Ansible is software that automates software provisioning, configuration management, and application deployment.
-Michael DeHaan, the author of the provisioning server application Cobbler and co-author of the Func framework for remote administration, developed the platform. It is included as part of the Fedora distribution of Linux, owned by Red Hat Inc., and is also available for Red Hat Enterprise Linux, CentOS, and Scientific Linux via Extra Packages for Enterprise Linux (EPEL) as well as for other operating systems.
-Ansible, Inc. (originally AnsibleWorks, Inc.) was the company set up to commercially support and sponsor Ansible. Red Hat acquired Ansible in October 2015.
-The name "Ansible" references a fictional instantaneous hyperspace communication system (as featured in Orson Scott Card's Ender's Game (1985), and originally conceived by Ursula K. Le Guin for her novel Rocannon's World (1966)).

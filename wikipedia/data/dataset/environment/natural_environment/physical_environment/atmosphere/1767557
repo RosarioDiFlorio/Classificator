@@ -1,6 +1,0 @@
-The Remote Automatic Weather Stations (RAWS) system is a network of automated weather stations run by the U.S. Forest Service (USFS) and Bureau of Land Management (BLM) and monitored by the National Interagency Fire Center (NIFC), mainly to observe potential wildfire conditions.
-Unlike the automated airport weather stations which are located at significant airports, RAWS stations are often located in remote areas, particularly in national forests. Because of this, they usually are not connected to the electrical grid, but rather have their own solar panels, and a battery to store power for overnight reporting. Some instead run on a generator. In both cases, data important to operating the station itself, such as battery voltage or fuel level, is often included in the hourly reports.
-Also because of the remote locations, most communicate with a modem via telephone, or via a VSAT connection to a GOES satellite.
-In this regard, they are similar to mesonets and may be mesonets if the distance between stations (spatial resolution) is sufficiently dense. They often lack the consistently high-quality data needed for use in numerical weather prediction and climatology, however. Road Weather Information System (RWIS) may likewise be self-powered and located in remote areas.
-
-

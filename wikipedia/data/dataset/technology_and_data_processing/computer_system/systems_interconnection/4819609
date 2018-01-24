@@ -1,5 +1,0 @@
-Resource Reservation Protocol - Traffic Engineering is an extension of the Resource Reservation Protocol (RSVP) for traffic engineering. It supports the reservation of resources across an IP network. Applications running on IP end systems can use RSVP to indicate to other nodes the nature (bandwidth, jitter, maximum burst, and so forth) of the packet streams they want to receive. RSVP runs on both IPv4 and IPv6.
-RSVP-TE is detailed in RFC 3209 (updated by RFC 5151). RSVP-TE generally allows the establishment of MPLS label switched paths (LSPs), taking into consideration network constraint parameters such as available bandwidth and explicit hops.
-As of February 2003, as documented in RFC 3468, the IETF MPLS working group deprecated CR-LDP and decided to focus purely on RSVP-TE. Operational overhead of RSVP-TE compared to the more widely deployed label distribution protocol (LDP) will generally be higher. This is a classic trade-off between complexity and optimality in the use of technologies in telecommunications networks.
-
-

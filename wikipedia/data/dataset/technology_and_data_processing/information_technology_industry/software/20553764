@@ -1,3 +1,0 @@
-The Java Cryptography Extension (JCE) is an officially released Standard Extension to the Java Platform and part of Java Cryptography Architecture. JCE provides a framework and implementation for encryption, key generation and key agreement, and Message Authentication Code (MAC) algorithms. JCE supplements the Java platform, which already includes interfaces and implementations of message digests and digital signatures. Installation is specific to the version of the Java Platform being used, with downloads available for Java 6, Java 7, and Java 8.
-
-

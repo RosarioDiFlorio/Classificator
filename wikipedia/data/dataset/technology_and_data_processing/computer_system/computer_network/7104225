@@ -1,7 +1,0 @@
-In order to use Bluetooth technology, a device must be compatible with the subset of Bluetooth profiles (often called services) necessary to use the desired services. A Bluetooth profile is a specification regarding an aspect of Bluetooth-based wireless communication between devices. It resides on top of the Bluetooth Core Specification and (optionally) additional protocols. While the profile may use certain features of the core specification, specific versions of profiles are rarely tied to specific versions of the core specification. For example, there are Hands-Free Profile (HFP) 1.5 implementations using both Bluetooth 2.0 and Bluetooth 1.2 core specifications.
-The way a device uses Bluetooth technology depends on its profile capabilities. The profiles provide standards which manufacturers follow to allow devices to use Bluetooth in the intended manner. For the Bluetooth low energy stack according to Bluetooth 4.0 a special set of profiles applies.
-At a minimum, each profile specification contains information on the following topics:
-Dependencies on other formats
-Suggested user interface formats
-Specific parts of the Bluetooth protocol stack used by the profile. To perform its task, each profile uses particular options and parameters at each layer of the stack. This may include an outline of the required service record, if appropriate.
-This article summarizes the current definitions of profiles defined and adopted by the Bluetooth SIG and possible applications of each profile.

@@ -1,1 +1,0 @@
-In machine learning, a Hyper basis function network, or HyperBF network, is a generalization of radial basis function (RBF) networks concept, where the Mahalanobis-like distance is used instead of Euclidean distance measure. Hyper basis function networks were first introduced by Poggio and Girosi in the 1990 paper “Networks for Approximation and Learning”.

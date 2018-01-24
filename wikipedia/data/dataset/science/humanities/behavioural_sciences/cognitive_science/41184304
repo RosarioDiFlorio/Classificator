@@ -1,9 +1,0 @@
-A Parse Thicket is a graph that represents the syntactic structure of a paragraph of text in natural language processing. A Parse Thicket includes Parse tree for each sentence for this paragraph plus some arcs for other relations between words other than syntactic. Parse thickets can be constructed for both constituency parse trees and dependency parse trees. The relations which link parse trees within a Parse Thicket are:
-Coreferences;
-The same entity / sub-entity / super-entity;
-Rhetorical Structure and other Discourse relation;
-Speech act-based relations.
-To assess similarity between texts, such as a question and its candidate answers, parse thickets can be generalized 
-In the image of parse thicket coreferences and entity-entity links are shown in solid red, and rhetoric/speech act relations are shown in dotted red. ETAP parser and tree visualization software is used.
-
-To compute generalization of two parse thickets, one needs to find their maximum common sub-graph (sub-thicket).

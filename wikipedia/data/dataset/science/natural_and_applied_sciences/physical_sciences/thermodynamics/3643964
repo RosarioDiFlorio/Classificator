@@ -1,3 +1,0 @@
-ChemFET, or chemical field-effect transistor, is a type of a field-effect transistor acting as a chemical sensor. It is a structural analog of a MOSFET transistor, where the charge on the gate electrode is applied by a chemical process. It may be used to detect atoms, molecules, and ions in liquids and gases.
-ISFET, an ion-sensitive field-effect transistor, is the best known subtype of ChemFET devices. It is used to detect ions in electrolytes.
-ENFET is a CHEMFET specialized for detection of specific biomolecules using enzymes.

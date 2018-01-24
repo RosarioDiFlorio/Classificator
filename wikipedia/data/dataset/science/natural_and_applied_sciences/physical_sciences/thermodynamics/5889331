@@ -1,9 +1,0 @@
-The dual combustion cycle (also known as the mixed cycle, Trinkler cycle, Seiliger cycle or Sabathe cycle) is a thermal cycle that is a combination of the Otto cycle and the Diesel cycle, first introduced by Russian-German engineer Gustav Trinkler. Heat is added partly at constant volume and partly at constant pressure, the advantage of which is that more time is available for the fuel to completely combust. Because of lagging characteristics of fuel this cycle is invariably used for Diesel and hot spot ignition engines. It consists of two adiabatic and two constant volume and one constant pressure processes. Efficiency lies between Otto and Diesel cycle.
-
-The dual cycle consists of following operations:
-Process 1-2: Isentropic compression
-Process 2-3: Addition of heat at constant volume.
-Process 3-4: Addition of heat at constant pressure.
-Process 4-5: Isentropic expansion.
-Process 5-1: Rejection of heat at constant volume. @
-The cycle is applicable for automobile sector.

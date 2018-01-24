@@ -1,7 +1,0 @@
-Depth conversion is an important step of the seismic reflection method, which converts the acoustic wave travel time to actual depth, based on the acoustic velocity of subsurface medium (sediments, rocks, water).
-Depth conversion integrates several sources of information about the suburface velocity to derive a three-dimensional velocity model:
-"Well tops", i.e., depth of geological layers encountered in oil and gas wells
-Velocity measurements made in oil and gas wells
-Empirical knowledge about the velocities of the rocks in the area investigated
-Root Mean Square (RMS) stacking velocities which are derived from the processing of the seismic reflection data
-The conversion permits the production of depth and thickness maps that depict subsurface layers that are based on reflection data. These maps are crucial in hydrocarbon exploration because they permit the volumetric evaluation of gas or oil in place. In the example subsurface map presented below, depth increases from red to blue. The highest zone in red is an oilfield at approximately 3000 m below sea level.

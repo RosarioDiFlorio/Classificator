@@ -1,2 +1,0 @@
-GME - operational global numerical weather prediction model of the German Weather Service. The model is on almost uniform icosahedral-hexagonal grid. The GME gridpoint approach avoids the disadvantages of spectral techniques as well as the pole problem in latitude–longitude grids and provides a data structure well suited to high efficiency on distributed memory parallel computers.
-The GME's approach to a global grid would later be utilized by the Flow-following, finite-volume Icosahedral Model (FIM), an experimental model currently in development in the United States.

@@ -1,8 +1,0 @@
-A hydrolysis constant is an equilibrium constant for a hydrolysis reaction.
-For example, if a metal salt such as AlCl3 dissolves in an aqueous solution, the metal cation behaves as a Lewis acid and hydrolyzes the water molecules in the solvent.
-Al3+ + 2H2O → AlOH2+ + H3O+
-The hydrolysis constant for this reaction is as shown:
-Khydrolysis = [H3O+] * [AlOH2+] / [Al3+]
-In a more generalized form, the hydrolysis constant can be described as:
-Ka = [H3O+] * [A−] / [HA]
-where A− represents any base, and HA represents any acid.

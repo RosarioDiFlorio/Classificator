@@ -1,2 +1,0 @@
-Berkeley Yacc (byacc) is a Unix parser generator designed to be compatible with Yacc. It was originally written by Robert Corbett and released in 1989. Due to its liberal license and because it was faster than the AT&T Yacc, it quickly became the most popular version of Yacc. It has the advantages of being written in ANSI C and being public domain software.
-It contains features not available in Yacc, such as reentrancy, which is implemented in a way that is broadly compatible with bison.

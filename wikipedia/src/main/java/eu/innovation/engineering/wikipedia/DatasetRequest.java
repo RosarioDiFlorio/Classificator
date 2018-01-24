@@ -1,45 +1,17 @@
 package eu.innovation.engineering.wikipedia;
 
-import java.util.Set;
+import java.io.File;
 
+/**
+ * @author Rosario
+ */
 public class DatasetRequest {
-  private Set<String> categories;
-  private boolean recursive;
-  private int maxLevel;
-  private int currentLevel;
+  private File taxonomyCSV;
+  private int limitDocuments;
+  private boolean online;
   private String name;
 
-  public Set<String> getCategories() {
-    return categories;
-  }
 
-  public void setCategories(Set<String> categories) {
-    this.categories = categories;
-  }
-
-  public boolean isRecursive() {
-    return recursive;
-  }
-
-  public void setRecursive(boolean recursive) {
-    this.recursive = recursive;
-  }
-
-  public int getMaxLevel() {
-    return maxLevel;
-  }
-
-  public void setMaxLevel(int maxLevel) {
-    this.maxLevel = maxLevel;
-  }
-
-  public int getCurrentLevel() {
-    return currentLevel;
-  }
-
-  public void setCurrentLevel(int currentLevel) {
-    this.currentLevel = currentLevel;
-  }
 
   public String getName() {
     return name;
@@ -47,6 +19,30 @@ public class DatasetRequest {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public boolean isOnline() {
+    return online;
+  }
+
+  public void setOnline(boolean online) {
+    this.online = online;
+  }
+
+  public File getTaxonomyCSV() {
+    return taxonomyCSV;
+  }
+
+  public void setTaxonomyCSV(File taxonomyCSV) {
+    this.taxonomyCSV = taxonomyCSV;
+  }
+
+  public int getLimitDocuments() {
+    return limitDocuments;
+  }
+
+  public void setLimitDocuments(int limitDocuments) {
+    this.limitDocuments = limitDocuments;
   }
 
 }

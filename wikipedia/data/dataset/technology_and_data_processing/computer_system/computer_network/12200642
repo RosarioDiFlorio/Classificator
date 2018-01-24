@@ -1,2 +1,0 @@
-A LAN-free backup is a backup of server data to a shared, central storage device without sending the data over the local area network (LAN). It is usually achieved by using a storage area network (SAN).
-Note that trivial backup to a dedicated, unshared storage device (such as local tape drive) does not meet the definition.

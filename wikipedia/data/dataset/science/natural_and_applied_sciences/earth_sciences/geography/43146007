@@ -1,2 +1,0 @@
-A WOEID (Where On Earth IDentifier) is a unique 32-bit reference identifier, originally defined by GeoPlanet and now assigned by Yahoo!, that identifies any feature on Earth. In 2009, Yahoo! released GeoPlanet's WOEID data to the public, with the last release on 1 June 2012, after which Yahoo! decided to cease making the data downloadable until they "determine a better way to surface the data as a part of the service".
-WOEIDs are used by a number of other projects, including Flickr OpenStreetMap,, Twitter, and zWeather.

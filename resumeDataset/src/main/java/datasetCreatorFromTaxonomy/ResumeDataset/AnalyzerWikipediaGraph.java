@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -25,9 +26,10 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import eu.innovationengineering.solrclient.auth.collection.queue.UpdatablePriorityQueue;
+import persistence.EdgeResult;
 import persistence.SQLiteVectors;
+import persistence.SQLiteWikipediaGraph;
 import utility.AdjacencyListRow;
-import utility.AdjacencyListRowVertex;
 import utility.PathInfo;
 import utility.StopWordEnglish;
 import utility.Word2Vec;
@@ -36,10 +38,9 @@ import utility.Word2Vec;
 
 public class AnalyzerWikipediaGraph {
 
-  private static  HashMap<String, AdjacencyListRow> adjacencyList = null;
+  
+  private static SQLiteWikipediaGraph graph = new SQLiteWikipediaGraph("databaseWikipediaGraph");
   private static HashMap<String,Set<String>> mappingTaxonomyWikipedia = null;
-  private static Map<String,float[]> vectorsWikipediaVertex = null;
-  private static Map<String,AdjacencyListRowVertex> graphWeighed = null;
   private static Word2Vec word2Vec;
 
 
@@ -48,8 +49,17 @@ public class AnalyzerWikipediaGraph {
   }
 
 
-  public static void mainToBuildVectors(String[] args) throws JsonParseException, JsonMappingException, IOException, InterruptedException{ 
-    adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("signedGraphWikipediaCleared");
+  /**
+   * @param args
+   * @throws JsonParseException
+   * @throws JsonMappingException
+   * @throws IOException
+   * @throws InterruptedException
+   * @deprecated 
+   */
+  @Deprecated
+  public static void mainToBuildVectors(String[] args) throws JsonParseException, JsonMappingException, IOException, InterruptedException{
+    HashMap<String, AdjacencyListRow> adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("signedGraphWikipediaCleared");
     Set<String> toVectorize = new HashSet<String>(adjacencyList.keySet());
     for(String key: adjacencyList.keySet()){
       toVectorize.addAll(adjacencyList.get(key).getLinkedVertex());  
@@ -72,6 +82,8 @@ public class AnalyzerWikipediaGraph {
   }
 
 
+
+  
   private static List<String> cleanText(String text){
     StopWordEnglish stopWords = new StopWordEnglish("stopwords_en.txt");
     text = text.replaceAll("\\p{Punct}", " ");
@@ -106,14 +118,15 @@ public class AnalyzerWikipediaGraph {
 
       //converto l'insieme di elementi da vettorizzare in una lista in modo da poterci accedere con l'indice.
       List<String> vertexList = new ArrayList<>(vertexWikipedia);
-      int offset = 0;         //variabile che mi tiene traccia dell'indice corrente.
+
+      Map<String,float[]> vectors = new HashMap<>();
+      int offset = 0;//variabile che mi tiene traccia dell'indice corrente.
       for(int i = 0; i<vertexList.size();i++){
 
         //pulisco i nomi dagli underscore e dalle stop word
         toVectorize.add(cleanText(vertexList.get(i)));
         //ogni tot di vertici eseguo la query al servizio Word2Vec
         if((toVectorize.size() == 200 || i == vertexWikipedia.size()-1)){
-          Map<String,float[]> vectors = new HashMap<>();
           float[][] vectorizedNames = word2Vec.returnVectorsFromTextList(toVectorize);
           for (int j = 0; j < toVectorize.size(); j++) {
             vectors.put(vertexList.get(j + offset).replace(" ", "_"), vectorizedNames[j]);
@@ -122,6 +135,7 @@ public class AnalyzerWikipediaGraph {
           sql.insertVectors(vectors);
           if(offset % 100000 == 0 || i == vertexWikipedia.size()-1)
             sql.commitConnection();
+          vectors.clear();
           toVectorize.clear();
         }
       }
@@ -175,8 +189,6 @@ public class AnalyzerWikipediaGraph {
     return variance/d;
   }
 
-
-
   public static void getPath(PathInfo p, StringBuilder builder){
     if (p != null) {
       builder.insert(0, "/" + p.getName()+"["+p.getInverseCosine()+"]");
@@ -184,19 +196,14 @@ public class AnalyzerWikipediaGraph {
     }
   }
 
-
   public static List<String> getDocumentLabelsDijstra(String idDocument) throws IOException{
     Set<String> documentCategories = getParentCategoriesByIdPage(idDocument);
     List<PathInfo> results = new ArrayList<PathInfo>();
-    if(graphWeighed == null){
-      ObjectMapper mapper = new ObjectMapper();
-      graphWeighed = mapper.readValue(new File("graphWikipediaWeighed"), new TypeReference<Map<String,AdjacencyListRowVertex>>() {});
-    }
-
+    
+    if(graph == null)
+      graph = new SQLiteWikipediaGraph("databaseWikipediaGraph");    
     for(String category: documentCategories){
-
-      for(PathInfo p: searchDjistraMarkedNode(graphWeighed, category, 2,0)){
-
+      for(PathInfo p: searchDjistraMarkedNode(graph, category, 2,0)){
         if(results.contains(p)){
           PathInfo tmp = results.get(results.indexOf(p));
           if(p.getValue() < tmp.getValue()){
@@ -207,7 +214,10 @@ public class AnalyzerWikipediaGraph {
           results.add(p);
       }
     }
-    //riscalo i valori dividendoli per la lunghezza del path.  
+    /*
+     * riscalo i valori dividendoli per la lunghezza del path.
+     * (DA CONTROLLARE CON IL GRAFO DAI PESI CORRETTI)!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  
+     */
     for(PathInfo p: results){
       p.setValue(p.getValue()/p.getLenPath());
     }
@@ -229,10 +239,10 @@ public class AnalyzerWikipediaGraph {
   public static List<String> getDocumentLabelsBFS(String idDocument) throws IOException{
     Set<String> documentCategories = getParentCategoriesByIdPage(idDocument);
     List<PathInfo> results = new ArrayList<PathInfo>();
-    if(adjacencyList == null)    
-      adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("signedGraphWikipediaCleared");
+    if(graph == null)
+      graph = new SQLiteWikipediaGraph("databaseWikipediaGraph");    
     for(String category: documentCategories){
-      for(PathInfo p: seachBFSMarkedNodes(adjacencyList, category, 3)){
+      for(PathInfo p: seachBFSMarkedNodes(graph, category, 3)){
         if(results.contains(p)){
           PathInfo tmp = results.get(results.indexOf(p));
           if(p.getValue() < tmp.getValue()){
@@ -257,44 +267,7 @@ public class AnalyzerWikipediaGraph {
   }
 
 
-  /**
-   * Return the categories of a Wikipedia's page.
-   * Take as input the id of a Wikipedia's document.
-   * @param idDocument
-   * @return
-   * @throws IOException
-   */
-  public static Set<String> getParentCategoriesByIdPage(String idDocument) throws IOException{
-    Set<String> toReturn  = new HashSet<>();
-    JsonArray categoriesParent = null;
-    String parentsURL = "https://en.wikipedia.org/w/api.php?action=query&pageids="+idDocument+"&prop=categories&clshow=!hidden&cllimit=500&indexpageids&format=json";
-    JsonObject responseParent = CrawlerWikipediaCategory.getJsonResponse(parentsURL);
-    //build ids array 
-    JsonArray idsJsonArray = responseParent.get("query").getAsJsonObject().get("pageids").getAsJsonArray();
-    ArrayList<String> ids = new ArrayList<String>();
-    for (JsonElement e : idsJsonArray){
-      if (Integer.parseInt(e.getAsString())>0){
-        ids.add(e.getAsString());
-      }
-    }
-    for(String id : ids){
-      try{
-        categoriesParent = responseParent.getAsJsonObject().get("query").getAsJsonObject().get("pages").getAsJsonObject().get(id).getAsJsonObject().get("categories").getAsJsonArray();
-        if(categoriesParent!=null){
-          // add all vertex obtained to hashset
-          for(JsonElement cat : categoriesParent){
-            String name = cat.getAsJsonObject().get("title").getAsString();
-            String [] namesplitted = name.replaceAll(" ", "_").split("Category:");
-            toReturn.add(namesplitted[1]);
-          }
-        }
-      }
-      catch(Exception e){
-        System.out.println(id+": hasn't parents category --- URL: "+parentsURL);
-      }
-    }
-    return toReturn;
-  }
+
 
 
   /**
@@ -307,10 +280,16 @@ public class AnalyzerWikipediaGraph {
    * @param startValue
    * @return
    */
-  public static Set<PathInfo> searchDjistraMarkedNode(Map<String,AdjacencyListRowVertex> adjacencyList,String vertexStartName,int numberOfMarkedVertex,double startValue){
+
+
+  /*
+   * Modificare questa classe in modo da leggere dal database del grafo.
+   * 
+   */
+  public static Set<PathInfo> searchDjistraMarkedNode(SQLiteWikipediaGraph graph,String vertexStartName,int numberOfMarkedVertex,double startValue){
     //insieme di nodi marcati da ritornare.
     Set<PathInfo> nearestMarkedVertex = new HashSet<PathInfo>();
-    if(adjacencyList.containsKey(vertexStartName)){
+    try {
       int lenPath = 0; //conta la lunghezza del path
       int countMarked = 0; //conta il numero di nodi marcati trovati
       Set<PathInfo> visitedVertex = new HashSet<PathInfo>(); //lista dei nodi già visitati.
@@ -322,7 +301,7 @@ public class AnalyzerWikipediaGraph {
       /*
        * controllo se il nodo di partenza è una categoria contenuta all'interno della tassonomia.
        */
-      if(adjacencyList.get(vertexStartName).isTaxonomyCategory()){
+      if(graph.isMarked(vertexStartName)){
         nearestMarkedVertex.add(startingPoint);
         countMarked++;
         if(countMarked >= numberOfMarkedVertex)
@@ -335,59 +314,60 @@ public class AnalyzerWikipediaGraph {
        */
       UpdatablePriorityQueue<PathInfo> q = new UpdatablePriorityQueue<>();
       q.add(startingPoint);
-
       while(!q.isEmpty()){
         /*
          * prendo l'elemento con il peso più minore.
          */
         PathInfo currentVertex = q.poll();
-        if(adjacencyList.containsKey(currentVertex.getName())){
-          /*
-           * controllo se il nodo di partenza è una categoria contenuta all'interno della tassonomia.
-           */
-          if(adjacencyList.get(currentVertex.getName()).isTaxonomyCategory()){
-            nearestMarkedVertex.add(currentVertex);
-            countMarked++;
-            if(countMarked >= numberOfMarkedVertex)
-              return nearestMarkedVertex;
-          }
-          visitedVertex.add(currentVertex); // aggiungo il nodo alla lista dei nodi visitati.
-          /*
-           * Per ognuno dei Nodi Linkati creo una lista di PathInfo.
-           * con value uguale al valore del nodo corrente + valore del nodo linkato considerato.
-           */
-          List<PathInfo> linkedVertex = adjacencyList.get(currentVertex.getName()).getLinkedVertex().stream().map(v->new PathInfo(v.getVertexName(),(currentVertex.getValue()+v.getSimilarity()),v.getSimilarity())).collect(Collectors.toList());       
-          /*
-           * elimino dalla coda i nodi linkati al nodo corrente che hanno valore più alto di quello appena considerato.
-           */
-          boolean updateQueue = false;
-          Iterator<PathInfo> iter = q.iterator();
-          while(iter.hasNext()){
-            PathInfo p = iter.next();
-            int index = linkedVertex.indexOf(p);
-            if(index > 0){
-              PathInfo tmp = linkedVertex.get(index);
 
-              //update element into the priority queue
-              if(p.getValue() > tmp.getValue()){
-                p.setValue(tmp.getValue());
-                updateQueue = true;              }
-            }
-          }
-          if (updateQueue) {
-            q.update();
-          }
+        EdgeResult edge = graph.getEdgeList(currentVertex.getName(), "parents");
 
-          /*
-           * filtro i nodi linkati che non appartengo alla priority queue e non appartengo alla lista dei nodi visitati.
-           * per ognuno di questi nodi assegno con parent il nodo corrente e gli aggiorno la lunghezza del path.
-           * infine li aggiungo alla priority queue dei prossimi nodi da visitare.
-           */
-          linkedVertex.stream().filter(el->!q.contains(el) && !visitedVertex.contains(el)).peek(el->el.setParent(currentVertex)).peek(el->el.setLenPath(currentVertex.getLenPath()+1)).forEach(q::add);
-
+        /*
+         * controllo se il nodo di partenza è una categoria contenuta all'interno della tassonomia.
+         */
+        if(graph.isMarked(currentVertex.getName())){
+          nearestMarkedVertex.add(currentVertex);
+          countMarked++;
+          if(countMarked >= numberOfMarkedVertex)
+            return nearestMarkedVertex;
         }
-      }
+        visitedVertex.add(currentVertex); // aggiungo il nodo alla lista dei nodi visitati.
+        /*
+         * Per ognuno dei Nodi Linkati creo una lista di PathInfo.
+         * con value uguale al valore del nodo corrente + valore del nodo linkato considerato.
+         */
+        List<PathInfo> linkedVertex = edge.getLinkedVertex().stream().map(v->new PathInfo(v.getVertexName(),(currentVertex.getValue()+v.getSimilarity()),v.getSimilarity())).collect(Collectors.toList());
+        /*
+         * elimino dalla coda i nodi linkati al nodo corrente che hanno valore più alto di quello appena considerato.
+         */
+        boolean updateQueue = false;
+        Iterator<PathInfo> iter = q.iterator();
+        while(iter.hasNext()){
+          PathInfo p = iter.next();
+          int index = linkedVertex.indexOf(p);
+          if(index > 0){
+            PathInfo tmp = linkedVertex.get(index);
 
+            //update element into the priority queue
+            if(p.getValue() > tmp.getValue()){
+              p.setValue(tmp.getValue());
+              updateQueue = true;              }
+          }
+        }
+        if (updateQueue) {
+          q.update();
+        }
+
+        /*
+         * filtro i nodi linkati che non appartengo alla priority queue e non appartengo alla lista dei nodi visitati.
+         * per ognuno di questi nodi assegno con parent il nodo corrente e gli aggiorno la lunghezza del path.
+         * infine li aggiungo alla priority queue dei prossimi nodi da visitare.
+         */
+        linkedVertex.stream().filter(el->!q.contains(el) && !visitedVertex.contains(el)).peek(el->el.setParent(currentVertex)).peek(el->el.setLenPath(currentVertex.getLenPath()+1)).forEach(q::add);
+      }
+    }
+    catch (SQLException e) {
+      e.printStackTrace();
     }
     return nearestMarkedVertex;
   }
@@ -400,18 +380,20 @@ public class AnalyzerWikipediaGraph {
    * @param vertexStart
    * @param numberOfMarkedVertex
    * @return
+   * 
    */
-  public static Set<PathInfo> seachBFSMarkedNodes(Map<String,AdjacencyListRow> adjacencyList,String vertexStart,int numberOfMarkedVertex){
+  public static Set<PathInfo> seachBFSMarkedNodes(SQLiteWikipediaGraph graph,String vertexStart,int numberOfMarkedVertex){
     //insieme di nodi marcati da ritornare.
     Set<PathInfo> nearestMarkedVertex = new HashSet<PathInfo>();
 
-    if(adjacencyList.containsKey(vertexStart)){
+    try{
+      
       int lenghtPath = 0;
       PathInfo vertexStartInfo = new PathInfo(vertexStart,lenghtPath);
       //contatore del numero di nodi marcati trovati.
       int countMarked = 0;
       //controllo se il nodo di partenza è una categoria marcata.
-      if(adjacencyList.get(vertexStart).isTaxonomyCategory()){
+      if(graph.isMarked(vertexStart)){
         nearestMarkedVertex.add(vertexStartInfo);
         countMarked++;
         if(countMarked >= numberOfMarkedVertex)
@@ -426,9 +408,10 @@ public class AnalyzerWikipediaGraph {
       //incremento la lunghezza del path per i nodi linkati dal nodo di partenza.
       lenghtPath++;
 
+      EdgeResult edgeStart = graph.getEdgeList(vertexStart, "parents");
       ///!!!!!!!!!!!!!!!!! JAVA 8 FUNCTION (conversione di Set<String> in un Set<PathInfo>) !!!!!!!!!!!!!!!!
       //trasformo il set di stringhe linkate dal nodo in un set di oggetti PathInfo.
-      Set<PathInfo> linkedVertex = adjacencyList.get(vertexStart).getLinkedVertex().stream().map(vertexName-> new PathInfo(vertexName, vertexStartInfo.getValue()+1)).collect(Collectors.toSet());
+      Set<PathInfo> linkedVertex = edgeStart.getLinkedVertex().stream().map(vertex-> new PathInfo(vertex.getVertexName(), vertexStartInfo.getValue()+1)).collect(Collectors.toSet());
 
       //aggiungo tutti i nodi linkati dal nodo di partenza ai nodi da visitare.
       vertexToVisit.addAll(linkedVertex);
@@ -440,41 +423,25 @@ public class AnalyzerWikipediaGraph {
         //aggiungo il nodo alla lista dei vertici già visitati.
         visitedVertex.add(vertex);
         lenghtPath ++;
-        if(adjacencyList.containsKey(vertex.getName())){
+
           //se il nodo corrente è una categoria marcata l'aggiungo alla lista da ritornare.
-          if(adjacencyList.get(vertex.getName()).isTaxonomyCategory()){
+          if(graph.isMarked(vertex.getName())){
             nearestMarkedVertex.add(vertex);
             countMarked++;
             if(countMarked >= numberOfMarkedVertex)
               return nearestMarkedVertex;
           }
           //aggiungo i prossimi nodi da visitare
-          for(String v : adjacencyList.get(vertex.getName()).getLinkedVertex()){
+          Set<String> nextToVisit = graph.getEdgeList(vertex.getName(), "parents").getLinkedVertex().stream().map(v->v.getVertexName()).collect(Collectors.toSet());
+          for(String v : nextToVisit){
             PathInfo vInfo = new PathInfo(v, vertex.getValue()+1);
             vInfo.setParent(vertex);
             if(!visitedVertex.contains(vInfo) && !vertexToVisit.contains(vInfo))
               vertexToVisit.add(vInfo);
           }
-        }else // porzione aggiunta per possibile errore di formato delle chiavi all'interno della lista di adiacenze. 
-          if(adjacencyList.containsKey(vertex.getName().replace("_", " "))){
-            vertex.setName(vertex.getName().replace("_", " "));
-            if(adjacencyList.get(vertex.getName()).isTaxonomyCategory()){
-              nearestMarkedVertex.add(vertex);
-              countMarked++;
-              if(countMarked >= numberOfMarkedVertex)
-                return nearestMarkedVertex;
-            }
-            //aggiungo i prossimi nodi da visitare
-            for(String v : adjacencyList.get(vertex.getName()).getLinkedVertex()){
-              PathInfo vInfo = new PathInfo(v, vertex.getValue()+1);
-              if(!visitedVertex.contains(vInfo) && !vertexToVisit.contains(vInfo))
-                vertexToVisit.add(vInfo);
-            }
-          }
-          else{
-            System.out.println("Il grafo non contiene la categoria: "+vertex.getName());
-          }
       }
+    }catch (SQLException e) {
+      e.printStackTrace();
     }
     //ritorno la lista di nodi marcati.
     return nearestMarkedVertex;
@@ -513,17 +480,41 @@ public class AnalyzerWikipediaGraph {
     return dataMap;
   } 
 
-  public static JsonObject getPageInfoById(String pageids){
-    JsonObject toReturn = new JsonObject();
-    try{
-
-      String query = "https://en.wikipedia.org/w/api.php?action=query&prop=info&pageids="+pageids+"&format=json";
-      JsonObject response = CrawlerWikipediaCategory.getJsonResponse(query);
-      toReturn = response.get("query").getAsJsonObject().get("pages").getAsJsonObject().get(pageids).getAsJsonObject();
-
-    }catch (IOException e) {
-      // TODO: handle exception
-      e.printStackTrace();
+  /**
+   * Return the categories of a Wikipedia's page.
+   * Take as input the id of a Wikipedia's document.
+   * @param idDocument
+   * @return
+   * @throws IOException
+   */
+  public static Set<String> getParentCategoriesByIdPage(String idDocument) throws IOException{
+    Set<String> toReturn  = new HashSet<>();
+    JsonArray categoriesParent = null;
+    String parentsURL = "https://en.wikipedia.org/w/api.php?action=query&pageids="+idDocument+"&prop=categories&clshow=!hidden&cllimit=500&indexpageids&format=json";
+    JsonObject responseParent = CrawlerWikipediaCategory.getJsonResponse(parentsURL);
+    //build ids array 
+    JsonArray idsJsonArray = responseParent.get("query").getAsJsonObject().get("pageids").getAsJsonArray();
+    ArrayList<String> ids = new ArrayList<String>();
+    for (JsonElement e : idsJsonArray){
+      if (Integer.parseInt(e.getAsString())>0){
+        ids.add(e.getAsString());
+      }
+    }
+    for(String id : ids){
+      try{
+        categoriesParent = responseParent.getAsJsonObject().get("query").getAsJsonObject().get("pages").getAsJsonObject().get(id).getAsJsonObject().get("categories").getAsJsonArray();
+        if(categoriesParent!=null){
+          // add all vertex obtained to hashset
+          for(JsonElement cat : categoriesParent){
+            String name = cat.getAsJsonObject().get("title").getAsString();
+            String [] namesplitted = name.replaceAll(" ", "_").split("Category:");
+            toReturn.add(namesplitted[1]);
+          }
+        }
+      }
+      catch(Exception e){
+        System.out.println(id+": hasn't parents category --- URL: "+parentsURL);
+      }
     }
     return toReturn;
   }

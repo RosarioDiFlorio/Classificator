@@ -1,1 +1,0 @@
-NABTS, the North American Broadcast Teletext Specification, is a protocol used for encoding NAPLPS-encoded teletext pages, as well as other types of digital data, within the vertical blanking interval (VBI) of an analog video signal. It is standardized under standard EIA-516, and has a rate of 15.6 kbit/s per line of video (with error correction).

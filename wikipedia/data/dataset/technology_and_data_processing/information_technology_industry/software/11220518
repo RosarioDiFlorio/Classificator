@@ -1,4 +1,0 @@
-Search-based software engineering (SBSE) applies metaheuristic search techniques such as genetic algorithms, simulated annealing and tabu search to software engineering problems. Many activities in software engineering can be stated as optimization problems. Optimization techniques of operations research such as linear programming or dynamic programming are often impractical for large scale software engineering problems because of their computational complexity. Researchers and practitioners use metaheuristic search techniques to find near-optimal or "good-enough" solutions.
-SBSE problems can be divided into two types:
-black-box optimization problems, for example, assigning people to tasks (a typical combinatorial optimization problem).
-white-box problems where operations on source code need to be considered.
