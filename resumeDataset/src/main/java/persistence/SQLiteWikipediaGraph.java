@@ -1,7 +1,5 @@
 package persistence;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -32,13 +30,13 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
 	public void insertEdge(String source, String destination, double weight) throws SQLException{
 
 
-		PreparedStatement pstmt = super.getConnection().prepareStatement("INSERT INTO edges VALUES(?,?,?)");	
+		try(PreparedStatement pstmt = super.getConnection().prepareStatement("INSERT INTO edges VALUES(?,?,?)");){	
 
-		pstmt.setString(1, source);
-		pstmt.setString(2, destination);
-		pstmt.setDouble(3, weight);
-		pstmt.executeUpdate();
-
+			pstmt.setString(1, source);
+			pstmt.setString(2, destination);
+			pstmt.setDouble(3, weight);
+			pstmt.executeUpdate();
+		}
 	}
 
 	/**
@@ -50,38 +48,36 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
 	 */
 	public void insertEdgeList(String source, List<String> destination, List<Double> weight) throws SQLException{
 
-		PreparedStatement pstmt = super.getConnection().prepareStatement("INSERT INTO edges VALUES(?,?,?)");	
-
-		pstmt.setString(1, source);
-		for(int i=0;i<destination.size();i++){
-			pstmt.setString(2, destination.get(i));
-			pstmt.setDouble(3, weight.get(i));
-			pstmt.executeUpdate();
+		try(PreparedStatement pstmt = super.getConnection().prepareStatement("INSERT INTO edges VALUES(?,?,?)");){	
+			pstmt.setString(1, source);
+			for(int i=0;i<destination.size();i++){
+				pstmt.setString(2, destination.get(i));
+				pstmt.setDouble(3, weight.get(i));
+				pstmt.executeUpdate();
+			}
 		}
-
 	}
 
 
 	public void insertMarkedNode(String name, boolean isMarked) throws SQLException{
-		PreparedStatement pstmt = super.getConnection().prepareStatement("INSERT INTO markedNodes VALUES(?,?)");
-		pstmt.setString(1, name);
-		pstmt.setBoolean(2, isMarked);
-		pstmt.executeUpdate();
+		try(PreparedStatement pstmt = super.getConnection().prepareStatement("INSERT INTO markedNodes VALUES(?,?)");){
+			pstmt.setString(1, name);
+			pstmt.setBoolean(2, isMarked);
+			pstmt.executeUpdate();
+		}
 	}
 
 	public boolean isMarked(String name){
 		String sql = "SELECT marked FROM markedNodes WHERE name =\""+name+"\"";
 
 		boolean toReturn = false;
-		try {
-			Statement stm = super.getConnection().createStatement();
-			stm.executeQuery(sql);
-			ResultSet res = stm.executeQuery(sql);
+		try(Statement stm = super.getConnection().createStatement();
+				ResultSet res = stm.executeQuery(sql);) {
 			toReturn = res.getBoolean("marked");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
+
 		return toReturn;
 	}
 
@@ -94,7 +90,7 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
 	 */
 	public EdgeResult getEdgeList(String source, String queryType) throws SQLException{
 
-
+		List<Vertex> vertexList = new ArrayList<Vertex>();
 		// build sql request 
 		String sql=null;
 		if(queryType.equals("parents"))
@@ -103,21 +99,20 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
 			sql = "SELECT childs,weight FROM edges WHERE parents =\""+source+"\"";
 
 
-		Statement stm = super.getConnection().createStatement();
-		ResultSet res = stm.executeQuery(sql);
-		boolean result = res.next();
-		List<Vertex> vertexList = new ArrayList<Vertex>();
+		try(Statement stm = super.getConnection().createStatement();
+				ResultSet res = stm.executeQuery(sql);){
+			boolean result = res.next();
 
-		//while there are row in result to read
-		while(result){
-			String dest = res.getString(queryType);
-			double distance = res.getDouble("weight");
-			vertexList.add(new Vertex(dest,distance));
-			result = res.next();
+
+			//while there are row in result to read
+			while(result){
+				String dest = res.getString(queryType);
+				double distance = res.getDouble("weight");
+				vertexList.add(new Vertex(dest,distance));
+				result = res.next();
+			}
 		}
-
 		return new EdgeResult(source, vertexList);
-
 	}
 
 

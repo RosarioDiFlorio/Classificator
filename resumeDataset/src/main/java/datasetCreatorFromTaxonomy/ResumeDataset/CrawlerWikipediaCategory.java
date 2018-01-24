@@ -147,10 +147,12 @@ public class CrawlerWikipediaCategory {
 	public static void mainToBuildWeighedGraph(String args[]) throws JsonParseException, JsonMappingException, IOException{
 		System.out.println("Start to read signedGraphWikipediaCleared ");
 		HashMap<String, AdjacencyListRow> adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("signedGraphWikipediaCleared");
+		
 		//System.out.println("Start to read vectorsWikipediaVertex ");
 		//Map<String, float[]> vectorsFromWikipediaGraph = AnalyzerWikipediaGraph.loadVectorsWikipediaGraph("vectorsWikipediaVertex");
 		System.out.println("Start to build new Graph ");
 		//Map<String, AdjacencyListRowVertex> result = fromAdjacencyListRowToAdjacencyListRowVertex(adjacencyList);
+		
 		saveWeighedGraphIntoDB(adjacencyList);
 
 		//ObjectMapper mapper = new ObjectMapper();
@@ -166,35 +168,41 @@ public class CrawlerWikipediaCategory {
 	 */
 	private static void saveWeighedGraphIntoDB(HashMap<String, AdjacencyListRow> adjacencyList) {
 		SQLiteWikipediaGraph sqlConnectorGraph = new SQLiteWikipediaGraph("databaseWikipediaGraph.db");
+		sqlConnectorGraph.setAutoCommit(false);
 		SQLiteVectors sqlConnectorVector = new SQLiteVectors("databaseVectors.db");
-
+		int countVertexReaded = 0;
 		for(String vertex : adjacencyList.keySet()){
-			
+			countVertexReaded ++;
 			try {
 				sqlConnectorGraph.insertMarkedNode(vertex, adjacencyList.get(vertex).isTaxonomyCategory());
 			} catch (SQLException e1) {
 				e1.printStackTrace();
 			}
-			
+
 			float[] vertexVector = sqlConnectorVector.getVectorByName(vertex);
 			HashSet<String> linkedNode = adjacencyList.get(vertex).getLinkedVertex();
 			for(String currentVertex : linkedNode){
 				float[] currentVertexVector = sqlConnectorVector.getVectorByName(currentVertex);
-				double weight = cosineSimilarityInverse(vertexVector, currentVertexVector);
-				System.out.println(currentVertex);
 				try {
 					if(validateVector(vertexVector) && validateVector(currentVertexVector)){
-						sqlConnectorGraph.insertEdge(vertex, currentVertex, weight);					}
-					else{
-						sqlConnectorGraph.insertEdge(vertex, currentVertex, 3.14/2);
+						double weight = cosineSimilarityInverse(vertexVector, currentVertexVector);
+						sqlConnectorGraph.insertEdge(currentVertex, vertex, weight);	
 					}
-					
+					else{
+						sqlConnectorGraph.insertEdge(currentVertex, vertex, (double)(3.14/2));
+					}
 				} catch (SQLException e) {
-					System.out.println("To continue cicle");
+					System.out.println("To continue cicle");			
 					e.printStackTrace();
 				}
+			}	
+			if(countVertexReaded%100000==0){
+				System.out.println(countVertexReaded);
+				sqlConnectorGraph.commitConnection();
 			}
 		}
+		sqlConnectorGraph.commitConnection();
+		
 	}
 
 
@@ -666,13 +674,19 @@ public class CrawlerWikipediaCategory {
 		}
 
 		if(dotProduct == 0 || (normA * normB) == 0){
-			return 0.001;
+			return  0.001;
 
 		}
 		else{
+			Double toReturn = Math.acos((dotProduct) / (Math.sqrt(normA * normB)));
+			
+			if (toReturn.isNaN())
+				return 0.001;
+			
 			return Math.acos((dotProduct) / (Math.sqrt(normA * normB)))+0.001;
 		}
 	}
+
 
 	public static double cosineSimilarity(float[] vectorA, float[] vectorB) {
 		double dotProduct = 0.0;
