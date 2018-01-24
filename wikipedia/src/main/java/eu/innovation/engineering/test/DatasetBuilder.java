@@ -39,7 +39,7 @@ public class DatasetBuilder implements WikiRequest {
      * Initialize the Request's Object with the information.
      */
     DatasetRequest request = new DatasetRequest();
-    request.setLimitDocuments(500);
+    request.setLimitDocuments(1);
     request.setName("test");
     request.setOnline(true);
     request.setTaxonomyCSV(new File("wheesbee_taxonomy.csv"));
