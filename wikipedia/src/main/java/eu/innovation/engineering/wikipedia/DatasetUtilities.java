@@ -56,36 +56,24 @@ public class DatasetUtilities {
           writer.close();
         }
       }
+      /*
+       * DEBUG PRINTS
+       */
+      for(List<String> list: pathMap.get(key)){
+        System.out.println(key+" saved into "+list.get(0)+", number of documents ->"+documentsMap.get(key).size());
+      }
     }
   }
   
-  /**
-   * Save a dataset into a folders structure.
-   * @param contents
-   * @param pathWhereSave
-   * @throws FileNotFoundException
-   * @deprecated
-   */
-  @Deprecated
-  private static Set<String> saveContentFolder(Map<String,DocumentInfo> contents, String pathWhereSave) throws FileNotFoundException{
-    boolean success = new File(pathWhereSave).mkdir();  
-    for(String documentId: contents.keySet()){
-      PrintWriter p = new PrintWriter(new File(pathWhereSave+"/"+documentId));
-      p.println(contents.get(documentId).getTitle()+"\n"+contents.get(documentId).getText());
-      p.flush();
-      p.close();
-    }
-    return contents.keySet();
-  }
   
-  public static Map<String,List<List<String>>> readCSV(String csvFile,boolean labeled) {
+  public static Map<String,List<List<String>>> readCSV(File csvFile,boolean labeled) {
     String line = "";
     String cvsSplitBy = ",";
     Map<String, List<List<String>>> dataMap = new HashMap<>();
     try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
       if(labeled)
         line = br.readLine();
-
+  
       while ((line = br.readLine()) != null) {
         // use comma as separator
         String[] csvData = line.split(cvsSplitBy); 
@@ -95,7 +83,7 @@ public class DatasetUtilities {
             data.add(csvData[i].trim());
           }
           String key = csvData[csvData.length-1].trim().replace("en.wikipedia.org/wiki/", "");
-
+  
           if(!key.equals("")){
             if(dataMap.containsKey(key)){
               List<List<String>> toReplace = dataMap.get(key);
@@ -107,8 +95,8 @@ public class DatasetUtilities {
               dataMap.put(key, datas);
             }
           }
-
-
+  
+  
         }
       }
       return dataMap;
@@ -117,23 +105,23 @@ public class DatasetUtilities {
     }
     return dataMap;
   }
-  
-  private static List<String> getChildDirectories (String path){
-    File dir = new File(path);
-    List<String> toReturn = new ArrayList<>();
-    if(dir.isDirectory()){
-      File[] subDirs = dir.listFiles();
-      for(File el: subDirs){
-        if(el.isDirectory())
-          toReturn.add(el.getName().replace(" ", "_"));
-        else
-          break;
-      }
+
+  public static Map<String, Integer> countLeafs(Map<String, List<List<String>>> mapcsv){
+    Map<String, Integer> toReturn = new HashMap<>();
+    for(String key:mapcsv.keySet()){
+      for(List<String> list: mapcsv.get(key)){
+        String rootCat = list.get(0);
+        if(toReturn.containsKey(rootCat)){
+          int count = toReturn.get(rootCat);
+          count ++;
+          toReturn.replace(rootCat, count);
+        }else
+          toReturn.put(rootCat, 1);
+      }   
     }
-    Collections.sort(toReturn);
     return toReturn;
   }
-  
+
   public static Map<String,List<String>> createMapForClassification(String path,String fileWhereSaveIt) throws JsonGenerationException, JsonMappingException, IOException{
     Map<String,List<String>> classificationMap = new HashMap<>();
     List<String> rootChild = getChildDirectories(path);
@@ -162,20 +150,20 @@ public class DatasetUtilities {
     }
     return toWrite;
   }
-  
-  public static Map<String, Integer> countLeafs(Map<String, List<List<String>>> mapcsv){
-    Map<String, Integer> toReturn = new HashMap<>();
-    for(String key:mapcsv.keySet()){
-      for(List<String> list: mapcsv.get(key)){
-        String rootCat = list.get(0);
-        if(toReturn.containsKey(rootCat)){
-          int count = toReturn.get(rootCat);
-          count ++;
-          toReturn.replace(rootCat, count);
-        }else
-          toReturn.put(rootCat, 1);
-      }   
+
+  private static List<String> getChildDirectories (String path){
+    File dir = new File(path);
+    List<String> toReturn = new ArrayList<>();
+    if(dir.isDirectory()){
+      File[] subDirs = dir.listFiles();
+      for(File el: subDirs){
+        if(el.isDirectory())
+          toReturn.add(el.getName().replace(" ", "_"));
+        else
+          break;
+      }
     }
+    Collections.sort(toReturn);
     return toReturn;
   }
   
