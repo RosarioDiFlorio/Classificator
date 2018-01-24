@@ -1,4 +1,4 @@
-package eu.innovation.engineering.test;
+package eu.innovation.engineering.dataset.main;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,12 +15,12 @@ import java.util.concurrent.Future;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 
-import eu.innovation.engineering.wikipedia.DatasetRequest;
-import eu.innovation.engineering.wikipedia.DatasetResponse;
-import eu.innovation.engineering.wikipedia.DatasetTask;
-import eu.innovation.engineering.wikipedia.DatasetUtilities;
-import eu.innovation.engineering.wikipedia.DocumentInfo;
-import eu.innovation.engineering.wikipedia.WikiRequest;
+import eu.innovation.engineering.dataset.utility.DatasetRequest;
+import eu.innovation.engineering.dataset.utility.DatasetResponse;
+import eu.innovation.engineering.dataset.utility.DatasetTask;
+import eu.innovation.engineering.dataset.utility.DatasetUtilities;
+import eu.innovation.engineering.dataset.utility.DocumentInfo;
+import eu.innovation.engineering.dataset.utility.WikiRequest;
 import persistence.SQLiteWikipediaGraph;
 
 public class DatasetBuilder implements WikiRequest {

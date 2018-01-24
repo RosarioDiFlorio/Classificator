@@ -1,4 +1,4 @@
-package eu.innovation.engineering.wikipedia;
+package eu.innovation.engineering.dataset.utility;
 
 import java.io.File;
 

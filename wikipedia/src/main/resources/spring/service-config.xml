@@ -14,7 +14,7 @@
 
     <bean id="jsonMapper" class="com.fasterxml.jackson.databind.ObjectMapper" />
 
-    <bean id="wikiminer" class="eu.innovation.engineering.wikipedia.WikipediaMiner" />
+    <bean id="wikiminer" class="eu.innovation.engineering.dataset.utility.WikipediaMiner" />
     
     <jaxrs:server address="/">
         <jaxrs:serviceBeans>

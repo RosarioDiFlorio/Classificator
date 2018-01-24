@@ -1,4 +1,4 @@
-package eu.innovation.engineering.wikipedia;
+package eu.innovation.engineering.dataset.utility;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
