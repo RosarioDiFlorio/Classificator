@@ -47,7 +47,8 @@ public class AnalyzerWikipediaGraph {
   public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException, InterruptedException{
     mainToBuildVectors(args);
   }
-
+  
+  
 
   /**
    * @param args
