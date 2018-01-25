@@ -31,10 +31,7 @@ public class SQLiteVectors extends SQLiteConnector {
     catch (SQLException e) {
       e.printStackTrace();
     }
-
-
-
-  }
+ }
 
 
   public  void insertVectors(Map<String,float[]> vectors) throws InterruptedException{

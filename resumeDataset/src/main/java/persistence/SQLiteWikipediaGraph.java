@@ -5,8 +5,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import utility.Vertex;
@@ -14,27 +16,64 @@ import utility.Vertex;
 public class SQLiteWikipediaGraph extends SQLiteConnector  {
 
 
-  public static void main(String[] args){
-    SQLiteWikipediaGraph graph = new SQLiteWikipediaGraph("test.db");
+
+  public Map<String,EdgeResult> getGraph(String typeLinked){
+    System.out.println("Inizialing graph");
+    Map<String,EdgeResult> toReturn = new HashMap<String, EdgeResult>();
+    String sql = "SELECT * FROM edges";
+    try(PreparedStatement stm = getConnection().prepareStatement(sql)){
+      try (ResultSet res = stm.executeQuery()) {
+        while (res.next()) {
+          Vertex v = new Vertex(res.getString(typeLinked), res.getDouble("distance"));          
+          String key = null;
+          List<Vertex> linkedVertex = null;      
+          EdgeResult toUpdate = null;
+          if(typeLinked.equals("parents"))
+            key = res.getString("childs");
+          else
+            key = res.getString("parents");
+          if(toReturn.containsKey(key)){
+            toUpdate = toReturn.get(key);
+            linkedVertex = toUpdate.getLinkedVertex();
+            linkedVertex.add(v);
+            toUpdate.setLinkedVertex(linkedVertex);
+            toReturn.replace(key, toUpdate);
+          }else{
+            linkedVertex = new ArrayList<Vertex>();
+            linkedVertex.add(v);
+            toUpdate = new EdgeResult(key, linkedVertex);
+            toReturn.put(key, toUpdate);
+          }
+
+        }
+      }
+    }
+    catch (SQLException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+    System.out.println("graph loaded -> "+toReturn.size());
+    return toReturn;
   }
+
+
+
 
 
   public SQLiteWikipediaGraph (String dbName){
     super(dbName);
     String markedNodesTable ="CREATE TABLE IF NOT EXISTS  markedNodes (  name   VARCHAR (255) PRIMARY KEY NOT NULL, marked BOOLEAN NOT NULL);";
     String edgesTable = "CREATE TABLE IF NOT EXISTS  edges (   parents  VARCHAR NOT NULL, childs VARCHAR NOT NULL, distance DOUBLE  NOT NULL, PRIMARY KEY (parents,childs) );";
-    
+
     try(Statement stm = getConnection().createStatement()){
       stm.executeQuery(markedNodesTable);  
     }
     catch (SQLException e) {
-      e.printStackTrace();
     }
     try(Statement stm = getConnection().createStatement()){
       stm.executeQuery(edgesTable);
     }
     catch (SQLException e) {
-      e.printStackTrace();
     } 
   }
 
@@ -78,11 +117,15 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
   }
 
 
-  public void insertMarkedNode(String name, boolean isMarked) throws SQLException{
+  public void insertMarkedNode(String name, boolean isMarked){
     try(PreparedStatement pstmt = super.getConnection().prepareStatement("INSERT INTO markedNodes VALUES(?,?)");){
       pstmt.setString(1, name);
       pstmt.setBoolean(2, isMarked);
       pstmt.executeUpdate();
+    }
+    catch (SQLException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
     }
   }
 
@@ -113,9 +156,9 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
     // build sql request 
     String sql=null;
     if(queryType.equals("parents"))
-      sql = "SELECT parents,weight FROM edges WHERE childs =\""+source+"\"";
+      sql = "SELECT parents,distance FROM edges WHERE childs =\""+source+"\"";
     else if(queryType.equals("childs"))
-      sql = "SELECT childs,weight FROM edges WHERE parents =\""+source+"\"";
+      sql = "SELECT childs,distance FROM edges WHERE parents =\""+source+"\"";
 
 
     try(Statement stm = super.getConnection().createStatement();
@@ -126,7 +169,7 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
       //while there are row in result to read
       while(result){
         String dest = res.getString(queryType);
-        double distance = res.getDouble("weight");
+        double distance = res.getDouble("distance");
         vertexList.add(new Vertex(dest,distance));
         result = res.next();
       }
@@ -153,42 +196,67 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
   }
 
 
+  public boolean isExistMarked(String name){
+    String sql = "SELECT name FROM markedNodes WHERE name= ? ;";
+    try(PreparedStatement pstm = getConnection().prepareStatement(sql);){
+      pstm.setString(1, name);
+      try (ResultSet res = pstm.executeQuery()) {
+        if(res.getString("name").isEmpty())
+          return false;
+        else return true;
+      }
+
+
+    }
+    catch (SQLException e) {
+      // TODO Auto-generated catch block
+      return false;
+    }
+
+  }
+
+
   public void updateMarkedNode(String name,boolean value){
-      String sql = "UPDATE markedNodes SET marked = ? WHERE name = ?";
-      try(PreparedStatement pstmt = super.getConnection().prepareStatement(sql);){
-        pstmt.setBoolean(1, value);
-        pstmt.setString(2, name);
-        pstmt.executeUpdate();
-      }
-      catch (SQLException e) {
-        e.printStackTrace();
-      }
+    String sql = "UPDATE markedNodes SET marked = ? WHERE name = ?";
+    try(PreparedStatement pstmt = super.getConnection().prepareStatement(sql);){
+      pstmt.setBoolean(1, value);
+      pstmt.setString(2, name);
+      pstmt.executeUpdate();
+    }
+    catch (SQLException e) {
+      e.printStackTrace();
+    }
   }
 
   public void insertAndUpdateMarkedNodes(Set<String> toMark){
+    setAutoCommit(false);
     Set<String> alreadyMarked = getMarkedNodes();
-    toMark.forEach(el->updateMarkedNode(el, true));
-    alreadyMarked.removeAll(toMark);
+    alreadyMarked.remove(toMark);
     alreadyMarked.forEach(el->updateMarkedNode(el, false));
+    for(String name: toMark){
+      if(isExistMarked(name)){
+        updateMarkedNode(name, true);
+      }else{
+        insertMarkedNode(name, true);
+      }
+    }
+    commitConnection();
+    setAutoCommit(true);
   }
-  
+
   public Set<String> getNameNodes(){
-	  Set<String> names = new HashSet<>();
-		String sql = "SELECT name FROM markedNodes";
-		try(Statement stm = super.getConnection().createStatement();
-			ResultSet res = stm.executeQuery(sql);){
-			while (res.next()) {
-				names.add(res.getString("name"));
-			}
-		}catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}
-		return names;
+    Set<String> names = new HashSet<>();
+    String sql = "SELECT name FROM markedNodes";
+    try(Statement stm = super.getConnection().createStatement();
+        ResultSet res = stm.executeQuery(sql);){
+      while (res.next()) {
+        names.add(res.getString("name"));
+      }
+    }catch (Exception e) {
+      // TODO: handle exception
+      e.printStackTrace();
+    }
+    return names;
   }
-
-
-
-
-
 }
+

@@ -7,7 +7,6 @@ import java.io.InputStreamReader;
 import java.net.ConnectException;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -28,7 +27,6 @@ import com.google.gson.JsonParser;
 
 import eu.innovationengineering.solrclient.auth.collection.queue.UpdatablePriorityQueue;
 import persistence.EdgeResult;
-import persistence.SQLiteWikipediaGraph;
 import utility.PathInfo;
 
 /**
@@ -36,12 +34,12 @@ import utility.PathInfo;
  *
  */
 public class WikipediaMiner{
-  
+
   private static final long serialVersionUID = 1L;
   private static final Logger logger = LoggerFactory.getLogger(WikipediaMiner.class);
-  
-  
-  
+
+
+
 
 
 
@@ -68,10 +66,10 @@ public class WikipediaMiner{
       queryKeyType = "&cmtitle=";
     }
     String targetURL = "https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtype="+typePages+queryKeyType+queryKey+"&cmnamespace="+nameSpace+"&cmprop=ids&cmlimit="+limitDocument+"&format=json";
-    //System.out.println(targetURL);
     JsonObject response = getJsonResponse(targetURL);
     JsonArray results = new JsonArray();
     results = response.get("query").getAsJsonObject().get("categorymembers").getAsJsonArray();
+
     if(results.size()>0){
       for(JsonElement jel: results){      
         toReturn.add(jel.getAsJsonObject().get("pageid").getAsString());
@@ -222,10 +220,10 @@ public class WikipediaMiner{
           docInfo.setText(content);
           docInfo.setTitle(title);
           contentPagesMap.put(id, docInfo);
+          countDocument++;
+          if(countDocument >= limitDocs)
+            return contentPagesMap;
         }
-        countDocument+=countLimit;      
-        if(countDocument >= limitDocs)
-          return contentPagesMap;
         limitDocs -= exlimit;
         if(limitDocs< exlimit)
           exlimit = limitDocs;
@@ -275,26 +273,23 @@ public class WikipediaMiner{
     return jOb;
   }
 
-  public static Map<String,DocumentInfo> getContentFromCategoryPages(String category,SQLiteWikipediaGraph graph,int limitDocs) throws IOException{
+  public static Map<String,DocumentInfo> getContentFromCategoryPages(String category,Map<String,EdgeResult> graph,int limitDocs) throws IOException{
     JsonObject response = new JsonObject();
     Map<String,DocumentInfo> toReturn = new HashMap<>();  
     //prendo gli id delle pagine di questa categoria.
-    Set<String> idsPages = getIdsMemberByType(category, "page", 0,limitDocs);   
-    toReturn.putAll(getContentPages(idsPages,limitDocs));
-    limitDocs = (limitDocs - toReturn.size());
-    if(toReturn.size() >= limitDocs){
-      return toReturn;
-    }
-    
+
+
     PathInfo  startVertex = new PathInfo(category, 0);
     UpdatablePriorityQueue<PathInfo> q = new UpdatablePriorityQueue<>();
     Set<PathInfo> visitedCategory = new HashSet<PathInfo>();
     q.add(startVertex);
     while(!q.isEmpty()){
       PathInfo currentVertex = q.poll();
-      String name = "Category:"+currentVertex.getName();
-      toReturn.putAll(getContentFromCategoryPages(name,graph,limitDocs));
-      limitDocs = limitDocs - toReturn.size();
+      String name = currentVertex.getName();
+      Set<String> idsPages  = getIdsMemberByType(name, "page", 0,limitDocs);
+      idsPages.removeAll(toReturn.keySet());
+      toReturn.putAll(getContentPages(idsPages,(limitDocs - toReturn.size())));
+
       if(toReturn.size() >= limitDocs){
         return toReturn;
       }
@@ -304,10 +299,12 @@ public class WikipediaMiner{
     return toReturn;
   }
 
-  public static UpdatablePriorityQueue<PathInfo> djistraUpdate(PathInfo vertexStart,Set<PathInfo> visitedVertex,UpdatablePriorityQueue<PathInfo> q,SQLiteWikipediaGraph graph){
-    try{
-      EdgeResult currentEdges = graph.getEdgeList(vertexStart.getName(), "childs");
-      List<PathInfo> linkedVertex = currentEdges.getLinkedVertex().stream().map(v->new PathInfo(v.getVertexName(),(vertexStart.getValue()+v.getSimilarity()),v.getSimilarity())).collect(Collectors.toList());
+  public static UpdatablePriorityQueue<PathInfo> djistraUpdate(PathInfo vertexStart,Set<PathInfo> visitedVertex,UpdatablePriorityQueue<PathInfo> q,Map<String,EdgeResult> graph){
+
+    String name = vertexStart.getName().replace("Category:", "");
+    if(graph.containsKey(name)){
+      EdgeResult currentEdges = graph.get(name);
+      List<PathInfo> linkedVertex = currentEdges.getLinkedVertex().stream().map(v->new PathInfo("Category:"+v.getVertexName(),(vertexStart.getValue()+v.getSimilarity()),v.getSimilarity())).collect(Collectors.toList());
       /*
        * elimino dalla coda i nodi linkati al nodo corrente che hanno valore più alto di quello appena considerato.
        */
@@ -334,9 +331,7 @@ public class WikipediaMiner{
        * infine li aggiungo alla priority queue dei prossimi nodi da visitare.
        */
       linkedVertex.stream().filter(el->!q.contains(el) && !visitedVertex.contains(el)).forEach(q::add);
-    }catch (SQLException e) {
-      e.printStackTrace();
-    }   
+    }
     return q;
   }
 
