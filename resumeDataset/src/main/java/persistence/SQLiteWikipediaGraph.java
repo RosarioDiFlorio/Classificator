@@ -14,9 +14,28 @@ import utility.Vertex;
 public class SQLiteWikipediaGraph extends SQLiteConnector  {
 
 
+  public static void main(String[] args){
+    SQLiteWikipediaGraph graph = new SQLiteWikipediaGraph("test.db");
+  }
+
 
   public SQLiteWikipediaGraph (String dbName){
     super(dbName);
+    String markedNodesTable ="CREATE TABLE IF NOT EXISTS  markedNodes (  name   VARCHAR (255) PRIMARY KEY NOT NULL, marked BOOLEAN NOT NULL);";
+    String edgesTable = "CREATE TABLE IF NOT EXISTS  edges (   parents  VARCHAR NOT NULL, childs VARCHAR NOT NULL, distance DOUBLE  NOT NULL, PRIMARY KEY (parents,childs) );";
+    
+    try(Statement stm = getConnection().createStatement()){
+      stm.executeQuery(markedNodesTable);  
+    }
+    catch (SQLException e) {
+      e.printStackTrace();
+    }
+    try(Statement stm = getConnection().createStatement()){
+      stm.executeQuery(edgesTable);
+    }
+    catch (SQLException e) {
+      e.printStackTrace();
+    } 
   }
 
 
@@ -133,20 +152,20 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
     return names;
   }
 
-  
+
   public void updateMarkedNode(String name,boolean value){
-      String sql = "UPDATE markedNode SET name = ?, marked = ?";
-      try(PreparedStatement pstmt = super.getConnection().prepareStatement(sql);){
-        pstmt.setString(1, name);
-        pstmt.setBoolean(2, value);
-        pstmt.executeUpdate();
-      }
-      catch (SQLException e) {
-        e.printStackTrace();
-      }
-    
+    String sql = "UPDATE markedNode SET name = ?, marked = ?";
+    try(PreparedStatement pstmt = super.getConnection().prepareStatement(sql);){
+      pstmt.setString(1, name);
+      pstmt.setBoolean(2, value);
+      pstmt.executeUpdate();
+    }
+    catch (SQLException e) {
+      e.printStackTrace();
+    }
+
   }
-  
+
   public void insertAndUpdateMarkedNodes(Set<String> toMark){
     Set<String> alreadyMarked = getMarkedNodes();
     toMark.removeAll(alreadyMarked);

@@ -189,7 +189,7 @@ public class CrawlerWikipediaCategory {
 						sqlConnectorGraph.insertEdge(currentVertex, vertex, weight);	
 					}
 					else{
-						sqlConnectorGraph.insertEdge(currentVertex, vertex, (double)(3.14/2));
+						sqlConnectorGraph.insertEdge(currentVertex, vertex, 3.14/2);
 					}
 				} catch (SQLException e) {
 					System.out.println("To continue cicle");			
@@ -233,7 +233,8 @@ public class CrawlerWikipediaCategory {
 	 * @throws IOException 
 	 * @deprecated
 	 */
-	public static Map<String,AdjacencyListRowVertex> fromAdjacencyListRowToAdjacencyListRowVertex(Map<String,AdjacencyListRow> adjacencyList) throws IOException{
+	@Deprecated
+  public static Map<String,AdjacencyListRowVertex> fromAdjacencyListRowToAdjacencyListRowVertex(Map<String,AdjacencyListRow> adjacencyList) throws IOException{
 		SQLiteVectors sql = new SQLiteVectors("databaseVectors.db");
 		Map<String,AdjacencyListRowVertex> toReturn = new HashMap<>();
 		FileWriter writer = new FileWriter(new File("nodeToVisit.txt"));
@@ -448,7 +449,6 @@ public class CrawlerWikipediaCategory {
 			BFS(crawlerResult.getLatestCategoryProcessed(), crawlerResult.getMarkedNode(), crawlerResult.getAdjacencyList(),crawlerResult.getVertexToVisit(), persist);
 
 		}catch (Exception e) {
-			// TODO: handle exception
 			e.printStackTrace();
 			System.out.println("Something went wrong");
 			crawlerResult.setCrashed(true);
@@ -500,8 +500,22 @@ public class CrawlerWikipediaCategory {
 			HashMap<String, HashSet<String>> childsMap = linkedVertex.get("childs");
 
 			for(String e : parentsMap.keySet()){
+			  /*
+			   * Inserisco alla tabella dei nodi marcati come false.
+			   */
+			    //insertMarkedNodes(e,false);
+			  /*
+			   * per ognuno dei sui nodi parent inserisco un edge.
+			   */
+			    //parentMap.get(e).foreach(el->insertEdge(el,e,0));
+			  /*
+			   * istruzioni da eliminare.
+			   */
 				AdjacencyListRow currentVertex = new AdjacencyListRow(parentsMap.get(e), false);
 				adjacencylist.put(e, currentVertex);
+				/*
+				 * inserisco alla lista dei nodi da visitare
+				 */
 				markedNode.add(e);
 			}
 
