@@ -344,8 +344,6 @@ public class CrawlerWikipediaCategory {
 	 */
 	public static HashMap<String, HashSet<String>> getParentsRequest(HashSet<String> categories) throws IOException{
 
-
-
 		// key is categories name, value is list of parent category
 		HashMap<String,HashSet<String>> toReturn = new HashMap<String, HashSet<String>>();
 
@@ -388,7 +386,8 @@ public class CrawlerWikipediaCategory {
 				}
 			}
 			catch(Exception e){
-				//System.out.println(id+": hasn't parents category --- URL: "+parentsURL);
+				System.out.println(parentsURL);
+				return toReturn;
 			}
 
 		}

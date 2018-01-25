@@ -154,31 +154,37 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
 
 
   public void updateMarkedNode(String name,boolean value){
-    String sql = "UPDATE markedNode SET name = ?, marked = ?";
-    try(PreparedStatement pstmt = super.getConnection().prepareStatement(sql);){
-      pstmt.setString(1, name);
-      pstmt.setBoolean(2, value);
-      pstmt.executeUpdate();
-    }
-    catch (SQLException e) {
-      e.printStackTrace();
-    }
-
-  }
-
-  public void insertAndUpdateMarkedNodes(Set<String> toMark){
-    Set<String> alreadyMarked = getMarkedNodes();
-    toMark.removeAll(alreadyMarked);
-    toMark.forEach(el->{
-      try {
-        insertMarkedNode(el, true);
+      String sql = "UPDATE markedNodes SET marked = ? WHERE name = ?";
+      try(PreparedStatement pstmt = super.getConnection().prepareStatement(sql);){
+        pstmt.setBoolean(1, value);
+        pstmt.setString(2, name);
+        pstmt.executeUpdate();
       }
       catch (SQLException e) {
         e.printStackTrace();
       }
-    });
+  }
+
+  public void insertAndUpdateMarkedNodes(Set<String> toMark){
+    Set<String> alreadyMarked = getMarkedNodes();
+    toMark.forEach(el->updateMarkedNode(el, true));
     alreadyMarked.removeAll(toMark);
     alreadyMarked.forEach(el->updateMarkedNode(el, false));
+  }
+  
+  public Set<String> getNameNodes(){
+	  Set<String> names = new HashSet<>();
+		String sql = "SELECT name FROM markedNodes";
+		try(Statement stm = super.getConnection().createStatement();
+			ResultSet res = stm.executeQuery(sql);){
+			while (res.next()) {
+				names.add(res.getString("name"));
+			}
+		}catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return names;
   }
 
 
