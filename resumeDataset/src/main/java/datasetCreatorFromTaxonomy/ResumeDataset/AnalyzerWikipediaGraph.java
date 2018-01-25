@@ -45,11 +45,13 @@ public class AnalyzerWikipediaGraph {
 	private static Word2Vec word2Vec;
 
 
+
 	public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException, InterruptedException, SQLException, ExecutionException{
 
 		SQLiteVectors vectors = new SQLiteVectors("databaseVectors.db");
 		SQLiteWikipediaGraph sqlWikipediaConnector = new SQLiteWikipediaGraph("databaseWikipediaGraph.db");
 		Set<String> toMark = getTaxonomyCSV("wheesbee_taxonomy.csv").keySet();
+
 
 
 		Set<String> graphs = sqlWikipediaConnector.getNameNodes();
