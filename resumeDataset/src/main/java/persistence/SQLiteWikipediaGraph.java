@@ -38,6 +38,8 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
       pstmt.executeUpdate();
     }
   }
+  
+  
 
   /**
    * method used to insert an edge list into db

@@ -4,9 +4,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -14,11 +11,6 @@ import java.util.Scanner;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
-
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 
 import utility.ListAllFiles;
 
@@ -30,13 +22,13 @@ public class CreateDataset {
 	public static void main(String[] args) throws IOException{
 		ListAllFiles fileReader = new ListAllFiles();
 
-		String directoryWindows ="D:/TextClassifier/dataset_tassonomia/";
+		String directoryWindows ="D:/TextClassifier/dataset_tassonomia_dijstra/";
 
 
 		ArrayList<String> fileList = (ArrayList<String>) fileReader.listFilesAndFilesSubDirectories(directoryWindows, new ArrayList<String>());
 		Set<String> pathList = new HashSet<String>();
 
-		String basePathSrc = "D:/TextClassifier/dataset_tassonomia/";
+		String basePathSrc = "D:/TextClassifier/dataset_tassonomia_dijstra/";
 		String basePathDst = "D:/Development/Datasets/dataset_trainingNew/";
 
 		new File("D:/TextClassifier/datasets_trainingNew").mkdir();
