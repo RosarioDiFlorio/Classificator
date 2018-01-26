@@ -8,7 +8,7 @@ import java.util.Set;
 import java.util.concurrent.Callable;
 import java.util.concurrent.RecursiveTask;
 
-import persistence.SQLiteWikipediaGraph;
+import persistence.EdgeResult;
 
 /**
  * @author Rosario Di Florio (RosarioUbuntu)
@@ -20,14 +20,14 @@ public class DatasetTask extends RecursiveTask<Map<String,Set<DocumentInfo>>> im
   private int maxLevel;
   private boolean recursive;
   private int limitDocs;
-  private SQLiteWikipediaGraph graph;
+  private Map<String,EdgeResult> graph;
 
   /**Constructior for the Offline Versione(database required).
    * @param category
    * @param graph
    * @param limitDocs
    */
-  public DatasetTask(String category,SQLiteWikipediaGraph graph,int limitDocs){
+  public DatasetTask(String category,Map<String,EdgeResult> graph,int limitDocs){
     this.category = category;
     this.graph = graph;
     this.limitDocs = limitDocs;
@@ -63,7 +63,7 @@ public class DatasetTask extends RecursiveTask<Map<String,Set<DocumentInfo>>> im
       if(graph == null)
         contents = WikipediaMiner.getContentFromCategoryPages(category, new HashSet<String>(), recursive, 0, maxLevel,limitDocs);
       /*
-       * Offline Versione
+       * Database Version
        */
       else
         contents = WikipediaMiner.getContentFromCategoryPages(category, graph, limitDocs);

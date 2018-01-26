@@ -21,6 +21,7 @@ import eu.innovation.engineering.dataset.utility.DatasetTask;
 import eu.innovation.engineering.dataset.utility.DatasetUtilities;
 import eu.innovation.engineering.dataset.utility.DocumentInfo;
 import eu.innovation.engineering.dataset.utility.WikiRequest;
+import persistence.EdgeResult;
 import persistence.SQLiteWikipediaGraph;
 
 public class DatasetBuilder implements WikiRequest {
@@ -39,9 +40,9 @@ public class DatasetBuilder implements WikiRequest {
      * Initialize the Request's Object with the information.
      */
     DatasetRequest request = new DatasetRequest();
-    request.setLimitDocuments(1);
-    request.setName("test");
-    request.setOnline(true);
+    request.setLimitDocuments(500);
+    request.setName("dataset_tassonomia_dijstra");
+    request.setOnline(false);
     request.setTaxonomyCSV(new File("wheesbee_taxonomy.csv"));
     /*
      * Call the method to build the dataset.
@@ -84,8 +85,7 @@ public class DatasetBuilder implements WikiRequest {
    * @throws InterruptedException
    * @throws ExecutionException
    */
-  public static Map<String,Set<DocumentInfo>> databaseDatasetTask(Set<String> categories,int limitDocs) throws InterruptedException, ExecutionException{
-    SQLiteWikipediaGraph graph = new SQLiteWikipediaGraph("databaseWikipediaGraph.db");
+  public static Map<String,Set<DocumentInfo>> databaseDatasetTask(Set<String> categories,Map<String, EdgeResult> graph,int limitDocs) throws InterruptedException, ExecutionException{
     ForkJoinPool pool = new ForkJoinPool();
     List<DatasetTask> datasetTasks = new ArrayList<>();
     for(String cat : categories){
@@ -131,6 +131,8 @@ public class DatasetBuilder implements WikiRequest {
        */
       int count = 0;
       Set<String> toExtract = new HashSet<>();
+      SQLiteWikipediaGraph graphConnector = new SQLiteWikipediaGraph("databaseWikipediaGraph.db");
+      Map<String, EdgeResult> graph = graphConnector.getGraph("parents");
       for(String uriWiki : pathMap.keySet()){
         toExtract.add(uriWiki);
         count++;       
@@ -146,7 +148,7 @@ public class DatasetBuilder implements WikiRequest {
            * Gather the categories from database and the documents Online.
            */
           else
-            results = databaseDatasetTask(toExtract, request.getLimitDocuments());                   
+            results = databaseDatasetTask(toExtract,graph, request.getLimitDocuments());                   
           DatasetUtilities.writeDocumentMap(pathMap, results);
           toExtract.clear();
         }

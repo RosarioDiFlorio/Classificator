@@ -40,10 +40,7 @@ private static List<String> cleanText(String text){
   text = text.replaceAll("\\d+", " ");
   return Arrays.asList(text.split(" ")).stream().filter(el->!stopWords.isStopWord(el) && !el.matches("")).map(el->el.toLowerCase().trim()).collect(Collectors.toList());
 }
-public static void main1(String[] args) throws IOException{
-  //    System.err.println(analyzer.getDocumentLabelsBFS("9912937"));
-  List<String> labelsList = AnalyzerWikipediaGraph.getDocumentLabelsDijstra("9912937");
-  System.out.println(labelsList);
-}
+
+
 
 }
