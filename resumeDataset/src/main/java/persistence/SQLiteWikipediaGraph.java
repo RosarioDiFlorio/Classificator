@@ -32,6 +32,8 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
             key = res.getString("childs");
           else
             key = res.getString("parents");
+
+          
           if(toReturn.containsKey(key)){
             toUpdate = toReturn.get(key);
             linkedVertex = toUpdate.getLinkedVertex();
