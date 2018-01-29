@@ -67,13 +67,13 @@ public class DatasetTask extends RecursiveTask<Map<String,Set<DocumentInfo>>> im
        */
       else
         contents = WikipediaMiner.getContentFromCategoryPages(category, graph, limitDocs);
-      
       Set<DocumentInfo> listDocument = new HashSet<>();
       for(String idDoc: contents.keySet()){
         DocumentInfo docInfo = contents.get(idDoc);
         listDocument.add(docInfo);
       }
       toReturn.put(category, listDocument);
+      
     }
     catch (IOException e) {
       // TODO Auto-generated catch block

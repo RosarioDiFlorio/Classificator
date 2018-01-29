@@ -274,10 +274,10 @@ public class WikipediaMiner{
   }
 
   public static Map<String,DocumentInfo> getContentFromCategoryPages(String category,Map<String,EdgeResult> graph,int limitDocs) throws IOException{
+
     JsonObject response = new JsonObject();
     Map<String,DocumentInfo> toReturn = new HashMap<>();  
     //prendo gli id delle pagine di questa categoria.
-
 
     PathInfo  startVertex = new PathInfo(category, 0);
     UpdatablePriorityQueue<PathInfo> q = new UpdatablePriorityQueue<>();
@@ -286,7 +286,7 @@ public class WikipediaMiner{
     while(!q.isEmpty()){
       PathInfo currentVertex = q.poll();
       String name = currentVertex.getName();
-      Set<String> idsPages  = getIdsMemberByType(name, "page", 0,limitDocs);
+      Set<String> idsPages  = getIdsMemberByType(name, "page", 0,limitDocs);    
       idsPages.removeAll(toReturn.keySet());
       toReturn.putAll(getContentPages(idsPages,(limitDocs - toReturn.size())));
 

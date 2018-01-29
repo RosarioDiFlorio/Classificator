@@ -14,6 +14,7 @@ import java.util.concurrent.Future;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import eu.innovation.engineering.dataset.utility.DatasetRequest;
 import eu.innovation.engineering.dataset.utility.DatasetResponse;
@@ -108,7 +109,7 @@ public class DatasetBuilder implements WikiRequest {
     String basePath = "data/"+request.getName()+"/";
     new File(basePath).mkdirs();
     String pathDataset = basePath+"dataset";
-    String classificationMap = basePath+"categories.json";
+    String classificationMapPath = basePath+"categories.json";
     try {
       /*
        * Leggo la tassonomia in formato csv.
@@ -124,7 +125,9 @@ public class DatasetBuilder implements WikiRequest {
        * Che deve essere utilizzata dal classificatore python per poter riassociare alle label i nomi 
        * delle classi.
        */
-      DatasetUtilities.createMapForClassification(pathDataset,classificationMap);
+      Map<String, List<String>> classificationMap = DatasetUtilities.createMapForClassification(pathDataset);
+      ObjectMapper mapper = new ObjectMapper();
+      mapper.writerWithDefaultPrettyPrinter().writeValue(new File(classificationMapPath), classificationMap);
       System.out.println("Categories -> "+pathMap.size());
       /**
        * CORE PHASE.
@@ -132,7 +135,8 @@ public class DatasetBuilder implements WikiRequest {
       int count = 0;
       Set<String> toExtract = new HashSet<>();
       SQLiteWikipediaGraph graphConnector = new SQLiteWikipediaGraph("databaseWikipediaGraph.db");
-      Map<String, EdgeResult> graph = graphConnector.getGraph("parents");
+      Map<String, EdgeResult> graph = graphConnector.getGraph("childs");
+
       for(String uriWiki : pathMap.keySet()){
         toExtract.add(uriWiki);
         count++;       
@@ -148,11 +152,13 @@ public class DatasetBuilder implements WikiRequest {
            * Gather the categories from database and the documents Online.
            */
           else
-            results = databaseDatasetTask(toExtract,graph, request.getLimitDocuments());                   
+            results = databaseDatasetTask(toExtract,graph, request.getLimitDocuments());
+              
           DatasetUtilities.writeDocumentMap(pathMap, results);
           toExtract.clear();
         }
       }
+
     }
     catch (IOException | InterruptedException | ExecutionException e) {
       // TODO Auto-generated catch block

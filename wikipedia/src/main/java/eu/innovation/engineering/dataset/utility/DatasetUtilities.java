@@ -19,6 +19,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class DatasetUtilities {
 
+  
+  public static void main(String[] args) throws JsonGenerationException, JsonMappingException, IOException{
+    Map<String, List<String>> toWrite = createMapDatasetTask("D:/Development/Datasets/dataset_500xleaf_2012017");
+    ObjectMapper mapper = new ObjectMapper();
+    mapper.writerWithDefaultPrettyPrinter().writeValue(new File("oldCategories.json"), toWrite);
+  }
+  
   public static Map<String, List<List<String>>> createStructureFolder(Map<String, List<List<String>>> csvMap,String pathDataset){
     Map<String, List<List<String>>> pathMap = new HashMap<String, List<List<String>>>();
     new File(pathDataset).mkdir();
@@ -122,15 +129,13 @@ public class DatasetUtilities {
     return toReturn;
   }
 
-  public static Map<String,List<String>> createMapForClassification(String path,String fileWhereSaveIt) throws JsonGenerationException, JsonMappingException, IOException{
+  public static Map<String,List<String>> createMapForClassification(String path) throws JsonGenerationException, JsonMappingException, IOException{
     Map<String,List<String>> classificationMap = new HashMap<>();
     List<String> rootChild = getChildDirectories(path);
     classificationMap.put("root", rootChild);
     for(String child:rootChild){
       classificationMap.putAll(createMapDatasetTask(path+"/"+child));
     }
-    ObjectMapper mapper = new ObjectMapper();
-    mapper.writerWithDefaultPrettyPrinter().writeValue(new File(fileWhereSaveIt), classificationMap);
     return classificationMap;
   }
 
