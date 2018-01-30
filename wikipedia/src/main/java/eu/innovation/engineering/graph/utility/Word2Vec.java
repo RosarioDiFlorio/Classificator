@@ -3,6 +3,7 @@ package eu.innovation.engineering.graph.utility;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.apache.cxf.jaxrs.client.WebClient;
 
@@ -16,8 +17,8 @@ public class Word2Vec {
 
   private static WebClient webClient;
   private static Word2vecServiceImpl word2vecService;
-  
-  public static float[][] returnVectorsFromTextList(List<List<String>> textList) throws IOException{
+  private static StopWordEnglish stopWords;
+  public float[][] returnVectorsFromTextList(List<List<String>> textList) throws IOException{
 
 
     VectorListRequestBean vectorListRequest = new VectorListRequestBean();
@@ -36,7 +37,13 @@ public class Word2Vec {
         System.out.println(e);
         return null;
       }
-    
-
+  }
+  
+  public static List<String> cleanText(String text){
+    if(stopWords == null)
+      stopWords = new StopWordEnglish("stopwords_en.txt");
+    text = text.replaceAll("\\p{Punct}", " ");
+    text = text.replaceAll("\\d+", " ");
+    return Arrays.asList(text.split(" ")).stream().filter(el->!stopWords.isStopWord(el) && !el.matches("")).map(el->el.toLowerCase().trim()).collect(Collectors.toList());
   }
 }

@@ -38,7 +38,7 @@ import eu.innovationengineering.solrclient.auth.collection.queue.UpdatablePriori
 
 
 
-public class AnalyzerWikipediaGraph {
+public class AnalyzerGraphWikipedia {
 
   private static SQLiteWikipediaGraph graphConnector = new SQLiteWikipediaGraph("databaseWikipediaGraph.db");
   private static HashMap<String,Set<String>> mappingTaxonomyWikipedia = null;
@@ -55,103 +55,6 @@ public class AnalyzerWikipediaGraph {
     System.out.println(getDocumentLabelsTaxonomy("9912937", true));
     graphConnector.setAutoCommit(true);
   }
-
-  /**
-   * @param args
-   * @throws JsonParseException
-   * @throws JsonMappingException
-   * @throws IOException
-   * @throws InterruptedException
-   * @deprecated 
-   */
-  @Deprecated
-  public static void mainToBuildVectors(String[] args) throws JsonParseException, JsonMappingException, IOException, InterruptedException{
-    HashMap<String, AdjacencyListRow> adjacencyList = CrawlerWikipediaCategory.returnAdjacencyListFromFile("signedGraphWikipediaCleared");
-    Set<String> toVectorize = new HashSet<String>(adjacencyList.keySet());
-    for(String key: adjacencyList.keySet()){
-      toVectorize.addAll(adjacencyList.get(key).getLinkedVertex());  
-    }
-    saveVectorsWikipediaInDB(toVectorize,"databaseVectors.db");
-  }
-
-  /**
-   * @param pathFile
-   * @return
-   * @throws JsonParseException
-   * @throws JsonMappingException
-   * @throws IOException
-   * @deprecated
-   */
-  @Deprecated
-  public static Map<String,float[]> loadVectorsWikipediaGraph(String pathFile) throws JsonParseException, JsonMappingException, IOException{
-    ObjectMapper mapper = new ObjectMapper();
-    return mapper.readValue(new File(pathFile), new TypeReference<Map<String,float[]>>() {});
-  }
-
-
-
-
-  private static List<String> cleanText(String text){
-    StopWordEnglish stopWords = new StopWordEnglish("stopwords_en.txt");
-    text = text.replaceAll("\\p{Punct}", " ");
-    text = text.replaceAll("\\d+", " ");
-    return Arrays.asList(text.split(" ")).stream().filter(el->!stopWords.isStopWord(el) && !el.matches("")).map(el->el.toLowerCase().trim()).collect(Collectors.toList());
-  }
-
-  /**
-   * This method return the vector's map created from the graph of the wikipedia's category.
-   * If the map doesn't exit yet,  build the map from scratch Otherwise, load the map from the file (specified into the variable pathfile).
-   * If the file exist load the map from the file and continue building it.
-   * When there is no more category to convert in vectors the method return the map with the vectors.
-   * @param vertexWikipedia 
-   * @param pathFile
-   * @return
-   * @throws IOException
-   * @throws InterruptedException 
-   */
-  public static void saveVectorsWikipediaInDB(Set<String> vertexWikipedia,String dbName) throws IOException, InterruptedException{
-    //carico le stopword dal file specificato.
-    StopWordEnglish stopWords = new StopWordEnglish("stopwords_en.txt");
-    SQLiteVectors sql = new SQLiteVectors(dbName);
-    sql.setAutoCommit(false);
-    try{
-      if(word2Vec == null)
-        word2Vec = new Word2Vec();
-      List<List<String>> toVectorize = new ArrayList<>();
-      Set<String> donealready = sql.getNamesVector();
-      System.out.println("already done -> "+donealready.size());
-      vertexWikipedia.removeAll(donealready);
-      System.out.println("to do -> "+vertexWikipedia.size());
-
-      //converto l'insieme di elementi da vettorizzare in una lista in modo da poterci accedere con l'indice.
-      List<String> vertexList = new ArrayList<>(vertexWikipedia);
-
-      Map<String,float[]> vectors = new HashMap<>();
-      int offset = 0;//variabile che mi tiene traccia dell'indice corrente.
-      for(int i = 0; i<vertexList.size();i++){
-
-        //pulisco i nomi dagli underscore e dalle stop word
-        toVectorize.add(cleanText(vertexList.get(i)));
-        //ogni tot di vertici eseguo la query al servizio Word2Vec
-        if((toVectorize.size() == 200 || i == vertexWikipedia.size()-1)){
-          float[][] vectorizedNames = word2Vec.returnVectorsFromTextList(toVectorize);
-          for (int j = 0; j < toVectorize.size(); j++) {
-            vectors.put(vertexList.get(j + offset).replace(" ", "_"), vectorizedNames[j]);
-          }
-          offset += toVectorize.size();
-          sql.insertVectors(vectors);
-          if(offset % 100000 == 0 || i == vertexWikipedia.size()-1)
-            sql.commitConnection();
-          vectors.clear();
-          toVectorize.clear();
-        }
-      }
-    }finally {
-      sql.commitConnection();
-      System.exit(0);
-    }
-  }
-
 
   public static List<String> getDocumentLabelsTaxonomy(String idDocument,boolean withDijstra) throws IOException{
     if(mappingTaxonomyWikipedia == null){

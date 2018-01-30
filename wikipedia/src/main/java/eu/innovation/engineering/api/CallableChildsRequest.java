@@ -9,7 +9,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
-import eu.innovation.engineering.graph.main.CrawlerWikipediaCategory;
+import eu.innovation.engineering.graph.main.CrawlerGraphWikipedia;
 
 
 
@@ -39,7 +39,7 @@ public class CallableChildsRequest implements Callable<HashMap<String,HashSet<St
 		String childsURL="https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category:"+categoryEncoded+"&cmlimit=500&cmtype=subcat&format=json";
 
 		// make 2 request
-		CrawlerWikipediaCategory crawler = new CrawlerWikipediaCategory();
+		CrawlerGraphWikipedia crawler = new CrawlerGraphWikipedia();
 		JsonObject responseChild = WikipediaAPI.getJsonResponse(childsURL);
 
 
@@ -63,7 +63,7 @@ public class CallableChildsRequest implements Callable<HashMap<String,HashSet<St
 				String [] namesplitted = name.replaceAll(" ", "_").split("Category:");
 				categoriesChildToReturn.add(namesplitted[1]);
 			}
-			toReturn.put(this.category, categoriesChildToReturn);
+			toReturn.put(this.category.replace(" ", "_"), categoriesChildToReturn);
 		}
 		
 		return toReturn;

@@ -13,12 +13,13 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class DatasetUtilities {
+public class FilesUtilities {
 
   
   public static void main(String[] args) throws JsonGenerationException, JsonMappingException, IOException{
@@ -73,6 +74,13 @@ public class DatasetUtilities {
         System.out.println(key+" saved into "+list.get(0)+", number of documents ->"+documentsMap.get(key).size());
       }
     }
+  }
+  
+  
+  public static Set<String> returnCategoriesFromTaxonomyCSV(String filename){
+    Set<String> toReturn = new HashSet<>(readCSV(new File(filename), false).keySet());
+    toReturn = toReturn.stream().map(el->el=el.replace("Category:", "")).collect(Collectors.toSet());
+    return toReturn;
   }
   
   
@@ -132,6 +140,26 @@ public class DatasetUtilities {
     return toReturn;
   }
 
+  
+  /**
+   * List all files from a directory and its subdirectories
+   * @param directoryName to be listed
+   * @return 
+   */
+  public List<String> listAllFiles(String directoryName, List<String> fileList){
+      File directory = new File(directoryName);
+      //get all the files from a directory
+      File[] fList = directory.listFiles();
+      for (File file : fList){
+          if (file.isFile()){
+              //System.out.println(file.getAbsolutePath());
+              fileList.add(file.getAbsolutePath());
+          } else if (file.isDirectory()){
+              listAllFiles(file.getAbsolutePath(),fileList);
+          }
+      }
+      return fileList;
+  }
   /**
    * Return the possible paths.
    * for example a path A/B/C and A/C/D
@@ -141,7 +169,7 @@ public class DatasetUtilities {
    */
   public static Set<String> getAllPaths(String basePathSrc){
     Set<String> pathSet = new HashSet<String>();
-     Map<String, List<String>> paths = DatasetUtilities.createMapForClassification(basePathSrc);
+     Map<String, List<String>> paths = FilesUtilities.createMapForClassification(basePathSrc);
     for(String path : paths.keySet()){    
       for(String child : paths.get(path)){
         StringBuilder toAdd = new StringBuilder(path);
@@ -152,6 +180,7 @@ public class DatasetUtilities {
     return pathSet;
   }
   
+
   
   public static Map<String,List<String>> createMapForClassification(String path){
     Map<String,List<String>> classificationMap = new HashMap<>();

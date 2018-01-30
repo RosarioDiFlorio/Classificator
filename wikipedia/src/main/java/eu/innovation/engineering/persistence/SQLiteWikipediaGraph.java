@@ -90,16 +90,14 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
    * @throws SQLException
    */
   public void insertEdge(String source, String destination, double weight) throws SQLException{
-
-
     try(PreparedStatement pstmt = super.getConnection().prepareStatement("INSERT INTO edges VALUES(?,?,?)");){	
-
       pstmt.setString(1, source);
       pstmt.setString(2, destination);
       pstmt.setDouble(3, weight);
       pstmt.executeUpdate();
     }
   }
+  
   
   
 
@@ -130,7 +128,6 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
       pstmt.executeUpdate();
     }
     catch (SQLException e) {
-      // TODO Auto-generated catch block
       e.printStackTrace();
     }
   }
@@ -233,6 +230,19 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
       e.printStackTrace();
     }
   }
+  
+  public void updateEdge(String source,String dest,double value){
+    String sql = "UPDATE edges SET distance = ? WHERE parents = ? AND childs = ?";
+    try(PreparedStatement pstmt = super.getConnection().prepareStatement(sql);){
+      pstmt.setDouble(1, value);
+      pstmt.setString(2, source);
+      pstmt.setString(2, dest);
+      pstmt.executeUpdate();
+    }
+    catch (SQLException e) {
+      e.printStackTrace();
+    }
+  }
 
   public void insertAndUpdateMarkedNodes(Set<String> toMark){
     setAutoCommit(false);
@@ -250,7 +260,7 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
     setAutoCommit(true);
   }
 
-  public Set<String> getNameNodes(){
+  public Set<String> getNamesFromMarkedNodes(){
     Set<String> names = new HashSet<>();
     String sql = "SELECT name FROM markedNodes";
     try(Statement stm = super.getConnection().createStatement();

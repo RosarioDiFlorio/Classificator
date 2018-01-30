@@ -386,7 +386,7 @@ public class WikipediaAPI{
     catch(ConnectException e){
       System.out.println("Connection timed out: recall method ");
       try {
-        Thread.sleep(1000);
+        Thread.sleep(100);
       }
       catch (InterruptedException e1) {
         // TODO Auto-generated catch block
@@ -445,11 +445,11 @@ public class WikipediaAPI{
             currentParentCategory.add(namesplitted[1]);
           }
 
-          toReturn.put(title.replace("Category:", ""), currentParentCategory);
+          toReturn.put(title.replace("Category:", "").replace(" ", "_"), currentParentCategory);
         }
       }
       catch(Exception e){
-        System.out.println(parentsURL);
+        //System.out.println(parentsURL);
         return toReturn;
       }
 
@@ -477,10 +477,14 @@ public class WikipediaAPI{
     for ( Future future : featureList) {
       HashMap<String, HashSet<String>> childrenMap = (HashMap<String, HashSet<String>>) future.get();
       for(String key : childrenMap.keySet()){
-        toReturn.put(key, childrenMap.get(key));
+        toReturn.put(key.replace(" ", "_"), childrenMap.get(key));
       }
     }
     return toReturn;
+  }
+  
+  public static void executorShutDown(){
+    executorService.shutdown();
   }
  
 }

@@ -12,8 +12,8 @@ import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
 
-import eu.innovation.engineering.dataset.utility.DatasetUtilities;
-import eu.innovation.engineering.graph.main.AnalyzerWikipediaGraph;
+import eu.innovation.engineering.dataset.utility.FilesUtilities;
+import eu.innovation.engineering.graph.main.AnalyzerGraphWikipedia;
 import eu.innovation.engineering.graph.utility.ListAllFiles;
 
 
@@ -34,7 +34,7 @@ public class CreateDataset {
     new File(basePathDstTraining).mkdir();
     new File(basePathDstTest).mkdir();
     
-    Set<String> pathSet = DatasetUtilities.getAllPaths(basePathSrc);
+    Set<String> pathSet = FilesUtilities.getAllPaths(basePathSrc);
     //TRAINING
     ArrayList<String> added = buildDataset(pathSet, basePathDstTraining, basePathSrc, fileList, fileReader,450, new ArrayList<String>(), "training");
 
@@ -71,7 +71,7 @@ public class CreateDataset {
       int numSource = (numSourceToCopy/leafList.size());
 
 
-      AnalyzerWikipediaGraph analyzerWikipedia = new AnalyzerWikipediaGraph();
+      AnalyzerGraphWikipedia analyzerWikipedia = new AnalyzerGraphWikipedia();
       //Per ogni foglia della lista delle categorie foglia
       for(String leaf:leafList){
 

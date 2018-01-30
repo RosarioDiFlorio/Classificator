@@ -19,7 +19,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import eu.innovation.engineering.dataset.utility.DatasetRequest;
 import eu.innovation.engineering.dataset.utility.DatasetResponse;
 import eu.innovation.engineering.dataset.utility.DatasetTask;
-import eu.innovation.engineering.dataset.utility.DatasetUtilities;
+import eu.innovation.engineering.dataset.utility.FilesUtilities;
 import eu.innovation.engineering.dataset.utility.DocumentInfo;
 import eu.innovation.engineering.dataset.utility.WikiRequest;
 import eu.innovation.engineering.persistence.EdgeResult;
@@ -115,18 +115,18 @@ public class DatasetBuilder implements WikiRequest {
       /*
        * Leggo la tassonomia in formato csv.
        */
-      Map<String, List<List<String>>> csvMap = DatasetUtilities.readCSV(request.getTaxonomyCSV(), false);
+      Map<String, List<List<String>>> csvMap = FilesUtilities.readCSV(request.getTaxonomyCSV(), false);
       /*
        * Costruisco la struttura delle folder utilizzando la mappa creata leggendo il csv.
        * ritornando una mappa contente i path per ogni categoria wikipedia.
        */
-      Map<String, List<List<String>>> pathMap = DatasetUtilities.createStructureFolder(csvMap, pathDataset);
+      Map<String, List<List<String>>> pathMap = FilesUtilities.createStructureFolder(csvMap, pathDataset);
       /*
        * Creo una mappa di classificazione basata sulla struttura delle folder appena create.
        * Che deve essere utilizzata dal classificatore python per poter riassociare alle label i nomi 
        * delle classi.
        */
-      Map<String, List<String>> classificationMap = DatasetUtilities.createMapForClassification(pathDataset);
+      Map<String, List<String>> classificationMap = FilesUtilities.createMapForClassification(pathDataset);
       ObjectMapper mapper = new ObjectMapper();
       mapper.writerWithDefaultPrettyPrinter().writeValue(new File(classificationMapPath), classificationMap);
       System.out.println("Categories -> "+pathMap.size());
@@ -153,7 +153,7 @@ public class DatasetBuilder implements WikiRequest {
           else
             results = databaseDatasetTask(toExtract,graph, request.getLimitDocuments());
               
-          DatasetUtilities.writeDocumentMap(pathMap, results);
+          FilesUtilities.writeDocumentMap(pathMap, results);
           toExtract.clear();
         }
         count++;
