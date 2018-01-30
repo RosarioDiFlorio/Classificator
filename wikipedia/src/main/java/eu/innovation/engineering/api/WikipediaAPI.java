@@ -1,4 +1,4 @@
-package eu.innovation.engineering.dataset.utility;
+package eu.innovation.engineering.api;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 import java.net.ConnectException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -15,6 +16,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
@@ -25,6 +30,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
+import eu.innovation.engineering.dataset.utility.DocumentInfo;
 import eu.innovation.engineering.graph.utility.PathInfo;
 import eu.innovation.engineering.persistence.EdgeResult;
 import eu.innovationengineering.solrclient.auth.collection.queue.UpdatablePriorityQueue;
@@ -34,11 +40,11 @@ import eu.innovationengineering.solrclient.auth.collection.queue.UpdatablePriori
  * @author Rosario Di Florio (RosarioUbuntu)
  *
  */
-public class WikipediaMiner{
+public class WikipediaAPI{
 
   private static final long serialVersionUID = 1L;
-  private static final Logger logger = LoggerFactory.getLogger(WikipediaMiner.class);
-
+  private static final Logger logger = LoggerFactory.getLogger(WikipediaAPI.class);
+  private static ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
 
 
@@ -180,6 +186,7 @@ public class WikipediaMiner{
    * @param idPages
    * @return
    * @throws IOException
+   * 
    */
   public static Map<String, DocumentInfo> getContentPages(Set<String> idPages,int limitDocs) throws IOException{
 
@@ -206,13 +213,10 @@ public class WikipediaMiner{
       countLimit++;
       ids += listId.poll()+"|";
 
-
-
       if(countLimit>= exlimit || listId.isEmpty()){
         ids = ids.replaceAll("\\|$", "");
         targetURL = " https://en.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=&exintro=&exlimit="+exlimit+"&pageids="+ids+"&format=json";
         response = getJsonResponse(targetURL); 
-
         for(String id: ids.split("\\|")){
           String title = response.get("query").getAsJsonObject().get("pages").getAsJsonObject().get(id).getAsJsonObject().get("title").getAsString();
           String content = response.get("query").getAsJsonObject().get("pages").getAsJsonObject().get(id).getAsJsonObject().get("extract").getAsString();
@@ -231,48 +235,13 @@ public class WikipediaMiner{
         ids ="";
         countLimit = 0;
       }
-
-
-
     }
-    //System.out.println("Extracted content from -> "+contentPagesMap.size()+" documents");
     return contentPagesMap;
   }
 
 
 
 
-
-  /**
-   * Execute a single http request to wikipedia and return the response in json format.
-   * @param targetURL
-   * @return
-   * @throws IOException
-   */
-  private static  JsonObject getJsonResponse(String targetURL) throws IOException{
-    URL url = new URL(targetURL);
-    HttpURLConnection con = (HttpURLConnection) url.openConnection();
-    con.setDoOutput(true);
-    con.setRequestMethod("GET");
-    JsonObject jOb = new JsonObject();
-    try{
-      Scanner in = new Scanner(new InputStreamReader(con.getInputStream()));  
-      JsonParser parser = new JsonParser(); 
-      jOb = parser.parse(in.nextLine()).getAsJsonObject();
-    }
-    catch(ConnectException e){
-      System.out.println("Connection timed out: recall method ");
-      try {
-        Thread.sleep(1000);
-      }
-      catch (InterruptedException e1) {
-        // TODO Auto-generated catch block
-        e1.printStackTrace();
-      }
-      jOb = getJsonResponse(targetURL);
-    }
-    return jOb;
-  }
 
   public static Map<String,DocumentInfo> getContentFromCategoryPages(String category,Map<String,EdgeResult> graph,int limitDocs) throws IOException{
 
@@ -345,8 +314,10 @@ public class WikipediaMiner{
    * @param levelmax
    * @param limitDocs
    * @return
+   * @deprecated
    * @throws IOException
    */
+  @Deprecated
   public static Map<String,DocumentInfo> getContentFromCategoryPages(String category,Set<String> ids,boolean recursive,int level,int levelmax,int limitDocs) throws IOException{
     JsonObject response = new JsonObject();
     Map<String,DocumentInfo> toReturn = new HashMap<>();  
@@ -393,4 +364,123 @@ public class WikipediaMiner{
     }  
     return true;  
   }
+
+
+  /**
+   * Execute a single http request to wikipedia and return the response in json format.
+   * @param targetURL
+   * @return
+   * @throws IOException
+   */
+  public static  JsonObject getJsonResponse(String targetURL) throws IOException{
+    URL url = new URL(targetURL);
+    HttpURLConnection con = (HttpURLConnection) url.openConnection();
+    con.setDoOutput(true);
+    con.setRequestMethod("GET");
+    JsonObject jOb = new JsonObject();
+    try{
+      Scanner in = new Scanner(new InputStreamReader(con.getInputStream()));  
+      JsonParser parser = new JsonParser(); 
+      jOb = parser.parse(in.nextLine()).getAsJsonObject();
+    }
+    catch(ConnectException e){
+      System.out.println("Connection timed out: recall method ");
+      try {
+        Thread.sleep(1000);
+      }
+      catch (InterruptedException e1) {
+        // TODO Auto-generated catch block
+        e1.printStackTrace();
+      }
+      jOb = getJsonResponse(targetURL);
+    }
+    return jOb;
+  }
+  
+  
+  /**
+   * This method is used to do request to obtain parent category
+   * @param categories. Category list, used to build request with more category. For any category is returned a list of parent category
+   * @return HashMap<String, HashSet<String>>, keys are names of initial categories. HashSet are parent category for any initial category
+   * @throws IOException
+   */
+  public static HashMap<String, HashSet<String>> getParentsRequest(HashSet<String> categories) throws IOException{
+
+    // key is categories name, value is list of parent category
+    HashMap<String,HashSet<String>> toReturn = new HashMap<String, HashSet<String>>();
+
+    JsonArray categoriesParent = null;
+    // first categoryList to obtain parents
+
+    String keysQuery = "";
+    for(String s : categories){
+      keysQuery+="Category:"+s.replace(" ", "_")+"|";
+    }
+    keysQuery = keysQuery.replaceAll("\\|$", "");
+
+    String parentsURL = "https://en.wikipedia.org/w/api.php?action=query&titles="+keysQuery+"&prop=categories&clshow=!hidden&cllimit=500&indexpageids&format=json";
+    JsonObject responseParent = getJsonResponse(parentsURL);
+
+    //build ids array 
+    JsonArray idsJsonArray = responseParent.get("query").getAsJsonObject().get("pageids").getAsJsonArray();
+    ArrayList<String> ids = new ArrayList<String>();
+    for (JsonElement e : idsJsonArray){
+
+      if (Integer.parseInt(e.getAsString())>0){
+        ids.add(e.getAsString());
+      }
+    }
+
+
+    for(String id : ids){
+      HashSet<String> currentParentCategory = new HashSet<String>();
+      try{
+        categoriesParent = responseParent.getAsJsonObject().get("query").getAsJsonObject().get("pages").getAsJsonObject().get(id).getAsJsonObject().get("categories").getAsJsonArray();
+        String title = responseParent.getAsJsonObject().get("query").getAsJsonObject().get("pages").getAsJsonObject().get(id).getAsJsonObject().get("title").getAsString();
+        if(categoriesParent!=null){
+          // add all vertex obtained to hashset
+          for(JsonElement cat : categoriesParent){
+            String name = cat.getAsJsonObject().get("title").getAsString();
+            String [] namesplitted = name.replaceAll(" ", "_").split("Category:");
+            currentParentCategory.add(namesplitted[1]);
+          }
+
+          toReturn.put(title.replace("Category:", ""), currentParentCategory);
+        }
+      }
+      catch(Exception e){
+        System.out.println(parentsURL);
+        return toReturn;
+      }
+
+    }
+    return toReturn;
+  }
+  
+  /**
+   * This method is used to do request to obtain child category
+   * @param categories. Category list, used to build request with more category. For any category is returned a list of child category
+   * @return HashMap<String, HashSet<String>>, keys are names of initial categories. HashSet are child category for any initial category
+   * @throws IOException
+   */
+  public static HashMap<String, HashSet<String>> getChildsRequest(HashSet<String> categories) throws IOException, InterruptedException, ExecutionException{
+    
+    HashMap<String, HashSet<String>> toReturn = new HashMap<String, HashSet<String>>();
+
+
+    ArrayList<Future> featureList = new ArrayList<Future>();
+    for(String category : categories){
+      CallableChildsRequest currentCallable = new CallableChildsRequest(category);
+      featureList.add(executorService.submit(currentCallable));
+    }
+
+    for ( Future future : featureList) {
+      HashMap<String, HashSet<String>> childrenMap = (HashMap<String, HashSet<String>>) future.get();
+      for(String key : childrenMap.keySet()){
+        toReturn.put(key, childrenMap.get(key));
+      }
+    }
+    return toReturn;
+  }
+ 
 }

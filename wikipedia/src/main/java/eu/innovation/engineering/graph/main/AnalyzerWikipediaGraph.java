@@ -25,6 +25,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
+import eu.innovation.engineering.api.WikipediaAPI;
 import eu.innovation.engineering.graph.utility.AdjacencyListRow;
 import eu.innovation.engineering.graph.utility.PathInfo;
 import eu.innovation.engineering.graph.utility.StopWordEnglish;
@@ -453,7 +454,7 @@ public class AnalyzerWikipediaGraph {
     Set<String> toReturn  = new HashSet<>();
     JsonArray categoriesParent = null;
     String parentsURL = "https://en.wikipedia.org/w/api.php?action=query&pageids="+idDocument+"&prop=categories&clshow=!hidden&cllimit=500&indexpageids&format=json";
-    JsonObject responseParent = CrawlerWikipediaCategory.getJsonResponse(parentsURL);
+    JsonObject responseParent = WikipediaAPI.getJsonResponse(parentsURL);
     //build ids array 
     JsonArray idsJsonArray = responseParent.get("query").getAsJsonObject().get("pageids").getAsJsonArray();
     ArrayList<String> ids = new ArrayList<String>();

@@ -1,4 +1,4 @@
-package eu.innovation.engineering.graph.utility;
+package eu.innovation.engineering.api;
 
 import java.net.URLEncoder;
 import java.util.HashMap;
@@ -40,7 +40,7 @@ public class CallableChildsRequest implements Callable<HashMap<String,HashSet<St
 
 		// make 2 request
 		CrawlerWikipediaCategory crawler = new CrawlerWikipediaCategory();
-		JsonObject responseChild = crawler.getJsonResponse(childsURL);
+		JsonObject responseChild = WikipediaAPI.getJsonResponse(childsURL);
 
 
 		// second categoryList to obtain childs. Check if current category has parent with try-catch.
