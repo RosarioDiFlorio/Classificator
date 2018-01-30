@@ -1,25 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="Wikipedia">
+    <wb-module deploy-name="wikipedia">
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-        <dependent-module archiveName="solrclient-auth-api-4.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/solrclient-auth-api/solrclient-auth-api">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="solrclient-auth-event-listeners-4.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/solrclient-auth-event-listeners/solrclient-auth-event-listeners">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="solrclient-auth-aop-processors-4.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/solrclient-auth-aop-processors/solrclient-auth-aop-processors">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
         <dependent-module archiveName="solrclient-auth-commons-4.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/solrclient-auth-commons/solrclient-auth-commons">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="solrclient-auth-acl-4.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/solrclient-auth-acl/solrclient-auth-acl">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="language-detector-cybozu-0.0.2-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/language-detector-cybozu/language-detector-cybozu">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="language-utilities-commons-0.0.2-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/language-utilities-commons/language-utilities-commons">
@@ -28,16 +13,52 @@
         <dependent-module archiveName="language-utilities-string-matcher-0.0.2-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/language-utilities-string-matcher/language-utilities-string-matcher">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="nlp-analyzer-0.0.2-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/nlp-analyzer/nlp-analyzer">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <dependent-module archiveName="language-detector-0.0.2-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/language-detector/language-detector">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="nlp-analyzer-0.0.2-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/nlp-analyzer/nlp-analyzer">
+        <dependent-module archiveName="solrclient-auth-acl-4.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/solrclient-auth-acl/solrclient-auth-acl">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="similarity-algorithm-word2vec-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/similarity-algorithm-word2vec/similarity-algorithm-word2vec">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="similarity-algorithm-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/similarity-algorithm/similarity-algorithm">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="similarity-commons-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/similarity-commons/similarity-commons">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="similarity-persistence-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/similarity-persistence/similarity-persistence">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="similarity-keywords-solrclient-impl-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/similarity-keywords-solrclient-impl/similarity-keywords-solrclient-impl">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="similarity-keywords-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/similarity-keywords/similarity-keywords">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="solrclient-auth-api-4.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/solrclient-auth-api/solrclient-auth-api">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="solrclient-auth-binary-storage-adapters-4.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/solrclient-auth-binary-storage-adapters/solrclient-auth-binary-storage-adapters">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="solrclient-auth-event-listeners-4.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/solrclient-auth-event-listeners/solrclient-auth-event-listeners">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="solrclient-auth-aop-processors-4.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/solrclient-auth-aop-processors/solrclient-auth-aop-processors">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="similarity-service-impl-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/similarity-service-impl/similarity-service-impl">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="similarity-service-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/similarity-service/similarity-service">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="java-output-path" value="/Wikipedia/target/classes"/>
-        <property name="context-root" value="Wikipedia"/>
+        <property name="context-root" value="wikipedia"/>
     </wb-module>
 </project-modules>

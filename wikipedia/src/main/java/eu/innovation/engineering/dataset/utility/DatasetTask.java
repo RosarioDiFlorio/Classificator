@@ -8,7 +8,9 @@ import java.util.Set;
 import java.util.concurrent.Callable;
 import java.util.concurrent.RecursiveTask;
 
-import persistence.EdgeResult;
+import eu.innovation.engineering.persistence.EdgeResult;
+
+
 
 /**
  * @author Rosario Di Florio (RosarioUbuntu)

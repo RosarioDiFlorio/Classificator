@@ -25,9 +25,10 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
+import eu.innovation.engineering.graph.utility.PathInfo;
+import eu.innovation.engineering.persistence.EdgeResult;
 import eu.innovationengineering.solrclient.auth.collection.queue.UpdatablePriorityQueue;
-import persistence.EdgeResult;
-import utility.PathInfo;
+
 
 /**
  * @author Rosario Di Florio (RosarioUbuntu)

@@ -9,6 +9,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -56,11 +57,13 @@ public class DatasetUtilities {
   public static void writeDocumentMap(Map<String, List<List<String>>> pathMap,Map<String,Set<DocumentInfo>> documentsMap) throws FileNotFoundException{   
     for(String key : documentsMap.keySet()){
       for( DocumentInfo doc: documentsMap.get(key)){
+        int count = 0;
         for(List<String> list: pathMap.get(key)){
-          PrintWriter writer = new PrintWriter(new File(list.get(0)+"/"+doc.getId()));
+          PrintWriter writer = new PrintWriter(new File(list.get(count)+"/"+doc.getId()));
           writer.println(doc.getText());
           writer.flush();
           writer.close();
+          count++;
         }
       }
       /*
@@ -129,7 +132,28 @@ public class DatasetUtilities {
     return toReturn;
   }
 
-  public static Map<String,List<String>> createMapForClassification(String path) throws JsonGenerationException, JsonMappingException, IOException{
+  /**
+   * Return the possible paths.
+   * for example a path A/B/C and A/C/D
+   * return a list with the path A/B, B/C A/C, C/D
+   * @param basePathSrc
+   * @return
+   */
+  public static Set<String> getAllPaths(String basePathSrc){
+    Set<String> pathSet = new HashSet<String>();
+     Map<String, List<String>> paths = DatasetUtilities.createMapForClassification(basePathSrc);
+    for(String path : paths.keySet()){    
+      for(String child : paths.get(path)){
+        StringBuilder toAdd = new StringBuilder(path);
+        toAdd.append("/"+child);
+        pathSet.add(toAdd.toString());
+      }
+    }
+    return pathSet;
+  }
+  
+  
+  public static Map<String,List<String>> createMapForClassification(String path){
     Map<String,List<String>> classificationMap = new HashMap<>();
     List<String> rootChild = getChildDirectories(path);
     classificationMap.put("root", rootChild);
@@ -139,7 +163,7 @@ public class DatasetUtilities {
     return classificationMap;
   }
 
-  private static Map<String,List<String>> createMapDatasetTask(String path) throws JsonGenerationException, JsonMappingException, IOException{
+  private static Map<String,List<String>> createMapDatasetTask(String path){
     Map<String,List<String>> toWrite = new HashMap<>();
     List<String> rootChild = getChildDirectories(path);
     if(!rootChild.isEmpty())

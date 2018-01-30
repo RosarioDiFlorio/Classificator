@@ -112,7 +112,7 @@ transport,land_transport,en.wikipedia.org/wiki/Category:Land_transport
 transport,maritime_and_inland_waterway_transport,en.wikipedia.org/wiki/Category:Water_transport
 transport,air_and_space_transport,en.wikipedia.org/wiki/Category:International_air_transport
 environment,environmental_policy,climate_change_policy,en.wikipedia.org/wiki/Category:Climate_change_policy
-environment,environmental_policy,water_policy,en.wikipedia.org/wiki/Category:Water_resource_policy
+environment,environmental_policy,water_policy,en.wikipedia.org/wiki/Category:Water_and_the_environment
 environment,natural_environment,climate,en.wikipedia.org/wiki/Category:Climate_change
 environment,natural_environment,wildlife,en.wikipedia.org/wiki/Category:Wildlife
 environment,natural_environment,physical_environment,atmosphere,en.wikipedia.org/wiki/Category:Atmosphere
@@ -141,7 +141,6 @@ energy,renewable_energy,en.wikipedia.org/wiki/Category:Renewable_energy
 energy,solar_energy,en.wikipedia.org/wiki/Category:Solar_energy
 energy,wind_energy,en.wikipedia.org/wiki/Category:Wind_power
 industry,industrial_structures_and_policy,industrial_policy,en.wikipedia.org/wiki/Category:Industrial_policy
-industry,industrial_structures_and_policy,industrial_production,en.wikipedia.org/wiki/Category:Production_and_manufacturing
 industry,industrial_structures_and_policy,industrial_structures,en.wikipedia.org/wiki/Category:Industrial_organization
 industry,industrial_structures_and_policy,technical_profession,en.wikipedia.org/wiki/Category:Professional_titles_and_certifications
 industry,chemical_industry,en.wikipedia.org/wiki/Category:Chemical_industry
@@ -151,7 +150,7 @@ industry,metal_industries,metallurgical_industry,en.wikipedia.org/wiki/Category:
 industry,metal_industries,metals,en.wikipedia.org/wiki/Category:Metals
 industry,mechanical_engineering,en.wikipedia.org/wiki/Category:Mechanical_engineering
 industry,electronics_and_electrical_engineering,en.wikipedia.org/wiki/Category:Electronics_industry
-industry,building_and_public_works,building_industry,en.wikipedia.org/wiki/Category:Building
+industry,building_and_public_works,en.wikipedia.org/wiki/Category:Building
 industry,wood_industry,en.wikipedia.org/wiki/Category:Wood_products
 industry,leather_and_textile_industries,en.wikipedia.org/wiki/Category:Leather_Industry
 industry,leather_and_textile_industries,en.wikipedia.org/wiki/Category:Textile_industry

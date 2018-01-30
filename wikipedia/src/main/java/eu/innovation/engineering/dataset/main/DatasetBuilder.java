@@ -22,8 +22,9 @@ import eu.innovation.engineering.dataset.utility.DatasetTask;
 import eu.innovation.engineering.dataset.utility.DatasetUtilities;
 import eu.innovation.engineering.dataset.utility.DocumentInfo;
 import eu.innovation.engineering.dataset.utility.WikiRequest;
-import persistence.EdgeResult;
-import persistence.SQLiteWikipediaGraph;
+import eu.innovation.engineering.persistence.EdgeResult;
+import eu.innovation.engineering.persistence.SQLiteWikipediaGraph;
+
 
 public class DatasetBuilder implements WikiRequest {
 
@@ -42,7 +43,7 @@ public class DatasetBuilder implements WikiRequest {
      */
     DatasetRequest request = new DatasetRequest();
     request.setLimitDocuments(500);
-    request.setName("dataset_tassonomia_dijstra");
+    request.setName("datasets_tassonomia_dijstra");
     request.setOnline(false);
     request.setTaxonomyCSV(new File("wheesbee_taxonomy.csv"));
     /*
@@ -136,11 +137,9 @@ public class DatasetBuilder implements WikiRequest {
       Set<String> toExtract = new HashSet<>();
       SQLiteWikipediaGraph graphConnector = new SQLiteWikipediaGraph("databaseWikipediaGraph.db");
       Map<String, EdgeResult> graph = graphConnector.getGraph("childs");
-
       for(String uriWiki : pathMap.keySet()){
-        toExtract.add(uriWiki);
-        count++;       
-        if(count%8 == 0 || count == pathMap.size()){
+        toExtract.add(uriWiki);     
+        if(count%8 == 0 || count == pathMap.size()-1){
           System.out.println(((count*100)/pathMap.size())+"%");
           Map<String, Set<DocumentInfo>> results = new HashMap<String, Set<DocumentInfo>>();
           /*
@@ -157,8 +156,8 @@ public class DatasetBuilder implements WikiRequest {
           DatasetUtilities.writeDocumentMap(pathMap, results);
           toExtract.clear();
         }
+        count++;
       }
-
     }
     catch (IOException | InterruptedException | ExecutionException e) {
       // TODO Auto-generated catch block
