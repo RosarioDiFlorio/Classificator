@@ -75,12 +75,12 @@ public class DatasetBuilder implements WikiRequest {
     String basePathSrc = pathDataset;
     
     if(request.isOnline())
-     basePathSrc =  WikipediaDataset(basePath,pathDataset,request);
+     basePathSrc =  wikipediaDataset(basePath,pathDataset,request);
   
     if(request.isTraining() || request.isTest()){      
       int numSourceToCopy = request.getLimitDocuments();    
       List<String> fileList = DatasetUtilities.listAllFiles(basePathSrc, new ArrayList<String>());
-      Set<String> pathSet = DatasetUtilities.getAllPaths(basePathSrc);
+      Set<String> pathSet = DatasetUtilities.listAllPaths(basePathSrc);
       List<String> added = new ArrayList<>();
       if(request.isTraining()){
         String basePathDstTraining = basePath+"datasets_training/";
@@ -116,7 +116,7 @@ public class DatasetBuilder implements WikiRequest {
     return null;
   }
 
-  public static String WikipediaDataset(String basePath, String pathDataset, DatasetRequest request){
+  public static String wikipediaDataset(String basePath, String pathDataset, DatasetRequest request){
     /**
      * INIT DATASET.
      **/    
@@ -232,39 +232,38 @@ public class DatasetBuilder implements WikiRequest {
     ArrayList<String> addedToReturn = new ArrayList<String>();
     FileWriter writerLabelsTraining = new FileWriter(new File(basePathSrc+"labelsItemTrainingWithOrigin.csv"));
     FileWriter writerLabelsTest = new FileWriter(new File(basePathSrc+"labelsItemTestWithOrigin.csv"));
-
     writerLabelsTest.write("id,origin,firstLabel,secondLabel,thirdLabel\n");
 
     for(String path:pathList){
 
       //creo la folder 
       new File(basePathDst+path).mkdir();
-      Set<String> leafList = new HashSet<String>();
+      Set<String> documentContainers = new HashSet<String>();
       // CALCOLO LA LISTA DI TUTTE LE CATEGORIE FOGLIA
       for(String file: fileList){
         file = file.replace("\\", "/").replace(basePathSrc, "");
         String [] splitted = file.split("/");
         if(file.contains(path.replace("root/", ""))){
           String toSave = file.replace("/"+splitted[splitted.length-1], "");
-          leafList.add(toSave);
+          documentContainers.add(toSave);
         }
       }
       // A QUESTO PUNTO AGGIUNGO I DOCUMENTI AL PATH CORRENTE USANDO LE CATEGORIE FOGLIA CALCOLATE
-      int numSource = (numSourceToCopy/leafList.size());
+      int numSource = (numSourceToCopy/documentContainers.size());
       AnalyzerGraphWikipedia analyzerWikipedia = new AnalyzerGraphWikipedia();
       //Per ogni foglia della lista delle categorie foglia
-      for(String leaf:leafList){
+      for(String documentContainer : documentContainers){
 
-        String [] leafSplitted = leaf.split("/");
-        String nameLeaf = leafSplitted[leafSplitted.length-1];
+        String [] leafSplitted = documentContainer.split("/");
+        String nameDocument = leafSplitted[leafSplitted.length-1];
 
         int count = 0; 
         // leggo il path del file corrente
 
-        List<String> files = DatasetUtilities.listAllFiles(basePathSrc+leaf, new ArrayList<String>());
-        for(String file:files){
+        List<String> filesContained = DatasetUtilities.listAllFiles(basePathSrc+documentContainer, new ArrayList<String>());
+        for(String file : filesContained){
           file = file.replace("\\", "/");
-          String[] splitted = file.split("/");
+          String[] splittedFileName = file.split("/");
           File f1 = new File(file);
 
           int wordCount=0;
@@ -278,15 +277,15 @@ public class DatasetBuilder implements WikiRequest {
           catch(Exception e){}
 
 
-          if(!added.contains(splitted[splitted.length-1])){
+          if(!added.contains(splittedFileName[splittedFileName.length-1])){
             if(count>=numSource)
               break;
             else{
               count++;
               File f2 = null;
               if(datasetType.equals("training")){
-                addedToReturn.add(splitted[splitted.length-1]);
-                f2 = new File(basePathDst+path+"/"+nameLeaf+"_"+splitted[splitted.length-1]);
+                addedToReturn.add(splittedFileName[splittedFileName.length-1]);
+                f2 = new File(basePathDst+path+"/"+nameDocument+"_"+splittedFileName[splittedFileName.length-1]);
                 FileUtils.copyFile(f1, f2); 
 
                 //Dataset To evaluate classifier with training set
@@ -296,17 +295,17 @@ public class DatasetBuilder implements WikiRequest {
                 //saveLabelsOnCSV(nameLeaf,labels,writerLabelsTraining,splitted);
                 /////////////////////////////////////////////////
               }
-              else if(datasetType.equals("test") && (!addedToReturn.contains(splitted[splitted.length-1]))){  
+              else if(datasetType.equals("test") && (!addedToReturn.contains(splittedFileName[splittedFileName.length-1]))){  
                 if(wordCount >=minCut && wordCount<=maxCut){
-                  addedToReturn.add(splitted[splitted.length-1]);
-                  f2 = new File(basePathDst+"/"+splitted[splitted.length-1]); 
+                  addedToReturn.add(splittedFileName[splittedFileName.length-1]);
+                  f2 = new File(basePathDst+"/"+splittedFileName[splittedFileName.length-1]); 
                   //Codice per cercare le categorie dal grafo wikipedia. Creare un file CSV che contiene le categorie che il grafo ha restituito
-                  List<String> labels =  analyzerWikipedia.getDocumentLabelsTaxonomy(splitted[splitted.length-1],true);
+                  List<String> labels =  analyzerWikipedia.getDocumentLabelsTaxonomy(splittedFileName[splittedFileName.length-1],true);
                   // se il nome della foglia è uguale al nome della labels in posizione 0. Faccio questo per prendere solo i documenti per i quali il grafo wikipedia ha una buona corrispondenza con l'etichetta usata durante la generazione del dataset
                   if(labels!=null && !labels.isEmpty()){
                     //if(nameLeaf.toLowerCase().equals(labels.get(0).toLowerCase())){
                     FileUtils.copyFile(f1, f2);
-                    DatasetUtilities.saveLabelsOnCSV(nameLeaf,labels,writerLabelsTest,splitted);
+                    DatasetUtilities.saveLabelsOnCSV(nameDocument,labels,writerLabelsTest,splittedFileName);
                     //} 
                   }
                 }

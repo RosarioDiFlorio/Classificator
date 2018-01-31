@@ -21,25 +21,25 @@ public class DatasetUtilities {
 
   /**
    * Method used to save labels on csv file 
-   * @param nameLeaf
+   * @param idDocument
    * @param labels
    * @param writer
    * @param splitted
    * @throws IOException
    */
-  public static void saveLabelsOnCSV(String nameLeaf,List<String> labels,FileWriter writer, String[] splitted) throws IOException{
+  public static void saveLabelsOnCSV(String idDocument,List<String> labels,FileWriter writer, String[] splitted) throws IOException{
 
     try{
       if(labels.size()>=3){
-        writer.write(splitted[splitted.length-1]+","+nameLeaf+","+labels.get(0)+","+labels.get(1)+","+labels.get(2)+"\n");
+        writer.write(splitted[splitted.length-1]+","+idDocument+","+labels.get(0)+","+labels.get(1)+","+labels.get(2)+"\n");
       }
       else
         if(labels.size()>=2){
-          writer.write(splitted[splitted.length-1]+","+nameLeaf+","+labels.get(0)+","+labels.get(1)+"\n");
+          writer.write(splitted[splitted.length-1]+","+idDocument+","+labels.get(0)+","+labels.get(1)+"\n");
         }
         else
           if(labels.size()>0){
-            writer.write(splitted[splitted.length-1]+","+nameLeaf+","+labels.get(0)+"\n");
+            writer.write(splitted[splitted.length-1]+","+idDocument+","+labels.get(0)+"\n");
           }
     }
     catch(Exception e){
@@ -146,23 +146,6 @@ public class DatasetUtilities {
     return dataMap;
   }
 
-  public static Map<String, Integer> countLeafs(Map<String, List<List<String>>> mapcsv){
-    Map<String, Integer> toReturn = new HashMap<>();
-    for(String key:mapcsv.keySet()){
-      for(List<String> list: mapcsv.get(key)){
-        String rootCat = list.get(0);
-        if(toReturn.containsKey(rootCat)){
-          int count = toReturn.get(rootCat);
-          count ++;
-          toReturn.replace(rootCat, count);
-        }else
-          toReturn.put(rootCat, 1);
-      }   
-    }
-    return toReturn;
-  }
-
-
   /**
    * List all files from a directory and its subdirectories
    * @param directoryName to be listed
@@ -191,7 +174,7 @@ public class DatasetUtilities {
    * @param basePathSrc
    * @return
    */
-  public static Set<String> getAllPaths(String basePathSrc){
+  public static Set<String> listAllPaths(String basePathSrc){
     Set<String> pathSet = new HashSet<String>();
     Map<String, List<String>> paths = DatasetUtilities.createMapForClassification(basePathSrc);
     for(String path : paths.keySet()){    
@@ -217,20 +200,20 @@ public class DatasetUtilities {
   }
 
   private static Map<String,List<String>> createMapDatasetTask(String path){
-    Map<String,List<String>> toWrite = new HashMap<>();
+    Map<String,List<String>> toReturn = new HashMap<>();
     List<String> rootChild = getChildDirectories(path);
     if(!rootChild.isEmpty())
-      toWrite.put(new File(path).getName(), rootChild);
+      toReturn.put(new File(path).getName(), rootChild);
     for(String child:rootChild){
       List<String> newphewList = getChildDirectories(path+"/"+child);
       if(!newphewList.isEmpty()){
-        toWrite.put(child, newphewList);
+        toReturn.put(child, newphewList);
         for(String newPhew : newphewList){
-          toWrite.putAll(createMapDatasetTask(path+"/"+child));
+          toReturn.putAll(createMapDatasetTask(path+"/"+child));
         }
       }
     }
-    return toWrite;
+    return toReturn;
   }
 
   private static List<String> getChildDirectories (String path){
