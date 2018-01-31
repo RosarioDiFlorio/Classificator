@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 import java.net.ConnectException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -396,95 +397,93 @@ public class WikipediaAPI{
     }
     return jOb;
   }
-  
-  
+
+
   /**
    * This method is used to do request to obtain parent category
    * @param categories. Category list, used to build request with more category. For any category is returned a list of parent category
    * @return HashMap<String, HashSet<String>>, keys are names of initial categories. HashSet are parent category for any initial category
    * @throws IOException
    */
-  public static HashMap<String, HashSet<String>> getParentsRequest(HashSet<String> categories) throws IOException{
+  public static Map<String, Set<String>> getParentsRequest(Set<String> categories) throws IOException{
 
     // key is categories name, value is list of parent category
-    HashMap<String,HashSet<String>> toReturn = new HashMap<String, HashSet<String>>();
+    Map<String,Set<String>> toReturn = new HashMap<String, Set<String>>();
 
     JsonArray categoriesParent = null;
     // first categoryList to obtain parents
 
     String keysQuery = "";
     for(String s : categories){
-      keysQuery+="Category:"+s.replace(" ", "_")+"|";
+      keysQuery+=URLEncoder.encode("Category:"+s, "utf-8")+"|";
     }
     keysQuery = keysQuery.replaceAll("\\|$", "");
-
     String parentsURL = "https://en.wikipedia.org/w/api.php?action=query&titles="+keysQuery+"&prop=categories&clshow=!hidden&cllimit=500&indexpageids&format=json";
     JsonObject responseParent = getJsonResponse(parentsURL);
 
     //build ids array 
     JsonArray idsJsonArray = responseParent.get("query").getAsJsonObject().get("pageids").getAsJsonArray();
-    ArrayList<String> ids = new ArrayList<String>();
+    List<String> ids = new ArrayList<String>();
     for (JsonElement e : idsJsonArray){
 
       if (Integer.parseInt(e.getAsString())>0){
         ids.add(e.getAsString());
       }
     }
-
-
     for(String id : ids){
-      HashSet<String> currentParentCategory = new HashSet<String>();
+      Set<String> currentParentCategory = new HashSet<String>();
       try{
-        categoriesParent = responseParent.getAsJsonObject().get("query").getAsJsonObject().get("pages").getAsJsonObject().get(id).getAsJsonObject().get("categories").getAsJsonArray();
-        String title = responseParent.getAsJsonObject().get("query").getAsJsonObject().get("pages").getAsJsonObject().get(id).getAsJsonObject().get("title").getAsString();
-        if(categoriesParent!=null){
-          // add all vertex obtained to hashset
-          for(JsonElement cat : categoriesParent){
-            String name = cat.getAsJsonObject().get("title").getAsString();
-            String [] namesplitted = name.replaceAll(" ", "_").split("Category:");
-            currentParentCategory.add(namesplitted[1]);
+        if(responseParent.getAsJsonObject().get("query").getAsJsonObject().get("pages").getAsJsonObject().get(id).getAsJsonObject().has("categories")){
+          categoriesParent = responseParent.getAsJsonObject().get("query").getAsJsonObject().get("pages").getAsJsonObject().get(id).getAsJsonObject().get("categories").getAsJsonArray();
+          String title = responseParent.getAsJsonObject().get("query").getAsJsonObject().get("pages").getAsJsonObject().get(id).getAsJsonObject().get("title").getAsString();
+          if(categoriesParent!=null){
+            // add all vertex obtained to hashset
+            for(JsonElement cat : categoriesParent){
+              String name = cat.getAsJsonObject().get("title").getAsString();
+              String [] namesplitted = name.replaceAll(" ", "_").split("Category:");
+              currentParentCategory.add(namesplitted[1]);
+            }
+            toReturn.put(title.replace("Category:", "").replace(" ", "_"), currentParentCategory);
           }
-
-          toReturn.put(title.replace("Category:", "").replace(" ", "_"), currentParentCategory);
         }
       }
       catch(Exception e){
-        //System.out.println(parentsURL);
+        System.out.println(parentsURL);
+        e.printStackTrace();
         return toReturn;
       }
-
     }
     return toReturn;
   }
-  
+
   /**
    * This method is used to do request to obtain child category
    * @param categories. Category list, used to build request with more category. For any category is returned a list of child category
    * @return HashMap<String, HashSet<String>>, keys are names of initial categories. HashSet are child category for any initial category
    * @throws IOException
    */
-  public static HashMap<String, HashSet<String>> getChildsRequest(HashSet<String> categories) throws IOException, InterruptedException, ExecutionException{
-    
-    HashMap<String, HashSet<String>> toReturn = new HashMap<String, HashSet<String>>();
+  public static Map<String, Set<String>> getChildsRequest(HashSet<String> categories) throws IOException, InterruptedException, ExecutionException{
+
+    Map<String, Set<String>> toReturn = new HashMap<String, Set<String>>();
 
 
-    ArrayList<Future> featureList = new ArrayList<Future>();
+    List<Future> featureList = new ArrayList<Future>();
     for(String category : categories){
       CallableChildsRequest currentCallable = new CallableChildsRequest(category);
       featureList.add(executorService.submit(currentCallable));
     }
 
     for ( Future future : featureList) {
-      HashMap<String, HashSet<String>> childrenMap = (HashMap<String, HashSet<String>>) future.get();
+      Map<String, Set<String>> childrenMap = (Map<String, Set<String>>) future.get();
       for(String key : childrenMap.keySet()){
         toReturn.put(key.replace(" ", "_"), childrenMap.get(key));
       }
     }
     return toReturn;
   }
-  
+
   public static void executorShutDown(){
     executorService.shutdown();
   }
- 
+
 }

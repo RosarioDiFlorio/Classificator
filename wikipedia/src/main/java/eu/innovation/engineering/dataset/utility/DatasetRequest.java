@@ -8,8 +8,16 @@ import java.io.File;
 public class DatasetRequest {
   private File taxonomyCSV;
   private int limitDocuments;
+  private boolean db;
   private boolean online;
   private String name;
+  
+  
+  private int minCut = 0;
+  private int maxCut = 10000;
+  private boolean training;
+  private boolean test;
+
 
 
 
@@ -43,6 +51,46 @@ public class DatasetRequest {
 
   public void setLimitDocuments(int limitDocuments) {
     this.limitDocuments = limitDocuments;
+  }
+
+  public int getMinCut() {
+    return minCut;
+  }
+
+  public void setMinCut(int minCut) {
+    this.minCut = minCut;
+  }
+
+  public int getMaxCut() {
+    return maxCut;
+  }
+
+  public void setMaxCut(int maxCut) {
+    this.maxCut = maxCut;
+  }
+
+  public boolean isTraining() {
+    return training;
+  }
+
+  public void setTraining(boolean training) {
+    this.training = training;
+  }
+
+  public boolean isTest() {
+    return test;
+  }
+
+  public void setTest(boolean test) {
+    this.test = test;
+  }
+
+  public boolean isDb() {
+    return db;
+  }
+
+  public void setDb(boolean db) {
+    this.db = db;
   }
 
 }

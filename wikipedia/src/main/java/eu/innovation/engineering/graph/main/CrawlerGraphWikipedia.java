@@ -10,13 +10,13 @@ import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Set;
 import java.util.concurrent.ExecutionException;
-import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 
 import eu.innovation.engineering.api.WikipediaAPI;
-import eu.innovation.engineering.dataset.utility.FilesUtilities;
+import eu.innovation.engineering.dataset.utility.DatasetUtilities;
+import eu.innovation.engineering.graph.utility.Edge;
 import eu.innovation.engineering.graph.utility.Word2Vec;
 import eu.innovation.engineering.persistence.EdgeResult;
 import eu.innovation.engineering.persistence.SQLiteVectors;
@@ -32,14 +32,15 @@ public class CrawlerGraphWikipedia {
   private static SQLiteVectors dbVectors = new SQLiteVectors("databaseVectors.db");
   private static Word2Vec word2vec = new Word2Vec();
 
-
-
-
+  /**
+   * EXAMPLE AND TEST MAIN
+   * @param args
+   * @throws IOException
+   * @throws InterruptedException
+   * @throws ExecutionException
+   */
   public static void main(String args[]) throws IOException, InterruptedException, ExecutionException{
-
-    //    mainToBuildWeighedGraph(args);
     buildGraph(true);
-
   }
 
 
@@ -54,12 +55,13 @@ public class CrawlerGraphWikipedia {
     try {
       HashSet<String> categories = new HashSet<String>(); 
       categories.add("Contents");
-      BackupBFS(categories);
+      backupBFS(categories);
     }
     finally {
+      dbGraph.insertAndUpdateMarkedNodes(DatasetUtilities.returnCategoriesFromTaxonomyCSV("wheesbee_taxonomy.csv"));
+      dbGraph.commitConnection();
       WikipediaAPI.executorShutDown();
-    }
-    dbGraph.insertAndUpdateMarkedNodes(FilesUtilities.returnCategoriesFromTaxonomyCSV("wheesbee_taxonomy.csv"));
+    }    
     Map<String, EdgeResult> graph = dbGraph.getGraph("parents");
     if (isWeighted) {      
       Set<String> vertexWikipedia = new HashSet<>(graph.keySet());
@@ -70,30 +72,27 @@ public class CrawlerGraphWikipedia {
       }
       catch (InterruptedException e) {
         e.printStackTrace();
+      }finally {
+        dbVectors.commitConnection();
+        dbGraph.commitConnection();
       }
-      for(String destination:graph.keySet()){
-        insertWeightedEdges(destination, graph.get(destination).getLinkedVertex().stream().map(vertex->vertex.getVertexName()).collect(Collectors.toSet()));
-      }
+      updateWeightEdges(dbGraph.getListEdgesByDistance(0));
     }
     dbGraph.setAutoCommit(true);
     dbVectors.setAutoCommit(true);
   }
 
-  public static void BackupBFS(Set<String> categories) throws JsonParseException, JsonMappingException, IOException{
+  public static void backupBFS(Set<String> categories) throws JsonParseException, JsonMappingException, IOException{
     try{
-      
-      Map<String, EdgeResult> graph = dbGraph.getGraph("parents");
-      Set<String> marked = new HashSet<String>(graph.keySet());
+
+      Map<String, EdgeResult> graphParents = dbGraph.getGraph("parents");
+      Set<String> marked = new HashSet<String>(dbGraph.getNamesFromEdges());
       Set<String> toVisit = dbGraph.getNamesFromMarkedNodes();
-      graph.keySet().forEach(key->graph.get(key).getLinkedVertex().forEach(vertex->toVisit.add(vertex.getVertexName())));
-      toVisit.removeAll(graph.keySet());
-      toVisit.removeAll(dbGraph.getNamesFromEdges());
+      graphParents.keySet().forEach(key->graphParents.get(key).getLinkedVertex().forEach(vertex->toVisit.add(vertex.getVertexName())));
+      graphParents.clear();
+
+      toVisit.removeAll(marked);  
       System.out.println("toVisit->"+toVisit.size());
-//      toVisit.forEach(str->System.out.println(str.contains("Category:")));
-      
-      
-      
-      graph.clear();
       BFS(categories, marked,new PriorityQueue<>(toVisit));
     }catch (Exception e) {
       e.printStackTrace();
@@ -112,7 +111,7 @@ public class CrawlerGraphWikipedia {
    * @throws InterruptedException 
    */
   public static void BFS(Set<String> categoryList,Set<String> markedNode,PriorityQueue<String> vertexToVisit) throws IOException, InterruptedException, ExecutionException{
-    int numConcurrency = Runtime.getRuntime().availableProcessors();
+    int numConcurrency = 20;
     Set<String> markedInsert = dbGraph.getNamesFromMarkedNodes();
 
     // Aggiungo a vertexToVisit i vertici da visitare. Serve perchè al primo lancio bisogna salvare il primo vertice in vertextovisit
@@ -139,8 +138,9 @@ public class CrawlerGraphWikipedia {
       }
       countToAddQuery = 0;  
 
-      HashMap<String, HashSet<String>> parentsMap = WikipediaAPI.getParentsRequest(categories);
-      HashMap<String, HashSet<String>> childsMap = WikipediaAPI.getChildsRequest(categories);
+      Map<String, Set<String>> parentsMap = WikipediaAPI.getParentsRequest(categories);
+      Map<String, Set<String>> childsMap = WikipediaAPI.getChildsRequest(categories);
+
       
       Set<String> toCheck  = new HashSet<>(categories);
       parentsMap.keySet().forEach(key->toCheck.addAll(parentsMap.get(key)));
@@ -205,7 +205,7 @@ public class CrawlerGraphWikipedia {
    * @throws IOException
    * @throws InterruptedException 
    */
-  public static void saveVectorsWikipediaInDB(Set<String> vertexWikipedia) throws IOException, InterruptedException{
+  private static void saveVectorsWikipediaInDB(Set<String> vertexWikipedia) throws IOException, InterruptedException{
     //carico le stopword dal file specificato.
     dbVectors.setAutoCommit(false);
     try{
@@ -244,31 +244,33 @@ public class CrawlerGraphWikipedia {
       dbVectors.commitConnection();
     }
   }
-  
-  
+
+
   private static void insertAndCheckMarkedNode(Set<String> toCheck, Set<String> alreadyInsert){
     toCheck.stream().map(el-> el = el.replace(" ", "_")).filter(el->!alreadyInsert.contains(el)).forEach(el->{
       dbGraph.insertMarkedNode(el, false);
       alreadyInsert.add(el);
     });
-    //    dbGraph.commitConnection();
   }
 
 
-  private static void insertWeightedEdges(String destination, Set<String> sources){
-    float[] destinationVector = dbVectors.getVectorByName(destination);
-    for(String source : sources){
+  private static void updateWeightEdges(List<Edge> edgeList){
+    for(Edge e:edgeList){
       double weight = 0;
-      float[] sourceVector = dbVectors.getVectorByName(source);
+      float[] destinationVector = dbVectors.getVectorByName(e.getChilds());
+      float[] sourceVector = dbVectors.getVectorByName(e.getParents());
       if(validateVector(destinationVector) && validateVector(sourceVector))
         weight = cosineSimilarityInverse(destinationVector, sourceVector); 
       else{
         weight =  (3.14/2);
-      }    
-        dbGraph.updateEdge(source, destination, weight);
-    }
-  }
+      }
+      dbGraph.updateEdge(e.getParents(), e.getChilds(), weight);
 
+
+    }
+
+
+  }
 
   /**
    * this method check if a vector is different from 0 vector
@@ -276,10 +278,10 @@ public class CrawlerGraphWikipedia {
    * @return
    */
   private static boolean validateVector(float[] vector){
-  
+
     if (vector == null)
       return false;
-  
+
     for(int i=0;i<vector.length-1;i++){
       if (vector[i]!=0.0)
         return true;

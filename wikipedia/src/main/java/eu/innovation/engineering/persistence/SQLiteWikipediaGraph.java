@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import eu.innovation.engineering.graph.utility.Edge;
 import eu.innovation.engineering.graph.utility.Vertex;
 
 
@@ -18,6 +19,25 @@ import eu.innovation.engineering.graph.utility.Vertex;
 public class SQLiteWikipediaGraph extends SQLiteConnector  {
 
 
+  
+  public List<Edge> getListEdgesByDistance(double distance){
+    List<Edge> toReturn = new ArrayList<Edge>();
+    String sql = "SELECT * FROM edges WHERE distance= ? ;";
+    try(PreparedStatement pstm = getConnection().prepareStatement(sql);){
+      pstm.setDouble(1, distance);
+      try (ResultSet res = pstm.executeQuery()) {
+        while (res.next()) {
+          toReturn.add(new Edge(res.getString("parents"), res.getString("childs"), res.getDouble("distance")));
+        }
+      }
+    }
+    catch (SQLException e) {
+      e.printStackTrace();
+      }
+    return toReturn;
+
+  }
+  
   
   public Set<String> getNamesFromEdges(){
     Set<String> toReturn = new HashSet<String>();
@@ -37,7 +57,7 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
   
 
   public Map<String,EdgeResult> getGraph(String typeLinked){
-    System.out.println("Inizialing graph");
+    System.out.println("Inizialing graph "+typeLinked);
     Map<String,EdgeResult> toReturn = new HashMap<String, EdgeResult>();
     String sql = "SELECT * FROM edges";
     try(PreparedStatement stm = getConnection().prepareStatement(sql)){
@@ -248,21 +268,24 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
     }
   }
   
+
+  
+  
   public void updateEdge(String source,String dest,double value){
     String sql = "UPDATE edges SET distance = ? WHERE parents = ? AND childs = ?";
     try(PreparedStatement pstmt = super.getConnection().prepareStatement(sql);){
       pstmt.setDouble(1, value);
       pstmt.setString(2, source);
-      pstmt.setString(2, dest);
+      pstmt.setString(3, dest);
       pstmt.executeUpdate();
     }
     catch (SQLException e) {
       e.printStackTrace();
     }
+    
   }
 
   public void insertAndUpdateMarkedNodes(Set<String> toMark){
-    setAutoCommit(false);
     Set<String> alreadyMarked = getMarkedNodes();
     alreadyMarked.remove(toMark);
     alreadyMarked.forEach(el->updateMarkedNode(el, false));
@@ -273,9 +296,6 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
         insertMarkedNode(name, true);
       }
     }
-    commitConnection();
-    setAutoCommit(true);
-    System.out.println("done");
   }
 
   public Set<String> getNamesFromMarkedNodes(){

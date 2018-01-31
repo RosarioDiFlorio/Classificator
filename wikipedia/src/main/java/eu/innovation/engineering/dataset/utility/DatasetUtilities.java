@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -15,19 +16,40 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.JsonGenerationException;
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+public class DatasetUtilities {
 
-public class FilesUtilities {
 
-  
-  public static void main(String[] args) throws JsonGenerationException, JsonMappingException, IOException{
-    Map<String, List<String>> toWrite = createMapDatasetTask("D:/Development/Datasets/dataset_500xleaf_2012017");
-    ObjectMapper mapper = new ObjectMapper();
-    mapper.writerWithDefaultPrettyPrinter().writeValue(new File("oldCategories.json"), toWrite);
+  /**
+   * Method used to save labels on csv file 
+   * @param nameLeaf
+   * @param labels
+   * @param writer
+   * @param splitted
+   * @throws IOException
+   */
+  public static void saveLabelsOnCSV(String nameLeaf,List<String> labels,FileWriter writer, String[] splitted) throws IOException{
+
+    try{
+      if(labels.size()>=3){
+        writer.write(splitted[splitted.length-1]+","+nameLeaf+","+labels.get(0)+","+labels.get(1)+","+labels.get(2)+"\n");
+      }
+      else
+        if(labels.size()>=2){
+          writer.write(splitted[splitted.length-1]+","+nameLeaf+","+labels.get(0)+","+labels.get(1)+"\n");
+        }
+        else
+          if(labels.size()>0){
+            writer.write(splitted[splitted.length-1]+","+nameLeaf+","+labels.get(0)+"\n");
+          }
+    }
+    catch(Exception e){
+      //System.out.println(splitted[splitted.length-1]);
+    }
+    writer.flush();
+
   }
-  
+
+
   public static Map<String, List<List<String>>> createStructureFolder(Map<String, List<List<String>>> csvMap,String pathDataset){
     Map<String, List<List<String>>> pathMap = new HashMap<String, List<List<String>>>();
     new File(pathDataset).mkdir();
@@ -48,7 +70,7 @@ public class FilesUtilities {
     } 
     return pathMap;   
   }
-  
+
   /**
    * @param pathDataset
    * @param datasetMap
@@ -75,15 +97,15 @@ public class FilesUtilities {
       }
     }
   }
-  
-  
+
+
   public static Set<String> returnCategoriesFromTaxonomyCSV(String filename){
     Set<String> toReturn = new HashSet<>(readCSV(new File(filename), false).keySet());
     toReturn = toReturn.stream().map(el->el=el.replace("Category:", "")).collect(Collectors.toSet());
     return toReturn;
   }
-  
-  
+
+
   public static Map<String,List<List<String>>> readCSV(File csvFile,boolean labeled) {
     String line = "";
     String cvsSplitBy = ",";
@@ -91,7 +113,7 @@ public class FilesUtilities {
     try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
       if(labeled)
         line = br.readLine();
-  
+
       while ((line = br.readLine()) != null) {
         // use comma as separator
         String[] csvData = line.split(cvsSplitBy); 
@@ -101,7 +123,7 @@ public class FilesUtilities {
             data.add(csvData[i].trim());
           }
           String key = csvData[csvData.length-1].trim().replace("en.wikipedia.org/wiki/", "");
-  
+
           if(!key.equals("")){
             if(dataMap.containsKey(key)){
               List<List<String>> toReplace = dataMap.get(key);
@@ -113,8 +135,8 @@ public class FilesUtilities {
               dataMap.put(key, datas);
             }
           }
-  
-  
+
+
         }
       }
       return dataMap;
@@ -140,25 +162,27 @@ public class FilesUtilities {
     return toReturn;
   }
 
-  
+
   /**
    * List all files from a directory and its subdirectories
    * @param directoryName to be listed
    * @return 
    */
   public static List<String> listAllFiles(String directoryName, List<String> fileList){
-      File directory = new File(directoryName);
-      //get all the files from a directory
-      File[] fList = directory.listFiles();
-      for (File file : fList){
-          if (file.isFile()){
-              //System.out.println(file.getAbsolutePath());
-              fileList.add(file.getAbsolutePath());
-          } else if (file.isDirectory()){
-              listAllFiles(file.getAbsolutePath(),fileList);
-          }
+    directoryName = directoryName.replace("/", "\\");
+//    System.out.println(directoryName);
+    File directory = new File(directoryName);
+    //get all the files from a directory
+    File[] fList = directory.listFiles();
+    for (File file : fList){
+      if (file.isFile()){
+        //System.out.println(file.getAbsolutePath());
+        fileList.add(file.getAbsolutePath());
+      } else if (file.isDirectory()){
+        listAllFiles(file.getAbsolutePath(),fileList);
       }
-      return fileList;
+    }
+    return fileList;
   }
   /**
    * Return the possible paths.
@@ -169,7 +193,7 @@ public class FilesUtilities {
    */
   public static Set<String> getAllPaths(String basePathSrc){
     Set<String> pathSet = new HashSet<String>();
-     Map<String, List<String>> paths = FilesUtilities.createMapForClassification(basePathSrc);
+    Map<String, List<String>> paths = DatasetUtilities.createMapForClassification(basePathSrc);
     for(String path : paths.keySet()){    
       for(String child : paths.get(path)){
         StringBuilder toAdd = new StringBuilder(path);
@@ -179,9 +203,9 @@ public class FilesUtilities {
     }
     return pathSet;
   }
-  
 
-  
+
+
   public static Map<String,List<String>> createMapForClassification(String path){
     Map<String,List<String>> classificationMap = new HashMap<>();
     List<String> rootChild = getChildDirectories(path);
@@ -224,5 +248,5 @@ public class FilesUtilities {
     Collections.sort(toReturn);
     return toReturn;
   }
-  
+
 }

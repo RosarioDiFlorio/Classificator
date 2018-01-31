@@ -3,6 +3,8 @@ package eu.innovation.engineering.api;
 import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.Callable;
 
 import com.google.gson.JsonArray;
@@ -13,7 +15,7 @@ import eu.innovation.engineering.graph.main.CrawlerGraphWikipedia;
 
 
 
-public class CallableChildsRequest implements Callable<HashMap<String,HashSet<String>>> {
+public class CallableChildsRequest implements Callable<Map<String,Set<String>>> {
 
 	private String category;
 
@@ -31,9 +33,9 @@ public class CallableChildsRequest implements Callable<HashMap<String,HashSet<St
 
 
 	@Override
-  public HashMap<String, HashSet<String>> call() throws Exception {
+  public Map<String, Set<String>> call() throws Exception {
 
-		HashMap<String, HashSet<String>> toReturn = new HashMap<String, HashSet<String>>();
+		Map<String, Set<String>> toReturn = new HashMap<String, Set<String>>();
 
 		String categoryEncoded = URLEncoder.encode(this.category,"utf-8");
 		String childsURL="https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category:"+categoryEncoded+"&cmlimit=500&cmtype=subcat&format=json";
@@ -53,7 +55,7 @@ public class CallableChildsRequest implements Callable<HashMap<String,HashSet<St
 			System.out.println(this.category+": hasn't childs category --- URL: "+childsURL);
 		}
 
-		HashSet<String> categoriesChildToReturn = new HashSet<String>();
+		Set<String> categoriesChildToReturn = new HashSet<String>();
 
 
 		if(categoriesChilds!=null){

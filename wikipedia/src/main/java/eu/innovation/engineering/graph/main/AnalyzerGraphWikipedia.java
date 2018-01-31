@@ -37,6 +37,11 @@ public class AnalyzerGraphWikipedia {
   private static Map<String,EdgeResult> graph;
 
 
+  /**
+   * EXAMPLE AND TEST MAIN
+   * @param args
+   * @throws IOException
+   */
   public static void main(String[] args) throws IOException{
     graphConnector.setAutoCommit(false);
     System.out.println(getDocumentLabelsTaxonomy("9912937", true));
