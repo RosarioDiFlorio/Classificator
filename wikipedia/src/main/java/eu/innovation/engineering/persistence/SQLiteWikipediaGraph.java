@@ -18,6 +18,23 @@ import eu.innovation.engineering.graph.utility.Vertex;
 public class SQLiteWikipediaGraph extends SQLiteConnector  {
 
 
+  
+  public Set<String> getNamesFromEdges(){
+    Set<String> toReturn = new HashSet<String>();
+    String sql = "SELECT parents, childs FROM edges";
+    try(PreparedStatement stm = getConnection().prepareStatement(sql)){
+      try (ResultSet res = stm.executeQuery()) {
+        while (res.next()) {
+          toReturn.add(res.getString("parents"));
+          toReturn.add(res.getString("childs"));
+        }
+      }
+    }catch (SQLException e) {
+      e.printStackTrace();
+    }   
+    return toReturn;
+  }
+  
 
   public Map<String,EdgeResult> getGraph(String typeLinked){
     System.out.println("Inizialing graph");
@@ -258,6 +275,7 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
     }
     commitConnection();
     setAutoCommit(true);
+    System.out.println("done");
   }
 
   public Set<String> getNamesFromMarkedNodes(){

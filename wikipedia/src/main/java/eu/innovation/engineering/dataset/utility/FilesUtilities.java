@@ -146,7 +146,7 @@ public class FilesUtilities {
    * @param directoryName to be listed
    * @return 
    */
-  public List<String> listAllFiles(String directoryName, List<String> fileList){
+  public static List<String> listAllFiles(String directoryName, List<String> fileList){
       File directory = new File(directoryName);
       //get all the files from a directory
       File[] fList = directory.listFiles();

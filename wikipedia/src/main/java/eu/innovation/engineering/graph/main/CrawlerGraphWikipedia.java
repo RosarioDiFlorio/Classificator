@@ -12,7 +12,6 @@ import java.util.Set;
 import java.util.concurrent.ExecutionException;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 
@@ -29,7 +28,6 @@ import eu.innovation.engineering.persistence.SQLiteWikipediaGraph;
 
 
 public class CrawlerGraphWikipedia {
-  private static int numConcurrency = Runtime.getRuntime().availableProcessors();
   private static SQLiteWikipediaGraph dbGraph = new SQLiteWikipediaGraph("databaseWikipediaGraph.db");
   private static SQLiteVectors dbVectors = new SQLiteVectors("databaseVectors.db");
   private static Word2Vec word2vec = new Word2Vec();
@@ -38,12 +36,10 @@ public class CrawlerGraphWikipedia {
 
 
   public static void main(String args[]) throws IOException, InterruptedException, ExecutionException{
-    dbGraph.setAutoCommit(false);
-    dbVectors.setAutoCommit(false);
+
     //    mainToBuildWeighedGraph(args);
     buildGraph(true);
-    dbGraph.setAutoCommit(true);
-    dbVectors.setAutoCommit(true);
+
   }
 
 
@@ -53,6 +49,8 @@ public class CrawlerGraphWikipedia {
    * @throws IOException
    */
   public static void buildGraph(boolean isWeighted) throws IOException{
+    dbGraph.setAutoCommit(false);
+    dbVectors.setAutoCommit(false);
     try {
       HashSet<String> categories = new HashSet<String>(); 
       categories.add("Contents");
@@ -66,17 +64,19 @@ public class CrawlerGraphWikipedia {
     if (isWeighted) {      
       Set<String> vertexWikipedia = new HashSet<>(graph.keySet());
       graph.keySet().forEach(key->graph.get(key).getLinkedVertex().forEach(vertex->vertexWikipedia.add(vertex.getVertexName())));
+      System.out.println(vertexWikipedia.size());
       try {
         saveVectorsWikipediaInDB(vertexWikipedia);
       }
       catch (InterruptedException e) {
-        // TODO Auto-generated catch block
         e.printStackTrace();
       }
       for(String destination:graph.keySet()){
         insertWeightedEdges(destination, graph.get(destination).getLinkedVertex().stream().map(vertex->vertex.getVertexName()).collect(Collectors.toSet()));
       }
     }
+    dbGraph.setAutoCommit(true);
+    dbVectors.setAutoCommit(true);
   }
 
   public static void BackupBFS(Set<String> categories) throws JsonParseException, JsonMappingException, IOException{
@@ -86,8 +86,13 @@ public class CrawlerGraphWikipedia {
       Set<String> marked = new HashSet<String>(graph.keySet());
       Set<String> toVisit = dbGraph.getNamesFromMarkedNodes();
       graph.keySet().forEach(key->graph.get(key).getLinkedVertex().forEach(vertex->toVisit.add(vertex.getVertexName())));
-      toVisit.removeAll(graph.keySet()); 
+      toVisit.removeAll(graph.keySet());
+      toVisit.removeAll(dbGraph.getNamesFromEdges());
       System.out.println("toVisit->"+toVisit.size());
+//      toVisit.forEach(str->System.out.println(str.contains("Category:")));
+      
+      
+      
       graph.clear();
       BFS(categories, marked,new PriorityQueue<>(toVisit));
     }catch (Exception e) {
@@ -107,6 +112,7 @@ public class CrawlerGraphWikipedia {
    * @throws InterruptedException 
    */
   public static void BFS(Set<String> categoryList,Set<String> markedNode,PriorityQueue<String> vertexToVisit) throws IOException, InterruptedException, ExecutionException{
+    int numConcurrency = Runtime.getRuntime().availableProcessors();
     Set<String> markedInsert = dbGraph.getNamesFromMarkedNodes();
 
     // Aggiungo a vertexToVisit i vertici da visitare. Serve perchè al primo lancio bisogna salvare il primo vertice in vertextovisit
@@ -135,15 +141,11 @@ public class CrawlerGraphWikipedia {
 
       HashMap<String, HashSet<String>> parentsMap = WikipediaAPI.getParentsRequest(categories);
       HashMap<String, HashSet<String>> childsMap = WikipediaAPI.getChildsRequest(categories);
-      /*
-       * controllo se sono presenti i vettori delle categorie richieste, dei loro parent e dei loro figli
-       * se non sono all'interno del database li inserisco.
-       */
+      
       Set<String> toCheck  = new HashSet<>(categories);
       parentsMap.keySet().forEach(key->toCheck.addAll(parentsMap.get(key)));
       childsMap.keySet().forEach(key->toCheck.addAll(childsMap.get(key)));
       insertAndCheckMarkedNode(toCheck, markedInsert);
-
 
       for(String destination : parentsMap.keySet()){
         /*
@@ -172,14 +174,13 @@ public class CrawlerGraphWikipedia {
       for(String key : childsMap.keySet()){
         app.addAll(childsMap.get(key));
       }
-
       for(String v : app){
         if(!markedNode.contains(v) && !vertexToVisit.contains(v)){
           vertexToVisit.add(v);
         }
       }
       // Persistenza
-      if((countToPersiste>= 1000) || (vertexToVisit.isEmpty())){
+      if((countToPersiste >= 1000) || (vertexToVisit.isEmpty())){
         System.out.println(vertexToVisit.size());
         dbGraph.commitConnection();
         countToPersiste = 0;
@@ -191,7 +192,6 @@ public class CrawlerGraphWikipedia {
       categoryList.clear();
     }
     dbGraph.commitConnection();
-    dbVectors.commitConnection();
   }
 
   /**
@@ -242,7 +242,6 @@ public class CrawlerGraphWikipedia {
       }
     }finally {
       dbVectors.commitConnection();
-      System.exit(0);
     }
   }
   
@@ -345,17 +344,6 @@ public class CrawlerGraphWikipedia {
     }
   }
 
-  /**
-   * 
-   * @param graph
-   * @param categoriesToMark
-   * @throws IOException 
-   * @throws JsonMappingException 
-   * @throws JsonGenerationException 
-   */
-  public static void markGraph(Set<String> categoriesToMark) throws JsonGenerationException, JsonMappingException, IOException{
-    dbGraph.insertAndUpdateMarkedNodes(categoriesToMark);
-  }
 
 
 

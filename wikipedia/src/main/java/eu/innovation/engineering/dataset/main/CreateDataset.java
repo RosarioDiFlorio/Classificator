@@ -14,7 +14,6 @@ import org.apache.commons.io.FileUtils;
 
 import eu.innovation.engineering.dataset.utility.FilesUtilities;
 import eu.innovation.engineering.graph.main.AnalyzerGraphWikipedia;
-import eu.innovation.engineering.graph.utility.ListAllFiles;
 
 
 
@@ -24,25 +23,25 @@ public class CreateDataset {
   final private static int maxCut = 10000000;
 
   public static void main(String[] args) throws IOException{
-    ListAllFiles fileReader = new ListAllFiles();
+
     String basePath = "D:/Development/Datasets/datasets_tassonomia_dijstra/";
     String basePathSrc = basePath+"dataset/";
     String basePathDstTraining = basePath+"datasets_training/";
     String basePathDstTest = basePath+"datasets_test/";
        
-    List<String> fileList = fileReader.listFilesAndFilesSubDirectories(basePathSrc, new ArrayList<String>());
+    List<String> fileList = FilesUtilities.listAllFiles(basePathSrc, new ArrayList<String>());
     new File(basePathDstTraining).mkdir();
     new File(basePathDstTest).mkdir();
     
     Set<String> pathSet = FilesUtilities.getAllPaths(basePathSrc);
     //TRAINING
-    ArrayList<String> added = buildDataset(pathSet, basePathDstTraining, basePathSrc, fileList, fileReader,450, new ArrayList<String>(), "training");
+    ArrayList<String> added = buildDataset(pathSet, basePathDstTraining, basePathSrc, fileList,450, new ArrayList<String>(), "training");
 
     //TEST
-    buildDataset(pathSet, basePathDstTest, basePathSrc, fileList, fileReader,50,added,"test");
+    buildDataset(pathSet, basePathDstTest, basePathSrc, fileList,50,added,"test");
   }
 
-  public static ArrayList<String>  buildDataset(Set<String> pathList,String basePathDst,String basePathSrc, List<String> fileList, ListAllFiles fileReader, int numSourceToCopy, List<String> added, String datasetType) throws IOException{
+  public static ArrayList<String>  buildDataset(Set<String> pathList,String basePathDst,String basePathSrc, List<String> fileList, int numSourceToCopy, List<String> added, String datasetType) throws IOException{
     // PER OGNNI PATH CALCOLATO
 
     ArrayList<String> addedToReturn = new ArrayList<String>();
@@ -80,7 +79,7 @@ public class CreateDataset {
 
         int count = 0; 
         // leggo il path del file corrente
-        ArrayList<String> files = (ArrayList<String>) fileReader.listFilesAndFilesSubDirectories(basePathSrc+"/"+leaf, new ArrayList<String>());
+        ArrayList<String> files = (ArrayList<String>) FilesUtilities.listAllFiles(basePathSrc+"/"+leaf, new ArrayList<String>());
         for(String file:files){
 
           file = file.replace("\\", "/");

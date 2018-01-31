@@ -1,12 +1,10 @@
 package eu.innovation.engineering.graph.main;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -17,21 +15,14 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import eu.innovation.engineering.api.WikipediaAPI;
-import eu.innovation.engineering.graph.utility.AdjacencyListRow;
 import eu.innovation.engineering.graph.utility.PathInfo;
-import eu.innovation.engineering.graph.utility.StopWordEnglish;
 import eu.innovation.engineering.graph.utility.Word2Vec;
 import eu.innovation.engineering.persistence.EdgeResult;
-import eu.innovation.engineering.persistence.SQLiteVectors;
 import eu.innovation.engineering.persistence.SQLiteWikipediaGraph;
 import eu.innovationengineering.solrclient.auth.collection.queue.UpdatablePriorityQueue;
 
@@ -47,11 +38,7 @@ public class AnalyzerGraphWikipedia {
 
 
   public static void main(String[] args) throws IOException{
-    Set<String> debug = graphConnector.getMarkedNodes();
-    System.out.println(debug.size());
     graphConnector.setAutoCommit(false);
-    //7674809 tomografia.
-    //9912937 museo della grappa.
     System.out.println(getDocumentLabelsTaxonomy("9912937", true));
     graphConnector.setAutoCommit(true);
   }
@@ -145,10 +132,8 @@ public class AnalyzerGraphWikipedia {
    */
   public static Set<PathInfo> searchDjistraMarkedNode(String vertexStartName,int numberOfMarkedVertex){
     if(graph == null){
-      System.out.println("Inizialing graph");
       graphConnector.setAutoCommit(false);
       graph = graphConnector.getGraph("parents");
-      System.out.println("graph loaded -> "+graph.size());
       graphConnector.setAutoCommit(true);
     }
     //insieme di nodi marcati da ritornare.
