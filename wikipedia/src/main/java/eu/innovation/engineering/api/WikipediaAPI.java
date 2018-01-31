@@ -270,7 +270,7 @@ public class WikipediaAPI{
     return toReturn;
   }
 
-  public static UpdatablePriorityQueue<PathInfo> djistraUpdate(PathInfo vertexStart,Set<PathInfo> visitedVertex,UpdatablePriorityQueue<PathInfo> q,Map<String,EdgeResult> graph){
+  private static UpdatablePriorityQueue<PathInfo> djistraUpdate(PathInfo vertexStart,Set<PathInfo> visitedVertex,UpdatablePriorityQueue<PathInfo> q,Map<String,EdgeResult> graph){
 
     String name = vertexStart.getName().replace("Category:", "");
     if(graph.containsKey(name)){
