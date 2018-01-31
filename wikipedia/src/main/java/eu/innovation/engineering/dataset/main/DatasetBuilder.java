@@ -50,8 +50,8 @@ public class DatasetBuilder implements WikiRequest {
     DatasetRequest request = new DatasetRequest();
     request.setLimitDocuments(10);
     request.setName("datasets_tassonomia_dijstra");
-    request.setOnline(true);
     request.setTaxonomyCSV(new File("wheesbee_taxonomy.csv"));
+    request.setOnline(true);
     request.setTraining(true);
     request.setTest(true);
     request.setDb(true);
@@ -64,6 +64,8 @@ public class DatasetBuilder implements WikiRequest {
 
   @Override
   public DatasetResponse buildDataset(DatasetRequest request) {
+    int testsize = (request.getLimitDocuments()*10)/100;
+    System.out.println(testsize);
     String basePath = "data/"+request.getName()+"/";
     new File(basePath).mkdirs();
     basePath = new File(basePath).getAbsolutePath()+"\\";
@@ -85,8 +87,8 @@ public class DatasetBuilder implements WikiRequest {
         new File(basePathDstTraining).mkdir();
         try {
           if(request.isTest())
-            numSourceToCopy = numSourceToCopy -50;
-          added = formatDataset(pathSet, basePathDstTraining, basePathSrc, fileList,numSourceToCopy, new ArrayList<String>(), request);
+            numSourceToCopy = numSourceToCopy -testsize;
+          added = formatDataset(pathSet, basePathDstTraining, basePathSrc, fileList,numSourceToCopy, new ArrayList<String>(), "training",0,0);
         }
         catch (IOException e) {
           e.printStackTrace();
@@ -94,11 +96,10 @@ public class DatasetBuilder implements WikiRequest {
   
       }
       if(request.isTest()){
-        numSourceToCopy = 50;
         String basePathDstTest = basePath+"datasets_test/";
         new File(basePathDstTest).mkdir();
         try {
-          formatDataset(pathSet, basePathDstTest, basePathSrc, fileList,numSourceToCopy,added,request);
+          formatDataset(pathSet, basePathDstTest, basePathSrc, fileList,testsize,added,"test",request.getMinCut(),request.getMaxCut());
         }
         catch (IOException e) {
           e.printStackTrace();
@@ -226,11 +227,11 @@ public class DatasetBuilder implements WikiRequest {
     return datasetMap;
   }
 
-  public static ArrayList<String>  formatDataset(Set<String> pathList,String basePathDst,String basePathSrc, List<String> fileList, int numSourceToCopy, List<String> added, DatasetRequest request) throws IOException{
+  public static ArrayList<String>  formatDataset(Set<String> pathList,String basePathDst,String basePathSrc, List<String> fileList, int numSourceToCopy, List<String> added,String datasetType, int minCut, int maxCut) throws IOException{
     // PER OGNNI PATH CALCOLATO
     ArrayList<String> addedToReturn = new ArrayList<String>();
-    FileWriter writerLabelsTraining = new FileWriter(new File("labelsItemTrainingWithOrigin.csv"));
-    FileWriter writerLabelsTest = new FileWriter(new File("labelsItemTestWithOrigin.csv"));
+    FileWriter writerLabelsTraining = new FileWriter(new File(basePathSrc+"labelsItemTrainingWithOrigin.csv"));
+    FileWriter writerLabelsTest = new FileWriter(new File(basePathSrc+"labelsItemTestWithOrigin.csv"));
 
     writerLabelsTest.write("id,origin,firstLabel,secondLabel,thirdLabel\n");
 
@@ -245,7 +246,6 @@ public class DatasetBuilder implements WikiRequest {
         String [] splitted = file.split("/");
         if(file.contains(path.replace("root/", ""))){
           String toSave = file.replace("/"+splitted[splitted.length-1], "");
-          toSave = toSave.replace(basePathSrc,"");
           leafList.add(toSave);
         }
       }
@@ -260,7 +260,8 @@ public class DatasetBuilder implements WikiRequest {
 
         int count = 0; 
         // leggo il path del file corrente
-        List<String> files = DatasetUtilities.listAllFiles(basePathSrc+"/"+leaf, new ArrayList<String>());
+
+        List<String> files = DatasetUtilities.listAllFiles(basePathSrc+leaf, new ArrayList<String>());
         for(String file:files){
           file = file.replace("\\", "/");
           String[] splitted = file.split("/");
@@ -283,7 +284,7 @@ public class DatasetBuilder implements WikiRequest {
             else{
               count++;
               File f2 = null;
-              if(request.isTraining()){
+              if(datasetType.equals("training")){
                 addedToReturn.add(splitted[splitted.length-1]);
                 f2 = new File(basePathDst+path+"/"+nameLeaf+"_"+splitted[splitted.length-1]);
                 FileUtils.copyFile(f1, f2); 
@@ -295,8 +296,8 @@ public class DatasetBuilder implements WikiRequest {
                 //saveLabelsOnCSV(nameLeaf,labels,writerLabelsTraining,splitted);
                 /////////////////////////////////////////////////
               }
-              if(request.isTest() && (!addedToReturn.contains(splitted[splitted.length-1]))){                           
-                if(wordCount >=request.getMinCut() && wordCount<=request.getMaxCut()){
+              else if(datasetType.equals("test") && (!addedToReturn.contains(splitted[splitted.length-1]))){  
+                if(wordCount >=minCut && wordCount<=maxCut){
                   addedToReturn.add(splitted[splitted.length-1]);
                   f2 = new File(basePathDst+"/"+splitted[splitted.length-1]); 
                   //Codice per cercare le categorie dal grafo wikipedia. Creare un file CSV che contiene le categorie che il grafo ha restituito
