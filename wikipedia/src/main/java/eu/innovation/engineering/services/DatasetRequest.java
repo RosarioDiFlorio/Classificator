@@ -15,7 +15,7 @@ public class DatasetRequest {
   
   private int minCut = 0;
   private int maxCut = 10000;
-  private boolean training;
+
   private boolean test;
 
 
@@ -67,14 +67,6 @@ public class DatasetRequest {
 
   public void setMaxCut(int maxCut) {
     this.maxCut = maxCut;
-  }
-
-  public boolean isTraining() {
-    return training;
-  }
-
-  public void setTraining(boolean training) {
-    this.training = training;
   }
 
   public boolean isTest() {

@@ -22,6 +22,7 @@ import com.google.gson.JsonObject;
 import eu.innovation.engineering.api.WikipediaAPI;
 import eu.innovation.engineering.graph.utility.PathInfo;
 import eu.innovation.engineering.graph.utility.Word2Vec;
+import eu.innovation.engineering.persistence.DbApplication;
 import eu.innovation.engineering.persistence.EdgeResult;
 import eu.innovation.engineering.persistence.SQLiteWikipediaGraph;
 import eu.innovationengineering.solrclient.auth.collection.queue.UpdatablePriorityQueue;
@@ -29,9 +30,8 @@ import eu.innovationengineering.solrclient.auth.collection.queue.UpdatablePriori
 
 
 
-public class AnalyzerGraphWikipedia {
+public class AnalyzerGraphWikipedia extends DbApplication {
 
-  private static SQLiteWikipediaGraph graphConnector = new SQLiteWikipediaGraph("databaseWikipediaGraph.db");
   private static HashMap<String,Set<String>> mappingTaxonomyWikipedia = null;
   private static Word2Vec word2Vec;
   private static Map<String,EdgeResult> graph;
@@ -43,17 +43,17 @@ public class AnalyzerGraphWikipedia {
    * @throws IOException
    */
   public static void main(String[] args) throws IOException{
-    graphConnector.setAutoCommit(false);
+    dbGraph.setAutoCommit(false);
     System.out.println(getDocumentLabelsTaxonomy("9912937", true));
-    graphConnector.setAutoCommit(true);
+    dbGraph.setAutoCommit(true);
   }
 
   public static List<String> getDocumentLabelsTaxonomy(String idDocument,boolean withDijstra) throws IOException{
     if(mappingTaxonomyWikipedia == null){
-      mappingTaxonomyWikipedia = new HashMap<>();
-      Map<String, List<String>> taxonomyCsv = getTaxonomyCSV("wheesbee_taxonomy.csv");
+      mappingTaxonomyWikipedia = new HashMap<String, Set<String>>();
+      Map<String, List<String>> taxonomyCsv = getTaxonomyCSV("app/taxonomies/wheesbee.csv");
       for(String wikiCat: taxonomyCsv.keySet()){
-        Set<String> toAdd = new HashSet<>();
+        Set<String> toAdd = new HashSet<String>();
         toAdd.add(taxonomyCsv.get(wikiCat).get(taxonomyCsv.get(wikiCat).size()-1));
         if(!mappingTaxonomyWikipedia.containsKey(wikiCat))
           mappingTaxonomyWikipedia.put(wikiCat, toAdd);
@@ -61,8 +61,8 @@ public class AnalyzerGraphWikipedia {
           mappingTaxonomyWikipedia.get(wikiCat).addAll(toAdd);
       }
     }
-    List<String> toReturn = new ArrayList<>();
-    List<String> wikipediaLabels = new ArrayList<>();
+    List<String> toReturn = new ArrayList<String>();
+    List<String> wikipediaLabels = new ArrayList<String>();
     wikipediaLabels = getListLabels(idDocument, withDijstra);
     for(String label: wikipediaLabels){
       if(mappingTaxonomyWikipedia.containsKey(label))
@@ -104,7 +104,7 @@ public class AnalyzerGraphWikipedia {
       if(withDjistra)
         pathList = searchDjistraMarkedNode(category, 2);
       else
-        pathList = seachBFSMarkedNodes(graphConnector, idDocument, 2);
+        pathList = seachBFSMarkedNodes(dbGraph, idDocument, 2);
 
 
       for(PathInfo p: pathList){
@@ -137,13 +137,13 @@ public class AnalyzerGraphWikipedia {
    */
   public static Set<PathInfo> searchDjistraMarkedNode(String vertexStartName,int numberOfMarkedVertex){
     if(graph == null){
-      graphConnector.setAutoCommit(false);
-      graph = graphConnector.getGraph("parents");
-      graphConnector.setAutoCommit(true);
+      dbGraph.setAutoCommit(false);
+      graph = dbGraph.getGraph("parents");
+      dbGraph.setAutoCommit(true);
     }
     //insieme di nodi marcati da ritornare.
     Set<PathInfo> nearestMarkedVertex = new HashSet<PathInfo>();
-    Set<String> markedNodes = graphConnector.getMarkedNodes();
+    Set<String> markedNodes = dbGraph.getMarkedNodes();
     int lenPath = 0; //conta la lunghezza del path
     int countMarked = 0; //conta il numero di nodi marcati trovati
     Set<PathInfo> visitedVertex = new HashSet<PathInfo>(); //lista dei nodi già visitati.
@@ -166,7 +166,7 @@ public class AnalyzerGraphWikipedia {
      * creo la priority queue.
      * ed aggiungo il nodo di partenza.
      */
-    UpdatablePriorityQueue<PathInfo> q = new UpdatablePriorityQueue<>();
+    UpdatablePriorityQueue<PathInfo> q = new UpdatablePriorityQueue<PathInfo>();
     q.add(startingPoint);
     while(!q.isEmpty()){
       if(countMarked >= numberOfMarkedVertex)
@@ -344,7 +344,7 @@ public class AnalyzerGraphWikipedia {
    * @throws IOException
    */
   public static Set<String> getParentCategoriesByIdPage(String idDocument) throws IOException{
-    Set<String> toReturn  = new HashSet<>();
+    Set<String> toReturn  = new HashSet<String>();
     JsonArray categoriesParent = null;
     String parentsURL = "https://en.wikipedia.org/w/api.php?action=query&pageids="+idDocument+"&prop=categories&clshow=!hidden&cllimit=500&indexpageids&format=json";
     JsonObject responseParent = WikipediaAPI.getJsonResponse(parentsURL);

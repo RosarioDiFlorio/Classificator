@@ -31,8 +31,8 @@ import eu.innovation.engineering.services.WikiGraphRequest;
 
 
 public class CrawlerGraphWikipedia implements WikiGraphRequest{
-  private static SQLiteWikipediaGraph dbGraph = new SQLiteWikipediaGraph("databaseWikipediaGraph.db");
-  private static SQLiteVectors dbVectors = new SQLiteVectors("databaseVectors.db");
+  private static SQLiteWikipediaGraph dbGraph = new SQLiteWikipediaGraph("app/databases/databaseWikipediaGraph.db");
+  private static SQLiteVectors dbVectors = new SQLiteVectors("app/databases/databaseVectors.db");
   private static Word2Vec word2vec = new Word2Vec();
 
   /**
@@ -58,7 +58,7 @@ public class CrawlerGraphWikipedia implements WikiGraphRequest{
 
       toVisit.removeAll(marked);  
       System.out.println("toVisit->"+toVisit.size());
-      BFS(categories, marked,new PriorityQueue<>(toVisit));
+      BFS(categories, marked,new PriorityQueue<String>(toVisit));
     }catch (Exception e) {
       e.printStackTrace();
       System.out.println("Something went wrong");
@@ -107,7 +107,7 @@ public class CrawlerGraphWikipedia implements WikiGraphRequest{
       Map<String, Set<String>> childsMap = WikipediaAPI.getChildsRequest(categories);
 
       
-      Set<String> toCheck  = new HashSet<>(categories);
+      Set<String> toCheck  = new HashSet<String>(categories);
       parentsMap.keySet().forEach(key->toCheck.addAll(parentsMap.get(key)));
       childsMap.keySet().forEach(key->toCheck.addAll(childsMap.get(key)));
       insertAndCheckMarkedNode(toCheck, markedInsert);
@@ -176,16 +176,16 @@ public class CrawlerGraphWikipedia implements WikiGraphRequest{
     try{
       if(word2vec == null)
         word2vec = new Word2Vec();
-      List<List<String>> toVectorize = new ArrayList<>();
+      List<List<String>> toVectorize = new ArrayList<List<String>>();
       Set<String> donealready = dbVectors.getNamesVector();
       System.out.println("already done -> "+donealready.size());
       vertexWikipedia.removeAll(donealready);
       System.out.println("to do -> "+vertexWikipedia.size());
 
       //converto l'insieme di elementi da vettorizzare in una lista in modo da poterci accedere con l'indice.
-      List<String> vertexList = new ArrayList<>(vertexWikipedia);
+      List<String> vertexList = new ArrayList<String>(vertexWikipedia);
 
-      Map<String,float[]> vectors = new HashMap<>();
+      Map<String,float[]> vectors = new HashMap<String, float[]>();
       int offset = 0;//variabile che mi tiene traccia dell'indice corrente.
       for(int i = 0; i<vertexList.size();i++){
 
@@ -314,8 +314,18 @@ public class CrawlerGraphWikipedia implements WikiGraphRequest{
 
   @Override
   public GraphResponse buildGraph(GraphRequest request) {
-    // TODO Auto-generated method stub
-    return null;
+    GraphResponse response = new GraphResponse();
+    try {
+      buildGraph(request.isWeighted());
+    }
+    catch (IOException e) {
+      response.setStatus(500);
+      response.setMessage("Error in the graph creation\n"+e.getMessage());
+      return response;
+    }
+    response.setStatus(200);
+    response.setMessage("Graph creation completed");    
+    return response;
   }
 
 
@@ -333,13 +343,13 @@ public class CrawlerGraphWikipedia implements WikiGraphRequest{
       backupBFS(categories);
     }
     finally {
-      dbGraph.insertAndUpdateMarkedNodes(DatasetUtilities.returnCategoriesFromTaxonomyCSV("wheesbee_taxonomy.csv"));
+      dbGraph.insertAndUpdateMarkedNodes(DatasetUtilities.returnCategoriesFromTaxonomyCSV("app/taxonomies/wheesbee.csv"));
       dbGraph.commitConnection();
       WikipediaAPI.executorShutDown();
     }    
     Map<String, EdgeResult> graph = dbGraph.getGraph("parents");
     if (isWeighted) {      
-      Set<String> vertexWikipedia = new HashSet<>(graph.keySet());
+      Set<String> vertexWikipedia = new HashSet<String>(graph.keySet());
       graph.keySet().forEach(key->graph.get(key).getLinkedVertex().forEach(vertex->vertexWikipedia.add(vertex.getVertexName())));
       System.out.println(vertexWikipedia.size());
       try {

@@ -218,7 +218,7 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
   }
 
   public Set<String> getMarkedNodes(){
-    Set<String> names = new HashSet<>();
+    Set<String> names = new HashSet<String>();
     String sql ="SELECT name FROM markedNodes WHERE  marked = ?";
     try(PreparedStatement stm = getConnection().prepareStatement(sql)){
       stm.setBoolean(1, true);
@@ -299,7 +299,7 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
   }
 
   public Set<String> getNamesFromMarkedNodes(){
-    Set<String> names = new HashSet<>();
+    Set<String> names = new HashSet<String>();
     String sql = "SELECT name FROM markedNodes";
     try(Statement stm = super.getConnection().createStatement();
         ResultSet res = stm.executeQuery(sql);){

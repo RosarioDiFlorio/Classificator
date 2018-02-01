@@ -50,9 +50,8 @@ public class DatasetBuilder implements WikiDataRequest {
     DatasetRequest request = new DatasetRequest();
     request.setLimitDocuments(10);
     request.setName("datasets_tassonomia_dijstra");
-    request.setTaxonomyCSV(new File("wheesbee_taxonomy.csv"));
+    request.setTaxonomyCSV(new File("app/taxonomies/wheesbee.csv"));
     request.setOnline(true);
-    request.setTraining(true);
     request.setTest(true);
     request.setDb(true);
     /*
@@ -64,55 +63,50 @@ public class DatasetBuilder implements WikiDataRequest {
 
   @Override
   public DatasetResponse buildDataset(DatasetRequest request) {
+    /*
+     * la taglia del test è uguale al 10% della richiesta massima di documenti.
+     */
     int testsize = (request.getLimitDocuments()*10)/100;
-    System.out.println(testsize);
+    
     String basePath = "data/"+request.getName()+"/";
     new File(basePath).mkdirs();
     basePath = new File(basePath).getAbsolutePath()+"\\";
-    System.out.println(basePath);
     basePath = basePath.replace("\\", "/");
     String pathDataset = basePath+"dataset";
     String basePathSrc = pathDataset;
     
+    if(!new File(basePathSrc).exists())
+      request.setOnline(true);
+
     if(request.isOnline())
-     basePathSrc =  wikipediaDataset(basePath,pathDataset,request);
-  
-    if(request.isTraining() || request.isTest()){      
-      int numSourceToCopy = request.getLimitDocuments();    
-      List<String> fileList = DatasetUtilities.listAllFiles(basePathSrc, new ArrayList<String>());
-      Set<String> pathSet = DatasetUtilities.listAllPaths(basePathSrc);
-      List<String> added = new ArrayList<>();
-      if(request.isTraining()){
-        String basePathDstTraining = basePath+"datasets_training/";
-        new File(basePathDstTraining).mkdir();
-        try {
-          if(request.isTest())
-            numSourceToCopy = numSourceToCopy -testsize;
-          added = formatDataset(pathSet, basePathDstTraining, basePathSrc, fileList,numSourceToCopy, new ArrayList<String>(), "training",0,0);
-        }
-        catch (IOException e) {
-          e.printStackTrace();
-        }
-  
-      }
-      if(request.isTest()){
-        String basePathDstTest = basePath+"datasets_test/";
-        new File(basePathDstTest).mkdir();
-        try {
-          formatDataset(pathSet, basePathDstTest, basePathSrc, fileList,testsize,added,"test",request.getMinCut(),request.getMaxCut());
-        }
-        catch (IOException e) {
-          e.printStackTrace();
-        }
-      }
-  
-  
-  
-  
-  
-  
+      basePathSrc =  wikipediaDataset(basePath,pathDataset,request);
+
+
+    int numSourceToCopy = request.getLimitDocuments();    
+    List<String> fileList = DatasetUtilities.listAllFiles(basePathSrc, new ArrayList<String>());
+    Set<String> pathSet = DatasetUtilities.listAllPaths(basePathSrc);
+    List<String> added = new ArrayList<String>();
+    String basePathDstTraining = basePath+"datasets_training/";
+    new File(basePathDstTraining).mkdir();
+    try {
+      if(request.isTest())
+        numSourceToCopy = numSourceToCopy -testsize;
+      added = formatDataset(pathSet, basePathDstTraining, basePathSrc, fileList,numSourceToCopy, new ArrayList<String>(), "training",0,0);
     }
-  
+    catch (IOException e) {
+      e.printStackTrace();
+    }
+    if(request.isTest()){
+      String basePathDstTest = basePath+"datasets_test/";
+      new File(basePathDstTest).mkdir();
+      try {
+        formatDataset(pathSet, basePathDstTest, basePathSrc, fileList,testsize,added,"test",request.getMinCut(),request.getMaxCut());
+      }
+      catch (IOException e) {
+        e.printStackTrace();
+      }
+    }
+
     return null;
   }
 
@@ -120,8 +114,8 @@ public class DatasetBuilder implements WikiDataRequest {
     /**
      * INIT DATASET.
      **/    
-  
-  
+
+
     String classificationMapPath = basePath+"categories.json";
     try {
       /*
@@ -146,8 +140,8 @@ public class DatasetBuilder implements WikiDataRequest {
        * CORE PHASE.
        */
       int count = 0;
-      Set<String> toExtract = new HashSet<>();
-      SQLiteWikipediaGraph graphConnector = new SQLiteWikipediaGraph("databaseWikipediaGraph.db");
+      Set<String> toExtract = new HashSet<String>();
+      SQLiteWikipediaGraph graphConnector = new SQLiteWikipediaGraph("app/databases/databaseWikipediaGraph.db");
       Map<String, EdgeResult> graph = graphConnector.getGraph("childs");
       for(String uriWiki : pathMap.keySet()){
         toExtract.add(uriWiki);     
@@ -164,7 +158,7 @@ public class DatasetBuilder implements WikiDataRequest {
            */
           else
             results = databaseDatasetTask(toExtract,graph, request.getLimitDocuments());
-  
+
           DatasetUtilities.writeDocumentMap(pathMap, results);
           toExtract.clear();
         }
@@ -190,13 +184,13 @@ public class DatasetBuilder implements WikiDataRequest {
    */
   private static Map<String,Set<DocumentInfo>> onlineDatasetTask(Set<String> categories,int maxLevel,boolean recursive,int limitDocs) throws IOException, InterruptedException, ExecutionException{
     ForkJoinPool pool = new ForkJoinPool();
-    List<DatasetTask> datasetTasks = new ArrayList<>();
+    List<DatasetTask> datasetTasks = new ArrayList<DatasetTask>();
     for(String cat : categories){
       DatasetTask task = new DatasetTask(cat, maxLevel,recursive,limitDocs);
       datasetTasks.add(task);
     }
     List<Future<Map<String, Set<DocumentInfo>>>> result = pool.invokeAll(datasetTasks);
-    Map<String,Set<DocumentInfo>> datasetMap = new HashMap<>();
+    Map<String,Set<DocumentInfo>> datasetMap = new HashMap<String, Set<DocumentInfo>>();
     for(Future<Map<String, Set<DocumentInfo>>> future : result){
       datasetMap.putAll(future.get());
     }
@@ -214,13 +208,13 @@ public class DatasetBuilder implements WikiDataRequest {
    */
   private static Map<String,Set<DocumentInfo>> databaseDatasetTask(Set<String> categories,Map<String, EdgeResult> graph,int limitDocs) throws InterruptedException, ExecutionException{
     ForkJoinPool pool = new ForkJoinPool();
-    List<DatasetTask> datasetTasks = new ArrayList<>();
+    List<DatasetTask> datasetTasks = new ArrayList<DatasetTask>();
     for(String cat : categories){
       DatasetTask task = new DatasetTask(cat, graph, limitDocs);
       datasetTasks.add(task);
     }
     List<Future<Map<String, Set<DocumentInfo>>>> result = pool.invokeAll(datasetTasks);
-    Map<String,Set<DocumentInfo>> datasetMap = new HashMap<>();
+    Map<String,Set<DocumentInfo>> datasetMap = new HashMap<String, Set<DocumentInfo>>();
     for(Future<Map<String, Set<DocumentInfo>>> future : result){
       datasetMap.putAll(future.get());
     }

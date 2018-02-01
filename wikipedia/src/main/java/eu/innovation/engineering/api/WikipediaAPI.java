@@ -62,7 +62,7 @@ public class WikipediaAPI{
    * @throws IOException
    */
   public static Set<String> getIdsMemberByType(String queryKey, String typePages,int nameSpace,int limitDocument) throws IOException{
-    Set<String> toReturn = new HashSet<>();
+    Set<String> toReturn = new HashSet<String>();
     if(limitDocument > 500 || limitDocument <= 0)
       limitDocument = 500;
 
@@ -191,7 +191,7 @@ public class WikipediaAPI{
    */
   public static Map<String, DocumentInfo> getContentPages(Set<String> idPages,int limitDocs) throws IOException{
 
-    Map<String,DocumentInfo> contentPagesMap = new HashMap<>();
+    Map<String,DocumentInfo> contentPagesMap = new HashMap<String, DocumentInfo>();
     String targetURL = "";
     JsonObject response = new JsonObject();
 
@@ -206,7 +206,7 @@ public class WikipediaAPI{
     int exlimit = 20;
     if(limitDocs< exlimit)
       exlimit = limitDocs;
-    LinkedList<String> listId = new LinkedList<>(idPages);
+    LinkedList<String> listId = new LinkedList<String>(idPages);
     int countLimit = 0;
     int countDocument = 0;
     String ids = "";
@@ -247,11 +247,11 @@ public class WikipediaAPI{
   public static Map<String,DocumentInfo> getContentFromCategoryPages(String category,Map<String,EdgeResult> graph,int limitDocs) throws IOException{
 
     JsonObject response = new JsonObject();
-    Map<String,DocumentInfo> toReturn = new HashMap<>();  
+    Map<String,DocumentInfo> toReturn = new HashMap<String, DocumentInfo>();  
     //prendo gli id delle pagine di questa categoria.
 
     PathInfo  startVertex = new PathInfo(category, 0);
-    UpdatablePriorityQueue<PathInfo> q = new UpdatablePriorityQueue<>();
+    UpdatablePriorityQueue<PathInfo> q = new UpdatablePriorityQueue<PathInfo>();
     Set<PathInfo> visitedCategory = new HashSet<PathInfo>();
     q.add(startVertex);
     while(!q.isEmpty()){
@@ -321,7 +321,7 @@ public class WikipediaAPI{
   @Deprecated
   public static Map<String,DocumentInfo> getContentFromCategoryPages(String category,Set<String> ids,boolean recursive,int level,int levelmax,int limitDocs) throws IOException{
     JsonObject response = new JsonObject();
-    Map<String,DocumentInfo> toReturn = new HashMap<>();  
+    Map<String,DocumentInfo> toReturn = new HashMap<String, DocumentInfo>();  
     limitDocs = (limitDocs - ids.size());
 
     //level 5 is too heavy to compute.
@@ -332,7 +332,7 @@ public class WikipediaAPI{
     idsPages.removeAll(ids);
     toReturn.putAll(getContentPages(idsPages,limitDocs));
     if(toReturn.keySet().size() + ids.size() >= limitDocs){
-      Map<String,DocumentInfo> tmpMap = new HashMap<>();
+      Map<String,DocumentInfo> tmpMap = new HashMap<String, DocumentInfo>();
       for(String doc: toReturn.keySet()){
         tmpMap.put(doc, toReturn.get(doc));
         if(tmpMap.size() >= limitDocs || toReturn.isEmpty())

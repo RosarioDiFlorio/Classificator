@@ -36,7 +36,7 @@ public class SQLiteVectors extends SQLiteConnector {
 
   public  void insertVectors(Map<String,float[]> vectors) throws InterruptedException{
 
-    List<InsertTask> list = new ArrayList<>();
+    List<InsertTask> list = new ArrayList<InsertTask>();
     for(String name:vectors.keySet()){
       list.add(new InsertTask(super.getConnection(), name, vectors.get(name)));
     }
@@ -88,7 +88,7 @@ public class SQLiteVectors extends SQLiteConnector {
   }
 
   public  Set<String> getNamesVector(){
-    Set<String> names = new HashSet<>();
+    Set<String> names = new HashSet<String>();
 
     String sql = "SELECT name FROM vectors";
     try(Statement stm = super.getConnection().createStatement();
