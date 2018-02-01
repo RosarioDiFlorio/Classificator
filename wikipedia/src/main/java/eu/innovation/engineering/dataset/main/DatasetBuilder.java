@@ -51,7 +51,7 @@ public class DatasetBuilder extends DbApplication implements WikiDataRequest {
     request.setLimitDocuments(10);
     request.setName("datasets_tassonomia_dijstra");
     request.setTaxonomyName("wheesbee");
-    request.setOnline(true);
+    request.setOnline(false);
     request.setTest(true);
     request.setDb(true);
     /*
@@ -121,7 +121,7 @@ public class DatasetBuilder extends DbApplication implements WikiDataRequest {
       /*
        * Leggo la tassonomia in formato csv.
        */
-      Map<String, List<List<String>>> csvMap = DatasetUtilities.readTaxomyCSV("app/taxonomy/"+request.getTaxonomyName()+".csv", false);
+      Map<String, List<List<String>>> csvMap = DatasetUtilities.readTaxomyCSV(request.getTaxonomyName(), false);
       /*
        * Costruisco la struttura delle folder utilizzando la mappa creata leggendo il csv.
        * ritornando una mappa contente i path per ogni categoria wikipedia.
@@ -163,9 +163,9 @@ public class DatasetBuilder extends DbApplication implements WikiDataRequest {
         }
         count++;
       }
+      graph.clear();
     }
     catch (IOException | InterruptedException | ExecutionException e) {
-      // TODO Auto-generated catch block
       e.printStackTrace();
     }
     return pathDataset;
@@ -223,10 +223,13 @@ public class DatasetBuilder extends DbApplication implements WikiDataRequest {
   public static ArrayList<String>  formatDataset(Set<String> pathList,String basePathDst,String basePathSrc, List<String> fileList, int numSourceToCopy, List<String> added,String datasetType, int minCut, int maxCut) throws IOException{
     // PER OGNNI PATH CALCOLATO
     ArrayList<String> addedToReturn = new ArrayList<String>();
-    FileWriter writerLabelsTraining = new FileWriter(new File(basePathSrc+"labelsItemTrainingWithOrigin.csv"));
     FileWriter writerLabelsTest = new FileWriter(new File(basePathSrc+"labelsItemTestWithOrigin.csv"));
     writerLabelsTest.write("id,origin,firstLabel,secondLabel,thirdLabel\n");
-
+    
+    AnalyzerGraphWikipedia analyzerWikipedia = null;
+    if(datasetType.equals("test"))
+      analyzerWikipedia = new AnalyzerGraphWikipedia();
+    
     for(String path:pathList){
 
       //creo la folder 
@@ -243,7 +246,7 @@ public class DatasetBuilder extends DbApplication implements WikiDataRequest {
       }
       // A QUESTO PUNTO AGGIUNGO I DOCUMENTI AL PATH CORRENTE USANDO LE CATEGORIE FOGLIA CALCOLATE
       int numSource = (numSourceToCopy/documentContainers.size());
-      AnalyzerGraphWikipedia analyzerWikipedia = new AnalyzerGraphWikipedia();
+      
       //Per ogni foglia della lista delle categorie foglia
       for(String documentContainer : documentContainers){
 
@@ -280,13 +283,6 @@ public class DatasetBuilder extends DbApplication implements WikiDataRequest {
                 addedToReturn.add(splittedFileName[splittedFileName.length-1]);
                 f2 = new File(basePathDst+path+"/"+nameDocument+"_"+splittedFileName[splittedFileName.length-1]);
                 FileUtils.copyFile(f1, f2); 
-
-                //Dataset To evaluate classifier with training set
-                //File f3 = new File(basePathDst+"/datasetToEvaluate/"+splitted[splitted.length-1]); 
-                //FileUtils.copyFile(f1, f3); 
-                //List<String> labels =  analyzerWikipedia.getDocumentLabelsTaxonomy(splitted[splitted.length-1]);
-                //saveLabelsOnCSV(nameLeaf,labels,writerLabelsTraining,splitted);
-                /////////////////////////////////////////////////
               }
               else if(datasetType.equals("test") && (!addedToReturn.contains(splittedFileName[splittedFileName.length-1]))){  
                 if(wordCount >=minCut && wordCount<=maxCut){
