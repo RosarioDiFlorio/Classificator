@@ -20,6 +20,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import eu.innovation.engineering.api.WikipediaAPI;
+import eu.innovation.engineering.dataset.utility.DatasetUtilities;
 import eu.innovation.engineering.graph.utility.PathInfo;
 import eu.innovation.engineering.graph.utility.Word2Vec;
 import eu.innovation.engineering.persistence.DbApplication;
@@ -51,14 +52,18 @@ public class AnalyzerGraphWikipedia extends DbApplication {
   public static List<String> getDocumentLabelsTaxonomy(String idDocument,boolean withDijstra) throws IOException{
     if(mappingTaxonomyWikipedia == null){
       mappingTaxonomyWikipedia = new HashMap<String, Set<String>>();
-      Map<String, List<String>> taxonomyCsv = getTaxonomyCSV("app/taxonomies/wheesbee.csv");
+      Map<String, List<List<String>>> taxonomyCsv = DatasetUtilities.readTaxomyCSV("wheesbee", false);
+      
       for(String wikiCat: taxonomyCsv.keySet()){
+        String keyToSave = wikiCat.replace("Category:", "");
         Set<String> toAdd = new HashSet<String>();
-        toAdd.add(taxonomyCsv.get(wikiCat).get(taxonomyCsv.get(wikiCat).size()-1));
-        if(!mappingTaxonomyWikipedia.containsKey(wikiCat))
-          mappingTaxonomyWikipedia.put(wikiCat, toAdd);
+        for( List<String> list : taxonomyCsv.get(wikiCat)){
+          toAdd.add(list.get(list.size()-1));
+        }
+        if(!mappingTaxonomyWikipedia.containsKey(keyToSave))
+          mappingTaxonomyWikipedia.put(keyToSave, toAdd);
         else
-          mappingTaxonomyWikipedia.get(wikiCat).addAll(toAdd);
+          mappingTaxonomyWikipedia.get(keyToSave).addAll(toAdd);
       }
     }
     List<String> toReturn = new ArrayList<String>();
@@ -301,39 +306,6 @@ public class AnalyzerGraphWikipedia extends DbApplication {
     //ritorno la lista di nodi marcati.
     return nearestMarkedVertex;
   }
-
-
-  /**
-   * read Category by Taxonomy CSV. Input file contains all categories used from Taxonomy
-   * @param csvFile
-   * @param labeled
-   * @return 
-   * @return
-   * @throws IOException
-   */
-  public static  Map<String,List<String>> getTaxonomyCSV(String csvFile) throws IOException{
-
-    String line = "";
-    String cvsSplitBy = ",";
-    Map<String, List<String>> dataMap = new HashMap<String, List<String>>();
-
-    BufferedReader br = new BufferedReader(new FileReader(csvFile));
-
-    while ((line = br.readLine()) != null) {
-      // use comma as separator
-      String[] csvData = line.split(cvsSplitBy); 
-      List<String> data = new ArrayList<String>();
-      if(csvData.length>=2){
-        for(int i =0;i<csvData.length-1;i++){
-          data.add(csvData[i].trim());
-        }
-        String key = csvData[csvData.length-1].trim().replace("en.wikipedia.org/wiki/Category:", "");
-        if(!key.equals(""))
-          dataMap.put(key, data);
-      }
-    }
-    return dataMap;
-  } 
 
 
   /**

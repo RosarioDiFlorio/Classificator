@@ -100,15 +100,16 @@ public class DatasetUtilities {
 
 
   public static Set<String> returnCategoriesFromTaxonomyCSV(String filename){
-    Set<String> toReturn = new HashSet<>(readCSV(new File(filename), false).keySet());
+    Set<String> toReturn = new HashSet<>(readTaxomyCSV(filename, false).keySet());
     toReturn = toReturn.stream().map(el->el=el.replace("Category:", "")).collect(Collectors.toSet());
     return toReturn;
   }
 
 
-  public static Map<String,List<List<String>>> readCSV(File csvFile,boolean labeled) {
+  public static Map<String,List<List<String>>> readTaxomyCSV(String csvName,boolean labeled) {
     String line = "";
     String cvsSplitBy = ",";
+    File csvFile = new File("app/taxonomies/"+csvName+".csv");
     Map<String, List<List<String>>> dataMap = new HashMap<>();
     try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
       if(labeled)

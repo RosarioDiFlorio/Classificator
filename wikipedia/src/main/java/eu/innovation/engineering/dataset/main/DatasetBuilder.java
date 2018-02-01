@@ -50,7 +50,7 @@ public class DatasetBuilder extends DbApplication implements WikiDataRequest {
     DatasetRequest request = new DatasetRequest();
     request.setLimitDocuments(10);
     request.setName("datasets_tassonomia_dijstra");
-    request.setTaxonomyCSV(new File("app/taxonomies/wheesbee.csv"));
+    request.setTaxonomyName("wheesbee");
     request.setOnline(true);
     request.setTest(true);
     request.setDb(true);
@@ -121,7 +121,7 @@ public class DatasetBuilder extends DbApplication implements WikiDataRequest {
       /*
        * Leggo la tassonomia in formato csv.
        */
-      Map<String, List<List<String>>> csvMap = DatasetUtilities.readCSV(request.getTaxonomyCSV(), false);
+      Map<String, List<List<String>>> csvMap = DatasetUtilities.readTaxomyCSV("app/taxonomy/"+request.getTaxonomyName()+".csv", false);
       /*
        * Costruisco la struttura delle folder utilizzando la mappa creata leggendo il csv.
        * ritornando una mappa contente i path per ogni categoria wikipedia.

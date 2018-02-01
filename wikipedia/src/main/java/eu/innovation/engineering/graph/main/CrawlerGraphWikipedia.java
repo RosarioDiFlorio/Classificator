@@ -77,7 +77,7 @@ public class CrawlerGraphWikipedia extends DbApplication implements WikiGraphReq
       backupBFS(categories);
     }
     finally {
-      dbGraph.insertAndUpdateMarkedNodes(DatasetUtilities.returnCategoriesFromTaxonomyCSV("app/taxonomies/wheesbee.csv"));
+      dbGraph.insertAndUpdateMarkedNodes(DatasetUtilities.returnCategoriesFromTaxonomyCSV("wheesbee"));
       dbGraph.commitConnection();
       WikipediaAPI.executorShutDown();
     }    

@@ -6,7 +6,7 @@ import java.io.File;
  * @author Rosario
  */
 public class DatasetRequest {
-  private File taxonomyCSV;
+  private String taxonomyName;
   private int limitDocuments;
   private boolean db;
   private boolean online;
@@ -35,14 +35,6 @@ public class DatasetRequest {
 
   public void setOnline(boolean online) {
     this.online = online;
-  }
-
-  public File getTaxonomyCSV() {
-    return taxonomyCSV;
-  }
-
-  public void setTaxonomyCSV(File taxonomyCSV) {
-    this.taxonomyCSV = taxonomyCSV;
   }
 
   public int getLimitDocuments() {
@@ -83,6 +75,14 @@ public class DatasetRequest {
 
   public void setDb(boolean db) {
     this.db = db;
+  }
+
+  public String getTaxonomyName() {
+    return taxonomyName;
+  }
+
+  public void setTaxonomyName(String taxonomyName) {
+    this.taxonomyName = taxonomyName;
   }
 
 }
