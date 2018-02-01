@@ -21,18 +21,18 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import eu.innovation.engineering.dataset.utility.DatasetRequest;
-import eu.innovation.engineering.dataset.utility.DatasetResponse;
 import eu.innovation.engineering.dataset.utility.DatasetTask;
 import eu.innovation.engineering.dataset.utility.DatasetUtilities;
 import eu.innovation.engineering.dataset.utility.DocumentInfo;
-import eu.innovation.engineering.dataset.utility.WikiRequest;
 import eu.innovation.engineering.graph.main.AnalyzerGraphWikipedia;
 import eu.innovation.engineering.persistence.EdgeResult;
 import eu.innovation.engineering.persistence.SQLiteWikipediaGraph;
+import eu.innovation.engineering.services.DatasetRequest;
+import eu.innovation.engineering.services.DatasetResponse;
+import eu.innovation.engineering.services.WikiDataRequest;
 
 
-public class DatasetBuilder implements WikiRequest {
+public class DatasetBuilder implements WikiDataRequest {
 
   /**
    * EXAMPLE AND OFFLINE MAIN

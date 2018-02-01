@@ -14,11 +14,13 @@
 
     <bean id="jsonMapper" class="com.fasterxml.jackson.databind.ObjectMapper" />
 
-    <bean id="wikiminer" class="eu.innovation.engineering.api.WikipediaAPI" />
+    <bean id="datasetBuilder" class="eu.innovation.engineering.dataset.main.DatasetBuilder" />
+    <bean id="graphBuilder" class="eu.innovation.engineering.graph.main.CrawlerGraphWikipedia"/>
     
     <jaxrs:server address="/">
         <jaxrs:serviceBeans>
-            <ref bean="wikiminer"/>
+            <ref bean="datasetBuilder"/>
+            <ref bean="graphBuilder"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider">
