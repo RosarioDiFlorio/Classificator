@@ -32,13 +32,19 @@ import eu.innovation.engineering.services.WikiGraphRequest;
 
 public class CrawlerGraphWikipedia extends SpringMainLauncher implements WikiGraphRequest{
   private static final Logger logger = LoggerFactory.getLogger(CrawlerGraphWikipedia.class);
-  private static Word2Vec word2vec = new Word2Vec();
-
+  @Autowired
+  private Word2Vec word2vec;
+  
   @Autowired
   private SQLiteWikipediaGraph dbGraph;
   
   @Autowired
   private SQLiteVectors dbVectors;
+  
+  @Autowired
+  private DatasetUtilities datasetUtilities;
+  
+  private boolean running;
   
   /**
    * EXAMPLE AND TEST MAIN
@@ -62,17 +68,37 @@ public class CrawlerGraphWikipedia extends SpringMainLauncher implements WikiGra
   @Override
   public GraphResponse buildGraph(GraphRequest request) {
     GraphResponse response = new GraphResponse();
-    try {
-      buildGraph(request.isWeighted());
+
+    boolean isRunning;
+    synchronized (this) {
+      isRunning = running;
     }
-    catch (IOException e) {
-      response.setStatus(500);
-      response.setMessage("Error in the graph creation\n"+e.getMessage());
-      return response;
+    
+    if (!isRunning) {
+      synchronized (this) {
+        running = true;
+      }
+      try {
+        buildGraph(request.isWeighted());
+      }
+      catch (IOException e) {
+        response.setStatus(500);
+        response.setMessage("Error in the graph creation\n"+e.getMessage());
+        return response;
+      }
+      finally {
+        synchronized (this) {
+          running = false;
+        }
+      }
+      response.setStatus(200);
+      response.setMessage("Graph creation completed");    
     }
-    response.setStatus(200);
-    response.setMessage("Graph creation completed");    
-    return response;
+    else {
+      response.setStatus(400);
+      response.setMessage("Graph creation already running"); 
+    }
+    return response;      
   }
 
 
@@ -90,7 +116,7 @@ public class CrawlerGraphWikipedia extends SpringMainLauncher implements WikiGra
       backupBFS(categories);
     }
     finally {
-      dbGraph.insertAndUpdateMarkedNodes(DatasetUtilities.returnCategoriesFromTaxonomyCSV("wheesbee"));
+      dbGraph.insertAndUpdateMarkedNodes(datasetUtilities.returnCategoriesFromTaxonomyCSV("wheesbee"));
       dbGraph.commitConnection();
       WikipediaAPI.executorShutDown();
     }    

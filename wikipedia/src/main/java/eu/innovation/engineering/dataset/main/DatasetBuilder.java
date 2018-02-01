@@ -36,10 +36,25 @@ import eu.innovation.engineering.services.WikiDataRequest;
 public class DatasetBuilder extends SpringMainLauncher implements WikiDataRequest {
   private static final long serialVersionUID = 1L;
   private static final Logger logger = LoggerFactory.getLogger(DatasetBuilder.class);
-  
+  private boolean running;
+
   @Autowired
   private SQLiteWikipediaGraph dbGraph;
   
+  @Autowired
+  private DatasetUtilities datasetUtilities;
+  
+  @Autowired
+  AnalyzerGraphWikipedia analyzerWikipedia;
+  
+  private String volumeFolder;
+  
+  
+  public DatasetBuilder(String volumeFolder){
+    this.volumeFolder = volumeFolder;
+  }
+  
+
   /**
    * EXAMPLE AND OFFLINE MAIN
    * @param args
@@ -53,7 +68,6 @@ public class DatasetBuilder extends SpringMainLauncher implements WikiDataReques
            */
           DatasetRequest request = new DatasetRequest();
           request.setLimitDocuments(10);
-          request.setName("datasets_tassonomia_dijstra");
           request.setTaxonomyName("wheesbee");
           request.setOnline(false);
           request.setTest(true);
@@ -70,76 +84,96 @@ public class DatasetBuilder extends SpringMainLauncher implements WikiDataReques
 
   @Override
   public DatasetResponse buildDataset(DatasetRequest request) {
-    /*
-     * la taglia del test è uguale al 10% della richiesta massima di documenti.
-     */
-    int testsize = (request.getLimitDocuments()*10)/100;
-    
-    String basePath = "data/"+request.getName()+"/";
-    new File(basePath).mkdirs();
-    basePath = new File(basePath).getAbsolutePath()+"\\";
-    basePath = basePath.replace("\\", "/");
-    String pathDataset = basePath+"dataset";
-    String basePathSrc = pathDataset;
-    
-    if(!new File(basePathSrc).exists())
-      request.setOnline(true);
-
-    if(request.isOnline())
-      basePathSrc =  wikipediaDataset(basePath,pathDataset,request);
-
-
-    int numSourceToCopy = request.getLimitDocuments();    
-    List<String> fileList = DatasetUtilities.listAllFiles(basePathSrc, new ArrayList<String>());
-    Set<String> pathSet = DatasetUtilities.listAllPaths(basePathSrc);
-    List<String> added = new ArrayList<String>();
-    String basePathDstTraining = basePath+"datasets_training/";
-    new File(basePathDstTraining).mkdir();
-    try {
-      if(request.isTest())
-        numSourceToCopy = numSourceToCopy -testsize;
-      added = formatDataset(pathSet, basePathDstTraining, basePathSrc, fileList,numSourceToCopy, new ArrayList<String>(), "training",0,0);
+    DatasetResponse response = new DatasetResponse();
+    boolean isRunning;
+    synchronized (this) {
+      isRunning = running;
     }
-    catch (IOException e) {
-      e.printStackTrace();
-    }
-    if(request.isTest()){
-      String basePathDstTest = basePath+"datasets_test/";
-      new File(basePathDstTest).mkdir();
+
+    if (!isRunning) {
+      synchronized (this) {
+        running = true;
+      }
+      /*
+       * la taglia del test è uguale al 10% della richiesta massima di documenti.
+       */
+      int testsize = (request.getLimitDocuments()*10)/100;
+
+      String basePath = volumeFolder+"/"+request.getTaxonomyName()+"/";
+      new File(basePath).mkdirs();
+      basePath = new File(basePath).getAbsolutePath()+"\\";
+      basePath = basePath.replace("\\", "/");
+      String pathDataset = basePath+"dataset";
+      String basePathSrc = pathDataset;
+
+      if(!new File(basePathSrc).exists())
+        request.setOnline(true);
+
+      if(request.isOnline()){
+        try {
+          basePathSrc =  wikipediaDataset(basePath,pathDataset,request);
+        }
+        catch (Exception e) {
+          response.setStatus(500);
+          response.setMessage("Error in creation wikipedia dataset\n"+e.getMessage());
+        }
+      }
+
+      int numSourceToCopy = request.getLimitDocuments();    
+      List<String> fileList = datasetUtilities.listAllFiles(basePathSrc, new ArrayList<String>());
+      Set<String> pathSet = datasetUtilities.listAllPaths(basePathSrc);
+      List<String> added = new ArrayList<String>();
+      String basePathDstTraining = basePath+"datasets_training/";
+      new File(basePathDstTraining).mkdir();
       try {
-        formatDataset(pathSet, basePathDstTest, basePathSrc, fileList,testsize,added,"test",request.getMinCut(),request.getMaxCut());
+        if(request.isTest())
+          numSourceToCopy = numSourceToCopy -testsize;
+        added = formatDataset(pathSet, basePathDstTraining, basePathSrc, fileList,numSourceToCopy, new ArrayList<String>(), "training",0,0);
       }
       catch (IOException e) {
-        e.printStackTrace();
+        response.setStatus(500);
+        response.setMessage("Error in creation of training dataset\n"+e.getMessage());
       }
+      if(request.isTest()){
+        String basePathDstTest = basePath+"datasets_test/";
+        new File(basePathDstTest).mkdir();
+        try {
+          formatDataset(pathSet, basePathDstTest, basePathSrc, fileList,testsize,added,"test",request.getMinCut(),request.getMaxCut());
+        }
+        catch (IOException e) {
+          response.setStatus(500);
+          response.setMessage("Error in creation of test dataset\n"+e.getMessage());
+        }
+      }
+      
+    }else{
+      response.setStatus(400);
+      response.setMessage("The process to create the dataset is already running");
     }
-
-    return null;
+    return response;
   }
 
-  public String wikipediaDataset(String basePath, String pathDataset, DatasetRequest request){
+  public String wikipediaDataset(String basePath, String pathDataset, DatasetRequest request) throws Exception{
     /**
      * INIT DATASET.
      **/    
-
-
     String classificationMapPath = basePath+"categories.json";
-    try {
+
       /*
        * Leggo la tassonomia in formato csv.
        */
-      Map<String, List<List<String>>> csvMap = DatasetUtilities.readTaxomyCSV(request.getTaxonomyName(), false);
+      Map<String, List<List<String>>> csvMap = datasetUtilities.readTaxomyCSV(request.getTaxonomyName(), false);
       /*
        * Costruisco la struttura delle folder utilizzando la mappa creata leggendo il csv.
        * ritornando una mappa contente i path per ogni categoria wikipedia.
        */
-      Map<String, List<List<String>>> pathMap = DatasetUtilities.createStructureFolder(csvMap, pathDataset);
+      Map<String, List<List<String>>> pathMap = datasetUtilities.createStructureFolder(csvMap, pathDataset);
       /*
        * Creo una mappa di classificazione basata sulla struttura delle folder appena create.
        * Che deve essere utilizzata dal classificatore python per poter riassociare alle label i nomi 
        * delle classi.
        */
-      Map<String, List<String>> classificationMap = DatasetUtilities.createMapForClassification(pathDataset);
+      Map<String, List<String>> classificationMap = datasetUtilities.createMapForClassification(pathDataset);
       ObjectMapper mapper = new ObjectMapper();
       mapper.writerWithDefaultPrettyPrinter().writeValue(new File(classificationMapPath), classificationMap);
       System.out.println("Categories -> "+pathMap.size());
@@ -165,16 +199,13 @@ public class DatasetBuilder extends SpringMainLauncher implements WikiDataReques
           else
             results = databaseDatasetTask(toExtract,graph, request.getLimitDocuments());
 
-          DatasetUtilities.writeDocumentMap(pathMap, results);
+          datasetUtilities.writeDocumentMap(pathMap, results);
           toExtract.clear();
         }
         count++;
       }
       graph.clear();
-    }
-    catch (IOException | InterruptedException | ExecutionException e) {
-      e.printStackTrace();
-    }
+
     return pathDataset;
   }
 
@@ -188,7 +219,7 @@ public class DatasetBuilder extends SpringMainLauncher implements WikiDataReques
    * @throws InterruptedException
    * @throws ExecutionException
    */
-  private static Map<String,Set<DocumentInfo>> onlineDatasetTask(Set<String> categories,int maxLevel,boolean recursive,int limitDocs) throws IOException, InterruptedException, ExecutionException{
+  private Map<String,Set<DocumentInfo>> onlineDatasetTask(Set<String> categories,int maxLevel,boolean recursive,int limitDocs) throws IOException, InterruptedException, ExecutionException{
     ForkJoinPool pool = new ForkJoinPool();
     List<DatasetTask> datasetTasks = new ArrayList<DatasetTask>();
     for(String cat : categories){
@@ -212,7 +243,7 @@ public class DatasetBuilder extends SpringMainLauncher implements WikiDataReques
    * @throws InterruptedException
    * @throws ExecutionException
    */
-  private static Map<String,Set<DocumentInfo>> databaseDatasetTask(Set<String> categories,Map<String, EdgeResult> graph,int limitDocs) throws InterruptedException, ExecutionException{
+  private Map<String,Set<DocumentInfo>> databaseDatasetTask(Set<String> categories,Map<String, EdgeResult> graph,int limitDocs) throws InterruptedException, ExecutionException{
     ForkJoinPool pool = new ForkJoinPool();
     List<DatasetTask> datasetTasks = new ArrayList<DatasetTask>();
     for(String cat : categories){
@@ -227,16 +258,15 @@ public class DatasetBuilder extends SpringMainLauncher implements WikiDataReques
     return datasetMap;
   }
 
-  public static ArrayList<String>  formatDataset(Set<String> pathList,String basePathDst,String basePathSrc, List<String> fileList, int numSourceToCopy, List<String> added,String datasetType, int minCut, int maxCut) throws IOException{
+  public ArrayList<String>  formatDataset(Set<String> pathList,String basePathDst,String basePathSrc, List<String> fileList, int numSourceToCopy, List<String> added,String datasetType, int minCut, int maxCut) throws IOException{
     // PER OGNNI PATH CALCOLATO
     ArrayList<String> addedToReturn = new ArrayList<String>();
     FileWriter writerLabelsTest = new FileWriter(new File(basePathSrc+"labelsItemTestWithOrigin.csv"));
     writerLabelsTest.write("id,origin,firstLabel,secondLabel,thirdLabel\n");
-    
-    AnalyzerGraphWikipedia analyzerWikipedia = null;
-    if(datasetType.equals("test"))
-      analyzerWikipedia = new AnalyzerGraphWikipedia();
-    
+
+
+
+
     for(String path:pathList){
 
       //creo la folder 
@@ -253,7 +283,7 @@ public class DatasetBuilder extends SpringMainLauncher implements WikiDataReques
       }
       // A QUESTO PUNTO AGGIUNGO I DOCUMENTI AL PATH CORRENTE USANDO LE CATEGORIE FOGLIA CALCOLATE
       int numSource = (numSourceToCopy/documentContainers.size());
-      
+
       //Per ogni foglia della lista delle categorie foglia
       for(String documentContainer : documentContainers){
 
@@ -263,7 +293,7 @@ public class DatasetBuilder extends SpringMainLauncher implements WikiDataReques
         int count = 0; 
         // leggo il path del file corrente
 
-        List<String> filesContained = DatasetUtilities.listAllFiles(basePathSrc+documentContainer, new ArrayList<String>());
+        List<String> filesContained = datasetUtilities.listAllFiles(basePathSrc+documentContainer, new ArrayList<String>());
         for(String file : filesContained){
           file = file.replace("\\", "/");
           String[] splittedFileName = file.split("/");
@@ -301,7 +331,7 @@ public class DatasetBuilder extends SpringMainLauncher implements WikiDataReques
                   if(labels!=null && !labels.isEmpty()){
                     //if(nameLeaf.toLowerCase().equals(labels.get(0).toLowerCase())){
                     FileUtils.copyFile(f1, f2);
-                    DatasetUtilities.saveLabelsOnCSV(nameDocument,labels,writerLabelsTest,splittedFileName);
+                    datasetUtilities.saveLabelsOnCSV(nameDocument,labels,writerLabelsTest,splittedFileName);
                     //} 
                   }
                 }

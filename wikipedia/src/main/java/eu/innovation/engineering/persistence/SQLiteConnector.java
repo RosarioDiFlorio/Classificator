@@ -1,12 +1,16 @@
 package eu.innovation.engineering.persistence;
 
+import java.io.Closeable;
+import java.io.IOException;
 import java.sql.Connection;
+import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Enumeration;
 
 import org.sqlite.JDBC;
 
-public abstract class SQLiteConnector {
+public abstract class SQLiteConnector implements Closeable {
 
   static {
     JDBC driver = new JDBC();
@@ -17,6 +21,25 @@ public abstract class SQLiteConnector {
 
   protected SQLiteConnector(String urlDb) throws SQLException{
     this.conn = DriverManager.getConnection("jdbc:sqlite:" + urlDb);
+  }
+
+  @Override
+  public void close() throws IOException {
+    try {
+      conn.close();
+      
+      Enumeration<Driver> drivers = DriverManager.getDrivers();
+      while (drivers.hasMoreElements()) {
+        Driver driver = drivers.nextElement();
+        if (driver instanceof JDBC) {
+          DriverManager.deregisterDriver(driver);
+          break;
+        }
+      }
+    }
+    catch (SQLException e) {
+      throw new IOException(e);
+    }
   }
 
   /**Default connection is with autoCommit false.

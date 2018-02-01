@@ -13,6 +13,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -29,11 +31,17 @@ import eu.innovationengineering.solrclient.auth.collection.queue.UpdatablePriori
 public class AnalyzerGraphWikipedia extends SpringMainLauncher {
 
   private static HashMap<String,Set<String>> mappingTaxonomyWikipedia = null;
-  private static Word2Vec word2Vec;
+
   private static Map<String,EdgeResult> graph;
 
-  private static SQLiteWikipediaGraph dbGraph;
+  @Autowired
+  private SQLiteWikipediaGraph dbGraph;
   
+  @Autowired
+  private Word2Vec word2Vec;
+  
+  @Autowired
+  private DatasetUtilities datasetUtilities;
   
   /**
    * EXAMPLE AND TEST MAIN
@@ -43,19 +51,20 @@ public class AnalyzerGraphWikipedia extends SpringMainLauncher {
   public static void main(String[] args) throws Exception {
     mainWithSpring(
         context -> {
-          dbGraph = context.getBean(SQLiteWikipediaGraph.class);
+          AnalyzerGraphWikipedia analyzer = new AnalyzerGraphWikipedia();
+          SQLiteWikipediaGraph dbGraph = context.getBean(SQLiteWikipediaGraph.class);
           dbGraph.setAutoCommit(false);
-          System.out.println(getDocumentLabelsTaxonomy("9912937", true));
+          System.out.println(analyzer.getDocumentLabelsTaxonomy("9912937", true));
           dbGraph.setAutoCommit(true);
         },
         args,
         "classpath:properties-config.xml", "classpath:db-config.xml");
   }
 
-  public static List<String> getDocumentLabelsTaxonomy(String idDocument,boolean withDijstra) throws IOException{
+  public List<String> getDocumentLabelsTaxonomy(String idDocument,boolean withDijstra) throws IOException{
     if(mappingTaxonomyWikipedia == null){
       mappingTaxonomyWikipedia = new HashMap<String, Set<String>>();
-      Map<String, List<List<String>>> taxonomyCsv = DatasetUtilities.readTaxomyCSV("wheesbee", false);
+      Map<String, List<List<String>>> taxonomyCsv = datasetUtilities.readTaxomyCSV("wheesbee", false);
       
       for(String wikiCat: taxonomyCsv.keySet()){
         String keyToSave = wikiCat.replace("Category:", "");
@@ -104,7 +113,7 @@ public class AnalyzerGraphWikipedia extends SpringMainLauncher {
     }
   }
 
-  public static List<String> getListLabels(String idDocument,boolean withDjistra) throws IOException{
+  public List<String> getListLabels(String idDocument,boolean withDjistra) throws IOException{
     Set<String> documentCategories = getParentCategoriesByIdPage(idDocument);
     List<PathInfo> results = new ArrayList<PathInfo>();
     for(String category: documentCategories){
@@ -143,7 +152,7 @@ public class AnalyzerGraphWikipedia extends SpringMainLauncher {
    * @param startValue
    * @return
    */
-  public static Set<PathInfo> searchDjistraMarkedNode(String vertexStartName,int numberOfMarkedVertex){
+  public Set<PathInfo> searchDjistraMarkedNode(String vertexStartName,int numberOfMarkedVertex){
     if(graph == null){
       dbGraph.setAutoCommit(false);
       graph = dbGraph.getGraph("parents");

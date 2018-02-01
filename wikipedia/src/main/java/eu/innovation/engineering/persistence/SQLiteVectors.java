@@ -16,7 +16,7 @@ import java.util.concurrent.Executors;
 
 public class SQLiteVectors extends SQLiteConnector {
 
-  private ExecutorService executorService = Executors.newFixedThreadPool(8);
+  private ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
   public SQLiteVectors(String dbFolder) throws SQLException {
     super(dbFolder + "/databaseVectors.db");

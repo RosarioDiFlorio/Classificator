@@ -19,6 +19,14 @@ import java.util.stream.Collectors;
 public class DatasetUtilities {
 
 
+  private String taxonomiesFolder;
+  
+  public DatasetUtilities(String taxonomiesFolder,String dataFolder){
+    this.taxonomiesFolder = taxonomiesFolder;
+  }
+  
+  
+  
   /**
    * Method used to save labels on csv file 
    * @param idDocument
@@ -50,7 +58,7 @@ public class DatasetUtilities {
   }
 
 
-  public static Map<String, List<List<String>>> createStructureFolder(Map<String, List<List<String>>> csvMap,String pathDataset){
+  public Map<String, List<List<String>>> createStructureFolder(Map<String, List<List<String>>> csvMap,String pathDataset){
     Map<String, List<List<String>>> pathMap = new HashMap<String, List<List<String>>>();
     new File(pathDataset).mkdir();
     for(String uriWiki : csvMap.keySet()){
@@ -99,17 +107,17 @@ public class DatasetUtilities {
   }
 
 
-  public static Set<String> returnCategoriesFromTaxonomyCSV(String filename){
+  public Set<String> returnCategoriesFromTaxonomyCSV(String filename){
     Set<String> toReturn = new HashSet<>(readTaxomyCSV(filename, false).keySet());
     toReturn = toReturn.stream().map(el->el=el.replace("Category:", "")).collect(Collectors.toSet());
     return toReturn;
   }
 
 
-  public static Map<String,List<List<String>>> readTaxomyCSV(String csvName,boolean labeled) {
+  public Map<String,List<List<String>>> readTaxomyCSV(String csvName,boolean labeled) {
     String line = "";
     String cvsSplitBy = ",";
-    File csvFile = new File("app/taxonomies/"+csvName+".csv");
+    File csvFile = new File(this.taxonomiesFolder+"/"+csvName+".csv");
     Map<String, List<List<String>>> dataMap = new HashMap<>();
     try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
       if(labeled)

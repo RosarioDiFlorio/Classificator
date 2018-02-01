@@ -12,8 +12,8 @@ import eu.innovationengineering.word2vec.common.request.bean.VectorListRequestBe
 import eu.innovationengineering.word2vec.service.Word2vecService;
 
 public class Word2Vec {
-
-  private static StopWordEnglish stopWords;
+  @Autowired
+  private StopWordEnglish stopWords;
   
   @Autowired
   private Word2vecService word2vecService;
@@ -25,9 +25,7 @@ public class Word2Vec {
     return word2vecService.getVectorList(Constants.GENERAL_CORPUS, Constants.ENGLISH_LANG, vectorListRequest);
   }
   
-  public static List<String> cleanText(String text){
-    if(stopWords == null)
-      stopWords = new StopWordEnglish("stopwords_en.txt");
+  public List<String> cleanText(String text){
     text = text.replaceAll("\\p{Punct}", " ");
     text = text.replaceAll("\\d+", " ");
     return Arrays.asList(text.split(" ")).stream().filter(el->!stopWords.isStopWord(el) && !el.matches("")).map(el->el.toLowerCase().trim()).collect(Collectors.toList());

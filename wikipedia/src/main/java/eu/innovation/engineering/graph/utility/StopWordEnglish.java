@@ -11,11 +11,11 @@ public class StopWordEnglish {
   
   private static Set<String> stopWords;
   
-  public StopWordEnglish(String stopWordFile){
-    initStopWords(stopWordFile);
+  public StopWordEnglish(String stopWordFolder){
+    initStopWords(stopWordFolder+"/stopwords_en.txt");
   }
   
-  public static  boolean isStopWord(String word){
+  public boolean isStopWord(String word){
     if(stopWords != null){
       if(stopWords.contains(word.toLowerCase()))
         return true;
@@ -29,7 +29,7 @@ public class StopWordEnglish {
   
   
   
-  private static void initStopWords(String stopWordPath){
+  private void initStopWords(String stopWordPath){
     stopWords = new HashSet<String>();
     File txt = new File(stopWordPath);  
     InputStreamReader is;
@@ -45,7 +45,7 @@ public class StopWordEnglish {
     }
   }
   
-  public  static  Set<String> getStopWords(String stopWordPath){
+  public  Set<String> getStopWords(String stopWordPath){
     if (stopWords == null) {
       initStopWords(stopWordPath);
     }

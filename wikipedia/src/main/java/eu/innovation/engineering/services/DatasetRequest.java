@@ -1,7 +1,5 @@
 package eu.innovation.engineering.services;
 
-import java.io.File;
-
 /**
  * @author Rosario
  */
@@ -9,25 +7,16 @@ public class DatasetRequest {
   private String taxonomyName;
   private int limitDocuments;
   private boolean db;
-  private boolean online;
-  private String name;
-  
-  
+  private boolean online;  
+  private boolean test;
   private int minCut = 0;
   private int maxCut = 10000;
 
-  private boolean test;
+public DatasetRequest(){
+  
+}
 
 
-
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
 
   public boolean isOnline() {
     return online;
