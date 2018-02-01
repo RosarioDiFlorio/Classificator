@@ -18,9 +18,8 @@ import eu.innovation.engineering.api.WikipediaAPI;
 import eu.innovation.engineering.dataset.utility.DatasetUtilities;
 import eu.innovation.engineering.graph.utility.Edge;
 import eu.innovation.engineering.graph.utility.Word2Vec;
+import eu.innovation.engineering.persistence.DbApplication;
 import eu.innovation.engineering.persistence.EdgeResult;
-import eu.innovation.engineering.persistence.SQLiteVectors;
-import eu.innovation.engineering.persistence.SQLiteWikipediaGraph;
 import eu.innovation.engineering.services.GraphRequest;
 import eu.innovation.engineering.services.GraphResponse;
 import eu.innovation.engineering.services.WikiGraphRequest;
@@ -30,9 +29,8 @@ import eu.innovation.engineering.services.WikiGraphRequest;
 
 
 
-public class CrawlerGraphWikipedia implements WikiGraphRequest{
-  private static SQLiteWikipediaGraph dbGraph = new SQLiteWikipediaGraph("app/databases/databaseWikipediaGraph.db");
-  private static SQLiteVectors dbVectors = new SQLiteVectors("app/databases/databaseVectors.db");
+public class CrawlerGraphWikipedia extends DbApplication implements WikiGraphRequest{
+
   private static Word2Vec word2vec = new Word2Vec();
 
   /**
@@ -44,6 +42,63 @@ public class CrawlerGraphWikipedia implements WikiGraphRequest{
    */
   public static void main(String args[]) throws IOException, InterruptedException, ExecutionException{
     buildGraph(true);
+  }
+
+
+
+  @Override
+  public GraphResponse buildGraph(GraphRequest request) {
+    GraphResponse response = new GraphResponse();
+    try {
+      buildGraph(request.isWeighted());
+    }
+    catch (IOException e) {
+      response.setStatus(500);
+      response.setMessage("Error in the graph creation\n"+e.getMessage());
+      return response;
+    }
+    response.setStatus(200);
+    response.setMessage("Graph creation completed");    
+    return response;
+  }
+
+
+  /**
+   * used to build wikipedia category graph
+   * @param args
+   * @throws IOException
+   */
+  public static void buildGraph(boolean isWeighted) throws IOException{
+    dbGraph.setAutoCommit(false);
+    dbVectors.setAutoCommit(false);
+    try {
+      HashSet<String> categories = new HashSet<String>(); 
+      categories.add("Contents");
+      backupBFS(categories);
+    }
+    finally {
+      dbGraph.insertAndUpdateMarkedNodes(DatasetUtilities.returnCategoriesFromTaxonomyCSV("app/taxonomies/wheesbee.csv"));
+      dbGraph.commitConnection();
+      WikipediaAPI.executorShutDown();
+    }    
+    Map<String, EdgeResult> graph = dbGraph.getGraph("parents");
+    if (isWeighted) {      
+      Set<String> vertexWikipedia = new HashSet<String>(graph.keySet());
+      graph.keySet().forEach(key->graph.get(key).getLinkedVertex().forEach(vertex->vertexWikipedia.add(vertex.getVertexName())));
+      System.out.println(vertexWikipedia.size());
+      try {
+        saveVectorsWikipediaInDB(vertexWikipedia);
+      }
+      catch (InterruptedException e) {
+        e.printStackTrace();
+      }finally {
+        dbVectors.commitConnection();
+        dbGraph.commitConnection();
+      }
+      updateWeightEdges(dbGraph.getListEdgesByDistance(0));
+    }
+    dbGraph.setAutoCommit(true);
+    dbVectors.setAutoCommit(true);
   }
 
 
@@ -309,62 +364,6 @@ public class CrawlerGraphWikipedia implements WikiGraphRequest{
     else{
       return (dotProduct) / (Math.sqrt(normA * normB));
     }
-  }
-
-
-  @Override
-  public GraphResponse buildGraph(GraphRequest request) {
-    GraphResponse response = new GraphResponse();
-    try {
-      buildGraph(request.isWeighted());
-    }
-    catch (IOException e) {
-      response.setStatus(500);
-      response.setMessage("Error in the graph creation\n"+e.getMessage());
-      return response;
-    }
-    response.setStatus(200);
-    response.setMessage("Graph creation completed");    
-    return response;
-  }
-
-
-  /**
-   * used to build wikipedia category graph
-   * @param args
-   * @throws IOException
-   */
-  public static void buildGraph(boolean isWeighted) throws IOException{
-    dbGraph.setAutoCommit(false);
-    dbVectors.setAutoCommit(false);
-    try {
-      HashSet<String> categories = new HashSet<String>(); 
-      categories.add("Contents");
-      backupBFS(categories);
-    }
-    finally {
-      dbGraph.insertAndUpdateMarkedNodes(DatasetUtilities.returnCategoriesFromTaxonomyCSV("app/taxonomies/wheesbee.csv"));
-      dbGraph.commitConnection();
-      WikipediaAPI.executorShutDown();
-    }    
-    Map<String, EdgeResult> graph = dbGraph.getGraph("parents");
-    if (isWeighted) {      
-      Set<String> vertexWikipedia = new HashSet<String>(graph.keySet());
-      graph.keySet().forEach(key->graph.get(key).getLinkedVertex().forEach(vertex->vertexWikipedia.add(vertex.getVertexName())));
-      System.out.println(vertexWikipedia.size());
-      try {
-        saveVectorsWikipediaInDB(vertexWikipedia);
-      }
-      catch (InterruptedException e) {
-        e.printStackTrace();
-      }finally {
-        dbVectors.commitConnection();
-        dbGraph.commitConnection();
-      }
-      updateWeightEdges(dbGraph.getListEdgesByDistance(0));
-    }
-    dbGraph.setAutoCommit(true);
-    dbVectors.setAutoCommit(true);
   }
 
 

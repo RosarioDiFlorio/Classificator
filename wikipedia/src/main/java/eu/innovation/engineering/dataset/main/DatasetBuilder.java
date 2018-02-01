@@ -25,14 +25,14 @@ import eu.innovation.engineering.dataset.utility.DatasetTask;
 import eu.innovation.engineering.dataset.utility.DatasetUtilities;
 import eu.innovation.engineering.dataset.utility.DocumentInfo;
 import eu.innovation.engineering.graph.main.AnalyzerGraphWikipedia;
+import eu.innovation.engineering.persistence.DbApplication;
 import eu.innovation.engineering.persistence.EdgeResult;
-import eu.innovation.engineering.persistence.SQLiteWikipediaGraph;
 import eu.innovation.engineering.services.DatasetRequest;
 import eu.innovation.engineering.services.DatasetResponse;
 import eu.innovation.engineering.services.WikiDataRequest;
 
 
-public class DatasetBuilder implements WikiDataRequest {
+public class DatasetBuilder extends DbApplication implements WikiDataRequest {
 
   /**
    * EXAMPLE AND OFFLINE MAIN
@@ -141,8 +141,7 @@ public class DatasetBuilder implements WikiDataRequest {
        */
       int count = 0;
       Set<String> toExtract = new HashSet<String>();
-      SQLiteWikipediaGraph graphConnector = new SQLiteWikipediaGraph("app/databases/databaseWikipediaGraph.db");
-      Map<String, EdgeResult> graph = graphConnector.getGraph("childs");
+      Map<String, EdgeResult> graph = dbGraph.getGraph("childs");
       for(String uriWiki : pathMap.keySet()){
         toExtract.add(uriWiki);     
         if(count%8 == 0 || count == pathMap.size()-1){
