@@ -21,5 +21,7 @@
             </bean>
         </property>
     </bean>
+    
+    <bean id="word2Vec" class="eu.innovation.engineering.graph.utility.Word2Vec"></bean>
 
 </beans>

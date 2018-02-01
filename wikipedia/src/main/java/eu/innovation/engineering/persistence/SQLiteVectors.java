@@ -16,22 +16,18 @@ import java.util.concurrent.Executors;
 
 public class SQLiteVectors extends SQLiteConnector {
 
+  private ExecutorService executorService = Executors.newFixedThreadPool(8);
 
-  private  ExecutorService executorService = Executors.newFixedThreadPool(8);
-
-  
-
-  
-  public SQLiteVectors(String dbName){
-    super(dbName);
-    String sql ="CREATE TABLE IF NOT EXISTS vectors (name   VARCHAR PRIMARY KEY NOT NULL, vector BLOB    NOT NULL);";
-    try(Statement stm = getConnection().createStatement()){
-      stm.executeQuery(sql);
+  public SQLiteVectors(String dbFolder) throws SQLException {
+    super(dbFolder + "/databaseVectors.db");
+    String sql = "CREATE TABLE IF NOT EXISTS vectors (name   VARCHAR PRIMARY KEY NOT NULL, vector BLOB    NOT NULL);";
+    try (Statement stm = getConnection().createStatement()) {
+      stm.execute(sql);
     }
     catch (SQLException e) {
       e.printStackTrace();
     }
- }
+  }
 
 
   public  void insertVectors(Map<String,float[]> vectors) throws InterruptedException{

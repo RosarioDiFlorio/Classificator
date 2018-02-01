@@ -16,49 +16,56 @@ import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.Future;
 
 import org.apache.commons.io.FileUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import eu.innovation.engineering.dataset.utility.DatasetTask;
 import eu.innovation.engineering.dataset.utility.DatasetUtilities;
 import eu.innovation.engineering.dataset.utility.DocumentInfo;
 import eu.innovation.engineering.graph.main.AnalyzerGraphWikipedia;
-import eu.innovation.engineering.persistence.DbApplication;
 import eu.innovation.engineering.persistence.EdgeResult;
+import eu.innovation.engineering.persistence.SQLiteWikipediaGraph;
 import eu.innovation.engineering.services.DatasetRequest;
 import eu.innovation.engineering.services.DatasetResponse;
 import eu.innovation.engineering.services.WikiDataRequest;
 
 
-public class DatasetBuilder extends DbApplication implements WikiDataRequest {
-
+public class DatasetBuilder extends SpringMainLauncher implements WikiDataRequest {
+  private static final long serialVersionUID = 1L;
+  private static final Logger logger = LoggerFactory.getLogger(DatasetBuilder.class);
+  
+  @Autowired
+  private SQLiteWikipediaGraph dbGraph;
+  
   /**
    * EXAMPLE AND OFFLINE MAIN
    * @param args
-   * @throws JsonParseException
-   * @throws JsonMappingException
-   * @throws IOException
-   * @throws InterruptedException
-   * @throws ExecutionException
+   * @throws Exception 
    */
-  public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException, InterruptedException, ExecutionException{
-    /*
-     * Initialize the Request's Object with the information.
-     */
-    DatasetRequest request = new DatasetRequest();
-    request.setLimitDocuments(10);
-    request.setName("datasets_tassonomia_dijstra");
-    request.setTaxonomyName("wheesbee");
-    request.setOnline(false);
-    request.setTest(true);
-    request.setDb(true);
-    /*
-     * Call the method to build the dataset.
-     */
-    DatasetBuilder builder = new DatasetBuilder();
-    builder.buildDataset(request);
+  public static void main(String[] args) throws Exception {
+    mainWithSpring(
+        context -> {
+          /*
+           * Initialize the Request's Object with the information.
+           */
+          DatasetRequest request = new DatasetRequest();
+          request.setLimitDocuments(10);
+          request.setName("datasets_tassonomia_dijstra");
+          request.setTaxonomyName("wheesbee");
+          request.setOnline(false);
+          request.setTest(true);
+          request.setDb(true);
+          /*
+           * Call the method to build the dataset.
+           */
+          DatasetBuilder builder = context.getBean(DatasetBuilder.class);
+          builder.buildDataset(request);
+        },
+        args,
+        "classpath:properties-config.xml", "classpath:db-config.xml", "classpath:service-config.xml");
   }
 
   @Override
@@ -110,7 +117,7 @@ public class DatasetBuilder extends DbApplication implements WikiDataRequest {
     return null;
   }
 
-  public static String wikipediaDataset(String basePath, String pathDataset, DatasetRequest request){
+  public String wikipediaDataset(String basePath, String pathDataset, DatasetRequest request){
     /**
      * INIT DATASET.
      **/    

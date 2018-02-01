@@ -4,44 +4,27 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+import org.sqlite.JDBC;
+
 public abstract class SQLiteConnector {
 
-  private  String urlDb = "jdbc:sqlite:";
+  static {
+    JDBC driver = new JDBC();
+    driver.getMajorVersion();
+  }
+  
   private  Connection conn;
 
-
-
-  public SQLiteConnector(String urlDb){
-    this.urlDb += urlDb;
-    this.conn = connect();
-
-  }
-
-
-  /**Method to establish the connection to the database.
-   * Default autoCommit is false.
-   * @return
-   */
-  public  Connection connect() {
-
-    Connection conn = null;
-    try {
-      conn = DriverManager.getConnection(urlDb);
-    } catch (SQLException e) {
-      e.printStackTrace();
-    }
-    return conn;
+  protected SQLiteConnector(String urlDb) throws SQLException{
+    this.conn = DriverManager.getConnection("jdbc:sqlite:" + urlDb);
   }
 
   /**Default connection is with autoCommit false.
    * @return
    */
   public  Connection getConnection(){
-    if(conn == null)
-      conn = connect();
     return conn;  
   }
-
   
   public  void setAutoCommit(boolean isAuto){
     try {

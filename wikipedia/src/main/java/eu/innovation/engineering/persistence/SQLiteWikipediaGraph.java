@@ -101,8 +101,8 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
 
 
 
-  public SQLiteWikipediaGraph (String dbName){
-    super(dbName);
+  public SQLiteWikipediaGraph (String dbFolder) throws SQLException {
+    super(dbFolder + "/databaseWikipediaGraph.db");
     String markedNodesTable ="CREATE TABLE IF NOT EXISTS  markedNodes (  name   VARCHAR (255) PRIMARY KEY NOT NULL, marked BOOLEAN NOT NULL);";
     String edgesTable = "CREATE TABLE IF NOT EXISTS  edges (   parents  VARCHAR NOT NULL, childs VARCHAR NOT NULL, distance DOUBLE  NOT NULL, PRIMARY KEY (parents,childs) );";
 

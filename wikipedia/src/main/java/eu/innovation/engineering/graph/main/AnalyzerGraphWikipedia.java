@@ -1,7 +1,5 @@
 package eu.innovation.engineering.graph.main;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -20,33 +18,38 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import eu.innovation.engineering.api.WikipediaAPI;
+import eu.innovation.engineering.dataset.main.SpringMainLauncher;
 import eu.innovation.engineering.dataset.utility.DatasetUtilities;
 import eu.innovation.engineering.graph.utility.PathInfo;
 import eu.innovation.engineering.graph.utility.Word2Vec;
-import eu.innovation.engineering.persistence.DbApplication;
 import eu.innovation.engineering.persistence.EdgeResult;
 import eu.innovation.engineering.persistence.SQLiteWikipediaGraph;
 import eu.innovationengineering.solrclient.auth.collection.queue.UpdatablePriorityQueue;
 
-
-
-
-public class AnalyzerGraphWikipedia extends DbApplication {
+public class AnalyzerGraphWikipedia extends SpringMainLauncher {
 
   private static HashMap<String,Set<String>> mappingTaxonomyWikipedia = null;
   private static Word2Vec word2Vec;
   private static Map<String,EdgeResult> graph;
 
-
+  private static SQLiteWikipediaGraph dbGraph;
+  
+  
   /**
    * EXAMPLE AND TEST MAIN
    * @param args
    * @throws IOException
    */
-  public static void main(String[] args) throws IOException{
-    dbGraph.setAutoCommit(false);
-    System.out.println(getDocumentLabelsTaxonomy("9912937", true));
-    dbGraph.setAutoCommit(true);
+  public static void main(String[] args) throws Exception {
+    mainWithSpring(
+        context -> {
+          dbGraph = context.getBean(SQLiteWikipediaGraph.class);
+          dbGraph.setAutoCommit(false);
+          System.out.println(getDocumentLabelsTaxonomy("9912937", true));
+          dbGraph.setAutoCommit(true);
+        },
+        args,
+        "classpath:properties-config.xml", "classpath:db-config.xml");
   }
 
   public static List<String> getDocumentLabelsTaxonomy(String idDocument,boolean withDijstra) throws IOException{

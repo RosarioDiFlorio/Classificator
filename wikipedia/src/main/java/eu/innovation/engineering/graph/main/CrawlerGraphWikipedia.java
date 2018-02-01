@@ -11,28 +11,35 @@ import java.util.PriorityQueue;
 import java.util.Set;
 import java.util.concurrent.ExecutionException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 
 import eu.innovation.engineering.api.WikipediaAPI;
+import eu.innovation.engineering.dataset.main.SpringMainLauncher;
 import eu.innovation.engineering.dataset.utility.DatasetUtilities;
 import eu.innovation.engineering.graph.utility.Edge;
 import eu.innovation.engineering.graph.utility.Word2Vec;
-import eu.innovation.engineering.persistence.DbApplication;
 import eu.innovation.engineering.persistence.EdgeResult;
+import eu.innovation.engineering.persistence.SQLiteVectors;
+import eu.innovation.engineering.persistence.SQLiteWikipediaGraph;
 import eu.innovation.engineering.services.GraphRequest;
 import eu.innovation.engineering.services.GraphResponse;
 import eu.innovation.engineering.services.WikiGraphRequest;
 
-
-
-
-
-
-public class CrawlerGraphWikipedia extends DbApplication implements WikiGraphRequest{
-
+public class CrawlerGraphWikipedia extends SpringMainLauncher implements WikiGraphRequest{
+  private static final Logger logger = LoggerFactory.getLogger(CrawlerGraphWikipedia.class);
   private static Word2Vec word2vec = new Word2Vec();
 
+  @Autowired
+  private SQLiteWikipediaGraph dbGraph;
+  
+  @Autowired
+  private SQLiteVectors dbVectors;
+  
   /**
    * EXAMPLE AND TEST MAIN
    * @param args
@@ -40,8 +47,14 @@ public class CrawlerGraphWikipedia extends DbApplication implements WikiGraphReq
    * @throws InterruptedException
    * @throws ExecutionException
    */
-  public static void main(String args[]) throws IOException, InterruptedException, ExecutionException{
-    buildGraph(true);
+  public static void main(String args[]) throws Exception{
+    mainWithSpring(
+        context -> {
+          CrawlerGraphWikipedia crawler = context.getBean(CrawlerGraphWikipedia.class);
+          crawler.buildGraph(true);
+        },
+        args,
+        "classpath:properties-config.xml", "classpath:db-config.xml", "classpath:service-config.xml");
   }
 
 
@@ -68,7 +81,7 @@ public class CrawlerGraphWikipedia extends DbApplication implements WikiGraphReq
    * @param args
    * @throws IOException
    */
-  public static void buildGraph(boolean isWeighted) throws IOException{
+  public void buildGraph(boolean isWeighted) throws IOException{
     dbGraph.setAutoCommit(false);
     dbVectors.setAutoCommit(false);
     try {
@@ -102,7 +115,7 @@ public class CrawlerGraphWikipedia extends DbApplication implements WikiGraphReq
   }
 
 
-  public static void backupBFS(Set<String> categories) throws JsonParseException, JsonMappingException, IOException{
+  public void backupBFS(Set<String> categories) throws JsonParseException, JsonMappingException, IOException{
     try{
 
       Map<String, EdgeResult> graphParents = dbGraph.getGraph("parents");
@@ -130,7 +143,7 @@ public class CrawlerGraphWikipedia extends DbApplication implements WikiGraphReq
    * @throws ExecutionException 
    * @throws InterruptedException 
    */
-  public static void BFS(Set<String> categoryList,Set<String> markedNode,PriorityQueue<String> vertexToVisit) throws IOException, InterruptedException, ExecutionException{
+  public void BFS(Set<String> categoryList,Set<String> markedNode,PriorityQueue<String> vertexToVisit) throws IOException, InterruptedException, ExecutionException{
     int numConcurrency = 20;
     Set<String> markedInsert = dbGraph.getNamesFromMarkedNodes();
 
@@ -225,7 +238,7 @@ public class CrawlerGraphWikipedia extends DbApplication implements WikiGraphReq
    * @throws IOException
    * @throws InterruptedException 
    */
-  private static void saveVectorsWikipediaInDB(Set<String> vertexWikipedia) throws IOException, InterruptedException{
+  private void saveVectorsWikipediaInDB(Set<String> vertexWikipedia) throws IOException, InterruptedException{
     //carico le stopword dal file specificato.
     dbVectors.setAutoCommit(false);
     try{
@@ -266,7 +279,7 @@ public class CrawlerGraphWikipedia extends DbApplication implements WikiGraphReq
   }
 
 
-  private static void insertAndCheckMarkedNode(Set<String> toCheck, Set<String> alreadyInsert){
+  private void insertAndCheckMarkedNode(Set<String> toCheck, Set<String> alreadyInsert){
     toCheck.stream().map(el-> el = el.replace(" ", "_")).filter(el->!alreadyInsert.contains(el)).forEach(el->{
       dbGraph.insertMarkedNode(el, false);
       alreadyInsert.add(el);
@@ -274,7 +287,7 @@ public class CrawlerGraphWikipedia extends DbApplication implements WikiGraphReq
   }
 
 
-  private static void updateWeightEdges(List<Edge> edgeList){
+  private void updateWeightEdges(List<Edge> edgeList){
     for(Edge e:edgeList){
       double weight = 0;
       float[] destinationVector = dbVectors.getVectorByName(e.getChilds());
@@ -297,7 +310,7 @@ public class CrawlerGraphWikipedia extends DbApplication implements WikiGraphReq
    * @param vector
    * @return
    */
-  private static boolean validateVector(float[] vector){
+  private boolean validateVector(float[] vector){
 
     if (vector == null)
       return false;
