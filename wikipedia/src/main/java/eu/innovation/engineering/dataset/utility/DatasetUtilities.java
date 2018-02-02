@@ -85,7 +85,7 @@ public class DatasetUtilities {
    * @param alreadyWritten
    * @throws FileNotFoundException
    */
-  public static void writeDocumentMap(Map<String, List<List<String>>> pathMap,Map<String,Set<DocumentInfo>> documentsMap) throws FileNotFoundException{   
+  public void writeDocumentMap(Map<String, List<List<String>>> pathMap,Map<String,Set<DocumentInfo>> documentsMap) throws FileNotFoundException{   
     for(String key : documentsMap.keySet()){
       for( DocumentInfo doc: documentsMap.get(key)){
         int count = 0;
@@ -160,7 +160,7 @@ public class DatasetUtilities {
    * @param directoryName to be listed
    * @return 
    */
-  public static List<String> listAllFiles(String directoryName, List<String> fileList){
+  public List<String> listAllFiles(String directoryName, List<String> fileList){
     directoryName = directoryName.replace("/", "\\");
 //    System.out.println(directoryName);
     File directory = new File(directoryName);
@@ -183,9 +183,9 @@ public class DatasetUtilities {
    * @param basePathSrc
    * @return
    */
-  public static Set<String> listAllPaths(String basePathSrc){
+  public Set<String> listAllPaths(String basePathSrc){
     Set<String> pathSet = new HashSet<String>();
-    Map<String, List<String>> paths = DatasetUtilities.createMapForClassification(basePathSrc);
+    Map<String, List<String>> paths = createMapForClassification(basePathSrc);
     for(String path : paths.keySet()){    
       for(String child : paths.get(path)){
         StringBuilder toAdd = new StringBuilder(path);
@@ -198,7 +198,7 @@ public class DatasetUtilities {
 
 
 
-  public static Map<String,List<String>> createMapForClassification(String path){
+  public Map<String,List<String>> createMapForClassification(String path){
     Map<String,List<String>> classificationMap = new HashMap<>();
     List<String> rootChild = getChildDirectories(path);
     classificationMap.put("root", rootChild);
@@ -208,7 +208,7 @@ public class DatasetUtilities {
     return classificationMap;
   }
 
-  private static Map<String,List<String>> createMapDatasetTask(String path){
+  private Map<String,List<String>> createMapDatasetTask(String path){
     Map<String,List<String>> toReturn = new HashMap<>();
     List<String> rootChild = getChildDirectories(path);
     if(!rootChild.isEmpty())
@@ -225,7 +225,7 @@ public class DatasetUtilities {
     return toReturn;
   }
 
-  private static List<String> getChildDirectories (String path){
+  private List<String> getChildDirectories (String path){
     File dir = new File(path);
     List<String> toReturn = new ArrayList<>();
     if(dir.isDirectory()){
