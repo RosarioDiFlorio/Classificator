@@ -51,7 +51,7 @@ public class DatasetUtilities {
           }
     }
     catch(Exception e){
-      //System.out.println(splitted[splitted.length-1]);
+      System.out.println(splitted[splitted.length-1]);
     }
     writer.flush();
 
