@@ -161,7 +161,7 @@ public class DatasetUtilities {
    * @return 
    */
   public List<String> listAllFiles(String directoryName, List<String> fileList){
-    directoryName = directoryName.replace("/", "\\");
+//    directoryName = directoryName.replace("/", "\\");
 //    System.out.println(directoryName);
     File directory = new File(directoryName);
     //get all the files from a directory

@@ -101,7 +101,6 @@ public class DatasetBuilder extends SpringMainLauncher implements WikiDataReques
 
       String basePath = volumeFolder+"/"+request.getTaxonomyName()+"/";
       new File(basePath).mkdirs();
-      basePath = new File(basePath).getAbsolutePath()+"\\";
       basePath = basePath.replace("\\", "/");
       String pathDataset = basePath+"dataset";
       String basePathSrc = pathDataset;
