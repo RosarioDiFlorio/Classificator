@@ -17,15 +17,7 @@ public class Word2Vec {
   
   @Autowired
   private Word2vecService word2vecService;
-  
-  public Word2Vec(){
     
-  }
-  public Word2Vec(StopWordEnglish stopWordEnglish, Word2vecService word2vecService){
-    this.stopWords = stopWordEnglish;
-    this.word2vecService = word2vecService;
-  }
-  
   public float[][] returnVectorsFromTextList(List<List<String>> textList) throws IOException{
     VectorListRequestBean vectorListRequest = new VectorListRequestBean();
     vectorListRequest.setDocs(textList);

@@ -125,8 +125,7 @@ public class DatasetBuilder extends SpringMainLauncher implements WikiDataReques
       int numSourceToCopy = request.getLimitDocuments();    
       List<String> fileList = datasetUtilities.listAllFiles(basePathSrc, new ArrayList<String>());
       Set<String> pathSet = datasetUtilities.listAllPaths(basePathSrc);
-      List<String> added = new ArrayList<String>();
-      
+      List<String> added = new ArrayList<String>();      
       /*
        * Creazione del dataset di training.
        */
