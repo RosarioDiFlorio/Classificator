@@ -16,7 +16,7 @@ import utility.ListAllFiles;
 
 public class CreateDataset {
 
-	final private static int minCut = 0;
+	final private static int minCut = 100;
 	final private static int maxCut = 10000000;
 
 	public static void main(String[] args) throws IOException{
@@ -78,8 +78,8 @@ public class CreateDataset {
 		// PER OGNNI PATH CALCOLATO
 
 		ArrayList<String> addedToReturn = new ArrayList<String>();
-		FileWriter writerLabelsTraining = new FileWriter(new File("labelsItemTrainingWithOrigin.csv"));
-		FileWriter writerLabelsTest = new FileWriter(new File("labelsItemTestWithOrigin.csv"));
+		//FileWriter writerLabelsTraining = new FileWriter(new File("labelsItemTrainingWithOrigin_"+minCut+"_"+maxCut+".csv"));
+		FileWriter writerLabelsTest = new FileWriter(new File("labelsItemTestWithOrigin_"+minCut+"_"+maxCut+".csv"));
 		writerLabelsTest.write("id,origin,firstLabel,secondLabel,thirdLabel\n");
 
 		for(String path:pathList){
@@ -123,7 +123,6 @@ public class CreateDataset {
 
 
 					int wordCount=0;
-
 					// conto il numero di parole del documento
 					try(Scanner sc = new Scanner(new FileInputStream(file))){
 						while(sc.hasNext()){
@@ -143,20 +142,13 @@ public class CreateDataset {
 							if(datasetType.equals("training")){
 								addedToReturn.add(splitted[splitted.length-1]);
 								f2 = new File(basePathDst+path+"/"+nameLeaf+"_"+splitted[splitted.length-1]);
-								FileUtils.copyFile(f1, f2); 
-
-								//Dataset To evaluate classifier with training set
-								//File f3 = new File(basePathDst+"/datasetToEvaluate/"+splitted[splitted.length-1]); 
-								//FileUtils.copyFile(f1, f3); 
-								//List<String> labels =  analyzerWikipedia.getDocumentLabelsTaxonomy(splitted[splitted.length-1]);
-								//saveLabelsOnCSV(nameLeaf,labels,writerLabelsTraining,splitted);
-								/////////////////////////////////////////////////
+								//FileUtils.copyFile(f1, f2); 
 							}
 							else
 								if(datasetType.equals("test") && (!addedToReturn.contains(splitted[splitted.length-1]))){							
 									if(wordCount >=minCut && wordCount<=maxCut){
 										addedToReturn.add(splitted[splitted.length-1]);
-										f2 = new File(basePathDst+"/"+splitted[splitted.length-1]); 
+										f2 = new File(basePathDst+"/"+nameLeaf+"_"+splitted[splitted.length-1]); 
 										//Codice per cercare le categorie dal grafo wikipedia. Creare un file CSV che contiene le categorie che il grafo ha restituito
 										List<String> labels =  analyzerWikipedia.getDocumentLabelsTaxonomy(splitted[splitted.length-1],true);
 										// se il nome della foglia è uguale al nome della labels in posizione 0. Faccio questo per prendere solo i documenti per i quali il grafo wikipedia ha una buona corrispondenza con l'etichetta usata durante la generazione del dataset
