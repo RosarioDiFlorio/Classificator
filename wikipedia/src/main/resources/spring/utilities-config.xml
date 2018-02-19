@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="stopwordEN"
+        class="eu.innovation.engineering.graph.utility.StopWordEnglish">
+        <constructor-arg value="${stopword-txt.folder}" />
+    </bean>
+
+    <bean id="datasetUtilities"
+        class="eu.innovation.engineering.dataset.utility.DatasetUtilities">
+        <constructor-arg value="${taxonomies-csv.folder}" />
+        <constructor-arg value="${volume.folder}"/>
+    </bean>
+    
+    <bean id="analyzerGraph" class="eu.innovation.engineering.graph.main.AnalyzerGraphWikipedia"/>
+
+</beans>

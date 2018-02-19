@@ -1,4 +1,4 @@
-package persistence;
+package eu.innovation.engineering.persistence;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -11,14 +11,53 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import utility.Vertex;
+import eu.innovation.engineering.graph.utility.Edge;
+import eu.innovation.engineering.graph.utility.Vertex;
+
+
 
 public class SQLiteWikipediaGraph extends SQLiteConnector  {
 
 
+  
+  public List<Edge> getListEdgesByDistance(double distance){
+    List<Edge> toReturn = new ArrayList<Edge>();
+    String sql = "SELECT * FROM edges WHERE distance= ? ;";
+    try(PreparedStatement pstm = getConnection().prepareStatement(sql);){
+      pstm.setDouble(1, distance);
+      try (ResultSet res = pstm.executeQuery()) {
+        while (res.next()) {
+          toReturn.add(new Edge(res.getString("parents"), res.getString("childs"), res.getDouble("distance")));
+        }
+      }
+    }
+    catch (SQLException e) {
+      e.printStackTrace();
+      }
+    return toReturn;
+
+  }
+  
+  
+  public Set<String> getNamesFromEdges(){
+    Set<String> toReturn = new HashSet<String>();
+    String sql = "SELECT parents, childs FROM edges";
+    try(PreparedStatement stm = getConnection().prepareStatement(sql)){
+      try (ResultSet res = stm.executeQuery()) {
+        while (res.next()) {
+          toReturn.add(res.getString("parents"));
+          toReturn.add(res.getString("childs"));
+        }
+      }
+    }catch (SQLException e) {
+      e.printStackTrace();
+    }   
+    return toReturn;
+  }
+  
 
   public Map<String,EdgeResult> getGraph(String typeLinked){
-    System.out.println("Inizialing graph");
+    System.out.println("Inizialing graph "+typeLinked);
     Map<String,EdgeResult> toReturn = new HashMap<String, EdgeResult>();
     String sql = "SELECT * FROM edges";
     try(PreparedStatement stm = getConnection().prepareStatement(sql)){
@@ -62,8 +101,8 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
 
 
 
-  public SQLiteWikipediaGraph (String dbName){
-    super(dbName);
+  public SQLiteWikipediaGraph (String dbFolder) throws SQLException {
+    super(dbFolder + "/databaseWikipediaGraph.db");
     String markedNodesTable ="CREATE TABLE IF NOT EXISTS  markedNodes (  name   VARCHAR (255) PRIMARY KEY NOT NULL, marked BOOLEAN NOT NULL);";
     String edgesTable = "CREATE TABLE IF NOT EXISTS  edges (   parents  VARCHAR NOT NULL, childs VARCHAR NOT NULL, distance DOUBLE  NOT NULL, PRIMARY KEY (parents,childs) );";
 
@@ -88,16 +127,14 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
    * @throws SQLException
    */
   public void insertEdge(String source, String destination, double weight) throws SQLException{
-
-
     try(PreparedStatement pstmt = super.getConnection().prepareStatement("INSERT INTO edges VALUES(?,?,?)");){	
-
       pstmt.setString(1, source);
       pstmt.setString(2, destination);
       pstmt.setDouble(3, weight);
       pstmt.executeUpdate();
     }
   }
+  
   
   
 
@@ -128,7 +165,6 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
       pstmt.executeUpdate();
     }
     catch (SQLException e) {
-      // TODO Auto-generated catch block
       e.printStackTrace();
     }
   }
@@ -182,7 +218,7 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
   }
 
   public Set<String> getMarkedNodes(){
-    Set<String> names = new HashSet<>();
+    Set<String> names = new HashSet<String>();
     String sql ="SELECT name FROM markedNodes WHERE  marked = ?";
     try(PreparedStatement stm = getConnection().prepareStatement(sql)){
       stm.setBoolean(1, true);
@@ -231,9 +267,25 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
       e.printStackTrace();
     }
   }
+  
+
+  
+  
+  public void updateEdge(String source,String dest,double value){
+    String sql = "UPDATE edges SET distance = ? WHERE parents = ? AND childs = ?";
+    try(PreparedStatement pstmt = super.getConnection().prepareStatement(sql);){
+      pstmt.setDouble(1, value);
+      pstmt.setString(2, source);
+      pstmt.setString(3, dest);
+      pstmt.executeUpdate();
+    }
+    catch (SQLException e) {
+      e.printStackTrace();
+    }
+    
+  }
 
   public void insertAndUpdateMarkedNodes(Set<String> toMark){
-    setAutoCommit(false);
     Set<String> alreadyMarked = getMarkedNodes();
     alreadyMarked.remove(toMark);
     alreadyMarked.forEach(el->updateMarkedNode(el, false));
@@ -244,12 +296,10 @@ public class SQLiteWikipediaGraph extends SQLiteConnector  {
         insertMarkedNode(name, true);
       }
     }
-    commitConnection();
-    setAutoCommit(true);
   }
 
-  public Set<String> getNameNodes(){
-    Set<String> names = new HashSet<>();
+  public Set<String> getNamesFromMarkedNodes(){
+    Set<String> names = new HashSet<String>();
     String sql = "SELECT name FROM markedNodes";
     try(Statement stm = super.getConnection().createStatement();
         ResultSet res = stm.executeQuery(sql);){

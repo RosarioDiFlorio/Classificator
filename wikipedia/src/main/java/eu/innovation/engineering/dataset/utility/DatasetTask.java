@@ -8,7 +8,10 @@ import java.util.Set;
 import java.util.concurrent.Callable;
 import java.util.concurrent.RecursiveTask;
 
-import persistence.EdgeResult;
+import eu.innovation.engineering.api.WikipediaAPI;
+import eu.innovation.engineering.persistence.EdgeResult;
+
+
 
 /**
  * @author Rosario Di Florio (RosarioUbuntu)
@@ -61,19 +64,19 @@ public class DatasetTask extends RecursiveTask<Map<String,Set<DocumentInfo>>> im
        * Oline Version.
        */     
       if(graph == null)
-        contents = WikipediaMiner.getContentFromCategoryPages(category, new HashSet<String>(), recursive, 0, maxLevel,limitDocs);
+        contents = WikipediaAPI.getContentFromCategoryPages(category, new HashSet<String>(), recursive, 0, maxLevel,limitDocs);
       /*
        * Database Version
        */
       else
-        contents = WikipediaMiner.getContentFromCategoryPages(category, graph, limitDocs);
-      
+        contents = WikipediaAPI.getContentFromCategoryPages(category, graph, limitDocs);
       Set<DocumentInfo> listDocument = new HashSet<>();
       for(String idDoc: contents.keySet()){
         DocumentInfo docInfo = contents.get(idDoc);
         listDocument.add(docInfo);
       }
       toReturn.put(category, listDocument);
+      
     }
     catch (IOException e) {
       // TODO Auto-generated catch block
