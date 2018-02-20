@@ -12,6 +12,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.apache.commons.math3.linear.Array2DRowRealMatrix;
 import org.apache.commons.math3.linear.RealMatrix;
@@ -70,11 +71,15 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
     }  
     List<List<String>> textList = new ArrayList<>();
     for(String toC: toCompare){
-      List<String> tmp = new ArrayList<>();
-      tmp.add(toC);
-      textList.add(tmp);
+      textList.add(cleanText(toC));
     }
     toCompareVectors = returnVectorsFromTextList(textList);
+  }
+  
+  public List<String> cleanText(String text){
+    text = text.replaceAll("\\p{Punct}", " ");
+    text = text.replaceAll("\\d+", " ");
+    return Arrays.asList(text.split(" ")).stream().filter(el->!stopwords.contains(el) && !el.matches("")).map(el->el.toLowerCase().trim()).collect(Collectors.toList());
   }
 
 
