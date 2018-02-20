@@ -119,9 +119,7 @@ public class DatasetBuilder extends SpringMainLauncher implements WikiDataReques
           response.setMessage("Error in creation wikipedia dataset\n"+e.getMessage());
         }
       }
-      /*
-       * Inizializzazione variabili per la creazione dei dataset di training e test
-       */
+      
       int numSourceToCopy = request.getLimitDocuments();    
       List<String> fileList = datasetUtilities.listAllFiles(basePathSrc, new ArrayList<String>());
       Set<String> pathSet = datasetUtilities.listAllPaths(basePathSrc);
@@ -281,9 +279,6 @@ public class DatasetBuilder extends SpringMainLauncher implements WikiDataReques
     ArrayList<String> addedToReturn = new ArrayList<String>();
     FileWriter writerLabelsTest = new FileWriter(new File(basePathSrc+"labelsItemTestWithOrigin.csv"));
     writerLabelsTest.write("id,origin,firstLabel,secondLabel,thirdLabel\n");
-
-
-
 
     for(String path:pathList){
       //creo la folder 
