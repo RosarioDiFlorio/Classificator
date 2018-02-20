@@ -89,7 +89,7 @@ public class AnalyzerWikipediaGraph {
 
 
 
-  private static List<String> cleanText(String text){
+  public static List<String> cleanText(String text){
     StopWordEnglish stopWords = new StopWordEnglish("stopwords_en.txt");
     text = text.replaceAll("\\p{Punct}", " ");
     text = text.replaceAll("\\d+", " ");
