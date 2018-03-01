@@ -16,7 +16,12 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class DatasetUtilities {
+
+  private static final Logger logger = LoggerFactory.getLogger(DatasetUtilities.class);
 
 
   private String taxonomiesFolder;
@@ -101,6 +106,7 @@ public class DatasetUtilities {
        * DEBUG PRINTS
        */
       for(List<String> list: pathMap.get(key)){
+        
         System.out.println(key+" saved into "+list.get(0)+", number of documents ->"+documentsMap.get(key).size());
       }
     }

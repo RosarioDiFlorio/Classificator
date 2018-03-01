@@ -12,6 +12,7 @@ import eu.innovationengineering.word2vec.common.request.bean.VectorListRequestBe
 import eu.innovationengineering.word2vec.service.Word2vecService;
 
 public class Word2Vec {
+  
   @Autowired
   private StopWordEnglish stopWords;
   

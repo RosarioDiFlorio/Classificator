@@ -69,8 +69,8 @@ public class DatasetBuilder extends SpringMainLauncher implements WikiDataReques
           DatasetRequest request = new DatasetRequest();
           request.setLimitDocuments(10);
           request.setTaxonomyName("wheesbee");
-          request.setOnline(false);
-          request.setTest(true);
+          request.setOnline(true);
+          request.setTest(false);
           request.setDb(true);
           /*
            * Call the method to build the dataset.
@@ -79,7 +79,7 @@ public class DatasetBuilder extends SpringMainLauncher implements WikiDataReques
           builder.buildDataset(request);
         },
         args,
-        "classpath:properties-config.xml", "classpath:db-config.xml", "classpath:service-config.xml");
+        "classpath:spring/properties-config.xml", "classpath:spring/db-config.xml", "classpath:spring/service-config.xml");
   }
 
   @Override
@@ -119,9 +119,8 @@ public class DatasetBuilder extends SpringMainLauncher implements WikiDataReques
           response.setMessage("Error in creation wikipedia dataset\n"+e.getMessage());
         }
       }
-      /*
-       * Inizializzazione variabili per la creazione dei dataset di training e test
-       */
+      System.gc ();
+      System.runFinalization ();
       int numSourceToCopy = request.getLimitDocuments();    
       List<String> fileList = datasetUtilities.listAllFiles(basePathSrc, new ArrayList<String>());
       Set<String> pathSet = datasetUtilities.listAllPaths(basePathSrc);
@@ -135,10 +134,12 @@ public class DatasetBuilder extends SpringMainLauncher implements WikiDataReques
         if(request.isTest())
           numSourceToCopy = numSourceToCopy -testsize;
         added = formatDataset(pathSet, basePathDstTraining, basePathSrc, fileList,numSourceToCopy, new ArrayList<String>(), "training",0,0);
-        System.out.println("Training ended");
+        logger.info("Training ended");
+//        System.out.println("Training ended");
       }catch (Exception e) {
         response.setStatus(500);
         response.setMessage("Error in creation of training dataset\n"+e.getMessage());
+        logger.error("Error in creation of training dataset\n"+e.getMessage());
       }finally{
         synchronized (this) {
           running = false;
@@ -194,7 +195,8 @@ public class DatasetBuilder extends SpringMainLauncher implements WikiDataReques
     Map<String, List<String>> classificationMap = datasetUtilities.createMapForClassification(pathDataset);
     ObjectMapper mapper = new ObjectMapper();
     mapper.writerWithDefaultPrettyPrinter().writeValue(new File(classificationMapPath), classificationMap);
-    System.out.println("Categories -> "+pathMap.size());
+    logger.info("Categories -> "+pathMap.size());
+//    System.out.println("Categories -> "+pathMap.size());
     /**
      * CORE PHASE.
      */
@@ -204,7 +206,8 @@ public class DatasetBuilder extends SpringMainLauncher implements WikiDataReques
     for(String uriWiki : pathMap.keySet()){
       toExtract.add(uriWiki);     
       if(count%8 == 0 || count == pathMap.size()-1){
-        System.out.println(((count*100)/pathMap.size())+"%");
+        logger.info(((count*100)/pathMap.size())+"%");
+//        System.out.println(((count*100)/pathMap.size())+"%");
         Map<String, Set<DocumentInfo>> results = new HashMap<String, Set<DocumentInfo>>();
         /*
          * Gather all the information completly Online
@@ -223,6 +226,9 @@ public class DatasetBuilder extends SpringMainLauncher implements WikiDataReques
       count++;
     }
     graph.clear();
+    graph = new HashMap<>();
+    System.gc ();
+    System.runFinalization ();
 
     return pathDataset;
   }
@@ -282,11 +288,10 @@ public class DatasetBuilder extends SpringMainLauncher implements WikiDataReques
     FileWriter writerLabelsTest = new FileWriter(new File(basePathSrc+"labelsItemTestWithOrigin.csv"));
     writerLabelsTest.write("id,origin,firstLabel,secondLabel,thirdLabel\n");
 
-
-
-
     for(String path:pathList){
-      //creo la folder 
+      //creo la folder
+      logger.info("training set "+path);
+//      System.out.println(path);
       new File(basePathDst+path).mkdir();
       Set<String> documentContainers = new HashSet<String>();
       // CALCOLO LA LISTA DI TUTTE LE CATEGORIE FOGLIA
