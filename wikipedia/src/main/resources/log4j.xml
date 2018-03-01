@@ -17,6 +17,9 @@
 
     <root>
         <level value="warn" />
+        <level value="info" />
+        <level value="debug" />
         <appender-ref ref="console" />
     </root>
+    
 </log4j:configuration>
