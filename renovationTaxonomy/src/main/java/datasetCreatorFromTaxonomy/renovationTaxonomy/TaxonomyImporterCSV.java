@@ -49,12 +49,14 @@ public class TaxonomyImporterCSV {
   public static void main(String[] args) throws IOException, ParserConfigurationException, SAXException{
     TaxonomyImporterCSV importer = new TaxonomyImporterCSV("wheesbee2.csv");
     Set<ConceptBean> concepts = importer.getConcepts();
-    System.out.println(concepts.size());
     Model model = loadEmptyModel("wheesbee2.rdf");
     model = importer.updateModel(model, concepts);
     FileWriter writer = new FileWriter(new File("newWheesbee2.rdf"));
     model.write(writer);
   }
+  
+  
+  
 
   public static Model loadEmptyModel(String inputFileName) throws IOException{
     Model model = ModelFactory.createDefaultModel();
