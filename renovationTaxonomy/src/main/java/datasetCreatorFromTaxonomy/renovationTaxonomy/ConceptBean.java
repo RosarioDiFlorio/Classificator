@@ -11,12 +11,14 @@ public class ConceptBean {
   private String uri;
   private List<String> narrowers;
   private boolean isTopConcept;
+  private WikiCategoryMatch matches;
  
   
   
   public ConceptBean(){
     broaders = new ArrayList<String>();
     narrowers = new ArrayList<String>();
+    matches = new WikiCategoryMatch();
   }
   
   
@@ -69,7 +71,7 @@ public class ConceptBean {
 
   @Override
   public String toString() {
-    return "ConceptBean [id=" + id + ", name=" + name + ", broaders=" + broaders + ", narrowers=" + getNarrowers() + "]";
+    return "ConceptBean [id=" + id + ", name=" + name + ", broaders=" + broaders + ", uri=" + uri + ", narrowers=" + narrowers + ", isTopConcept=" + isTopConcept + ", matches=" + matches + "]";
   }
 
 
@@ -106,6 +108,48 @@ public class ConceptBean {
 
   public void setTopConcept(boolean isTopConcept) {
     this.isTopConcept = isTopConcept;
+  }
+
+
+
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((name == null) ? 0 : name.hashCode());
+    return result;
+  }
+
+
+
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj)
+      return true;
+    if (obj == null)
+      return false;
+    if (getClass() != obj.getClass())
+      return false;
+    ConceptBean other = (ConceptBean) obj;
+    if (name == null) {
+      if (other.name != null)
+        return false;
+    }
+    else if (!name.equals(other.name))
+      return false;
+    return true;
+  }
+
+
+
+  public WikiCategoryMatch getMatches() {
+    return matches;
+  }
+
+
+
+  public void setMatches(WikiCategoryMatch matches) {
+    this.matches = matches;
   }
   
   
