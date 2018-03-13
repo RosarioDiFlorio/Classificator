@@ -1,63 +1,92 @@
-package eu.innovation.engineering.LSA.keywordExtractor;
+package eu.innovationengineering.extractor;
 
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import org.apache.commons.math3.linear.Array2DRowRealMatrix;
 import org.apache.commons.math3.linear.RealMatrix;
 import org.apache.commons.math3.linear.SingularValueDecomposition;
+import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
-import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
-
-import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
-import eu.innovation.engineering.keyword.extractor.util.CleanUtilis;
 import eu.innovationengineering.lang.ISO_639_1_LanguageCode;
 import eu.innovationengineering.lang.exceptions.LanguageException;
 import eu.innovationengineering.nlp.analyzer.stanfordnlp.StanfordnlpAnalyzer;
+import eu.innovationengineering.persistence.SQLiteVectors;
+import eu.innovationengineering.utilities.Lemmatizer;
+import eu.innovationengineering.utilities.Similarities;
+import eu.innovationengineering.utilities.StopWords;
+import eu.innovationengineering.utilities.Word2Vec;
 
 /**
  * @author Rosario
  * @author Luigi
  *
  */
-public class LSAKeywordExtractor implements KeywordExtractor {  
+public class LSACosineKeywordExtraction implements InitializingBean {  
 
+  private List<String> toCompare;
+  //  private Map<String,Set<float[]>> glossaryMap;
+  private Map<String,float[]> glossaryMap;
+  @Autowired
+  private StopWords stopwords;
+  @Autowired
+  private Lemmatizer lemmatizer;
 
+  @Autowired
+  private StanfordnlpAnalyzer nlpAnalyzer;
+  
+  @Autowired
+  private Word2Vec word2Vec;
+  
+  @Autowired
+  @Qualifier("glossariesVectors")
+  private SQLiteVectors glossariesDB;
 
-  private String mainDirectory = "";
-  private static String stopWordPath= "data/stopwords/stopwords_en.txt";
+  
+  public LSACosineKeywordExtraction(){
+    
+  }
 
-
-
-  public LSAKeywordExtractor(String mainDir) {
-    setMainDirectory(mainDir);
-    setStopWordPath(getMainDirectory() + stopWordPath);
+  public void initGlossary(){
+    glossaryMap = glossariesDB.getAllVectors();
+    if(glossaryMap.isEmpty()){
+      glossaryMap.put("root", new float[1]);
+    }
   }
 
 
-  /* (non-Javadoc)
-   * @see eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor#extractKeywordsFromText(java.util.List, int)
-   */
-  @Override
-  public  List<List<Keyword>> extractKeywordsFromTexts(List<String> toAnalyze, int numKeywordsToReturn) throws Exception {
+  public List<List<Keyword>> extractKeywordsFromTexts(List<String> toAnalyze,Set<String> categories, int numKeywordsToReturn) throws Exception {
     List<List<Keyword>> toReturn = new ArrayList<List<Keyword>>();
-    for(String text: toAnalyze){
-      List<Keyword> keywordList = new ArrayList<Keyword>();
-      System.out.println("Senteces step start");
-      List<List<String>> sentenceList = createSentencesFromText(text);
-      System.out.println("Step over\n Next Step -> building matrix A");
-      MatrixRepresentation matrixA = buildMatrixA(sentenceList);
-      System.out.println("Step over\n Next Step -> SVD decomposition");
-      RealMatrix U = SVD(matrixA);
-      keywordList = getKeywordList(matrixA, U, numKeywordsToReturn);
-      System.out.println("All step completed");
-      toReturn.add(keywordList);
+
+    Set<float[]> vectors = new HashSet<>();
+    if(categories.isEmpty())
+      vectors.add(glossaryMap.get("root"));
+    else{
+      for(String category:categories){
+        if(glossaryMap.containsKey(category))
+          vectors.add(glossaryMap.get(category));
+      }
     }
 
+    for(String text: toAnalyze){
+      List<Keyword> keywordList = new ArrayList<Keyword>();
+      List<List<String>> sentenceList = createSentencesFromText(text);
+      MatrixRepresentation matrixA = buildMatrixA(sentenceList,vectors);
+      RealMatrix U = SVD(matrixA);
+      keywordList = getKeywordList(matrixA, U, numKeywordsToReturn);
+      toReturn.add(keywordList);
+      matrixA = null;
+      Runtime.getRuntime().gc();
+    }
     return toReturn;
 
   }
@@ -70,12 +99,14 @@ public class LSAKeywordExtractor implements KeywordExtractor {
    */
   public  List<List<String>> createSentencesFromText(String document) throws LanguageException{
     List<List<String>> sentecesList = new ArrayList<List<String>>();
-    StanfordnlpAnalyzer nlpAnalyzer = new StanfordnlpAnalyzer();
-    List<String> senteces = nlpAnalyzer.detectSentences(document, ISO_639_1_LanguageCode.ENGLISH);
-    Lemmatizer lemmatizer = new Lemmatizer();
-    for(String sentence: senteces){
-      sentecesList.add(cleanAndSplitSentence(sentence,lemmatizer));
-    }   
+    List<String> senteces = nlpAnalyzer.detectSentences(document.toLowerCase(), ISO_639_1_LanguageCode.ENGLISH);
+    /*List<String> senteces = new ArrayList<>();
+    senteces.add(document.toLowerCase());*/
+    for(String sentence: senteces)
+    {
+      sentecesList.add(cleanAndSplitSentence(sentence, lemmatizer));
+    }
+
     return sentecesList;
   }
 
@@ -88,17 +119,18 @@ public class LSAKeywordExtractor implements KeywordExtractor {
    * @return The list of words for a sentence.
    */
   private  List<String> cleanAndSplitSentence(String sentence, Lemmatizer lemmatizer){
-    Set<String> stopwords = CleanUtilis.getBlackList(getStopWordPath());
-    sentence = sentence.toLowerCase();
-    sentence = sentence.replaceAll("[.!?\\\\/|<>\'\"+;%$#@&\\^\\(\\),-]\\*", "");
-    List<String> textLemmatized = lemmatizer.lemmatize(sentence);
+    //sentence = sentence.replaceAll("(\\.-/#\\^)", " ");
+    StringBuilder strbuilder = new StringBuilder();
+    stopwords.cleanText(sentence).forEach(s->strbuilder.append(s+" "));
+    List<String> textLemmatized = lemmatizer.lemmatize(strbuilder.toString());
     Iterator<String> it = textLemmatized.iterator();
+
     while(it.hasNext()){
       String str = it.next();
-      if(stopwords.contains(str) || str.length()<=2)
+      if(stopwords.isStopWord(str.toLowerCase()) || str.length()<=2)
         it.remove();
     }
-    System.out.println(textLemmatized);
+    //    System.out.println(textLemmatized);
     return textLemmatized;
   }
 
@@ -109,34 +141,48 @@ public class LSAKeywordExtractor implements KeywordExtractor {
    * @return A MatrixRepresentation object that contains a double[][] matrix and a list of unique words.
    * An matrix A (nm) is a matrix that has n words and m sentences that make up the document. 
    * Each cell in the matrix represents the weight that the term has in the corresponding sentence.
+   * @throws IOException 
    */
-  public  MatrixRepresentation buildMatrixA(List<List<String>> sentences){
-
+  public  MatrixRepresentation buildMatrixA(List<List<String>> sentences,Set<float[]> toCompareVectors) throws IOException{
     List<String> wordList = new ArrayList<String>();
 
 
-
     //crea la lista di word
+    List<List<String>> textList = new ArrayList<>();
     for(List<String> sentence : sentences){
       for(String word : sentence){
         if(!wordList.contains(word)){
-          wordList.add(word);
+          List<String> tmp = new ArrayList<>();
+          wordList.add(word); 
+          tmp.add(word);
+          textList.add(tmp);
         }
       }
     }
-    System.out.println("senteces number -> "+sentences.size());
-    System.out.println("words number -> "+wordList.size());
+    float[][] wordVectors = word2Vec.returnVectorsFromTextList(textList);
+
     //crea la matrice
     Array2DRowRealMatrix matrix = new Array2DRowRealMatrix(wordList.size(),sentences.size());
     int row=0;
     int column=0;
 
-    for(String word : wordList){
+    for(int i = 0;i<wordList.size();i++){
       column=0;
-      for(List<String> sentence : sentences){ 
-        matrix.addToEntry(row, column, Tf(word, sentences, column)*Isf(word,sentences));
+      String word = wordList.get(i);
+      double weigth = 0;
+      for(float[] vector:toCompareVectors){ 
+        weigth += Similarities.cosineSimilarity(wordVectors[i], vector);
+      }
+      weigth /= sentences.size();
+      for(List<String> sentence : sentences){     
+        if(sentence.contains(word)){
+          weigth += Tf(word, sentences, column);
+        }else{
+          weigth += 0;
+        }
+        //        System.out.println(word+" "+(weigth/sentences.size()));
+        matrix.addToEntry(row, column,weigth);
         column++;
-
       }
       row++;
     }
@@ -159,8 +205,11 @@ public class LSAKeywordExtractor implements KeywordExtractor {
   public  RealMatrix SVD(MatrixRepresentation matrixA){  
 
     SingularValueDecomposition svd = new SingularValueDecomposition(matrixA.getMatrixA());
+
+
     return svd.getU();
   }
+
 
   /**
    *  Return keywordList from matrix U after SVD decomposition
@@ -170,39 +219,40 @@ public class LSAKeywordExtractor implements KeywordExtractor {
    * @param threshold - number of keyword that the method have to consider.
    * @return The list of Keyword 
    */
-  private   List<Keyword> getKeywordList(MatrixRepresentation matrixA, RealMatrix U, int threshold){
+  private List<Keyword> getKeywordList(MatrixRepresentation matrixA, RealMatrix U, int threshold){
+
     List<Keyword> keywordList = new ArrayList<Keyword>();
 
-    for(int i = 0;i<=1;i++){
-      double[] bestColumn = U.getColumn(i);
 
-      HashMap<Integer,Double> bestIndex = new HashMap<Integer,Double>();
-      
-      if(threshold<=bestColumn.length){
-        while(threshold>0){
-          int index = max(bestColumn);
-          bestIndex.put(index,bestColumn[index]);
-          bestColumn[index]=-10000;
-          threshold--;
-        }
-      }
-      else
-      {
-        System.out.println("Threshold value is greater then column size");
-        return null;
-      }
+    double[] bestColumn = U.getColumn(0);
+    HashMap<Integer,Double> bestIndex = new HashMap<Integer,Double>();
+    
+    if(threshold > bestColumn.length)
+      threshold = bestColumn.length;
 
-      for(int index : bestIndex.keySet()){
-
-        Keyword k = new Keyword();
-        k.setText(matrixA.getTokenList().get(index));
-        //System.out.println(U.getEntry(index, 0)+" "+translateFunction(U.getEntry(index, 0)));
-        k.setRelevance(translateFunction(U.getEntry(index, 0)));
-        keywordList.add(k);
+    if(threshold<=bestColumn.length){
+      while(threshold>0){
+        int index = max(bestColumn);
+        bestIndex.put(index,bestColumn[index]);
+        bestColumn[index]=-10000;
+        threshold--;
       }
     }
+    else
+    {
+      System.out.println("Threshold value is greater then column size");
+      return keywordList;
+    }
+    for(int index : bestIndex.keySet()){
+      Keyword k = new Keyword();
+      k.setText(matrixA.getTokenList().get(index));
+      //System.out.println(U.getEntry(index, 0)+" "+translateFunction(U.getEntry(index, 0)));
+      k.setRelevance(translateFunction(U.getEntry(index, 0)));
+      keywordList.add(k);
+    }
+
     return keywordList;
-  }
+  }   
 
   /**
    * return position of max value into double array 
@@ -220,8 +270,6 @@ public class LSAKeywordExtractor implements KeywordExtractor {
     }
 
     return indexMax;
-
-
   }
 
 
@@ -243,8 +291,7 @@ public class LSAKeywordExtractor implements KeywordExtractor {
         countSentenceJ++;
       }
     }
-    if(sentenceJ.size()==0)
-      return 0;
+
     double results = countSentenceJ/sentenceJ.size();
     return results;
 
@@ -270,42 +317,25 @@ public class LSAKeywordExtractor implements KeywordExtractor {
     return numberSentenceWithWord/sentences.size();
   }
 
-  /**
-   * @return
-   */
-  public String getMainDirectory() {
-    return mainDirectory;
+  private double translateFunction(double x){
+    //System.out.println(x);
+    return (Math.atan(5 * x - 3)/Math.PI)+(0.5);
   }
 
-  /**
-   * @param mainDirectory
-   */
-  public void setMainDirectory(String mainDirectory) {
-    this.mainDirectory = mainDirectory;
-  }
-
-  /**
-   * @return the path of the stopwords file
-   */
-  public  String getStopWordPath() {
-    return stopWordPath;
-  }
-
-  /**
-   * @param stopWordPath
-   */
-  public  void setStopWordPath(String stopWordPath) {
-    LSAKeywordExtractor.stopWordPath = stopWordPath;
+  public List<String> getToCompare() {
+    return toCompare;
   }
 
 
-  public double translateFunction(double x){
-    //System.out.println(x);
-
-    return (Math.atan(5 * x - 3)/Math.PI)+(0.5);
-
+  public void setToCompare(List<String> toCompare) {
+    this.toCompare = toCompare;
   }
 
+  @Override
+  public void afterPropertiesSet() throws Exception {
+    initGlossary();
+    
+  }
 
 
 }

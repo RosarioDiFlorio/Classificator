@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="glossariesVectors" class="eu.innovationengineering.persistence.SQLiteVectors">
+        <constructor-arg value="${databases.folder}"></constructor-arg>
+        <constructor-arg value="glossariesVectors.db"></constructor-arg>
+    </bean>
+
+</beans>

@@ -67,11 +67,13 @@ public class DatasetBuilder extends SpringMainLauncher implements WikiDataReques
            * Initialize the Request's Object with the information.
            */
           DatasetRequest request = new DatasetRequest();
-          request.setLimitDocuments(10);
-          request.setTaxonomyName("wheesbee");
+          request.setLimitDocuments(7000);
+          request.setTaxonomyName("wheesbee2");
           request.setOnline(true);
           request.setTest(false);
           request.setDb(true);
+          
+       
           /*
            * Call the method to build the dataset.
            */

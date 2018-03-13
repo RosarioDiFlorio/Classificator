@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:cxf="http://cxf.apache.org/core" xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+    xsi:schemaLocation="http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+    <context:annotation-config />
+
+    <import resource="classpath:META-INF/cxf/cxf.xml" />
+    <import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+
+    <bean id="jsonMapper" class="com.fasterxml.jackson.databind.ObjectMapper" />
+
+    <bean id="keywordExtractor"
+        class="eu.innovationengineering.extractor.LSACosineKeywordExtraction">
+    </bean>
+
+    <bean id="evaluator" class="eu.innovationengineering.main.ConfidenceEvaluator">
+        <constructor-arg value="${volume.folder}"></constructor-arg>
+    </bean>
+
+    <jaxrs:server address="/">
+        <jaxrs:serviceBeans>
+            <ref bean="evaluator" />
+        </jaxrs:serviceBeans>
+        <jaxrs:providers>
+            <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider">
+                <property name="mapper" ref="jsonMapper" />
+            </bean>
+        </jaxrs:providers>
+        <jaxrs:extensionMappings>
+            <entry key="json" value="application/json" />
+        </jaxrs:extensionMappings>
+    </jaxrs:server>
+
+
+</beans>
