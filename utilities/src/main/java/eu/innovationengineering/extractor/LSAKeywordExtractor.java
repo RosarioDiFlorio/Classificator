@@ -1,48 +1,44 @@
-package eu.innovation.engineering.LSA.keywordExtractor;
+package eu.innovationengineering.extractor;
 
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
 
 import org.apache.commons.math3.linear.Array2DRowRealMatrix;
 import org.apache.commons.math3.linear.RealMatrix;
 import org.apache.commons.math3.linear.SingularValueDecomposition;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import com.ibm.watson.developer_cloud.alchemy.v1.model.Keyword;
-
-import eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor;
-import eu.innovation.engineering.keyword.extractor.util.CleanUtilis;
 import eu.innovationengineering.lang.ISO_639_1_LanguageCode;
 import eu.innovationengineering.lang.exceptions.LanguageException;
 import eu.innovationengineering.nlp.analyzer.stanfordnlp.StanfordnlpAnalyzer;
+import eu.innovationengineering.utilities.Lemmatizer;
+import eu.innovationengineering.utilities.StopWords;
 
 /**
  * @author Rosario
  * @author Luigi
  *
  */
-public class LSAKeywordExtractor implements KeywordExtractor {  
+public class LSAKeywordExtractor{  
 
 
 
   private String mainDirectory = "";
-  private static String stopWordPath= "data/stopwords/stopwords_en.txt";
-
+  @Autowired
+  private StopWords stopwords;
 
 
   public LSAKeywordExtractor(String mainDir) {
     setMainDirectory(mainDir);
-    setStopWordPath(getMainDirectory() + stopWordPath);
   }
 
 
   /* (non-Javadoc)
    * @see eu.innovation.engineering.keyword.extractor.interfaces.KeywordExtractor#extractKeywordsFromText(java.util.List, int)
    */
-  @Override
   public  List<List<Keyword>> extractKeywordsFromTexts(List<String> toAnalyze, int numKeywordsToReturn) throws Exception {
     List<List<Keyword>> toReturn = new ArrayList<List<Keyword>>();
     for(String text: toAnalyze){
@@ -88,14 +84,14 @@ public class LSAKeywordExtractor implements KeywordExtractor {
    * @return The list of words for a sentence.
    */
   private  List<String> cleanAndSplitSentence(String sentence, Lemmatizer lemmatizer){
-    Set<String> stopwords = CleanUtilis.getBlackList(getStopWordPath());
+
     sentence = sentence.toLowerCase();
     sentence = sentence.replaceAll("[.!?\\\\/|<>\'\"+;%$#@&\\^\\(\\),-]\\*", "");
     List<String> textLemmatized = lemmatizer.lemmatize(sentence);
     Iterator<String> it = textLemmatized.iterator();
     while(it.hasNext()){
       String str = it.next();
-      if(stopwords.contains(str) || str.length()<=2)
+      if(stopwords.isStopWord(str) || str.length()<=2)
         it.remove();
     }
     System.out.println(textLemmatized);
@@ -283,21 +279,6 @@ public class LSAKeywordExtractor implements KeywordExtractor {
   public void setMainDirectory(String mainDirectory) {
     this.mainDirectory = mainDirectory;
   }
-
-  /**
-   * @return the path of the stopwords file
-   */
-  public  String getStopWordPath() {
-    return stopWordPath;
-  }
-
-  /**
-   * @param stopWordPath
-   */
-  public  void setStopWordPath(String stopWordPath) {
-    LSAKeywordExtractor.stopWordPath = stopWordPath;
-  }
-
 
   public double translateFunction(double x){
     //System.out.println(x);

@@ -22,7 +22,7 @@ public class CleanUtilis {
         is = new InputStreamReader(new FileInputStream(txt), "UTF-8");
         BufferedReader br = new BufferedReader(is);             
         while ((sw=br.readLine()) != null)  {
-          blackList.add(sw);   
+          blackList.add(sw.toLowerCase());   
         }
       } catch (Exception e) {
         e.printStackTrace();

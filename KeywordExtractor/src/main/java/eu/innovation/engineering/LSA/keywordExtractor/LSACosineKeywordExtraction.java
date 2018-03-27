@@ -75,7 +75,7 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
     }
     toCompareVectors = returnVectorsFromTextList(textList);
   }
-  
+
   public List<String> cleanText(String text){
     text = text.replaceAll("\\p{Punct}", " ");
     text = text.replaceAll("\\d+", " ");
@@ -88,7 +88,7 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
   @Override
   public List<List<Keyword>> extractKeywordsFromTexts(List<String> toAnalyze, int numKeywordsToReturn) throws Exception {
     List<List<Keyword>> toReturn = new ArrayList<List<Keyword>>();
-   
+
 
     for(String text: toAnalyze){
       List<Keyword> keywordList = new ArrayList<Keyword>();
@@ -118,7 +118,8 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
     for(String sentence: senteces)
     {
       sentecesList.add(cleanAndSplitSentence(sentence, lemmatizer));
-    }   
+    }
+
     return sentecesList;
   }
 
@@ -132,13 +133,17 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
    */
   private  List<String> cleanAndSplitSentence(String sentence, Lemmatizer lemmatizer){
     //sentence = sentence.replaceAll("(\\.-/#\\^)", " ");
-    List<String> textLemmatized = lemmatizer.lemmatize(sentence);
+    StringBuilder strbuilder = new StringBuilder();
+    cleanText(sentence).forEach(s->strbuilder.append(s+" "));
+    List<String> textLemmatized = lemmatizer.lemmatize(strbuilder.toString());
     Iterator<String> it = textLemmatized.iterator();
+
     while(it.hasNext()){
       String str = it.next();
-      if(stopwords.contains(str) || str.length()<=2)
+      if(stopwords.contains(str.toLowerCase()) || str.length()<=2)
         it.remove();
     }
+    System.out.println(textLemmatized);
     return textLemmatized;
   }
 
@@ -153,8 +158,8 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
    */
   public  MatrixRepresentation buildMatrixA(List<List<String>> sentences,float[][] toCompareVectors) throws IOException{
     List<String> wordList = new ArrayList<String>();
-    
-    
+
+
     //crea la lista di word
     List<List<String>> textList = new ArrayList<>();
     for(List<String> sentence : sentences){
@@ -178,16 +183,17 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
       column=0;
       String word = wordList.get(i);
       double weigth = 0;
-      //weigth = weigth / toCompareVectors.length-1;
       for(int j = 0;j <toCompareVectors.length;j++){ 
-        weigth += cosineSimilarity(wordVectors[i], toCompareVectors[j]);
+          weigth += cosineSimilarity(wordVectors[i], toCompareVectors[j]);
       }
+      weigth /= sentences.size();
       for(List<String> sentence : sentences){     
-        if(sentence.contains(word)){       
-          weigth = weigth *  Tf(word, sentences, column);
+        if(sentence.contains(word)){
+          weigth += Tf(word, sentences, column);
         }else{
-          weigth = 0;
+          weigth += 0;
         }
+        System.out.println(word+" "+(weigth/sentences.size()));
         matrix.addToEntry(row, column,weigth);
         column++;
       }
@@ -228,10 +234,12 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
    */
   private List<Keyword> getKeywordList(MatrixRepresentation matrixA, RealMatrix U, int threshold){
 
-    double[] bestColumn = U.getColumn(0);
-
-    HashMap<Integer,Double> bestIndex = new HashMap<Integer,Double>();
     List<Keyword> keywordList = new ArrayList<Keyword>();
+
+
+    double[] bestColumn = U.getColumn(0);
+    HashMap<Integer,Double> bestIndex = new HashMap<Integer,Double>();
+
 
     if(threshold<=bestColumn.length){
       while(threshold>0){
@@ -246,7 +254,7 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
       System.out.println("Threshold value is greater then column size");
       return null;
     }
-    for(int index : bestIndex.keySet()){
+    for(int index : bestIndex.keySet()){
       Keyword k = new Keyword();
       k.setText(matrixA.getTokenList().get(index));
       //System.out.println(U.getEntry(index, 0)+" "+translateFunction(U.getEntry(index, 0)));
@@ -350,17 +358,22 @@ public class LSACosineKeywordExtraction implements KeywordExtractor {
     double dotProduct = 0.0;
     double normA = 0.0;
     double normB = 0.0;
+
     if(vectorA!=null && vectorB!=null && vectorA.length==vectorB.length){
       for (int i = 0; i < vectorA.length; i++) {
         dotProduct += vectorA[i] * vectorB[i];
         normA += vectorA[i] * vectorA[i];
         normB += vectorB[i] * vectorB[i];
       }   
-    }
-    if(dotProduct == 0 || (normA * normB) == 0)
+    }
+
+    if(dotProduct == 0 || (normA * normB) == 0){
       return 0;
-    else
-      return ((dotProduct) / (Math.sqrt(normA * normB)));
+
+    }
+    else{
+      return (dotProduct) / (Math.sqrt(normA * normB));
+    }
   }
 
 

@@ -15,7 +15,11 @@
     </properties>
 
     <dependencies>
-        
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-csv</artifactId>
+            <version>1.5</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/com.hp.hpl.jena/jena -->
         <dependency>
             <groupId>com.hp.hpl.jena</groupId>
